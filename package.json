@@ -1,0 +1,13 @@
+{
+  "name": "breastcancerspec",
+  "version": "0.1.0",
+  "description": "FHIR Implementation Guide for Breast Cancer Pathology Reporting",
+  "scripts": {
+    "sushi": "sushi .",
+    "build": "bash _genonce.sh",
+    "update-publisher": "bash _updatePublisher.sh"
+  },
+  "dependencies": {
+    "fsh-sushi": "^3.0.0"
+  }
+}

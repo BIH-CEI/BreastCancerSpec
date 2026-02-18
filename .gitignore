@@ -1,0 +1,25 @@
+.DS_Store
+Thumbs.db
+
+# IG Publisher
+/output
+/temp
+/template
+/input-cache
+/fsh-generated
+*.publisher.jar
+
+# SUSHI / Node
+node_modules/
+package-lock.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.Spotlight-V100
+.Trashes
+ehthumbs.db

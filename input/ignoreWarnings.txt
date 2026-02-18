@@ -1,0 +1,2 @@
+== Suppressed Messages ==
+# Add warning URLs or messages here that should be suppressed during IG Publisher validation
