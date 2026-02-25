@@ -1,0 +1,2627 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "2.16.840.1.113883.3.1937.777.18.27.25--20260218134120",
+  "meta": {
+    "lastUpdated": "2026-02-25T11:42:44Z",
+    "source": "https://art-decor.org/fhir/4.0/pathdv-",
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/FHIR-version",
+        "code": "4.0.1"
+      }
+    ]
+  },
+  "language": "de-DE",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+    }
+  ],
+  "url": "https://art-decor.org/fhir/Questionnaire/2.16.840.1.113883.3.1937.777.18.27.25--20260218134120",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.3.1937.777.18.27.25"
+    }
+  ],
+  "name": "ICCR_Fragebogen_fuer_Stanzbiopsien_der_Mamma",
+  "title": "(ICCR )Fragebogen fuer Stanzbiopsien der Mamma",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-02-25T11:42:44Z",
+  "publisher": "Bundesverband Deutscher Pathologen e.V.",
+  "contact": [
+    {
+      "name": "Bundesverband Deutscher Pathologen e.V.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "www.pathologie.de"
+        }
+      ]
+    }
+  ],
+  "description": "Modell für \"intelligentes\" Formular",
+  "copyright": "\n                                            © Copyright 2017-2023 Bundesverband Deutscher Pathologen e.V. All rights reserved                            \n            ",
+  "effectivePeriod": {
+    "start": "2026-02-18T13:41:20Z"
+  },
+  "item": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+          "valueBoolean": false
+        }
+      ],
+      "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10000",
+      "text": "Mammakarzinome",
+      "type": "group",
+      "required": true,
+      "repeats": false,
+      "readOnly": false,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": false
+            }
+          ],
+          "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10010",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "22636-5",
+              "display": "Pathology report relevant history Narrative"
+            }
+          ],
+          "text": "Klinische Angaben zur histopathologischen Untersuchung",
+          "type": "group",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10010-help",
+              "text": "Die Bereitstellung präziser klinischer Informationen und Details ist wichtig, um den Kontext für die Probe, die Art der Anomalie, die Nachweismethode und die Krankengeschichte der Patientin zu verdeutlichen. Beispiele für wichtige Informationen sind eine frühere Brustkrebserkrankung oder -krebserkrankung, Vorbehandlungen wie neoadjuvante Therapie und vererbte genetische Mutationen wie BRCA1 oder BRCA2.",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                    "valueMarkdown": "Die Bereitstellung präziser klinischer Informationen und Details ist wichtig, um den Kontext für die Probe, die Art der Anomalie, die Nachweismethode und die Krankengeschichte der Patientin zu verdeutlichen. Beispiele für wichtige Informationen sind eine frühere Brustkrebserkrankung oder -krebserkrankung, Vorbehandlungen wie neoadjuvante Therapie und vererbte genetische Mutationen wie BRCA1 oder BRCA2."
+                  }
+                ]
+              },
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "125156009",
+                  "display": "Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)"
+                }
+              ],
+              "text": "Proben limitiert auswertbar wegen fehlender klinischer Informationen",
+              "type": "choice",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14001--20180210000000"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11912",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "67098-4",
+                  "display": "Reason for test or procedure"
+                }
+              ],
+              "text": "Präsentationsmodus",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12060"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.2.11147",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "18695-7",
+                  "display": "ED clinical finding type"
+                }
+              ],
+              "text": "Aktuelle klinische Befunde / Anlass zur Operation",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": true,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12051"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11923",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "415076002",
+                  "display": "Personal history of primary malignant neoplasm of breast (situation)"
+                }
+              ],
+              "text": "Brustkrebsvorgeschichte",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14002"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11918",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "706317000",
+                  "display": "Breast imaging system (physical object)"
+                }
+              ],
+              "text": "Bildgebungsmodalität",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "2.16.840.1.113883.6.96",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12067"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.2.11148",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "274530001",
+                  "display": "Abnormal findings on diagnostic imaging of breast (finding)"
+                }
+              ],
+              "text": "Bildgebende Befunde",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": true,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12052"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11953",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "396361002",
+                  "display": "Lesion size, largest dimension (observable entity)"
+                }
+              ],
+              "text": "Radiologische Ausdehnung",
+              "type": "quantity",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10160",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "836381000000102",
+                  "display": "Insertion of marker into breast using X-ray guidance (procedure)"
+                }
+              ],
+              "text": "Befundmarkierung",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14002"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10130",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "80865008:363702006=185008008",
+                  "display": "Specimen mammography (procedure) - Has focus (attribute) = Medical reports sent (finding)"
+                }
+              ],
+              "text": "Präparateradiographie beigelegt",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14002"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11954",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "76522002",
+                  "display": "Diathesis, function (observable entity)"
+                }
+              ],
+              "text": "Genetische Prädisposition",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12069"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11974",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "373573001",
+                  "display": "Clinical finding present (situation)"
+                }
+              ],
+              "text": "Andere klinische Informationen",
+              "type": "string",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10200",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "39154008",
+                  "display": "Clinical diagnosis (contextual qualifier) (qualifier value)"
+                }
+              ],
+              "text": "Klinische Diagnose",
+              "type": "string",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373067005",
+                    "display": "Nein"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": false
+            }
+          ],
+          "linkId": "2.16.840.1.113883.3.1937.777.18.2.2.11106",
+          "code": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "9911007:363703001=726566009",
+              "display": "Core needle biopsy (procedure) - Has intent (attribute) = Pathology biopsy report (record artifact)"
+            }
+          ],
+          "text": "Stanz-/Vakuumbiopsien",
+          "type": "group",
+          "enableBehavior": "all",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.2.11156",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "66746-9",
+                  "display": "Specimen type"
+                }
+              ],
+              "text": "Materialart",
+              "type": "choice",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/probenart",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.2.11156-help",
+                  "text": "nur die beiden Stanzbiosiearten aus Value set MATMAM verwenden",
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "883619ef-a776-4fb4-ad40-0c8b502c895b",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "384727002",
+                  "display": "Specimen laterality (observable entity)"
+                }
+              ],
+              "text": "Seitenlokalisation der Probe",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                    "valueMarkdown": "Seitenlokalisation der Probe"
+                  }
+                ]
+              },
+              "type": "choice",
+              "enableBehavior": "all",
+              "required": true,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12017|2018-02-10T00:00:00"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "1393d032-a1e7-40b1-94b1-1eb9dd1f6916",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "42799-7",
+                  "display": "Quadrant Breast"
+                }
+              ],
+              "text": "Quadrantenlokalisation",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                    "valueMarkdown": "Quadrantenlokalisation"
+                  }
+                ]
+              },
+              "type": "choice",
+              "enableBehavior": "all",
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12010|2018-02-10T00:00:00"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "79295ed1-af7f-481c-88e8-168b40bcdf96",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "3980001000004105",
+                  "display": "Radial location of primary malignant neoplasm in excised breast specimen (observable entity)"
+                }
+              ],
+              "text": "Zifferblattlokalisation",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                    "valueMarkdown": "Zifferblattlokalisation"
+                  }
+                ]
+              },
+              "type": "choice",
+              "enableBehavior": "all",
+              "required": true,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12011|2018-02-10T00:00:00"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "cm",
+                    "display": "cm"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "5919cd11-2c21-4ee9-890b-cc719c64794c",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "248821001",
+                  "display": "Position of nipple (observable entity)"
+                }
+              ],
+              "text": "Abstand von Mamille",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                    "valueMarkdown": "Abstand von Mamille"
+                  }
+                ]
+              },
+              "type": "quantity",
+              "enableBehavior": "all",
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10240",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "44619-5",
+                  "display": "Length of tissue core(s)"
+                }
+              ],
+              "text": "Gesamtlänge der Stanzzylinder",
+              "type": "quantity",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10250",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "44652-6",
+                  "display": "Total number of cores in Tissue core"
+                }
+              ],
+              "text": "Anzahl der Stanzzylinder",
+              "type": "integer",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10260",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "85346-5",
+                  "display": "Tissue blocks examined [#] in Specimen"
+                }
+              ],
+              "text": "Anzahl der Blöcke",
+              "type": "integer",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "43515008",
+                  "display": "Specimen not representative of anatomic site (finding)"
+                }
+              ],
+              "text": "nicht verwertbares Material",
+              "type": "choice",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14002"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10280",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "80865008:363702006=305653009",
+                  "display": "Specimen mammography (procedure) - Has focus (attribute) = Seen by pathologist (finding)"
+                }
+              ],
+              "text": "Präparateradiogramm gesehen",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10130",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12047"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10290",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "44692-2",
+                  "display": "Microcalcifications in Breast tumor"
+                }
+              ],
+              "text": "relevante Mikroverkalkungen",
+              "type": "choice",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14002"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10300",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "384669006",
+                  "display": "Status of microcalcifications in specimen (observable entity)"
+                }
+              ],
+              "text": "Verkalkungstyp",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10290",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12001"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10320",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "125114005",
+                  "display": "Normal tissue morphology by light microscopy (finding)"
+                }
+              ],
+              "text": "Normalgewebe",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14002"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10330",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "63911-2",
+                  "display": "Fibrocystic or other benign breast disease confirmed by breast biopsy [PhenX]"
+                }
+              ],
+              "text": "Benigne Läsionen",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12002"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10340",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "290073004:47429007=263916005",
+                  "display": "Lesion of breast (finding) - Associated with (attribute) = Uncertain behavior (finding)"
+                }
+              ],
+              "text": "Benigne Läsionen unicheres Potential",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12003"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10350",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "5244003",
+                  "display": "Intraductal papilloma (morphologic abnormality)"
+                }
+              ],
+              "text": "Intraduktal-papilläre benigne Läsionen",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12004"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10370",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "189336000",
+                  "display": "Carcinoma in situ of breast (disorder)"
+                }
+              ],
+              "text": "Maligne Läsion nichtinvasiv",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12--20190811122751"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10440",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "254837009",
+                  "display": "Malignant tumor of breast (disorder)"
+                }
+              ],
+              "text": "Maligne Läsion invasiv",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12--20190811122751"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10580",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "282292002",
+                  "display": "Uncertain diagnosis (observable entity)"
+                }
+              ],
+              "text": "Unklare Läsion",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                    "valueMarkdown": "Unklare Läsion"
+                  }
+                ]
+              },
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueString": "unklar, ob invasiv oder nichtinvasiv"
+                },
+                {
+                  "valueString": "unklar, ob lobuläre Neoplasie oder DCIS"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11916",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "254837009",
+                  "display": "Malignant tumor of breast (disorder)"
+                }
+              ],
+              "text": "Sonstige maligne Neoplasie",
+              "type": "text",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10590",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "271937008",
+                  "display": "Screening interpretation (observable entity)"
+                }
+              ],
+              "text": "B-Klassifikation",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueString": "B1"
+                },
+                {
+                  "valueString": "B2"
+                },
+                {
+                  "valueString": "B3"
+                },
+                {
+                  "valueString": "B4"
+                },
+                {
+                  "valueString": "B5a"
+                },
+                {
+                  "valueString": "B5b"
+                },
+                {
+                  "valueString": "B5c"
+                },
+                {
+                  "valueString": "B5d"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10600",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "290073004:47429007=12747003",
+                  "display": "Lesion of breast (finding - Associated with (attribute) = Microcalcification (calcified structure"
+                }
+              ],
+              "text": "Mikrokalkassoziation",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10290",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                },
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12042"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10610",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "44692-2",
+                  "display": "Microcalcifications in Breast tumor"
+                }
+              ],
+              "text": "Mikrokalkassoziation mit Läsion",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                },
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10290",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12043"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                  "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10620",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "425911000",
+                  "display": "Status of correlation between radiographic image and pathologic finding (observable entity)"
+                }
+              ],
+              "text": "Korrelation Mikroverkalkung",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10310",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                },
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10290",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12044"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10770",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "22638-1",
+                  "display": "Pathology report comments [Interpretation] Narrative"
+                }
+              ],
+              "text": "Kommentar",
+              "type": "text",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10360",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "189336000",
+                  "display": "Carcinoma in situ of breast (disorder)"
+                }
+              ],
+              "text": "Nichtinvasive maligne Läsionen",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10370",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "52101004",
+                    "display": "Vorhanden"
+                  }
+                }
+              ],
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.160",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "44638-5",
+                      "display": "Histo type BT"
+                    },
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "1287028000",
+                      "display": "Histologic type of noninvasive premalignant neoplasm of breast (observable entity)"
+                    }
+                  ],
+                  "text": "Histologischer Typ nach WHO / Diagnostische Klassifikation",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "en-US"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "DIAGNOSTIC CLASSIFICATION"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "type": "open-choice",
+                  "enableBehavior": "all",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "http://snomed.info/sct",
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.160-help",
+                      "text": "Um Konsens und Konsistenz in der Berichterstattung zu gewährleisten, wird empfohlen, die Nomenklatur und Definitionen für Diagnose und Klassifizierung der aktuellsten Ausgabe der WHO-Klassifikation der Brusttumoren (5. Auflage, 2019) zu verwenden. Der ICCR-Datensatz enthält die Korrekturen der 5. Auflage vom September 2020. Duktales Carcinoma in situ (DCIS) variiert hinsichtlich Zellbild, Wachstumsmuster und Ausdehnung der Erkrankung und wird heute als heterogene Gruppe von in situ neoplastischen Prozessen betrachtet. Wenn DCIS ausschließlich die Epidermis der Brustwarze betrifft, ohne dass ein invasives Karzinom oder DCIS vorliegt, spricht man von Morbus Paget der Brustwarze. Die meisten dieser Tumoren weisen einen hohen Kernteilungsgrad und eine starke HER2-Positivität auf. Pleomorphes LCIS zeigt Überschneidungen mit DCIS und kann ähnlich behandelt werden. Derzeit liegen jedoch nicht genügend Daten vor, um definitive Behandlungsempfehlungen zu formulieren. Das aktuelle Verständnis der Die Nutzung dieses Datensatzes ist nur unter den in der folgenden Erklärung beschriebenen Bedingungen zulässig: Der natürliche Verlauf von pleomorphem und floridem LCIS ist nur unzureichend erforscht, und die optimale Behandlung ist hinsichtlich der Anstrebung negativer Resektionsränder und der Erwägung zusätzlicher adjuvanter Therapien unbekannt. Obwohl pleomorphes und florides LCIS derzeit nicht in der AJCC pTis-Klassifikation enthalten sind, bleiben sie eine Kategorie in der UICC TNM 8. Auflage und es gibt zunehmend Hinweise darauf, dass diese Formen von LCIS besser wie DCIS behandelt werden könnten, insbesondere durch Exzision negativer Resektionsränder.",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                            "valueMarkdown": "Um Konsens und Konsistenz in der Berichterstattung zu gewährleisten, wird empfohlen, die Nomenklatur und Definitionen für Diagnose und Klassifizierung der aktuellsten Ausgabe der WHO-Klassifikation der Brusttumoren (5. Auflage, 2019) zu verwenden. Der ICCR-Datensatz enthält die Korrekturen der 5. Auflage vom September 2020. Duktales Carcinoma in situ (DCIS) variiert hinsichtlich Zellbild, Wachstumsmuster und Ausdehnung der Erkrankung und wird heute als heterogene Gruppe von in situ neoplastischen Prozessen betrachtet. Wenn DCIS ausschließlich die Epidermis der Brustwarze betrifft, ohne dass ein invasives Karzinom oder DCIS vorliegt, spricht man von Morbus Paget der Brustwarze. Die meisten dieser Tumoren weisen einen hohen Kernteilungsgrad und eine starke HER2-Positivität auf. Pleomorphes LCIS zeigt Überschneidungen mit DCIS und kann ähnlich behandelt werden. Derzeit liegen jedoch nicht genügend Daten vor, um definitive Behandlungsempfehlungen zu formulieren. Das aktuelle Verständnis der Die Nutzung dieses Datensatzes ist nur unter den in der folgenden Erklärung beschriebenen Bedingungen zulässig: Der natürliche Verlauf von pleomorphem und floridem LCIS ist nur unzureichend erforscht, und die optimale Behandlung ist hinsichtlich der Anstrebung negativer Resektionsränder und der Erwägung zusätzlicher adjuvanter Therapien unbekannt. Obwohl pleomorphes und florides LCIS derzeit nicht in der AJCC pTis-Klassifikation enthalten sind, bleiben sie eine Kategorie in der UICC TNM 8. Auflage und es gibt zunehmend Hinweise darauf, dass diese Formen von LCIS besser wie DCIS behandelt werden könnten, insbesondere durch Exzision negativer Resektionsränder."
+                          }
+                        ]
+                      },
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11914",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "397005006",
+                      "display": "WHO tumor classification (observable entity)"
+                    }
+                  ],
+                  "text": "ICD-O-Version",
+                  "type": "choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.9"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11915",
+                  "text": "Morphologie Freitext",
+                  "type": "text",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10380",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "2890001000004108",
+                      "display": "Nuclear grade of ductal carcinoma in situ of breast (observable entity)"
+                    }
+                  ],
+                  "text": "Kerngrading / WHO-Grading nichtinvasiv",
+                  "type": "open-choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12006"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10390",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85340-8",
+                      "display": "DCIS necrosis [Type] in Breast cancer specimen by Light microscopy"
+                    }
+                  ],
+                  "text": "Komedonekrosen",
+                  "type": "open-choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12059"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10420",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85302-8",
+                      "display": "Growth pattern of DCIS [Type] in Breast cancer specimen by Light microscopy"
+                    }
+                  ],
+                  "text": "DCIS Architektur",
+                  "type": "choice",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12009"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.2.11157",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85338-2",
+                      "display": "LCIS [Presence] in Breast cancer specimen by Light microscopy"
+                    }
+                  ],
+                  "text": "LN Variante",
+                  "type": "open-choice",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12053"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10430",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "254837009",
+                  "display": "Malignant tumor of breast (disorder)"
+                }
+              ],
+              "text": "Invasive maligne Läsionen",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10440",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "52101004",
+                    "display": "Vorhanden"
+                  }
+                }
+              ],
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.161",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "44638-5",
+                      "display": "Histo type BT"
+                    },
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "1660001000004100",
+                      "display": "Histologic type of primary malignant neoplasm of breast (observable entity)"
+                    }
+                  ],
+                  "text": "Histologischer Tumortyp WHO",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Histologischer Tumortyp WHO"
+                      }
+                    ]
+                  },
+                  "type": "open-choice",
+                  "enableBehavior": "all",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.18035|2026-02-23T12:18:26",
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.161-help",
+                      "text": "Um Konsens und Konsistenz in der Berichterstattung zu gewährleisten, wird empfohlen, die aktuellste Ausgabe der WHO-Klassifikation der Brusttumoren, 5. Auflage, 2019, Nomenklatur und Definitionen für die Diagnose und Klassifikation invasiver Tumortypen (Tabelle 1) zu verwenden.¹ Der ICCR-Datensatz enthält die Korrekturen der 5. Auflage vom September 2020.² Die Bestimmung des histologischen Typs basiert auf der routinemäßigen histologischen Untersuchung; Spezialfärbungen wie E-Cadherin sind für die Bestimmung des histologischen Typs nicht erforderlich. Spezielle Karzinome sollten zu mindestens 90 % aus einem reinen Muster bestehen. Daher kann die Klassifizierung als reiner spezieller Typ nicht mit Sicherheit anhand einer begrenzten Stanzbiopsieprobe erfolgen und erfordert in der Regel Befunde aus der Resektion. Einige invasive Brustkarzinome und invasive Brustkarzinome ohne speziellen Typ (IBC-NST) können eine Mischung aus keinem speziellen Typ und einem speziellen Subtyp enthalten. Wenn der spezielle Subtyp 10–90 % des Tumors ausmacht, kann die Bezeichnung „gemischtes IBC-NST-Karzinom und spezielles Subtypkarzinom“ verwendet werden. Für diese Art von gemischtem IBC-NST-Karzinom und speziellem Subtyp wird empfohlen, beide vorhandenen Elemente sowie den Gesamtanteil des speziellen Subtyps anzugeben. Zum Beispiel: „gemischtes IBC-NST-Karzinom und invasives lobuläres Karzinom (30 % lobulär)“. Tumoren mit einem Anteil von \u003C10 % speziellem Subtyp sollten als IBC-NST klassifiziert werden, während Tumoren mit einem Anteil von \u003E90 % speziellem Subtyp als spezieller Subtyp klassifiziert werden sollten. Beachten Sie, dass die WHO-Klassifikation von 2019 nun Karzinome mit medullärem Muster, invasive Karzinome mit neuroendokriner Differenzierung, Karzinome mit pleomorphen und choriokarzinomatösen Mustern, Tumoren mit melanozytären Merkmalen, onkozytäre, lipidreiche, glykogenreiche, klarzellige und sebazöse Karzinome als spezielle morphologische Muster des IBC-NST betrachtet. 1 Diese Tumoren gelten unabhängig vom Ausmaß der Differenzierung/des Musters als morphologische Muster des IBC-NST, und die 90%-Regel für spezielle Subtypen wird nicht auf Tumoren angewendet, die eines dieser Muster aufweisen. Wenn kein residuales invasives Karzinom vorhanden ist, z. B. wenn der invasive Tumor durch eine vorherige Operation oder Biopsie vollständig entfernt wurde, sollten die im vorherigen diagnostischen Präparat identifizierbaren Tumormerkmale zusammen mit einer erläuternden Anmerkung verwendet werden, um den synoptischen Bericht auszufüllen. Nach neoadjuvanter Therapie kann die genaue Klassifizierung des Tumortyps aufgrund zytopathischer Veränderungen durch die Behandlung erschwert sein. Beispielsweise kann die Morphologie eines invasiven Mammakarzinoms ohne besonderen Typ (NST) eher einem lobulären Karzinom ähneln, oder ein lobuläres Karzinom kann höhergradig erscheinen, was auf einen duktalen Phänotyp hindeutet.\u003Csup\u003E4\u003C/sup\u003E In diesem Fall sollte der Tumortyp vor der Behandlung als genauer angesehen werden. Die Muzinansammlungen des muzinösen Karzinoms bleiben tendenziell auch nach dem Verschwinden der invasiven Karzinomzellen nach neoadjuvanter Therapie bestehen. Die Größenmessung nach neoadjuvanter Therapie sollte bei Vorliegen dieses Bildes von Tumorzelle zu Tumorzelle erfolgen, ohne das umgebende Muzin einzuschließen. Eine gründliche Probenentnahme bei muzinösem Karzinom mit geringer Zellzahl nach neoadjuvanter Therapie ist erforderlich. Das Vorhandensein von Mucin in Abwesenheit lebensfähiger Tumorzellen schließt eine Klassifizierung als pathologische Komplettremission (pCR) nicht aus. Nur Codes mit /3 verwenden",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                            "valueMarkdown": "Um Konsens und Konsistenz in der Berichterstattung zu gewährleisten, wird empfohlen, die aktuellste Ausgabe der WHO-Klassifikation der Brusttumoren, 5. Auflage, 2019, Nomenklatur und Definitionen für die Diagnose und Klassifikation invasiver Tumortypen (Tabelle 1) zu verwenden.¹ Der ICCR-Datensatz enthält die Korrekturen der 5. Auflage vom September 2020.² Die Bestimmung des histologischen Typs basiert auf der routinemäßigen histologischen Untersuchung; Spezialfärbungen wie E-Cadherin sind für die Bestimmung des histologischen Typs nicht erforderlich. Spezielle Karzinome sollten zu mindestens 90 % aus einem reinen Muster bestehen. Daher kann die Klassifizierung als reiner spezieller Typ nicht mit Sicherheit anhand einer begrenzten Stanzbiopsieprobe erfolgen und erfordert in der Regel Befunde aus der Resektion. Einige invasive Brustkarzinome und invasive Brustkarzinome ohne speziellen Typ (IBC-NST) können eine Mischung aus keinem speziellen Typ und einem speziellen Subtyp enthalten. Wenn der spezielle Subtyp 10–90 % des Tumors ausmacht, kann die Bezeichnung „gemischtes IBC-NST-Karzinom und spezielles Subtypkarzinom“ verwendet werden. Für diese Art von gemischtem IBC-NST-Karzinom und speziellem Subtyp wird empfohlen, beide vorhandenen Elemente sowie den Gesamtanteil des speziellen Subtyps anzugeben. Zum Beispiel: „gemischtes IBC-NST-Karzinom und invasives lobuläres Karzinom (30 % lobulär)“. Tumoren mit einem Anteil von \u003C10 % speziellem Subtyp sollten als IBC-NST klassifiziert werden, während Tumoren mit einem Anteil von \u003E90 % speziellem Subtyp als spezieller Subtyp klassifiziert werden sollten. Beachten Sie, dass die WHO-Klassifikation von 2019 nun Karzinome mit medullärem Muster, invasive Karzinome mit neuroendokriner Differenzierung, Karzinome mit pleomorphen und choriokarzinomatösen Mustern, Tumoren mit melanozytären Merkmalen, onkozytäre, lipidreiche, glykogenreiche, klarzellige und sebazöse Karzinome als spezielle morphologische Muster des IBC-NST betrachtet. 1 Diese Tumoren gelten unabhängig vom Ausmaß der Differenzierung/des Musters als morphologische Muster des IBC-NST, und die 90%-Regel für spezielle Subtypen wird nicht auf Tumoren angewendet, die eines dieser Muster aufweisen. Wenn kein residuales invasives Karzinom vorhanden ist, z. B. wenn der invasive Tumor durch eine vorherige Operation oder Biopsie vollständig entfernt wurde, sollten die im vorherigen diagnostischen Präparat identifizierbaren Tumormerkmale zusammen mit einer erläuternden Anmerkung verwendet werden, um den synoptischen Bericht auszufüllen.\n\nNach neoadjuvanter Therapie kann die genaue Klassifizierung des Tumortyps aufgrund zytopathischer Veränderungen durch die Behandlung erschwert sein. Beispielsweise kann die Morphologie eines invasiven Mammakarzinoms ohne besonderen Typ (NST) eher einem lobulären Karzinom ähneln, oder ein lobuläres Karzinom kann höhergradig erscheinen, was auf einen duktalen Phänotyp hindeutet.\u003Csup\u003E4\u003C/sup\u003E In diesem Fall sollte der Tumortyp vor der Behandlung als genauer angesehen werden. Die Muzinansammlungen des muzinösen Karzinoms bleiben tendenziell auch nach dem Verschwinden der invasiven Karzinomzellen nach neoadjuvanter Therapie bestehen. Die Größenmessung nach neoadjuvanter Therapie sollte bei Vorliegen dieses Bildes von Tumorzelle zu Tumorzelle erfolgen, ohne das umgebende Muzin einzuschließen. Eine gründliche Probenentnahme bei muzinösem Karzinom mit geringer Zellzahl nach neoadjuvanter Therapie ist erforderlich. Das Vorhandensein von Mucin in Abwesenheit lebensfähiger Tumorzellen schließt eine Klassifizierung als pathologische Komplettremission (pCR) nicht aus.\n\nNur Codes mit /3 verwenden"
+                          }
+                        ]
+                      },
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "0243a674-8f4e-4532-a228-d93fa522c3ce",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "44638-5",
+                      "display": "Histologic type in Breast tumor"
+                    }
+                  ],
+                  "text": "Morphologie-Code ICD-O-3",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Morphologie-Code ICD-O-3"
+                      }
+                    ]
+                  },
+                  "type": "string",
+                  "enableBehavior": "all",
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.2.11158",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "397005006",
+                      "display": "WHO tumor classification (observable entity)"
+                    }
+                  ],
+                  "text": "ICD-O-Version",
+                  "type": "choice",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.9"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10460",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "33731-1",
+                      "display": "Histology type in Cancer specimen Narrative"
+                    }
+                  ],
+                  "text": "Morphologie Freitext",
+                  "type": "text",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10570",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "86049000",
+                      "display": "Malignant neoplasm, primary (morphologic abnormality)"
+                    }
+                  ],
+                  "text": "sonstige maligne Läsion",
+                  "type": "text",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10470",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85336-6",
+                      "display": "DCIS intraduct ext Br ca spec Ql Micro"
+                    }
+                  ],
+                  "text": "Intraduktale Komponente",
+                  "type": "open-choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14002"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10480",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "128700001",
+                      "display": "Infiltrating duct mixed with other types of carcinoma (morphologic abnormality)"
+                    }
+                  ],
+                  "text": "Mischtyp vorhanden",
+                  "type": "open-choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14002"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10490",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "444057000",
+                      "display": "Infiltrating carcinoma with ductal and lobular features (morphologic abnormality)"
+                    }
+                  ],
+                  "text": "Mischtyp",
+                  "type": "text",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10500",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "44648-4",
+                      "display": "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham"
+                    }
+                  ],
+                  "text": "Elston-Ellis-Grad",
+                  "type": "choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12028"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10560",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "373378009:363713009=280433002",
+                      "display": "Nottingham Combined Grade finding (finding) - Has interpretation (attribute) = Summated scale score (qualifier value)"
+                    }
+                  ],
+                  "text": "Elston-Ellis-Summenscore",
+                  "type": "integer",
+                  "enableBehavior": "all",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10510",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85321-8",
+                      "display": "Gland diff Br ca spec Ql Nottingham"
+                    }
+                  ],
+                  "text": "Tubulus Scorewert",
+                  "type": "choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12029"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10520",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "44645-0",
+                      "display": "Nuc pleomorph BT Nottingham"
+                    }
+                  ],
+                  "text": "Kernpleomorphie Scorewert",
+                  "type": "choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12030"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10530",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85300-2",
+                      "display": "Mitotic rate Br ca spec Ql Nottingham"
+                    }
+                  ],
+                  "text": "Mitoserate Scorewert",
+                  "type": "choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12031"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "52eea0cd-19b0-4e0f-ae18-a4ddb01f45ca",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "406094009",
+                      "display": "Number of mitoses per 10 high power fields (observable entity)"
+                    }
+                  ],
+                  "text": "Mitosezahl pro 10 HPF",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Mitosezahl pro 10 HPF"
+                      }
+                    ]
+                  },
+                  "type": "integer",
+                  "enableBehavior": "all",
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10550",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "301980006:47429007=81827009",
+                      "display": "Finding of visual field (finding) - Associated with (attribute) = Diameter (qualifier value)"
+                    }
+                  ],
+                  "text": "Gesichtsfelddurchmesser",
+                  "type": "quantity",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11860",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "765220005:47429007=373800009",
+                      "display": "Disorder in full remission in response to treatment (disorder) - Associated with (attribute) = Cancer diagnosis based on primary site histological evidence (finding)"
+                    }
+                  ],
+                  "text": "Pathologische Komplettremission (pCR) nach neoadjuvanter Therapie",
+                  "type": "open-choice",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14002"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.2.11107",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "21924-6",
+                  "display": "Tumor marker Cancer"
+                }
+              ],
+              "text": "Biomarker",
+              "type": "group",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10370",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "52101004",
+                    "display": "Vorhanden"
+                  }
+                },
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10440",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "52101004",
+                    "display": "Vorhanden"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "%",
+                        "display": "%"
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10630",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85329-1",
+                      "display": "Cells.estrogen receptor/100 cells in Breast cancer specimen by Immune stain"
+                    }
+                  ],
+                  "text": "PP ER",
+                  "type": "quantity",
+                  "enableBehavior": "all",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10640",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85310-1",
+                      "display": "Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
+                    }
+                  ],
+                  "text": "Färbeintensität ER",
+                  "type": "open-choice",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12034"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10650",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "445104009",
+                      "display": "Sum of proportion of positive staining neoplastic cells score and average intensity of staining score for hormone receptors using immunohistochemistry (observable entity)"
+                    }
+                  ],
+                  "text": "IRS ER",
+                  "type": "integer",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10660",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "16112-5",
+                      "display": "Estrogen receptor [Interpretation] in Tissue"
+                    }
+                  ],
+                  "text": "Hormonrezeptorstatus Östrogen",
+                  "type": "open-choice",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12036"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "%",
+                        "display": "%"
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10670",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85325-9",
+                      "display": "Cells.progesterone receptor/100 cells in Breast cancer specimen by Immune stain"
+                    }
+                  ],
+                  "text": "PP PR",
+                  "type": "quantity",
+                  "enableBehavior": "all",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10680",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85331-7",
+                      "display": "Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
+                    }
+                  ],
+                  "text": "Färbeintensität PR",
+                  "type": "open-choice",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12034"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10690",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "445104009",
+                      "display": "Sum of proportion of positive staining neoplastic cells score and average intensity of staining score for hormone receptors using immunohistochemistry (observable entity)"
+                    }
+                  ],
+                  "text": "IRS PR",
+                  "type": "integer",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10700",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "16113-3",
+                      "display": "Progesterone receptor [Interpretation] in Tissue"
+                    }
+                  ],
+                  "text": "Hormonrezeptorstatus Progesteron",
+                  "type": "choice",
+                  "enableBehavior": "all",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12036"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10730",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85319-2",
+                      "display": "HER2 [Presence] in Breast cancer specimen by Immune stain"
+                    }
+                  ],
+                  "text": "Her2 Score",
+                  "type": "choice",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12038"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "%",
+                        "display": "%"
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.154",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85328-3",
+                      "display": "Cells.HER2 uniform intense membrane staining/cells in Breast cancer specimen by Immune stain"
+                    }
+                  ],
+                  "text": "PP Her2",
+                  "type": "quantity",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10740",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85318-4",
+                      "display": "HER2 [Presence] in Breast cancer specimen by FISH"
+                    }
+                  ],
+                  "text": "Her2 Amplifikation",
+                  "type": "choice",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12039"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+                      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10750",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "48676-1",
+                      "display": "HER2 [Interpretation] in Tissue"
+                    }
+                  ],
+                  "text": "Her2neuStatus",
+                  "type": "choice",
+                  "enableBehavior": "all",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12036"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "%",
+                        "display": "%"
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10760",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85330-9",
+                      "display": "Cells.Ki-67 nuclear Ag/100 cells in Breast cancer specimen by Immune stain"
+                    }
+                  ],
+                  "text": "Ki67-Index",
+                  "type": "quantity",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
