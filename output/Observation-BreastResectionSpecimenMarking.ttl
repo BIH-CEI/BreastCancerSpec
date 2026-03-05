@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://breastcancerspec.org/Observation/BreastResectionSpecimenMarking> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BreastResectionSpecimenMarking"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation BreastResectionSpecimenMarking</b></p><a name=\"BreastResectionSpecimenMarking\"> </a><a name=\"hcBreastResectionSpecimenMarking\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 836381000000102}\">Befundmarkierung</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title=\"Codes:\">Drahthäkchen</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:836381000000102 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "836381000000102" ] ;
+       fhir:display [ fhir:v "Insertion of marker into breast using X-ray guidance (procedure)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Befundmarkierung" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://breastcancerspec.org/Patient/Patient4> ;
+     fhir:reference [ fhir:v "Patient/Patient4" ]
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:text [ fhir:v "Drahthäkchen" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

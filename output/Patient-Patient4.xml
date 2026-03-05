@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="Patient4"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient Patient4</b></p><a name="Patient4"> </a><a name="hcPatient4"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</p><hr/></div>
+  </text>
+  <identifier>
+    <system value="http://example.hospital.de/patient-ids"/>
+    <value value="PAT-2025-105"/>
+  </identifier>
+  <name>
+    <family value="Becker"/>
+    <given value="Sabine"/>
+  </name>
+  <gender value="female"/>
+  <birthDate value="1971-03-15"/>
+</Patient>

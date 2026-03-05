@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="PathologyLabOrganization"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization PathologyLabOrganization</b></p><a name="PathologyLabOrganization"> </a><a name="hcPathologyLabOrganization"> </a><p><b>identifier</b>: <code>http://example.hospital.de/organization-ids</code>/ORG-PATH-001</p><p><b>name</b>: Institut für Pathologie</p></div>
+  </text>
+  <identifier>
+    <system value="http://example.hospital.de/organization-ids"/>
+    <value value="ORG-PATH-001"/>
+  </identifier>
+  <name value="Institut für Pathologie"/>
+</Organization>

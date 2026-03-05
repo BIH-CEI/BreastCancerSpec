@@ -1,0 +1,81 @@
+# Morphology Free Text - Stanzbiopsie - Breast Cancer Specification v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Morphology Free Text - Stanzbiopsie**
+
+## Example Observation: Morphology Free Text - Stanzbiopsie
+
+Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding)
+
+**basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
+
+**status**: Final
+
+**category**: Laboratory, Pathology report final diagnosis Narrative
+
+**code**: Histology type in Cancer specimen Narrative
+
+**subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
+
+**effective**: 2025-01-17
+
+**performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
+
+**value**: In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.
+
+**specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)](Specimen-CoreNeedleBiopsySpecimenSlideHE01.md)
+
+**derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.md)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "CoreNeedleBiopsyMorphologyFreeText",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+  }],
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "22637-3"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "33731-1",
+      "display" : "Histology type in Cancer specimen Narrative"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "effectiveDateTime" : "2025-01-17",
+  "performer" : [{
+    "reference" : "Practitioner/PathologistPractitioner"
+  }],
+  "valueString" : "In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.",
+  "specimen" : {
+    "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+  },
+  "derivedFrom" : [{
+    "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+  }]
+}
+
+```

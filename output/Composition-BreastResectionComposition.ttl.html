@@ -1,0 +1,391 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>BET Mamma Pathology Report Composition - TTL Representation - Breast Cancer Specification v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.9"}
+    h3,h4,h5,h6{--heading-prefix:"7.9"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="family-nav">
+    <a id="family-logo" data-no-external="true" href="https://www.bihealth.org/">
+        <img alt="BIH" height="50" src="BIH-Logo_neu.png"/>
+    </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Breast Cancer Specification</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="clinical-context.html">Clinical Context</a>
+  </li>
+  <li>
+    <a href="motivation.html">Motivation</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Stanzbiopsie
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="biopsy-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-CoreNeedleBiopsyReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-CoreNeedleBiopsyMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-CoreNeedleBiopsyDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-CoreNeedleBiopsyReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-CoreNeedleBiopsyComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">OP-Präparat (BET)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="resection-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-BreastResectionReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-BreastResectionMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-BreastResectionDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-BreastResectionReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-BreastResectionComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="document-viewer.html">Befund-Viewer</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>BET Mamma Pathology Report Composition</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 9" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Breast Cancer Specification - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://breastcancerspec.org/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Composition-BreastResectionComposition.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Composition-BreastResectionComposition.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Composition-BreastResectionComposition.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: BET Mamma Pathology Report Composition - TTL Representation</h2>
+
+
+<p><a href="Composition-BreastResectionComposition.ttl" no-download="true">Raw ttl</a> | <a href="Composition-BreastResectionComposition.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;https://loinc.org/rdf/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:Composition ;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Composition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;BreastResectionComposition&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Composition.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Composition BreastResectionComposition&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;BreastResectionComposition\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcBreastResectionComposition\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Accession ID/PATH-COMP-2025-210&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://ihe-d.de/CodeSystems/IHEXDStypeCode PATH}, {http://snomed.info/sct 371528001}\&quot;&gt;Pathology report (record artifact)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\&quot;Encounter-BreastResectionEncounter.html\&quot;&gt;Encounter: identifier = http://example.hospital.de/encounters#E_25_210; status = finished; class = IMP (IMP)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2025-02-10 17:00:00+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;Organization-PathologyLabOrganization.html\&quot;&gt;Institut für Pathologie&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Histopathologischer Befundbericht - BET Mamma links&lt;/p&gt;&lt;h3&gt;Attesters&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Mode&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Party&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Legal&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Organization-PathologyLabOrganization.html\&quot;&gt;Organization Institut für Pathologie&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;custodian&lt;/b&gt;: &lt;a href=\&quot;Organization-PathologyLabOrganization.html\&quot;&gt;Organization Institut für Pathologie&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Events&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Detail&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode PATREPE}\&quot;&gt;pathology report entry task&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;ServiceRequest-BreastResectionReportRequest.html\&quot;&gt;ServiceRequest Pathology synoptic report&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.identifier">fhir:identifier</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">fhir:type</a> [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v2-0203&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;ACSN&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Accession ID&quot; ]       ] )     ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://example.hospital.de/pathology-reports&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://example.hospital.de/pathology-reports&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PATH-COMP-2025-210&quot; ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;final&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.type">fhir:type</a> [
+    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://ihe-d.de/CodeSystems/IHEXDStypeCode&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://ihe-d.de/CodeSystems/IHEXDStypeCode&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PATH&quot; ]     ] [
+a sct:371528001 ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://snomed.info/sct&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;371528001&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Pathology report (record artifact)&quot; ]     ] )
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.subject">fhir:subject</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Patient/Patient4 ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/Patient4&quot; ] ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Sabine Becker, geb. 15.03.1971 (PAT-2025-105)&quot; ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.encounter">fhir:encounter</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Encounter/BreastResectionEncounter ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter/BreastResectionEncounter&quot; ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-02-10T17:00:00+01:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.author">fhir:author</a> ( [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Organization/PathologyLabOrganization ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization/PathologyLabOrganization&quot; ] ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Institut für Pathologie&quot; ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Histopathologischer Befundbericht - BET Mamma links&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.attester">fhir:attester</a> ( [
+<a href="http://hl7.org/fhir/R4/composition.html#Composition.attester.mode">fhir:mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;legal&quot; ] ;
+<a href="http://hl7.org/fhir/R4/composition.html#Composition.attester.party">fhir:party</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Organization/PathologyLabOrganization ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization/PathologyLabOrganization&quot; ]     ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.custodian">fhir:custodian</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Organization/PathologyLabOrganization ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Organization/PathologyLabOrganization&quot; ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.event">fhir:event</a> ( [
+    ( <a href="http://hl7.org/fhir/R4/composition.html#Composition.event.code">fhir:code</a> [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/v3-ActCode&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PATREPE&quot; ]       ] )     ] ) ;
+    ( <a href="http://hl7.org/fhir/R4/composition.html#Composition.event.detail">fhir:detail</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:ServiceRequest/BreastResectionReportRequest ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;ServiceRequest/BreastResectionReportRequest&quot; ]     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/composition.html#Composition.section">fhir:section</a> ( [
+<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Pathologiebefundbericht&quot; ] ;
+<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">fhir:code</a> [
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+a loinc:11526-1 ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://loinc.org&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://loinc.org&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;11526-1&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Pathology study&quot; ]       ] )     ] ;
+<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;additional&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h3&gt;Klinische Angaben&lt;/h3&gt;&lt;p&gt;Z.n. Stanzbiopsie (E_25_105) mit Nachweis eines invasiven Mammakarzinoms NST, G2. BI-RADS 4b. BET links indiziert. Drahthäkchenmarkierung. Keine neoadjuvante Therapie. Ersterkrankung. Keine bekannte genetische Prädisposition. Präparateradiographie beigelegt.&lt;/p&gt;&lt;h3&gt;Material&lt;/h3&gt;&lt;p&gt;BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen in situ&lt;/p&gt;&lt;h3&gt;Makroskopie&lt;/h3&gt;&lt;table border=\&quot;1\&quot; cellpadding=\&quot;4\&quot; cellspacing=\&quot;0\&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Größe&lt;/td&gt;&lt;td&gt;65 × 45 × 30 mm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Gewicht&lt;/td&gt;&lt;td&gt;55 g&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Quadrant&lt;/td&gt;&lt;td&gt;Unterer äußerer Quadrant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Zifferblatt&lt;/td&gt;&lt;td&gt;5 Uhr&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Abstand Mamille&lt;/td&gt;&lt;td&gt;50 mm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Schnittfläche&lt;/td&gt;&lt;td&gt;Grau-weißlich, derber Herdbefund zentral, ca. 18 mm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Paraffinblöcke&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h3&gt;Mikroskopie&lt;/h3&gt;&lt;p&gt;Invasives Mammakarzinom des NST (kein spezieller Typ), maximal 18 mm messend. Das Karzinom zeigt ein überwiegend trabekuläres und solides Wachstumsmuster mit mäßiger Kern- und Zellpolymorphie. Mitosen sind vereinzelt nachweisbar (4/10 HPF). In der Tumorperipherie zeigt sich ein begleitendes duktales Carcinoma in situ (DCIS) mit intermediärem Kerngrad und überwiegend kribriformem Wachstumsmuster, maximal 8 mm. Fokale Komedo-Nekrosen. Assoziierte Mikroverkalkungen im DCIS-Areal. Alle Resektionsränder tumorfrei. Mindestabstand invasiv: 5 mm (posterior), DCIS: 3 mm. Keine Lymphgefäßinvasion.&lt;/p&gt;&lt;h3&gt;Diagnostische Schlussfolgerung&lt;/h3&gt;&lt;p&gt;&lt;b&gt;Diagnose:&lt;/b&gt; Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c&lt;/p&gt;&lt;table border=\&quot;1\&quot; cellpadding=\&quot;4\&quot; cellspacing=\&quot;0\&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;ICD-10&lt;/td&gt;&lt;td&gt;C50.5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ICD-O-3 Morphologie&lt;/td&gt;&lt;td&gt;M8500/3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Operatives Verfahren&lt;/td&gt;&lt;td&gt;BET (brusterhaltende Therapie)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Seitenlokalisation&lt;/td&gt;&lt;td&gt;Links&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Fokalität&lt;/td&gt;&lt;td&gt;Unifokal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Max. Durchmesser invasiv&lt;/td&gt;&lt;td&gt;18 mm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Max. Gesamtdurchmesser&lt;/td&gt;&lt;td&gt;22 mm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Nottingham-Grad&lt;/td&gt;&lt;td&gt;Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Assoziiertes DCIS&lt;/td&gt;&lt;td&gt;Vorhanden, intermediärer Kerngrad, kribriform, fokale Komedo-Nekrosen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tumorausdehnung&lt;/td&gt;&lt;td&gt;Auf Brustdrüse beschränkt&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;pT-Kategorie&lt;/td&gt;&lt;td&gt;pT1c&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h4&gt;Resektionsränder&lt;/h4&gt;&lt;table border=\&quot;1\&quot; cellpadding=\&quot;4\&quot; cellspacing=\&quot;0\&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;RR-Status invasiv&lt;/td&gt;&lt;td&gt;Nicht befallen (R0)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Nächster tumorfreier RR&lt;/td&gt;&lt;td&gt;Posterior&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Mindestabstand invasiv&lt;/td&gt;&lt;td&gt;5 mm&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;RR-Status DCIS&lt;/td&gt;&lt;td&gt;Nicht befallen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Mindestabstand DCIS&lt;/td&gt;&lt;td&gt;3 mm&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h4&gt;Biomarker&lt;/h4&gt;&lt;table border=\&quot;1\&quot; cellpadding=\&quot;4\&quot; cellspacing=\&quot;0\&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;ER&lt;/td&gt;&lt;td&gt;Positiv (90%, stark)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PR&lt;/td&gt;&lt;td&gt;Positiv (60%, mäßig)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;HER2 (IHC)&lt;/td&gt;&lt;td&gt;1+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;HER2 (ISH)&lt;/td&gt;&lt;td&gt;Nicht amplifiziert&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;HER2-Gesamtstatus&lt;/td&gt;&lt;td&gt;Negativ&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Ki-67&lt;/td&gt;&lt;td&gt;15%&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h4&gt;Weitere Befunde&lt;/h4&gt;&lt;table border=\&quot;1\&quot; cellpadding=\&quot;4\&quot; cellspacing=\&quot;0\&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Lymphgefäßinvasion&lt;/td&gt;&lt;td&gt;Nicht nachgewiesen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Mikrokalzifikationen&lt;/td&gt;&lt;td&gt;In DCIS assoziiert&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Kommentar:&lt;/b&gt; Korrelation mit dem Vorbefund der Stanzbiopsie (E_25_105): Übereinstimmende Histologie (invasives Mammakarzinom NST, G2). Biomarkerprofil bestätigt: ER+, PR+, HER2-, Luminal-A-like. Empfehlung: Tumorkonferenz zur weiteren Therapieplanung.&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]     ] ;
+    ( <a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">fhir:entry</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:DiagnosticReport/BreastResectionReport ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;DiagnosticReport/BreastResectionReport&quot; ]     ] )
+  ] ) . # 
+
+</code></pre>
+
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 5, 2026 17:42+0100">2026-03-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

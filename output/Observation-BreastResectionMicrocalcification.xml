@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="BreastResectionMicrocalcification"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation BreastResectionMicrocalcification</b></p><a name="BreastResectionMicrocalcification"> </a><a name="hcBreastResectionMicrocalcification"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href="ServiceRequest-BreastResectionReportRequest.html">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://loinc.org 22637-3}">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 44692-2}">Mikrokalzifikationen</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href="Practitioner-PathologistPractitioner.html">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title="Codes:">In DCIS assoziiert</span></p><p><b>specimen</b>: <a href="Specimen-BreastResectionSpecimenSlideDCIS-HE01.html">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_2_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href="QuestionnaireResponse-QuestionnaireResponseBreastResection.html">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/BreastResectionReportRequest"/>
+  </basedOn>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="22637-3"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="44692-2"/>
+      <display value="Microcalcifications in Breast tumor"/>
+    </coding>
+    <text value="Mikrokalzifikationen"/>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <effectiveDateTime value="2025-02-10"/>
+  <performer>
+    <reference value="Practitioner/PathologistPractitioner"/>
+  </performer>
+  <valueCodeableConcept>
+    <text value="In DCIS assoziiert"/>
+  </valueCodeableConcept>
+  <specimen>
+    <reference value="Specimen/BreastResectionSpecimenSlideDCIS-HE01"/>
+  </specimen>
+  <derivedFrom>
+    <reference value="QuestionnaireResponse/QuestionnaireResponseBreastResection"/>
+  </derivedFrom>
+</Observation>

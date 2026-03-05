@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Clinical Context - Breast Cancer Specification v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="family-nav">
+    <a id="family-logo" data-no-external="true" href="https://www.bihealth.org/">
+        <img alt="BIH" height="50" src="BIH-Logo_neu.png"/>
+    </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Breast Cancer Specification</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="clinical-context.html">Clinical Context</a>
+  </li>
+  <li>
+    <a href="motivation.html">Motivation</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Stanzbiopsie
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="biopsy-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-CoreNeedleBiopsyReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-CoreNeedleBiopsyMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-CoreNeedleBiopsyDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-CoreNeedleBiopsyReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-CoreNeedleBiopsyComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">OP-Präparat (BET)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="resection-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-BreastResectionReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-BreastResectionMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-BreastResectionDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-BreastResectionReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-BreastResectionComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="document-viewer.html">Befund-Viewer</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Clinical Context</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Breast Cancer Specification - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://breastcancerspec.org/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Clinical Context</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#sources-and-reporting-standards" id="markdown-toc-sources-and-reporting-standards">Sources and reporting standards</a></li>
+  <li><a href="#breast-anatomy" id="markdown-toc-breast-anatomy">Breast anatomy</a></li>
+  <li><a href="#what-is-breast-cancer" id="markdown-toc-what-is-breast-cancer">What is breast cancer?</a></li>
+  <li><a href="#frequency-and-risk-factors" id="markdown-toc-frequency-and-risk-factors">Frequency and risk factors</a></li>
+  <li><a href="#early-detection-and-selfexamination" id="markdown-toc-early-detection-and-selfexamination">Early detection and self‑examination</a></li>
+  <li><a href="#diagnostic-workup-in-suspected-breast-cancer" id="markdown-toc-diagnostic-workup-in-suspected-breast-cancer">Diagnostic work‑up in suspected breast cancer</a></li>
+  <li><a href="#staging-and-biological-subtypes" id="markdown-toc-staging-and-biological-subtypes">Staging and biological subtypes</a></li>
+  <li><a href="#treatment-goals-and-decisionmaking" id="markdown-toc-treatment-goals-and-decisionmaking">Treatment goals and decision‑making</a></li>
+  <li><a href="#treatment-of-early-localised-breast-cancer" id="markdown-toc-treatment-of-early-localised-breast-cancer">Treatment of early (localised) breast cancer</a></li>
+  <li><a href="#treatment-of-locally-advanced-or-metastatic-breast-cancer" id="markdown-toc-treatment-of-locally-advanced-or-metastatic-breast-cancer">Treatment of locally advanced or metastatic breast cancer</a></li>
+  <li><a href="#pathology-reporting-and-iccr-datasets" id="markdown-toc-pathology-reporting-and-iccr-datasets">Pathology reporting and ICCR datasets</a></li>
+  <li><a href="#followup-and-quality-of-life" id="markdown-toc-followup-and-quality-of-life">Follow‑up and quality of life</a></li>
+  <li><a href="#key-terms-at-a-glance" id="markdown-toc-key-terms-at-a-glance">Key terms at a glance</a></li>
+</ul>
+
+</div>
+<p>This page provides an accessible overview of the breast and breast cancer and is based on the German S3 Guideline for Breast Cancer (Evidence-based Guideline Breast Cancer – Long Version 5.0, 2025; hereafter <strong>S3</strong>), the ESMO Clinical Practice Guideline for early breast cancer 2024 (Ann Oncol 2024;35(2):159–182; hereafter <strong>ESMO 2024</strong>) and the International Collaboration on Cancer Reporting datasets for breast cancer (hereafter <strong>ICCR</strong>).</p>
+
+<hr />
+
+<h3 id="sources-and-reporting-standards">Sources and reporting standards</h3>
+
+<p>The <strong>S3 guideline</strong> (version 5.0, 2025) covers early detection, diagnosis, treatment and follow‑up of breast cancer for all genders, including a dedicated section on male breast cancer; several therapy modules are maintained as “living” recommendations.<br />
+The <strong>ESMO 2024 guideline</strong> provides updated, subtype‑oriented recommendations on diagnosis, staging, systemic treatment and follow‑up of early breast cancer, with separate algorithms for luminal A‑like, luminal B‑like, HER2‑positive, HER2‑low and triple‑negative disease as well as post‑neoadjuvant therapy (ESMO 2024, p. 159–176).<br />
+The <strong>ICCR datasets</strong> define core and non‑core items for standardized histopathology reporting of ductal carcinoma in situ (DCIS), invasive breast carcinoma, resection specimens after neoadjuvant therapy and lymph node specimens, to ensure complete, comparable reports (ICCR DCIS dataset; ICCR Invasive Breast Carcinoma dataset 2024; ICCR Invasive Breast – Neoadjuvant dataset; ICCR Lymph Node dataset).</p>
+
+<p>In the text below, these sources are cited with the abbreviations <strong>S3</strong>, <strong>ESMO 2024</strong> and <strong>ICCR</strong>.</p>
+
+<hr />
+
+<h3 id="breast-anatomy">Breast anatomy</h3>
+
+<p>The breast consists of lobules (glandular lobes), ducts, fat and fibrous tissue, forming the mammary gland (S3, chapter “Anatomy and basic principles”).<br />
+Lobules produce milk which is transported through ducts to the nipple (S3, chapter “Anatomy and basic principles”).<br />
+Blood and lymph vessels connect the breast to regional lymph nodes, especially in the axilla and along the internal mammary chain (S3, chapter “Anatomy and basic principles”).</p>
+
+<p>Breast tissue is most prominent in women, but men also have breast tissue and can develop breast cancer; S3 includes a specific section on male breast cancer (S3, chapter “Male breast cancer”).</p>
+
+<hr />
+
+<h3 id="what-is-breast-cancer">What is breast cancer?</h3>
+
+<p>Breast cancer (breast carcinoma) arises when cells of the breast gland become malignant and proliferate uncontrollably (S3, chapter “Epidemiology and pathophysiology”; ESMO 2024, p. 160 f.).<br />
+Most invasive carcinomas originate from ductal or lobular epithelium, most commonly as invasive carcinoma of no special type (NST) or invasive lobular carcinoma (S3, pathology chapter; ESMO 2024, p. 162 f.).<br />
+Non‑invasive (in situ) lesions, such as ductal carcinoma in situ (DCIS), are confined to the ducts, whereas invasive carcinomas have breached the basement membrane and can spread through lymphatic or blood vessels (S3, section on in situ lesions; ESMO 2024, p. 161 f.).</p>
+
+<p>Breast cancer is the most common cancer in women in Europe and worldwide, while men account for about 1 % of all breast cancer cases (ESMO 2024, p. 160 f.; S3, chapter “Epidemiology” and “Male breast cancer”).</p>
+
+<hr />
+
+<h3 id="frequency-and-risk-factors">Frequency and risk factors</h3>
+
+<h4 id="frequency">Frequency</h4>
+
+<ul>
+  <li>Breast cancer is the most frequent malignant tumour in women in Germany and Europe (S3, epidemiology chapter; ESMO 2024, p. 160 f.).</li>
+  <li>Incidence increases with age, with a substantial proportion of cases occurring after the age of 50 (ESMO 2024, p. 160 f.).</li>
+  <li>Male breast cancer is rare but follows largely analogous diagnostic and therapeutic principles, adapted to sex‑specific aspects (S3, chapter “Male breast cancer”).</li>
+</ul>
+
+<h4 id="risk-factors">Risk factors</h4>
+
+<p>Important risk factors described in S3 and ESMO 2024 include (S3, risk‑factor chapter; ESMO 2024, p. 160–162):</p>
+
+<ul>
+  <li>Genetic predisposition, particularly pathogenic germline variants in BRCA1/2 and other high‑risk genes.</li>
+  <li>Family history of breast, ovarian or related cancers in first‑degree relatives.</li>
+  <li>Hormonal factors: early menarche, late menopause, late first full‑term pregnancy or nulliparity, and long‑term postmenopausal hormone replacement therapy.</li>
+  <li>Mammographically dense breast tissue and certain precursor lesions such as atypical ductal hyperplasia.</li>
+  <li>Lifestyle factors such as overweight after menopause, physical inactivity and regular alcohol consumption, which modestly increase risk.</li>
+</ul>
+
+<p>Healthy lifestyle (physical activity, normal body weight, moderate alcohol consumption) can slightly reduce risk but does not replace structured screening (S3, risk‑factor chapter; ESMO 2024, p. 160 f.).</p>
+
+<hr />
+
+<h3 id="early-detection-and-selfexamination">Early detection and self‑examination</h3>
+
+<p>The aim of early detection is to identify clinically relevant tumours at a stage where they are highly curable while limiting overdiagnosis and overtreatment (S3, early‑detection chapter; ESMO 2024, p. 160 f.).</p>
+
+<h4 id="organised-screening-programmes">Organised screening programmes</h4>
+
+<ul>
+  <li>In many European countries, population‑based mammography screening programmes invite women aged 50–69 for biennial mammography (S3, early‑detection chapter).</li>
+  <li>S3 describes benefits (reduced breast cancer mortality) and harms (false positives, overdiagnosis) and emphasises an informed, preference‑sensitive decision (S3, early‑detection chapter).</li>
+</ul>
+
+<h4 id="individual-early-detection-and-highrisk-groups">Individual early detection and high‑risk groups</h4>
+
+<ul>
+  <li>Clinical breast examination and individual mammography/ultrasound are available for people at increased risk or outside the standard screening age range (S3, early‑detection chapter).</li>
+  <li>Individuals with high hereditary risk (e.g. BRCA1/2) should follow intensified programmes with annual MRI‑based imaging and close surveillance (S3, hereditary breast cancer chapter; ESMO 2024, p. 160–162).</li>
+</ul>
+
+<hr />
+
+<h3 id="diagnostic-workup-in-suspected-breast-cancer">Diagnostic work‑up in suspected breast cancer</h3>
+
+<p>Diagnosis follows the principle of “triple assessment”: history and clinical examination, imaging and biopsy (S3, diagnostic chapter; ESMO 2024, p. 161 f.).</p>
+
+<ul>
+  <li>Clinical assessment: history and physical examination of both breasts and regional lymph nodes (S3, diagnostic chapter; ESMO 2024, p. 161 f.).</li>
+  <li>Imaging: bilateral mammography and ultrasound of breast and axilla are standard; MRI is recommended in selected situations (e.g. genetic high risk, very dense breasts, discordant findings) (S3, diagnostic chapter; ESMO 2024, p. 161 f.).</li>
+  <li>Biopsy: before any definitive treatment, a core needle biopsy should confirm the diagnosis and provide information on tumour type, grade, ER/PR, HER2 and Ki‑67 (S3, pathology chapter; ESMO 2024, p. 162 f.).</li>
+</ul>
+
+<p>Staging investigations (e.g. CT scan, bone scintigraphy) are recommended in a risk‑adapted manner in advanced stages or when symptoms suggest distant metastases; routine staging is not necessary in clearly low‑risk early disease (S3, diagnostic chapter; ESMO 2024, p. 161–163).</p>
+
+<hr />
+
+<h3 id="staging-and-biological-subtypes">Staging and biological subtypes</h3>
+
+<h4 id="tnm-staging">TNM staging</h4>
+
+<p>Staging is based on TNM/UICC (8th edition), summarised in the S3 appendix (S3, staging appendix; ESMO 2024, p. 161–163).<br />
+T describes tumour size and local extent, N the regional lymph node status and M the presence of distant metastases; the combination defines stage I–IV (S3, staging appendix; ESMO 2024, p. 161–163).</p>
+
+<h4 id="biological-subtypes">Biological subtypes</h4>
+
+<p>S3 and ESMO 2024 classify tumours using ER/PR, HER2 and proliferation (e.g. Ki‑67) into surrogate intrinsic subtypes such as luminal A‑like, luminal B‑like, HER2‑positive, HER2‑low and triple‑negative, which guide prognosis and systemic treatment (S3, pathology/therapy chapters; ESMO 2024, p. 162–166).<br />
+ICCR datasets require these parameters to be documented as core elements, alongside tumour type, grade, lymphovascular invasion, margins and nodal status (ICCR Invasive Breast Carcinoma dataset; ICCR Neoadjuvant Breast dataset).</p>
+
+<hr />
+
+<h3 id="treatment-goals-and-decisionmaking">Treatment goals and decision‑making</h3>
+
+<p>Primary goals are cure in early disease, prevention of recurrence, disease control in advanced stages and preservation of quality of life (S3, therapy overview; ESMO 2024, p. 166 ff.).<br />
+Treatment decisions should be made in a multidisciplinary tumour board and through shared decision‑making with the patient, weighing benefits and risks of each option (S3, therapy overview; ESMO 2024, p. 166–168).</p>
+
+<hr />
+
+<h3 id="treatment-of-early-localised-breast-cancer">Treatment of early (localised) breast cancer</h3>
+
+<p>Early breast cancer is confined to the breast and possibly regional lymph nodes without distant metastases (S3, therapy overview; ESMO 2024, p. 161–163).<br />
+Curative treatment usually combines surgery, radiotherapy and systemic therapies, adapted to stage and biological subtype (S3, surgery/radiotherapy/systemic therapy chapters; ESMO 2024, p. 166–172).</p>
+
+<h4 id="surgery-and-axillary-management">Surgery and axillary management</h4>
+
+<p>Surgery is the cornerstone of primary treatment (S3, surgery chapter; ESMO 2024, p. 166–168).</p>
+
+<ul>
+  <li>Breast‑conserving surgery (BCS): removal of the tumour with negative margins while preserving the breast is standard when oncologically feasible (S3, surgery chapter; ESMO 2024, p. 166–168).</li>
+  <li>Mastectomy: complete removal of the breast is indicated for large tumours, multicentric disease or by patient preference; reconstructive options with implants or autologous tissue can be immediate or delayed (S3, surgery chapter; ESMO 2024, p. 166–168).</li>
+  <li>Axillary staging: sentinel lymph node biopsy (SLNB) is standard when the axilla is clinically negative (S3, axillary surgery chapter; ESMO 2024, p. 167 f.). In selected low‑risk patients (e.g. older, HR‑positive/HER2‑negative, small tumours, negative axillary ultrasound) undergoing BCS with whole‑breast irradiation, omission of SLNB may be considered in specialised centres according to current evidence and national recommendations.</li>
+</ul>
+
+<h4 id="radiotherapy">Radiotherapy</h4>
+
+<p>Radiotherapy reduces local recurrence and, in some settings, improves survival (S3, radiotherapy chapter; ESMO 2024, p. 168–170).</p>
+
+<ul>
+  <li>After breast‑conserving surgery, whole‑breast irradiation (often with a boost to the tumour bed) is usually indicated (S3, radiotherapy chapter; ESMO 2024, p. 168–170).</li>
+  <li>After mastectomy, chest wall and regional nodal irradiation are recommended in high‑risk situations such as large tumours or extensive nodal involvement (S3, radiotherapy chapter; ESMO 2024, p. 168–170).</li>
+</ul>
+
+<h4 id="systemic-therapy-neoadjuvant--subtypeoriented">Systemic therapy (neo‑/adjuvant) – subtype‑oriented</h4>
+
+<p>Systemic (neo‑/adjuvant) therapy is tailored to risk profile and biological subtype; ESMO 2024 provides distinct algorithms for luminal A‑like, luminal B‑like, HER2‑positive, HER2‑low and triple‑negative disease (S3, systemic therapy chapters; ESMO 2024, p. 166–172).</p>
+
+<ul>
+  <li>
+    <p>HR‑positive/HER2‑negative (luminal‑like):<br />
+– Endocrine therapy is standard (e.g. tamoxifen or aromatase inhibitors, with possible ovarian function suppression in premenopausal patients), typically for at least 5 years with possible extension in higher‑risk cases (S3, endocrine therapy chapter; ESMO 2024, p. 166–170).<br />
+– Chemotherapy is added in clinically and/or genomically high‑risk disease; in selected low‑risk patients, multigene assays in combination with clinical factors support chemotherapy omission (S3, systemic therapy chapter; ESMO 2024, p. 166–170).<br />
+– In selected high‑risk early HR‑positive/HER2‑negative cancers, adjuvant CDK4/6 inhibition (e.g. abemaciclib) is recommended in addition to endocrine therapy (S3, CDK4/6 section; ESMO 2024, p. 170–172).</p>
+  </li>
+  <li>
+    <p>HER2‑positive (any HR):<br />
+– Neoadjuvant chemotherapy plus HER2‑targeted therapy (e.g. trastuzumab with or without pertuzumab) is preferred for tumours ≥2 cm and/or node‑positive disease (S3, HER2‑positive section; ESMO 2024, p. 170–172).<br />
+– Post‑neoadjuvant therapy is adapted to pathological response: patients with residual invasive disease after neoadjuvant therapy receive escalation (e.g. T‑DM1), whereas those with pathologic complete response usually continue trastuzumab‑based therapy to complete one year (ESMO 2024, p. 170–172).<br />
+– In small, node‑negative HER2‑positive tumours, de‑escalated regimens (e.g. weekly paclitaxel plus trastuzumab) can be used (ESMO 2024, p. 170–172).</p>
+  </li>
+  <li>
+    <p>Triple‑negative breast cancer (TNBC):<br />
+– Neoadjuvant chemotherapy, commonly with anthracyclines and taxanes and in defined situations plus immunotherapy, is standard for stage II–III TNBC (S3, TNBC chapter; ESMO 2024, p. 170–172).<br />
+– Post‑neoadjuvant capecitabine is recommended for patients with residual invasive TNBC after neoadjuvant chemotherapy (ESMO 2024, p. 170–172).</p>
+  </li>
+  <li>
+    <p>HER2‑low and other special situations are addressed in ESMO 2024; for patients the key message is that treatment intensity and combination partners depend on HER2 status (including HER2‑low), hormone receptors, proliferation and stage (ESMO 2024, p. 162–172).</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="treatment-of-locally-advanced-or-metastatic-breast-cancer">Treatment of locally advanced or metastatic breast cancer</h3>
+
+<p>In unresectable locally advanced or metastatic breast cancer, the focus is on disease control, symptom relief and maintaining quality of life (S3, metastatic therapy chapter).<br />
+Therapy is again driven by biological subtype, prior treatments and patient preferences.</p>
+
+<ul>
+  <li>HR‑positive/HER2‑negative: endocrine therapy combined with a CDK4/6 inhibitor is the preferred first‑line standard for most patients; chemotherapy is reserved for specific clinical situations such as visceral crisis or endocrine resistance (S3, metastatic HR+/HER2‑ section).</li>
+  <li>HER2‑positive: sequential combinations of HER2‑targeted agents and chemotherapy (e.g. trastuzumab, pertuzumab, T‑DM1, antibody‑drug conjugates) are used according to prior exposure and disease pattern (S3, metastatic HER2‑positive section).</li>
+  <li>Triple‑negative: chemotherapy is standard; immunotherapy or antibody‑drug conjugates are options in selected biomarker‑defined populations (S3, metastatic TNBC section).</li>
+  <li>Local treatments such as radiotherapy or surgery are used palliatively to manage complications (e.g. bone pain, threatened spinal cord compression, ulcerating breast tumours) (S3, palliative local therapy section).</li>
+</ul>
+
+<hr />
+
+<h3 id="pathology-reporting-and-iccr-datasets">Pathology reporting and ICCR datasets</h3>
+
+<p>Standardised pathology reports are essential for staging, risk assessment and treatment planning. ICCR datasets specify core elements for different specimen types that should be included in the histopathology report (ICCR DCIS dataset; ICCR Invasive Breast Carcinoma dataset 2024; ICCR Invasive Breast – Neoadjuvant dataset; ICCR Lymph Node dataset).</p>
+
+<h4 id="dcis-resection">DCIS resection</h4>
+
+<p>Ductal carcinoma in situ (DCIS) is a non‑invasive lesion confined to the ductal system without invasion beyond the basement membrane (S3, in situ lesions chapter).<br />
+Key reporting elements in DCIS resections include nuclear grade, architectural pattern, presence and type of necrosis, lesion size/extent, margin status, and presence of calcifications or microinvasion (ICCR DCIS dataset).</p>
+
+<h4 id="2-invasive-carcinoma-resection">2. Invasive carcinoma resection</h4>
+
+<p>Invasive breast carcinoma, most commonly of no special type (NST), has penetrated the basement membrane and can invade surrounding stroma (S3, pathology chapter; ESMO 2024, p. 162 f.).<br />
+The report should include histological type (ICD‑O‑3), Nottingham grade (tubule formation, nuclear pleomorphism, mitotic rate), biomarker status (ER, PR, HER2, Ki‑67), surgical margin assessment, lymphovascular invasion and TNM stage, in line with ICCR core items (ICCR Invasive Breast Carcinoma dataset 2024).</p>
+
+<h4 id="3-neoadjuvant-therapy-resection">3. Neoadjuvant therapy resection</h4>
+
+<p>After neoadjuvant (pre‑operative) systemic therapy, the resection specimen must be evaluated for response to treatment (S3, neoadjuvant therapy chapter; ESMO 2024, p. 170–172).<br />
+This includes documentation of residual tumour bed size, cellularity and subtype, residual nodal disease, calculation of a Residual Cancer Burden (RCB) or comparable response score, and comparison with pre‑treatment histology and imaging, as specified in the ICCR neoadjuvant dataset (ICCR Invasive Breast – Neoadjuvant dataset).</p>
+
+<h4 id="4-sentinel-lymph-node-biopsy">4. Sentinel lymph node biopsy</h4>
+
+<p>Sentinel lymph node (SLN) biopsy is performed for axillary staging in clinically node‑negative patients (S3, axillary surgery chapter; ESMO 2024, p. 167 f.).<br />
+Reports should state the number of sentinel nodes examined, size and category of metastases (isolated tumour cells, micrometastases, macrometastases), use and results of immunohistochemistry (e.g. pancytokeratin), extranodal extension and final pN category, following ICCR recommendations (ICCR Lymph Node dataset).</p>
+
+<hr />
+
+<h3 id="followup-and-quality-of-life">Follow‑up and quality of life</h3>
+
+<p>After primary treatment of early breast cancer, structured follow‑up is essential (S3, follow‑up chapter).</p>
+
+<ul>
+  <li>Regular clinical follow‑up with history and examination, initially every 6–12 months, later annually (S3, follow‑up chapter).</li>
+  <li>Annual mammography of the remaining breast tissue according to risk and prior treatment (S3, follow‑up chapter).</li>
+  <li>Additional imaging only if recurrence or metastasis is suspected (S3, follow‑up chapter).</li>
+</ul>
+
+<p>Quality of life, management of treatment‑related side‑effects, psychosocial and sexual health and return to work are integral parts of care (S3, survivorship chapter).<br />
+Rehabilitation, exercise programmes, nutritional counselling, psycho‑oncology and self‑help structures are recommended (S3, survivorship chapter).</p>
+
+<hr />
+
+<h3 id="key-terms-at-a-glance">Key terms at a glance</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mammography</td>
+      <td>X‑ray examination of the breast for screening and diagnostic purposes (S3, early‑detection chapter).</td>
+    </tr>
+    <tr>
+      <td>Ultrasound</td>
+      <td>Imaging using sound waves to assess breast and axillary structures (S3, diagnostic chapter).</td>
+    </tr>
+    <tr>
+      <td>Biopsy</td>
+      <td>Needle sampling of tissue to confirm diagnosis and determine tumour characteristics (S3, pathology chapter).</td>
+    </tr>
+    <tr>
+      <td>Hormone receptor status</td>
+      <td>Indicates whether tumour cells express oestrogen/progesterone receptors and may respond to endocrine therapy (S3, pathology chapter).</td>
+    </tr>
+    <tr>
+      <td>HER2 status</td>
+      <td>Indicates overexpression/amplification of HER2 and eligibility for HER2‑targeted therapy (S3, pathology chapter).</td>
+    </tr>
+    <tr>
+      <td>Endocrine therapy</td>
+      <td>Hormone‑modulating treatment for hormone receptor‑positive tumours (S3, endocrine therapy chapter).</td>
+    </tr>
+    <tr>
+      <td>CDK4/6 inhibitors</td>
+      <td>Targeted drugs that slow cell cycle progression in HR‑positive/HER2‑negative disease (S3, CDK4/6 section).</td>
+    </tr>
+    <tr>
+      <td>ICCR dataset</td>
+      <td>Structured checklist specifying core items for pathology reports in breast cancer (ICCR).</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p>Content is derived from the S3 Breast Cancer Guideline (Long Version 5.0, 2025), the ESMO 2024 early breast cancer guideline and the ICCR datasets, and should be checked regularly for updates (S3, foreword and methodology; ESMO 2024, p. 159 f.; ICCR).</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 5, 2026 17:42+0100">2026-03-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

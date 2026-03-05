@@ -1,0 +1,4066 @@
+{
+  "date" : "Thu, 05 Mar, 2026 17:42:10 +0100",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-breastcancerspec.json",
+    "size" : 41030,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 32,
+      "length" : 15
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 6
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 31
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 6737
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 43,
+      "length" : 120
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 171
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 57,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-BreastResectionDocument.json",
+    "size" : 264378,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 17
+    },
+    {
+      "activity" : "load",
+      "start" : 32,
+      "length" : 38
+    },
+    {
+      "activity" : "load",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 8
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 32,
+      "length" : 1031
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 40,
+      "length" : 1351
+    },
+    {
+      "activity" : "generate1",
+      "start" : 43,
+      "length" : 698
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 416
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 70,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-CoreNeedleBiopsyDocument.json",
+    "size" : 136679,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 7
+    },
+    {
+      "activity" : "load",
+      "start" : 32,
+      "length" : 5
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 59
+    },
+    {
+      "activity" : "validate",
+      "start" : 41,
+      "length" : 374
+    },
+    {
+      "activity" : "generate1",
+      "start" : 43,
+      "length" : 308
+    },
+    {
+      "activity" : "generate2",
+      "start" : 47,
+      "length" : 184
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Composition-BreastResectionComposition.json",
+    "size" : 5852,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 11
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Composition-CoreNeedleBiopsyComposition.json",
+    "size" : 4249,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Condition-BreastResectionDiagnosisConfirmed.json",
+    "size" : 1392,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Condition-CoreNeedleBiopsyDiagnosisPreOp.json",
+    "size" : 1377,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 14
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/DiagnosticReport-BreastResectionImagingReport.json",
+    "size" : 755,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/DiagnosticReport-BreastResectionReport.json",
+    "size" : 3775,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 22
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/DiagnosticReport-CoreNeedleBiopsyImagingReport.json",
+    "size" : 726,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/DiagnosticReport-CoreNeedleBiopsyReport.json",
+    "size" : 2842,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 16
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-BreastResectionEncounter.json",
+    "size" : 304,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 2
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-CoreNeedleBiopsyEncounter.json",
+    "size" : 305,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionAssociatedDCIS.json",
+    "size" : 1519,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionAttachedTissue.json",
+    "size" : 1514,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionCancerHistory.json",
+    "size" : 472,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionClosestMargin.json",
+    "size" : 1556,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionComment.json",
+    "size" : 1451,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionDCISArchitecture.json",
+    "size" : 1749,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionDCISGrade.json",
+    "size" : 1411,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionDCISNecrosis.json",
+    "size" : 1366,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionDiagnosticConclusionGrouper.json",
+    "size" : 4565,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 17
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 20
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 30
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionERIntensity.json",
+    "size" : 1790,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionERPercentage.json",
+    "size" : 1647,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 32
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionERStatus.json",
+    "size" : 1499,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionElstonEllisScore.json",
+    "size" : 1463,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionFocality.json",
+    "size" : 1405,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionGeneticPredisposition.json",
+    "size" : 611,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionHER2IHC.json",
+    "size" : 1585,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionHER2ISH.json",
+    "size" : 1521,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionHER2Overall.json",
+    "size" : 1473,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionHistologicalType.json",
+    "size" : 1660,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionInvasiveCarcinoma.json",
+    "size" : 1491,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionKi67.json",
+    "size" : 1677,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionLVI.json",
+    "size" : 1723,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionLaterality.json",
+    "size" : 1491,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMacroClock.json",
+    "size" : 1559,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMacroDepth.json",
+    "size" : 1499,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMacroDistanceNipple.json",
+    "size" : 1394,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMacroLength.json",
+    "size" : 1495,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMacroQuadrant.json",
+    "size" : 1433,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMacroWeight.json",
+    "size" : 1469,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "scan",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMacroWidth.json",
+    "size" : 1499,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMacroscopicGrouper.json",
+    "size" : 1964,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMarginStatusInvasive.json",
+    "size" : 1904,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMarginStatusNonInvasive.json",
+    "size" : 1792,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMaterialType.json",
+    "size" : 1301,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMaxDiameterInvasive.json",
+    "size" : 1609,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMaxOverallDiameter.json",
+    "size" : 1413,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMicrocalcification.json",
+    "size" : 1348,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMinDistanceInvasive.json",
+    "size" : 1678,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMinDistanceNonInvasive.json",
+    "size" : 1431,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMitosisCount.json",
+    "size" : 1427,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMitoticRateScore.json",
+    "size" : 1428,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 70,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionMorphologyFreeText.json",
+    "size" : 1909,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionNonInvasiveLesion.json",
+    "size" : 1504,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionNottinghamGrade.json",
+    "size" : 1601,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionNuclearPleomorphism.json",
+    "size" : 1426,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionOperativeProcedure.json",
+    "size" : 1682,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionPRIntensity.json",
+    "size" : 1801,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionPRPercentage.json",
+    "size" : 1655,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionPRStatus.json",
+    "size" : 1505,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionPT.json",
+    "size" : 1337,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionPresentationMode.json",
+    "size" : 415,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionPriorTherapy.json",
+    "size" : 617,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionRadiologicalExtent.json",
+    "size" : 519,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionSpecimenLimited.json",
+    "size" : 674,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionSpecimenMarking.json",
+    "size" : 468,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionSpecimenRadiographyClinical.json",
+    "size" : 686,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionTubuleScore.json",
+    "size" : 1433,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-BreastResectionTumorExtent.json",
+    "size" : 1769,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyBClassification.json",
+    "size" : 1342,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyDiagnosticConclusionGrouper.json",
+    "size" : 2818,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 16
+    },
+    {
+      "activity" : "generateExampleZip",
+      "start" : 57,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyERPercentage.json",
+    "size" : 1394,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyERStatus.json",
+    "size" : 1489,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyHER2ISH.json",
+    "size" : 1549,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyHistologicalTypeICDO3.json",
+    "size" : 1456,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyKi67.json",
+    "size" : 1388,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyMacroscopicBlockCount.json",
+    "size" : 1319,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyMacroscopicCylinderCount.json",
+    "size" : 1320,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyMacroscopicGrouper.json",
+    "size" : 1578,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyMacroscopicTotalLength.json",
+    "size" : 1510,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyMicrocalcification.json",
+    "size" : 1563,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyMicrocalcificationCorrelation.json",
+    "size" : 1436,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyMitoticRate.json",
+    "size" : 1391,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyMorphologyFreeText.json",
+    "size" : 1911,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyNottinghamGrade.json",
+    "size" : 1545,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyNottinghamSummaryScore.json",
+    "size" : 1446,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyNuclearPleomorphism.json",
+    "size" : 1389,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 44,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyPRPercentage.json",
+    "size" : 1398,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyPRStatus.json",
+    "size" : 1493,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsySpecimenRadiography.json",
+    "size" : 1515,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 31,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-CoreNeedleBiopsyTubuleFormation.json",
+    "size" : 1408,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-PathologyLabOrganization.json",
+    "size" : 239,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 2
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-Patient4.json",
+    "size" : 323,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 2
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-BreastSurgeonPractitioner.json",
+    "size" : 575,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-PathologistPractitioner.json",
+    "size" : 571,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/QuestionnaireResponse-QuestionnaireResponseBreastResection.json",
+    "size" : 19282,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 144
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 16
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.json",
+    "size" : 10031,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 5
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 76
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 11
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-BreastResectionReportRequest.json",
+    "size" : 2508,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 14
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 14
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ServiceRequest-CoreNeedleBiopsyReportRequest.json",
+    "size" : 1876,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenBlock01.json",
+    "size" : 2778,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 40,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenBlock02.json",
+    "size" : 2780,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenBlock03.json",
+    "size" : 2777,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenPart.json",
+    "size" : 2848,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 13
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideDCIS-HE01.json",
+    "size" : 3621,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideDCIS-HE02.json",
+    "size" : 3621,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 8
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideER01.json",
+    "size" : 3589,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideER02.json",
+    "size" : 3589,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideHE01.json",
+    "size" : 3616,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideHE02.json",
+    "size" : 3616,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideHE03.json",
+    "size" : 3616,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideHE04.json",
+    "size" : 3616,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideHER2-01.json",
+    "size" : 3646,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideHER2-02.json",
+    "size" : 3646,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 8
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideKi67-01.json",
+    "size" : 3597,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideKi67-02.json",
+    "size" : 3597,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideMargins-HE01.json",
+    "size" : 3624,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideMargins-HE02.json",
+    "size" : 3624,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideMargins-HE03.json",
+    "size" : 3624,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideMargins-HE04.json",
+    "size" : 3624,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideMargins-HE05.json",
+    "size" : 3624,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlideMargins-HE06.json",
+    "size" : 3624,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlidePR01.json",
+    "size" : 3589,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-BreastResectionSpecimenSlidePR02.json",
+    "size" : 3589,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenBlock01.json",
+    "size" : 2759,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 7
+    },
+    {
+      "activity" : "processProvenanceDetails",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenPart.json",
+    "size" : 2783,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideER01.json",
+    "size" : 3591,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 12
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideER02.json",
+    "size" : 3591,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideHE01.json",
+    "size" : 3618,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideHE02.json",
+    "size" : 3618,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideHE03.json",
+    "size" : 3618,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideHE04.json",
+    "size" : 3618,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 9
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideHER2-01.json",
+    "size" : 3648,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 15
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideHER2-02.json",
+    "size" : 3648,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 15
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 10
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideKi67-01.json",
+    "size" : 3599,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 11
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlideKi67-02.json",
+    "size" : 3599,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlidePR01.json",
+    "size" : 3591,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 10
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Specimen-CoreNeedleBiopsySpecimenSlidePR02.json",
+    "size" : 3591,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 32,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 33,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 45,
+      "length" : 13
+    },
+    {
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 11358,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 2909
+  },
+  {
+    "name" : "/input/pagecontent/clinical-context.md",
+    "size" : 19255
+  },
+  {
+    "name" : "/input/pagecontent/resection-specimens.md",
+    "size" : 4068,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/biopsy-specimens.md",
+    "size" : 2482
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 1488
+  },
+  {
+    "name" : "/input/pagecontent/motivation.md",
+    "size" : 4275
+  },
+  {
+    "name" : "/input/pagecontent/document-viewer.xml",
+    "size" : 4679,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 14
+    }]
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0
+  },
+  {
+    "name" : "/input/images/document-viewer.js",
+    "size" : 8498,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/BIH-Logo_neu.png",
+    "size" : 43630
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 55247,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 48,
+      "length" : 1
+    }]
+  }]
+}

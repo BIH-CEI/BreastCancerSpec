@@ -1,0 +1,7 @@
+[{
+  "id" : "breastcancerspec",
+  "type" : "ImplementationGuide",
+  "url" : "http://breastcancerspec.org/ImplementationGuide/breastcancerspec",
+  "version" : "0.1.0",
+  "name" : "BreastCancerSpec"
+}]

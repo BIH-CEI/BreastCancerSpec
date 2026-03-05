@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="CoreNeedleBiopsyDiagnosticConclusionGrouper"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2026.0.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation CoreNeedleBiopsyDiagnosticConclusionGrouper</b></p><a name="CoreNeedleBiopsyDiagnosticConclusionGrouper"> </a><a name="hcCoreNeedleBiopsyDiagnosticConclusionGrouper"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper">MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href="ServiceRequest-CoreNeedleBiopsyReportRequest.html">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 22637-3}">Pathology report final diagnosis Narrative</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href="Practitioner-PathologistPractitioner.html">Practitioner Elisabeth Hoffmann </a></p><p><b>note</b>: By Practitioner/PathologistPractitioner @2025-01-17</p><blockquote><div><p>Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen.</p>
+</div></blockquote><p><b>hasMember</b>: </p><ul><li><a href="Observation-CoreNeedleBiopsyHistologicalTypeICDO3.html">Observation Histology and Behavior ICD-O-3 Cancer</a></li><li><a href="Observation-CoreNeedleBiopsyMorphologyFreeText.html">Observation Histology type in Cancer specimen Narrative</a></li><li><a href="Observation-CoreNeedleBiopsyNottinghamGrade.html">Observation Histologic grade [Score] in Breast cancer specimen by Nottingham</a></li><li><a href="Observation-CoreNeedleBiopsyNottinghamSummaryScore.html">Observation Histologic grade [Score] in Breast cancer specimen by Nottingham</a></li><li><a href="Observation-CoreNeedleBiopsyTubuleFormation.html">Observation Glandular differentiation [Score] in Breast cancer specimen by Nottingham</a></li><li><a href="Observation-CoreNeedleBiopsyNuclearPleomorphism.html">Observation Nuclear pleomorphism in Breast tumor by Nottingham</a></li><li><a href="Observation-CoreNeedleBiopsyMitoticRate.html">Observation Mitotic rate [Score] in Breast cancer specimen by Nottingham</a></li><li><a href="Observation-CoreNeedleBiopsyERStatus.html">Observation Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-CoreNeedleBiopsyERPercentage.html">Observation Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-CoreNeedleBiopsyPRStatus.html">Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-CoreNeedleBiopsyPRPercentage.html">Observation Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-CoreNeedleBiopsyHER2ISH.html">Observation ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH</a></li><li><a href="Observation-CoreNeedleBiopsyKi67.html">Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-CoreNeedleBiopsyBClassification.html">Observation Screening interpretation (observable entity)</a></li><li><a href="Observation-CoreNeedleBiopsyMicrocalcification.html">Observation Microcalcification, calcified structure (morphologic abnormality)</a></li><li><a href="Observation-CoreNeedleBiopsySpecimenRadiography.html">Observation Specimen mammography (procedure)</a></li><li><a href="Observation-CoreNeedleBiopsyMicrocalcificationCorrelation.html">Observation Microcalcification, calcified structure (morphologic abnormality)</a></li></ul><p><b>derivedFrom</b>: <a href="QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/CoreNeedleBiopsyReportRequest"/>
+  </basedOn>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="22637-3"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <effectiveDateTime value="2025-01-17"/>
+  <performer>
+    <reference value="Practitioner/PathologistPractitioner"/>
+  </performer>
+  <note>
+    <authorReference>
+      <reference value="Practitioner/PathologistPractitioner"/>
+    </authorReference>
+    <time value="2025-01-17"/>
+    <text value="Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen."/>
+  </note>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyHistologicalTypeICDO3"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyMorphologyFreeText"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyNottinghamGrade"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyNottinghamSummaryScore"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyTubuleFormation"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyNuclearPleomorphism"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyMitoticRate"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyERStatus"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyERPercentage"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyPRStatus"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyPRPercentage"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyHER2ISH"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyKi67"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyBClassification"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyMicrocalcification"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsySpecimenRadiography"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/CoreNeedleBiopsyMicrocalcificationCorrelation"/>
+  </hasMember>
+  <derivedFrom>
+    <reference value="QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"/>
+  </derivedFrom>
+</Observation>

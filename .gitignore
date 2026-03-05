@@ -2,7 +2,6 @@
 Thumbs.db
 
 # IG Publisher
-/output
 /temp
 /template
 /input-cache
@@ -27,6 +26,3 @@ ehthumbs.db
 CLAUDE.md
 
 /Beispielbefunde
-
-/PDF_Befunde
-/Questionnaires

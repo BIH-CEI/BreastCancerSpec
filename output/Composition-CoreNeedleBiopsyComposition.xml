@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="CoreNeedleBiopsyComposition"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Composition CoreNeedleBiopsyComposition</b></p><a name="CoreNeedleBiopsyComposition"> </a><a name="hcCoreNeedleBiopsyComposition"> </a><p><b>identifier</b>: Accession ID/PATH-COMP-2025-105</p><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://ihe-d.de/CodeSystems/IHEXDStypeCode PATH}, {http://snomed.info/sct 721967005}">Tissue pathology biopsy report (record artifact)</span></p><p><b>encounter</b>: <a href="Encounter-CoreNeedleBiopsyEncounter.html">Encounter: identifier = http://example.hospital.de/encounters#E_25_105; status = finished; class = AMB (AMB)</a></p><p><b>date</b>: 2025-01-17 17:00:00+0100</p><p><b>author</b>: <a href="Organization-PathologyLabOrganization.html">Institut für Pathologie</a></p><p><b>title</b>: Histopathologischer Befundbericht - Stanzbiopsie Mamma links</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td>Legal</td><td><a href="Organization-PathologyLabOrganization.html">Organization Institut für Pathologie</a></td></tr></table><p><b>custodian</b>: <a href="Organization-PathologyLabOrganization.html">Organization Institut für Pathologie</a></p><h3>Events</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode PATREPE}">pathology report entry task</span></td><td><a href="ServiceRequest-CoreNeedleBiopsyReportRequest.html">ServiceRequest Pathology synoptic report</a></td></tr></table></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="ACSN"/>
+        <display value="Accession ID"/>
+      </coding>
+    </type>
+    <system value="http://example.hospital.de/pathology-reports"/>
+    <value value="PATH-COMP-2025-105"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://ihe-d.de/CodeSystems/IHEXDStypeCode"/>
+      <code value="PATH"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="721967005"/>
+      <display value="Tissue pathology biopsy report (record artifact)"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/Patient4"/>
+    <display value="Sabine Becker, geb. 15.03.1971 (PAT-2025-105)"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/CoreNeedleBiopsyEncounter"/>
+  </encounter>
+  <date value="2025-01-17T17:00:00+01:00"/>
+  <author>
+    <reference value="Organization/PathologyLabOrganization"/>
+    <display value="Institut für Pathologie"/>
+  </author>
+  <title value="Histopathologischer Befundbericht - Stanzbiopsie Mamma links"/>
+  <attester>
+    <mode value="legal"/>
+    <party>
+      <reference value="Organization/PathologyLabOrganization"/>
+    </party>
+  </attester>
+  <custodian>
+    <reference value="Organization/PathologyLabOrganization"/>
+  </custodian>
+  <event>
+    <code>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+        <code value="PATREPE"/>
+      </coding>
+    </code>
+    <detail>
+      <reference value="ServiceRequest/CoreNeedleBiopsyReportRequest"/>
+    </detail>
+  </event>
+  <section>
+    <title value="Pathologiebefundbericht"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="11526-1"/>
+        <display value="Pathology study"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Klinische Angaben</h3><p>Herdbefund/Architekturstörung linke Brust, BI-RADS 4b. US-gestützte Stanzbiopsie.</p><h3>Material</h3><p>HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille</p><h3>Makroskopie</h3><table border="1" cellpadding="4" cellspacing="0"><tbody><tr><td>Stanzzylinder</td><td>2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke</td></tr><tr><td>Paraffinblöcke</td><td>1</td></tr></tbody></table><h3>Mikroskopie</h3><p>In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.</p><h3>Diagnostische Schlussfolgerung</h3><p><b>Diagnose:</b> Invasives Mammakarzinom NST (ICD-O 8500/3)</p><table border="1" cellpadding="4" cellspacing="0"><tbody><tr><td>ICD-10</td><td>C50.5</td></tr><tr><td>ICD-O-3 Morphologie</td><td>M8500/3</td></tr><tr><td>Nottingham-Grad</td><td>Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1)</td></tr><tr><td>ER</td><td>Positiv (85% positive Tumorzellkerne)</td></tr><tr><td>PR</td><td>Positiv (50% positive Tumorzellkerne)</td></tr><tr><td>HER2</td><td>Negativ (nicht amplifiziert)</td></tr><tr><td>Ki-67</td><td>10%</td></tr><tr><td>B-Klassifikation</td><td>B5b (NHSBSP)</td></tr><tr><td>Relevante Mikroverkalkungen</td><td>Nein</td></tr><tr><td>Präparateradiogramm</td><td>Gesehen</td></tr><tr><td>Korrelation Mikroverkalkung</td><td>Vorliegende Verkalkung radiologisch nicht relevant (kleiner 100 Mikrometer)</td></tr></tbody></table></div>
+    </text>
+    <entry>
+      <reference value="DiagnosticReport/CoreNeedleBiopsyReport"/>
+    </entry>
+  </section>
+</Composition>

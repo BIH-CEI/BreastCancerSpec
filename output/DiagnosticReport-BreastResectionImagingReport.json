@@ -1,0 +1,28 @@
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "BreastResectionImagingReport",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport BreastResectionImagingReport</b></p><a name=\"BreastResectionImagingReport\"> </a><a name=\"hcBreastResectionImagingReport\"> </a><h2><span title=\"Codes:{http://loinc.org 24606-6}\">MG Breast Screening</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 RAD}\">Radiology</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</td></tr><tr><td>When For</td><td>2025-01-08</td></tr></table><p><b>Report Details</b></p><p>BI-RADS 4b: Herdbefund linke Brust, unterer äußerer Quadrant, 5 Uhr, 5 cm von Mamille. Radiologische Ausdehnung ca. 15 mm. Mammografie und Ultraschall. Indikation zur BET.</p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "RAD",
+      "display" : "Radiology"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "24606-6",
+      "display" : "MG Breast Screening"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "effectiveDateTime" : "2025-01-08",
+  "conclusion" : "BI-RADS 4b: Herdbefund linke Brust, unterer äußerer Quadrant, 5 Uhr, 5 cm von Mamille. Radiologische Ausdehnung ca. 15 mm. Mammografie und Ultraschall. Indikation zur BET."
+}

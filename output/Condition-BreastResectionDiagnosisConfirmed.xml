@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="BreastResectionDiagnosisConfirmed"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition BreastResectionDiagnosisConfirmed</b></p><a name="BreastResectionDiagnosisConfirmed"> </a><a name="hcBreastResectionDiagnosisConfirmed"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&amp;canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose">MII PR Diagnose Conditionversion: null2026.0.0)</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Encounter Diagnosis</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C50.5}">Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href="Encounter-BreastResectionEncounter.html">Encounter: identifier = http://example.hospital.de/encounters#E_25_210; status = finished; class = IMP (IMP)</a></p><p><b>onset</b>: 2025-01-15</p><p><b>recordedDate</b>: 2025-02-05</p><p><b>note</b>: </p><blockquote><div><p>Z.n. Stanzbiopsie (E_25_105) mit Nachweis eines invasiven Mammakarzinoms NST, G2. BI-RADS 4b. BET links indiziert.</p>
+</div></blockquote></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+      <version value="2025"/>
+      <code value="C50.5"/>
+      <display value="Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/BreastResectionEncounter"/>
+  </encounter>
+  <onsetDateTime value="2025-01-15"/>
+  <recordedDate value="2025-02-05"/>
+  <note>
+    <text value="Z.n. Stanzbiopsie (E_25_105) mit Nachweis eines invasiven Mammakarzinoms NST, G2. BI-RADS 4b. BET links indiziert."/>
+  </note>
+</Condition>

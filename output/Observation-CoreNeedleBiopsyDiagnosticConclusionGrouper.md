@@ -1,0 +1,151 @@
+# Diagnostic Conclusion Grouper - Stanzbiopsie - Breast Cancer Specification v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Diagnostic Conclusion Grouper - Stanzbiopsie**
+
+## Example Observation: Diagnostic Conclusion Grouper - Stanzbiopsie
+
+Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper)
+
+**basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
+
+**status**: Final
+
+**category**: Laboratory
+
+**code**: Pathology report final diagnosis Narrative
+
+**subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
+
+**effective**: 2025-01-17
+
+**performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
+
+**note**: By Practitioner/PathologistPractitioner @2025-01-17
+
+> 
+
+Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen.
+
+
+**hasMember**: 
+
+* [Observation Histology and Behavior ICD-O-3 Cancer](Observation-CoreNeedleBiopsyHistologicalTypeICDO3.md)
+* [Observation Histology type in Cancer specimen Narrative](Observation-CoreNeedleBiopsyMorphologyFreeText.md)
+* [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyNottinghamGrade.md)
+* [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyNottinghamSummaryScore.md)
+* [Observation Glandular differentiation [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyTubuleFormation.md)
+* [Observation Nuclear pleomorphism in Breast tumor by Nottingham](Observation-CoreNeedleBiopsyNuclearPleomorphism.md)
+* [Observation Mitotic rate [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyMitoticRate.md)
+* [Observation Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyERStatus.md)
+* [Observation Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyERPercentage.md)
+* [Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyPRStatus.md)
+* [Observation Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyPRPercentage.md)
+* [Observation ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH](Observation-CoreNeedleBiopsyHER2ISH.md)
+* [Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyKi67.md)
+* [Observation Screening interpretation (observable entity)](Observation-CoreNeedleBiopsyBClassification.md)
+* [Observation Microcalcification, calcified structure (morphologic abnormality)](Observation-CoreNeedleBiopsyMicrocalcification.md)
+* [Observation Specimen mammography (procedure)](Observation-CoreNeedleBiopsySpecimenRadiography.md)
+* [Observation Microcalcification, calcified structure (morphologic abnormality)](Observation-CoreNeedleBiopsyMicrocalcificationCorrelation.md)
+
+**derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.md)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "CoreNeedleBiopsyDiagnosticConclusionGrouper",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2026.0.0"]
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+  }],
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "22637-3"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "effectiveDateTime" : "2025-01-17",
+  "performer" : [{
+    "reference" : "Practitioner/PathologistPractitioner"
+  }],
+  "note" : [{
+    "authorReference" : {
+      "reference" : "Practitioner/PathologistPractitioner"
+    },
+    "time" : "2025-01-17",
+    "text" : "Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen."
+  }],
+  "hasMember" : [{
+    "reference" : "Observation/CoreNeedleBiopsyHistologicalTypeICDO3"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyMorphologyFreeText"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyNottinghamGrade"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyNottinghamSummaryScore"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyTubuleFormation"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyNuclearPleomorphism"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyMitoticRate"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyERStatus"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyERPercentage"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyPRStatus"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyPRPercentage"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyHER2ISH"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyKi67"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyBClassification"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyMicrocalcification"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsySpecimenRadiography"
+  },
+  {
+    "reference" : "Observation/CoreNeedleBiopsyMicrocalcificationCorrelation"
+  }],
+  "derivedFrom" : [{
+    "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+  }]
+}
+
+```

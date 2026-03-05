@@ -1,0 +1,31 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://breastcancerspec.org/Patient/Patient4> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Patient4"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient Patient4</b></p><a name=\"Patient4\"> </a><a name=\"hcPatient4\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</p><hr/></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://example.hospital.de/patient-ids"^^xsd:anyURI ;
+       fhir:l <http://example.hospital.de/patient-ids>
+     ] ;
+     fhir:value [ fhir:v "PAT-2025-105" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Becker" ] ;
+     fhir:given ( [ fhir:v "Sabine" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1971-03-15"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

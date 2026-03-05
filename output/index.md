@@ -1,0 +1,2447 @@
+# Breast Cancer Specification - Breast Cancer Specification v0.1.0
+
+* [**Table of Contents**](toc.md)
+* **Breast Cancer Specification**
+
+## Breast Cancer Specification
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://breastcancerspec.org/ImplementationGuide/breastcancerspec | *Version*:0.1.0 |
+| Draft as of 2026-03-05 | *Computable Name*:BreastCancerSpec |
+
+### Introduction
+
+This Implementation Guide (IG) provides FHIR-based examples for structured breast cancer pathology reporting, based on the [MII Kerndatensatz Pathologie](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report) profiles.
+
+Currently available report type:
+
+1. **Stanzbiopsie**– Core needle biopsy report (Stanz-/Vakuumbiopsie)
+
+Further report types are planned:
+
+* **OP-Präparate** – Surgical specimen reports (resections)
+* **Axilläre Lymphknotenpräparate** – Axillary lymph node specimen reports
+
+Each report type includes a complete set of FHIR resources: ServiceRequest, Encounter, Condition, Specimen hierarchy, macroscopic and diagnostic conclusion observations, DiagnosticReport, Composition, Document Bundle, and QuestionnaireResponse.
+
+### Scope
+
+This IG focuses on **example instances** that demonstrate how to use the MII Pathology module profiles for breast cancer reporting according to ICCR (International Collaboration on Cancer Reporting) datasets and the Questionnaires developed by the Bundesverband Deutscher Pathologen e.V.
+
+### Dependencies
+
+This IG builds on:
+
+* [MII Kerndatensatz Pathologie](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/) (2026.0.0)
+* [MII Kerndatensatz Onkologie](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/) (2026.0.0)
+* [MII Kerndatensatz Biobank](https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/) (2026.0.0)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "breastcancerspec",
+  "url" : "http://breastcancerspec.org/ImplementationGuide/breastcancerspec",
+  "version" : "0.1.0",
+  "name" : "BreastCancerSpec",
+  "title" : "Breast Cancer Specification",
+  "status" : "draft",
+  "date" : "2026-03-05T17:42:10+01:00",
+  "publisher" : "BIH CEI",
+  "contact" : [{
+    "name" : "BIH CEI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/example-publisher"
+    }]
+  }],
+  "description" : "FHIR Implementation Guide for Breast Cancer based on MII specifications",
+  "packageId" : "breastcancerspec",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "7.0.1"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.2.0"
+  },
+  {
+    "id" : "de_medizininformatikinitiative_kerndatensatz_onkologie",
+    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.onkologie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.onkologie",
+    "packageId" : "de.medizininformatikinitiative.kerndatensatz.onkologie",
+    "version" : "2026.0.0"
+  },
+  {
+    "id" : "de_medizininformatikinitiative_kerndatensatz_patho",
+    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.patho/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.patho",
+    "packageId" : "de.medizininformatikinitiative.kerndatensatz.patho",
+    "version" : "2026.0.0"
+  },
+  {
+    "id" : "de_medizininformatikinitiative_kerndatensatz_base",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base",
+    "packageId" : "de.medizininformatikinitiative.kerndatensatz.base",
+    "version" : "2026.0.0"
+  },
+  {
+    "id" : "de_medizininformatikinitiative_kerndatensatz_biobank",
+    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
+    "packageId" : "de.medizininformatikinitiative.kerndatensatz.biobank",
+    "version" : "2026.0.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2025+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://breastcancerspec.org/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2025+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://breastcancerspec.org/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMacroDistanceNipple"
+      },
+      "name" : "Abstand von Mamille BET",
+      "description" : "Abstand des Tumors von der Mamille",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionAttachedTissue"
+      },
+      "name" : "Anhängendes Gewebe - BET",
+      "description" : "Art des anhängenden Gewebes am Präparat",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyMacroscopicBlockCount"
+      },
+      "name" : "Anzahl Paraffinblöcke Stanzbiopsie",
+      "description" : "Anzahl der erstellten Paraffinblöcke",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyMacroscopicCylinderCount"
+      },
+      "name" : "Anzahl Stanzzylinder",
+      "description" : "Anzahl der eingesendeten Stanzzylinder",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionAssociatedDCIS"
+      },
+      "name" : "Assoziiertes DCIS - BET",
+      "description" : "Vorhandensein eines assoziierten DCIS",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyBClassification"
+      },
+      "name" : "B-Klassifikation - Stanzbiopsie",
+      "description" : "B-Classification according to NHSBSP",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionSpecimenMarking"
+      },
+      "name" : "Befundmarkierung",
+      "description" : "Art der Befundmarkierung am Präparat",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/BreastResectionReportRequest"
+      },
+      "name" : "BET Mamma Anforderung",
+      "description" : "Anforderung für pathologische Aufarbeitung eines BET-Exzisionspräparats der linken Mamma",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/BreastResectionComposition"
+      },
+      "name" : "BET Mamma Pathology Report Composition",
+      "description" : "FHIR Composition for structured breast resection pathology report",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenPart"
+      },
+      "name" : "BET-Exzisionspräparat (Einsendespecimen)",
+      "description" : "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 65x45x30mm, 55g",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionCancerHistory"
+      },
+      "name" : "Brustkrebsvorgeschichte",
+      "description" : "Anamnese hinsichtlich Brustkrebsvorgeschichte",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionDCISArchitecture"
+      },
+      "name" : "DCIS Architektur - BET",
+      "description" : "Wachstumsmuster des assoziierten DCIS",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionDCISGrade"
+      },
+      "name" : "DCIS Kerngrading - BET",
+      "description" : "Kerngrading des assoziierten DCIS",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionDCISNecrosis"
+      },
+      "name" : "DCIS Nekrosen - BET",
+      "description" : "Nekrosen im DCIS-Areal",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionDiagnosticConclusionGrouper"
+      },
+      "name" : "Diagnostic Conclusion Grouper - BET Mamma",
+      "description" : "Grouper for all diagnostic conclusion findings in breast resection",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyDiagnosticConclusionGrouper"
+      },
+      "name" : "Diagnostic Conclusion Grouper - Stanzbiopsie",
+      "description" : "Grouper for all diagnostic conclusion findings in core needle biopsy",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/BreastResectionDocument"
+      },
+      "name" : "Document Bundle - BET Mamma",
+      "description" : "FHIR Document Bundle für den vollständigen BET-Befundbericht",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/CoreNeedleBiopsyDocument"
+      },
+      "name" : "Document Bundle - Stanzbiopsie Mamma",
+      "description" : "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionElstonEllisScore"
+      },
+      "name" : "Elston-Ellis Summenscore - BET",
+      "description" : "Elston-Ellis summary score (3+2+1=6)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/BreastResectionEncounter"
+      },
+      "name" : "Encounter für BET Mamma",
+      "description" : "Stationärer Encounter für brusterhaltende Therapie im Brustzentrum",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/CoreNeedleBiopsyEncounter"
+      },
+      "name" : "Encounter für Stanzbiopsie Mamma",
+      "description" : "Ambulanter Encounter für US-gestützte Stanzbiopsie in der Screeningeinheit",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionERIntensity"
+      },
+      "name" : "ER Färbeintensität - BET",
+      "description" : "Färbeintensität der ER-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideER01"
+      },
+      "name" : "ER-IHC Schnitt 01 BET",
+      "description" : "Schnitt 1 für Östrogenrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideER01"
+      },
+      "name" : "ER-IHC Schnitt 01 Stanzbiopsie",
+      "description" : "Schnitt 1 für Östrogenrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideER02"
+      },
+      "name" : "ER-IHC Schnitt 02 BET",
+      "description" : "Schnitt 2 für Östrogenrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideER02"
+      },
+      "name" : "ER-IHC Schnitt 02 Stanzbiopsie",
+      "description" : "Schnitt 2 für Östrogenrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyERPercentage"
+      },
+      "name" : "Estrogen Receptor Percentage - Stanzbiopsie",
+      "description" : "Percentage of ER positive tumor cell nuclei",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyERStatus"
+      },
+      "name" : "Estrogen Receptor Status - Stanzbiopsie",
+      "description" : "Estrogen receptor status by immunohistochemistry",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionFocality"
+      },
+      "name" : "Fokalität - BET",
+      "description" : "Fokalität des Tumors",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionGeneticPredisposition"
+      },
+      "name" : "Genetische Prädisposition",
+      "description" : "Angabe zur genetischen Prädisposition",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyMacroscopicTotalLength"
+      },
+      "name" : "Gesamtlänge Stanzzylinder",
+      "description" : "Gesamtlänge aller Stanzzylinder zusammen",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMacroWeight"
+      },
+      "name" : "Gewicht BET",
+      "description" : "Gewicht des BET-Exzisionspräparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideDCIS-HE01"
+      },
+      "name" : "HE-Schnitt 01 BET - DCIS",
+      "description" : "HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE01"
+      },
+      "name" : "HE-Schnitt 01 BET - Resektionsränder",
+      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideHE01"
+      },
+      "name" : "HE-Schnitt 01 BET - Tumor",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "name" : "HE-Schnitt 01 Stanzbiopsie",
+      "description" : "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideDCIS-HE02"
+      },
+      "name" : "HE-Schnitt 02 BET - DCIS",
+      "description" : "HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE02"
+      },
+      "name" : "HE-Schnitt 02 BET - Resektionsränder",
+      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideHE02"
+      },
+      "name" : "HE-Schnitt 02 BET - Tumor",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Schnittstufe 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE02"
+      },
+      "name" : "HE-Schnitt 02 Stanzbiopsie",
+      "description" : "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE03"
+      },
+      "name" : "HE-Schnitt 03 BET - Resektionsränder",
+      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 3",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideHE03"
+      },
+      "name" : "HE-Schnitt 03 BET - Tumor",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Schnittstufe 3",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE03"
+      },
+      "name" : "HE-Schnitt 03 Stanzbiopsie",
+      "description" : "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 3",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE04"
+      },
+      "name" : "HE-Schnitt 04 BET - Resektionsränder",
+      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 4",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideHE04"
+      },
+      "name" : "HE-Schnitt 04 BET - Tumor",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Schnittstufe 4",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE04"
+      },
+      "name" : "HE-Schnitt 04 Stanzbiopsie",
+      "description" : "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 4",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE05"
+      },
+      "name" : "HE-Schnitt 05 BET - Resektionsränder",
+      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 5",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE06"
+      },
+      "name" : "HE-Schnitt 06 BET - Resektionsränder",
+      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 6",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionHER2ISH"
+      },
+      "name" : "HER2 Amplifikation (ISH) - BET",
+      "description" : "HER2-Amplifikationsstatus per In-situ-Hybridisierung",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionHER2Overall"
+      },
+      "name" : "HER2 Gesamtstatus - BET",
+      "description" : "HER2-Gesamtstatus basierend auf IHC und ISH",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyHER2ISH"
+      },
+      "name" : "HER2 ISH - Stanzbiopsie",
+      "description" : "HER2 status by in-situ hybridization (B-DISH)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideHER2-01"
+      },
+      "name" : "HER2-B-DISH Schnitt 01 BET",
+      "description" : "Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2-01"
+      },
+      "name" : "HER2-B-DISH Schnitt 01 Stanzbiopsie",
+      "description" : "Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideHER2-02"
+      },
+      "name" : "HER2-B-DISH Schnitt 02 BET",
+      "description" : "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2-02"
+      },
+      "name" : "HER2-B-DISH Schnitt 02 Stanzbiopsie",
+      "description" : "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionHER2IHC"
+      },
+      "name" : "HER2-Score (IHC) - BET",
+      "description" : "HER2-Score per Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyHistologicalTypeICDO3"
+      },
+      "name" : "Histological Type ICD-O-3 - Stanzbiopsie",
+      "description" : "Histological type according to ICD-O-3 classification",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionHistologicalType"
+      },
+      "name" : "Histologischer Tumortyp - BET",
+      "description" : "Histologischer Typ nach WHO/ICD-O-3",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionInvasiveCarcinoma"
+      },
+      "name" : "Invasives Karzinom - BET",
+      "description" : "Vorhandensein eines invasiven Karzinoms",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionNuclearPleomorphism"
+      },
+      "name" : "Kernpleomorphie-Score - BET",
+      "description" : "Nuclear pleomorphism score by Nottingham",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionKi67"
+      },
+      "name" : "Ki-67 Index - BET",
+      "description" : "Ki-67 Proliferationsindex",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyKi67"
+      },
+      "name" : "Ki-67 Index - Stanzbiopsie",
+      "description" : "Ki-67 proliferation index",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideKi67-01"
+      },
+      "name" : "Ki67-IHC Schnitt 01 BET",
+      "description" : "Schnitt 1 für Ki-67 Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideKi67-01"
+      },
+      "name" : "Ki67-IHC Schnitt 01 Stanzbiopsie",
+      "description" : "Schnitt 1 für Ki-67 Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideKi67-02"
+      },
+      "name" : "Ki67-IHC Schnitt 02 BET",
+      "description" : "Schnitt 2 für Ki-67 Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideKi67-02"
+      },
+      "name" : "Ki67-IHC Schnitt 02 Stanzbiopsie",
+      "description" : "Schnitt 2 für Ki-67 Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionComment"
+      },
+      "name" : "Kommentar - BET",
+      "description" : "Freitextkommentar zum Befund",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionLVI"
+      },
+      "name" : "Lymphgefäßinvasion - BET",
+      "description" : "Lymphovaskuläre Invasion",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMacroscopicGrouper"
+      },
+      "name" : "Makroskopische Befunde Grouper BET",
+      "description" : "Gruppierung aller makroskopischen Messungen des BET-Exzisionspräparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyMacroscopicGrouper"
+      },
+      "name" : "Makroskopische Befunde Grouper Stanzbiopsie",
+      "description" : "Gruppierung aller makroskopischen Messungen der Stanzzylinder",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/BreastResectionDiagnosisConfirmed"
+      },
+      "name" : "Mammakarzinom-Diagnose bestätigt",
+      "description" : "Bestätigte Diagnose eines invasiven Mammakarzinoms nach Stanzbiopsie, Indikation zur BET",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/CoreNeedleBiopsyDiagnosisPreOp"
+      },
+      "name" : "Mammakarzinom-Diagnose Stanzbiopsie",
+      "description" : "Diagnose eines Herdbefunds der linken Brust, BI-RADS 4b, Indikation zur Stanzbiopsie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/CoreNeedleBiopsyImagingReport"
+      },
+      "name" : "Mammografie/Ultraschall-Befund",
+      "description" : "Bildgebungsbefund als SupportingInfo für die Stanzbiopsie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/BreastResectionImagingReport"
+      },
+      "name" : "Mammografie/Ultraschall-Befund BET",
+      "description" : "Bildgebungsbefund als SupportingInfo für die BET",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMaterialType"
+      },
+      "name" : "Materialart - BET",
+      "description" : "Art des eingesendeten Materials",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMaxDiameterInvasive"
+      },
+      "name" : "Max Durchmesser invasiv - BET",
+      "description" : "Maximaler Durchmesser der invasiven Komponente",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMaxOverallDiameter"
+      },
+      "name" : "Max Gesamtdurchmesser - BET",
+      "description" : "Maximaler Gesamtdurchmesser des Tumors inkl. DCIS",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMicrocalcification"
+      },
+      "name" : "Mikrokalzifikationen - BET",
+      "description" : "Vorhandensein von Mikrokalzifikationen",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyMicrocalcificationCorrelation"
+      },
+      "name" : "Mikroverkalkung-Korrelation - Stanzbiopsie",
+      "description" : "Correlation of microcalcifications with radiological findings",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMinDistanceInvasive"
+      },
+      "name" : "Mindestabstand invasiv - BET",
+      "description" : "Mindestabstand der invasiven Komponente zum Resektionsrand",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMinDistanceNonInvasive"
+      },
+      "name" : "Mindestabstand nichtinvasiv - BET",
+      "description" : "Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMitoticRateScore"
+      },
+      "name" : "Mitoserate-Score - BET",
+      "description" : "Mitotic rate score by Nottingham",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMitosisCount"
+      },
+      "name" : "Mitosezahl - BET",
+      "description" : "Absolute Mitosezahl pro 10 HPF",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyMitoticRate"
+      },
+      "name" : "Mitotic Rate Score - Stanzbiopsie",
+      "description" : "Mitotic rate score by Nottingham",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMorphologyFreeText"
+      },
+      "name" : "Morphologie Freitext - BET",
+      "description" : "Freitextbeschreibung der Tumormorphologie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyMorphologyFreeText"
+      },
+      "name" : "Morphology Free Text - Stanzbiopsie",
+      "description" : "Free text description of tumor morphology",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionNonInvasiveLesion"
+      },
+      "name" : "Nichtinvasive Läsion - BET",
+      "description" : "Vorhandensein einer nichtinvasiven Läsion",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyNottinghamGrade"
+      },
+      "name" : "Nottingham Grade - Stanzbiopsie",
+      "description" : "Nottingham histologic grade",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyNottinghamSummaryScore"
+      },
+      "name" : "Nottingham Summary Score - Stanzbiopsie",
+      "description" : "Elston-Ellis summary score (3+2+1=6)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionNottinghamGrade"
+      },
+      "name" : "Nottingham-Grad - BET",
+      "description" : "Nottingham histologic grade",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyNuclearPleomorphism"
+      },
+      "name" : "Nuclear Pleomorphism Score - Stanzbiopsie",
+      "description" : "Nuclear pleomorphism score by Nottingham",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionClosestMargin"
+      },
+      "name" : "Nächster tumorfreier Resektionsrand - BET",
+      "description" : "Lokalisation des nächsten tumorfreien Resektionsrands",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionOperativeProcedure"
+      },
+      "name" : "Operatives Verfahren - BET",
+      "description" : "Art des operativen Verfahrens",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenBlock01"
+      },
+      "name" : "Paraffinblock 01 BET - Tumor zentral",
+      "description" : "Paraffineinbettung des zentralen Tumorareals",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      },
+      "name" : "Paraffinblock 01 Stanzbiopsie",
+      "description" : "Paraffineinbettung der Stanzzylinder Block 01",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenBlock02"
+      },
+      "name" : "Paraffinblock 02 BET - DCIS / Tumorperipherie",
+      "description" : "Paraffineinbettung des DCIS-Areals und der Tumorperipherie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenBlock03"
+      },
+      "name" : "Paraffinblock 03 BET - Resektionsränder",
+      "description" : "Paraffineinbettung der Resektionsränder",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/BreastResectionReport"
+      },
+      "name" : "Pathologiebericht BET Mamma",
+      "description" : "Pathologiebericht nach brusterhaltender Therapie der linken Mamma",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/CoreNeedleBiopsyReport"
+      },
+      "name" : "Pathologiebericht Stanzbiopsie Mamma",
+      "description" : "Pathologiebericht nach US-gestützter Stanzbiopsie der linken Mamma",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/PathologyLabOrganization"
+      },
+      "name" : "Pathologielabor",
+      "description" : "Institut für Pathologie für alle pathologischen Befunde",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/PathologistPractitioner"
+      },
+      "name" : "Pathologin",
+      "description" : "Durchführende Pathologin für alle pathologischen Befunde",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Patient4"
+      },
+      "name" : "Patientin 4 - Stanzbiopsie Mamma",
+      "description" : "Patientin mit Herdbefund linke Brust (BI-RADS 4b), erhält US-gestützte Stanzbiopsie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionPRIntensity"
+      },
+      "name" : "PR Färbeintensität - BET",
+      "description" : "Färbeintensität der PR-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlidePR01"
+      },
+      "name" : "PR-IHC Schnitt 01 BET",
+      "description" : "Schnitt 1 für Progesteronrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlidePR01"
+      },
+      "name" : "PR-IHC Schnitt 01 Stanzbiopsie",
+      "description" : "Schnitt 1 für Progesteronrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlidePR02"
+      },
+      "name" : "PR-IHC Schnitt 02 BET",
+      "description" : "Schnitt 2 für Progesteronrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlidePR02"
+      },
+      "name" : "PR-IHC Schnitt 02 Stanzbiopsie",
+      "description" : "Schnitt 2 für Progesteronrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionSpecimenLimited"
+      },
+      "name" : "Proben limitiert auswertbar",
+      "description" : "Angabe ob die Probe limitiert auswertbar ist",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMacroLength"
+      },
+      "name" : "Probengröße 1 (Länge) BET",
+      "description" : "Maximale Länge des BET-Exzisionspräparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMacroWidth"
+      },
+      "name" : "Probengröße 2 (Breite) BET",
+      "description" : "Breite des BET-Exzisionspräparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMacroDepth"
+      },
+      "name" : "Probengröße 3 (Tiefe) BET",
+      "description" : "Tiefe des BET-Exzisionspräparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyPRPercentage"
+      },
+      "name" : "Progesterone Receptor Percentage - Stanzbiopsie",
+      "description" : "Percentage of PR positive tumor cell nuclei",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyPRStatus"
+      },
+      "name" : "Progesterone Receptor Status - Stanzbiopsie",
+      "description" : "Progesterone receptor status by immunohistochemistry",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionPRPercentage"
+      },
+      "name" : "Progesteronrezeptor Prozent - BET",
+      "description" : "Prozentsatz PR-positiver Tumorzellkerne",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionPRStatus"
+      },
+      "name" : "Progesteronrezeptor-Status - BET",
+      "description" : "Progesteronrezeptor-Status per Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsySpecimenRadiography"
+      },
+      "name" : "Präparateradiogramm - Stanzbiopsie",
+      "description" : "Specimen radiography reviewed",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionSpecimenRadiographyClinical"
+      },
+      "name" : "Präparateradiographie klinisch",
+      "description" : "Angabe ob eine Präparateradiographie beigelegt wurde",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionPresentationMode"
+      },
+      "name" : "Präsentationsmodus",
+      "description" : "Präsentationsmodus des Präparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionPT"
+      },
+      "name" : "pT-Kategorie - BET",
+      "description" : "Pathologische T-Kategorie nach TNM",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMacroQuadrant"
+      },
+      "name" : "Quadrant BET",
+      "description" : "Quadrantenlokalisation des Tumors",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseBreastResection"
+      },
+      "name" : "QuestionnaireResponse - BET Mamma",
+      "description" : "QuestionnaireResponse für BET Mamma mit allen Befunden",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      },
+      "name" : "QuestionnaireResponse - Stanzbiopsie Mamma",
+      "description" : "QuestionnaireResponse für Stanzbiopsie Mamma mit allen Befunden",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionRadiologicalExtent"
+      },
+      "name" : "Radiologische Ausdehnung",
+      "description" : "Radiologisch gemessene Ausdehnung des Tumors",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyMicrocalcification"
+      },
+      "name" : "Relevante Mikroverkalkungen - Stanzbiopsie",
+      "description" : "Presence of relevant microcalcifications",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMarginStatusInvasive"
+      },
+      "name" : "Resektionsrandstatus invasiv - BET",
+      "description" : "Resektionsrandstatus der invasiven Komponente",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMarginStatusNonInvasive"
+      },
+      "name" : "Resektionsrandstatus nichtinvasiv - BET",
+      "description" : "Resektionsrandstatus der nichtinvasiven Komponente (DCIS)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionLaterality"
+      },
+      "name" : "Seitenlokalisation - BET",
+      "description" : "Seitenlokalisation des Präparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/BreastSurgeonPractitioner"
+      },
+      "name" : "Senologe",
+      "description" : "Durchführender Gynäkologe/Senologe für alle operativen Eingriffe",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      },
+      "name" : "Stanzbiopsie Mamma Anforderung",
+      "description" : "Anforderung für pathologische Aufarbeitung einer US-gestützten Stanzbiopsie der linken Mamma",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/CoreNeedleBiopsyComposition"
+      },
+      "name" : "Stanzbiopsie Mamma Pathology Report Composition",
+      "description" : "FHIR Composition for structured core needle biopsy pathology report",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenPart"
+      },
+      "name" : "Stanzzylinder-Präparat (Einsendespecimen)",
+      "description" : "2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyTubuleFormation"
+      },
+      "name" : "Tubule Formation Score - Stanzbiopsie",
+      "description" : "Glandular differentiation score by Nottingham",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionTubuleScore"
+      },
+      "name" : "Tubulus-Score - BET",
+      "description" : "Glandular differentiation score by Nottingham",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionTumorExtent"
+      },
+      "name" : "Tumorausdehnung - BET",
+      "description" : "Ausdehnung des Tumors in Bezug auf die Brustdrüse",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionPriorTherapy"
+      },
+      "name" : "Vorchirurgische Therapie",
+      "description" : "Angabe zur neoadjuvanten/vorchirurgischen Therapie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMacroClock"
+      },
+      "name" : "Zifferblattlokalisation BET",
+      "description" : "Uhrzeigerlokalisation des Tumors",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionERPercentage"
+      },
+      "name" : "Östrogenrezeptor Prozent - BET",
+      "description" : "Prozentsatz ER-positiver Tumorzellkerne",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionERStatus"
+      },
+      "name" : "Östrogenrezeptor-Status - BET",
+      "description" : "Östrogenrezeptor-Status per Immunhistochemie",
+      "exampleBoolean" : true
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "Breast Cancer Specification",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "clinical-context.html"
+        }],
+        "nameUrl" : "clinical-context.html",
+        "title" : "Clinical Context",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "motivation.html"
+        }],
+        "nameUrl" : "motivation.html",
+        "title" : "Motivation",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "biopsy-specimens.html"
+        }],
+        "nameUrl" : "biopsy-specimens.html",
+        "title" : "Core Needle Biopsy — Specimens",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "resection-specimens.html"
+        }],
+        "nameUrl" : "resection-specimens.html",
+        "title" : "Breast Resection — Specimens",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "document-viewer.html"
+        }],
+        "nameUrl" : "document-viewer.html",
+        "title" : "Befund-Viewer",
+        "generation" : "html"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}
+
+```

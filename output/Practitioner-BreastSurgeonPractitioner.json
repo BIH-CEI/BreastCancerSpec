@@ -1,0 +1,26 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "BreastSurgeonPractitioner",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner BreastSurgeonPractitioner</b></p><a name=\"BreastSurgeonPractitioner\"> </a><a name=\"hcBreastSurgeonPractitioner\"> </a><p><b>identifier</b>: <code>http://example.hospital.de/practitioner-ids</code>/GYN-001</p><p><b>name</b>: Thomas Richter </p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 394586005}\">Gynecology</span></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://example.hospital.de/practitioner-ids",
+    "value" : "GYN-001"
+  }],
+  "name" : [{
+    "family" : "Richter",
+    "given" : ["Thomas"],
+    "prefix" : ["Prof. Dr."]
+  }],
+  "qualification" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "394586005",
+        "display" : "Gynecology"
+      }]
+    }
+  }]
+}

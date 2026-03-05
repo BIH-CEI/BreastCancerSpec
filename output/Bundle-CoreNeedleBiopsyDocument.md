@@ -1,0 +1,3662 @@
+# Document Bundle - Stanzbiopsie Mamma - Breast Cancer Specification v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Document Bundle - Stanzbiopsie Mamma**
+
+## Example Bundle: Document Bundle - Stanzbiopsie Mamma
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "CoreNeedleBiopsyDocument",
+  "type" : "document",
+  "timestamp" : "2025-01-17T17:00:00+01:00",
+  "entry" : [{
+    "fullUrl" : "http://breastcancerspec.org/Composition/CoreNeedleBiopsyComposition",
+    "resource" : {
+      "resourceType" : "Composition",
+      "id" : "CoreNeedleBiopsyComposition",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_CoreNeedleBiopsyComposition\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition CoreNeedleBiopsyComposition</b></p><a name=\"CoreNeedleBiopsyComposition\"> </a><a name=\"hcCoreNeedleBiopsyComposition\"> </a><p><b>identifier</b>: Accession ID/PATH-COMP-2025-105</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://ihe-d.de/CodeSystems/IHEXDStypeCode PATH}, {http://snomed.info/sct 721967005}\">Tissue pathology biopsy report (record artifact)</span></p><p><b>encounter</b>: <a href=\"Encounter-CoreNeedleBiopsyEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_105; status = finished; class = AMB (AMB)</a></p><p><b>date</b>: 2025-01-17 17:00:00+0100</p><p><b>author</b>: <a href=\"Organization-PathologyLabOrganization.html\">Institut für Pathologie</a></p><p><b>title</b>: Histopathologischer Befundbericht - Stanzbiopsie Mamma links</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>Legal</td><td><a href=\"Organization-PathologyLabOrganization.html\">Organization Institut für Pathologie</a></td></tr></table><p><b>custodian</b>: <a href=\"Organization-PathologyLabOrganization.html\">Organization Institut für Pathologie</a></p><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode PATREPE}\">pathology report entry task</span></td><td><a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></td></tr></table></div>"
+      },
+      "identifier" : {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "ACSN",
+            "display" : "Accession ID"
+          }]
+        },
+        "system" : "http://example.hospital.de/pathology-reports",
+        "value" : "PATH-COMP-2025-105"
+      },
+      "status" : "final",
+      "type" : {
+        "coding" : [{
+          "system" : "http://ihe-d.de/CodeSystems/IHEXDStypeCode",
+          "code" : "PATH"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "721967005",
+          "display" : "Tissue pathology biopsy report (record artifact)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4",
+        "display" : "Sabine Becker, geb. 15.03.1971 (PAT-2025-105)"
+      },
+      "encounter" : {
+        "reference" : "Encounter/CoreNeedleBiopsyEncounter"
+      },
+      "date" : "2025-01-17T17:00:00+01:00",
+      "author" : [{
+        "reference" : "Organization/PathologyLabOrganization",
+        "display" : "Institut für Pathologie"
+      }],
+      "title" : "Histopathologischer Befundbericht - Stanzbiopsie Mamma links",
+      "attester" : [{
+        "mode" : "legal",
+        "party" : {
+          "reference" : "Organization/PathologyLabOrganization"
+        }
+      }],
+      "custodian" : {
+        "reference" : "Organization/PathologyLabOrganization"
+      },
+      "event" : [{
+        "code" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "code" : "PATREPE"
+          }]
+        }],
+        "detail" : [{
+          "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+        }]
+      }],
+      "section" : [{
+        "title" : "Pathologiebefundbericht",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "11526-1",
+            "display" : "Pathology study"
+          }]
+        },
+        "text" : {
+          "status" : "additional",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Klinische Angaben</h3><p>Herdbefund/Architekturstörung linke Brust, BI-RADS 4b. US-gestützte Stanzbiopsie.</p><h3>Material</h3><p>HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille</p><h3>Makroskopie</h3><table border=\"1\" cellpadding=\"4\" cellspacing=\"0\"><tbody><tr><td>Stanzzylinder</td><td>2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke</td></tr><tr><td>Paraffinblöcke</td><td>1</td></tr></tbody></table><h3>Mikroskopie</h3><p>In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.</p><h3>Diagnostische Schlussfolgerung</h3><p><b>Diagnose:</b> Invasives Mammakarzinom NST (ICD-O 8500/3)</p><table border=\"1\" cellpadding=\"4\" cellspacing=\"0\"><tbody><tr><td>ICD-10</td><td>C50.5</td></tr><tr><td>ICD-O-3 Morphologie</td><td>M8500/3</td></tr><tr><td>Nottingham-Grad</td><td>Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1)</td></tr><tr><td>ER</td><td>Positiv (85% positive Tumorzellkerne)</td></tr><tr><td>PR</td><td>Positiv (50% positive Tumorzellkerne)</td></tr><tr><td>HER2</td><td>Negativ (nicht amplifiziert)</td></tr><tr><td>Ki-67</td><td>10%</td></tr><tr><td>B-Klassifikation</td><td>B5b (NHSBSP)</td></tr><tr><td>Relevante Mikroverkalkungen</td><td>Nein</td></tr><tr><td>Präparateradiogramm</td><td>Gesehen</td></tr><tr><td>Korrelation Mikroverkalkung</td><td>Vorliegende Verkalkung radiologisch nicht relevant (kleiner 100 Mikrometer)</td></tr></tbody></table></div>"
+        },
+        "entry" : [{
+          "reference" : "DiagnosticReport/CoreNeedleBiopsyReport"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Patient/Patient4",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Patient4",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Patient4\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Patient4</b></p><a name=\"Patient4\"> </a><a name=\"hcPatient4\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</p><hr/></div>"
+      },
+      "identifier" : [{
+        "system" : "http://example.hospital.de/patient-ids",
+        "value" : "PAT-2025-105"
+      }],
+      "name" : [{
+        "family" : "Becker",
+        "given" : ["Sabine"]
+      }],
+      "gender" : "female",
+      "birthDate" : "1971-03-15"
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Organization/PathologyLabOrganization",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "PathologyLabOrganization",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_PathologyLabOrganization\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization PathologyLabOrganization</b></p><a name=\"PathologyLabOrganization\"> </a><a name=\"hcPathologyLabOrganization\"> </a><p><b>identifier</b>: <code>http://example.hospital.de/organization-ids</code>/ORG-PATH-001</p><p><b>name</b>: Institut für Pathologie</p></div>"
+      },
+      "identifier" : [{
+        "system" : "http://example.hospital.de/organization-ids",
+        "value" : "ORG-PATH-001"
+      }],
+      "name" : "Institut für Pathologie"
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Practitioner/PathologistPractitioner",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "PathologistPractitioner",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_PathologistPractitioner\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner PathologistPractitioner</b></p><a name=\"PathologistPractitioner\"> </a><a name=\"hcPathologistPractitioner\"> </a><p><b>identifier</b>: <code>http://example.hospital.de/practitioner-ids</code>/PATH-001</p><p><b>name</b>: Elisabeth Hoffmann </p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 394595002}\">Pathology</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "http://example.hospital.de/practitioner-ids",
+        "value" : "PATH-001"
+      }],
+      "name" : [{
+        "family" : "Hoffmann",
+        "given" : ["Elisabeth"],
+        "prefix" : ["Dr."]
+      }],
+      "qualification" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "394595002",
+            "display" : "Pathology"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Practitioner/BreastSurgeonPractitioner",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "BreastSurgeonPractitioner",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_BreastSurgeonPractitioner\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner BreastSurgeonPractitioner</b></p><a name=\"BreastSurgeonPractitioner\"> </a><a name=\"hcBreastSurgeonPractitioner\"> </a><p><b>identifier</b>: <code>http://example.hospital.de/practitioner-ids</code>/GYN-001</p><p><b>name</b>: Thomas Richter </p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 394586005}\">Gynecology</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "http://example.hospital.de/practitioner-ids",
+        "value" : "GYN-001"
+      }],
+      "name" : [{
+        "family" : "Richter",
+        "given" : ["Thomas"],
+        "prefix" : ["Prof. Dr."]
+      }],
+      "qualification" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "394586005",
+            "display" : "Gynecology"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Encounter/CoreNeedleBiopsyEncounter",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "CoreNeedleBiopsyEncounter",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_CoreNeedleBiopsyEncounter\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter CoreNeedleBiopsyEncounter</b></p><a name=\"CoreNeedleBiopsyEncounter\"> </a><a name=\"hcCoreNeedleBiopsyEncounter\"> </a><p><b>identifier</b>: <code>http://example.hospital.de/encounters</code>/E_25_105</p><p><b>status</b>: Finished</p><p><b>class</b>: [not stated]: AMB (AMB)</p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p></div>"
+      },
+      "identifier" : [{
+        "system" : "http://example.hospital.de/encounters",
+        "value" : "E_25_105"
+      }],
+      "status" : "finished",
+      "class" : {
+        "code" : "AMB"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Condition/CoreNeedleBiopsyDiagnosisPreOp",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "CoreNeedleBiopsyDiagnosisPreOp",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_CoreNeedleBiopsyDiagnosisPreOp\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition CoreNeedleBiopsyDiagnosisPreOp</b></p><a name=\"CoreNeedleBiopsyDiagnosisPreOp\"> </a><a name=\"hcCoreNeedleBiopsyDiagnosisPreOp\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&amp;canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose\">MII PR Diagnose Conditionversion: null2026.0.0)</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status provisional}\">Provisional</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C50.5}\">Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href=\"Encounter-CoreNeedleBiopsyEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_105; status = finished; class = AMB (AMB)</a></p><p><b>onset</b>: 2025-01-10</p><p><b>recordedDate</b>: 2025-01-10</p><p><b>note</b>: </p><blockquote><div><p>Herdbefund/Architekturstörung linke Brust, BI-RADS 4b. Indikation zur US-gestützten Stanzbiopsie.</p>\n</div></blockquote></div>"
+      },
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "provisional"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "version" : "2025",
+          "code" : "C50.5",
+          "display" : "Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "encounter" : {
+        "reference" : "Encounter/CoreNeedleBiopsyEncounter"
+      },
+      "onsetDateTime" : "2025-01-10",
+      "recordedDate" : "2025-01-10",
+      "note" : [{
+        "text" : "Herdbefund/Architekturstörung linke Brust, BI-RADS 4b. Indikation zur US-gestützten Stanzbiopsie."
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/ServiceRequest/CoreNeedleBiopsyReportRequest",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "CoreNeedleBiopsyReportRequest",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_CoreNeedleBiopsyReportRequest\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest CoreNeedleBiopsyReportRequest</b></p><a name=\"CoreNeedleBiopsyReportRequest\"> </a><a name=\"hcCoreNeedleBiopsyReportRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request\">MII PR Patho Service Requestversion: null2026.0.0)</a></p></div><p><b>identifier</b>: Placer Identifier/PATH-RPT-2025-105</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 726007}\">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 60568-3}\">Pathology synoptic report</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href=\"Encounter-CoreNeedleBiopsyEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_105; status = finished; class = AMB (AMB)</a></p><p><b>requester</b>: <a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 254837009}\">Malignant neoplasm of breast (disorder)</span></p><p><b>supportingInfo</b>: </p><ul><li><a href=\"Condition-CoreNeedleBiopsyDiagnosisPreOp.html\">Condition Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</a></li><li><a href=\"DiagnosticReport-CoreNeedleBiopsyImagingReport.html\">Diagnostic Report for 'MG Breast Screening' for '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li></ul><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</a></p></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "PLAC",
+            "display" : "Placer Identifier"
+          }]
+        },
+        "system" : "http://example.hospital.de/serviceRequest",
+        "value" : "PATH-RPT-2025-105"
+      }],
+      "status" : "completed",
+      "intent" : "order",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "726007",
+          "display" : "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "60568-3",
+          "display" : "Pathology synoptic report"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "encounter" : {
+        "reference" : "Encounter/CoreNeedleBiopsyEncounter"
+      },
+      "requester" : {
+        "reference" : "Practitioner/BreastSurgeonPractitioner"
+      },
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "reasonCode" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "254837009",
+          "display" : "Malignant neoplasm of breast (disorder)"
+        }]
+      }],
+      "supportingInfo" : [{
+        "reference" : "Condition/CoreNeedleBiopsyDiagnosisPreOp"
+      },
+      {
+        "reference" : "DiagnosticReport/CoreNeedleBiopsyImagingReport"
+      }],
+      "specimen" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenPart"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/DiagnosticReport/CoreNeedleBiopsyImagingReport",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "CoreNeedleBiopsyImagingReport",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_CoreNeedleBiopsyImagingReport\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport CoreNeedleBiopsyImagingReport</b></p><a name=\"CoreNeedleBiopsyImagingReport\"> </a><a name=\"hcCoreNeedleBiopsyImagingReport\"> </a><h2><span title=\"Codes:{http://loinc.org 24606-6}\">MG Breast Screening</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 RAD}\">Radiology</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</td></tr><tr><td>When For</td><td>2025-01-08</td></tr></table><p><b>Report Details</b></p><p>BI-RADS 4b: Herdbefund/Architekturstörung linke Brust, 5 Uhr, 5 cm von Mamille. Indikation zur histologischen Abklärung mittels Stanzbiopsie.</p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code" : "RAD",
+          "display" : "Radiology"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "24606-6",
+          "display" : "MG Breast Screening"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-08",
+      "conclusion" : "BI-RADS 4b: Herdbefund/Architekturstörung linke Brust, 5 Uhr, 5 cm von Mamille. Indikation zur histologischen Abklärung mittels Stanzbiopsie."
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/DiagnosticReport/CoreNeedleBiopsyReport",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "CoreNeedleBiopsyReport",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_CoreNeedleBiopsyReport\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport CoreNeedleBiopsyReport</b></p><a name=\"CoreNeedleBiopsyReport\"> </a><a name=\"hcCoreNeedleBiopsyReport\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report\">MII PR Patho Reportversion: null2026.0.0)</a></p></div><h2><span title=\"Codes:{http://loinc.org 60568-3}\">Pathology Synoptic report</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 SP}\">Surgical Pathology</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</td></tr><tr><td>When For</td><td>2025-01-17 15:00:00+0100</td></tr><tr><td>Reported</td><td>2025-01-17 17:00:00+0100</td></tr><tr><td>Performer</td><td> <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></td></tr><tr><td>Identifier</td><td> Accession ID/E_25_105</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-CoreNeedleBiopsyMacroscopicGrouper.html\"><span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></a> (<span title=\"Codes:{http://snomed.info/sct 76752008}\">Breast structure (body structure)</span>)</td><td>Makroskopische Befunde der HG-Stanzzylinder</td><td>Final</td><td><blockquote><div><p>2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke. 1 Paraffinblock.</p>\n</div></blockquote></td><td>2025-01-16 08:30:00+0100</td></tr><tr><td><a href=\"Observation-CoreNeedleBiopsyDiagnosticConclusionGrouper.html\"><span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></a></td><td/><td>Final</td><td><blockquote><div><p>Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen.</p>\n</div></blockquote>By Practitioner/PathologistPractitioner @2025-01-17</td><td>2025-01-17</td></tr></table><p>Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Kernpleomorphie 2, Mitosen 1). ER+ (85%), PR+ (50%), HER2- (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b.</p></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "ACSN",
+            "display" : "Accession ID"
+          }]
+        },
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      }],
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code" : "SP",
+          "display" : "Surgical Pathology"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "60568-3",
+          "display" : "Pathology Synoptic report"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17T15:00:00+01:00",
+      "issued" : "2025-01-17T17:00:00+01:00",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "specimen" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenPart"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE02"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE03"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE04"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideER01"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideER02"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlidePR01"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlidePR02"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2-01"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2-02"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideKi67-01"
+      },
+      {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideKi67-02"
+      }],
+      "result" : [{
+        "reference" : "Observation/CoreNeedleBiopsyMacroscopicGrouper"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyDiagnosticConclusionGrouper"
+      }],
+      "conclusion" : "Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Kernpleomorphie 2, Mitosen 1). ER+ (85%), PR+ (50%), HER2- (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b."
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenPart",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenPart",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenPart\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenPart</b></p><a name=\"CoreNeedleBiopsySpecimenPart\"> </a><a name=\"hcCoreNeedleBiopsySpecimenPart\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: Placer Identifier/BX25_105_A, Filler Identifier/E_25_105_A</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 122737001}\">Specimen from breast obtained by core needle biopsy (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>request</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Method</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></td><td>2025-01-15 09:30:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 9911007}\">Core needle biopsy (procedure)</span></td><td><span title=\"Codes:{http://snomed.info/sct 33564002}\">Structure of lower outer quadrant of breast (body structure)</span></td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 434746001}\">Specimen vial (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 434162003}\">Neutral buffered formalin (substance)</span></td></tr></table><p><b>note</b>: </p><blockquote><div><p>HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</p>\n</div></blockquote></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "PLAC"
+          }]
+        },
+        "system" : "https://senologie.example-hospital.de/fhir/specimen/placer",
+        "value" : "BX25_105_A"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "FILL"
+          }]
+        },
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "122737001",
+          "display" : "Specimen from breast obtained by core needle biopsy (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "request" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "collection" : {
+        "collector" : {
+          "reference" : "Practitioner/BreastSurgeonPractitioner"
+        },
+        "collectedDateTime" : "2025-01-15T09:30:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "9911007",
+            "display" : "Core needle biopsy (procedure)"
+          }]
+        },
+        "bodySite" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "33564002",
+            "display" : "Structure of lower outer quadrant of breast (body structure)"
+          }]
+        }
+      },
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434746001",
+            "display" : "Specimen vial (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434162003",
+            "display" : "Neutral buffered formalin (substance)"
+          }]
+        }
+      }],
+      "note" : [{
+        "text" : "HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke."
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenBlock01",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenBlock01",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenBlock01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenBlock01</b></p><a name=\"CoreNeedleBiopsySpecimenBlock01\"> </a><a name=\"hcCoreNeedleBiopsySpecimenBlock01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 1201985008}\">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 08:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 787377000}\">Gross examination and sampling of tissue specimen (procedure)</span></td></tr></table><h3>Processings</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Description</b></td><td><b>Procedure</b></td><td><b>Time[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>Zuschnitt und Paraffineinbettung</td><td><span title=\"Codes:{http://snomed.info/sct 787376009}\">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td><td>2025-01-16 08:00:00+0100</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 706053007}\">General specimen container (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 311731000}\">Paraffin wax (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "1201985008",
+          "display" : "Tissue block specimen (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenPart"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T08:00:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "787377000",
+            "display" : "Gross examination and sampling of tissue specimen (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 2,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 8,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Zuschnitt und Paraffineinbettung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "787376009",
+            "display" : "Preparation of formalin fixed paraffin embedded tissue specimen (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T08:00:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "706053007",
+            "display" : "General specimen container (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "311731000",
+            "display" : "Paraffin wax (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideHE01",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideHE01",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideHE01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideHE01</b></p><a name=\"CoreNeedleBiopsySpecimenSlideHE01\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideHE01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_HE_01</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 1)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:00:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-01-16 09:15:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_HE_01"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:00:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 1)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:00:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:15:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideHE02",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideHE02",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideHE02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideHE02</b></p><a name=\"CoreNeedleBiopsySpecimenSlideHE02\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideHE02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_HE_02</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 2)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:00:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-01-16 09:15:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_HE_02"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:00:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 2)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:00:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:15:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideHE03",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideHE03",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideHE03\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideHE03</b></p><a name=\"CoreNeedleBiopsySpecimenSlideHE03\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideHE03\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_HE_03</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 3)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:00:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-01-16 09:15:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_HE_03"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:00:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 3)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:00:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:15:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideHE04",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideHE04",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideHE04\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideHE04</b></p><a name=\"CoreNeedleBiopsySpecimenSlideHE04\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideHE04\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_HE_04</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 4)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:00:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-01-16 09:15:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_HE_04"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:00:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 4)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:00:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:15:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideER01",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideER01",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideER01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideER01</b></p><a name=\"CoreNeedleBiopsySpecimenSlideER01\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideER01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_ER_01</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:30:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:30:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: ER-Immunhistochemie</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 70871006}\">Incisional biopsy (procedure)</span></p><p><b>time</b>: 2025-01-16 10:00:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_ER_01"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:30:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:30:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "ER-Immunhistochemie",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "70871006",
+            "display" : "Incisional biopsy (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T10:00:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideER02",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideER02",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideER02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideER02</b></p><a name=\"CoreNeedleBiopsySpecimenSlideER02\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideER02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_ER_02</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:30:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:30:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: ER-Immunhistochemie</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 70871006}\">Incisional biopsy (procedure)</span></p><p><b>time</b>: 2025-01-16 10:00:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_ER_02"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:30:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:30:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "ER-Immunhistochemie",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "70871006",
+            "display" : "Incisional biopsy (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T10:00:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlidePR01",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlidePR01",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlidePR01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlidePR01</b></p><a name=\"CoreNeedleBiopsySpecimenSlidePR01\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlidePR01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_PR_01</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:35:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:35:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: PR-Immunhistochemie</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 70871006}\">Incisional biopsy (procedure)</span></p><p><b>time</b>: 2025-01-16 10:05:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_PR_01"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:35:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:35:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "PR-Immunhistochemie",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "70871006",
+            "display" : "Incisional biopsy (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T10:05:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlidePR02",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlidePR02",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlidePR02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlidePR02</b></p><a name=\"CoreNeedleBiopsySpecimenSlidePR02\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlidePR02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_PR_02</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:35:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:35:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: PR-Immunhistochemie</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 70871006}\">Incisional biopsy (procedure)</span></p><p><b>time</b>: 2025-01-16 10:05:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_PR_02"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:35:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:35:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "PR-Immunhistochemie",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "70871006",
+            "display" : "Incisional biopsy (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T10:05:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideHER2-01",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideHER2-01",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideHER2-01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideHER2-01</b></p><a name=\"CoreNeedleBiopsySpecimenSlideHER2-01\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideHER2-01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_HER2_01</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:40:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:40:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HER2 Bright-field Dual In-Situ Hybridization (B-DISH)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 426329006}\">Fluorescence in situ hybridization (procedure)</span></p><p><b>time</b>: 2025-01-16 10:30:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_HER2_01"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:40:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:40:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HER2 Bright-field Dual In-Situ Hybridization (B-DISH)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "426329006",
+            "display" : "Fluorescence in situ hybridization (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T10:30:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideHER2-02",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideHER2-02",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideHER2-02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideHER2-02</b></p><a name=\"CoreNeedleBiopsySpecimenSlideHER2-02\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideHER2-02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_HER2_02</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:40:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:40:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HER2 Bright-field Dual In-Situ Hybridization (B-DISH)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 426329006}\">Fluorescence in situ hybridization (procedure)</span></p><p><b>time</b>: 2025-01-16 10:30:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_HER2_02"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:40:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:40:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HER2 Bright-field Dual In-Situ Hybridization (B-DISH)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "426329006",
+            "display" : "Fluorescence in situ hybridization (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T10:30:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideKi67-01",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideKi67-01",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideKi67-01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideKi67-01</b></p><a name=\"CoreNeedleBiopsySpecimenSlideKi67-01\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideKi67-01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_Ki67_01</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:45:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:45:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Ki-67 Immunhistochemie</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 70871006}\">Incisional biopsy (procedure)</span></p><p><b>time</b>: 2025-01-16 10:10:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_Ki67_01"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:45:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:45:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Ki-67 Immunhistochemie",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "70871006",
+            "display" : "Incisional biopsy (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T10:10:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideKi67-02",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "CoreNeedleBiopsySpecimenSlideKi67-02",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_CoreNeedleBiopsySpecimenSlideKi67-02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenSlideKi67-02</b></p><a name=\"CoreNeedleBiopsySpecimenSlideKi67-02\"> </a><a name=\"hcCoreNeedleBiopsySpecimenSlideKi67-02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1_1_Ki67_02</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 09:45:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-01-16 09:45:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Ki-67 Immunhistochemie</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 70871006}\">Incisional biopsy (procedure)</span></p><p><b>time</b>: 2025-01-16 10:10:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105_A_1_1_Ki67_02"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_105"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-01-16T09:45:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T09:45:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Ki-67 Immunhistochemie",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "70871006",
+            "display" : "Incisional biopsy (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-01-16T10:10:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMacroscopicGrouper",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyMacroscopicGrouper",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyMacroscopicGrouper\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyMacroscopicGrouper</b></p><a name=\"CoreNeedleBiopsyMacroscopicGrouper\"> </a><a name=\"hcCoreNeedleBiopsyMacroscopicGrouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper\">MII PR Patho Macroscopic Grouperversion: null2026.0.0)</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-16 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: Makroskopische Befunde der HG-Stanzzylinder</p><p><b>note</b>: </p><blockquote><div><p>2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke. 1 Paraffinblock.</p>\n</div></blockquote><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 76752008}\">Breast structure (body structure)</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-CoreNeedleBiopsyMacroscopicTotalLength.html\">Observation Size.maximum dimension in Tumor</a></li><li><a href=\"Observation-CoreNeedleBiopsyMacroscopicCylinderCount.html\">Observation Quantity (attribute)</a></li><li><a href=\"Observation-CoreNeedleBiopsyMacroscopicBlockCount.html\">Observation Quantity (attribute)</a></li></ul><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22634-0"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-16T08:30:00+01:00",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueString" : "Makroskopische Befunde der HG-Stanzzylinder",
+      "note" : [{
+        "text" : "2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke. 1 Paraffinblock."
+      }],
+      "bodySite" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "76752008",
+          "display" : "Breast structure (body structure)"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "Observation/CoreNeedleBiopsyMacroscopicTotalLength"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyMacroscopicCylinderCount"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyMacroscopicBlockCount"
+      }],
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMacroscopicTotalLength",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyMacroscopicTotalLength",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyMacroscopicTotalLength\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyMacroscopicTotalLength</b></p><a name=\"CoreNeedleBiopsyMacroscopicTotalLength\"> </a><a name=\"hcCoreNeedleBiopsyMacroscopicTotalLength\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 33728-7}\">Gesamtlänge der Stanzzylinder</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-16 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 22 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 76752008}\">Breast structure (body structure)</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22634-0"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "33728-7",
+          "display" : "Size.maximum dimension in Tumor"
+        }],
+        "text" : "Gesamtlänge der Stanzzylinder"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-16T08:30:00+01:00",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 22,
+        "unit" : "mm",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mm"
+      },
+      "bodySite" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "76752008",
+          "display" : "Breast structure (body structure)"
+        }]
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenPart"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMacroscopicCylinderCount",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyMacroscopicCylinderCount",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyMacroscopicCylinderCount\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyMacroscopicCylinderCount</b></p><a name=\"CoreNeedleBiopsyMacroscopicCylinderCount\"> </a><a name=\"hcCoreNeedleBiopsyMacroscopicCylinderCount\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 246205007}\">Anzahl Stanzzylinder</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-16 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 2 count<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22634-0"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "246205007",
+          "display" : "Quantity (attribute)"
+        }],
+        "text" : "Anzahl Stanzzylinder"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-16T08:30:00+01:00",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 2,
+        "unit" : "count",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{count}"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenPart"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMacroscopicBlockCount",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyMacroscopicBlockCount",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyMacroscopicBlockCount\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyMacroscopicBlockCount</b></p><a name=\"CoreNeedleBiopsyMacroscopicBlockCount\"> </a><a name=\"hcCoreNeedleBiopsyMacroscopicBlockCount\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 246205007}\">Anzahl Paraffinblöcke</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-16 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1 count<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22634-0"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "246205007",
+          "display" : "Quantity (attribute)"
+        }],
+        "text" : "Anzahl Paraffinblöcke"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-16T08:30:00+01:00",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 1,
+        "unit" : "count",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{count}"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenPart"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyDiagnosticConclusionGrouper",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyDiagnosticConclusionGrouper",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyDiagnosticConclusionGrouper\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyDiagnosticConclusionGrouper</b></p><a name=\"CoreNeedleBiopsyDiagnosticConclusionGrouper\"> </a><a name=\"hcCoreNeedleBiopsyDiagnosticConclusionGrouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper\">MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>note</b>: By Practitioner/PathologistPractitioner @2025-01-17</p><blockquote><div><p>Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen.</p>\n</div></blockquote><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-CoreNeedleBiopsyHistologicalTypeICDO3.html\">Observation Histology and Behavior ICD-O-3 Cancer</a></li><li><a href=\"Observation-CoreNeedleBiopsyMorphologyFreeText.html\">Observation Histology type in Cancer specimen Narrative</a></li><li><a href=\"Observation-CoreNeedleBiopsyNottinghamGrade.html\">Observation Histologic grade [Score] in Breast cancer specimen by Nottingham</a></li><li><a href=\"Observation-CoreNeedleBiopsyNottinghamSummaryScore.html\">Observation Histologic grade [Score] in Breast cancer specimen by Nottingham</a></li><li><a href=\"Observation-CoreNeedleBiopsyTubuleFormation.html\">Observation Glandular differentiation [Score] in Breast cancer specimen by Nottingham</a></li><li><a href=\"Observation-CoreNeedleBiopsyNuclearPleomorphism.html\">Observation Nuclear pleomorphism in Breast tumor by Nottingham</a></li><li><a href=\"Observation-CoreNeedleBiopsyMitoticRate.html\">Observation Mitotic rate [Score] in Breast cancer specimen by Nottingham</a></li><li><a href=\"Observation-CoreNeedleBiopsyERStatus.html\">Observation Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-CoreNeedleBiopsyERPercentage.html\">Observation Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-CoreNeedleBiopsyPRStatus.html\">Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-CoreNeedleBiopsyPRPercentage.html\">Observation Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-CoreNeedleBiopsyHER2ISH.html\">Observation ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH</a></li><li><a href=\"Observation-CoreNeedleBiopsyKi67.html\">Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-CoreNeedleBiopsyBClassification.html\">Observation Screening interpretation (observable entity)</a></li><li><a href=\"Observation-CoreNeedleBiopsyMicrocalcification.html\">Observation Microcalcification, calcified structure (morphologic abnormality)</a></li><li><a href=\"Observation-CoreNeedleBiopsySpecimenRadiography.html\">Observation Specimen mammography (procedure)</a></li><li><a href=\"Observation-CoreNeedleBiopsyMicrocalcificationCorrelation.html\">Observation Microcalcification, calcified structure (morphologic abnormality)</a></li></ul><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "note" : [{
+        "authorReference" : {
+          "reference" : "Practitioner/PathologistPractitioner"
+        },
+        "time" : "2025-01-17",
+        "text" : "Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen."
+      }],
+      "hasMember" : [{
+        "reference" : "Observation/CoreNeedleBiopsyHistologicalTypeICDO3"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyMorphologyFreeText"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyNottinghamGrade"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyNottinghamSummaryScore"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyTubuleFormation"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyNuclearPleomorphism"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyMitoticRate"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyERStatus"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyERPercentage"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyPRStatus"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyPRPercentage"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyHER2ISH"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyKi67"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyBClassification"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyMicrocalcification"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsySpecimenRadiography"
+      },
+      {
+        "reference" : "Observation/CoreNeedleBiopsyMicrocalcificationCorrelation"
+      }],
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyHistologicalTypeICDO3",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyHistologicalTypeICDO3",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyHistologicalTypeICDO3\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyHistologicalTypeICDO3</b></p><a name=\"CoreNeedleBiopsyHistologicalTypeICDO3\"> </a><a name=\"hcCoreNeedleBiopsyHistologicalTypeICDO3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 59847-4}\">Histology and Behavior ICD-O-3 Cancer</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{urn:oid:2.16.840.1.113883.6.43.1 8500/3}\">Invasives duktales Karzinom (NST)</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "59847-4",
+          "display" : "Histology and Behavior ICD-O-3 Cancer"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "urn:oid:2.16.840.1.113883.6.43.1",
+          "code" : "8500/3",
+          "display" : "Invasives duktales Karzinom (NST)"
+        }]
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMorphologyFreeText",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyMorphologyFreeText",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyMorphologyFreeText\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyMorphologyFreeText</b></p><a name=\"CoreNeedleBiopsyMorphologyFreeText\"> </a><a name=\"hcCoreNeedleBiopsyMorphologyFreeText\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 33731-1}\">Histology type in Cancer specimen Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.</p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "33731-1",
+          "display" : "Histology type in Cancer specimen Narrative"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueString" : "In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.",
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyNottinghamGrade",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyNottinghamGrade",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyNottinghamGrade\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyNottinghamGrade</b></p><a name=\"CoreNeedleBiopsyNottinghamGrade\"> </a><a name=\"hcCoreNeedleBiopsyNottinghamGrade\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44648-4}\">Histologic grade [Score] in Breast cancer specimen by Nottingham</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 1155703007}\">Nottingham Grad 2 (Score 6)</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "44648-4",
+          "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "1155703007",
+          "display" : "G2: Moderately differentiated histologic grade (qualifier value)"
+        }],
+        "text" : "Nottingham Grad 2 (Score 6)"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyNottinghamSummaryScore",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyNottinghamSummaryScore",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyNottinghamSummaryScore\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyNottinghamSummaryScore</b></p><a name=\"CoreNeedleBiopsyNottinghamSummaryScore\"> </a><a name=\"hcCoreNeedleBiopsyNottinghamSummaryScore\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44648-4}\">Elston-Ellis Summenscore</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 6 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "44648-4",
+          "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+        }],
+        "text" : "Elston-Ellis Summenscore"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 6,
+        "unit" : "score",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{score}"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyTubuleFormation",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyTubuleFormation",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyTubuleFormation\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyTubuleFormation</b></p><a name=\"CoreNeedleBiopsyTubuleFormation\"> </a><a name=\"hcCoreNeedleBiopsyTubuleFormation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85321-8}\">Glandular differentiation [Score] in Breast cancer specimen by Nottingham</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 3 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85321-8",
+          "display" : "Glandular differentiation [Score] in Breast cancer specimen by Nottingham"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 3,
+        "unit" : "score",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{score}"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyNuclearPleomorphism",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyNuclearPleomorphism",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyNuclearPleomorphism\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyNuclearPleomorphism</b></p><a name=\"CoreNeedleBiopsyNuclearPleomorphism\"> </a><a name=\"hcCoreNeedleBiopsyNuclearPleomorphism\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44645-0}\">Nuclear pleomorphism in Breast tumor by Nottingham</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 2 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "44645-0",
+          "display" : "Nuclear pleomorphism in Breast tumor by Nottingham"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 2,
+        "unit" : "score",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{score}"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMitoticRate",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyMitoticRate",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyMitoticRate\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyMitoticRate</b></p><a name=\"CoreNeedleBiopsyMitoticRate\"> </a><a name=\"hcCoreNeedleBiopsyMitoticRate\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85300-2}\">Mitotic rate [Score] in Breast cancer specimen by Nottingham</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85300-2",
+          "display" : "Mitotic rate [Score] in Breast cancer specimen by Nottingham"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 1,
+        "unit" : "score",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{score}"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyERStatus",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyERStatus",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyERStatus\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyERStatus</b></p><a name=\"CoreNeedleBiopsyERStatus\"> </a><a name=\"hcCoreNeedleBiopsyERStatus\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85337-4}\">Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 52101004}\">ER positiv</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideER01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_ER_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85337-4",
+          "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "52101004",
+          "display" : "Present (qualifier value)"
+        }],
+        "text" : "ER positiv"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideER01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyERPercentage",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyERPercentage",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyERPercentage\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyERPercentage</b></p><a name=\"CoreNeedleBiopsyERPercentage\"> </a><a name=\"hcCoreNeedleBiopsyERPercentage\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85329-1}\">Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 85 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideER01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_ER_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85329-1",
+          "display" : "Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 85,
+        "unit" : "%",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "%"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideER01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyPRStatus",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyPRStatus",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyPRStatus\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyPRStatus</b></p><a name=\"CoreNeedleBiopsyPRStatus\"> </a><a name=\"hcCoreNeedleBiopsyPRStatus\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85339-0}\">Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 52101004}\">PR positiv</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlidePR01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_PR_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85339-0",
+          "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "52101004",
+          "display" : "Present (qualifier value)"
+        }],
+        "text" : "PR positiv"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlidePR01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyPRPercentage",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyPRPercentage",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyPRPercentage\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyPRPercentage</b></p><a name=\"CoreNeedleBiopsyPRPercentage\"> </a><a name=\"hcCoreNeedleBiopsyPRPercentage\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85325-9}\">Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 50 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlidePR01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_PR_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85325-9",
+          "display" : "Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 50,
+        "unit" : "%",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "%"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlidePR01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyHER2ISH",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyHER2ISH",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyHER2ISH\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyHER2ISH</b></p><a name=\"CoreNeedleBiopsyHER2ISH\"> </a><a name=\"hcCoreNeedleBiopsyHER2ISH\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85318-4}\">HER2 Amplifikation (B-DISH)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 2667000}\">HER2 negativ (nicht amplifiziert)</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHER2-01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HER2_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85318-4",
+          "display" : "ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH"
+        }],
+        "text" : "HER2 Amplifikation (B-DISH)"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "2667000",
+          "display" : "Absent (qualifier value)"
+        }],
+        "text" : "HER2 negativ (nicht amplifiziert)"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2-01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyKi67",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyKi67",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyKi67\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyKi67</b></p><a name=\"CoreNeedleBiopsyKi67\"> </a><a name=\"hcCoreNeedleBiopsyKi67\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85330-9}\">Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 10 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideKi67-01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_Ki67_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85330-9",
+          "display" : "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 10,
+        "unit" : "%",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "%"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideKi67-01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyBClassification",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyBClassification",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyBClassification\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyBClassification</b></p><a name=\"CoreNeedleBiopsyBClassification\"> </a><a name=\"hcCoreNeedleBiopsyBClassification\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 271937008}\">B-Klassifikation</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:\">B5b</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "271937008",
+          "display" : "Screening interpretation (observable entity)"
+        }],
+        "text" : "B-Klassifikation"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueCodeableConcept" : {
+        "text" : "B5b"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMicrocalcification",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyMicrocalcification",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyMicrocalcification\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyMicrocalcification</b></p><a name=\"CoreNeedleBiopsyMicrocalcification\"> </a><a name=\"hcCoreNeedleBiopsyMicrocalcification\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 12747003}\">Relevante Mikroverkalkungen</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 2667000}\">Keine relevanten Mikroverkalkungen</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "12747003",
+          "display" : "Microcalcification, calcified structure (morphologic abnormality)"
+        }],
+        "text" : "Relevante Mikroverkalkungen"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "2667000",
+          "display" : "Absent (qualifier value)"
+        }],
+        "text" : "Keine relevanten Mikroverkalkungen"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsySpecimenRadiography",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsySpecimenRadiography",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsySpecimenRadiography\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsySpecimenRadiography</b></p><a name=\"CoreNeedleBiopsySpecimenRadiography\"> </a><a name=\"hcCoreNeedleBiopsySpecimenRadiography\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 80865008}\">Präparateradiogramm</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 52101004}\">Präparateradiogramm gesehen</span></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "80865008",
+          "display" : "Specimen mammography (procedure)"
+        }],
+        "text" : "Präparateradiogramm"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "52101004",
+          "display" : "Present (qualifier value)"
+        }],
+        "text" : "Präparateradiogramm gesehen"
+      },
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenPart"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMicrocalcificationCorrelation",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "CoreNeedleBiopsyMicrocalcificationCorrelation",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_CoreNeedleBiopsyMicrocalcificationCorrelation\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation CoreNeedleBiopsyMicrocalcificationCorrelation</b></p><a name=\"CoreNeedleBiopsyMicrocalcificationCorrelation\"> </a><a name=\"hcCoreNeedleBiopsyMicrocalcificationCorrelation\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-CoreNeedleBiopsyReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 12747003}\">Korrelation Mikroverkalkung</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: Vorliegende Verkalkung radiologisch nicht relevant (kleiner als 100 Mikrometer)</p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "basedOn" : [{
+        "reference" : "ServiceRequest/CoreNeedleBiopsyReportRequest"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22637-3"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "12747003",
+          "display" : "Microcalcification, calcified structure (morphologic abnormality)"
+        }],
+        "text" : "Korrelation Mikroverkalkung"
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-01-17",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueString" : "Vorliegende Verkalkung radiologisch nicht relevant (kleiner als 100 Mikrometer)",
+      "specimen" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy",
+    "resource" : {
+      "resourceType" : "QuestionnaireResponse",
+      "id" : "QuestionnaireResponseCoreNeedleBiopsy",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"QuestionnaireResponse_QuestionnaireResponseCoreNeedleBiopsy\"> </a><p class=\"res-header-id\"><b>Generated Narrative: QuestionnaireResponse QuestionnaireResponseCoreNeedleBiopsy</b></p><a name=\"QuestionnaireResponseCoreNeedleBiopsy\"> </a><a name=\"hcQuestionnaireResponseCoreNeedleBiopsy\"> </a><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 2px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"The linkID for the item\">LinkID</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Text for the item\">Text</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Minimum and Maximum # of times the item can appear in the instance\">Definition</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"The type of the item\">Answer</a><span style=\"float: right\"><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_q_root.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"QuestionnaireResponseRoot\" class=\"hierarchy\"/> QuestionnaireResponseCoreNeedleBiopsy</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Questionnaire:http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Group\" class=\"hierarchy\"/> cnb.root</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Stanzbiopsie Mamma</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Group\" class=\"hierarchy\"/> cnb.patient</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Patientendaten</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.patient.name</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Familienname</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Becker</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.patient.given</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Vorname</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Sabine</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.patient.dob</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Geburtsdatum</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1971-03-15</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.patient.id</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Patienten-Identifikator</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">PAT-2025-105</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Group\" class=\"hierarchy\"/> cnb.clinical</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Klinische Angaben</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.clinical.indication</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Untersuchungsanlass</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Herdbefund/Architekturstörung linke Brust</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.clinical.birads</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">BI-RADS</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">4b</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.clinical.imaging</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Bildgebungsmodalität</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Ultraschall</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Group\" class=\"hierarchy\"/> cnb.specimen</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Untersuchungsmaterial</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.specimen.type</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Materialart</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">HG-Stanzen/Mamma</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.specimen.side</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Seitenlokalisation</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"http://snomed.info/id/7771000\">SNOMED CT: 7771000</a> (Left (qualifier value))</span></span></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.specimen.clock</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Uhrzeigerlokalisation</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">5 Uhr</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.specimen.distance</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Abstand von Mamille</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span>5 cm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codecm = 'cm')</span></span></span></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.specimen.length</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Gesamtlänge der Stanzzylinder</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span>22 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></span></span></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.specimen.cylinders</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Anzahl Stanzzylinder</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">2</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.specimen.blocks</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Anzahl Blöcke</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Group\" class=\"hierarchy\"/> cnb.histology</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Histologischer Tumortyp</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.histology.icdo3</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Histologischer Typ ICD-O-3</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span>unknown: 8500/3 (Invasives duktales Karzinom (NST))</span></span></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Group\" class=\"hierarchy\"/> cnb.grading</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Nottingham-Grading</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.grading.grade</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Nottingham-Grad</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">G2</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.grading.score</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Elston-Ellis Summenscore</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">6</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.grading.tubules</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Tubulusbildung</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">3</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.grading.pleomorphism</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Kernpleomorphie</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">2</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.grading.mitoses</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Mitoserate</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Group\" class=\"hierarchy\"/> cnb.biomarkers</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Biomarker</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.biomarkers.er</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Östrogenrezeptor</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"http://snomed.info/id/52101004\">SNOMED CT: 52101004</a> (Present (qualifier value))</span></span></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.biomarkers.er.pct</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">ER Prozent</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">85</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.biomarkers.pr</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Progesteronrezeptor</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"http://snomed.info/id/52101004\">SNOMED CT: 52101004</a> (Present (qualifier value))</span></span></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.biomarkers.pr.pct</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">PR Prozent</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">50</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.biomarkers.her2</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">HER2 Amplifikation</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Negativ (nicht amplifiziert)</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.biomarkers.ki67</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Ki-67</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">10</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Group\" class=\"hierarchy\"/> cnb.bclassification</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B-Klassifikation</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.bclassification.value</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B-Klassifikation (NHSBSP)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">B5b</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck001.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-group.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Group\" class=\"hierarchy\"/> cnb.microcalcification</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Mikroverkalkungen</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.microcalcification.relevant</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Relevante Mikroverkalkungen</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span><span><a href=\"http://snomed.info/id/2667000\">SNOMED CT: 2667000</a> (Absent (qualifier value))</span></span></td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.microcalcification.radiography</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Präparateradiogramm</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Gesehen</td></tr>\r\n<tr style=\"border: 1px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon-q-string.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Item\" class=\"hierarchy\"/> cnb.microcalcification.correlation</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Korrelation Mikroverkalkung</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 1px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Vorliegende Verkalkung radiologisch nicht relevant (kleiner als 100 Mikrometer)</td></tr>\r\n<tr><td colspan=\"4\" class=\"hierarchy\"><br/><a href=\"https://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+      },
+      "questionnaire" : "http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy",
+      "status" : "completed",
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "authored" : "2025-01-17T14:30:00+01:00",
+      "author" : {
+        "reference" : "Practitioner/PathologistPractitioner"
+      },
+      "item" : [{
+        "linkId" : "cnb.root",
+        "text" : "Stanzbiopsie Mamma",
+        "item" : [{
+          "linkId" : "cnb.patient",
+          "text" : "Patientendaten",
+          "item" : [{
+            "linkId" : "cnb.patient.name",
+            "text" : "Familienname",
+            "answer" : [{
+              "valueString" : "Becker"
+            }]
+          },
+          {
+            "linkId" : "cnb.patient.given",
+            "text" : "Vorname",
+            "answer" : [{
+              "valueString" : "Sabine"
+            }]
+          },
+          {
+            "linkId" : "cnb.patient.dob",
+            "text" : "Geburtsdatum",
+            "answer" : [{
+              "valueDate" : "1971-03-15"
+            }]
+          },
+          {
+            "linkId" : "cnb.patient.id",
+            "text" : "Patienten-Identifikator",
+            "answer" : [{
+              "valueString" : "PAT-2025-105"
+            }]
+          }]
+        },
+        {
+          "linkId" : "cnb.clinical",
+          "text" : "Klinische Angaben",
+          "item" : [{
+            "linkId" : "cnb.clinical.indication",
+            "text" : "Untersuchungsanlass",
+            "answer" : [{
+              "valueString" : "Herdbefund/Architekturstörung linke Brust"
+            }]
+          },
+          {
+            "linkId" : "cnb.clinical.birads",
+            "text" : "BI-RADS",
+            "answer" : [{
+              "valueString" : "4b"
+            }]
+          },
+          {
+            "linkId" : "cnb.clinical.imaging",
+            "text" : "Bildgebungsmodalität",
+            "answer" : [{
+              "valueString" : "Ultraschall"
+            }]
+          }]
+        },
+        {
+          "linkId" : "cnb.specimen",
+          "text" : "Untersuchungsmaterial",
+          "item" : [{
+            "linkId" : "cnb.specimen.type",
+            "text" : "Materialart",
+            "answer" : [{
+              "valueString" : "HG-Stanzen/Mamma"
+            }]
+          },
+          {
+            "linkId" : "cnb.specimen.side",
+            "text" : "Seitenlokalisation",
+            "answer" : [{
+              "valueCoding" : {
+                "system" : "http://snomed.info/sct",
+                "code" : "7771000",
+                "display" : "Left (qualifier value)"
+              }
+            }]
+          },
+          {
+            "linkId" : "cnb.specimen.clock",
+            "text" : "Uhrzeigerlokalisation",
+            "answer" : [{
+              "valueString" : "5 Uhr"
+            }]
+          },
+          {
+            "linkId" : "cnb.specimen.distance",
+            "text" : "Abstand von Mamille",
+            "answer" : [{
+              "valueQuantity" : {
+                "value" : 5,
+                "unit" : "cm",
+                "system" : "http://unitsofmeasure.org",
+                "code" : "cm"
+              }
+            }]
+          },
+          {
+            "linkId" : "cnb.specimen.length",
+            "text" : "Gesamtlänge der Stanzzylinder",
+            "answer" : [{
+              "valueQuantity" : {
+                "value" : 22,
+                "unit" : "mm",
+                "system" : "http://unitsofmeasure.org",
+                "code" : "mm"
+              }
+            }]
+          },
+          {
+            "linkId" : "cnb.specimen.cylinders",
+            "text" : "Anzahl Stanzzylinder",
+            "answer" : [{
+              "valueInteger" : 2
+            }]
+          },
+          {
+            "linkId" : "cnb.specimen.blocks",
+            "text" : "Anzahl Blöcke",
+            "answer" : [{
+              "valueInteger" : 1
+            }]
+          }]
+        },
+        {
+          "linkId" : "cnb.histology",
+          "text" : "Histologischer Tumortyp",
+          "item" : [{
+            "linkId" : "cnb.histology.icdo3",
+            "text" : "Histologischer Typ ICD-O-3",
+            "answer" : [{
+              "valueCoding" : {
+                "system" : "urn:oid:2.16.840.1.113883.6.43.1",
+                "code" : "8500/3",
+                "display" : "Invasives duktales Karzinom (NST)"
+              }
+            }]
+          }]
+        },
+        {
+          "linkId" : "cnb.grading",
+          "text" : "Nottingham-Grading",
+          "item" : [{
+            "linkId" : "cnb.grading.grade",
+            "text" : "Nottingham-Grad",
+            "answer" : [{
+              "valueString" : "G2"
+            }]
+          },
+          {
+            "linkId" : "cnb.grading.score",
+            "text" : "Elston-Ellis Summenscore",
+            "answer" : [{
+              "valueInteger" : 6
+            }]
+          },
+          {
+            "linkId" : "cnb.grading.tubules",
+            "text" : "Tubulusbildung",
+            "answer" : [{
+              "valueInteger" : 3
+            }]
+          },
+          {
+            "linkId" : "cnb.grading.pleomorphism",
+            "text" : "Kernpleomorphie",
+            "answer" : [{
+              "valueInteger" : 2
+            }]
+          },
+          {
+            "linkId" : "cnb.grading.mitoses",
+            "text" : "Mitoserate",
+            "answer" : [{
+              "valueInteger" : 1
+            }]
+          }]
+        },
+        {
+          "linkId" : "cnb.biomarkers",
+          "text" : "Biomarker",
+          "item" : [{
+            "linkId" : "cnb.biomarkers.er",
+            "text" : "Östrogenrezeptor",
+            "answer" : [{
+              "valueCoding" : {
+                "system" : "http://snomed.info/sct",
+                "code" : "52101004",
+                "display" : "Present (qualifier value)"
+              }
+            }]
+          },
+          {
+            "linkId" : "cnb.biomarkers.er.pct",
+            "text" : "ER Prozent",
+            "answer" : [{
+              "valueInteger" : 85
+            }]
+          },
+          {
+            "linkId" : "cnb.biomarkers.pr",
+            "text" : "Progesteronrezeptor",
+            "answer" : [{
+              "valueCoding" : {
+                "system" : "http://snomed.info/sct",
+                "code" : "52101004",
+                "display" : "Present (qualifier value)"
+              }
+            }]
+          },
+          {
+            "linkId" : "cnb.biomarkers.pr.pct",
+            "text" : "PR Prozent",
+            "answer" : [{
+              "valueInteger" : 50
+            }]
+          },
+          {
+            "linkId" : "cnb.biomarkers.her2",
+            "text" : "HER2 Amplifikation",
+            "answer" : [{
+              "valueString" : "Negativ (nicht amplifiziert)"
+            }]
+          },
+          {
+            "linkId" : "cnb.biomarkers.ki67",
+            "text" : "Ki-67",
+            "answer" : [{
+              "valueInteger" : 10
+            }]
+          }]
+        },
+        {
+          "linkId" : "cnb.bclassification",
+          "text" : "B-Klassifikation",
+          "item" : [{
+            "linkId" : "cnb.bclassification.value",
+            "text" : "B-Klassifikation (NHSBSP)",
+            "answer" : [{
+              "valueString" : "B5b"
+            }]
+          }]
+        },
+        {
+          "linkId" : "cnb.microcalcification",
+          "text" : "Mikroverkalkungen",
+          "item" : [{
+            "linkId" : "cnb.microcalcification.relevant",
+            "text" : "Relevante Mikroverkalkungen",
+            "answer" : [{
+              "valueCoding" : {
+                "system" : "http://snomed.info/sct",
+                "code" : "2667000",
+                "display" : "Absent (qualifier value)"
+              }
+            }]
+          },
+          {
+            "linkId" : "cnb.microcalcification.radiography",
+            "text" : "Präparateradiogramm",
+            "answer" : [{
+              "valueString" : "Gesehen"
+            }]
+          },
+          {
+            "linkId" : "cnb.microcalcification.correlation",
+            "text" : "Korrelation Mikroverkalkung",
+            "answer" : [{
+              "valueString" : "Vorliegende Verkalkung radiologisch nicht relevant (kleiner als 100 Mikrometer)"
+            }]
+          }]
+        }]
+      }]
+    }
+  }]
+}
+
+```

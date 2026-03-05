@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://breastcancerspec.org/Observation/BreastResectionMacroscopicGrouper> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BreastResectionMacroscopicGrouper"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2026.0.0"^^xsd:anyURI ;
+       fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper?version=2026.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation BreastResectionMacroscopicGrouper</b></p><a name=\"BreastResectionMacroscopicGrouper\"> </a><a name=\"hcBreastResectionMacroscopicGrouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper\">MII PR Patho Macroscopic Grouperversion: null2026.0.0)</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: Makroskopische Befunde des BET-Exzisionspräparats</p><p><b>note</b>: </p><blockquote><div><p>BET-Exzisionspräparat links, 65 x 45 x 30 mm, 55 g. Unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Haut mit Drahthäkchen. Schnittfläche: grau-weißlich, derber Herdbefund zentral ca. 18 mm. 3 Paraffinblöcke.</p>\n</div></blockquote><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 76752008}\">Breast structure (body structure)</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-BreastResectionMacroLength.html\">Observation Specimen size.maximum dimension in Breast tumor</a></li><li><a href=\"Observation-BreastResectionMacroWidth.html\">Observation Specimen size additional dimension 1 in Breast tumor</a></li><li><a href=\"Observation-BreastResectionMacroDepth.html\">Observation Specimen size additional dimension 2 in Breast tumor</a></li><li><a href=\"Observation-BreastResectionMacroWeight.html\">Observation Specimen wt Tiss Qn</a></li><li><a href=\"Observation-BreastResectionMacroQuadrant.html\">Observation Quadrant Breast</a></li><li><a href=\"Observation-BreastResectionMacroClock.html\">Observation Radial position in breast [Angle] in Breast cancer specimen</a></li><li><a href=\"Observation-BreastResectionMacroDistanceNipple.html\">Observation Distance of primary malignant neoplasm of breast to nipple in excised breast specimen (observable entity)</a></li></ul><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseBreastResection.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:22634-0 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "22634-0" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://breastcancerspec.org/Patient/Patient4> ;
+     fhir:reference [ fhir:v "Patient/Patient4" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2025-02-06T08:30:00+01:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://breastcancerspec.org/Practitioner/PathologistPractitioner> ;
+     fhir:reference [ fhir:v "Practitioner/PathologistPractitioner" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:String ;
+     fhir:v "Makroskopische Befunde des BET-Exzisionspräparats"
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "BET-Exzisionspräparat links, 65 x 45 x 30 mm, 55 g. Unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Haut mit Drahthäkchen. Schnittfläche: grau-weißlich, derber Herdbefund zentral ca. 18 mm. 3 Paraffinblöcke." ]
+  ] ) ; # 
+  fhir:bodySite [
+     fhir:coding ( [
+       a sct:76752008 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "76752008" ] ;
+       fhir:display [ fhir:v "Breast structure (body structure)" ]
+     ] )
+  ] ; # 
+  fhir:hasMember ( [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroLength> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionMacroLength" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroWidth> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionMacroWidth" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroDepth> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionMacroDepth" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroWeight> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionMacroWeight" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroQuadrant> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionMacroQuadrant" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroClock> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionMacroClock" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroDistanceNipple> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionMacroDistanceNipple" ]
+  ] ) ; # 
+  fhir:derivedFrom ( [
+     fhir:l <http://breastcancerspec.org/QuestionnaireResponse/QuestionnaireResponseBreastResection> ;
+     fhir:reference [ fhir:v "QuestionnaireResponse/QuestionnaireResponseBreastResection" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

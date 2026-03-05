@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Motivation - Breast Cancer Specification v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="family-nav">
+    <a id="family-logo" data-no-external="true" href="https://www.bihealth.org/">
+        <img alt="BIH" height="50" src="BIH-Logo_neu.png"/>
+    </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Breast Cancer Specification</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="clinical-context.html">Clinical Context</a>
+  </li>
+  <li>
+    <a href="motivation.html">Motivation</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Stanzbiopsie
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="biopsy-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-CoreNeedleBiopsyReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-CoreNeedleBiopsyMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-CoreNeedleBiopsyDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-CoreNeedleBiopsyReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-CoreNeedleBiopsyComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">OP-Präparat (BET)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="resection-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-BreastResectionReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-BreastResectionMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-BreastResectionDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-BreastResectionReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-BreastResectionComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="document-viewer.html">Befund-Viewer</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Motivation</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Breast Cancer Specification - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://breastcancerspec.org/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Motivation</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#test-data-for-senders-and-receivers" id="markdown-toc-test-data-for-senders-and-receivers">Test data for senders and receivers</a></li>
+  <li><a href="#basis-for-llm-based-extraction-from-free-text" id="markdown-toc-basis-for-llm-based-extraction-from-free-text">Basis for LLM-based extraction from free text</a></li>
+  <li><a href="#reference-dataset-for-eu-and-research-projects" id="markdown-toc-reference-dataset-for-eu-and-research-projects">Reference dataset for EU and research projects</a></li>
+  <li><a href="#foundation-for-further-profiling" id="markdown-toc-foundation-for-further-profiling">Foundation for further profiling</a></li>
+  <li><a href="#harmonisation-of-pathology-and-oncology-specifications" id="markdown-toc-harmonisation-of-pathology-and-oncology-specifications">Harmonisation of pathology and oncology specifications</a></li>
+  <li><a href="#use-in-connectathons-and-projectathons" id="markdown-toc-use-in-connectathons-and-projectathons">Use in connectathons and projectathons</a></li>
+  <li><a href="#stakeholders-and-potential-adopters" id="markdown-toc-stakeholders-and-potential-adopters">Stakeholders and potential adopters</a></li>
+</ul>
+
+</div>
+<p>This Implementation Guide is intended as a practical, reusable foundation for interoperable reporting of breast cancer pathology information across different clinical systems and projects. It is designed to be useful both for routine clinical integration and for research and innovation projects (e.g. EU-funded initiatives, AI/LLM pilots, and precision oncology workflows).</p>
+
+<h3 id="test-data-for-senders-and-receivers">Test data for senders and receivers</h3>
+
+<p>A central goal of this IG is to provide realistic, well-structured <strong>test data</strong> that can be used both by sending and receiving systems.</p>
+
+<ul>
+  <li>Example datasets for testing the end-to-end exchange of pathology reports (core needle biopsy, surgical resection, lymph node specimens).</li>
+  <li>Consistent data for validating implementations across different vendor systems and platforms.</li>
+  <li>Shared reference examples that can be used in connectathons / projectathons and bilateral testing.</li>
+</ul>
+
+<h3 id="basis-for-llm-based-extraction-from-free-text">Basis for LLM-based extraction from free text</h3>
+
+<p>The IG and its example data aim to support the <strong>extraction of structured data from narrative reports</strong>, including LLM-based approaches.</p>
+
+<ul>
+  <li>Example pathology reports with corresponding structured representations.</li>
+  <li>Clear mapping between narrative text, coded concepts and profile elements.</li>
+  <li>A reusable corpus for benchmarking models that extract histological type, grade, biomarkers (ER, PR, HER2, Ki-67), TNM staging or margin status from free text.</li>
+</ul>
+
+<h3 id="reference-dataset-for-eu-and-research-projects">Reference dataset for EU and research projects</h3>
+
+<p>The examples in this IG are designed to be a <strong>reference dataset</strong> that can be reused in research and innovation contexts.</p>
+
+<ul>
+  <li>Common test cases for EU-funded projects and cross-border collaborations.</li>
+  <li>A stable reference for comparing different implementation strategies or toolchains.</li>
+  <li>A documented dataset that can be cited in project deliverables and publications.</li>
+</ul>
+
+<h3 id="foundation-for-further-profiling">Foundation for further profiling</h3>
+
+<p>The IG is also meant as a <strong>basis for more specific profiling</strong> in related domains.</p>
+
+<ul>
+  <li>Starting point for tumour-entity-specific extensions (e.g. other gynaecological malignancies).</li>
+  <li>Reusable structures for integrating additional data elements (e.g. quality-of-life assessments, PROMs).</li>
+  <li>Profile patterns that can be tightened or relaxed depending on project scope and regulatory context.</li>
+</ul>
+
+<h3 id="harmonisation-of-pathology-and-oncology-specifications">Harmonisation of pathology and oncology specifications</h3>
+
+<p>One important motivation is the <strong>harmonisation of different specifications</strong> that currently coexist in oncology and pathology.</p>
+
+<ul>
+  <li>Alignment of pathology reporting structures (e.g. ICCR datasets, structured cancer checklists) with oncologic documentation and tumour board requirements.</li>
+  <li>Shared semantics for key concepts such as diagnosis, stage, grading, biomarkers and surgical margins.</li>
+  <li>Reduction of duplicate modelling efforts and inconsistent data definitions across siloed initiatives.</li>
+</ul>
+
+<h3 id="use-in-connectathons-and-projectathons">Use in connectathons and projectathons</h3>
+
+<p>The IG is intended to be used actively in <strong>interoperability events</strong> (projectathons, connectathons, vendor workshops).</p>
+
+<ul>
+  <li>Ready-to-use test bundles that can be shared with system vendors (e.g. HIS, LIS, oncology platforms).</li>
+  <li>Realistic scenarios for end-to-end workflows (pathology → gynaecology/senology → tumour board).</li>
+  <li>Common reference cases to discuss deviations, edge cases and extensions.</li>
+</ul>
+
+<h3 id="stakeholders-and-potential-adopters">Stakeholders and potential adopters</h3>
+
+<p>This IG is explicitly designed to be shown and discussed with key clinical and methodological stakeholders:</p>
+
+<ul>
+  <li>Gynaecologists and senologists (e.g. at certified breast centres) who are responsible for clinical decision-making and breast cancer pathways.</li>
+  <li>Pathologists who produce structured and narrative reports and are central to staging, grading and biomarker assessment.</li>
+  <li>Groups involved in national guideline development and standardisation (e.g. clinical societies, guideline panels, Bundesverband Deutscher Pathologen).</li>
+  <li>Molecular pathology, molecular tumour boards and precision oncology teams, ideally using <strong>the same subject</strong> across classic histopathology, molecular findings and clinical decisions.</li>
+</ul>
+
+<p>By providing a coherent data model, realistic test data and clear clinical motivation, this IG aims to serve as a bridge between technical interoperability, clinical practice and future-oriented use cases such as AI-assisted report processing and precision oncology.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 5, 2026 17:42+0100">2026-03-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

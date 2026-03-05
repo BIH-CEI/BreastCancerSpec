@@ -1,0 +1,28 @@
+{
+  "resourceType" : "Observation",
+  "id" : "BreastResectionSpecimenRadiographyClinical",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation BreastResectionSpecimenRadiographyClinical</b></p><a name=\"BreastResectionSpecimenRadiographyClinical\"> </a><a name=\"hcBreastResectionSpecimenRadiographyClinical\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 80865008:363702006=185008008}\">Präparateradiographie beigelegt</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 52101004}\">Ja, beigelegt</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "80865008:363702006=185008008",
+      "display" : "80865008|Specimen mammography|:363702006|Has focus|=185008008|Medical reports sent|"
+    }],
+    "text" : "Präparateradiographie beigelegt"
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "52101004",
+      "display" : "Present (qualifier value)"
+    }],
+    "text" : "Ja, beigelegt"
+  }
+}

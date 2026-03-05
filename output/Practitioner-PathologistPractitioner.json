@@ -1,0 +1,26 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "PathologistPractitioner",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner PathologistPractitioner</b></p><a name=\"PathologistPractitioner\"> </a><a name=\"hcPathologistPractitioner\"> </a><p><b>identifier</b>: <code>http://example.hospital.de/practitioner-ids</code>/PATH-001</p><p><b>name</b>: Elisabeth Hoffmann </p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 394595002}\">Pathology</span></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://example.hospital.de/practitioner-ids",
+    "value" : "PATH-001"
+  }],
+  "name" : [{
+    "family" : "Hoffmann",
+    "given" : ["Elisabeth"],
+    "prefix" : ["Dr."]
+  }],
+  "qualification" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "394595002",
+        "display" : "Pathology"
+      }]
+    }
+  }]
+}

@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Organization",
+  "id" : "PathologyLabOrganization",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization PathologyLabOrganization</b></p><a name=\"PathologyLabOrganization\"> </a><a name=\"hcPathologyLabOrganization\"> </a><p><b>identifier</b>: <code>http://example.hospital.de/organization-ids</code>/ORG-PATH-001</p><p><b>name</b>: Institut für Pathologie</p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://example.hospital.de/organization-ids",
+    "value" : "ORG-PATH-001"
+  }],
+  "name" : "Institut für Pathologie"
+}

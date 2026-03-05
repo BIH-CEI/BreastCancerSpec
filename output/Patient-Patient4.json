@@ -1,0 +1,18 @@
+{
+  "resourceType" : "Patient",
+  "id" : "Patient4",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient Patient4</b></p><a name=\"Patient4\"> </a><a name=\"hcPatient4\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</p><hr/></div>"
+  },
+  "identifier" : [{
+    "system" : "http://example.hospital.de/patient-ids",
+    "value" : "PAT-2025-105"
+  }],
+  "name" : [{
+    "family" : "Becker",
+    "given" : ["Sabine"]
+  }],
+  "gender" : "female",
+  "birthDate" : "1971-03-15"
+}

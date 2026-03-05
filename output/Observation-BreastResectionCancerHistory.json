@@ -1,0 +1,23 @@
+{
+  "resourceType" : "Observation",
+  "id" : "BreastResectionCancerHistory",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation BreastResectionCancerHistory</b></p><a name=\"BreastResectionCancerHistory\"> </a><a name=\"hcBreastResectionCancerHistory\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 415076002}\">Brustkrebsvorgeschichte</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title=\"Codes:\">Ersterkrankung</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "415076002",
+      "display" : "Personal history of primary malignant neoplasm of breast (situation)"
+    }],
+    "text" : "Brustkrebsvorgeschichte"
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "valueCodeableConcept" : {
+    "text" : "Ersterkrankung"
+  }
+}

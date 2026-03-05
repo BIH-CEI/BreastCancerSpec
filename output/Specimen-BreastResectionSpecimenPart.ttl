@@ -1,0 +1,146 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://breastcancerspec.org/Specimen/BreastResectionSpecimenPart> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BreastResectionSpecimenPart"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"^^xsd:anyURI ;
+       fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen?version=2026.0.0>
+     ] [
+       fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"^^xsd:anyURI ;
+       fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore?version=2026.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen BreastResectionSpecimenPart</b></p><a name=\"BreastResectionSpecimenPart\"> </a><a name=\"hcBreastResectionSpecimenPart\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: Placer Identifier/OP25_210_A, Filler Identifier/E_25_210_A</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_210</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 397199005}\">Specimen from breast obtained by excision (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>request</b>: <a href=\"ServiceRequest-BreastResectionReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Method</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></td><td>2025-02-05 10:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 237371007}\">Wide local excision of breast lesion (procedure)</span></td><td><span title=\"Codes:{http://snomed.info/sct 33564002}\">Structure of lower outer quadrant of breast (body structure)</span></td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 434746001}\">Specimen vial (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 434162003}\">Neutral buffered formalin (substance)</span></td></tr></table><p><b>note</b>: </p><blockquote><div><p>BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ. 65 x 45 x 30 mm, 55 g. Schnittfläche: grau-weißlich, derber Herdbefund zentral, ca. 18 mm.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "PLAC" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "https://senologie.example-hospital.de/fhir/specimen/placer"^^xsd:anyURI ;
+       fhir:l <https://senologie.example-hospital.de/fhir/specimen/placer>
+     ] ;
+     fhir:value [ fhir:v "OP25_210_A" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "FILL" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "https://pathologie.example-hospital.de/fhir/fn/befundbericht"^^xsd:anyURI ;
+       fhir:l <https://pathologie.example-hospital.de/fhir/fn/befundbericht>
+     ] ;
+     fhir:value [ fhir:v "E_25_210_A" ]
+  ] ) ; # 
+  fhir:accessionIdentifier [
+     fhir:system [
+       fhir:v "https://pathologie.example-hospital.de/fhir/fn/befundbericht"^^xsd:anyURI ;
+       fhir:l <https://pathologie.example-hospital.de/fhir/fn/befundbericht>
+     ] ;
+     fhir:value [ fhir:v "E_25_210" ]
+  ] ; # 
+  fhir:status [ fhir:v "available"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:397199005 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "397199005" ] ;
+       fhir:display [ fhir:v "Specimen from breast obtained by excision (specimen)" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://breastcancerspec.org/Patient/Patient4> ;
+     fhir:reference [ fhir:v "Patient/Patient4" ]
+  ] ; # 
+  fhir:request ( [
+     fhir:l <http://breastcancerspec.org/ServiceRequest/BreastResectionReportRequest> ;
+     fhir:reference [ fhir:v "ServiceRequest/BreastResectionReportRequest" ]
+  ] ) ; # 
+  fhir:collection [
+     fhir:collector [
+       fhir:l <http://breastcancerspec.org/Practitioner/BreastSurgeonPractitioner> ;
+       fhir:reference [ fhir:v "Practitioner/BreastSurgeonPractitioner" ]
+     ] ;
+     fhir:collected [
+       a fhir:DateTime ;
+       fhir:v "2025-02-05T10:00:00+01:00"^^xsd:dateTime
+     ] ;
+     fhir:method [
+       fhir:coding ( [
+         a sct:237371007 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "237371007" ] ;
+         fhir:display [ fhir:v "Wide local excision of breast lesion (procedure)" ]
+       ] )
+     ] ;
+     fhir:bodySite [
+       fhir:coding ( [
+         a sct:33564002 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "33564002" ] ;
+         fhir:display [ fhir:v "Structure of lower outer quadrant of breast (body structure)" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:container ( [
+     fhir:type [
+       fhir:coding ( [
+         a sct:434746001 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "434746001" ] ;
+         fhir:display [ fhir:v "Specimen vial (physical object)" ]
+       ] )
+     ] ;
+     fhir:additive [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:434162003 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "434162003" ] ;
+         fhir:display [ fhir:v "Neutral buffered formalin (substance)" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ. 65 x 45 x 30 mm, 55 g. Schnittfläche: grau-weißlich, derber Herdbefund zentral, ca. 18 mm." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

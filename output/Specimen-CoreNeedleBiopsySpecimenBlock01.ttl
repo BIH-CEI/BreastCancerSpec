@@ -1,0 +1,149 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenBlock01> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CoreNeedleBiopsySpecimenBlock01"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"^^xsd:anyURI ;
+       fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen?version=2026.0.0>
+     ] [
+       fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"^^xsd:anyURI ;
+       fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore?version=2026.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen CoreNeedleBiopsySpecimenBlock01</b></p><a name=\"CoreNeedleBiopsySpecimenBlock01\"> </a><a name=\"hcCoreNeedleBiopsySpecimenBlock01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105_A_1</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_105</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 1201985008}\">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-01-16 08:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 787377000}\">Gross examination and sampling of tissue specimen (procedure)</span></td></tr></table><h3>Processings</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Description</b></td><td><b>Procedure</b></td><td><b>Time[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>Zuschnitt und Paraffineinbettung</td><td><span title=\"Codes:{http://snomed.info/sct 787376009}\">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td><td>2025-01-16 08:00:00+0100</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 706053007}\">General specimen container (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 311731000}\">Paraffin wax (substance)</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://pathologie.example-hospital.de/fhir/fn/befundbericht"^^xsd:anyURI ;
+       fhir:l <https://pathologie.example-hospital.de/fhir/fn/befundbericht>
+     ] ;
+     fhir:value [ fhir:v "E_25_105_A_1" ]
+  ] ) ; # 
+  fhir:accessionIdentifier [
+     fhir:system [
+       fhir:v "https://pathologie.example-hospital.de/fhir/fn/befundbericht"^^xsd:anyURI ;
+       fhir:l <https://pathologie.example-hospital.de/fhir/fn/befundbericht>
+     ] ;
+     fhir:value [ fhir:v "E_25_105" ]
+  ] ; # 
+  fhir:status [ fhir:v "available"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:1201985008 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "1201985008" ] ;
+       fhir:display [ fhir:v "Tissue block specimen (specimen)" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://breastcancerspec.org/Patient/Patient4> ;
+     fhir:reference [ fhir:v "Patient/Patient4" ]
+  ] ; # 
+  fhir:parent ( [
+     fhir:l <http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenPart> ;
+     fhir:reference [ fhir:v "Specimen/CoreNeedleBiopsySpecimenPart" ]
+  ] ) ; # 
+  fhir:collection [
+     fhir:collected [
+       a fhir:DateTime ;
+       fhir:v "2025-01-16T08:00:00+01:00"^^xsd:dateTime
+     ] ;
+     fhir:method [
+       fhir:coding ( [
+         a sct:787377000 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "787377000" ] ;
+         fhir:display [ fhir:v "Gross examination and sampling of tissue specimen (procedure)" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:processing ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"^^xsd:anyURI ;
+         fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen>
+       ] ;
+       fhir:value [
+         a fhir:Range ;
+         fhir:low [
+           fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "°C" ] ;
+           fhir:system [
+             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+             fhir:l <http://unitsofmeasure.org>
+           ] ;
+           fhir:code [ fhir:v "Cel" ]
+         ] ;
+         fhir:high [
+           fhir:value [ fhir:v "8"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "°C" ] ;
+           fhir:system [
+             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+             fhir:l <http://unitsofmeasure.org>
+           ] ;
+           fhir:code [ fhir:v "Cel" ]
+         ]
+       ]
+     ] ) ;
+     fhir:description [ fhir:v "Zuschnitt und Paraffineinbettung" ] ;
+     fhir:procedure [
+       fhir:coding ( [
+         a sct:787376009 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "787376009" ] ;
+         fhir:display [ fhir:v "Preparation of formalin fixed paraffin embedded tissue specimen (procedure)" ]
+       ] )
+     ] ;
+     fhir:time [
+       a fhir:DateTime ;
+       fhir:v "2025-01-16T08:00:00+01:00"^^xsd:dateTime
+     ]
+  ] ) ; # 
+  fhir:container ( [
+     fhir:type [
+       fhir:coding ( [
+         a sct:706053007 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "706053007" ] ;
+         fhir:display [ fhir:v "General specimen container (physical object)" ]
+       ] )
+     ] ;
+     fhir:additive [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:311731000 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "311731000" ] ;
+         fhir:display [ fhir:v "Paraffin wax (substance)" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="BreastResectionSpecimenMarking"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation BreastResectionSpecimenMarking</b></p><a name="BreastResectionSpecimenMarking"> </a><a name="hcBreastResectionSpecimenMarking"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 836381000000102}">Befundmarkierung</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title="Codes:">Drahthäkchen</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="836381000000102"/>
+      <display value="Insertion of marker into breast using X-ray guidance (procedure)"/>
+    </coding>
+    <text value="Befundmarkierung"/>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <valueCodeableConcept>
+    <text value="Drahthäkchen"/>
+  </valueCodeableConcept>
+</Observation>

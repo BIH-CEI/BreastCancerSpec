@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="BreastResectionDiagnosticConclusionGrouper"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2026.0.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation BreastResectionDiagnosticConclusionGrouper</b></p><a name="BreastResectionDiagnosticConclusionGrouper"> </a><a name="hcBreastResectionDiagnosticConclusionGrouper"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper">MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href="ServiceRequest-BreastResectionReportRequest.html">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 22637-3}">Pathology report final diagnosis Narrative</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href="Practitioner-PathologistPractitioner.html">Practitioner Elisabeth Hoffmann </a></p><p><b>note</b>: By Practitioner/PathologistPractitioner @2025-02-10</p><blockquote><div><p>Zusammenfassung: Invasives Mammakarzinom NST, pT1c, G2 (Score 6). Begleitendes DCIS, intermediärer Grad, kribriform, fokal Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine Lymphgefäßinvasion. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%.</p>
+</div></blockquote><p><b>hasMember</b>: </p><ul><li><a href="Observation-BreastResectionNonInvasiveLesion.html">Observation Carcinoma in situ of breast (disorder)</a></li><li><a href="Observation-BreastResectionInvasiveCarcinoma.html">Observation Malignant tumor of breast (disorder)</a></li><li><a href="Observation-BreastResectionOperativeProcedure.html">Observation Surgery procedure</a></li><li><a href="Observation-BreastResectionMaterialType.html">Observation Specimen type</a></li><li><a href="Observation-BreastResectionLaterality.html">Observation Specimen laterality (observable entity)</a></li><li><a href="Observation-BreastResectionAttachedTissue.html">Observation Body structure included in specimen [Anatomy] in Specimen</a></li><li><a href="Observation-BreastResectionFocality.html">Observation Qualitative distribution of primary malignant neoplasm of breast in excised breast specimen (observable entity)</a></li><li><a href="Observation-BreastResectionMaxDiameterInvasive.html">Observation Inv comp size max dim BT</a></li><li><a href="Observation-BreastResectionMaxOverallDiameter.html">Observation Size.maximum dimension in Tumor</a></li><li><a href="Observation-BreastResectionHistologicalType.html">Observation Histo type BT</a></li><li><a href="Observation-BreastResectionMorphologyFreeText.html">Observation Histology type in Cancer specimen Narrative</a></li><li><a href="Observation-BreastResectionNottinghamGrade.html">Observation Histologic grade [Score] in Breast cancer specimen by Nottingham</a></li><li><a href="Observation-BreastResectionTubuleScore.html">Observation Glandular differentiation [Score] in Breast cancer specimen by Nottingham</a></li><li><a href="Observation-BreastResectionNuclearPleomorphism.html">Observation Nuclear pleomorphism in Breast tumor by Nottingham</a></li><li><a href="Observation-BreastResectionMitosisCount.html">Observation Number of mitoses per 10 high power fields (observable entity)</a></li><li><a href="Observation-BreastResectionMitoticRateScore.html">Observation Mitotic rate [Score] in Breast cancer specimen by Nottingham</a></li><li><a href="Observation-BreastResectionElstonEllisScore.html">Observation Nottingham total score of primary malignant neoplasm of breast (observable entity)</a></li><li><a href="Observation-BreastResectionAssociatedDCIS.html">Observation DCIS intraduct ext Br ca spec Ql Micro</a></li><li><a href="Observation-BreastResectionDCISGrade.html">Observation Nuclear grade of ductal carcinoma in situ of breast (observable entity)</a></li><li><a href="Observation-BreastResectionDCISArchitecture.html">Observation Growth pattern of DCIS [Type] in Breast cancer specimen by Light microscopy</a></li><li><a href="Observation-BreastResectionDCISNecrosis.html">Observation DCIS necrosis [Type] in Breast cancer specimen by Light microscopy</a></li><li><a href="Observation-BreastResectionTumorExtent.html">Observation Adjacent structure invaded by tumor [Anatomy] in Breast cancer specimen by Light microscopy</a></li><li><a href="Observation-BreastResectionMarginStatusInvasive.html">Observation Margin involved BT</a></li><li><a href="Observation-BreastResectionClosestMargin.html">Observation IC uninv marg closest BT</a></li><li><a href="Observation-BreastResectionMinDistanceInvasive.html">Observation IC uninv marg dist closest BT</a></li><li><a href="Observation-BreastResectionMarginStatusNonInvasive.html">Observation Surgical margin DCIS involvement [Presence] in Breast cancer specimen by Light microscopy</a></li><li><a href="Observation-BreastResectionMinDistanceNonInvasive.html">Observation DCIS.uninv marg dist.closest BT</a></li><li><a href="Observation-BreastResectionLVI.html">Observation Lymph-vascular invasion Ca spec</a></li><li><a href="Observation-BreastResectionMicrocalcification.html">Observation Microcalcifications in Breast tumor</a></li><li><a href="Observation-BreastResectionERStatus.html">Observation Estrogen receptor [Interpretation] in Tissue</a></li><li><a href="Observation-BreastResectionERPercentage.html">Observation Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-BreastResectionERIntensity.html">Observation Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-BreastResectionPRStatus.html">Observation Progesterone receptor [Interpretation] in Tissue</a></li><li><a href="Observation-BreastResectionPRPercentage.html">Observation Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-BreastResectionPRIntensity.html">Observation Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-BreastResectionHER2IHC.html">Observation HER2 [Presence] in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-BreastResectionHER2ISH.html">Observation ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH</a></li><li><a href="Observation-BreastResectionHER2Overall.html">Observation HER2 [Interpretation] in Tissue</a></li><li><a href="Observation-BreastResectionKi67.html">Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain</a></li><li><a href="Observation-BreastResectionPT.html">Observation Primary tumor.pathology Cancer</a></li><li><a href="Observation-BreastResectionComment.html">Observation Pathology report comments [Interpretation] Narrative</a></li></ul><p><b>derivedFrom</b>: <a href="QuestionnaireResponse-QuestionnaireResponseBreastResection.html">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/BreastResectionReportRequest"/>
+  </basedOn>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="22637-3"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <effectiveDateTime value="2025-02-10"/>
+  <performer>
+    <reference value="Practitioner/PathologistPractitioner"/>
+  </performer>
+  <note>
+    <authorReference>
+      <reference value="Practitioner/PathologistPractitioner"/>
+    </authorReference>
+    <time value="2025-02-10"/>
+    <text value="Zusammenfassung: Invasives Mammakarzinom NST, pT1c, G2 (Score 6). Begleitendes DCIS, intermediärer Grad, kribriform, fokal Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine Lymphgefäßinvasion. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%."/>
+  </note>
+  <hasMember>
+    <reference value="Observation/BreastResectionNonInvasiveLesion"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionInvasiveCarcinoma"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionOperativeProcedure"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMaterialType"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionLaterality"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionAttachedTissue"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionFocality"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMaxDiameterInvasive"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMaxOverallDiameter"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionHistologicalType"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMorphologyFreeText"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionNottinghamGrade"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionTubuleScore"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionNuclearPleomorphism"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMitosisCount"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMitoticRateScore"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionElstonEllisScore"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionAssociatedDCIS"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionDCISGrade"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionDCISArchitecture"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionDCISNecrosis"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionTumorExtent"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMarginStatusInvasive"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionClosestMargin"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMinDistanceInvasive"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMarginStatusNonInvasive"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMinDistanceNonInvasive"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionLVI"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionMicrocalcification"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionERStatus"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionERPercentage"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionERIntensity"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionPRStatus"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionPRPercentage"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionPRIntensity"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionHER2IHC"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionHER2ISH"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionHER2Overall"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionKi67"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionPT"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/BreastResectionComment"/>
+  </hasMember>
+  <derivedFrom>
+    <reference value="QuestionnaireResponse/QuestionnaireResponseBreastResection"/>
+  </derivedFrom>
+</Observation>

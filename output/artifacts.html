@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - Breast Cancer Specification v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="family-nav">
+    <a id="family-logo" data-no-external="true" href="https://www.bihealth.org/">
+        <img alt="BIH" height="50" src="BIH-Logo_neu.png"/>
+    </a>
+</div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Breast Cancer Specification</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="clinical-context.html">Clinical Context</a>
+  </li>
+  <li>
+    <a href="motivation.html">Motivation</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Stanzbiopsie
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="biopsy-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-CoreNeedleBiopsyReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-CoreNeedleBiopsyMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-CoreNeedleBiopsyDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-CoreNeedleBiopsyReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-CoreNeedleBiopsyComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">OP-Präparat (BET)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="resection-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-BreastResectionReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-BreastResectionMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-BreastResectionDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-BreastResectionReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-BreastResectionComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="document-viewer.html">Befund-Viewer</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Breast Cancer Specification - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://breastcancerspec.org/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMacroDistanceNipple.html"
+                  title="Observation/BreastResectionMacroDistanceNipple">Abstand von Mamille BET</a>
+            </td>
+            <td>
+<p>Abstand des Tumors von der Mamille</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionAttachedTissue.html"
+                  title="Observation/BreastResectionAttachedTissue">Anhängendes Gewebe - BET</a>
+            </td>
+            <td>
+<p>Art des anhängenden Gewebes am Präparat</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyMacroscopicBlockCount.html"
+                  title="Observation/CoreNeedleBiopsyMacroscopicBlockCount">Anzahl Paraffinblöcke Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Anzahl der erstellten Paraffinblöcke</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyMacroscopicCylinderCount.html"
+                  title="Observation/CoreNeedleBiopsyMacroscopicCylinderCount">Anzahl Stanzzylinder</a>
+            </td>
+            <td>
+<p>Anzahl der eingesendeten Stanzzylinder</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionAssociatedDCIS.html"
+                  title="Observation/BreastResectionAssociatedDCIS">Assoziiertes DCIS - BET</a>
+            </td>
+            <td>
+<p>Vorhandensein eines assoziierten DCIS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyBClassification.html"
+                  title="Observation/CoreNeedleBiopsyBClassification">B-Klassifikation - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>B-Classification according to NHSBSP</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-BreastResectionReportRequest.html"
+                  title="ServiceRequest/BreastResectionReportRequest">BET Mamma Anforderung</a>
+            </td>
+            <td>
+<p>Anforderung für pathologische Aufarbeitung eines BET-Exzisionspräparats der linken Mamma</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-BreastResectionComposition.html"
+                  title="Composition/BreastResectionComposition">BET Mamma Pathology Report Composition</a>
+            </td>
+            <td>
+<p>FHIR Composition for structured breast resection pathology report</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenPart.html"
+                  title="Specimen/BreastResectionSpecimenPart">BET-Exzisionspräparat (Einsendespecimen)</a>
+            </td>
+            <td>
+<p>BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 65x45x30mm, 55g</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionSpecimenMarking.html"
+                  title="Observation/BreastResectionSpecimenMarking">Befundmarkierung</a>
+            </td>
+            <td>
+<p>Art der Befundmarkierung am Präparat</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionCancerHistory.html"
+                  title="Observation/BreastResectionCancerHistory">Brustkrebsvorgeschichte</a>
+            </td>
+            <td>
+<p>Anamnese hinsichtlich Brustkrebsvorgeschichte</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionDCISArchitecture.html"
+                  title="Observation/BreastResectionDCISArchitecture">DCIS Architektur - BET</a>
+            </td>
+            <td>
+<p>Wachstumsmuster des assoziierten DCIS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionDCISGrade.html"
+                  title="Observation/BreastResectionDCISGrade">DCIS Kerngrading - BET</a>
+            </td>
+            <td>
+<p>Kerngrading des assoziierten DCIS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionDCISNecrosis.html"
+                  title="Observation/BreastResectionDCISNecrosis">DCIS Nekrosen - BET</a>
+            </td>
+            <td>
+<p>Nekrosen im DCIS-Areal</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionDiagnosticConclusionGrouper.html"
+                  title="Observation/BreastResectionDiagnosticConclusionGrouper">Diagnostic Conclusion Grouper - BET Mamma</a>
+            </td>
+            <td>
+<p>Grouper for all diagnostic conclusion findings in breast resection</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyDiagnosticConclusionGrouper.html"
+                  title="Observation/CoreNeedleBiopsyDiagnosticConclusionGrouper">Diagnostic Conclusion Grouper - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Grouper for all diagnostic conclusion findings in core needle biopsy</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-BreastResectionDocument.html"
+                  title="Bundle/BreastResectionDocument">Document Bundle - BET Mamma</a>
+            </td>
+            <td>
+<p>FHIR Document Bundle für den vollständigen BET-Befundbericht</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-CoreNeedleBiopsyDocument.html"
+                  title="Bundle/CoreNeedleBiopsyDocument">Document Bundle - Stanzbiopsie Mamma</a>
+            </td>
+            <td>
+<p>FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionERIntensity.html"
+                  title="Observation/BreastResectionERIntensity">ER Färbeintensität - BET</a>
+            </td>
+            <td>
+<p>Färbeintensität der ER-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideER01.html"
+                  title="Specimen/BreastResectionSpecimenSlideER01">ER-IHC Schnitt 01 BET</a>
+            </td>
+            <td>
+<p>Schnitt 1 für Östrogenrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideER01.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideER01">ER-IHC Schnitt 01 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Schnitt 1 für Östrogenrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideER02.html"
+                  title="Specimen/BreastResectionSpecimenSlideER02">ER-IHC Schnitt 02 BET</a>
+            </td>
+            <td>
+<p>Schnitt 2 für Östrogenrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideER02.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideER02">ER-IHC Schnitt 02 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Schnitt 2 für Östrogenrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionElstonEllisScore.html"
+                  title="Observation/BreastResectionElstonEllisScore">Elston-Ellis Summenscore - BET</a>
+            </td>
+            <td>
+<p>Elston-Ellis summary score (3+2+1=6)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-BreastResectionEncounter.html"
+                  title="Encounter/BreastResectionEncounter">Encounter für BET Mamma</a>
+            </td>
+            <td>
+<p>Stationärer Encounter für brusterhaltende Therapie im Brustzentrum</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-CoreNeedleBiopsyEncounter.html"
+                  title="Encounter/CoreNeedleBiopsyEncounter">Encounter für Stanzbiopsie Mamma</a>
+            </td>
+            <td>
+<p>Ambulanter Encounter für US-gestützte Stanzbiopsie in der Screeningeinheit</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyERPercentage.html"
+                  title="Observation/CoreNeedleBiopsyERPercentage">Estrogen Receptor Percentage - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Percentage of ER positive tumor cell nuclei</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyERStatus.html"
+                  title="Observation/CoreNeedleBiopsyERStatus">Estrogen Receptor Status - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Estrogen receptor status by immunohistochemistry</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionFocality.html"
+                  title="Observation/BreastResectionFocality">Fokalität - BET</a>
+            </td>
+            <td>
+<p>Fokalität des Tumors</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionGeneticPredisposition.html"
+                  title="Observation/BreastResectionGeneticPredisposition">Genetische Prädisposition</a>
+            </td>
+            <td>
+<p>Angabe zur genetischen Prädisposition</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyMacroscopicTotalLength.html"
+                  title="Observation/CoreNeedleBiopsyMacroscopicTotalLength">Gesamtlänge Stanzzylinder</a>
+            </td>
+            <td>
+<p>Gesamtlänge aller Stanzzylinder zusammen</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMacroWeight.html"
+                  title="Observation/BreastResectionMacroWeight">Gewicht BET</a>
+            </td>
+            <td>
+<p>Gewicht des BET-Exzisionspräparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideDCIS-HE01.html"
+                  title="Specimen/BreastResectionSpecimenSlideDCIS-HE01">HE-Schnitt 01 BET - DCIS</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideMargins-HE01.html"
+                  title="Specimen/BreastResectionSpecimenSlideMargins-HE01">HE-Schnitt 01 BET - Resektionsränder</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideHE01.html"
+                  title="Specimen/BreastResectionSpecimenSlideHE01">HE-Schnitt 01 BET - Tumor</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des Tumorareals, Schnittstufe 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideHE01.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideHE01">HE-Schnitt 01 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideDCIS-HE02.html"
+                  title="Specimen/BreastResectionSpecimenSlideDCIS-HE02">HE-Schnitt 02 BET - DCIS</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideMargins-HE02.html"
+                  title="Specimen/BreastResectionSpecimenSlideMargins-HE02">HE-Schnitt 02 BET - Resektionsränder</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideHE02.html"
+                  title="Specimen/BreastResectionSpecimenSlideHE02">HE-Schnitt 02 BET - Tumor</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des Tumorareals, Schnittstufe 2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideHE02.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideHE02">HE-Schnitt 02 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideMargins-HE03.html"
+                  title="Specimen/BreastResectionSpecimenSlideMargins-HE03">HE-Schnitt 03 BET - Resektionsränder</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 3</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideHE03.html"
+                  title="Specimen/BreastResectionSpecimenSlideHE03">HE-Schnitt 03 BET - Tumor</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des Tumorareals, Schnittstufe 3</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideHE03.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideHE03">HE-Schnitt 03 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 3</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideMargins-HE04.html"
+                  title="Specimen/BreastResectionSpecimenSlideMargins-HE04">HE-Schnitt 04 BET - Resektionsränder</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 4</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideHE04.html"
+                  title="Specimen/BreastResectionSpecimenSlideHE04">HE-Schnitt 04 BET - Tumor</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des Tumorareals, Schnittstufe 4</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideHE04.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideHE04">HE-Schnitt 04 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 4</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideMargins-HE05.html"
+                  title="Specimen/BreastResectionSpecimenSlideMargins-HE05">HE-Schnitt 05 BET - Resektionsränder</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 5</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideMargins-HE06.html"
+                  title="Specimen/BreastResectionSpecimenSlideMargins-HE06">HE-Schnitt 06 BET - Resektionsränder</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 6</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionHER2ISH.html"
+                  title="Observation/BreastResectionHER2ISH">HER2 Amplifikation (ISH) - BET</a>
+            </td>
+            <td>
+<p>HER2-Amplifikationsstatus per In-situ-Hybridisierung</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionHER2Overall.html"
+                  title="Observation/BreastResectionHER2Overall">HER2 Gesamtstatus - BET</a>
+            </td>
+            <td>
+<p>HER2-Gesamtstatus basierend auf IHC und ISH</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyHER2ISH.html"
+                  title="Observation/CoreNeedleBiopsyHER2ISH">HER2 ISH - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>HER2 status by in-situ hybridization (B-DISH)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideHER2-01.html"
+                  title="Specimen/BreastResectionSpecimenSlideHER2-01">HER2-B-DISH Schnitt 01 BET</a>
+            </td>
+            <td>
+<p>Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideHER2-01.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideHER2-01">HER2-B-DISH Schnitt 01 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideHER2-02.html"
+                  title="Specimen/BreastResectionSpecimenSlideHER2-02">HER2-B-DISH Schnitt 02 BET</a>
+            </td>
+            <td>
+<p>Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideHER2-02.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideHER2-02">HER2-B-DISH Schnitt 02 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionHER2IHC.html"
+                  title="Observation/BreastResectionHER2IHC">HER2-Score (IHC) - BET</a>
+            </td>
+            <td>
+<p>HER2-Score per Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyHistologicalTypeICDO3.html"
+                  title="Observation/CoreNeedleBiopsyHistologicalTypeICDO3">Histological Type ICD-O-3 - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Histological type according to ICD-O-3 classification</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionHistologicalType.html"
+                  title="Observation/BreastResectionHistologicalType">Histologischer Tumortyp - BET</a>
+            </td>
+            <td>
+<p>Histologischer Typ nach WHO/ICD-O-3</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionInvasiveCarcinoma.html"
+                  title="Observation/BreastResectionInvasiveCarcinoma">Invasives Karzinom - BET</a>
+            </td>
+            <td>
+<p>Vorhandensein eines invasiven Karzinoms</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionNuclearPleomorphism.html"
+                  title="Observation/BreastResectionNuclearPleomorphism">Kernpleomorphie-Score - BET</a>
+            </td>
+            <td>
+<p>Nuclear pleomorphism score by Nottingham</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionKi67.html"
+                  title="Observation/BreastResectionKi67">Ki-67 Index - BET</a>
+            </td>
+            <td>
+<p>Ki-67 Proliferationsindex</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyKi67.html"
+                  title="Observation/CoreNeedleBiopsyKi67">Ki-67 Index - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Ki-67 proliferation index</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideKi67-01.html"
+                  title="Specimen/BreastResectionSpecimenSlideKi67-01">Ki67-IHC Schnitt 01 BET</a>
+            </td>
+            <td>
+<p>Schnitt 1 für Ki-67 Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideKi67-01.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideKi67-01">Ki67-IHC Schnitt 01 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Schnitt 1 für Ki-67 Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlideKi67-02.html"
+                  title="Specimen/BreastResectionSpecimenSlideKi67-02">Ki67-IHC Schnitt 02 BET</a>
+            </td>
+            <td>
+<p>Schnitt 2 für Ki-67 Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlideKi67-02.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlideKi67-02">Ki67-IHC Schnitt 02 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Schnitt 2 für Ki-67 Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionComment.html"
+                  title="Observation/BreastResectionComment">Kommentar - BET</a>
+            </td>
+            <td>
+<p>Freitextkommentar zum Befund</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionLVI.html"
+                  title="Observation/BreastResectionLVI">Lymphgefäßinvasion - BET</a>
+            </td>
+            <td>
+<p>Lymphovaskuläre Invasion</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMacroscopicGrouper.html"
+                  title="Observation/BreastResectionMacroscopicGrouper">Makroskopische Befunde Grouper BET</a>
+            </td>
+            <td>
+<p>Gruppierung aller makroskopischen Messungen des BET-Exzisionspräparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyMacroscopicGrouper.html"
+                  title="Observation/CoreNeedleBiopsyMacroscopicGrouper">Makroskopische Befunde Grouper Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Gruppierung aller makroskopischen Messungen der Stanzzylinder</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-CoreNeedleBiopsyDiagnosisPreOp.html"
+                  title="Condition/CoreNeedleBiopsyDiagnosisPreOp">Mammakarzinom-Diagnose Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Diagnose eines Herdbefunds der linken Brust, BI-RADS 4b, Indikation zur Stanzbiopsie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-BreastResectionDiagnosisConfirmed.html"
+                  title="Condition/BreastResectionDiagnosisConfirmed">Mammakarzinom-Diagnose bestätigt</a>
+            </td>
+            <td>
+<p>Bestätigte Diagnose eines invasiven Mammakarzinoms nach Stanzbiopsie, Indikation zur BET</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-CoreNeedleBiopsyImagingReport.html"
+                  title="DiagnosticReport/CoreNeedleBiopsyImagingReport">Mammografie/Ultraschall-Befund</a>
+            </td>
+            <td>
+<p>Bildgebungsbefund als SupportingInfo für die Stanzbiopsie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-BreastResectionImagingReport.html"
+                  title="DiagnosticReport/BreastResectionImagingReport">Mammografie/Ultraschall-Befund BET</a>
+            </td>
+            <td>
+<p>Bildgebungsbefund als SupportingInfo für die BET</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMaterialType.html"
+                  title="Observation/BreastResectionMaterialType">Materialart - BET</a>
+            </td>
+            <td>
+<p>Art des eingesendeten Materials</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMaxDiameterInvasive.html"
+                  title="Observation/BreastResectionMaxDiameterInvasive">Max Durchmesser invasiv - BET</a>
+            </td>
+            <td>
+<p>Maximaler Durchmesser der invasiven Komponente</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMaxOverallDiameter.html"
+                  title="Observation/BreastResectionMaxOverallDiameter">Max Gesamtdurchmesser - BET</a>
+            </td>
+            <td>
+<p>Maximaler Gesamtdurchmesser des Tumors inkl. DCIS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMicrocalcification.html"
+                  title="Observation/BreastResectionMicrocalcification">Mikrokalzifikationen - BET</a>
+            </td>
+            <td>
+<p>Vorhandensein von Mikrokalzifikationen</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyMicrocalcificationCorrelation.html"
+                  title="Observation/CoreNeedleBiopsyMicrocalcificationCorrelation">Mikroverkalkung-Korrelation - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Correlation of microcalcifications with radiological findings</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMinDistanceInvasive.html"
+                  title="Observation/BreastResectionMinDistanceInvasive">Mindestabstand invasiv - BET</a>
+            </td>
+            <td>
+<p>Mindestabstand der invasiven Komponente zum Resektionsrand</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMinDistanceNonInvasive.html"
+                  title="Observation/BreastResectionMinDistanceNonInvasive">Mindestabstand nichtinvasiv - BET</a>
+            </td>
+            <td>
+<p>Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMitoticRateScore.html"
+                  title="Observation/BreastResectionMitoticRateScore">Mitoserate-Score - BET</a>
+            </td>
+            <td>
+<p>Mitotic rate score by Nottingham</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMitosisCount.html"
+                  title="Observation/BreastResectionMitosisCount">Mitosezahl - BET</a>
+            </td>
+            <td>
+<p>Absolute Mitosezahl pro 10 HPF</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyMitoticRate.html"
+                  title="Observation/CoreNeedleBiopsyMitoticRate">Mitotic Rate Score - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Mitotic rate score by Nottingham</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMorphologyFreeText.html"
+                  title="Observation/BreastResectionMorphologyFreeText">Morphologie Freitext - BET</a>
+            </td>
+            <td>
+<p>Freitextbeschreibung der Tumormorphologie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyMorphologyFreeText.html"
+                  title="Observation/CoreNeedleBiopsyMorphologyFreeText">Morphology Free Text - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Free text description of tumor morphology</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionNonInvasiveLesion.html"
+                  title="Observation/BreastResectionNonInvasiveLesion">Nichtinvasive Läsion - BET</a>
+            </td>
+            <td>
+<p>Vorhandensein einer nichtinvasiven Läsion</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyNottinghamGrade.html"
+                  title="Observation/CoreNeedleBiopsyNottinghamGrade">Nottingham Grade - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Nottingham histologic grade</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyNottinghamSummaryScore.html"
+                  title="Observation/CoreNeedleBiopsyNottinghamSummaryScore">Nottingham Summary Score - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Elston-Ellis summary score (3+2+1=6)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionNottinghamGrade.html"
+                  title="Observation/BreastResectionNottinghamGrade">Nottingham-Grad - BET</a>
+            </td>
+            <td>
+<p>Nottingham histologic grade</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyNuclearPleomorphism.html"
+                  title="Observation/CoreNeedleBiopsyNuclearPleomorphism">Nuclear Pleomorphism Score - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Nuclear pleomorphism score by Nottingham</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionClosestMargin.html"
+                  title="Observation/BreastResectionClosestMargin">Nächster tumorfreier Resektionsrand - BET</a>
+            </td>
+            <td>
+<p>Lokalisation des nächsten tumorfreien Resektionsrands</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionOperativeProcedure.html"
+                  title="Observation/BreastResectionOperativeProcedure">Operatives Verfahren - BET</a>
+            </td>
+            <td>
+<p>Art des operativen Verfahrens</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionPRIntensity.html"
+                  title="Observation/BreastResectionPRIntensity">PR Färbeintensität - BET</a>
+            </td>
+            <td>
+<p>Färbeintensität der PR-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlidePR01.html"
+                  title="Specimen/BreastResectionSpecimenSlidePR01">PR-IHC Schnitt 01 BET</a>
+            </td>
+            <td>
+<p>Schnitt 1 für Progesteronrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlidePR01.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlidePR01">PR-IHC Schnitt 01 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Schnitt 1 für Progesteronrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenSlidePR02.html"
+                  title="Specimen/BreastResectionSpecimenSlidePR02">PR-IHC Schnitt 02 BET</a>
+            </td>
+            <td>
+<p>Schnitt 2 für Progesteronrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenSlidePR02.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenSlidePR02">PR-IHC Schnitt 02 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Schnitt 2 für Progesteronrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenBlock01.html"
+                  title="Specimen/BreastResectionSpecimenBlock01">Paraffinblock 01 BET - Tumor zentral</a>
+            </td>
+            <td>
+<p>Paraffineinbettung des zentralen Tumorareals</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenBlock01.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenBlock01">Paraffinblock 01 Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Paraffineinbettung der Stanzzylinder Block 01</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenBlock02.html"
+                  title="Specimen/BreastResectionSpecimenBlock02">Paraffinblock 02 BET - DCIS / Tumorperipherie</a>
+            </td>
+            <td>
+<p>Paraffineinbettung des DCIS-Areals und der Tumorperipherie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-BreastResectionSpecimenBlock03.html"
+                  title="Specimen/BreastResectionSpecimenBlock03">Paraffinblock 03 BET - Resektionsränder</a>
+            </td>
+            <td>
+<p>Paraffineinbettung der Resektionsränder</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-BreastResectionReport.html"
+                  title="DiagnosticReport/BreastResectionReport">Pathologiebericht BET Mamma</a>
+            </td>
+            <td>
+<p>Pathologiebericht nach brusterhaltender Therapie der linken Mamma</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-CoreNeedleBiopsyReport.html"
+                  title="DiagnosticReport/CoreNeedleBiopsyReport">Pathologiebericht Stanzbiopsie Mamma</a>
+            </td>
+            <td>
+<p>Pathologiebericht nach US-gestützter Stanzbiopsie der linken Mamma</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-PathologyLabOrganization.html"
+                  title="Organization/PathologyLabOrganization">Pathologielabor</a>
+            </td>
+            <td>
+<p>Institut für Pathologie für alle pathologischen Befunde</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-PathologistPractitioner.html"
+                  title="Practitioner/PathologistPractitioner">Pathologin</a>
+            </td>
+            <td>
+<p>Durchführende Pathologin für alle pathologischen Befunde</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-Patient4.html" title="Patient/Patient4">Patientin 4 - Stanzbiopsie Mamma</a>
+            </td>
+            <td>
+<p>Patientin mit Herdbefund linke Brust (BI-RADS 4b), erhält US-gestützte Stanzbiopsie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionSpecimenLimited.html"
+                  title="Observation/BreastResectionSpecimenLimited">Proben limitiert auswertbar</a>
+            </td>
+            <td>
+<p>Angabe ob die Probe limitiert auswertbar ist</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMacroLength.html"
+                  title="Observation/BreastResectionMacroLength">Probengröße 1 (Länge) BET</a>
+            </td>
+            <td>
+<p>Maximale Länge des BET-Exzisionspräparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMacroWidth.html"
+                  title="Observation/BreastResectionMacroWidth">Probengröße 2 (Breite) BET</a>
+            </td>
+            <td>
+<p>Breite des BET-Exzisionspräparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMacroDepth.html"
+                  title="Observation/BreastResectionMacroDepth">Probengröße 3 (Tiefe) BET</a>
+            </td>
+            <td>
+<p>Tiefe des BET-Exzisionspräparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyPRPercentage.html"
+                  title="Observation/CoreNeedleBiopsyPRPercentage">Progesterone Receptor Percentage - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Percentage of PR positive tumor cell nuclei</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyPRStatus.html"
+                  title="Observation/CoreNeedleBiopsyPRStatus">Progesterone Receptor Status - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Progesterone receptor status by immunohistochemistry</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionPRPercentage.html"
+                  title="Observation/BreastResectionPRPercentage">Progesteronrezeptor Prozent - BET</a>
+            </td>
+            <td>
+<p>Prozentsatz PR-positiver Tumorzellkerne</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionPRStatus.html"
+                  title="Observation/BreastResectionPRStatus">Progesteronrezeptor-Status - BET</a>
+            </td>
+            <td>
+<p>Progesteronrezeptor-Status per Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsySpecimenRadiography.html"
+                  title="Observation/CoreNeedleBiopsySpecimenRadiography">Präparateradiogramm - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Specimen radiography reviewed</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionSpecimenRadiographyClinical.html"
+                  title="Observation/BreastResectionSpecimenRadiographyClinical">Präparateradiographie klinisch</a>
+            </td>
+            <td>
+<p>Angabe ob eine Präparateradiographie beigelegt wurde</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionPresentationMode.html"
+                  title="Observation/BreastResectionPresentationMode">Präsentationsmodus</a>
+            </td>
+            <td>
+<p>Präsentationsmodus des Präparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMacroQuadrant.html"
+                  title="Observation/BreastResectionMacroQuadrant">Quadrant BET</a>
+            </td>
+            <td>
+<p>Quadrantenlokalisation des Tumors</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-QuestionnaireResponseBreastResection.html"
+                  title="QuestionnaireResponse/QuestionnaireResponseBreastResection">QuestionnaireResponse - BET Mamma</a>
+            </td>
+            <td>
+<p>QuestionnaireResponse für BET Mamma mit allen Befunden</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html"
+                  title="QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy">QuestionnaireResponse - Stanzbiopsie Mamma</a>
+            </td>
+            <td>
+<p>QuestionnaireResponse für Stanzbiopsie Mamma mit allen Befunden</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionRadiologicalExtent.html"
+                  title="Observation/BreastResectionRadiologicalExtent">Radiologische Ausdehnung</a>
+            </td>
+            <td>
+<p>Radiologisch gemessene Ausdehnung des Tumors</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyMicrocalcification.html"
+                  title="Observation/CoreNeedleBiopsyMicrocalcification">Relevante Mikroverkalkungen - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Presence of relevant microcalcifications</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMarginStatusInvasive.html"
+                  title="Observation/BreastResectionMarginStatusInvasive">Resektionsrandstatus invasiv - BET</a>
+            </td>
+            <td>
+<p>Resektionsrandstatus der invasiven Komponente</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMarginStatusNonInvasive.html"
+                  title="Observation/BreastResectionMarginStatusNonInvasive">Resektionsrandstatus nichtinvasiv - BET</a>
+            </td>
+            <td>
+<p>Resektionsrandstatus der nichtinvasiven Komponente (DCIS)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionLaterality.html"
+                  title="Observation/BreastResectionLaterality">Seitenlokalisation - BET</a>
+            </td>
+            <td>
+<p>Seitenlokalisation des Präparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-BreastSurgeonPractitioner.html"
+                  title="Practitioner/BreastSurgeonPractitioner">Senologe</a>
+            </td>
+            <td>
+<p>Durchführender Gynäkologe/Senologe für alle operativen Eingriffe</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-CoreNeedleBiopsyReportRequest.html"
+                  title="ServiceRequest/CoreNeedleBiopsyReportRequest">Stanzbiopsie Mamma Anforderung</a>
+            </td>
+            <td>
+<p>Anforderung für pathologische Aufarbeitung einer US-gestützten Stanzbiopsie der linken Mamma</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-CoreNeedleBiopsyComposition.html"
+                  title="Composition/CoreNeedleBiopsyComposition">Stanzbiopsie Mamma Pathology Report Composition</a>
+            </td>
+            <td>
+<p>FHIR Composition for structured core needle biopsy pathology report</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-CoreNeedleBiopsySpecimenPart.html"
+                  title="Specimen/CoreNeedleBiopsySpecimenPart">Stanzzylinder-Präparat (Einsendespecimen)</a>
+            </td>
+            <td>
+<p>2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-CoreNeedleBiopsyTubuleFormation.html"
+                  title="Observation/CoreNeedleBiopsyTubuleFormation">Tubule Formation Score - Stanzbiopsie</a>
+            </td>
+            <td>
+<p>Glandular differentiation score by Nottingham</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionTubuleScore.html"
+                  title="Observation/BreastResectionTubuleScore">Tubulus-Score - BET</a>
+            </td>
+            <td>
+<p>Glandular differentiation score by Nottingham</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionTumorExtent.html"
+                  title="Observation/BreastResectionTumorExtent">Tumorausdehnung - BET</a>
+            </td>
+            <td>
+<p>Ausdehnung des Tumors in Bezug auf die Brustdrüse</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionPriorTherapy.html"
+                  title="Observation/BreastResectionPriorTherapy">Vorchirurgische Therapie</a>
+            </td>
+            <td>
+<p>Angabe zur neoadjuvanten/vorchirurgischen Therapie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionMacroClock.html"
+                  title="Observation/BreastResectionMacroClock">Zifferblattlokalisation BET</a>
+            </td>
+            <td>
+<p>Uhrzeigerlokalisation des Tumors</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionPT.html"
+                  title="Observation/BreastResectionPT">pT-Kategorie - BET</a>
+            </td>
+            <td>
+<p>Pathologische T-Kategorie nach TNM</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionERPercentage.html"
+                  title="Observation/BreastResectionERPercentage">Östrogenrezeptor Prozent - BET</a>
+            </td>
+            <td>
+<p>Prozentsatz ER-positiver Tumorzellkerne</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BreastResectionERStatus.html"
+                  title="Observation/BreastResectionERStatus">Östrogenrezeptor-Status - BET</a>
+            </td>
+            <td>
+<p>Östrogenrezeptor-Status per Immunhistochemie</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 5, 2026 17:42+0100">2026-03-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

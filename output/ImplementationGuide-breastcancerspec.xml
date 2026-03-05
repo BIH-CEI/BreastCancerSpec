@@ -1,0 +1,2102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="breastcancerspec"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide breastcancerspec</b></p><a name="breastcancerspec"> </a><a name="hcbreastcancerspec"> </a><h2>BreastCancerSpec</h2><p>The official URL for this implementation guide is: </p><pre>http://breastcancerspec.org/ImplementationGuide/breastcancerspec</pre><div><p>FHIR Implementation Guide for Breast Cancer based on MII specifications</p>
+</div></div>
+  </text>
+  <url value="http://breastcancerspec.org/ImplementationGuide/breastcancerspec"/>
+  <version value="0.1.0"/>
+  <name value="BreastCancerSpec"/>
+  <title value="Breast Cancer Specification"/>
+  <status value="draft"/>
+  <date value="2026-03-05T17:42:10+01:00"/>
+  <publisher value="BIH CEI"/>
+  <contact>
+    <name value="BIH CEI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/example-publisher"/>
+    </telecom>
+  </contact>
+  <description value="FHIR Implementation Guide for Breast Cancer based on MII specifications"/>
+  <packageId value="breastcancerspec"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.0.1"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_onkologie">
+    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.onkologie/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.onkologie"/>
+    <version value="2026.0.0"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_patho">
+    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.patho/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.patho"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.patho"/>
+    <version value="2026.0.0"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_base">
+    <uri value="https://www.medizininformatik-initiative.de/fhir/modul-base/ImplementationGuide/mii-ig-base"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.base"/>
+    <version value="2026.0.0"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_biobank">
+    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.biobank"/>
+    <version value="2026.0.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://breastcancerspec.org/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#0.9.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://breastcancerspec.org/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMacroDistanceNipple"/>
+      </reference>
+      <name value="Abstand von Mamille BET"/>
+      <description value="Abstand des Tumors von der Mamille"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionAttachedTissue"/>
+      </reference>
+      <name value="Anhängendes Gewebe - BET"/>
+      <description value="Art des anhängenden Gewebes am Präparat"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyMacroscopicBlockCount"/>
+      </reference>
+      <name value="Anzahl Paraffinblöcke Stanzbiopsie"/>
+      <description value="Anzahl der erstellten Paraffinblöcke"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyMacroscopicCylinderCount"/>
+      </reference>
+      <name value="Anzahl Stanzzylinder"/>
+      <description value="Anzahl der eingesendeten Stanzzylinder"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionAssociatedDCIS"/>
+      </reference>
+      <name value="Assoziiertes DCIS - BET"/>
+      <description value="Vorhandensein eines assoziierten DCIS"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyBClassification"/>
+      </reference>
+      <name value="B-Klassifikation - Stanzbiopsie"/>
+      <description value="B-Classification according to NHSBSP"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionSpecimenMarking"/>
+      </reference>
+      <name value="Befundmarkierung"/>
+      <description value="Art der Befundmarkierung am Präparat"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/BreastResectionReportRequest"/>
+      </reference>
+      <name value="BET Mamma Anforderung"/>
+      <description value="Anforderung für pathologische Aufarbeitung eines BET-Exzisionspräparats der linken Mamma"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/BreastResectionComposition"/>
+      </reference>
+      <name value="BET Mamma Pathology Report Composition"/>
+      <description value="FHIR Composition for structured breast resection pathology report"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenPart"/>
+      </reference>
+      <name value="BET-Exzisionspräparat (Einsendespecimen)"/>
+      <description value="BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 65x45x30mm, 55g"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionCancerHistory"/>
+      </reference>
+      <name value="Brustkrebsvorgeschichte"/>
+      <description value="Anamnese hinsichtlich Brustkrebsvorgeschichte"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionDCISArchitecture"/>
+      </reference>
+      <name value="DCIS Architektur - BET"/>
+      <description value="Wachstumsmuster des assoziierten DCIS"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionDCISGrade"/>
+      </reference>
+      <name value="DCIS Kerngrading - BET"/>
+      <description value="Kerngrading des assoziierten DCIS"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionDCISNecrosis"/>
+      </reference>
+      <name value="DCIS Nekrosen - BET"/>
+      <description value="Nekrosen im DCIS-Areal"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionDiagnosticConclusionGrouper"/>
+      </reference>
+      <name value="Diagnostic Conclusion Grouper - BET Mamma"/>
+      <description value="Grouper for all diagnostic conclusion findings in breast resection"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyDiagnosticConclusionGrouper"/>
+      </reference>
+      <name value="Diagnostic Conclusion Grouper - Stanzbiopsie"/>
+      <description value="Grouper for all diagnostic conclusion findings in core needle biopsy"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BreastResectionDocument"/>
+      </reference>
+      <name value="Document Bundle - BET Mamma"/>
+      <description value="FHIR Document Bundle für den vollständigen BET-Befundbericht"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/CoreNeedleBiopsyDocument"/>
+      </reference>
+      <name value="Document Bundle - Stanzbiopsie Mamma"/>
+      <description value="FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionElstonEllisScore"/>
+      </reference>
+      <name value="Elston-Ellis Summenscore - BET"/>
+      <description value="Elston-Ellis summary score (3+2+1=6)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/BreastResectionEncounter"/>
+      </reference>
+      <name value="Encounter für BET Mamma"/>
+      <description value="Stationärer Encounter für brusterhaltende Therapie im Brustzentrum"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/CoreNeedleBiopsyEncounter"/>
+      </reference>
+      <name value="Encounter für Stanzbiopsie Mamma"/>
+      <description value="Ambulanter Encounter für US-gestützte Stanzbiopsie in der Screeningeinheit"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionERIntensity"/>
+      </reference>
+      <name value="ER Färbeintensität - BET"/>
+      <description value="Färbeintensität der ER-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideER01"/>
+      </reference>
+      <name value="ER-IHC Schnitt 01 BET"/>
+      <description value="Schnitt 1 für Östrogenrezeptor-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideER01"/>
+      </reference>
+      <name value="ER-IHC Schnitt 01 Stanzbiopsie"/>
+      <description value="Schnitt 1 für Östrogenrezeptor-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideER02"/>
+      </reference>
+      <name value="ER-IHC Schnitt 02 BET"/>
+      <description value="Schnitt 2 für Östrogenrezeptor-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideER02"/>
+      </reference>
+      <name value="ER-IHC Schnitt 02 Stanzbiopsie"/>
+      <description value="Schnitt 2 für Östrogenrezeptor-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyERPercentage"/>
+      </reference>
+      <name value="Estrogen Receptor Percentage - Stanzbiopsie"/>
+      <description value="Percentage of ER positive tumor cell nuclei"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyERStatus"/>
+      </reference>
+      <name value="Estrogen Receptor Status - Stanzbiopsie"/>
+      <description value="Estrogen receptor status by immunohistochemistry"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionFocality"/>
+      </reference>
+      <name value="Fokalität - BET"/>
+      <description value="Fokalität des Tumors"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionGeneticPredisposition"/>
+      </reference>
+      <name value="Genetische Prädisposition"/>
+      <description value="Angabe zur genetischen Prädisposition"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyMacroscopicTotalLength"/>
+      </reference>
+      <name value="Gesamtlänge Stanzzylinder"/>
+      <description value="Gesamtlänge aller Stanzzylinder zusammen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMacroWeight"/>
+      </reference>
+      <name value="Gewicht BET"/>
+      <description value="Gewicht des BET-Exzisionspräparats"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideDCIS-HE01"/>
+      </reference>
+      <name value="HE-Schnitt 01 BET - DCIS"/>
+      <description value="HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE01"/>
+      </reference>
+      <name value="HE-Schnitt 01 BET - Resektionsränder"/>
+      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideHE01"/>
+      </reference>
+      <name value="HE-Schnitt 01 BET - Tumor"/>
+      <description value="HE-gefärbter Schnitt des Tumorareals, Schnittstufe 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHE01"/>
+      </reference>
+      <name value="HE-Schnitt 01 Stanzbiopsie"/>
+      <description value="Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideDCIS-HE02"/>
+      </reference>
+      <name value="HE-Schnitt 02 BET - DCIS"/>
+      <description value="HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE02"/>
+      </reference>
+      <name value="HE-Schnitt 02 BET - Resektionsränder"/>
+      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideHE02"/>
+      </reference>
+      <name value="HE-Schnitt 02 BET - Tumor"/>
+      <description value="HE-gefärbter Schnitt des Tumorareals, Schnittstufe 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHE02"/>
+      </reference>
+      <name value="HE-Schnitt 02 Stanzbiopsie"/>
+      <description value="Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE03"/>
+      </reference>
+      <name value="HE-Schnitt 03 BET - Resektionsränder"/>
+      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 3"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideHE03"/>
+      </reference>
+      <name value="HE-Schnitt 03 BET - Tumor"/>
+      <description value="HE-gefärbter Schnitt des Tumorareals, Schnittstufe 3"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHE03"/>
+      </reference>
+      <name value="HE-Schnitt 03 Stanzbiopsie"/>
+      <description value="Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 3"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE04"/>
+      </reference>
+      <name value="HE-Schnitt 04 BET - Resektionsränder"/>
+      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 4"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideHE04"/>
+      </reference>
+      <name value="HE-Schnitt 04 BET - Tumor"/>
+      <description value="HE-gefärbter Schnitt des Tumorareals, Schnittstufe 4"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHE04"/>
+      </reference>
+      <name value="HE-Schnitt 04 Stanzbiopsie"/>
+      <description value="Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 4"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE05"/>
+      </reference>
+      <name value="HE-Schnitt 05 BET - Resektionsränder"/>
+      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 5"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE06"/>
+      </reference>
+      <name value="HE-Schnitt 06 BET - Resektionsränder"/>
+      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 6"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionHER2ISH"/>
+      </reference>
+      <name value="HER2 Amplifikation (ISH) - BET"/>
+      <description value="HER2-Amplifikationsstatus per In-situ-Hybridisierung"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionHER2Overall"/>
+      </reference>
+      <name value="HER2 Gesamtstatus - BET"/>
+      <description value="HER2-Gesamtstatus basierend auf IHC und ISH"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyHER2ISH"/>
+      </reference>
+      <name value="HER2 ISH - Stanzbiopsie"/>
+      <description value="HER2 status by in-situ hybridization (B-DISH)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideHER2-01"/>
+      </reference>
+      <name value="HER2-B-DISH Schnitt 01 BET"/>
+      <description value="Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHER2-01"/>
+      </reference>
+      <name value="HER2-B-DISH Schnitt 01 Stanzbiopsie"/>
+      <description value="Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideHER2-02"/>
+      </reference>
+      <name value="HER2-B-DISH Schnitt 02 BET"/>
+      <description value="Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHER2-02"/>
+      </reference>
+      <name value="HER2-B-DISH Schnitt 02 Stanzbiopsie"/>
+      <description value="Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionHER2IHC"/>
+      </reference>
+      <name value="HER2-Score (IHC) - BET"/>
+      <description value="HER2-Score per Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyHistologicalTypeICDO3"/>
+      </reference>
+      <name value="Histological Type ICD-O-3 - Stanzbiopsie"/>
+      <description value="Histological type according to ICD-O-3 classification"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionHistologicalType"/>
+      </reference>
+      <name value="Histologischer Tumortyp - BET"/>
+      <description value="Histologischer Typ nach WHO/ICD-O-3"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionInvasiveCarcinoma"/>
+      </reference>
+      <name value="Invasives Karzinom - BET"/>
+      <description value="Vorhandensein eines invasiven Karzinoms"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionNuclearPleomorphism"/>
+      </reference>
+      <name value="Kernpleomorphie-Score - BET"/>
+      <description value="Nuclear pleomorphism score by Nottingham"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionKi67"/>
+      </reference>
+      <name value="Ki-67 Index - BET"/>
+      <description value="Ki-67 Proliferationsindex"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyKi67"/>
+      </reference>
+      <name value="Ki-67 Index - Stanzbiopsie"/>
+      <description value="Ki-67 proliferation index"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideKi67-01"/>
+      </reference>
+      <name value="Ki67-IHC Schnitt 01 BET"/>
+      <description value="Schnitt 1 für Ki-67 Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideKi67-01"/>
+      </reference>
+      <name value="Ki67-IHC Schnitt 01 Stanzbiopsie"/>
+      <description value="Schnitt 1 für Ki-67 Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideKi67-02"/>
+      </reference>
+      <name value="Ki67-IHC Schnitt 02 BET"/>
+      <description value="Schnitt 2 für Ki-67 Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideKi67-02"/>
+      </reference>
+      <name value="Ki67-IHC Schnitt 02 Stanzbiopsie"/>
+      <description value="Schnitt 2 für Ki-67 Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionComment"/>
+      </reference>
+      <name value="Kommentar - BET"/>
+      <description value="Freitextkommentar zum Befund"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionLVI"/>
+      </reference>
+      <name value="Lymphgefäßinvasion - BET"/>
+      <description value="Lymphovaskuläre Invasion"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMacroscopicGrouper"/>
+      </reference>
+      <name value="Makroskopische Befunde Grouper BET"/>
+      <description value="Gruppierung aller makroskopischen Messungen des BET-Exzisionspräparats"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyMacroscopicGrouper"/>
+      </reference>
+      <name value="Makroskopische Befunde Grouper Stanzbiopsie"/>
+      <description value="Gruppierung aller makroskopischen Messungen der Stanzzylinder"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/BreastResectionDiagnosisConfirmed"/>
+      </reference>
+      <name value="Mammakarzinom-Diagnose bestätigt"/>
+      <description value="Bestätigte Diagnose eines invasiven Mammakarzinoms nach Stanzbiopsie, Indikation zur BET"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/CoreNeedleBiopsyDiagnosisPreOp"/>
+      </reference>
+      <name value="Mammakarzinom-Diagnose Stanzbiopsie"/>
+      <description value="Diagnose eines Herdbefunds der linken Brust, BI-RADS 4b, Indikation zur Stanzbiopsie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/CoreNeedleBiopsyImagingReport"/>
+      </reference>
+      <name value="Mammografie/Ultraschall-Befund"/>
+      <description value="Bildgebungsbefund als SupportingInfo für die Stanzbiopsie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/BreastResectionImagingReport"/>
+      </reference>
+      <name value="Mammografie/Ultraschall-Befund BET"/>
+      <description value="Bildgebungsbefund als SupportingInfo für die BET"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMaterialType"/>
+      </reference>
+      <name value="Materialart - BET"/>
+      <description value="Art des eingesendeten Materials"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMaxDiameterInvasive"/>
+      </reference>
+      <name value="Max Durchmesser invasiv - BET"/>
+      <description value="Maximaler Durchmesser der invasiven Komponente"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMaxOverallDiameter"/>
+      </reference>
+      <name value="Max Gesamtdurchmesser - BET"/>
+      <description value="Maximaler Gesamtdurchmesser des Tumors inkl. DCIS"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMicrocalcification"/>
+      </reference>
+      <name value="Mikrokalzifikationen - BET"/>
+      <description value="Vorhandensein von Mikrokalzifikationen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyMicrocalcificationCorrelation"/>
+      </reference>
+      <name value="Mikroverkalkung-Korrelation - Stanzbiopsie"/>
+      <description value="Correlation of microcalcifications with radiological findings"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMinDistanceInvasive"/>
+      </reference>
+      <name value="Mindestabstand invasiv - BET"/>
+      <description value="Mindestabstand der invasiven Komponente zum Resektionsrand"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMinDistanceNonInvasive"/>
+      </reference>
+      <name value="Mindestabstand nichtinvasiv - BET"/>
+      <description value="Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMitoticRateScore"/>
+      </reference>
+      <name value="Mitoserate-Score - BET"/>
+      <description value="Mitotic rate score by Nottingham"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMitosisCount"/>
+      </reference>
+      <name value="Mitosezahl - BET"/>
+      <description value="Absolute Mitosezahl pro 10 HPF"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyMitoticRate"/>
+      </reference>
+      <name value="Mitotic Rate Score - Stanzbiopsie"/>
+      <description value="Mitotic rate score by Nottingham"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMorphologyFreeText"/>
+      </reference>
+      <name value="Morphologie Freitext - BET"/>
+      <description value="Freitextbeschreibung der Tumormorphologie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyMorphologyFreeText"/>
+      </reference>
+      <name value="Morphology Free Text - Stanzbiopsie"/>
+      <description value="Free text description of tumor morphology"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionNonInvasiveLesion"/>
+      </reference>
+      <name value="Nichtinvasive Läsion - BET"/>
+      <description value="Vorhandensein einer nichtinvasiven Läsion"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyNottinghamGrade"/>
+      </reference>
+      <name value="Nottingham Grade - Stanzbiopsie"/>
+      <description value="Nottingham histologic grade"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyNottinghamSummaryScore"/>
+      </reference>
+      <name value="Nottingham Summary Score - Stanzbiopsie"/>
+      <description value="Elston-Ellis summary score (3+2+1=6)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionNottinghamGrade"/>
+      </reference>
+      <name value="Nottingham-Grad - BET"/>
+      <description value="Nottingham histologic grade"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyNuclearPleomorphism"/>
+      </reference>
+      <name value="Nuclear Pleomorphism Score - Stanzbiopsie"/>
+      <description value="Nuclear pleomorphism score by Nottingham"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionClosestMargin"/>
+      </reference>
+      <name value="Nächster tumorfreier Resektionsrand - BET"/>
+      <description value="Lokalisation des nächsten tumorfreien Resektionsrands"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionOperativeProcedure"/>
+      </reference>
+      <name value="Operatives Verfahren - BET"/>
+      <description value="Art des operativen Verfahrens"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenBlock01"/>
+      </reference>
+      <name value="Paraffinblock 01 BET - Tumor zentral"/>
+      <description value="Paraffineinbettung des zentralen Tumorareals"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenBlock01"/>
+      </reference>
+      <name value="Paraffinblock 01 Stanzbiopsie"/>
+      <description value="Paraffineinbettung der Stanzzylinder Block 01"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenBlock02"/>
+      </reference>
+      <name value="Paraffinblock 02 BET - DCIS / Tumorperipherie"/>
+      <description value="Paraffineinbettung des DCIS-Areals und der Tumorperipherie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenBlock03"/>
+      </reference>
+      <name value="Paraffinblock 03 BET - Resektionsränder"/>
+      <description value="Paraffineinbettung der Resektionsränder"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/BreastResectionReport"/>
+      </reference>
+      <name value="Pathologiebericht BET Mamma"/>
+      <description value="Pathologiebericht nach brusterhaltender Therapie der linken Mamma"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/CoreNeedleBiopsyReport"/>
+      </reference>
+      <name value="Pathologiebericht Stanzbiopsie Mamma"/>
+      <description value="Pathologiebericht nach US-gestützter Stanzbiopsie der linken Mamma"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/PathologyLabOrganization"/>
+      </reference>
+      <name value="Pathologielabor"/>
+      <description value="Institut für Pathologie für alle pathologischen Befunde"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/PathologistPractitioner"/>
+      </reference>
+      <name value="Pathologin"/>
+      <description value="Durchführende Pathologin für alle pathologischen Befunde"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Patient4"/>
+      </reference>
+      <name value="Patientin 4 - Stanzbiopsie Mamma"/>
+      <description value="Patientin mit Herdbefund linke Brust (BI-RADS 4b), erhält US-gestützte Stanzbiopsie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionPRIntensity"/>
+      </reference>
+      <name value="PR Färbeintensität - BET"/>
+      <description value="Färbeintensität der PR-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlidePR01"/>
+      </reference>
+      <name value="PR-IHC Schnitt 01 BET"/>
+      <description value="Schnitt 1 für Progesteronrezeptor-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlidePR01"/>
+      </reference>
+      <name value="PR-IHC Schnitt 01 Stanzbiopsie"/>
+      <description value="Schnitt 1 für Progesteronrezeptor-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlidePR02"/>
+      </reference>
+      <name value="PR-IHC Schnitt 02 BET"/>
+      <description value="Schnitt 2 für Progesteronrezeptor-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlidePR02"/>
+      </reference>
+      <name value="PR-IHC Schnitt 02 Stanzbiopsie"/>
+      <description value="Schnitt 2 für Progesteronrezeptor-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionSpecimenLimited"/>
+      </reference>
+      <name value="Proben limitiert auswertbar"/>
+      <description value="Angabe ob die Probe limitiert auswertbar ist"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMacroLength"/>
+      </reference>
+      <name value="Probengröße 1 (Länge) BET"/>
+      <description value="Maximale Länge des BET-Exzisionspräparats"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMacroWidth"/>
+      </reference>
+      <name value="Probengröße 2 (Breite) BET"/>
+      <description value="Breite des BET-Exzisionspräparats"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMacroDepth"/>
+      </reference>
+      <name value="Probengröße 3 (Tiefe) BET"/>
+      <description value="Tiefe des BET-Exzisionspräparats"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyPRPercentage"/>
+      </reference>
+      <name value="Progesterone Receptor Percentage - Stanzbiopsie"/>
+      <description value="Percentage of PR positive tumor cell nuclei"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyPRStatus"/>
+      </reference>
+      <name value="Progesterone Receptor Status - Stanzbiopsie"/>
+      <description value="Progesterone receptor status by immunohistochemistry"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionPRPercentage"/>
+      </reference>
+      <name value="Progesteronrezeptor Prozent - BET"/>
+      <description value="Prozentsatz PR-positiver Tumorzellkerne"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionPRStatus"/>
+      </reference>
+      <name value="Progesteronrezeptor-Status - BET"/>
+      <description value="Progesteronrezeptor-Status per Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsySpecimenRadiography"/>
+      </reference>
+      <name value="Präparateradiogramm - Stanzbiopsie"/>
+      <description value="Specimen radiography reviewed"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionSpecimenRadiographyClinical"/>
+      </reference>
+      <name value="Präparateradiographie klinisch"/>
+      <description value="Angabe ob eine Präparateradiographie beigelegt wurde"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionPresentationMode"/>
+      </reference>
+      <name value="Präsentationsmodus"/>
+      <description value="Präsentationsmodus des Präparats"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionPT"/>
+      </reference>
+      <name value="pT-Kategorie - BET"/>
+      <description value="Pathologische T-Kategorie nach TNM"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMacroQuadrant"/>
+      </reference>
+      <name value="Quadrant BET"/>
+      <description value="Quadrantenlokalisation des Tumors"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/QuestionnaireResponseBreastResection"/>
+      </reference>
+      <name value="QuestionnaireResponse - BET Mamma"/>
+      <description value="QuestionnaireResponse für BET Mamma mit allen Befunden"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"/>
+      </reference>
+      <name value="QuestionnaireResponse - Stanzbiopsie Mamma"/>
+      <description value="QuestionnaireResponse für Stanzbiopsie Mamma mit allen Befunden"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionRadiologicalExtent"/>
+      </reference>
+      <name value="Radiologische Ausdehnung"/>
+      <description value="Radiologisch gemessene Ausdehnung des Tumors"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyMicrocalcification"/>
+      </reference>
+      <name value="Relevante Mikroverkalkungen - Stanzbiopsie"/>
+      <description value="Presence of relevant microcalcifications"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMarginStatusInvasive"/>
+      </reference>
+      <name value="Resektionsrandstatus invasiv - BET"/>
+      <description value="Resektionsrandstatus der invasiven Komponente"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMarginStatusNonInvasive"/>
+      </reference>
+      <name value="Resektionsrandstatus nichtinvasiv - BET"/>
+      <description value="Resektionsrandstatus der nichtinvasiven Komponente (DCIS)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionLaterality"/>
+      </reference>
+      <name value="Seitenlokalisation - BET"/>
+      <description value="Seitenlokalisation des Präparats"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/BreastSurgeonPractitioner"/>
+      </reference>
+      <name value="Senologe"/>
+      <description value="Durchführender Gynäkologe/Senologe für alle operativen Eingriffe"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/CoreNeedleBiopsyReportRequest"/>
+      </reference>
+      <name value="Stanzbiopsie Mamma Anforderung"/>
+      <description value="Anforderung für pathologische Aufarbeitung einer US-gestützten Stanzbiopsie der linken Mamma"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/CoreNeedleBiopsyComposition"/>
+      </reference>
+      <name value="Stanzbiopsie Mamma Pathology Report Composition"/>
+      <description value="FHIR Composition for structured core needle biopsy pathology report"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenPart"/>
+      </reference>
+      <name value="Stanzzylinder-Präparat (Einsendespecimen)"/>
+      <description value="2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyTubuleFormation"/>
+      </reference>
+      <name value="Tubule Formation Score - Stanzbiopsie"/>
+      <description value="Glandular differentiation score by Nottingham"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionTubuleScore"/>
+      </reference>
+      <name value="Tubulus-Score - BET"/>
+      <description value="Glandular differentiation score by Nottingham"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionTumorExtent"/>
+      </reference>
+      <name value="Tumorausdehnung - BET"/>
+      <description value="Ausdehnung des Tumors in Bezug auf die Brustdrüse"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionPriorTherapy"/>
+      </reference>
+      <name value="Vorchirurgische Therapie"/>
+      <description value="Angabe zur neoadjuvanten/vorchirurgischen Therapie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMacroClock"/>
+      </reference>
+      <name value="Zifferblattlokalisation BET"/>
+      <description value="Uhrzeigerlokalisation des Tumors"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionERPercentage"/>
+      </reference>
+      <name value="Östrogenrezeptor Prozent - BET"/>
+      <description value="Prozentsatz ER-positiver Tumorzellkerne"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionERStatus"/>
+      </reference>
+      <name value="Östrogenrezeptor-Status - BET"/>
+      <description value="Östrogenrezeptor-Status per Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Breast Cancer Specification"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="clinical-context.html"/>
+        </extension>
+        <nameUrl value="clinical-context.html"/>
+        <title value="Clinical Context"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="motivation.html"/>
+        </extension>
+        <nameUrl value="motivation.html"/>
+        <title value="Motivation"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="biopsy-specimens.html"/>
+        </extension>
+        <nameUrl value="biopsy-specimens.html"/>
+        <title value="Core Needle Biopsy — Specimens"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="resection-specimens.html"/>
+        </extension>
+        <nameUrl value="resection-specimens.html"/>
+        <title value="Breast Resection — Specimens"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="document-viewer.html"/>
+        </extension>
+        <nameUrl value="document-viewer.html"/>
+        <title value="Befund-Viewer"/>
+        <generation value="html"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

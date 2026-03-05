@@ -1,0 +1,129 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://breastcancerspec.org/ServiceRequest/BreastResectionReportRequest> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BreastResectionReportRequest"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2026.0.0"^^xsd:anyURI ;
+       fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request?version=2026.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest BreastResectionReportRequest</b></p><a name=\"BreastResectionReportRequest\"> </a><a name=\"hcBreastResectionReportRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request\">MII PR Patho Service Requestversion: null2026.0.0)</a></p></div><p><b>identifier</b>: Placer Identifier/PATH-RPT-2025-210</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 726007}\">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 60568-3}\">Pathology synoptic report</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href=\"Encounter-BreastResectionEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_210; status = finished; class = IMP (IMP)</a></p><p><b>requester</b>: <a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 254837009}\">Malignant neoplasm of breast (disorder)</span></p><p><b>supportingInfo</b>: </p><ul><li><a href=\"Condition-BreastResectionDiagnosisConfirmed.html\">Condition Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</a></li><li><a href=\"DiagnosticReport-BreastResectionImagingReport.html\">Diagnostic Report for 'MG Breast Screening' for '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li><li><a href=\"Observation-BreastResectionSpecimenLimited.html\">Observation Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)</a></li><li><a href=\"Observation-BreastResectionPresentationMode.html\">Observation Reason for test or procedure</a></li><li><a href=\"Observation-BreastResectionCancerHistory.html\">Observation Personal history of primary malignant neoplasm of breast (situation)</a></li><li><a href=\"Observation-BreastResectionPriorTherapy.html\">Observation Cancer treatment --preoperative</a></li><li><a href=\"Observation-BreastResectionRadiologicalExtent.html\">Observation Lesion size, largest dimension (observable entity)</a></li><li><a href=\"Observation-BreastResectionSpecimenMarking.html\">Observation Insertion of marker into breast using X-ray guidance (procedure)</a></li><li><a href=\"Observation-BreastResectionSpecimenRadiographyClinical.html\">Observation 80865008|Specimen mammography|:363702006|Has focus|=185008008|Medical reports sent|</a></li><li><a href=\"Observation-BreastResectionGeneticPredisposition.html\">Observation Diathesis, function (observable entity)</a></li></ul><p><b>specimen</b>: <a href=\"Specimen-BreastResectionSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ. 65 x 45 x 30 mm, 55 g. Schnittfläche: grau-weißlich, derber Herdbefund zentral, ca. 18 mm.</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0203>
+         ] ;
+         fhir:code [ fhir:v "PLAC" ] ;
+         fhir:display [ fhir:v "Placer Identifier" ]
+       ] )
+     ] ;
+     fhir:system [
+       fhir:v "http://example.hospital.de/serviceRequest"^^xsd:anyURI ;
+       fhir:l <http://example.hospital.de/serviceRequest>
+     ] ;
+     fhir:value [ fhir:v "PATH-RPT-2025-210" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:726007 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "726007" ] ;
+       fhir:display [ fhir:v "Pathology consultation, comprehensive, records and specimen with report (procedure)" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:60568-3 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "60568-3" ] ;
+       fhir:display [ fhir:v "Pathology synoptic report" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://breastcancerspec.org/Patient/Patient4> ;
+     fhir:reference [ fhir:v "Patient/Patient4" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <http://breastcancerspec.org/Encounter/BreastResectionEncounter> ;
+     fhir:reference [ fhir:v "Encounter/BreastResectionEncounter" ]
+  ] ; # 
+  fhir:requester [
+     fhir:l <http://breastcancerspec.org/Practitioner/BreastSurgeonPractitioner> ;
+     fhir:reference [ fhir:v "Practitioner/BreastSurgeonPractitioner" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://breastcancerspec.org/Practitioner/PathologistPractitioner> ;
+     fhir:reference [ fhir:v "Practitioner/PathologistPractitioner" ]
+  ] ) ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:254837009 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "254837009" ] ;
+       fhir:display [ fhir:v "Malignant neoplasm of breast (disorder)" ]
+     ] )
+  ] ) ; # 
+  fhir:supportingInfo ( [
+     fhir:l <http://breastcancerspec.org/Condition/BreastResectionDiagnosisConfirmed> ;
+     fhir:reference [ fhir:v "Condition/BreastResectionDiagnosisConfirmed" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/DiagnosticReport/BreastResectionImagingReport> ;
+     fhir:reference [ fhir:v "DiagnosticReport/BreastResectionImagingReport" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionSpecimenLimited> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionSpecimenLimited" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionPresentationMode> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionPresentationMode" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionCancerHistory> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionCancerHistory" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionPriorTherapy> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionPriorTherapy" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionRadiologicalExtent> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionRadiologicalExtent" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionSpecimenMarking> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionSpecimenMarking" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionSpecimenRadiographyClinical> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionSpecimenRadiographyClinical" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/BreastResectionGeneticPredisposition> ;
+     fhir:reference [ fhir:v "Observation/BreastResectionGeneticPredisposition" ]
+  ] ) ; # 
+  fhir:specimen ( [
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenPart> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenPart" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
