@@ -26,50 +26,32 @@ pages:
     title: Clinical Context
   motivation.md:
     title: Motivation
-  dcis-specimens.md:
-    title: DCIS Resection Specimens
-  invasive-carcinoma-specimens.md:
-    title: Invasive Carcinoma Resection Specimens
-  neoadjuvant-specimens.md:
-    title: Neoadjuvant Therapy Resection Specimens
-  lymphnode-specimens.md:
-    title: Lymph Node Specimens
-  viewer.md:
-    title: Report Viewer
+  biopsy-specimens.md:
+    title: Core Needle Biopsy — Specimens
+  resection-specimens.md:
+    title: Breast Resection — Specimens
+  document-viewer.xml:
+    title: Befund-Viewer
 
 menu:
   Home: index.html
   Clinical Context: clinical-context.html
   Motivation: motivation.html
-  DCIS Resection:
-    ServiceRequest: ServiceRequest-DCISResectionReportRequest.html
-    Specimens: dcis-specimens.html
-    MacroscopyGrouper: Observation-DCISResectionMacroscopicGrouper.html
-    DiagnosticConclusionGrouper: Observation-DCISResectionDiagnosticConclusionGrouper.html
-    DiagnosticReport: DiagnosticReport-DCISResectionReport.html
-    Composition: Composition-DCISResectionComposition.html
-  Invasive Carcinoma Resection:
-    ServiceRequest: ServiceRequest-InvasiveCarcinomaResectionReportRequest.html
-    Specimens: invasive-carcinoma-specimens.html
-    MacroscopyGrouper: Observation-InvasiveCarcinomaResectionMacroscopicGrouper.html
-    DiagnosticConclusionGrouper: Observation-InvasiveCarcinomaResectionDiagnosticConclusionGrouper.html
-    DiagnosticReport: DiagnosticReport-InvasiveCarcinomaResectionReport.html
-    Composition: Composition-InvasiveCarcinomaResectionComposition.html
-  Neoadjuvant Therapy Resection:
-    ServiceRequest: ServiceRequest-NeoadjuvantTherapyResectionReportRequest.html
-    Specimens: neoadjuvant-specimens.html
-    MacroscopyGrouper: Observation-NeoadjuvantTherapyResectionMacroscopicGrouper.html
-    DiagnosticConclusionGrouper: Observation-NeoadjuvantTherapyResectionDiagnosticConclusionGrouper.html
-    DiagnosticReport: DiagnosticReport-NeoadjuvantTherapyResectionReport.html
-    Composition: Composition-NeoadjuvantTherapyResectionComposition.html
-  Lymph Node Specimens:
-    ServiceRequest: ServiceRequest-LymphNodeSpecimensReportRequest.html
-    Specimens: lymphnode-specimens.html
-    MacroscopyGrouper: Observation-LymphNodeSpecimensMacroscopicGrouper.html
-    DiagnosticConclusionGrouper: Observation-LymphNodeSpecimensDiagnosticConclusionGrouper.html
-    DiagnosticReport: DiagnosticReport-LymphNodeSpecimensReport.html
-    Composition: Composition-LymphNodeSpecimensComposition.html
-  Report Viewer: viewer.html
+  Stanzbiopsie:
+    Specimens: biopsy-specimens.html
+    ServiceRequest: ServiceRequest-CoreNeedleBiopsyReportRequest.html
+    MacroscopyGrouper: Observation-CoreNeedleBiopsyMacroscopicGrouper.html
+    DiagnosticConclusionGrouper: Observation-CoreNeedleBiopsyDiagnosticConclusionGrouper.html
+    DiagnosticReport: DiagnosticReport-CoreNeedleBiopsyReport.html
+    Composition: Composition-CoreNeedleBiopsyComposition.html
+  OP-Präparat (BET):
+    Specimens: resection-specimens.html
+    ServiceRequest: ServiceRequest-BreastResectionReportRequest.html
+    MacroscopyGrouper: Observation-BreastResectionMacroscopicGrouper.html
+    DiagnosticConclusionGrouper: Observation-BreastResectionDiagnosticConclusionGrouper.html
+    DiagnosticReport: DiagnosticReport-BreastResectionReport.html
+    Composition: Composition-BreastResectionComposition.html
+  Befund-Viewer: document-viewer.html
   Artifacts: artifacts.html
 
 instanceOptions:

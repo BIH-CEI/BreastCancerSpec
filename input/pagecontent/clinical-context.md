@@ -138,7 +138,7 @@ Systemic (neo‑/adjuvant) therapy is tailored to risk profile and biological su
   – In small, node‑negative HER2‑positive tumours, de‑escalated regimens (e.g. weekly paclitaxel plus trastuzumab) can be used (ESMO 2024, p. 170–172).
 
 - Triple‑negative breast cancer (TNBC):  
-  – Neoadjuvant chemotherapy, häufig mit Anthrazyklinen und Taxanen und in definierten Situationen plus Immuntherapie, ist Standard für Stadium II–III TNBC (S3, TNBC‑Kapitel; ESMO 2024, p. 170–172).  
+  – Neoadjuvant chemotherapy, commonly with anthracyclines and taxanes and in defined situations plus immunotherapy, is standard for stage II–III TNBC (S3, TNBC chapter; ESMO 2024, p. 170–172).  
   – Post‑neoadjuvant capecitabine is recommended for patients with residual invasive TNBC after neoadjuvant chemotherapy (ESMO 2024, p. 170–172).
 
 - HER2‑low and other special situations are addressed in ESMO 2024; for patients the key message is that treatment intensity and combination partners depend on HER2 status (including HER2‑low), hormone receptors, proliferation and stage (ESMO 2024, p. 162–172).
@@ -211,7 +211,5 @@ Rehabilitation, exercise programmes, nutritional counselling, psycho‑oncology 
 
 ---
 
-### How to use this page
 
-This information does not replace individual medical advice but aims to help patients of all genders, and their families, better understand the breast and breast cancer (S3, preface and patient information).  
 Content is derived from the S3 Breast Cancer Guideline (Long Version 5.0, 2025), the ESMO 2024 early breast cancer guideline and the ICCR datasets, and should be checked regularly for updates (S3, foreword and methodology; ESMO 2024, p. 159 f.; ICCR).

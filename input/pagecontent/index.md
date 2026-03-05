@@ -2,18 +2,20 @@
 
 This Implementation Guide (IG) provides FHIR-based examples for structured breast cancer pathology reporting, based on the [MII Kerndatensatz Pathologie](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report) profiles.
 
-It covers four clinical scenarios:
+Currently available report type:
 
-1. **[DCIS Resection](dcis-specimens.html)** – Ductal Carcinoma in Situ resection specimen
-2. **[Invasive Carcinoma Resection](invasive-carcinoma-specimens.html)** – Invasive breast carcinoma (NST) resection specimen
-3. **[Neoadjuvant Therapy Resection](neoadjuvant-specimens.html)** – Resection specimen after neoadjuvant chemotherapy
-4. **[Lymph Node Specimens](lymphnode-specimens.html)** – Sentinel lymph node biopsy specimens
+1. **Stanzbiopsie** – Core needle biopsy report (Stanz-/Vakuumbiopsie)
 
-Each scenario includes a complete set of FHIR resources: ServiceRequest, Encounter, Condition, Specimen hierarchy, macroscopic and diagnostic conclusion observations, DiagnosticReport, Composition, Document Bundle, and QuestionnaireResponse.
+Further report types are planned:
+
+- **OP-Präparate** – Surgical specimen reports (resections)
+- **Axilläre Lymphknotenpräparate** – Axillary lymph node specimen reports
+
+Each report type includes a complete set of FHIR resources: ServiceRequest, Encounter, Condition, Specimen hierarchy, macroscopic and diagnostic conclusion observations, DiagnosticReport, Composition, Document Bundle, and QuestionnaireResponse.
 
 ### Scope
 
-This IG focuses on **example instances** that demonstrate how to use the MII Pathology module profiles for breast cancer reporting according to ICCR (International Collaboration on Cancer Reporting) datasets.
+This IG focuses on **example instances** that demonstrate how to use the MII Pathology module profiles for breast cancer reporting according to ICCR (International Collaboration on Cancer Reporting) datasets and the Questionnaires developed by the Bundesverband Deutscher Pathologen e.V.
 
 ### Dependencies
 
