@@ -22,7 +22,7 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 
 **value**: 22 mm (Details: UCUM codemm = 'mm')
 
-**bodySite**: Breast structure (body structure)
+**bodySite**: Structure of lower outer quadrant of left breast (body structure)
 
 **specimen**: [Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.](Specimen-CoreNeedleBiopsySpecimenPart.md)
 
@@ -76,8 +76,8 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   "bodySite" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "76752008",
-      "display" : "Breast structure (body structure)"
+      "code" : "110502005",
+      "display" : "Structure of lower outer quadrant of left breast (body structure)"
     }]
   },
   "specimen" : {

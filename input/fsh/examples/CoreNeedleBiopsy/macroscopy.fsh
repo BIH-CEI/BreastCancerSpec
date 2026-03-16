@@ -14,15 +14,13 @@ Description: "Gruppierung aller makroskopischen Messungen der Stanzzylinder"
 * subject = Reference(Patient4)
 * effectiveDateTime = "2025-01-16T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueString = "Makroskopische Befunde der HG-Stanzzylinder"
-* bodySite = $sct#76752008 "Breast structure (body structure)"
+* bodySite = $sct#110502005 "Structure of lower outer quadrant of left breast (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 * hasMember[+] = Reference(CoreNeedleBiopsyMacroscopicTotalLength)
 * hasMember[+] = Reference(CoreNeedleBiopsyMacroscopicCylinderCount)
 * hasMember[+] = Reference(CoreNeedleBiopsyMacroscopicBlockCount)
 
-* note.text = "2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke. 1 Paraffinblock."
 
 // Gesamtlänge der Stanzzylinder
 Instance: CoreNeedleBiopsyMacroscopicTotalLength
@@ -41,7 +39,7 @@ Description: "Gesamtlänge aller Stanzzylinder zusammen"
 * effectiveDateTime = "2025-01-16T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
 * valueQuantity = 22 'mm' "mm"
-* bodySite = $sct#76752008 "Breast structure (body structure)"
+* bodySite = $sct#110502005 "Structure of lower outer quadrant of left breast (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // Anzahl Stanzzylinder

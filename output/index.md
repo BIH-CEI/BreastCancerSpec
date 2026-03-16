@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://breastcancerspec.org/ImplementationGuide/breastcancerspec | *Version*:0.1.0 |
-| Draft as of 2026-03-05 | *Computable Name*:BreastCancerSpec |
+| Draft as of 2026-03-16 | *Computable Name*:BreastCancerSpec |
 
 ### Introduction
 
@@ -50,7 +50,7 @@ This IG builds on:
   "name" : "BreastCancerSpec",
   "title" : "Breast Cancer Specification",
   "status" : "draft",
-  "date" : "2026-03-05T17:42:10+01:00",
+  "date" : "2026-03-16T12:14:42+01:00",
   "publisher" : "BIH CEI",
   "contact" : [{
     "name" : "BIH CEI",
@@ -71,7 +71,7 @@ This IG builds on:
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.0.1"
+    "version" : "7.1.0"
   },
   {
     "id" : "hl7ext",
@@ -929,6 +929,18 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/CoreNeedleBiopsySubstanceER"
+      },
+      "name" : "ER-IHC Reagenz Stanzbiopsie",
+      "description" : "Östrogenrezeptor-Antikörper für Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Specimen"
       }],
       "reference" : {
@@ -1277,6 +1289,18 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/CoreNeedleBiopsySubstanceHER2ISH"
+      },
+      "name" : "HER2-B-DISH Reagenz Stanzbiopsie",
+      "description" : "HER2 Dual ISH Sonden-Kit",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Specimen"
       }],
       "reference" : {
@@ -1320,6 +1344,42 @@ This IG builds on:
       },
       "name" : "HER2-B-DISH Schnitt 02 Stanzbiopsie",
       "description" : "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/CoreNeedleBiopsySubstanceHER2IHC"
+      },
+      "name" : "HER2-IHC Reagenz Stanzbiopsie",
+      "description" : "HER2-Antikörper für Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2IHC-01"
+      },
+      "name" : "HER2-IHC Schnitt 01 Stanzbiopsie",
+      "description" : "Schnitt 1 für HER2 Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2IHC-02"
+      },
+      "name" : "HER2-IHC Schnitt 02 Stanzbiopsie",
+      "description" : "Schnitt 2 für HER2 Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1404,6 +1464,18 @@ This IG builds on:
       },
       "name" : "Ki-67 Index - Stanzbiopsie",
       "description" : "Ki-67 proliferation index",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/CoreNeedleBiopsySubstanceKi67"
+      },
+      "name" : "Ki-67-IHC Reagenz Stanzbiopsie",
+      "description" : "Ki-67-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1896,6 +1968,18 @@ This IG builds on:
       },
       "name" : "PR Färbeintensität - BET",
       "description" : "Färbeintensität der PR-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/CoreNeedleBiopsySubstancePR"
+      },
+      "name" : "PR-IHC Reagenz Stanzbiopsie",
+      "description" : "Progesteronrezeptor-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {

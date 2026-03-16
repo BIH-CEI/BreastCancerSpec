@@ -20,15 +20,13 @@ Profile: [MII PR Patho Reportversion: null2026.0.0)](https://simplifier.net/reso
 
 **Report Details**
 
-* **Code**: [Pathology report gross observation Narrative](Observation-CoreNeedleBiopsyMacroscopicGrouper.md)(Breast structure (body structure))
-  * **Value**: Makroskopische Befunde der HG-Stanzzylinder
+* **Code**: [Pathology report gross observation Narrative](Observation-CoreNeedleBiopsyMacroscopicGrouper.md)(Structure of lower outer quadrant of left breast (body structure))
+  * **Value**: 
   * **Flags**: Final
-  * **Note**: > 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke. 1 Paraffinblock.
   * **When For**: 2025-01-16 08:30:00+0100
 * **Code**: [Pathology report final diagnosis Narrative](Observation-CoreNeedleBiopsyDiagnosticConclusionGrouper.md)
   * **Value**: 
   * **Flags**: Final
-  * **Note**: > Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen.By Practitioner/PathologistPractitioner @2025-01-17
   * **When For**: 2025-01-17
 
 Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Kernpleomorphie 2, Mitosen 1). ER+ (85%), PR+ (50%), HER2- (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b.

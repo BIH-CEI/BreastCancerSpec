@@ -1,0 +1,1871 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "2.16.840.1.113883.3.1937.777.18.27.27--20260309151943",
+  "meta": {
+    "lastUpdated": "2026-03-11T15:00:56Z",
+    "source": "https://art-decor.org/fhir/4.0/pathdv-",
+    "tag": [
+      {
+        "system": "http://hl7.org/fhir/FHIR-version",
+        "code": "4.0.1"
+      }
+    ]
+  },
+  "language": "de-DE",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer",
+      "valueUrl": "https://art-decor.org/fhir/4.0/public"
+    }
+  ],
+  "url": "https://art-decor.org/fhir/Questionnaire/2.16.840.1.113883.3.1937.777.18.27.27--20260309151943",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.3.1937.777.18.27.27"
+    }
+  ],
+  "name": "Eingabe_Formular_fur_LN_OP_Praparate_ICCR",
+  "title": "Eingabe-Formular für LN-OP-Präparate ICCR",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-03-11T15:00:56Z",
+  "publisher": "Bundesverband Deutscher Pathologen e.V.",
+  "contact": [
+    {
+      "name": "Bundesverband Deutscher Pathologen e.V.",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "www.pathologie.de"
+        }
+      ]
+    }
+  ],
+  "description": "\n                         Modell für \"intelligentes\" Formular (eCRF)  für Lymphknoten-OP-Präparate (ICCR) für Pathologiesysteme \n                           \n                    ",
+  "copyright": "\n                                               © Copyright 2017-2023 Bundesverband Deutscher Pathologen e.V. All rights reserved                               \n            ",
+  "effectivePeriod": {
+    "start": "2026-03-09T15:19:43Z"
+  },
+  "item": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+          "valueBoolean": false
+        }
+      ],
+      "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10000",
+      "text": "Mammakarzinome",
+      "type": "group",
+      "required": true,
+      "repeats": false,
+      "readOnly": false,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": false
+            }
+          ],
+          "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10010",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "22636-5",
+              "display": "Pathology report relevant history Narrative"
+            }
+          ],
+          "text": "Klinische Angaben zur histopathologischen Untersuchung",
+          "type": "group",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "help",
+                        "display": "Help-Button"
+                      }
+                    ],
+                    "text": "Help-Button"
+                  }
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10010-help",
+              "text": "Die Bereitstellung präziser klinischer Informationen und Details ist wichtig, um den Kontext für die Probe, die Art der Anomalie, die Nachweismethode und die Krankengeschichte der Patientin zu verdeutlichen. Beispiele für wichtige Informationen sind eine frühere Brustkrebserkrankung oder -krebserkrankung, Vorbehandlungen wie neoadjuvante Therapie und vererbte genetische Mutationen wie BRCA1 oder BRCA2.",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                    "valueMarkdown": "Die Bereitstellung präziser klinischer Informationen und Details ist wichtig, um den Kontext für die Probe, die Art der Anomalie, die Nachweismethode und die Krankengeschichte der Patientin zu verdeutlichen. Beispiele für wichtige Informationen sind eine frühere Brustkrebserkrankung oder -krebserkrankung, Vorbehandlungen wie neoadjuvante Therapie und vererbte genetische Mutationen wie BRCA1 oder BRCA2."
+                  }
+                ]
+              },
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "125156009",
+                  "display": "Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)"
+                }
+              ],
+              "text": "Proben limitiert auswertbar wegen fehlender klinischer Informationen",
+              "type": "open-choice",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.14001--20180210000000"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11950",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "32450-9",
+                  "display": "Physical findings of Lymph node"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "442618008",
+                  "display": "Abnormal finding on evaluation procedure (finding)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "442618008:47429007=21911005",
+                  "display": "Abnormal finding on evaluation procedure (finding):Associated with (attribute)=Biopsy of lymph node (procedure)"
+                }
+              ],
+              "text": "LK-Biopsie veranlassende klinische/bildgebende Befunde",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": true,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12066"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.2.11148",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "274530001",
+                  "display": "Abnormal findings on diagnostic imaging of breast (finding)"
+                }
+              ],
+              "text": "Bildgebende Befunde",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12052"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11974",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "373573001",
+                  "display": "Clinical finding present (situation)"
+                }
+              ],
+              "text": "Andere klinische Informationen",
+              "type": "string",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.8",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "178294003",
+                  "display": "Axillary lymph nodes sampling (procedure)"
+                }
+              ],
+              "text": "Prätherapeutische Lymphknotensamplingmethode",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": true,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12015"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.10210",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "81167-9",
+                  "display": "Cancer treatment --preoperative"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "426274002",
+                  "display": "Type of preoperative treatment (observable entity)"
+                }
+              ],
+              "text": "Neoadjuvante Therapie",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11951",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "373066001",
+                    "display": "Ja"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": true,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12016"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": false
+            }
+          ],
+          "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11530",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "66112-4",
+              "display": "Lymph node Pathology biopsy report"
+            }
+          ],
+          "text": "Axilläre Lymphknotenpräparate",
+          "type": "group",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11540",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "21877-6",
+                  "display": "Surgery procedure for regional nodes at facility.YYY Cancer"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "274372001",
+                  "display": "Surgical biopsy of lymph node (procedure)"
+                }
+              ],
+              "text": "LK OP Prozedur",
+              "type": "choice",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": true,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12015",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11540-help",
+                  "text": "Die metastatische Beteiligung der axillären Lymphknoten hat spezifische klinische, therapeutische und prognostische Konsequenzen. Für eine korrekte Stadieneinteilung ist es erforderlich, dass alle eingesandten Lymphknoten vom Chirurgen genau gekennzeichnet werden. Derzeit umfasst eine axilläre Lymphknotendissektion in einigen Ländern (z. B. USA, Kanada, Singapur) nicht routinemäßig die Lymphknoten der Ebene III.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Die metastatische Beteiligung der axillären Lymphknoten hat spezifische klinische, therapeutische und prognostische Konsequenzen. Für eine korrekte Stadieneinteilung ist es erforderlich, dass alle eingesandten Lymphknoten vom Chirurgen genau gekennzeichnet werden. Derzeit umfasst eine axilläre Lymphknotendissektion in einigen Ländern (z. B. USA, Kanada, Singapur) nicht routinemäßig die Lymphknoten der Ebene III."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11620",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "20228-3",
+                  "display": "Anatomic part Laterality"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "384727002",
+                  "display": "Specimen laterality (observable entity)"
+                }
+              ],
+              "text": "Seitenangabe",
+              "type": "open-choice",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12017",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11620-help",
+                  "text": "Die Beurteilung des axillären Lymphknotenstatus unterscheidet sich erheblich, je nachdem, ob ein Karzinom in den ipsilateralen oder kontralateralen axillären Lymphknoten vorliegt. Die Lateralität der Lymphknoten ist ebenfalls ein wesentliches Element für die Korrelation mit dem klinischen Bild und der Anamnese. Bei manchen Patientinnen kann ein synchrones oder metachrones bilaterales Mammakarzinom vorliegen. Die Beurteilung der ipsilateralen Lymphknoten ist Teil der nodalen Stadieneinteilung des Mammakarzinoms, während der seltene Befall der kontralateralen Lymphknoten derzeit als Fernmetastasen interpretiert wird und nicht in den Datensatz einfließt. Bilaterales Mammakarzinom wird als zwei separate Erkrankungen betrachtet und erfordert zwei separate Datensätze, einen für jede Seite.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Die Beurteilung des axillären Lymphknotenstatus unterscheidet sich erheblich, je nachdem, ob ein Karzinom in den ipsilateralen oder kontralateralen axillären Lymphknoten vorliegt. Die Lateralität der Lymphknoten ist ebenfalls ein wesentliches Element für die Korrelation mit dem klinischen Bild und der Anamnese. Bei manchen Patientinnen kann ein synchrones oder metachrones bilaterales Mammakarzinom vorliegen. Die Beurteilung der ipsilateralen Lymphknoten ist Teil der nodalen Stadieneinteilung des Mammakarzinoms, während der seltene Befall der kontralateralen Lymphknoten derzeit als Fernmetastasen interpretiert wird und nicht in den Datensatz einfließt. Bilaterales Mammakarzinom wird als zwei separate Erkrankungen betrachtet und erfordert zwei separate Datensätze, einen für jede Seite."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11630",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "21894-1",
+                  "display": "Regional lymph nodes examined [#] Specimen"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "372309006",
+                  "display": "Number of regional lymph nodes examined by microscopy in excised specimen (observable entity)"
+                }
+              ],
+              "text": "Anzahl der untersuchten (nonSLN)-axillären LK",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                    "valueMarkdown": "Anzahl der untersuchten (nonSLN)-axillären LK"
+                  }
+                ]
+              },
+              "type": "integer",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11630-help",
+                  "text": "Hinweis: Die Gesamtzahl der untersuchten Lymphknoten (C) entspricht der Summe der Anzahl aller Sentinel-Lymphknoten (A) und der Anzahl aller untersuchten Nicht-Sentinel-Lymphknoten (B). Der Zusatz „sn“ wird verwendet, wenn die Gesamtzahl der Sentinel- und Nicht-Sentinel-Lymphknoten der Level I/II zusammen weniger als sechs beträgt (vorausgesetzt, dass mindestens ein Sentinel-Lymphknoten im Präparat enthalten ist). Intramammäre Lymphknoten werden in die Zählung der Level-I-Lymphknoten einbezogen. Ebenso gelten Karzinomherde im axillären Fettgewebe (ohne strukturelle Elemente eines Lymphknotens) als axilläre Lymphknotenmetastasen und sollten daher sowohl in die Gesamtzahl als auch in die Zählung der metastatischen Lymphknoten einbezogen werden. Selten verschmelzen metastatische Lymphknoten bei massivem Befall miteinander und bilden ein Konglomerat mit höckerigen Konturen. In solchen Fällen kann die Anzahl der fusionierten Lymphknoten durch eine makroskopische (und mikroskopische) Untersuchung manchmal geschätzt werden, in anderen Fällen ist dies jedoch nicht möglich. Da das Vorhandensein von Konglomeraten die Stadieneinteilung nicht mehr beeinflusst, wird empfohlen, in solchen Fällen die bestmögliche Schätzung der Anzahl der untersuchten und betroffenen Lymphknoten anzugeben und dabei die allgemeine Regel zu beachten, im Zweifelsfall die niedrigeren Kategorien zu bevorzugen. Das heißt, die Anzahl der untersuchten und als metastasiert befundenen Lymphknoten in einem solchen Konglomerat kann eins (wenn die Raumforderung keinen eindeutigen Hinweis auf mehr als einen Lymphknoten zeigt) oder mehr (wenn die Konturen der Raumforderung auf zwei oder mehr verschmolzene Lymphknoten hindeuten) betragen. Bei Patientinnen mit klinisch negativem Lymphknotenstatus (cN0) hat sich die Sentinel-Lymphknotenbiopsie als der axillären Dissektion nicht unterlegen erwiesen. Dementsprechend ist die Sentinel-Lymphknotenbiopsie derzeit das bevorzugte chirurgische Verfahren für das axilläre Staging. Basierend auf den Ergebnissen der prospektiven randomisierten klinischen Studie IBCSG 23-01 profitieren Patientinnen mit cT1-T2 cN0-Mammakarzinom und nachgewiesenem mikrometastasiertem Karzinom (pN1mi; Karzinom \u003E0,2 mm bis 2 mm Größe) nicht von einer axillären Lymphknotendissektion, wenn Mikrometastasen in nur einem oder mehreren Sentinel-Lymphknoten nachgewiesen wurden. Basierend auf den Ergebnissen der prospektiven randomisierten klinischen Studie ACOSOG Z0011 profitieren Patientinnen mit cT1-T2 cN0-Karzinom, die sich einer Lumpektomie und Ganzbrustbestrahlung unterziehen, nicht von einer axillären Lymphknotendissektion, wenn metastasiertes Karzinom vorliegt. (einschließlich Mikrometastasen und Makrometastasen) ist nur in einem oder zwei Sentinel-Lymphknoten vorhanden. Daher muss bei Patientinnen, die sich einer Sentinel-Lymphknotenbiopsie unterziehen, die Anzahl der Sentinel-Lymphknoten mit metastasiertem Karzinom genau bestimmt werden, da dies darüber entscheidet, ob eine vollständige axilläre Lymphknotendissektion erforderlich ist (wenn metastasiertes Karzinom in drei oder mehr Sentinel-Lymphknoten vorliegt) oder nicht (kein Nachweis von metastasiertem Karzinom oder Metastasen in einem oder zwei Sentinel-Lymphknoten). Bei Patienten, die sich einer Sentinel-Lymphknotenbiopsie unterziehen, ist/sind der/die Sentinel-Lymphknoten in der Regel der/die Lymphknoten, der/die Karzinomzellen enthält/enthalten. Wenn Karzinomzellen nur in Nicht-Sentinel-Lymphknoten gefunden werden, handelt es sich bei dem Sentinel-Lymphknoten um einen falsch negativen Sentinel-Lymphknoten. Eine mögliche Erklärung hierfür ist die vollständige oder nahezu vollständige Verdrängung des eigentlichen Sentinel-Lymphknotens durch metastasiertes Karzinom und die daraus resultierende Umkehr oder Ablenkung des Lymphflusses von diesem Knoten (wodurch der eigentliche Sentinel-Lymphknoten den radioaktiven Tracer oder Farbstoff nicht ableitet und nicht als „Sentinel“ identifiziert wird). Metastasiertes Karzinom kann auch in Nicht-Sentinel-Lymphknoten trotz negativer Sentinel-Lymphknoten vorhanden sein, beispielsweise aufgrund einer ungewöhnlichen Lymphdrainage (z. B. sekundär zu lokaler Fibrose nach einer vorangegangenen Operation) oder wenn die zur Identifizierung der Sentinel-Lymphknoten verwendete Technik versagt. Für das axilläre Staging ist bei Patientinnen, die keine neoadjuvante Therapie erhalten haben, mindestens ein Sentinel-Lymphknoten erforderlich. Bei Patientinnen mit cT1-T2 cN0 und cT1-T2 cN1, die nach Abschluss der neoadjuvanten Therapie eine neoadjuvante systemische Therapie erhalten und bei denen es zu einer klinischen und bildgebenden Remission des Lymphknotenbefalls kommt, wird zum Zeitpunkt der definitiven Operation eine Sentinel-Lymphknotenbiopsie durchgeführt. Basierend auf den Ergebnissen dreier separater klinischer Studien ist die Auswertung von mindestens drei Sentinel-Lymphknoten, die mit der Dual-Tracer-Technik identifiziert wurden, mit einer falsch-negativen Sentinel-Lymphknotenrate von unter 10 % verbunden. Bei Patientinnen mit histologisch gesicherter Lymphknotenmetastasierung vor neoadjuvanter Chemotherapie konnte durch die Platzierung eines Markers im positiven Lymphknoten zum Zeitpunkt der Biopsie und die anschließende chirurgische Entfernung des Marker-haltigen Lymphknotens im Rahmen der definitiven Operation (gezielte axilläre Chirurgie) die Rate falsch negativer Ergebnisse der Sentinel-Lymphknotenbiopsie nach neoadjuvanter Therapie gesenkt werden.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Hinweis: Die Gesamtzahl der untersuchten Lymphknoten (C) entspricht der Summe der Anzahl aller Sentinel-Lymphknoten (A) und der Anzahl aller untersuchten Nicht-Sentinel-Lymphknoten (B). Der Zusatz „sn“ wird verwendet, wenn die Gesamtzahl der Sentinel- und Nicht-Sentinel-Lymphknoten der Level I/II zusammen weniger als sechs beträgt (vorausgesetzt, dass mindestens ein Sentinel-Lymphknoten im Präparat enthalten ist). Intramammäre Lymphknoten werden in die Zählung der Level-I-Lymphknoten einbezogen. Ebenso gelten Karzinomherde im axillären Fettgewebe (ohne strukturelle Elemente eines Lymphknotens) als axilläre Lymphknotenmetastasen und sollten daher sowohl in die Gesamtzahl als auch in die Zählung der metastatischen Lymphknoten einbezogen werden. Selten verschmelzen metastatische Lymphknoten bei massivem Befall miteinander und bilden ein Konglomerat mit höckerigen Konturen. In solchen Fällen kann die Anzahl der fusionierten Lymphknoten durch eine makroskopische (und mikroskopische) Untersuchung manchmal geschätzt werden, in anderen Fällen ist dies jedoch nicht möglich. Da das Vorhandensein von Konglomeraten die Stadieneinteilung nicht mehr beeinflusst, wird empfohlen, in solchen Fällen die bestmögliche Schätzung der Anzahl der untersuchten und betroffenen Lymphknoten anzugeben und dabei die allgemeine Regel zu beachten, im Zweifelsfall die niedrigeren Kategorien zu bevorzugen. Das heißt, die Anzahl der untersuchten und als metastasiert befundenen Lymphknoten in einem solchen Konglomerat kann eins (wenn die Raumforderung keinen eindeutigen Hinweis auf mehr als einen Lymphknoten zeigt) oder mehr (wenn die Konturen der Raumforderung auf zwei oder mehr verschmolzene Lymphknoten hindeuten) betragen. Bei Patientinnen mit klinisch negativem Lymphknotenstatus (cN0) hat sich die Sentinel-Lymphknotenbiopsie als der axillären Dissektion nicht unterlegen erwiesen. Dementsprechend ist die Sentinel-Lymphknotenbiopsie derzeit das bevorzugte chirurgische Verfahren für das axilläre Staging. Basierend auf den Ergebnissen der prospektiven randomisierten klinischen Studie IBCSG 23-01 profitieren Patientinnen mit cT1-T2 cN0-Mammakarzinom und nachgewiesenem mikrometastasiertem Karzinom (pN1mi; Karzinom \u003E0,2 mm bis 2 mm Größe) nicht von einer axillären Lymphknotendissektion, wenn Mikrometastasen in nur einem oder mehreren Sentinel-Lymphknoten nachgewiesen wurden. Basierend auf den Ergebnissen der prospektiven randomisierten klinischen Studie ACOSOG Z0011 profitieren Patientinnen mit cT1-T2 cN0-Karzinom, die sich einer Lumpektomie und Ganzbrustbestrahlung unterziehen, nicht von einer axillären Lymphknotendissektion, wenn metastasiertes Karzinom vorliegt. (einschließlich Mikrometastasen und Makrometastasen) ist nur in einem oder zwei Sentinel-Lymphknoten vorhanden. Daher muss bei Patientinnen, die sich einer Sentinel-Lymphknotenbiopsie unterziehen, die Anzahl der Sentinel-Lymphknoten mit metastasiertem Karzinom genau bestimmt werden, da dies darüber entscheidet, ob eine vollständige axilläre Lymphknotendissektion erforderlich ist (wenn metastasiertes Karzinom in drei oder mehr Sentinel-Lymphknoten vorliegt) oder nicht (kein Nachweis von metastasiertem Karzinom oder Metastasen in einem oder zwei Sentinel-Lymphknoten).\n\nBei Patienten, die sich einer Sentinel-Lymphknotenbiopsie unterziehen, ist/sind der/die Sentinel-Lymphknoten in der Regel der/die Lymphknoten, der/die Karzinomzellen enthält/enthalten. Wenn Karzinomzellen nur in Nicht-Sentinel-Lymphknoten gefunden werden, handelt es sich bei dem Sentinel-Lymphknoten um einen falsch negativen Sentinel-Lymphknoten. Eine mögliche Erklärung hierfür ist die vollständige oder nahezu vollständige Verdrängung des eigentlichen Sentinel-Lymphknotens durch metastasiertes Karzinom und die daraus resultierende Umkehr oder Ablenkung des Lymphflusses von diesem Knoten (wodurch der eigentliche Sentinel-Lymphknoten den radioaktiven Tracer oder Farbstoff nicht ableitet und nicht als „Sentinel“ identifiziert wird). Metastasiertes Karzinom kann auch in Nicht-Sentinel-Lymphknoten trotz negativer Sentinel-Lymphknoten vorhanden sein, beispielsweise aufgrund einer ungewöhnlichen Lymphdrainage (z. B. sekundär zu lokaler Fibrose nach einer vorangegangenen Operation) oder wenn die zur Identifizierung der Sentinel-Lymphknoten verwendete Technik versagt. Für das axilläre Staging ist bei Patientinnen, die keine neoadjuvante Therapie erhalten haben, mindestens ein Sentinel-Lymphknoten erforderlich. Bei Patientinnen mit cT1-T2 cN0 und cT1-T2 cN1, die nach Abschluss der neoadjuvanten Therapie eine neoadjuvante systemische Therapie erhalten und bei denen es zu einer klinischen und bildgebenden Remission des Lymphknotenbefalls kommt, wird zum Zeitpunkt der definitiven Operation eine Sentinel-Lymphknotenbiopsie durchgeführt. Basierend auf den Ergebnissen dreier separater klinischer Studien ist die Auswertung von mindestens drei Sentinel-Lymphknoten, die mit der Dual-Tracer-Technik identifiziert wurden, mit einer falsch-negativen Sentinel-Lymphknotenrate von unter 10 % verbunden. Bei Patientinnen mit histologisch gesicherter Lymphknotenmetastasierung vor neoadjuvanter Chemotherapie konnte durch die Platzierung eines Markers im positiven Lymphknoten zum Zeitpunkt der Biopsie und die anschließende chirurgische Entfernung des Marker-haltigen Lymphknotens im Rahmen der definitiven Operation (gezielte axilläre Chirurgie) die Rate falsch negativer Ergebnisse der Sentinel-Lymphknotenbiopsie nach neoadjuvanter Therapie gesenkt werden."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11640",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "21893-3",
+                  "display": "Regional lymph nodes positive [#] Specimen"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "372308003",
+                  "display": "Number of regional lymph nodes involved (observable entity)"
+                }
+              ],
+              "text": "Anzahl der befallenen (nonSLN)-axillären LK",
+              "_text": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                    "valueMarkdown": "Anzahl der befallenen (nonSLN)-axillären LK"
+                  }
+                ]
+              },
+              "type": "integer",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11650",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "85347-3",
+                  "display": "Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy"
+                }
+              ],
+              "text": "Anzahl der untersuchten Sentinel- LK",
+              "type": "integer",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11540",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "396487001",
+                    "display": "SLN"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11660",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "1264491009",
+                  "display": "Number of sentinel lymph nodes containing metastatic neoplasm in excised specimen (observable entity)"
+                }
+              ],
+              "text": "Anzahl der befallenen Sentinel-LK",
+              "type": "integer",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.11540",
+                  "operator": "=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "396487001",
+                    "display": "SLN"
+                  }
+                }
+              ],
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11944",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "92833-3",
+                  "display": "Lymph nodes examined [#] in Cancer specimen by Light microscopy"
+                }
+              ],
+              "text": "Gesamtzahl untersuchter Lymphknoten",
+              "type": "integer",
+              "enableBehavior": "any",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11945",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "92831-7",
+                  "display": "Lymph nodes with metastasis [#] in Cancer specimen"
+                }
+              ],
+              "text": "Gesamtzahl befallener Lymphknoten",
+              "type": "integer",
+              "enableBehavior": "all",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11945-help",
+                  "text": "Die Anzahl der Lymphknoten mit metastasiertem Karzinom wird für die pN-Klassifizierung verwendet.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Die Anzahl der Lymphknoten mit metastasiertem Karzinom wird für die pN-Klassifizierung verwendet."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11947",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "85343-2",
+                  "display": "Lymph nodes with macrometastases [#] in Cancer specimen by Light microscopy"
+                }
+              ],
+              "text": "Gesamtzahl makrometastatisch befallener Lymphknoten",
+              "type": "integer",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11948",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "85344-0",
+                  "display": "Lymph nodes with micrometastases [#] in Cancer specimen by Light microscopy"
+                }
+              ],
+              "text": "Gesamtzahl mikrometastatisch befallener Lymphknoten",
+              "type": "integer",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11948-help",
+                  "text": "Die Anzahl der mikrometastasierten Lymphknoten wird zur Anzahl der makrometastasierten Lymphknoten addiert, vorausgesetzt, es liegt mindestens ein Lymphknoten mit Makrometastasen vor, um die pN-Kategorie zu bestimmen. Wenn keine Makrometastasen vorliegen, ändert die Anzahl der mikrometastasierten Lymphknoten (vorausgesetzt, es ist mindestens einer vorhanden) die pN1mi-Kategorie nicht, kann aber dennoch prognostische Informationen liefern.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Die Anzahl der mikrometastasierten Lymphknoten wird zur Anzahl der makrometastasierten Lymphknoten addiert, vorausgesetzt, es liegt mindestens ein Lymphknoten mit Makrometastasen vor, um die pN-Kategorie zu bestimmen. Wenn keine Makrometastasen vorliegen, ändert die Anzahl der mikrometastasierten Lymphknoten (vorausgesetzt, es ist mindestens einer vorhanden) die pN1mi-Kategorie nicht, kann aber dennoch prognostische Informationen liefern."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11946",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "85352-3",
+                  "display": "Lymph nodes with isolated tumor cells [#] in Cancer specimen by Light microscopy"
+                }
+              ],
+              "text": "Gesamtzahl ausschließlich ITC-befallener Lymphknoten",
+              "type": "integer",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11946-help",
+                  "text": "Isolierte Tumorzellcluster (ITCs) sind einzelne Tumorzellen oder kleine Karzinomcluster mit einer maximalen Ausdehnung von 0,2 mm oder maximal 200 Zellen in einem einzelnen histologischen Querschnitt. ITCs können mittels routinemäßiger Hämatoxylin-Eosin-Färbung (H&E) oder Immunhistochemie (IHC) nachgewiesen werden, sollten aber in H&E-gefärbten Präparaten verifiziert werden. Falls in den Lymphknoten kein makro- und/oder mikrometastasiertes Karzinom nachgewiesen wird, muss die Anzahl der Lymphknoten, die ausschließlich ITCs enthalten, angegeben werden. Derzeit werden ITCs für die Stadieneinteilung nicht als Metastasen klassifiziert. Werden in den Lymphknoten ausschließlich ITCs nachgewiesen, lautet die pN-Klassifikation pN0(i+). Bei Vorliegen von makro- oder mikrometastasiertem Karzinom in Lymphknoten sollte die Anzahl der Lymphknoten mit ITCs nicht zur Anzahl der Lymphknoten mit metastasiertem Karzinom für die Stadieneinteilung addiert werden, sondern in die Gesamtzahl der untersuchten Lymphknoten einbezogen werden. Die Angabe der Anzahl der Lymphknoten mit ausschließlich ITCs ist dann optional. (Das AJCC Cancer Staging Manual empfiehlt, die Anzahl der ausschließlich von ITCs befallenen Lymphknoten im Bericht anzugeben.) Nach neoadjuvanter Therapie schließt das Vorliegen von ITCs (ypN0(i+)-Kategorie) eine pathologische Komplettremission (pCR) aus.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Isolierte Tumorzellcluster (ITCs) sind einzelne Tumorzellen oder kleine Karzinomcluster mit einer maximalen Ausdehnung von 0,2 mm oder maximal 200 Zellen in einem einzelnen histologischen Querschnitt. ITCs können mittels routinemäßiger Hämatoxylin-Eosin-Färbung (H&E) oder Immunhistochemie (IHC) nachgewiesen werden, sollten aber in H&E-gefärbten Präparaten verifiziert werden. Falls in den Lymphknoten kein makro- und/oder mikrometastasiertes Karzinom nachgewiesen wird, muss die Anzahl der Lymphknoten, die ausschließlich ITCs enthalten, angegeben werden. Derzeit werden ITCs für die Stadieneinteilung nicht als Metastasen klassifiziert. Werden in den Lymphknoten ausschließlich ITCs nachgewiesen, lautet die pN-Klassifikation pN0(i+). Bei Vorliegen von makro- oder mikrometastasiertem Karzinom in Lymphknoten sollte die Anzahl der Lymphknoten mit ITCs nicht zur Anzahl der Lymphknoten mit metastasiertem Karzinom für die Stadieneinteilung addiert werden, sondern in die Gesamtzahl der untersuchten Lymphknoten einbezogen werden. Die Angabe der Anzahl der Lymphknoten mit ausschließlich ITCs ist dann optional. (Das AJCC Cancer Staging Manual empfiehlt, die Anzahl der ausschließlich von ITCs befallenen Lymphknoten im Bericht anzugeben.) Nach neoadjuvanter Therapie schließt das Vorliegen von ITCs (ypN0(i+)-Kategorie) eine pathologische Komplettremission (pCR) aus."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11690",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "85351-5",
+                  "display": "Lymph node metastatic deposit.max dimension [Length] in Cancer specimen by Light microscopy"
+                }
+              ],
+              "text": "Ausdehnung der größten metastatischen Infiltration",
+              "type": "quantity",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11690-help",
+                  "text": "Die Größe des größten metastasierten Karzinomherdes hat keinen Einfluss auf die pN-Klassifizierung, sofern der Grenzwert von 2 mm zur Unterscheidung von Mikro- und Makrometastasen berücksichtigt wird. Die Größe der größten Metastase in einem Wächterlymphknoten spiegelt das Risiko einer Ausbreitung auf weitere Lymphknoten wider, ähnlich wie die Größe des Primärtumors das Risiko einer Ausbreitung auf Lymphknoten oder entfernte Organe widerspiegelt. Obwohl der größte metastatische Fokus üblicherweise in einem Wächterlymphknoten identifiziert wird, gibt es Fälle, in denen die größte Metastase in einem Nicht-Wächterlymphknoten gefunden wird. Die Größe der größten Lymphknotenmetastase sollte unabhängig vom Lymphknotentyp (Wächter- oder Nicht-Wächterlymphknoten) angegeben werden. Werden Wächter- und Nicht-Wächterlymphknoten entfernt, könnte die Größe des größten metastatischen Karzinomherdes in Wächterlymphknoten und Nicht-Wächterlymphknoten separat angegeben werden, eine solch detaillierte Angabe ist jedoch nicht erforderlich. Nach neoadjuvanter Therapie ist die Größe der größten Lymphknotenmetastase eine Variable, die zur Berechnung der Resttumorlast benötigt wird. Die Messung des Restkarzinoms nach neoadjuvanter Therapie ist Gegenstand von Diskussionen und variiert in verschiedenen Klassifikationssystemen. Gemäß dem AJCC-Staging-System (8. Auflage) wird für die Lymphknotenklassifikation ausschließlich die Größe des größten zusammenhängenden Restkarzinomherds in den Lymphknoten herangezogen. Die therapiebedingte Fibrose zwischen benachbarten Restkarzinomherden wird bei der Größenmessung nicht berücksichtigt.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Die Größe des größten metastasierten Karzinomherdes hat keinen Einfluss auf die pN-Klassifizierung, sofern der Grenzwert von 2 mm zur Unterscheidung von Mikro- und Makrometastasen berücksichtigt wird. Die Größe der größten Metastase in einem Wächterlymphknoten spiegelt das Risiko einer Ausbreitung auf weitere Lymphknoten wider, ähnlich wie die Größe des Primärtumors das Risiko einer Ausbreitung auf Lymphknoten oder entfernte Organe widerspiegelt. Obwohl der größte metastatische Fokus üblicherweise in einem Wächterlymphknoten identifiziert wird, gibt es Fälle, in denen die größte Metastase in einem Nicht-Wächterlymphknoten gefunden wird. Die Größe der größten Lymphknotenmetastase sollte unabhängig vom Lymphknotentyp (Wächter- oder Nicht-Wächterlymphknoten) angegeben werden. Werden Wächter- und Nicht-Wächterlymphknoten entfernt, könnte die Größe des größten metastatischen Karzinomherdes in Wächterlymphknoten und Nicht-Wächterlymphknoten separat angegeben werden, eine solch detaillierte Angabe ist jedoch nicht erforderlich. Nach neoadjuvanter Therapie ist die Größe der größten Lymphknotenmetastase eine Variable, die zur Berechnung der Resttumorlast benötigt wird. Die Messung des Restkarzinoms nach neoadjuvanter Therapie ist Gegenstand von Diskussionen und variiert in verschiedenen Klassifikationssystemen. Gemäß dem AJCC-Staging-System (8. Auflage) wird für die Lymphknotenklassifikation ausschließlich die Größe des größten zusammenhängenden Restkarzinomherds in den Lymphknoten herangezogen. Die therapiebedingte Fibrose zwischen benachbarten Restkarzinomherden wird bei der Größenmessung nicht berücksichtigt."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.20",
+              "code": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "396790006",
+                  "display": "Tumor size, largest metastasis, greatest dimension (observable entity)"
+                }
+              ],
+              "text": "Ausdehnung der größten metastatischen Infiltration mit Fibrosebezirken",
+              "type": "quantity",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11700",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "85350-7",
+                  "display": "Extranodal extension of carcinoma [Presence] in Cancer specimen by Light microscopy"
+                }
+              ],
+              "text": "extranodale Infiltration durch LK-Metastase",
+              "type": "open-choice",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12--20190811122751",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11700-help",
+                  "text": "Extranodale Ausbreitung (ENE) kann makroskopisch sichtbar sein (verklebte Lymphknoten), ist aber meist ein mikroskopischer Befund. In Studien, die den Einfluss von ENE auf die Prognose und die Gesamtlymphknotenbelastung untersuchten, wenn ENE nur in Sentinel-Lymphknoten vorlag, wurde ENE lediglich als qualitative Variable (vorhanden/nicht vorhanden) berücksichtigt. Es gibt derzeit keine gesicherten Erkenntnisse, die eine weitere Quantifizierung von ENE rechtfertigen würden.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Extranodale Ausbreitung (ENE) kann makroskopisch sichtbar sein (verklebte Lymphknoten), ist aber meist ein mikroskopischer Befund. In Studien, die den Einfluss von ENE auf die Prognose und die Gesamtlymphknotenbelastung untersuchten, wenn ENE nur in Sentinel-Lymphknoten vorlag, wurde ENE lediglich als qualitative Variable (vorhanden/nicht vorhanden) berücksichtigt. Es gibt derzeit keine gesicherten Erkenntnisse, die eine weitere Quantifizierung von ENE rechtfertigen würden."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11949",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "85349-9",
+                  "display": "Lymph node response to neoadjuvant therapy in Cancer specimen by CAP cancer protocols"
+                }
+              ],
+              "text": "LK-Behandlungseffekte",
+              "type": "open-choice",
+              "enableWhen": [
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10210",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "260413007",
+                    "display": "Keine"
+                  }
+                },
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10210",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "397943006",
+                    "display": "geplant"
+                  }
+                },
+                {
+                  "question": "2.16.840.1.113883.3.1937.777.18.2.3.10210",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "system": "http://snomed.info/sct",
+                    "code": "261665006",
+                    "display": "unbekannt"
+                  }
+                }
+              ],
+              "enableBehavior": "any",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12--20190811122751",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.3.11949-help",
+                  "text": "Der Behandlungseffekt ist definiert als Narbenbildung, Hyalinisation, Nekrose, mukoide oder myxoide Veränderungen; Ansammlung schaumiger Histiozyten im Lymphknoten (ähnlich dem Tumorbett im Brustpräparat) und/oder das Vorhandensein zellulärer Veränderungen im Restkarzinom, die auf die neoadjuvante Therapie zurückzuführen sind. Die Dokumentation des Behandlungseffekts in Lymphknoten wird dringend empfohlen, da er einen Indikator für das Ausmaß des Lymphknotenbefalls vor der neoadjuvanten Therapie und für das Ansprechen des Tumors auf die Behandlung darstellt. Der Behandlungseffekt sollte idealerweise getrennt für Lymphknoten mit und ohne Restmetastasen berichtet werden. Einige Lymphknoten zeigen vitales Restkarzinom, vermischt mit Fibrosearealen, was auf Metastasen mit Anzeichen eines gewissen Therapieansprechens hindeutet. Die Gesamtzahl der Lymphknoten mit vitalem Restkarzinom sollte angegeben werden. Einige Lymphknoten zeigen lediglich posttherapeutische Fibrose und kein vitales Restkarzinom. Die Anzahl der Lymphknoten mit Fibrose, aber ohne vitales Restkarzinom, sollte als Indikator für die Lymphknotenbelastung vor der Behandlung angegeben werden. In manchen Fällen kann es schwierig sein, sicher zu bestimmen, ob ein (kleiner) Fibroseherd sekundär zur Auflösung einer Metastase ist oder nicht. Beispielsweise lässt sich eine Gewebereaktion nach der Biopsie nicht immer sicher von einer Fibrose nach der Behandlung unterscheiden. In einigen Fällen können vereinzelte Restkarzinomzellen Histiozyten ähneln, und Ansammlungen von Histiozyten können auch in Bereichen der Tumorregression vorkommen. Immunhistochemische Färbungen können zur Klärung unklarer Fälle eingesetzt werden, da Karzinomzellen in der Regel die Expression von Breitspektrum-Zytokeratinen beibehalten, während Makrophagen CD68 exprimieren. Bei Patienten mit histologisch gesicherter Lymphknotenmetastasierung, die vor der neoadjuvanten Chemotherapie dokumentiert wurde und bei denen während der Biopsie ein Marker platziert wurde, sollte der histologische Nachweis der Markerposition im Lymphknoten ebenfalls im endgültigen Pathologiebericht dokumentiert werden.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Der Behandlungseffekt ist definiert als Narbenbildung, Hyalinisation, Nekrose, mukoide oder myxoide Veränderungen; Ansammlung schaumiger Histiozyten im Lymphknoten (ähnlich dem Tumorbett im Brustpräparat) und/oder das Vorhandensein zellulärer Veränderungen im Restkarzinom, die auf die neoadjuvante Therapie zurückzuführen sind. Die Dokumentation des Behandlungseffekts in Lymphknoten wird dringend empfohlen, da er einen Indikator für das Ausmaß des Lymphknotenbefalls vor der neoadjuvanten Therapie und für das Ansprechen des Tumors auf die Behandlung darstellt. Der Behandlungseffekt sollte idealerweise getrennt für Lymphknoten mit und ohne Restmetastasen berichtet werden. Einige Lymphknoten zeigen vitales Restkarzinom, vermischt mit Fibrosearealen, was auf Metastasen mit Anzeichen eines gewissen Therapieansprechens hindeutet. Die Gesamtzahl der Lymphknoten mit vitalem Restkarzinom sollte angegeben werden. Einige Lymphknoten zeigen lediglich posttherapeutische Fibrose und kein vitales Restkarzinom. Die Anzahl der Lymphknoten mit Fibrose, aber ohne vitales Restkarzinom, sollte als Indikator für die Lymphknotenbelastung vor der Behandlung angegeben werden. In manchen Fällen kann es schwierig sein, sicher zu bestimmen, ob ein (kleiner) Fibroseherd sekundär zur Auflösung einer Metastase ist oder nicht. Beispielsweise lässt sich eine Gewebereaktion nach der Biopsie nicht immer sicher von einer Fibrose nach der Behandlung unterscheiden. In einigen Fällen können vereinzelte Restkarzinomzellen Histiozyten ähneln, und Ansammlungen von Histiozyten können auch in Bereichen der Tumorregression vorkommen. Immunhistochemische Färbungen können zur Klärung unklarer Fälle eingesetzt werden, da Karzinomzellen in der Regel die Expression von Breitspektrum-Zytokeratinen beibehalten, während Makrophagen CD68 exprimieren. Bei Patienten mit histologisch gesicherter Lymphknotenmetastasierung, die vor der neoadjuvanten Chemotherapie dokumentiert wurde und bei denen während der Biopsie ein Marker platziert wurde, sollte der histologische Nachweis der Markerposition im Lymphknoten ebenfalls im endgültigen Pathologiebericht dokumentiert werden."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.179",
+              "code": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "21924-6",
+                  "display": "Tumor marker Cancer"
+                }
+              ],
+              "text": "Zusatzuntersuchungen (Biomarker)",
+              "type": "group",
+              "enableBehavior": "all",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.179-help",
+                  "text": "Es ist wichtig, die für die Beurteilung verwendeten immunhistochemischen Antikörper und die Ergebnisse der IHC-Färbungen im Bericht zu dokumentieren. Die routinemäßige Anwendung der IHC zur Beurteilung des Vorhandenseins von Karzinomen in Lymphknoten wird nicht empfohlen. Der Pathologe kann die IHC zur Beurteilung von Zellen einsetzen, die verdächtig, aber nicht diagnostisch für ein Karzinom sind, insbesondere in routinemäßig H&E-gefärbten Schnitten, insbesondere in Lymphknoten, die nach neoadjuvanter Therapie entnommen wurden. Geeignet sind IHC-Tests für Breitspektrum-Zytokeratine (CKs) wie AE1/AE3 sowie für andere CKs (CK7, Panzytokeratin, OSCAR, CK19). Das CK-Reaktivitätsmuster des primären invasiven Karzinoms (z. B. CK7-negatives, aber CK20-positives primäres Mammakarzinom mit apokriner Morphologie) kann die Wahl des am besten geeigneten IHC-Panels zur Beurteilung verdächtiger Zellen in Lymphknoten leiten. Einige nicht-epitheliale Zellen (wie dendritische Retikulumzellen oder Lymphozyten) können eine unspezifische Aufnahme von Zytokeratinen (CKs) zeigen. Keratinreste, einschließlich kernloser Keratinschuppen, können ebenfalls eine für Keratin spezifische Färbung aufweisen, die jedoch nicht als Karzinomzellen interpretiert werden sollte. Die diagnostische Interpretation erfordert eine sorgfältige Korrelation der morphologischen und immunhistochemischen (IHC) Befunde. In problematischen Fällen wird, wenn möglich, ein Vergleich mit der Morphologie und dem IHC-Profil des primären invasiven Karzinoms empfohlen. Wenn die IHC-Untersuchung axilläre Lymphknotenmetastasen eines extramammären Primärtumors nachweist (z. B. Müller-Karzinom, Melanom), muss dieser Befund im Bericht klar angegeben werden; die pN-Klassifikation für Brustkrebs findet in diesem Fall keine Anwendung. Obwohl die Bestimmung des Östrogenrezeptor- (ER), Progesteronrezeptor- (PR) und HER2-Rezeptorstatus des primären invasiven Mammakarzinoms Standard ist, kann es gelegentlich erforderlich sein, den Rezeptorstatus von Lymphknotenmetastasen zu bestimmen. In solchen Fällen sollten die gleichen Richtlinien für die Interpretation und Berichterstattung des ER-, PR- und HER2-Status des primären invasiven Karzinoms angewendet werden. Molekularbiologische Techniken Alle Lymphknotenmakrometastasen müssen histologisch identifiziert werden. Die Verwendung der Loop-vermittelten isothermen Amplifikation (LAMP) als quantitative mRNA-Amplifikationstechnik ist als alternative Methode nur für die Beurteilung makroskopisch unauffälliger Lymphknoten zugelassen. Dieser Test erfordert die Einsendung des gesamten (oder nahezu des gesamten) Lymphknotengewebes zur LAMP-Analyse, wodurch eine histologische Untersuchung nicht möglich ist. Daher sollte kein makroskopisch verdächtiger Lymphknoten für eine Metastasierung eines Karzinoms eingesandt werden. Es ist wichtig, die Ergebnisse der einstufigen Nukleinsäureamplifikation im Befundbericht anzugeben. Die einstufige Nukleinsäureamplifikation ist ein kommerziell erhältlicher LAMP-basierter Test zum Nachweis von mRNA (CK19), die mit Brustkrebs assoziiert ist. Es dient dazu, das Vorhandensein von Epithelzellen im Lymphknoten nachzuweisen und das Krankheitsvolumen abzuschätzen.\u003Csup\u003E28\u003C/sup\u003E Das RD-100i OSNA-System, ein einstufiger Nukleinsäureamplifikationstest zum Nachweis und zur Quantifizierung von CK19-mRNA, wurde im August 2013 vom britischen National Institute for Health and Cancer Excellence (NICE) offiziell zugelassen.\u003Csup\u003E29\u003C/sup\u003E Die Analyse des gesamten Lymphknotens mit dem RD-100i OSNA-System kann zur Erkennung von Sentinel-Lymphknotenmetastasen bei klinisch lymphknotennegativen Patientinnen mit frühem (T1-T2) invasivem Mammakarzinom eingesetzt werden, die sich einer Sentinel-Lymphknotenbiopsie unterziehen und für eine axilläre Lymphknotendissektion infrage kommen. Die histologische Untersuchung weist eine hohe Spezifität auf, kann aber kleinste Karzinomablagerungen übersehen, während der einstufige Nukleinsäureamplifikationstest eine Gewebeprobenverzerrung eliminiert, da der gesamte Lymphknoten analysiert wird. Der einstufige Nukleinsäureamplifikationstest (OSNA) zeichnet sich durch eine kurze Bearbeitungszeit und einen geringeren Ressourcenaufwand als die Histologie aus. Im Vergleich zur Histologie alternierender Gewebeschnitte zeigt der RD-100i OSNA eine Übereinstimmung von 96 %. Die Quantifizierung der CK19-mRNA mittels einstufiger Nukleinsäureamplifikation korreliert mit dem Ausmaß des Karzinoms in den Lymphknoten. Der RD-100i OSNA ist so kalibriert, dass er isolierte Tumorzellen (ITCs, definiert als CK19-mRNA-Kopienzahl zwischen 100 und 250/µL) ignorieren kann, aber Mikrometastasen (entsprechend einer CK19-mRNA-Kopienzahl zwischen 250 und 5000/µL) und Makrometastasen (definiert als CK19-mRNA-Kopienzahl über 5000/µL) detektieren kann. Da die Kopienzahl proportional zur Anzahl der CK19-exprimierenden Zellen und somit zum Ausmaß des Lymphknotenbefalls ist, spiegelt eine höhere Kopienzahl ein größeres Volumen wider. Obwohl diese aufgrund der nicht-mikroskopischen Natur des Assays nicht metrisch messbar sind, werden die Ergebnisse als Mikrometastasen oder Makrometastasen extrapoliert. Daher wäre die Kodierung solcher Ergebnisse als pN0(mol+) (die in der UICC-TNM-Klassifikation maligner Tumoren definierte Kategorie\u003Csup\u003E12\u003C/sup\u003E) ungenau. pN1mi(mol+) und pN1(mol+) wären, obwohl nicht in der UICC-TNM-Klassifikation definiert, die geeignetsten Bezeichnungen für solche Arten des Lymphknotenbefalls, da sie sowohl die extrapolierte Größe als auch den nicht-mikroskopischen Nachweis berücksichtigen. Die einstufige Nukleinsäureamplifikation findet in einigen Ländern (wie z. B. Spanien, Frankreich, Italien, Japan und Australien) Anwendung, insbesondere dort, wo eine schnelle intraoperative Beurteilung des Lymphknotenstatus erforderlich ist, um die Patientenversorgung zu beschleunigen. Bei quantitativen molekularen Tests können falsch-positive und falsch-negative Ergebnisse auftreten. In seltenen Fällen kann ein positives Ergebnis biologisch gesehen „falsch-positiv“ sein, da es sekundär durch das Vorhandensein von benignem Brustdrüsengewebe in einem Lymphknoten bedingt ist. Dies kann auf eine Verlagerung während eines oder mehrerer vorangegangener Eingriffe, ektopische intranodale benigne Brustdrüsen oder Hautanhangsgebilde oder Endosalpingiose/benigne Müller-Einschlüsse in den Lymphknoten zurückzuführen sein. Selten kann auch eine sekundäre Beteiligung eines axillären Lymphknotens durch ein CK19-positives Karzinom, das primär extramammär lokalisiert ist, zu einem falsch-positiven Ergebnis führen. Derzeit sind die klinische Bedeutung und die therapeutischen Konsequenzen eines positiven quantitativen molekularen Ergebnisses bei histologisch negativem Lymphknoten unbekannt.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Es ist wichtig, die für die Beurteilung verwendeten immunhistochemischen Antikörper und die Ergebnisse der IHC-Färbungen im Bericht zu dokumentieren. Die routinemäßige Anwendung der IHC zur Beurteilung des Vorhandenseins von Karzinomen in Lymphknoten wird nicht empfohlen. Der Pathologe kann die IHC zur Beurteilung von Zellen einsetzen, die verdächtig, aber nicht diagnostisch für ein Karzinom sind, insbesondere in routinemäßig H&E-gefärbten Schnitten, insbesondere in Lymphknoten, die nach neoadjuvanter Therapie entnommen wurden. Geeignet sind IHC-Tests für Breitspektrum-Zytokeratine (CKs) wie AE1/AE3 sowie für andere CKs (CK7, Panzytokeratin, OSCAR, CK19). Das CK-Reaktivitätsmuster des primären invasiven Karzinoms (z. B. CK7-negatives, aber CK20-positives primäres Mammakarzinom mit apokriner Morphologie) kann die Wahl des am besten geeigneten IHC-Panels zur Beurteilung verdächtiger Zellen in Lymphknoten leiten. Einige nicht-epitheliale Zellen (wie dendritische Retikulumzellen oder Lymphozyten) können eine unspezifische Aufnahme von Zytokeratinen (CKs) zeigen. Keratinreste, einschließlich kernloser Keratinschuppen, können ebenfalls eine für Keratin spezifische Färbung aufweisen, die jedoch nicht als Karzinomzellen interpretiert werden sollte. Die diagnostische Interpretation erfordert eine sorgfältige Korrelation der morphologischen und immunhistochemischen (IHC) Befunde. In problematischen Fällen wird, wenn möglich, ein Vergleich mit der Morphologie und dem IHC-Profil des primären invasiven Karzinoms empfohlen. Wenn die IHC-Untersuchung axilläre Lymphknotenmetastasen eines extramammären Primärtumors nachweist (z. B. Müller-Karzinom, Melanom), muss dieser Befund im Bericht klar angegeben werden; die pN-Klassifikation für Brustkrebs findet in diesem Fall keine Anwendung. Obwohl die Bestimmung des Östrogenrezeptor- (ER), Progesteronrezeptor- (PR) und HER2-Rezeptorstatus des primären invasiven Mammakarzinoms Standard ist, kann es gelegentlich erforderlich sein, den Rezeptorstatus von Lymphknotenmetastasen zu bestimmen. In solchen Fällen sollten die gleichen Richtlinien für die Interpretation und Berichterstattung des ER-, PR- und HER2-Status des primären invasiven Karzinoms angewendet werden.\n\nMolekularbiologische Techniken Alle Lymphknotenmakrometastasen müssen histologisch identifiziert werden. Die Verwendung der Loop-vermittelten isothermen Amplifikation (LAMP) als quantitative mRNA-Amplifikationstechnik ist als alternative Methode nur für die Beurteilung makroskopisch unauffälliger Lymphknoten zugelassen. Dieser Test erfordert die Einsendung des gesamten (oder nahezu des gesamten) Lymphknotengewebes zur LAMP-Analyse, wodurch eine histologische Untersuchung nicht möglich ist. Daher sollte kein makroskopisch verdächtiger Lymphknoten für eine Metastasierung eines Karzinoms eingesandt werden. Es ist wichtig, die Ergebnisse der einstufigen Nukleinsäureamplifikation im Befundbericht anzugeben. Die einstufige Nukleinsäureamplifikation ist ein kommerziell erhältlicher LAMP-basierter Test zum Nachweis von mRNA (CK19), die mit Brustkrebs assoziiert ist. Es dient dazu, das Vorhandensein von Epithelzellen im Lymphknoten nachzuweisen und das Krankheitsvolumen abzuschätzen.\u003Csup\u003E28\u003C/sup\u003E Das RD-100i OSNA-System, ein einstufiger Nukleinsäureamplifikationstest zum Nachweis und zur Quantifizierung von CK19-mRNA, wurde im August 2013 vom britischen National Institute for Health and Cancer Excellence (NICE) offiziell zugelassen.\u003Csup\u003E29\u003C/sup\u003E Die Analyse des gesamten Lymphknotens mit dem RD-100i OSNA-System kann zur Erkennung von Sentinel-Lymphknotenmetastasen bei klinisch lymphknotennegativen Patientinnen mit frühem (T1-T2) invasivem Mammakarzinom eingesetzt werden, die sich einer Sentinel-Lymphknotenbiopsie unterziehen und für eine axilläre Lymphknotendissektion infrage kommen. Die histologische Untersuchung weist eine hohe Spezifität auf, kann aber kleinste Karzinomablagerungen übersehen, während der einstufige Nukleinsäureamplifikationstest eine Gewebeprobenverzerrung eliminiert, da der gesamte Lymphknoten analysiert wird. Der einstufige Nukleinsäureamplifikationstest (OSNA) zeichnet sich durch eine kurze Bearbeitungszeit und einen geringeren Ressourcenaufwand als die Histologie aus. Im Vergleich zur Histologie alternierender Gewebeschnitte zeigt der RD-100i OSNA eine Übereinstimmung von 96 %. Die Quantifizierung der CK19-mRNA mittels einstufiger Nukleinsäureamplifikation korreliert mit dem Ausmaß des Karzinoms in den Lymphknoten. Der RD-100i OSNA ist so kalibriert, dass er isolierte Tumorzellen (ITCs, definiert als CK19-mRNA-Kopienzahl zwischen 100 und 250/µL) ignorieren kann, aber Mikrometastasen (entsprechend einer CK19-mRNA-Kopienzahl zwischen 250 und 5000/µL) und Makrometastasen (definiert als CK19-mRNA-Kopienzahl über 5000/µL) detektieren kann. Da die Kopienzahl proportional zur Anzahl der CK19-exprimierenden Zellen und somit zum Ausmaß des Lymphknotenbefalls ist, spiegelt eine höhere Kopienzahl ein größeres Volumen wider. Obwohl diese aufgrund der nicht-mikroskopischen Natur des Assays nicht metrisch messbar sind, werden die Ergebnisse als Mikrometastasen oder Makrometastasen extrapoliert. Daher wäre die Kodierung solcher Ergebnisse als pN0(mol+) (die in der UICC-TNM-Klassifikation maligner Tumoren definierte Kategorie\u003Csup\u003E12\u003C/sup\u003E) ungenau. pN1mi(mol+) und pN1(mol+) wären, obwohl nicht in der UICC-TNM-Klassifikation definiert, die geeignetsten Bezeichnungen für solche Arten des Lymphknotenbefalls, da sie sowohl die extrapolierte Größe als auch den nicht-mikroskopischen Nachweis berücksichtigen. Die einstufige Nukleinsäureamplifikation findet in einigen Ländern (wie z. B. Spanien, Frankreich, Italien, Japan und Australien) Anwendung, insbesondere dort, wo eine schnelle intraoperative Beurteilung des Lymphknotenstatus erforderlich ist, um die Patientenversorgung zu beschleunigen. Bei quantitativen molekularen Tests können falsch-positive und falsch-negative Ergebnisse auftreten. In seltenen Fällen kann ein positives Ergebnis biologisch gesehen „falsch-positiv“ sein, da es sekundär durch das Vorhandensein von benignem Brustdrüsengewebe in einem Lymphknoten bedingt ist. Dies kann auf eine Verlagerung während eines oder mehrerer vorangegangener Eingriffe, ektopische intranodale benigne Brustdrüsen oder Hautanhangsgebilde oder Endosalpingiose/benigne Müller-Einschlüsse in den Lymphknoten zurückzuführen sein. Selten kann auch eine sekundäre Beteiligung eines axillären Lymphknotens durch ein CK19-positives Karzinom, das primär extramammär lokalisiert ist, zu einem falsch-positiven Ergebnis führen. Derzeit sind die klinische Bedeutung und die therapeutischen Konsequenzen eines positiven quantitativen molekularen Ergebnisses bei histologisch negativem Lymphknoten unbekannt."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.180",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "1234805007",
+                      "display": "Presence of estrogen receptor in malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                    }
+                  ],
+                  "text": "ER",
+                  "type": "group",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.180-help",
+                      "text": "Die Verwendung von Hormonrezeptor-Scoring-Systemen wie Allred, Quickscore und H-Score ist optional (siehe methodische Details unten). Der Hormonrezeptorstatus wird primär bestimmt, um Patientinnen zu identifizieren, die von einer endokrinen Therapie profitieren könnten. Etwa 75 bis 80 % der invasiven Mammakarzinome sind Östrogenrezeptor- (ER) und Progesteronrezeptor-positiv (PR). Dies betrifft nahezu alle gut differenzierten (Grad 1) und die meisten mäßig differenzierten (Grad 2) Karzinome. Studien haben einen deutlichen Überlebensvorteil durch die endokrine Therapie bei Patientinnen mit ER-positiven Tumoren gezeigt. Der Rezeptorstatus ist jedoch nur ein schwacher prognostischer Faktor. Derzeit wird der ER-Status zur Auswahl von Patientinnen herangezogen, die für eine endokrine Therapie geeignet sind. Der PR-Status liefert Informationen über das Ansprechen auf die endokrine Therapie bei Patientinnen mit ER-positiven Tumoren. Echte ER-negative, PR-positive Karzinome sind extrem selten, aber auch Patientinnen mit solchen Tumoren kommen für eine endokrine Therapie infrage. Der Befund eines ER-negativen, PR-positiven Tumors kann auf ein falsch negatives ER-Ergebnis oder ein falsch positives PR-Ergebnis hindeuten. Eine Überprüfung oder Wiederholung der Färbung wird empfohlen. Der Hormonrezeptorstatus wird meist in formalinfixierten, paraffineingebetteten Gewebeschnitten mittels Immunhistochemie (IHC) bestimmt. Nur eine Kernfärbung gilt als positiv. Einzelgenexpressionsanalysen werden für die Routineanwendung nicht empfohlen. Die American Society of Clinical Oncology (ASCO) und das College of American Pathologists (CAP), das Royal College of Pathologists UK (RCPath) und das Royal College of Pathologists of Australasia (RCPA) haben Empfehlungen für die Berichterstattung von IHC-Ergebnissen für ER und PR herausgegeben.\u003Csup\u003E1-3\u003C/sup\u003E Studien, die sowohl IHC als auch den Ligandenbindungstest verwenden, deuten darauf hin, dass Patientinnen mit höheren Hormonrezeptorspiegeln eine höhere Wahrscheinlichkeit für ein Ansprechen auf die endokrine Therapie haben. Allerdings wurde bereits eine Expression von nur 1 % positiver Färbung mit einem klinischen Ansprechen in Verbindung gebracht. Daher empfehlen die Leitlinien, alle Fälle mit mindestens 1 % positiven Zellen als rezeptorpositiv zu klassifizieren. Bei Patientinnen mit niedriger ER-Expression (1 bis 10 % positive Zellen) sollte die Entscheidung für eine endokrine Therapie auf einer Analyse der Risiken und des potenziellen Nutzens basieren.\u003Csup\u003E4\u003C/sup\u003E Definition eines negativen Ergebnisses Alle aktuellen Leitlinien empfehlen, Karzinome mit \u003C1 % positiven Zellen als negativ für ER und PR zu betrachten.\u003Csup\u003E5–7\u003C/sup\u003E Im Allred-System (siehe Tabelle 4) war das Überleben von Patientinnen, deren Karzinome einen Score von 2 aufwiesen (entsprechend \u003C1 % schwach positiven Zellen), ähnlich dem von Patientinnen, deren Karzinome vollständig ER-negativ waren.\u003Csup\u003E8\u003C/sup\u003E Daher wurde ein Score von 2 als negatives Ergebnis gewertet. Nach dem Allred- oder Quickscore-System\u003Csup\u003E9\u003C/sup\u003E hätten Karzinome mit \u003C1 % positiven Zellen und Intensitäts-Scores von 2 oder 3 einen Gesamtscore von 3 oder 4 und wurden historisch als positiv betrachtet. Es handelt sich um seltene Karzinome, deren Ansprechen auf die endokrine Therapie nicht spezifisch untersucht wurde. Daher kann die Anwendung der Allred/Quickscore-Bewertungsmethoden in einem kleinen Teil der Fälle mit dem oben empfohlenen Grenzwert von 1 % für Positivität/Negativität in Konflikt stehen. Es wird empfohlen, alle Fälle mit ≥1 % positiven Tumorzellen unabhängig vom Allred/Quickscore als rezeptorpositiv zu klassifizieren. Berichte sollten den Gesamtprozentsatz positiver Zellen und die durchschnittliche Intensität enthalten, unabhängig davon, ob zusätzliche Bewertungssysteme wie der Allred- oder der H-Score angegeben werden. Alle Fälle mit \u003C1 % positiven Tumorzellen sollten unabhängig vom Allred-Score als rezeptornegativ klassifiziert werden. Es wird zunehmend anerkannt, dass nur begrenzte Daten zum Ansprechen auf die endokrine Therapie bei Karzinomen mit niedriger ER-Expression (1–10 % positive Zellen) vorliegen, obwohl die derzeit verfügbaren Informationen einen möglichen Nutzen nahelegen. Darüber hinaus haben neuere Studien zur ER-Genexpression Profile gezeigt, die eher ER-negativen Karzinomen ähneln. Es wird empfohlen, diese Tumoren als positiv zu klassifizieren und für eine endokrine Therapie in Frage zu stellen, sie jedoch als niedrig ER-positiv zu bezeichnen.⁴ Der folgende Berichtskommentar wird für niedrig ER-positive Fälle empfohlen, um die Herausforderungen und die begrenzte Datenlage zu Tumoren mit diesem Ergebnis zu verdeutlichen: „Der Tumor in dieser Probe weist eine niedrige ER-Expression (1–10 %) mittels IHC auf. Es liegen nur wenige Daten zum Gesamtnutzen endokriner Therapien für Patientinnen mit niedriger ER-Expression (1–10 %) vor, die jedoch derzeit auf einen möglichen Nutzen hindeuten. Daher gelten die Patientinnen als für eine endokrine Therapie geeignet. Es gibt Daten, die darauf hindeuten, dass invasive Tumoren mit diesen Ergebnissen sowohl im Verhalten als auch in der Biologie heterogen sind und häufig Genexpressionsprofile aufweisen, die eher ER-negativen Tumoren ähneln.“ Wenn ein Tumor negativ ist, aber keine internen Kontrollzellen vorhanden sind, muss der Pathologe beurteilen, ob das Ergebnis als wirklich negativ interpretiert werden kann. Im Zweifelsfall wird empfohlen, die Untersuchung an einem anderen Block oder einer anderen Probe zu wiederholen. Es sollte ein Test mit internen Kontrollen durchgeführt werden. „Nicht bestimmbar“ wird verwendet, wenn ein Problem die zuverlässige Interpretation des Ergebnisses verhindert. Dies kann eine suboptimale Probenbehandlung, das Vorhandensein von Artefakten (Quetsch- oder Randartefakte), die die Interpretation erschweren, oder ein Fehlschlagen des analytischen Testverfahrens umfassen. Quantifizierung von ER und PR Die Rezeptorkonzentrationen in Tumoren variieren stark, wie der biochemische Ligandenbindungstest und die IHC zeigen. Patientinnen mit Karzinomen, die höhere Konzentrationen aufweisen, haben ein verbessertes Überleben, wenn sie mit endokriner Therapie behandelt werden. Quantifizierungssysteme können nur den Anteil positiver Zellen verwenden oder die Intensität der Immunreaktivität berücksichtigen: • Anzahl positiver Zellen: Die Anzahl positiver Zellen kann als Prozentsatz oder in diskreten Kategorien angegeben werden. • Intensität: Bezieht sich auf den Grad der nukleären Positivität (d. h. von blass bis dunkel). Die Intensität kann durch die Menge des vorhandenen Proteins sowie durch den verwendeten Antikörper, das Antigen-Retrieval-System und das Detektionssystem beeinflusst werden. Bei den meisten Krebsarten findet sich eine heterogene Immunreaktivität mit hell bis dunkel positiven Zellen.",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                            "valueMarkdown": "Die Verwendung von Hormonrezeptor-Scoring-Systemen wie Allred, Quickscore und H-Score ist optional (siehe methodische Details unten). Der Hormonrezeptorstatus wird primär bestimmt, um Patientinnen zu identifizieren, die von einer endokrinen Therapie profitieren könnten. Etwa 75 bis 80 % der invasiven Mammakarzinome sind Östrogenrezeptor- (ER) und Progesteronrezeptor-positiv (PR). Dies betrifft nahezu alle gut differenzierten (Grad 1) und die meisten mäßig differenzierten (Grad 2) Karzinome. Studien haben einen deutlichen Überlebensvorteil durch die endokrine Therapie bei Patientinnen mit ER-positiven Tumoren gezeigt. Der Rezeptorstatus ist jedoch nur ein schwacher prognostischer Faktor. Derzeit wird der ER-Status zur Auswahl von Patientinnen herangezogen, die für eine endokrine Therapie geeignet sind. Der PR-Status liefert Informationen über das Ansprechen auf die endokrine Therapie bei Patientinnen mit ER-positiven Tumoren. Echte ER-negative, PR-positive Karzinome sind extrem selten, aber auch Patientinnen mit solchen Tumoren kommen für eine endokrine Therapie infrage. Der Befund eines ER-negativen, PR-positiven Tumors kann auf ein falsch negatives ER-Ergebnis oder ein falsch positives PR-Ergebnis hindeuten. Eine Überprüfung oder Wiederholung der Färbung wird empfohlen. Der Hormonrezeptorstatus wird meist in formalinfixierten, paraffineingebetteten Gewebeschnitten mittels Immunhistochemie (IHC) bestimmt. Nur eine Kernfärbung gilt als positiv. Einzelgenexpressionsanalysen werden für die Routineanwendung nicht empfohlen. Die American Society of Clinical Oncology (ASCO) und das College of American Pathologists (CAP), das Royal College of Pathologists UK (RCPath) und das Royal College of Pathologists of Australasia (RCPA) haben Empfehlungen für die Berichterstattung von IHC-Ergebnissen für ER und PR herausgegeben.\u003Csup\u003E1-3\u003C/sup\u003E Studien, die sowohl IHC als auch den Ligandenbindungstest verwenden, deuten darauf hin, dass Patientinnen mit höheren Hormonrezeptorspiegeln eine höhere Wahrscheinlichkeit für ein Ansprechen auf die endokrine Therapie haben. Allerdings wurde bereits eine Expression von nur 1 % positiver Färbung mit einem klinischen Ansprechen in Verbindung gebracht. Daher empfehlen die Leitlinien, alle Fälle mit mindestens 1 % positiven Zellen als rezeptorpositiv zu klassifizieren. Bei Patientinnen mit niedriger ER-Expression (1 bis 10 % positive Zellen) sollte die Entscheidung für eine endokrine Therapie auf einer Analyse der Risiken und des potenziellen Nutzens basieren.\u003Csup\u003E4\u003C/sup\u003E Definition eines negativen Ergebnisses Alle aktuellen Leitlinien empfehlen, Karzinome mit \u003C1 % positiven Zellen als negativ für ER und PR zu betrachten.\u003Csup\u003E5–7\u003C/sup\u003E Im Allred-System (siehe Tabelle 4) war das Überleben von Patientinnen, deren Karzinome einen Score von 2 aufwiesen (entsprechend \u003C1 % schwach positiven Zellen), ähnlich dem von Patientinnen, deren Karzinome vollständig ER-negativ waren.\u003Csup\u003E8\u003C/sup\u003E Daher wurde ein Score von 2 als negatives Ergebnis gewertet. Nach dem Allred- oder Quickscore-System\u003Csup\u003E9\u003C/sup\u003E hätten Karzinome mit \u003C1 % positiven Zellen und Intensitäts-Scores von 2 oder 3 einen Gesamtscore von 3 oder 4 und wurden historisch als positiv betrachtet. Es handelt sich um seltene Karzinome, deren Ansprechen auf die endokrine Therapie nicht spezifisch untersucht wurde. Daher kann die Anwendung der Allred/Quickscore-Bewertungsmethoden in einem kleinen Teil der Fälle mit dem oben empfohlenen Grenzwert von 1 % für Positivität/Negativität in Konflikt stehen. Es wird empfohlen, alle Fälle mit ≥1 % positiven Tumorzellen unabhängig vom Allred/Quickscore als rezeptorpositiv zu klassifizieren. Berichte sollten den Gesamtprozentsatz positiver Zellen und die durchschnittliche Intensität enthalten, unabhängig davon, ob zusätzliche Bewertungssysteme wie der Allred- oder der H-Score angegeben werden. Alle Fälle mit \u003C1 % positiven Tumorzellen sollten unabhängig vom Allred-Score als rezeptornegativ klassifiziert werden. Es wird zunehmend anerkannt, dass nur begrenzte Daten zum Ansprechen auf die endokrine Therapie bei Karzinomen mit niedriger ER-Expression (1–10 % positive Zellen) vorliegen, obwohl die derzeit verfügbaren Informationen einen möglichen Nutzen nahelegen. Darüber hinaus haben neuere Studien zur ER-Genexpression Profile gezeigt, die eher ER-negativen Karzinomen ähneln. Es wird empfohlen, diese Tumoren als positiv zu klassifizieren und für eine endokrine Therapie in Frage zu stellen, sie jedoch als niedrig ER-positiv zu bezeichnen.⁴ Der folgende Berichtskommentar wird für niedrig ER-positive Fälle empfohlen, um die Herausforderungen und die begrenzte Datenlage zu Tumoren mit diesem Ergebnis zu verdeutlichen: „Der Tumor in dieser Probe weist eine niedrige ER-Expression (1–10 %) mittels IHC auf. Es liegen nur wenige Daten zum Gesamtnutzen endokriner Therapien für Patientinnen mit niedriger ER-Expression (1–10 %) vor, die jedoch derzeit auf einen möglichen Nutzen hindeuten. Daher gelten die Patientinnen als für eine endokrine Therapie geeignet. Es gibt Daten, die darauf hindeuten, dass invasive Tumoren mit diesen Ergebnissen sowohl im Verhalten als auch in der Biologie heterogen sind und häufig Genexpressionsprofile aufweisen, die eher ER-negativen Tumoren ähneln.“ Wenn ein Tumor negativ ist, aber keine internen Kontrollzellen vorhanden sind, muss der Pathologe beurteilen, ob das Ergebnis als wirklich negativ interpretiert werden kann. Im Zweifelsfall wird empfohlen, die Untersuchung an einem anderen Block oder einer anderen Probe zu wiederholen.\n\nEs sollte ein Test mit internen Kontrollen durchgeführt werden. „Nicht bestimmbar“ wird verwendet, wenn ein Problem die zuverlässige Interpretation des Ergebnisses verhindert. Dies kann eine suboptimale Probenbehandlung, das Vorhandensein von Artefakten (Quetsch- oder Randartefakte), die die Interpretation erschweren, oder ein Fehlschlagen des analytischen Testverfahrens umfassen. Quantifizierung von ER und PR Die Rezeptorkonzentrationen in Tumoren variieren stark, wie der biochemische Ligandenbindungstest und die IHC zeigen. Patientinnen mit Karzinomen, die höhere Konzentrationen aufweisen, haben ein verbessertes Überleben, wenn sie mit endokriner Therapie behandelt werden. Quantifizierungssysteme können nur den Anteil positiver Zellen verwenden oder die Intensität der Immunreaktivität berücksichtigen:\n\n• Anzahl positiver Zellen: Die Anzahl positiver Zellen kann als Prozentsatz oder in diskreten Kategorien angegeben werden.\n\n• Intensität: Bezieht sich auf den Grad der nukleären Positivität (d. h. von blass bis dunkel). Die Intensität kann durch die Menge des vorhandenen Proteins sowie durch den verwendeten Antikörper, das Antigen-Retrieval-System und das Detektionssystem beeinflusst werden. Bei den meisten Krebsarten findet sich eine heterogene Immunreaktivität mit hell bis dunkel positiven Zellen."
+                          }
+                        ]
+                      },
+                      "type": "display"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.181",
+                      "code": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "83302001:363702006=371439000",
+                          "display": "Estrogen receptor assay (procedure) - Has focus (attribute) =  Specimen type (observable entity)"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "371439000",
+                          "display": "Specimen type (observable entity)"
+                        }
+                      ],
+                      "text": "ER-Testung an",
+                      "type": "open-choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12070"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.182",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "16112-5",
+                          "display": "Estrogen receptor [Interpretation] in Tissue"
+                        }
+                      ],
+                      "text": "Hormonrezeptorstatus Östrogen",
+                      "type": "open-choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12036"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.183",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "85329-1",
+                          "display": "Cells.estrogen receptor/100 cells in Breast cancer specimen by Immune stain"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "1234804006",
+                          "display": "Percent of cells with estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                        }
+                      ],
+                      "text": "PP ER",
+                      "type": "quantity",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.184",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "85310-1",
+                          "display": "Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "1236874005",
+                          "display": "Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                        }
+                      ],
+                      "text": "Färbeintensität ER",
+                      "type": "choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12034"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.185",
+                      "code": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "445104009",
+                          "display": "Sum of proportion of positive staining neoplastic cells score and average intensity of staining score for hormone receptors using immunohistochemistry (observable entity)"
+                        }
+                      ],
+                      "text": "IRS ER",
+                      "type": "choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.186",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "1234805007",
+                      "display": "Presence of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                    }
+                  ],
+                  "text": "PR",
+                  "type": "group",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.186-help",
+                      "text": "Der Wert des Progesteronrezeptors (PR) für die Auswahl einer endokrinen Therapie im adjuvanten und metastasierten Stadium ist nicht belegt. Derzeit wird der Östrogenrezeptor-Status (ER) zur Vorhersage des Nutzens einer endokrinen Therapie herangezogen. Bei ER-positiven Tumoren gelten die PR-Expressionswerte (der Prozentsatz angefärbter Zellen) als prognostischer Marker: Fälle mit niedrigeren PR-Expressionswerten sind mit einer schlechteren Prognose verbunden, die Patientinnen profitieren aber dennoch von der endokrinen Therapie. Ist ein Tumor negativ, aber keine internen Kontrollzellen vorhanden, muss der Pathologe beurteilen, ob das Ergebnis als wirklich negativ interpretiert werden kann. Im Zweifelsfall sollte empfohlen werden, die Untersuchung an einem anderen Block oder einer anderen Probe mit internen Kontrollen zu wiederholen. Die Angabe „Nicht bestimmbar“ wird verwendet, wenn eine zuverlässige Interpretation des Ergebnisses aus irgendeinem Grund nicht möglich ist. Dies kann beispielsweise eine suboptimale Probenbehandlung, das Vorhandensein von Artefakten (Quetsch- oder Kantenartefakte), die die Interpretation erschweren, oder ein Fehlschlagen des analytischen Testverfahrens umfassen.",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                            "valueMarkdown": "Der Wert des Progesteronrezeptors (PR) für die Auswahl einer endokrinen Therapie im adjuvanten und metastasierten Stadium ist nicht belegt. Derzeit wird der Östrogenrezeptor-Status (ER) zur Vorhersage des Nutzens einer endokrinen Therapie herangezogen. Bei ER-positiven Tumoren gelten die PR-Expressionswerte (der Prozentsatz angefärbter Zellen) als prognostischer Marker: Fälle mit niedrigeren PR-Expressionswerten sind mit einer schlechteren Prognose verbunden, die Patientinnen profitieren aber dennoch von der endokrinen Therapie. Ist ein Tumor negativ, aber keine internen Kontrollzellen vorhanden, muss der Pathologe beurteilen, ob das Ergebnis als wirklich negativ interpretiert werden kann. Im Zweifelsfall sollte empfohlen werden, die Untersuchung an einem anderen Block oder einer anderen Probe mit internen Kontrollen zu wiederholen. Die Angabe „Nicht bestimmbar“ wird verwendet, wenn eine zuverlässige Interpretation des Ergebnisses aus irgendeinem Grund nicht möglich ist. Dies kann beispielsweise eine suboptimale Probenbehandlung, das Vorhandensein von Artefakten (Quetsch- oder Kantenartefakte), die die Interpretation erschweren, oder ein Fehlschlagen des analytischen Testverfahrens umfassen."
+                          }
+                        ]
+                      },
+                      "type": "display"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.187",
+                      "code": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "13892007:363702006=371439000",
+                          "display": "Progesterone receptor assay measurement (procedure)  - Has focus (attribute) = Specimen type (observable entity)"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "371439000",
+                          "display": "Specimen type (observable entity)"
+                        }
+                      ],
+                      "text": "PR-Testung an",
+                      "type": "open-choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12070"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.188",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "16113-3",
+                          "display": "Progesterone receptor [Interpretation] in Tissue"
+                        }
+                      ],
+                      "text": "Hormonrezeptorstatus Progesteron",
+                      "type": "choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12036"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.189",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "85325-9",
+                          "display": "Cells.progesterone receptor/100 cells in Breast cancer specimen by Immune stain"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "1234803000",
+                          "display": "Percent of cells with progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                        }
+                      ],
+                      "text": "PP PR",
+                      "type": "quantity",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.190",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "85331-7",
+                          "display": "Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "1237278006",
+                          "display": "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                        }
+                      ],
+                      "text": "Färbeintensität PR",
+                      "type": "choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12034"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.191",
+                      "code": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "445104009",
+                          "display": "Sum of proportion of positive staining neoplastic cells score and average intensity of staining score for hormone receptors using immunohistochemistry (observable entity)"
+                        }
+                      ],
+                      "text": "IRS PR",
+                      "type": "choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.193",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "3550001000004108",
+                      "display": "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                    }
+                  ],
+                  "text": "Her2",
+                  "type": "group",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "help",
+                                "display": "Help-Button"
+                              }
+                            ],
+                            "text": "Help-Button"
+                          }
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.193-help",
+                      "text": "Eine Untergruppe der Mammakarzinome (ca. 15 bis 20 %) weist eine Überexpression des humanen epidermalen Wachstumsfaktorrezeptors 2 (HER2; HUGO-Nomenklatur ERBB2) auf. Die Proteinüberexpression beruht üblicherweise auf einer Genamplifikation. Analysen der Genkopienzahl, der mRNA-Menge und des Proteins liefern im Allgemeinen ähnliche Ergebnisse; die Genamplifikation korreliert in etwa 95 % der Fälle mit der Proteinüberexpression. In einer kleinen Untergruppe der Karzinome (wahrscheinlich \u003C 5 %) kann die Proteinüberexpression durch andere Mechanismen erfolgen. Die Überexpression ist sowohl ein prognostischer als auch ein prädiktiver Faktor. Der HER2-Status wird primär zur Bestimmung der Eignung von Patientinnen für eine Anti-HER2-Therapie herangezogen. Er kann auch Patientinnen identifizieren, die von einer adjuvanten Therapie auf Anthrazyklinbasis stärker profitieren. Der HER2-Status kann in formalinfixiertem, paraffineingebettetem Gewebe durch die Beurteilung der Proteinüberexpression auf der Membran von Tumorzellen mittels Immunhistochemie (IHC) oder durch die Bestimmung der Anzahl der HER2-Genkopien mittels In-situ-Hybridisierung (ISH) ermittelt werden. Werden IHC und ISH am selben Tumor durchgeführt, sollten die Ergebnisse korreliert werden. Die wahrscheinlichste Ursache für eine Diskrepanz ist ein falsch-positives Ergebnis eines der beiden Tests. In seltenen Fällen kann jedoch eine Proteinüberexpression ohne Amplifikation, eine Amplifikation ohne Proteinüberexpression (insbesondere bei geringgradiger Amplifikation) oder eine ausgeprägte intratumorale Heterogenität vorliegen. Zahlreiche präanalytische, analytische und postanalytische Variablen können die Testergebnisse beeinflussen. Die Tests müssen daher validiert werden, um ihre Genauigkeit zu gewährleisten. Externe Eignungsprüfungen zur Qualitätssicherung sind unerlässlich, um die korrekte Durchführung der Tests sicherzustellen. Externe Qualitätssicherungsstudien (EQA) für HER2 sind von etablierten EQA-Anbietern erhältlich. Es wird empfohlen, die Testung und Auswertung gemäß den Empfehlungen von Fachgesellschaften wie der American Society of Clinical Oncology (ASCO), dem College of American Pathologists (CAP), dem Royal College of Pathologists UK (RCPath) und dem Royal College of Pathologists of Australasia (RCPA) durchzuführen. 1-3 Die meisten Labore weltweit verwenden die IHC-Testung als Erstlinientest mit anschließender ISH-Genanalyse nur bei grenzwertigen Fällen (2+). Unterschiede in den Empfehlungen zur positiven bzw. negativen Klassifizierung einiger ISH-Ergebnisse sind in letzter Zeit im Zusammenhang mit dem Verhältnis des Chromosom-17/HER2-Gens und der HER2-Genkopienzahl aufgetreten (siehe unten). Tabelle 6 enthält Empfehlungen von ASCO/CAP zur Berichterstattung von HER2-Testergebnissen mittels ISH.1 Da diese jedoch nicht allgemein anerkannt sind, wird Laboren empfohlen, die für ihren Standort geltenden Empfehlungen zu befolgen. Bewertungskriterien für das Testergebnis Negativ : HER2/CEP17-Verhältnis \u003C 2,0 UND durchschnittliche HER2-Kopienzahl \u003C 4,0 Signale/Zelle (Gruppe 5) Negativ* (siehe Kommentar) HER2/CEP17-Verhältnis ≥ 2,0 UND durchschnittliche HER2-Kopienzahl \u003C 4,0 Signale/Zelle (Gruppe 2) und gleichzeitiger IHC-Befund 0-1+ oder 2+ HER2/CEP17-Verhältnis \u003C 2,0 UND durchschnittliche HER2-Kopienzahl ≥ 6,0 Signale/Zelle (Gruppe 3) und gleichzeitiger IHC-Befund 0-1+ HER2/CEP17-Verhältnis \u003C 2,0 UND durchschnittliche HER2-Kopienzahl ≥ 4,0 und \u003C 6,0 Signale/Zelle (Gruppe 4) und gleichzeitiger IHC-Befund 0-1+ oder 2+ Positiv* HER2/CEP17-Verhältnis ≥ 2,0 UND durchschnittliche HER2-Kopienzahl \u003C 4,0 Signale/Zelle (Gruppe 2) und gleichzeitiges IHC 3+ HER2/CEP17-Verhältnis \u003C2,0 UND durchschnittliche HER2-Kopienzahl ≥ 6,0 Signale/Zelle (Gruppe 3) und gleichzeitiges IHC 2+ oder 3+ HER2/CEP17-Verhältnis \u003C2,0 UND durchschnittliche HER2-Kopienzahl ≥4,0 und \u003C6,0 Signale/Zelle (Gruppe 4) und gleichzeitiges IHC 3+ Positive HER2/CEP17-Verhältnis ≥2,0 UND durchschnittliche HER2-Kopienzahl ≥ 4,0 Signale/Zelle (Gruppe 1) * Für die Gruppen 2–4 basierten die endgültigen ISH-Ergebnisse auf der gleichzeitigen Auswertung der IHC-Ergebnisse. Bei einem IHC-Ergebnis von 2+ wurde der ISH-Test von einem zweiten Gutachter wiederholt. • Kommentar zu Gruppe 2 (negatives Ergebnis): Die Evidenz zur Wirksamkeit der HER2-gerichteten Therapie ist begrenzt. In der kleinen Untergruppe von Fällen mit einem HER2/CEP17-Verhältnis ≥ 2,0 und einer durchschnittlichen HER2-Kopienzahl \u003C 4,0/Zelle ist die Evidenz begrenzt. In der ersten Generation adjuvanter Trastuzumab-Studien zeigte sich bei Patientinnen dieser Subgruppe, die dem Trastuzumab-Arm zugeteilt wurden, keine Verbesserung des krankheitsfreien oder Gesamtüberlebens. Es gab jedoch zu wenige Fälle, um endgültige Schlussfolgerungen zu ziehen. Die IHC-Expression für HER2 sollte die ISH ergänzen und den HER2-Status bestimmen. Bei einem IHC-Ergebnis unter 3+ wird empfohlen, die Probe aufgrund der niedrigen HER2-Kopienzahl (bestimmt mittels ISH) und des Fehlens einer Proteinüberexpression als HER2-negativ zu betrachten. In der ersten Generation adjuvanter Trastuzumab-Studien zeigte sich bei Patientinnen dieser Subgruppe, die dem Trastuzumab-Arm zugeteilt wurden, keine Verbesserung des krankheitsfreien oder Gesamtüberlebens. Die Anzahl der HER2-Kopien pro Zelle ist zu gering, um endgültige Schlussfolgerungen zu ziehen. • Kommentar zu Gruppe 3 (Negatives Ergebnis): Es liegen unzureichende Daten zur Wirksamkeit der HER2-gerichteten Therapie bei einem HER2/CEP17-Verhältnis \u003C 2,0 ohne Proteinüberexpression vor, da diese Patientinnen nicht für die erste Generation adjuvanter Trastuzumab-Studien geeignet waren. Bei negativem IHC-Ergebnis (0–1+) wird empfohlen, die Probe als HER2-negativ zu betrachten. Kommentar zu Gruppe 4 (Negatives Ergebnis): Es ist unklar, ob Patientinnen mit ≥ 4,0 und \u003C 6,0 durchschnittlichen HER2-Signalen pro Zelle und einem HER2/CEP17-Verhältnis \u003C 2,0 von einer HER2-gerichteten Therapie ohne Proteinüberexpression (IHC 3+) profitieren. Liegt das Testergebnis nahe am ISH-Schwellenwert für ein positives Ergebnis, ist die Wahrscheinlichkeit hoch, dass eine Wiederholungstestung rein zufällig zu unterschiedlichen Ergebnissen führt. Daher wird bei einem IHC-Ergebnis von unter 3+ empfohlen, die Probe ohne weitere Tests als HER2-negativ zu betrachten. Dieselbe Probe sollte daher ohne weitere Untersuchungen als HER2-negativ betrachtet werden.",
+                      "_text": {
+                        "extension": [
+                          {
+                            "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                            "valueMarkdown": "Eine Untergruppe der Mammakarzinome (ca. 15 bis 20 %) weist eine Überexpression des humanen epidermalen Wachstumsfaktorrezeptors 2 (HER2; HUGO-Nomenklatur ERBB2) auf. Die Proteinüberexpression beruht üblicherweise auf einer Genamplifikation. Analysen der Genkopienzahl, der mRNA-Menge und des Proteins liefern im Allgemeinen ähnliche Ergebnisse; die Genamplifikation korreliert in etwa 95 % der Fälle mit der Proteinüberexpression. In einer kleinen Untergruppe der Karzinome (wahrscheinlich \u003C 5 %) kann die Proteinüberexpression durch andere Mechanismen erfolgen. Die Überexpression ist sowohl ein prognostischer als auch ein prädiktiver Faktor. Der HER2-Status wird primär zur Bestimmung der Eignung von Patientinnen für eine Anti-HER2-Therapie herangezogen. Er kann auch Patientinnen identifizieren, die von einer adjuvanten Therapie auf Anthrazyklinbasis stärker profitieren. Der HER2-Status kann in formalinfixiertem, paraffineingebettetem Gewebe durch die Beurteilung der Proteinüberexpression auf der Membran von Tumorzellen mittels Immunhistochemie (IHC) oder durch die Bestimmung der Anzahl der HER2-Genkopien mittels In-situ-Hybridisierung (ISH) ermittelt werden. Werden IHC und ISH am selben Tumor durchgeführt, sollten die Ergebnisse korreliert werden. Die wahrscheinlichste Ursache für eine Diskrepanz ist ein falsch-positives Ergebnis eines der beiden Tests. In seltenen Fällen kann jedoch eine Proteinüberexpression ohne Amplifikation, eine Amplifikation ohne Proteinüberexpression (insbesondere bei geringgradiger Amplifikation) oder eine ausgeprägte intratumorale Heterogenität vorliegen. Zahlreiche präanalytische, analytische und postanalytische Variablen können die Testergebnisse beeinflussen. Die Tests müssen daher validiert werden, um ihre Genauigkeit zu gewährleisten. Externe Eignungsprüfungen zur Qualitätssicherung sind unerlässlich, um die korrekte Durchführung der Tests sicherzustellen. Externe Qualitätssicherungsstudien (EQA) für HER2 sind von etablierten EQA-Anbietern erhältlich. Es wird empfohlen, die Testung und Auswertung gemäß den Empfehlungen von Fachgesellschaften wie der American Society of Clinical Oncology (ASCO), dem College of American Pathologists (CAP), dem Royal College of Pathologists UK (RCPath) und dem Royal College of Pathologists of Australasia (RCPA) durchzuführen. 1-3 Die meisten Labore weltweit verwenden die IHC-Testung als Erstlinientest mit anschließender ISH-Genanalyse nur bei grenzwertigen Fällen (2+). Unterschiede in den Empfehlungen zur positiven bzw. negativen Klassifizierung einiger ISH-Ergebnisse sind in letzter Zeit im Zusammenhang mit dem Verhältnis des Chromosom-17/HER2-Gens und der HER2-Genkopienzahl aufgetreten (siehe unten). Tabelle 6 enthält Empfehlungen von ASCO/CAP zur Berichterstattung von HER2-Testergebnissen mittels ISH.1 Da diese jedoch nicht allgemein anerkannt sind, wird Laboren empfohlen, die für ihren Standort geltenden Empfehlungen zu befolgen.\n\nBewertungskriterien für das Testergebnis\n\n **Negativ** : HER2/CEP17-Verhältnis \u003C 2,0 UND durchschnittliche HER2-Kopienzahl \u003C 4,0 Signale/Zelle (Gruppe 5)\n\n **Negativ\\*** (siehe Kommentar) HER2/CEP17-Verhältnis ≥ 2,0 UND durchschnittliche HER2-Kopienzahl \u003C 4,0 Signale/Zelle (Gruppe 2) und gleichzeitiger IHC-Befund 0-1+ oder 2+ HER2/CEP17-Verhältnis \u003C 2,0 UND durchschnittliche HER2-Kopienzahl ≥ 6,0 Signale/Zelle (Gruppe 3) und gleichzeitiger IHC-Befund 0-1+ HER2/CEP17-Verhältnis \u003C 2,0 UND durchschnittliche HER2-Kopienzahl ≥ 4,0 und \u003C 6,0 Signale/Zelle (Gruppe 4) und gleichzeitiger IHC-Befund 0-1+ oder 2+\n\n **Positiv\\*** HER2/CEP17-Verhältnis ≥ 2,0 UND durchschnittliche HER2-Kopienzahl \u003C 4,0 Signale/Zelle (Gruppe 2) und gleichzeitiges IHC 3+ HER2/CEP17-Verhältnis \u003C2,0 UND durchschnittliche HER2-Kopienzahl ≥ 6,0 Signale/Zelle (Gruppe 3) und gleichzeitiges IHC 2+ oder 3+ HER2/CEP17-Verhältnis \u003C2,0 UND durchschnittliche HER2-Kopienzahl ≥4,0 und \u003C6,0 Signale/Zelle (Gruppe 4) und gleichzeitiges IHC 3+\n\n **Positive** HER2/CEP17-Verhältnis ≥2,0 UND durchschnittliche HER2-Kopienzahl ≥ 4,0 Signale/Zelle (Gruppe 1)\n\n **\\*** Für die Gruppen 2–4 basierten die endgültigen ISH-Ergebnisse auf der gleichzeitigen Auswertung der IHC-Ergebnisse. Bei einem IHC-Ergebnis von 2+ wurde der ISH-Test von einem zweiten Gutachter wiederholt.\n\n• Kommentar zu Gruppe 2 (negatives Ergebnis): Die Evidenz zur Wirksamkeit der HER2-gerichteten Therapie ist begrenzt. In der kleinen Untergruppe von Fällen mit einem HER2/CEP17-Verhältnis ≥ 2,0 und einer durchschnittlichen HER2-Kopienzahl \u003C 4,0/Zelle ist die Evidenz begrenzt. In der ersten Generation adjuvanter Trastuzumab-Studien zeigte sich bei Patientinnen dieser Subgruppe, die dem Trastuzumab-Arm zugeteilt wurden, keine Verbesserung des krankheitsfreien oder Gesamtüberlebens. Es gab jedoch zu wenige Fälle, um endgültige Schlussfolgerungen zu ziehen. Die IHC-Expression für HER2 sollte die ISH ergänzen und den HER2-Status bestimmen. Bei einem IHC-Ergebnis unter 3+ wird empfohlen, die Probe aufgrund der niedrigen HER2-Kopienzahl (bestimmt mittels ISH) und des Fehlens einer Proteinüberexpression als HER2-negativ zu betrachten. In der ersten Generation adjuvanter Trastuzumab-Studien zeigte sich bei Patientinnen dieser Subgruppe, die dem Trastuzumab-Arm zugeteilt wurden, keine Verbesserung des krankheitsfreien oder Gesamtüberlebens. Die Anzahl der HER2-Kopien pro Zelle ist zu gering, um endgültige Schlussfolgerungen zu ziehen.\n\n• Kommentar zu Gruppe 3 (Negatives Ergebnis): Es liegen unzureichende Daten zur Wirksamkeit der HER2-gerichteten Therapie bei einem HER2/CEP17-Verhältnis \u003C 2,0 ohne Proteinüberexpression vor, da diese Patientinnen nicht für die erste Generation adjuvanter Trastuzumab-Studien geeignet waren. Bei negativem IHC-Ergebnis (0–1+) wird empfohlen, die Probe als HER2-negativ zu betrachten.\n\nKommentar zu Gruppe 4 (Negatives Ergebnis): Es ist unklar, ob Patientinnen mit ≥ 4,0 und \u003C 6,0 durchschnittlichen HER2-Signalen pro Zelle und einem HER2/CEP17-Verhältnis \u003C 2,0 von einer HER2-gerichteten Therapie ohne Proteinüberexpression (IHC 3+) profitieren. Liegt das Testergebnis nahe am ISH-Schwellenwert für ein positives Ergebnis, ist die Wahrscheinlichkeit hoch, dass eine Wiederholungstestung rein zufällig zu unterschiedlichen Ergebnissen führt. Daher wird bei einem IHC-Ergebnis von unter 3+ empfohlen, die Probe ohne weitere Tests als HER2-negativ zu betrachten. Dieselbe Probe sollte daher ohne weitere Untersuchungen als HER2-negativ betrachtet werden."
+                          }
+                        ]
+                      },
+                      "type": "display"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.194",
+                      "code": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "1236876007",
+                          "display": "Type of antibody used in immunohistochemistry technique (observable entity)"
+                        }
+                      ],
+                      "text": "Antikörper Klon",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.195",
+                      "code": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "434363004:363702006=371439000",
+                          "display": "Human epidermal growth factor receptor 2 gene detection by fluorescence in situ hybridization (procedure) - Has focus (attribute) = Specimen type (observable entity)"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "371439000",
+                          "display": "Specimen type (observable entity)"
+                        }
+                      ],
+                      "text": "Her2-Testung an",
+                      "type": "open-choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12070"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.196",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "85319-2",
+                          "display": "HER2 [Presence] in Breast cancer specimen by Immune stain"
+                        },
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "3550001000004108",
+                          "display": "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                        }
+                      ],
+                      "text": "Her2 Score",
+                      "type": "choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12038"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.197",
+                      "text": "PP Her2",
+                      "type": "quantity",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.198",
+                      "code": [
+                        {
+                          "system": "http://snomed.info/sct",
+                          "code": "1363314005",
+                          "display": "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)"
+                        }
+                      ],
+                      "text": "Her2 Amplifikation",
+                      "type": "choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12039"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.199",
+                      "text": "Anzahl gezählter Tumorzellen",
+                      "type": "integer",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.200",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "74860-8",
+                          "display": "HER2 gene copy number/nucleus in Tissue by FISH"
+                        }
+                      ],
+                      "text": "Anzahl Her2-Signale/Zelle",
+                      "type": "integer",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.201",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "74861-6",
+                          "display": "Chromosome 17 copy number/nucleus in Tissue by FISH"
+                        }
+                      ],
+                      "text": "Anzahl CEP17-Signale/Zelle",
+                      "type": "integer",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.202",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "49683-6",
+                          "display": "HER2 gene copy number/Chromosome 17 copy number in Tissue by FISH"
+                        }
+                      ],
+                      "text": "Her2/CEP17 Ratio",
+                      "type": "decimal",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                          "valueBoolean": false
+                        }
+                      ],
+                      "linkId": "2.16.840.1.113883.3.1937.777.18.2.203",
+                      "code": [
+                        {
+                          "system": "http://loinc.org",
+                          "code": "48676-1",
+                          "display": "HER2 [Interpretation] in Tissue"
+                        }
+                      ],
+                      "text": "Her2neuStatus",
+                      "type": "choice",
+                      "required": false,
+                      "repeats": false,
+                      "readOnly": false,
+                      "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.12036"
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.204",
+                  "code": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "85330-9",
+                      "display": "Cells.Ki-67 nuclear Ag/100 cells in Breast cancer specimen by Immune stain"
+                    },
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "1237281001",
+                      "display": "Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+                    }
+                  ],
+                  "text": "Ki67-Index",
+                  "type": "quantity",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.208",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "1234806008",
+                      "display": "Observation using immunohistochemistry (observable entity)"
+                    }
+                  ],
+                  "text": "Weitere Immunhistochemische Untersuchungen",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.209",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "1285487004",
+                      "display": "Presence of metastasis in sentinel lymph node by one-step nucleic acid amplification during surgical procedure (observable entity)"
+                    }
+                  ],
+                  "text": "One step PCR",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false,
+                  "readOnly": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                  "valueBoolean": false
+                }
+              ],
+              "linkId": "2.16.840.1.113883.3.1937.777.18.2.172",
+              "text": "Pathologisches TNM-Staging (UICC TNM 8th ed.)",
+              "type": "group",
+              "required": true,
+              "repeats": false,
+              "readOnly": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "help",
+                            "display": "Help-Button"
+                          }
+                        ],
+                        "text": "Help-Button"
+                      }
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.172-help",
+                  "text": "Die Staging-Daten müssen gemäß der 8. Auflage des Cancer Staging Manuals der Union for International Cancer Control (UICC)/des American Joint Committee on Cancer (AJCC) beurteilt werden. Es ist zu beachten, dass sich die Stadieneinteilung der UICC-8. Auflage von den prognostischen Stadiengruppen der AJCC-8. Auflage unterscheidet. Die Angabe der pathologischen Stadienkategorien (pT, pN, pM) basiert auf den dem Pathologen zum Zeitpunkt der Befundung vorliegenden Informationen. Wie in UICC/AJCC TNM angegeben, basiert die endgültige Stadieneinteilung des Tumors eines Patienten auf einer Kombination aus pathologischem Staging und anderen klinischen und bildgebenden Informationen. Das Referenzdokument „TNM Supplement: A commentary on uniform use“, 5. Auflage (C. Wittekind et al., Hrsg.), kann bei der Stadieneinteilung hilfreich sein.",
+                  "_text": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendering-markdown",
+                        "valueMarkdown": "Die Staging-Daten müssen gemäß der 8. Auflage des Cancer Staging Manuals der Union for International Cancer Control (UICC)/des American Joint Committee on Cancer (AJCC) beurteilt werden. Es ist zu beachten, dass sich die Stadieneinteilung der UICC-8. Auflage von den prognostischen Stadiengruppen der AJCC-8. Auflage unterscheidet. Die Angabe der pathologischen Stadienkategorien (pT, pN, pM) basiert auf den dem Pathologen zum Zeitpunkt der Befundung vorliegenden Informationen. Wie in UICC/AJCC TNM angegeben, basiert die endgültige Stadieneinteilung des Tumors eines Patienten auf einer Kombination aus pathologischem Staging und anderen klinischen und bildgebenden Informationen. Das Referenzdokument „TNM Supplement: A commentary on uniform use“, 5. Auflage (C. Wittekind et al., Hrsg.), kann bei der Stadieneinteilung hilfreich sein."
+                      }
+                    ]
+                  },
+                  "type": "display"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.173",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "277645005",
+                      "display": "Additional TNM descriptors (tumor staging)"
+                    }
+                  ],
+                  "text": "TNM Deskriptoren",
+                  "type": "open-choice",
+                  "enableBehavior": "all",
+                  "required": false,
+                  "repeats": true,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/1.3.6.1.4.1.19376.1.3.11.40--20151106103953 https://art-decor.org/fhir/ValueSet/1.3.6.1.4.1.19376.1.3.11.39--20151106103610 https://art-decor.org/fhir/ValueSet/1.3.6.1.4.1.19376.1.3.11.22--20151104155234"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "linkId": "2.16.840.1.113883.3.1937.777.18.2.175",
+                  "code": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "371494008",
+                      "display": "pN category (observable entity)"
+                    }
+                  ],
+                  "text": "Regionäre Lymphknoten (pN-Kategorie)",
+                  "type": "choice",
+                  "enableBehavior": "all",
+                  "required": true,
+                  "repeats": false,
+                  "readOnly": false,
+                  "answerValueSet": "https://art-decor.org/fhir/ValueSet/2.16.840.1.113883.3.1937.777.18.11.18032--20251118091408"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

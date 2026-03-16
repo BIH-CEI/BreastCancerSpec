@@ -278,7 +278,8 @@ Description: "Schnitt 1 für Östrogenrezeptor-Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "ER-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstanceER)
   * timeDateTime = "2025-01-16T10:00:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -320,7 +321,8 @@ Description: "Schnitt 2 für Östrogenrezeptor-Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "ER-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstanceER)
   * timeDateTime = "2025-01-16T10:00:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -362,7 +364,8 @@ Description: "Schnitt 1 für Progesteronrezeptor-Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "PR-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstancePR)
   * timeDateTime = "2025-01-16T10:05:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -404,7 +407,8 @@ Description: "Schnitt 2 für Progesteronrezeptor-Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "PR-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstancePR)
   * timeDateTime = "2025-01-16T10:05:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -446,7 +450,8 @@ Description: "Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "HER2 Bright-field Dual In-Situ Hybridization (B-DISH)"
-  * procedure = $sct#426329006 "Fluorescence in situ hybridization (procedure)"
+  * procedure = $sct#384715000 "Nucleic acid hybridization procedure (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstanceHER2ISH)
   * timeDateTime = "2025-01-16T10:30:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -488,8 +493,95 @@ Description: "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "HER2 Bright-field Dual In-Situ Hybridization (B-DISH)"
-  * procedure = $sct#426329006 "Fluorescence in situ hybridization (procedure)"
+  * procedure = $sct#384715000 "Nucleic acid hybridization procedure (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstanceHER2ISH)
   * timeDateTime = "2025-01-16T10:30:00+01:00"
+* container
+  * type = $sct#433466003 "Microscope slide (physical object)"
+  * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
+
+// =============================================================================
+// STANZBIOPSIE - HER2-IHC SCHNITT 01
+// =============================================================================
+
+Instance: CoreNeedleBiopsySpecimenSlideHER2IHC-01
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "HER2-IHC Schnitt 01 Stanzbiopsie"
+Description: "Schnitt 1 für HER2 Immunhistochemie"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_105_A_1_1_HER2IHC_01"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_105"
+* status = #available
+* type = $sct#430856003 "Tissue section (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(CoreNeedleBiopsySpecimenBlock01)
+* collection
+  * collectedDateTime = "2025-01-16T09:40:00+01:00"
+  * method = $sct#13283003 "Tissue processing technique (procedure)"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "Schnittherstellung"
+  * procedure = $sct#434472006 "Sectioning of tissue block (procedure)"
+  * timeDateTime = "2025-01-16T09:40:00+01:00"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "HER2 Immunhistochemie"
+  * procedure = $sct#433114000 "Human epidermal growth factor receptor 2 gene detection by immunohistochemistry (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstanceHER2IHC)
+  * timeDateTime = "2025-01-16T10:20:00+01:00"
+* container
+  * type = $sct#433466003 "Microscope slide (physical object)"
+  * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
+
+// =============================================================================
+// STANZBIOPSIE - HER2-IHC SCHNITT 02
+// =============================================================================
+
+Instance: CoreNeedleBiopsySpecimenSlideHER2IHC-02
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "HER2-IHC Schnitt 02 Stanzbiopsie"
+Description: "Schnitt 2 für HER2 Immunhistochemie"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_105_A_1_1_HER2IHC_02"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_105"
+* status = #available
+* type = $sct#430856003 "Tissue section (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(CoreNeedleBiopsySpecimenBlock01)
+* collection
+  * collectedDateTime = "2025-01-16T09:40:00+01:00"
+  * method = $sct#13283003 "Tissue processing technique (procedure)"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "Schnittherstellung"
+  * procedure = $sct#434472006 "Sectioning of tissue block (procedure)"
+  * timeDateTime = "2025-01-16T09:40:00+01:00"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "HER2 Immunhistochemie"
+  * procedure = $sct#433114000 "Human epidermal growth factor receptor 2 gene detection by immunohistochemistry (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstanceHER2IHC)
+  * timeDateTime = "2025-01-16T10:20:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
   * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
@@ -530,7 +622,8 @@ Description: "Schnitt 1 für Ki-67 Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "Ki-67 Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstanceKi67)
   * timeDateTime = "2025-01-16T10:10:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -572,7 +665,8 @@ Description: "Schnitt 2 für Ki-67 Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "Ki-67 Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(CoreNeedleBiopsySubstanceKi67)
   * timeDateTime = "2025-01-16T10:10:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"

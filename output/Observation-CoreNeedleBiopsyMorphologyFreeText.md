@@ -8,7 +8,7 @@
 
 Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding)
 
-**basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
+**basedOn**: [ServiceRequest Breast Pathology biopsy report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
 
 **status**: Final
 
@@ -22,7 +22,7 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.
+**value**: Invasives Karzinom, NST
 
 **specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)](Specimen-CoreNeedleBiopsySpecimenSlideHE01.md)
 
@@ -69,7 +69,7 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   "performer" : [{
     "reference" : "Practitioner/PathologistPractitioner"
   }],
-  "valueString" : "In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.",
+  "valueString" : "Invasives Karzinom, NST",
   "specimen" : {
     "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
   },

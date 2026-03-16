@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "BreastCancerSpec"] ; # 
   fhir:title [ fhir:v "Breast Cancer Specification"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-05T17:42:10+01:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-16T12:14:42+01:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BIH CEI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BIH CEI" ] ;
@@ -51,7 +51,7 @@
        fhir:l <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.0.1" ]
+     fhir:version [ fhir:v "7.1.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -1784,6 +1784,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/CoreNeedleBiopsySubstanceER> ;
+         fhir:reference [ fhir:v "Substance/CoreNeedleBiopsySubstanceER" ]
+       ] ;
+       fhir:name [ fhir:v "ER-IHC Reagenz Stanzbiopsie" ] ;
+       fhir:description [ fhir:v "Östrogenrezeptor-Antikörper für Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Specimen"
          ]
        ] ) ;
@@ -2393,6 +2414,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/CoreNeedleBiopsySubstanceHER2ISH> ;
+         fhir:reference [ fhir:v "Substance/CoreNeedleBiopsySubstanceHER2ISH" ]
+       ] ;
+       fhir:name [ fhir:v "HER2-B-DISH Reagenz Stanzbiopsie" ] ;
+       fhir:description [ fhir:v "HER2 Dual ISH Sonden-Kit" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Specimen"
          ]
        ] ) ;
@@ -2465,6 +2507,69 @@
        ] ;
        fhir:name [ fhir:v "HER2-B-DISH Schnitt 02 Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/CoreNeedleBiopsySubstanceHER2IHC> ;
+         fhir:reference [ fhir:v "Substance/CoreNeedleBiopsySubstanceHER2IHC" ]
+       ] ;
+       fhir:name [ fhir:v "HER2-IHC Reagenz Stanzbiopsie" ] ;
+       fhir:description [ fhir:v "HER2-Antikörper für Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideHER2IHC-01> ;
+         fhir:reference [ fhir:v "Specimen/CoreNeedleBiopsySpecimenSlideHER2IHC-01" ]
+       ] ;
+       fhir:name [ fhir:v "HER2-IHC Schnitt 01 Stanzbiopsie" ] ;
+       fhir:description [ fhir:v "Schnitt 1 für HER2 Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenSlideHER2IHC-02> ;
+         fhir:reference [ fhir:v "Specimen/CoreNeedleBiopsySpecimenSlideHER2IHC-02" ]
+       ] ;
+       fhir:name [ fhir:v "HER2-IHC Schnitt 02 Stanzbiopsie" ] ;
+       fhir:description [ fhir:v "Schnitt 2 für HER2 Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -2612,6 +2717,27 @@
        ] ;
        fhir:name [ fhir:v "Ki-67 Index - Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Ki-67 proliferation index" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/CoreNeedleBiopsySubstanceKi67> ;
+         fhir:reference [ fhir:v "Substance/CoreNeedleBiopsySubstanceKi67" ]
+       ] ;
+       fhir:name [ fhir:v "Ki-67-IHC Reagenz Stanzbiopsie" ] ;
+       fhir:description [ fhir:v "Ki-67-Antikörper für Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -3473,6 +3599,27 @@
        ] ;
        fhir:name [ fhir:v "PR Färbeintensität - BET" ] ;
        fhir:description [ fhir:v "Färbeintensität der PR-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/CoreNeedleBiopsySubstancePR> ;
+         fhir:reference [ fhir:v "Substance/CoreNeedleBiopsySubstancePR" ]
+       ] ;
+       fhir:name [ fhir:v "PR-IHC Reagenz Stanzbiopsie" ] ;
+       fhir:description [ fhir:v "Progesteronrezeptor-Antikörper für Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true

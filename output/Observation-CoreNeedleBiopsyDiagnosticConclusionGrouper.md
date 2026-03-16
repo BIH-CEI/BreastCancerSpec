@@ -8,7 +8,7 @@
 
 Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper)
 
-**basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
+**basedOn**: [ServiceRequest Breast Pathology biopsy report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
 
 **status**: Final
 
@@ -21,13 +21,6 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
 **effective**: 2025-01-17
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
-
-**note**: By Practitioner/PathologistPractitioner @2025-01-17
-
-> 
-
-Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen.
-
 
 **hasMember**: 
 
@@ -42,10 +35,10 @@ Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (
 * [Observation Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyERPercentage.md)
 * [Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyPRStatus.md)
 * [Observation Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyPRPercentage.md)
-* [Observation ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH](Observation-CoreNeedleBiopsyHER2ISH.md)
+* [Observation Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)](Observation-CoreNeedleBiopsyHER2ISH.md)
 * [Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyKi67.md)
 * [Observation Screening interpretation (observable entity)](Observation-CoreNeedleBiopsyBClassification.md)
-* [Observation Microcalcification, calcified structure (morphologic abnormality)](Observation-CoreNeedleBiopsyMicrocalcification.md)
+* [Observation Presence of microcalcification in excised breast specimen (observable entity)](Observation-CoreNeedleBiopsyMicrocalcification.md)
 * [Observation Specimen mammography (procedure)](Observation-CoreNeedleBiopsySpecimenRadiography.md)
 * [Observation Microcalcification, calcified structure (morphologic abnormality)](Observation-CoreNeedleBiopsyMicrocalcificationCorrelation.md)
 
@@ -84,13 +77,6 @@ Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (
   "effectiveDateTime" : "2025-01-17",
   "performer" : [{
     "reference" : "Practitioner/PathologistPractitioner"
-  }],
-  "note" : [{
-    "authorReference" : {
-      "reference" : "Practitioner/PathologistPractitioner"
-    },
-    "time" : "2025-01-17",
-    "text" : "Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen."
   }],
   "hasMember" : [{
     "reference" : "Observation/CoreNeedleBiopsyHistologicalTypeICDO3"

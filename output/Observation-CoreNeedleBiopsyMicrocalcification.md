@@ -8,13 +8,13 @@
 
 Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding)
 
-**basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
+**basedOn**: [ServiceRequest Breast Pathology biopsy report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
 
 **status**: Final
 
 **category**: Laboratory, Pathology report final diagnosis Narrative
 
-**code**: Relevante Mikroverkalkungen
+**code**: Presence of microcalcification in excised breast specimen (observable entity)
 
 **subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
 
@@ -58,10 +58,9 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   "code" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "12747003",
-      "display" : "Microcalcification, calcified structure (morphologic abnormality)"
-    }],
-    "text" : "Relevante Mikroverkalkungen"
+      "code" : "1240404008",
+      "display" : "Presence of microcalcification in excised breast specimen (observable entity)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/Patient4"

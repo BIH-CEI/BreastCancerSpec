@@ -14,7 +14,6 @@ Description: "Gruppierung aller makroskopischen Messungen des BET-Exzisionspräp
 * subject = Reference(Patient4)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueString = "Makroskopische Befunde des BET-Exzisionspräparats"
 * bodySite = $sct#76752008 "Breast structure (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
@@ -26,7 +25,6 @@ Description: "Gruppierung aller makroskopischen Messungen des BET-Exzisionspräp
 * hasMember[+] = Reference(BreastResectionMacroClock)
 * hasMember[+] = Reference(BreastResectionMacroDistanceNipple)
 
-* note.text = "BET-Exzisionspräparat links, 65 x 45 x 30 mm, 55 g. Unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Haut mit Drahthäkchen. Schnittfläche: grau-weißlich, derber Herdbefund zentral ca. 18 mm. 3 Paraffinblöcke."
 
 // --- Länge (linkId 10900) ---
 Instance: BreastResectionMacroLength

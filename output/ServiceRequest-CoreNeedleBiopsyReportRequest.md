@@ -16,7 +16,7 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
 
 **category**: Pathology consultation, comprehensive, records and specimen with report (procedure)
 
-**code**: Pathology synoptic report
+**code**: Breast Pathology biopsy report
 
 **subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
 
@@ -26,12 +26,9 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**reasonCode**: Malignant neoplasm of breast (disorder)
+**reasonCode**: Mammographic architectural distortion of breast (finding)
 
-**supportingInfo**: 
-
-* [Condition Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse](Condition-CoreNeedleBiopsyDiagnosisPreOp.md)
-* [Diagnostic Report for 'MG Breast Screening' for '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](DiagnosticReport-CoreNeedleBiopsyImagingReport.md)
+**supportingInfo**: [Diagnostic Report for 'MG Breast Screening' for '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](DiagnosticReport-CoreNeedleBiopsyImagingReport.md)
 
 **specimen**: [Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.](Specimen-CoreNeedleBiopsySpecimenPart.md)
 
@@ -69,8 +66,8 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
-      "code" : "60568-3",
-      "display" : "Pathology synoptic report"
+      "code" : "66110-8",
+      "display" : "Breast Pathology biopsy report"
     }]
   },
   "subject" : {
@@ -88,14 +85,11 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
   "reasonCode" : [{
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "254837009",
-      "display" : "Malignant neoplasm of breast (disorder)"
+      "code" : "1129792006",
+      "display" : "Mammographic architectural distortion of breast (finding)"
     }]
   }],
   "supportingInfo" : [{
-    "reference" : "Condition/CoreNeedleBiopsyDiagnosisPreOp"
-  },
-  {
     "reference" : "DiagnosticReport/CoreNeedleBiopsyImagingReport"
   }],
   "specimen" : [{

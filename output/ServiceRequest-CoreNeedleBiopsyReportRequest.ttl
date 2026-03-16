@@ -19,7 +19,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest CoreNeedleBiopsyReportRequest</b></p><a name=\"CoreNeedleBiopsyReportRequest\"> </a><a name=\"hcCoreNeedleBiopsyReportRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request\">MII PR Patho Service Requestversion: null2026.0.0)</a></p></div><p><b>identifier</b>: Placer Identifier/PATH-RPT-2025-105</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 726007}\">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 60568-3}\">Pathology synoptic report</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href=\"Encounter-CoreNeedleBiopsyEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_105; status = finished; class = AMB (AMB)</a></p><p><b>requester</b>: <a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 254837009}\">Malignant neoplasm of breast (disorder)</span></p><p><b>supportingInfo</b>: </p><ul><li><a href=\"Condition-CoreNeedleBiopsyDiagnosisPreOp.html\">Condition Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</a></li><li><a href=\"DiagnosticReport-CoreNeedleBiopsyImagingReport.html\">Diagnostic Report for 'MG Breast Screening' for '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li></ul><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</a></p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest CoreNeedleBiopsyReportRequest</b></p><a name=\"CoreNeedleBiopsyReportRequest\"> </a><a name=\"hcCoreNeedleBiopsyReportRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request\">MII PR Patho Service Requestversion: null2026.0.0)</a></p></div><p><b>identifier</b>: Placer Identifier/PATH-RPT-2025-105</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 726007}\">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 66110-8}\">Breast Pathology biopsy report</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href=\"Encounter-CoreNeedleBiopsyEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_105; status = finished; class = AMB (AMB)</a></p><p><b>requester</b>: <a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 1129792006}\">Mammographic architectural distortion of breast (finding)</span></p><p><b>supportingInfo</b>: <a href=\"DiagnosticReport-CoreNeedleBiopsyImagingReport.html\">Diagnostic Report for 'MG Breast Screening' for '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p><p><b>specimen</b>: <a href=\"Specimen-CoreNeedleBiopsySpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Specimen from breast obtained by core needle biopsy (specimen); note = HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille, US-gestützte Stanzbiopsie. 2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke.</a></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
      fhir:type [
@@ -53,13 +53,13 @@
   ] ) ; # 
   fhir:code [
      fhir:coding ( [
-       a loinc:60568-3 ;
+       a loinc:66110-8 ;
        fhir:system [
          fhir:v "http://loinc.org"^^xsd:anyURI ;
          fhir:l <http://loinc.org>
        ] ;
-       fhir:code [ fhir:v "60568-3" ] ;
-       fhir:display [ fhir:v "Pathology synoptic report" ]
+       fhir:code [ fhir:v "66110-8" ] ;
+       fhir:display [ fhir:v "Breast Pathology biopsy report" ]
      ] )
   ] ; # 
   fhir:subject [
@@ -80,19 +80,16 @@
   ] ) ; # 
   fhir:reasonCode ( [
      fhir:coding ( [
-       a sct:254837009 ;
+       a sct:1129792006 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
          fhir:l <http://snomed.info/sct>
        ] ;
-       fhir:code [ fhir:v "254837009" ] ;
-       fhir:display [ fhir:v "Malignant neoplasm of breast (disorder)" ]
+       fhir:code [ fhir:v "1129792006" ] ;
+       fhir:display [ fhir:v "Mammographic architectural distortion of breast (finding)" ]
      ] )
   ] ) ; # 
   fhir:supportingInfo ( [
-     fhir:l <http://breastcancerspec.org/Condition/CoreNeedleBiopsyDiagnosisPreOp> ;
-     fhir:reference [ fhir:v "Condition/CoreNeedleBiopsyDiagnosisPreOp" ]
-  ] [
      fhir:l <http://breastcancerspec.org/DiagnosticReport/CoreNeedleBiopsyImagingReport> ;
      fhir:reference [ fhir:v "DiagnosticReport/CoreNeedleBiopsyImagingReport" ]
   ] ) ; # 

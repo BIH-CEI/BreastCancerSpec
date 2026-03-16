@@ -11,12 +11,11 @@ Description: "Anforderung für pathologische Aufarbeitung einer US-gestützten S
 * identifier[Placer-ID].value = "PATH-RPT-2025-105"
 * intent = #order
 * category = $sct#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
-* code = $loinc#60568-3 "Pathology synoptic report"
+* code = $loinc#66110-8 "Breast Pathology biopsy report"
 * encounter = Reference(CoreNeedleBiopsyEncounter)
 * subject = Reference(Patient4)
 * requester = Reference(BreastSurgeonPractitioner)
 * performer = Reference(PathologistPractitioner)
-* reasonCode = $sct#254837009 "Malignant neoplasm of breast (disorder)"
+* reasonCode = $sct#1129792006 "Mammographic architectural distortion of breast (finding)"
 * specimen = Reference(CoreNeedleBiopsySpecimenPart)
-* supportingInfo[+] = Reference(CoreNeedleBiopsyDiagnosisPreOp)
 * supportingInfo[+] = Reference(CoreNeedleBiopsyImagingReport)

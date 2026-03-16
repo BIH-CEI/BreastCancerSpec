@@ -11,7 +11,7 @@
   <name value="BreastCancerSpec"/>
   <title value="Breast Cancer Specification"/>
   <status value="draft"/>
-  <date value="2026-03-05T17:42:10+01:00"/>
+  <date value="2026-03-16T12:14:42+01:00"/>
   <publisher value="BIH CEI"/>
   <contact>
     <name value="BIH CEI"/>
@@ -30,7 +30,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.0.1"/>
+    <version value="7.1.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -708,6 +708,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/CoreNeedleBiopsySubstanceER"/>
+      </reference>
+      <name value="ER-IHC Reagenz Stanzbiopsie"/>
+      <description value="Östrogenrezeptor-Antikörper für Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Specimen"/>
       </extension>
       <reference>
@@ -1027,6 +1038,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/CoreNeedleBiopsySubstanceHER2ISH"/>
+      </reference>
+      <name value="HER2-B-DISH Reagenz Stanzbiopsie"/>
+      <description value="HER2 Dual ISH Sonden-Kit"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Specimen"/>
       </extension>
       <reference>
@@ -1067,6 +1089,39 @@
       </reference>
       <name value="HER2-B-DISH Schnitt 02 Stanzbiopsie"/>
       <description value="Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/CoreNeedleBiopsySubstanceHER2IHC"/>
+      </reference>
+      <name value="HER2-IHC Reagenz Stanzbiopsie"/>
+      <description value="HER2-Antikörper für Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHER2IHC-01"/>
+      </reference>
+      <name value="HER2-IHC Schnitt 01 Stanzbiopsie"/>
+      <description value="Schnitt 1 für HER2 Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHER2IHC-02"/>
+      </reference>
+      <name value="HER2-IHC Schnitt 02 Stanzbiopsie"/>
+      <description value="Schnitt 2 für HER2 Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1144,6 +1199,17 @@
       </reference>
       <name value="Ki-67 Index - Stanzbiopsie"/>
       <description value="Ki-67 proliferation index"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/CoreNeedleBiopsySubstanceKi67"/>
+      </reference>
+      <name value="Ki-67-IHC Reagenz Stanzbiopsie"/>
+      <description value="Ki-67-Antikörper für Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1595,6 +1661,17 @@
       </reference>
       <name value="PR Färbeintensität - BET"/>
       <description value="Färbeintensität der PR-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/CoreNeedleBiopsySubstancePR"/>
+      </reference>
+      <name value="PR-IHC Reagenz Stanzbiopsie"/>
+      <description value="Progesteronrezeptor-Antikörper für Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

@@ -29,7 +29,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
 
 > **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: Schnittherstellung**procedure**: Sectioning of tissue block (procedure)**time**: 2025-01-16 09:40:00+0100
 
-> **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: HER2 Bright-field Dual In-Situ Hybridization (B-DISH)**procedure**: Fluorescence in situ hybridization (procedure)**time**: 2025-01-16 10:30:00+0100
+> **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: HER2 Bright-field Dual In-Situ Hybridization (B-DISH)**procedure**: Nucleic acid hybridization procedure (procedure)**additive**: [Substance Tissue stain (substance)](Substance-CoreNeedleBiopsySubstanceHER2ISH.md)**time**: 2025-01-16 10:30:00+0100
 
 ### Containers
 
@@ -132,10 +132,13 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
     "procedure" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",
-        "code" : "426329006",
-        "display" : "Fluorescence in situ hybridization (procedure)"
+        "code" : "384715000",
+        "display" : "Nucleic acid hybridization procedure (procedure)"
       }]
     },
+    "additive" : [{
+      "reference" : "Substance/CoreNeedleBiopsySubstanceHER2ISH"
+    }],
     "timeDateTime" : "2025-01-16T10:30:00+01:00"
   }],
   "container" : [{

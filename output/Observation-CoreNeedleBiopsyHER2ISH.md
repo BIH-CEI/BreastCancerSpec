@@ -8,13 +8,13 @@
 
 Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding)
 
-**basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
+**basedOn**: [ServiceRequest Breast Pathology biopsy report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
 
 **status**: Final
 
 **category**: Laboratory, Pathology report final diagnosis Narrative
 
-**code**: HER2 Amplifikation (B-DISH)
+**code**: Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)
 
 **subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
 
@@ -57,11 +57,10 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "85318-4",
-      "display" : "ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH"
-    }],
-    "text" : "HER2 Amplifikation (B-DISH)"
+      "system" : "http://snomed.info/sct",
+      "code" : "1363314005",
+      "display" : "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/Patient4"

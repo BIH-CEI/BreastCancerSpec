@@ -32,6 +32,7 @@ These are example instances that show what data produced and consumed by systems
 | [Document Bundle - BET Mamma](Bundle-BreastResectionDocument.md) | FHIR Document Bundle für den vollständigen BET-Befundbericht |
 | [Document Bundle - Stanzbiopsie Mamma](Bundle-CoreNeedleBiopsyDocument.md) | FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht |
 | [ER Färbeintensität - BET](Observation-BreastResectionERIntensity.md) | Färbeintensität der ER-Immunhistochemie |
+| [ER-IHC Reagenz Stanzbiopsie](Substance-CoreNeedleBiopsySubstanceER.md) | Östrogenrezeptor-Antikörper für Immunhistochemie |
 | [ER-IHC Schnitt 01 BET](Specimen-BreastResectionSpecimenSlideER01.md) | Schnitt 1 für Östrogenrezeptor-Immunhistochemie |
 | [ER-IHC Schnitt 01 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideER01.md) | Schnitt 1 für Östrogenrezeptor-Immunhistochemie |
 | [ER-IHC Schnitt 02 BET](Specimen-BreastResectionSpecimenSlideER02.md) | Schnitt 2 für Östrogenrezeptor-Immunhistochemie |
@@ -64,10 +65,14 @@ These are example instances that show what data produced and consumed by systems
 | [HER2 Amplifikation (ISH) - BET](Observation-BreastResectionHER2ISH.md) | HER2-Amplifikationsstatus per In-situ-Hybridisierung |
 | [HER2 Gesamtstatus - BET](Observation-BreastResectionHER2Overall.md) | HER2-Gesamtstatus basierend auf IHC und ISH |
 | [HER2 ISH - Stanzbiopsie](Observation-CoreNeedleBiopsyHER2ISH.md) | HER2 status by in-situ hybridization (B-DISH) |
+| [HER2-B-DISH Reagenz Stanzbiopsie](Substance-CoreNeedleBiopsySubstanceHER2ISH.md) | HER2 Dual ISH Sonden-Kit |
 | [HER2-B-DISH Schnitt 01 BET](Specimen-BreastResectionSpecimenSlideHER2-01.md) | Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization |
 | [HER2-B-DISH Schnitt 01 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideHER2-01.md) | Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization |
 | [HER2-B-DISH Schnitt 02 BET](Specimen-BreastResectionSpecimenSlideHER2-02.md) | Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization |
 | [HER2-B-DISH Schnitt 02 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideHER2-02.md) | Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization |
+| [HER2-IHC Reagenz Stanzbiopsie](Substance-CoreNeedleBiopsySubstanceHER2IHC.md) | HER2-Antikörper für Immunhistochemie |
+| [HER2-IHC Schnitt 01 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideHER2IHC-01.md) | Schnitt 1 für HER2 Immunhistochemie |
+| [HER2-IHC Schnitt 02 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideHER2IHC-02.md) | Schnitt 2 für HER2 Immunhistochemie |
 | [HER2-Score (IHC) - BET](Observation-BreastResectionHER2IHC.md) | HER2-Score per Immunhistochemie |
 | [Histological Type ICD-O-3 - Stanzbiopsie](Observation-CoreNeedleBiopsyHistologicalTypeICDO3.md) | Histological type according to ICD-O-3 classification |
 | [Histologischer Tumortyp - BET](Observation-BreastResectionHistologicalType.md) | Histologischer Typ nach WHO/ICD-O-3 |
@@ -75,6 +80,7 @@ These are example instances that show what data produced and consumed by systems
 | [Kernpleomorphie-Score - BET](Observation-BreastResectionNuclearPleomorphism.md) | Nuclear pleomorphism score by Nottingham |
 | [Ki-67 Index - BET](Observation-BreastResectionKi67.md) | Ki-67 Proliferationsindex |
 | [Ki-67 Index - Stanzbiopsie](Observation-CoreNeedleBiopsyKi67.md) | Ki-67 proliferation index |
+| [Ki-67-IHC Reagenz Stanzbiopsie](Substance-CoreNeedleBiopsySubstanceKi67.md) | Ki-67-Antikörper für Immunhistochemie |
 | [Ki67-IHC Schnitt 01 BET](Specimen-BreastResectionSpecimenSlideKi67-01.md) | Schnitt 1 für Ki-67 Immunhistochemie |
 | [Ki67-IHC Schnitt 01 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideKi67-01.md) | Schnitt 1 für Ki-67 Immunhistochemie |
 | [Ki67-IHC Schnitt 02 BET](Specimen-BreastResectionSpecimenSlideKi67-02.md) | Schnitt 2 für Ki-67 Immunhistochemie |
@@ -107,6 +113,7 @@ These are example instances that show what data produced and consumed by systems
 | [Nächster tumorfreier Resektionsrand - BET](Observation-BreastResectionClosestMargin.md) | Lokalisation des nächsten tumorfreien Resektionsrands |
 | [Operatives Verfahren - BET](Observation-BreastResectionOperativeProcedure.md) | Art des operativen Verfahrens |
 | [PR Färbeintensität - BET](Observation-BreastResectionPRIntensity.md) | Färbeintensität der PR-Immunhistochemie |
+| [PR-IHC Reagenz Stanzbiopsie](Substance-CoreNeedleBiopsySubstancePR.md) | Progesteronrezeptor-Antikörper für Immunhistochemie |
 | [PR-IHC Schnitt 01 BET](Specimen-BreastResectionSpecimenSlidePR01.md) | Schnitt 1 für Progesteronrezeptor-Immunhistochemie |
 | [PR-IHC Schnitt 01 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlidePR01.md) | Schnitt 1 für Progesteronrezeptor-Immunhistochemie |
 | [PR-IHC Schnitt 02 BET](Specimen-BreastResectionSpecimenSlidePR02.md) | Schnitt 2 für Progesteronrezeptor-Immunhistochemie |

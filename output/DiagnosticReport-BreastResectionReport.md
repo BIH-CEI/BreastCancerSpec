@@ -21,14 +21,12 @@ Profile: [MII PR Patho Reportversion: null2026.0.0)](https://simplifier.net/reso
 **Report Details**
 
 * **Code**: [Pathology report gross observation Narrative](Observation-BreastResectionMacroscopicGrouper.md)(Breast structure (body structure))
-  * **Value**: Makroskopische Befunde des BET-Exzisionspräparats
+  * **Value**: 
   * **Flags**: Final
-  * **Note**: > BET-Exzisionspräparat links, 65 x 45 x 30 mm, 55 g. Unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Haut mit Drahthäkchen. Schnittfläche: grau-weißlich, derber Herdbefund zentral ca. 18 mm. 3 Paraffinblöcke.
   * **When For**: 2025-02-06 08:30:00+0100
 * **Code**: [Pathology report final diagnosis Narrative](Observation-BreastResectionDiagnosticConclusionGrouper.md)
   * **Value**: 
   * **Flags**: Final
-  * **Note**: > Zusammenfassung: Invasives Mammakarzinom NST, pT1c, G2 (Score 6). Begleitendes DCIS, intermediärer Grad, kribriform, fokal Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine Lymphgefäßinvasion. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%.By Practitioner/PathologistPractitioner @2025-02-10
   * **When For**: 2025-02-10
 
 Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c, Nottingham Grad 2 (Score 6: Tubuli 3, Kernpleomorphie 2, Mitosen 1). Begleitendes DCIS, intermediärer Kerngrad, kribriform, fokale Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine LVI. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%.

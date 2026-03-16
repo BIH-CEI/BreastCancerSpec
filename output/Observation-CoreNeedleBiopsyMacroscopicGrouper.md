@@ -20,16 +20,7 @@ Profile: [MII PR Patho Macroscopic Grouperversion: null2026.0.0)](https://simpli
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: Makroskopische Befunde der HG-Stanzzylinder
-
-**note**: 
-
-> 
-
-2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke. 1 Paraffinblock.
-
-
-**bodySite**: Breast structure (body structure)
+**bodySite**: Structure of lower outer quadrant of left breast (body structure)
 
 **hasMember**: 
 
@@ -70,15 +61,11 @@ Profile: [MII PR Patho Macroscopic Grouperversion: null2026.0.0)](https://simpli
   "performer" : [{
     "reference" : "Practitioner/PathologistPractitioner"
   }],
-  "valueString" : "Makroskopische Befunde der HG-Stanzzylinder",
-  "note" : [{
-    "text" : "2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke. 1 Paraffinblock."
-  }],
   "bodySite" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "76752008",
-      "display" : "Breast structure (body structure)"
+      "code" : "110502005",
+      "display" : "Structure of lower outer quadrant of left breast (body structure)"
     }]
   },
   "hasMember" : [{

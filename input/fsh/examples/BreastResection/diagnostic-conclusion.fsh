@@ -66,9 +66,6 @@ Description: "Grouper for all diagnostic conclusion findings in breast resection
 // Kommentar (1)
 * hasMember[+] = Reference(BreastResectionComment)
 
-* note.authorReference = Reference(PathologistPractitioner)
-* note.time = "2025-02-10"
-* note.text = "Zusammenfassung: Invasives Mammakarzinom NST, pT1c, G2 (Score 6). Begleitendes DCIS, intermediärer Grad, kribriform, fokal Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine Lymphgefäßinvasion. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%."
 
 // ============================================================================
 // ALLGEMEIN (7 Observations)

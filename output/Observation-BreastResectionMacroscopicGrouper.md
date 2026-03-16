@@ -20,15 +20,6 @@ Profile: [MII PR Patho Macroscopic Grouperversion: null2026.0.0)](https://simpli
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: Makroskopische Befunde des BET-Exzisionspräparats
-
-**note**: 
-
-> 
-
-BET-Exzisionspräparat links, 65 x 45 x 30 mm, 55 g. Unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Haut mit Drahthäkchen. Schnittfläche: grau-weißlich, derber Herdbefund zentral ca. 18 mm. 3 Paraffinblöcke.
-
-
 **bodySite**: Breast structure (body structure)
 
 **hasMember**: 
@@ -73,10 +64,6 @@ BET-Exzisionspräparat links, 65 x 45 x 30 mm, 55 g. Unterer äußerer Quadrant,
   "effectiveDateTime" : "2025-02-06T08:30:00+01:00",
   "performer" : [{
     "reference" : "Practitioner/PathologistPractitioner"
-  }],
-  "valueString" : "Makroskopische Befunde des BET-Exzisionspräparats",
-  "note" : [{
-    "text" : "BET-Exzisionspräparat links, 65 x 45 x 30 mm, 55 g. Unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Haut mit Drahthäkchen. Schnittfläche: grau-weißlich, derber Herdbefund zentral ca. 18 mm. 3 Paraffinblöcke."
   }],
   "bodySite" : {
     "coding" : [{

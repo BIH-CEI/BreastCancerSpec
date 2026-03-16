@@ -8,7 +8,7 @@
 
 Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding)
 
-**basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
+**basedOn**: [ServiceRequest Breast Pathology biopsy report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
 
 **status**: Final
 
@@ -22,7 +22,7 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: Nottingham Grad 2 (Score 6)
+**value**: Nottingham Grad 2
 
 **specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)](Specimen-CoreNeedleBiopsySpecimenSlideHE01.md)
 
@@ -75,7 +75,7 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
       "code" : "1155703007",
       "display" : "G2: Moderately differentiated histologic grade (qualifier value)"
     }],
-    "text" : "Nottingham Grad 2 (Score 6)"
+    "text" : "Nottingham Grad 2"
   },
   "specimen" : {
     "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"

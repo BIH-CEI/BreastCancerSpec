@@ -34,7 +34,7 @@
 | | | |
 | :--- | :--- | :--- |
 | - | **Code** | **Detail** |
-| * | pathology report entry task | [ServiceRequest Pathology synoptic report](ServiceRequest-CoreNeedleBiopsyReportRequest.md) |
+| * | pathology report entry task | [ServiceRequest Breast Pathology biopsy report](ServiceRequest-CoreNeedleBiopsyReportRequest.md) |
 
 
 

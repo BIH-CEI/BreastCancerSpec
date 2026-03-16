@@ -22,13 +22,6 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**note**: By Practitioner/PathologistPractitioner @2025-02-10
-
-> 
-
-Zusammenfassung: Invasives Mammakarzinom NST, pT1c, G2 (Score 6). Begleitendes DCIS, intermediärer Grad, kribriform, fokal Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine Lymphgefäßinvasion. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%.
-
-
 **hasMember**: 
 
 * [Observation Carcinoma in situ of breast (disorder)](Observation-BreastResectionNonInvasiveLesion.md)
@@ -108,13 +101,6 @@ Zusammenfassung: Invasives Mammakarzinom NST, pT1c, G2 (Score 6). Begleitendes D
   "effectiveDateTime" : "2025-02-10",
   "performer" : [{
     "reference" : "Practitioner/PathologistPractitioner"
-  }],
-  "note" : [{
-    "authorReference" : {
-      "reference" : "Practitioner/PathologistPractitioner"
-    },
-    "time" : "2025-02-10",
-    "text" : "Zusammenfassung: Invasives Mammakarzinom NST, pT1c, G2 (Score 6). Begleitendes DCIS, intermediärer Grad, kribriform, fokal Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine Lymphgefäßinvasion. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%."
   }],
   "hasMember" : [{
     "reference" : "Observation/BreastResectionNonInvasiveLesion"

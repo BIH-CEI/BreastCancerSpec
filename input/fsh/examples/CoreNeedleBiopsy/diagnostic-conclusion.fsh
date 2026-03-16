@@ -35,9 +35,6 @@ Description: "Grouper for all diagnostic conclusion findings in core needle biop
 * hasMember[+] = Reference(CoreNeedleBiopsySpecimenRadiography)
 * hasMember[+] = Reference(CoreNeedleBiopsyMicrocalcificationCorrelation)
 
-* note.authorReference = Reference(PathologistPractitioner)
-* note.time = "2025-01-17"
-* note.text = "Zusammenfassung: Invasives Mammakarzinom NST (ICD-O 8500/3), Nottingham Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1). ER positiv (85%), PR positiv (50%), HER2 negativ (nicht amplifiziert), Ki-67 10%. B-Klassifikation B5b. Keine relevanten Mikroverkalkungen. Präparateradiogramm gesehen."
 
 // Histological Type (ICD-O-3)
 Instance: CoreNeedleBiopsyHistologicalTypeICDO3
@@ -74,7 +71,7 @@ Description: "Free text description of tumor morphology"
 * effectiveDateTime = "2025-01-17"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueString = "In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion."
+* valueString = "Invasives Karzinom, NST"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // Nottingham Grade
@@ -94,7 +91,7 @@ Description: "Nottingham histologic grade"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
 * valueCodeableConcept = $sct#1155703007 "G2: Moderately differentiated histologic grade (qualifier value)"
-* valueCodeableConcept.text = "Nottingham Grad 2 (Score 6)"
+* valueCodeableConcept.text = "Nottingham Grad 2"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // Nottingham Summary Score
@@ -268,8 +265,7 @@ Description: "HER2 status by in-situ hybridization (B-DISH)"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#85318-4 "ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH"
-* code.text = "HER2 Amplifikation (B-DISH)"
+* code = $sct#1363314005 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideHER2-01)
 * effectiveDateTime = "2025-01-17"
@@ -331,8 +327,7 @@ Description: "Presence of relevant microcalcifications"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $sct#12747003 "Microcalcification, calcified structure (morphologic abnormality)"
-* code.text = "Relevante Mikroverkalkungen"
+* code = $sct#1240404008 "Presence of microcalcification in excised breast specimen (observable entity)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)
 * effectiveDateTime = "2025-01-17"
