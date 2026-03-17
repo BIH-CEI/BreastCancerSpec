@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Paraffinblock 02 BET - DCIS / Tumorperipherie - TTL Representation - Breast Cancer Specification v0.1.0</title>
+    <title>Paraffinblock 02 BET - Tumor zentral (Scheibe V) - TTL Representation - Breast Cancer Specification v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"7.102"}
-    h3,h4,h5,h6{--heading-prefix:"7.102"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.129"}
+    h3,h4,h5,h6{--heading-prefix:"8.129"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -144,6 +144,31 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SLN-Biopsie Axilla
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="lymph-node-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-LymphNodeReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-LymphNodeMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-LymphNodeDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-LymphNodeReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-LymphNodeComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="document-viewer.html">Befund-Viewer</a>
   </li>
@@ -162,7 +187,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Paraffinblock 02 BET - DCIS / Tumorperipherie</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Paraffinblock 02 BET - Tumor zentral (Scheibe V)</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -221,7 +246,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Paraffinblock 02 BET - DCIS / Tumorperipherie - TTL Representation</h2>
+<h2 id="root">: Paraffinblock 02 BET - Tumor zentral (Scheibe V) - TTL Representation</h2>
 
 
 <p><a href="Specimen-BreastResectionSpecimenBlock02.ttl" no-download="true">Raw ttl</a> | <a href="Specimen-BreastResectionSpecimenBlock02.ttl" download>Download</a></p>
@@ -253,7 +278,7 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/domainresource.html#Specimen.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Specimen BreastResectionSpecimenBlock02&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;BreastResectionSpecimenBlock02\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcBreastResectionSpecimenBlock02\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profiles: &lt;a href=\&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\&quot;&gt;MII PR Patho Specimenversion: null2026.0.0)&lt;/a&gt;, &lt;a href=\&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\&quot;&gt;MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://pathologie.example-hospital.de/fhir/fn/befundbericht&lt;/code&gt;/E_25_210_A_2&lt;/p&gt;&lt;p&gt;&lt;b&gt;accessionIdentifier&lt;/b&gt;: &lt;code&gt;https://pathologie.example-hospital.de/fhir/fn/befundbericht&lt;/code&gt;/E_25_210&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Available&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 1201985008}\&quot;&gt;Tissue block specimen (specimen)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-Patient4.html\&quot;&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;parent&lt;/b&gt;: &lt;a href=\&quot;Specimen-BreastResectionSpecimenPart.html\&quot;&gt;Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ. 65 x 45 x 30 mm, 55 g. Schnittfläche: grau-weißlich, derber Herdbefund zentral, ca. 18 mm.&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Collections&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Collected[x]&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Method&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;2025-02-06 08:10:00+0100&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 787377000}\&quot;&gt;Gross examination and sampling of tissue specimen (procedure)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Processings&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Extension&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Procedure&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Time[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td/&gt;&lt;td&gt;Zuschnitt und Paraffineinbettung - DCIS/Tumorperipherie&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 787376009}\&quot;&gt;Preparation of formalin fixed paraffin embedded tissue specimen (procedure)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2025-02-06 08:10:00+0100&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Containers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Additive[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 706053007}\&quot;&gt;General specimen container (physical object)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 311731000}\&quot;&gt;Paraffin wax (substance)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Specimen BreastResectionSpecimenBlock02&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;BreastResectionSpecimenBlock02\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcBreastResectionSpecimenBlock02\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profiles: &lt;a href=\&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\&quot;&gt;MII PR Patho Specimenversion: null2026.0.0)&lt;/a&gt;, &lt;a href=\&quot;https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\&quot;&gt;MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://pathologie.example-hospital.de/fhir/fn/befundbericht&lt;/code&gt;/E_25_210_A_2&lt;/p&gt;&lt;p&gt;&lt;b&gt;accessionIdentifier&lt;/b&gt;: &lt;code&gt;https://pathologie.example-hospital.de/fhir/fn/befundbericht&lt;/code&gt;/E_25_210&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Available&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 1201985008}\&quot;&gt;Tissue block specimen (specimen)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-Patient4.html\&quot;&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;parent&lt;/b&gt;: &lt;a href=\&quot;Specimen-BreastResectionSpecimenPart.html\&quot;&gt;Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ. 42 x 35 x 18 mm, 10 g. Lamellierung in 8 Scheiben à 5 mm. Schnittfläche: grau-weißlich, derber Herdbefund zentral in Scheibe III–V, ca. 18 mm.&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Collections&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Collected[x]&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Method&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;2025-02-06 08:10:00+0100&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 787377000}\&quot;&gt;Gross examination and sampling of tissue specimen (procedure)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Processings&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Extension&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Description&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Procedure&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Time[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td/&gt;&lt;td&gt;Zuschnitt und Paraffineinbettung - Tumor zentral, Scheibe V&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 787376009}\&quot;&gt;Preparation of formalin fixed paraffin embedded tissue specimen (procedure)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2025-02-06 08:10:00+0100&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Containers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Additive[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 706053007}\&quot;&gt;General specimen container (physical object)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://snomed.info/sct 311731000}\&quot;&gt;Paraffin wax (substance)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/specimen.html#Specimen.identifier">fhir:identifier</a> ( [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:system</a> [
@@ -319,7 +344,7 @@ a sct:787377000 ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://unitsofmeasure.org&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://unitsofmeasure.org&gt;           ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;Cel&quot; ]         ]       ]     ] ) ;
-<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.processing.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Zuschnitt und Paraffineinbettung - DCIS/Tumorperipherie&quot; ] ;
+<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.processing.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Zuschnitt und Paraffineinbettung - Tumor zentral, Scheibe V&quot; ] ;
 <a href="http://hl7.org/fhir/R4/specimen.html#Specimen.processing.procedure">fhir:procedure</a> [
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
 a sct:787376009 ;
@@ -377,7 +402,7 @@ a sct:311731000 ;
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 16, 2026 12:14+0100">2026-03-16</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 17, 2026 15:11+0100">2026-03-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

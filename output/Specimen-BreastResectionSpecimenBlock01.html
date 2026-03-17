@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Paraffinblock 01 BET - Tumor zentral - Breast Cancer Specification v0.1.0</title>
+    <title>Paraffinblock 01 BET - Tumor zentral (Scheibe III) - Breast Cancer Specification v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"7.100"}
-    h3,h4,h5,h6{--heading-prefix:"7.100"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.126"}
+    h3,h4,h5,h6{--heading-prefix:"8.126"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -142,6 +142,31 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SLN-Biopsie Axilla
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="lymph-node-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-LymphNodeReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-LymphNodeMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-LymphNodeDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-LymphNodeReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-LymphNodeComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="document-viewer.html">Befund-Viewer</a>
   </li>
@@ -160,7 +185,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Paraffinblock 01 BET - Tumor zentral</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Paraffinblock 01 BET - Tumor zentral (Scheibe III)</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -220,7 +245,7 @@
   <a name="root"> </a>
 
 
-  <h2 id="root">Example Specimen: Paraffinblock 01 BET - Tumor zentral</h2>
+  <h2 id="root">Example Specimen: Paraffinblock 01 BET - Tumor zentral (Scheibe III)</h2>
 
 
 
@@ -230,7 +255,7 @@
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><a name="BreastResectionSpecimenBlock01"> </a><a name="hcBreastResectionSpecimenBlock01"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_210_A_1</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_210</p><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 1201985008}">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href="Specimen-BreastResectionSpecimenPart.html">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ. 65 x 45 x 30 mm, 55 g. Schnittfläche: grau-weißlich, derber Herdbefund zentral, ca. 18 mm.</a></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style="display: none">*</td><td>2025-02-06 08:00:00+0100</td><td><span title="Codes:{http://snomed.info/sct 787377000}">Gross examination and sampling of tissue specimen (procedure)</span></td></tr></table><h3>Processings</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Description</b></td><td><b>Procedure</b></td><td><b>Time[x]</b></td></tr><tr><td style="display: none">*</td><td/><td>Zuschnitt und Paraffineinbettung - Tumorareal zentral</td><td><span title="Codes:{http://snomed.info/sct 787376009}">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td><td>2025-02-06 08:00:00+0100</td></tr></table><h3>Containers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 706053007}">General specimen container (physical object)</span></td><td><span title="Codes:{http://snomed.info/sct 311731000}">Paraffin wax (substance)</span></td></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><a name="BreastResectionSpecimenBlock01"> </a><a name="hcBreastResectionSpecimenBlock01"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_210_A_1</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_210</p><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 1201985008}">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href="Specimen-BreastResectionSpecimenPart.html">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ. 42 x 35 x 18 mm, 10 g. Lamellierung in 8 Scheiben à 5 mm. Schnittfläche: grau-weißlich, derber Herdbefund zentral in Scheibe III–V, ca. 18 mm.</a></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style="display: none">*</td><td>2025-02-06 08:00:00+0100</td><td><span title="Codes:{http://snomed.info/sct 787377000}">Gross examination and sampling of tissue specimen (procedure)</span></td></tr></table><h3>Processings</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Description</b></td><td><b>Procedure</b></td><td><b>Time[x]</b></td></tr><tr><td style="display: none">*</td><td/><td>Zuschnitt und Paraffineinbettung - Tumor zentral, Scheibe III</td><td><span title="Codes:{http://snomed.info/sct 787376009}">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td><td>2025-02-06 08:00:00+0100</td></tr></table><h3>Containers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 706053007}">General specimen container (physical object)</span></td><td><span title="Codes:{http://snomed.info/sct 311731000}">Paraffin wax (substance)</span></td></tr></table></div>
 
   
 
@@ -255,7 +280,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 16, 2026 12:14+0100">2026-03-16</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 17, 2026 15:11+0100">2026-03-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

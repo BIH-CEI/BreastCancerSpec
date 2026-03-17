@@ -30,6 +30,8 @@ pages:
     title: Core Needle Biopsy — Specimens
   resection-specimens.md:
     title: Breast Resection — Specimens
+  lymph-node-specimens.md:
+    title: Lymph Node Specimen — Specimens
   document-viewer.xml:
     title: Befund-Viewer
 
@@ -51,6 +53,13 @@ menu:
     DiagnosticConclusionGrouper: Observation-BreastResectionDiagnosticConclusionGrouper.html
     DiagnosticReport: DiagnosticReport-BreastResectionReport.html
     Composition: Composition-BreastResectionComposition.html
+  SLN-Biopsie Axilla:
+    Specimens: lymph-node-specimens.html
+    ServiceRequest: ServiceRequest-LymphNodeReportRequest.html
+    MacroscopyGrouper: Observation-LymphNodeMacroscopicGrouper.html
+    DiagnosticConclusionGrouper: Observation-LymphNodeDiagnosticConclusionGrouper.html
+    DiagnosticReport: DiagnosticReport-LymphNodeReport.html
+    Composition: Composition-LymphNodeComposition.html
   Befund-Viewer: document-viewer.html
   Artifacts: artifacts.html
 

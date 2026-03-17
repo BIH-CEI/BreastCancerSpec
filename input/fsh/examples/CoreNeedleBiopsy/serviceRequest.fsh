@@ -16,6 +16,6 @@ Description: "Anforderung für pathologische Aufarbeitung einer US-gestützten S
 * subject = Reference(Patient4)
 * requester = Reference(BreastSurgeonPractitioner)
 * performer = Reference(PathologistPractitioner)
-* reasonCode = $sct#1129792006 "Mammographic architectural distortion of breast (finding)"
+* reasonCode = $sct#129792006 "Mammographic architectural distortion of breast (finding)"
 * specimen = Reference(CoreNeedleBiopsySpecimenPart)
 * supportingInfo[+] = Reference(CoreNeedleBiopsyImagingReport)

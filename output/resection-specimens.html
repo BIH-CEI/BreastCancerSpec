@@ -142,6 +142,31 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">SLN-Biopsie Axilla
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="lymph-node-specimens.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-LymphNodeReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-LymphNodeMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-LymphNodeDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-LymphNodeReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-LymphNodeComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="document-viewer.html">Befund-Viewer</a>
   </li>
@@ -204,7 +229,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>The breast-conserving excision specimen comprises <strong>26 specimen instances</strong> in a three-level hierarchy: part → paraffin blocks → slides.</p>
+<p>The breast-conserving excision specimen comprises <strong>22 specimen instances</strong> in a three-level hierarchy: part → paraffin blocks → slides, plus <strong>7 substance instances</strong> for IHC reagents.</p>
 
 <h3 id="part">Part</h3>
 
@@ -218,7 +243,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td><a href="Specimen-BreastResectionSpecimenPart.html">BreastResectionSpecimenPart</a></td>
-      <td>BCS excision specimen, left breast, with skin and wire localisation, 65×45×30 mm, 55 g</td>
+      <td>BCS excision specimen, left breast, with skin and wire localisation, 42×35×18 mm, 10 g</td>
     </tr>
   </tbody>
 </table>
@@ -235,22 +260,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td><a href="Specimen-BreastResectionSpecimenBlock01.html">BreastResectionSpecimenBlock01</a></td>
-      <td>Central tumour area</td>
+      <td>Central tumour area, slice III (incl. anterior/posterior margins)</td>
     </tr>
     <tr>
       <td><a href="Specimen-BreastResectionSpecimenBlock02.html">BreastResectionSpecimenBlock02</a></td>
-      <td>DCIS area and tumour periphery</td>
+      <td>Central tumour area, slice V (incl. anterior/posterior margins)</td>
     </tr>
     <tr>
       <td><a href="Specimen-BreastResectionSpecimenBlock03.html">BreastResectionSpecimenBlock03</a></td>
-      <td>Resection margins</td>
+      <td>Resection margin superior</td>
+    </tr>
+    <tr>
+      <td><a href="Specimen-BreastResectionSpecimenBlock04.html">BreastResectionSpecimenBlock04</a></td>
+      <td>Resection margin inferior</td>
+    </tr>
+    <tr>
+      <td><a href="Specimen-BreastResectionSpecimenBlock05.html">BreastResectionSpecimenBlock05</a></td>
+      <td>Resection margin medial (slice I)</td>
+    </tr>
+    <tr>
+      <td><a href="Specimen-BreastResectionSpecimenBlock06.html">BreastResectionSpecimenBlock06</a></td>
+      <td>Resection margin lateral (slice VIII)</td>
     </tr>
   </tbody>
 </table>
 
 <h3 id="slides">Slides</h3>
 
-<h4 id="he-stains--tumour">H&amp;E Stains — Tumour</h4>
+<h4 id="he-stains--block-01-tumour-slice-iii">H&amp;E Stains — Block 01 (Tumour, Slice III)</h4>
 
 <table>
   <thead>
@@ -268,18 +305,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><a href="Specimen-BreastResectionSpecimenSlideHE02.html">BreastResectionSpecimenSlideHE02</a></td>
       <td>H&amp;E slide, tumour area, section level 2</td>
     </tr>
-    <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideHE03.html">BreastResectionSpecimenSlideHE03</a></td>
-      <td>H&amp;E slide, tumour area, section level 3</td>
-    </tr>
-    <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideHE04.html">BreastResectionSpecimenSlideHE04</a></td>
-      <td>H&amp;E slide, tumour area, section level 4</td>
-    </tr>
   </tbody>
 </table>
 
-<h4 id="he-stains--dcis">H&amp;E Stains — DCIS</h4>
+<h4 id="he-stains--block-02-tumour-slice-v">H&amp;E Stains — Block 02 (Tumour, Slice V)</h4>
 
 <table>
   <thead>
@@ -290,17 +319,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideDCIS-HE01.html">BreastResectionSpecimenSlideDCIS-HE01</a></td>
-      <td>H&amp;E slide, DCIS area, section level 1</td>
+      <td><a href="Specimen-BreastResectionSpecimenSlideBlock02-HE01.html">BreastResectionSpecimenSlideBlock02-HE01</a></td>
+      <td>H&amp;E slide, tumour area slice V, section level 1</td>
     </tr>
     <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideDCIS-HE02.html">BreastResectionSpecimenSlideDCIS-HE02</a></td>
-      <td>H&amp;E slide, DCIS area, section level 2</td>
+      <td><a href="Specimen-BreastResectionSpecimenSlideBlock02-HE02.html">BreastResectionSpecimenSlideBlock02-HE02</a></td>
+      <td>H&amp;E slide, tumour area slice V, section level 2</td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="he-stains--resection-margins">H&amp;E Stains — Resection Margins</h4>
+<h4 id="he-stains--resection-margins-blocks-0306">H&amp;E Stains — Resection Margins (Blocks 03–06)</h4>
 
 <table>
   <thead>
@@ -311,33 +340,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideMargins-HE01.html">BreastResectionSpecimenSlideMargins-HE01</a></td>
-      <td>H&amp;E slide, resection margins, section level 1</td>
+      <td><a href="Specimen-BreastResectionSpecimenSlideRR-Superior-HE01.html">BreastResectionSpecimenSlideRR-Superior-HE01</a></td>
+      <td>H&amp;E slide, resection margin superior</td>
     </tr>
     <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideMargins-HE02.html">BreastResectionSpecimenSlideMargins-HE02</a></td>
-      <td>H&amp;E slide, resection margins, section level 2</td>
+      <td><a href="Specimen-BreastResectionSpecimenSlideRR-Inferior-HE01.html">BreastResectionSpecimenSlideRR-Inferior-HE01</a></td>
+      <td>H&amp;E slide, resection margin inferior</td>
     </tr>
     <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideMargins-HE03.html">BreastResectionSpecimenSlideMargins-HE03</a></td>
-      <td>H&amp;E slide, resection margins, section level 3</td>
+      <td><a href="Specimen-BreastResectionSpecimenSlideRR-Medial-HE01.html">BreastResectionSpecimenSlideRR-Medial-HE01</a></td>
+      <td>H&amp;E slide, resection margin medial</td>
     </tr>
     <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideMargins-HE04.html">BreastResectionSpecimenSlideMargins-HE04</a></td>
-      <td>H&amp;E slide, resection margins, section level 4</td>
-    </tr>
-    <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideMargins-HE05.html">BreastResectionSpecimenSlideMargins-HE05</a></td>
-      <td>H&amp;E slide, resection margins, section level 5</td>
-    </tr>
-    <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideMargins-HE06.html">BreastResectionSpecimenSlideMargins-HE06</a></td>
-      <td>H&amp;E slide, resection margins, section level 6</td>
+      <td><a href="Specimen-BreastResectionSpecimenSlideRR-Lateral-HE01.html">BreastResectionSpecimenSlideRR-Lateral-HE01</a></td>
+      <td>H&amp;E slide, resection margin lateral</td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="immunohistochemistry--in-situ-hybridisation">Immunohistochemistry / In Situ Hybridisation</h4>
+<h4 id="immunohistochemistry-block-01">Immunohistochemistry (Block 01)</h4>
 
 <table>
   <thead>
@@ -351,42 +372,37 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><a href="Specimen-BreastResectionSpecimenSlideER01.html">BreastResectionSpecimenSlideER01</a></td>
       <td>ER IHC</td>
-      <td>Oestrogen receptor immunohistochemistry, slide 1</td>
-    </tr>
-    <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideER02.html">BreastResectionSpecimenSlideER02</a></td>
-      <td>ER IHC</td>
-      <td>Oestrogen receptor immunohistochemistry, slide 2</td>
+      <td>Oestrogen receptor immunohistochemistry</td>
     </tr>
     <tr>
       <td><a href="Specimen-BreastResectionSpecimenSlidePR01.html">BreastResectionSpecimenSlidePR01</a></td>
       <td>PR IHC</td>
-      <td>Progesterone receptor immunohistochemistry, slide 1</td>
+      <td>Progesterone receptor immunohistochemistry</td>
     </tr>
     <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlidePR02.html">BreastResectionSpecimenSlidePR02</a></td>
-      <td>PR IHC</td>
-      <td>Progesterone receptor immunohistochemistry, slide 2</td>
-    </tr>
-    <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideHER2-01.html">BreastResectionSpecimenSlideHER2-01</a></td>
-      <td>HER2 B-DISH</td>
-      <td>HER2 bright-field dual in situ hybridisation, slide 1</td>
-    </tr>
-    <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideHER2-02.html">BreastResectionSpecimenSlideHER2-02</a></td>
-      <td>HER2 B-DISH</td>
-      <td>HER2 bright-field dual in situ hybridisation, slide 2</td>
+      <td><a href="Specimen-BreastResectionSpecimenSlideHER2IHC01.html">BreastResectionSpecimenSlideHER2IHC01</a></td>
+      <td>HER2 IHC</td>
+      <td>HER2 immunohistochemistry</td>
     </tr>
     <tr>
       <td><a href="Specimen-BreastResectionSpecimenSlideKi67-01.html">BreastResectionSpecimenSlideKi67-01</a></td>
       <td>Ki-67 IHC</td>
-      <td>Ki-67 immunohistochemistry, slide 1</td>
+      <td>Ki-67 immunohistochemistry</td>
     </tr>
     <tr>
-      <td><a href="Specimen-BreastResectionSpecimenSlideKi67-02.html">BreastResectionSpecimenSlideKi67-02</a></td>
-      <td>Ki-67 IHC</td>
-      <td>Ki-67 immunohistochemistry, slide 2</td>
+      <td><a href="Specimen-BreastResectionSpecimenSlideCK18-01.html">BreastResectionSpecimenSlideCK18-01</a></td>
+      <td>CK18 IHC</td>
+      <td>Cytokeratin 18 immunohistochemistry</td>
+    </tr>
+    <tr>
+      <td><a href="Specimen-BreastResectionSpecimenSlidep40-01.html">BreastResectionSpecimenSlidep40-01</a></td>
+      <td>p40 IHC</td>
+      <td>p40 immunohistochemistry</td>
+    </tr>
+    <tr>
+      <td><a href="Specimen-BreastResectionSpecimenSlideECad-01.html">BreastResectionSpecimenSlideECad-01</a></td>
+      <td>E-Cadherin IHC</td>
+      <td>E-Cadherin immunohistochemistry</td>
     </tr>
   </tbody>
 </table>
@@ -410,7 +426,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 16, 2026 12:14+0100">2026-03-16</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 17, 2026 15:11+0100">2026-03-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -19,5 +19,7 @@ Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-cli
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
 
+Alias: $hgnc = http://www.genenames.org/geneId
+
 Alias: $ICDO-3 = urn:oid:2.16.840.1.113883.6.43.1
 Alias: $ICDO-3_Auflagen = urn:oid:1.2.276.0.76.3.1.131.1.5.153

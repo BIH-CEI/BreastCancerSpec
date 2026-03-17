@@ -28,6 +28,13 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.md)
 
+### Components
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Code** | **Value[x]** |
+| * | Gene studied [ID] | ERBB2 |
+
 
 
 ## Resource Content
@@ -82,6 +89,22 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+  }],
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "48018-6",
+        "display" : "Gene studied [ID]"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.genenames.org/geneId",
+        "code" : "HGNC:3430",
+        "display" : "ERBB2"
+      }]
+    }
   }]
 }
 

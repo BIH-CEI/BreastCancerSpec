@@ -85,7 +85,7 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
   "reasonCode" : [{
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "1129792006",
+      "code" : "129792006",
       "display" : "Mammographic architectural distortion of breast (finding)"
     }]
   }],

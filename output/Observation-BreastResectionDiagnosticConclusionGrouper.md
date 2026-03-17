@@ -52,7 +52,7 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
 * [Observation Surgical margin DCIS involvement [Presence] in Breast cancer specimen by Light microscopy](Observation-BreastResectionMarginStatusNonInvasive.md)
 * [Observation DCIS.uninv marg dist.closest BT](Observation-BreastResectionMinDistanceNonInvasive.md)
 * [Observation Lymph-vascular invasion Ca spec](Observation-BreastResectionLVI.md)
-* [Observation Microcalcifications in Breast tumor](Observation-BreastResectionMicrocalcification.md)
+* [Observation Presence of microcalcification in excised breast specimen (observable entity)](Observation-BreastResectionMicrocalcification.md)
 * [Observation Estrogen receptor [Interpretation] in Tissue](Observation-BreastResectionERStatus.md)
 * [Observation Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain](Observation-BreastResectionERPercentage.md)
 * [Observation Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain](Observation-BreastResectionERIntensity.md)

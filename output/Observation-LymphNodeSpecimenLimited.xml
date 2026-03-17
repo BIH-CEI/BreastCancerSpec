@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="LymphNodeSpecimenLimited"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation LymphNodeSpecimenLimited</b></p><a name="LymphNodeSpecimenLimited"> </a><a name="hcLymphNodeSpecimenLimited"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 125156009}">Proben limitiert auswertbar wegen fehlender klinischer Informationen</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 373067005}">No (qualifier value)</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="125156009"/>
+      <display value="Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)"/>
+    </coding>
+    <text value="Proben limitiert auswertbar wegen fehlender klinischer Informationen"/>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="373067005"/>
+      <display value="No (qualifier value)"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

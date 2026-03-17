@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://breastcancerspec.org/ImplementationGuide/breastcancerspec | *Version*:0.1.0 |
-| Draft as of 2026-03-16 | *Computable Name*:BreastCancerSpec |
+| Draft as of 2026-03-17 | *Computable Name*:BreastCancerSpec |
 
 ### Introduction
 
@@ -50,7 +50,7 @@ This IG builds on:
   "name" : "BreastCancerSpec",
   "title" : "Breast Cancer Specification",
   "status" : "draft",
-  "date" : "2026-03-16T12:14:42+01:00",
+  "date" : "2026-03-17T15:11:19+01:00",
   "publisher" : "BIH CEI",
   "contact" : [{
     "name" : "BIH CEI",
@@ -692,6 +692,42 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodeNonSLNPositive"
+      },
+      "name" : "Anzahl befallener Non-SLN",
+      "description" : "Anzahl der befallenen (nicht-Sentinel) axillären Lymphknoten: 0",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeSLNPositive"
+      },
+      "name" : "Anzahl befallener SLN",
+      "description" : "Anzahl der befallenen Sentinel-Lymphknoten: 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionMacroBlockCount"
+      },
+      "name" : "Anzahl Paraffinblöcke BET",
+      "description" : "Anzahl der angefertigten Paraffinblöcke",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/CoreNeedleBiopsyMacroscopicBlockCount"
       },
       "name" : "Anzahl Paraffinblöcke Stanzbiopsie",
@@ -708,6 +744,30 @@ This IG builds on:
       },
       "name" : "Anzahl Stanzzylinder",
       "description" : "Anzahl der eingesendeten Stanzzylinder",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeNonSLNExamined"
+      },
+      "name" : "Anzahl untersuchter Non-SLN",
+      "description" : "Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeSLNExamined"
+      },
+      "name" : "Anzahl untersuchter SLN",
+      "description" : "Anzahl der untersuchten Sentinel-Lymphknoten: 2",
       "exampleBoolean" : true
     },
     {
@@ -779,7 +839,19 @@ This IG builds on:
         "reference" : "Specimen/BreastResectionSpecimenPart"
       },
       "name" : "BET-Exzisionspräparat (Einsendespecimen)",
-      "description" : "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 65x45x30mm, 55g",
+      "description" : "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 42x35x18mm, 10g",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/LymphNodeImagingReport"
+      },
+      "name" : "Bildgebungsbefund SLN-Biopsie",
+      "description" : "Bildgebungsbefund als SupportingInfo für die SLN-Biopsie",
       "exampleBoolean" : true
     },
     {
@@ -792,6 +864,30 @@ This IG builds on:
       },
       "name" : "Brustkrebsvorgeschichte",
       "description" : "Anamnese hinsichtlich Brustkrebsvorgeschichte",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/BreastResectionSubstanceCK18"
+      },
+      "name" : "CK-18-IHC Reagenz BET",
+      "description" : "Zytokeratin 18 Antikörper für Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideCK18-01"
+      },
+      "name" : "CK18-IHC Schnitt BET (Block01)",
+      "description" : "Schnitt für Zytokeratin 18 Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -848,6 +944,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodeDiagnosticConclusionGrouper"
+      },
+      "name" : "Diagnostic Conclusion Grouper - SLN Axilla",
+      "description" : "Grouper for all diagnostic conclusion findings in sentinel lymph node biopsy",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/CoreNeedleBiopsyDiagnosticConclusionGrouper"
       },
       "name" : "Diagnostic Conclusion Grouper - Stanzbiopsie",
@@ -872,10 +980,46 @@ This IG builds on:
         "valueString" : "Bundle"
       }],
       "reference" : {
+        "reference" : "Bundle/LymphNodeDocument"
+      },
+      "name" : "Document Bundle - SLN-Biopsie Axilla",
+      "description" : "FHIR Document Bundle für den vollständigen SLN-Befundbericht",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
         "reference" : "Bundle/CoreNeedleBiopsyDocument"
       },
       "name" : "Document Bundle - Stanzbiopsie Mamma",
       "description" : "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/BreastResectionSubstanceECadherin"
+      },
+      "name" : "E-Cadherin-IHC Reagenz BET",
+      "description" : "E-Cadherin-Antikörper für Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideECad-01"
+      },
+      "name" : "E-Cadherin-IHC Schnitt BET (Block01)",
+      "description" : "Schnitt für E-Cadherin Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -908,6 +1052,18 @@ This IG builds on:
         "valueString" : "Encounter"
       }],
       "reference" : {
+        "reference" : "Encounter/LymphNodeEncounter"
+      },
+      "name" : "Encounter für SLN-Biopsie Axilla",
+      "description" : "Stationärer Encounter für Sentinel-Lymphknoten-Biopsie der linken Axilla (gleicher OP-Tag wie BET)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
         "reference" : "Encounter/CoreNeedleBiopsyEncounter"
       },
       "name" : "Encounter für Stanzbiopsie Mamma",
@@ -932,22 +1088,22 @@ This IG builds on:
         "valueString" : "Substance"
       }],
       "reference" : {
-        "reference" : "Substance/CoreNeedleBiopsySubstanceER"
+        "reference" : "Substance/BreastResectionSubstanceER"
       },
-      "name" : "ER-IHC Reagenz Stanzbiopsie",
+      "name" : "ER-IHC Reagenz BET",
       "description" : "Östrogenrezeptor-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
+        "valueString" : "Substance"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideER01"
+        "reference" : "Substance/CoreNeedleBiopsySubstanceER"
       },
-      "name" : "ER-IHC Schnitt 01 BET",
-      "description" : "Schnitt 1 für Östrogenrezeptor-Immunhistochemie",
+      "name" : "ER-IHC Reagenz Stanzbiopsie",
+      "description" : "Östrogenrezeptor-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -968,9 +1124,9 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideER02"
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideER02"
       },
-      "name" : "ER-IHC Schnitt 02 BET",
+      "name" : "ER-IHC Schnitt 02 Stanzbiopsie",
       "description" : "Schnitt 2 für Östrogenrezeptor-Immunhistochemie",
       "exampleBoolean" : true
     },
@@ -980,10 +1136,10 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideER02"
+        "reference" : "Specimen/BreastResectionSpecimenSlideER01"
       },
-      "name" : "ER-IHC Schnitt 02 Stanzbiopsie",
-      "description" : "Schnitt 2 für Östrogenrezeptor-Immunhistochemie",
+      "name" : "ER-IHC Schnitt BET (Block01)",
+      "description" : "Schnitt für Östrogenrezeptor-Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1008,6 +1164,18 @@ This IG builds on:
       },
       "name" : "Estrogen Receptor Status - Stanzbiopsie",
       "description" : "Estrogen receptor status by immunohistochemistry",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeExtranodalExtension"
+      },
+      "name" : "Extranodale Infiltration",
+      "description" : "Extranodale Infiltration durch LK-Metastase: Nicht vorhanden",
       "exampleBoolean" : true
     },
     {
@@ -1052,6 +1220,30 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodeTotalPositive"
+      },
+      "name" : "Gesamtzahl befallener LK",
+      "description" : "Gesamtzahl befallener Lymphknoten: 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeTotalExamined"
+      },
+      "name" : "Gesamtzahl untersuchter LK",
+      "description" : "Gesamtzahl untersuchter Lymphknoten: 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMacroWeight"
       },
       "name" : "Gewicht BET",
@@ -1061,25 +1253,13 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
+        "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideDCIS-HE01"
+        "reference" : "Observation/LymphNodeLargestMetSize"
       },
-      "name" : "HE-Schnitt 01 BET - DCIS",
-      "description" : "HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 1",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE01"
-      },
-      "name" : "HE-Schnitt 01 BET - Resektionsränder",
-      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 1",
+      "name" : "Größte Metastasenausdehnung",
+      "description" : "Ausdehnung der größten metastatischen Infiltration: 1.2 mm",
       "exampleBoolean" : true
     },
     {
@@ -1090,8 +1270,32 @@ This IG builds on:
       "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenSlideHE01"
       },
-      "name" : "HE-Schnitt 01 BET - Tumor",
-      "description" : "HE-gefärbter Schnitt des Tumorareals, Schnittstufe 1",
+      "name" : "HE-Schnitt 01 BET - Tumor (Block01)",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideBlock02-HE01"
+      },
+      "name" : "HE-Schnitt 01 BET - Tumor (Block02)",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Scheibe V, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE01"
+      },
+      "name" : "HE-Schnitt 01 SLN #1 (Schnittstufe 1)",
+      "description" : "HE-gefärbter Schnitt des SLN #1, Schnittstufe 1",
       "exampleBoolean" : true
     },
     {
@@ -1112,34 +1316,34 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideDCIS-HE02"
-      },
-      "name" : "HE-Schnitt 02 BET - DCIS",
-      "description" : "HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 2",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE02"
-      },
-      "name" : "HE-Schnitt 02 BET - Resektionsränder",
-      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 2",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenSlideHE02"
       },
-      "name" : "HE-Schnitt 02 BET - Tumor",
-      "description" : "HE-gefärbter Schnitt des Tumorareals, Schnittstufe 2",
+      "name" : "HE-Schnitt 02 BET - Tumor (Block01)",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideBlock02-HE02"
+      },
+      "name" : "HE-Schnitt 02 BET - Tumor (Block02)",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Scheibe V, Schnittstufe 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE02"
+      },
+      "name" : "HE-Schnitt 02 SLN #1 (Schnittstufe 2)",
+      "description" : "HE-gefärbter Schnitt des SLN #1, Schnittstufe 2",
       "exampleBoolean" : true
     },
     {
@@ -1160,22 +1364,10 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE03"
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE03"
       },
-      "name" : "HE-Schnitt 03 BET - Resektionsränder",
-      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 3",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideHE03"
-      },
-      "name" : "HE-Schnitt 03 BET - Tumor",
-      "description" : "HE-gefärbter Schnitt des Tumorareals, Schnittstufe 3",
+      "name" : "HE-Schnitt 03 SLN #2 (Schnittstufe 1)",
+      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 1",
       "exampleBoolean" : true
     },
     {
@@ -1196,22 +1388,10 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE04"
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE04"
       },
-      "name" : "HE-Schnitt 04 BET - Resektionsränder",
-      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 4",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideHE04"
-      },
-      "name" : "HE-Schnitt 04 BET - Tumor",
-      "description" : "HE-gefärbter Schnitt des Tumorareals, Schnittstufe 4",
+      "name" : "HE-Schnitt 04 SLN #2 (Schnittstufe 2)",
+      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 2",
       "exampleBoolean" : true
     },
     {
@@ -1232,10 +1412,10 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE05"
+        "reference" : "Specimen/BreastResectionSpecimenSlideRR-Inferior-HE01"
       },
-      "name" : "HE-Schnitt 05 BET - Resektionsränder",
-      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 5",
+      "name" : "HE-Schnitt BET - RR inferior (Block04)",
+      "description" : "HE-gefärbter Schnitt Resektionsrand inferior",
       "exampleBoolean" : true
     },
     {
@@ -1244,10 +1424,34 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE06"
+        "reference" : "Specimen/BreastResectionSpecimenSlideRR-Lateral-HE01"
       },
-      "name" : "HE-Schnitt 06 BET - Resektionsränder",
-      "description" : "HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 6",
+      "name" : "HE-Schnitt BET - RR lateral (Block06)",
+      "description" : "HE-gefärbter Schnitt Resektionsrand lateral, Scheibe VIII",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideRR-Medial-HE01"
+      },
+      "name" : "HE-Schnitt BET - RR medial (Block05)",
+      "description" : "HE-gefärbter Schnitt Resektionsrand medial, Scheibe I",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideRR-Superior-HE01"
+      },
+      "name" : "HE-Schnitt BET - RR superior (Block03)",
+      "description" : "HE-gefärbter Schnitt Resektionsrand superior",
       "exampleBoolean" : true
     },
     {
@@ -1304,18 +1508,6 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideHER2-01"
-      },
-      "name" : "HER2-B-DISH Schnitt 01 BET",
-      "description" : "Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
         "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2-01"
       },
       "name" : "HER2-B-DISH Schnitt 01 Stanzbiopsie",
@@ -1328,22 +1520,22 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideHER2-02"
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2-02"
       },
-      "name" : "HER2-B-DISH Schnitt 02 BET",
+      "name" : "HER2-B-DISH Schnitt 02 Stanzbiopsie",
       "description" : "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization",
       "exampleBoolean" : true
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
+        "valueString" : "Substance"
       }],
       "reference" : {
-        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHER2-02"
+        "reference" : "Substance/BreastResectionSubstanceHER2IHC"
       },
-      "name" : "HER2-B-DISH Schnitt 02 Stanzbiopsie",
-      "description" : "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization",
+      "name" : "HER2-IHC Reagenz BET",
+      "description" : "HER2-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1380,6 +1572,18 @@ This IG builds on:
       },
       "name" : "HER2-IHC Schnitt 02 Stanzbiopsie",
       "description" : "Schnitt 2 für HER2 Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideHER2IHC01"
+      },
+      "name" : "HER2-IHC Schnitt BET (Block01)",
+      "description" : "Schnitt für HER2-Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1436,6 +1640,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodeITCCount"
+      },
+      "name" : "ITC-befallene LK",
+      "description" : "Gesamtzahl ausschließlich ITC-befallener Lymphknoten: 0",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionNuclearPleomorphism"
       },
       "name" : "Kernpleomorphie-Score - BET",
@@ -1472,22 +1688,22 @@ This IG builds on:
         "valueString" : "Substance"
       }],
       "reference" : {
-        "reference" : "Substance/CoreNeedleBiopsySubstanceKi67"
+        "reference" : "Substance/BreastResectionSubstanceKi67"
       },
-      "name" : "Ki-67-IHC Reagenz Stanzbiopsie",
+      "name" : "Ki-67-IHC Reagenz BET",
       "description" : "Ki-67-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
+        "valueString" : "Substance"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideKi67-01"
+        "reference" : "Substance/CoreNeedleBiopsySubstanceKi67"
       },
-      "name" : "Ki67-IHC Schnitt 01 BET",
-      "description" : "Schnitt 1 für Ki-67 Immunhistochemie",
+      "name" : "Ki-67-IHC Reagenz Stanzbiopsie",
+      "description" : "Ki-67-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1508,9 +1724,9 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlideKi67-02"
+        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideKi67-02"
       },
-      "name" : "Ki67-IHC Schnitt 02 BET",
+      "name" : "Ki67-IHC Schnitt 02 Stanzbiopsie",
       "description" : "Schnitt 2 für Ki-67 Immunhistochemie",
       "exampleBoolean" : true
     },
@@ -1520,10 +1736,10 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideKi67-02"
+        "reference" : "Specimen/BreastResectionSpecimenSlideKi67-01"
       },
-      "name" : "Ki67-IHC Schnitt 02 Stanzbiopsie",
-      "description" : "Schnitt 2 für Ki-67 Immunhistochemie",
+      "name" : "Ki67-IHC Schnitt BET (Block01)",
+      "description" : "Schnitt für Ki-67 Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1544,10 +1760,46 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodeComment"
+      },
+      "name" : "Kommentar - SLN",
+      "description" : "Kommentar zum SLN-Befund",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeProcedure"
+      },
+      "name" : "LK OP Prozedur - SLN",
+      "description" : "Art der Lymphknoten-Operation: Sentinel-Lymphknoten-Biopsie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionLVI"
       },
       "name" : "Lymphgefäßinvasion - BET",
       "description" : "Lymphovaskuläre Invasion",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeMacroMetCount"
+      },
+      "name" : "Makrometastatisch befallene LK",
+      "description" : "Gesamtzahl makrometastatisch befallener Lymphknoten: 0",
       "exampleBoolean" : true
     },
     {
@@ -1568,10 +1820,34 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodeMacroscopicGrouper"
+      },
+      "name" : "Makroskopische Befunde Grouper SLN",
+      "description" : "Gruppierung aller makroskopischen Messungen des SLN-Exzisats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/CoreNeedleBiopsyMacroscopicGrouper"
       },
       "name" : "Makroskopische Befunde Grouper Stanzbiopsie",
       "description" : "Gruppierung aller makroskopischen Messungen der Stanzzylinder",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/LymphNodeDiagnosisConfirmed"
+      },
+      "name" : "Mammakarzinom-Diagnose (SLN-Indikation)",
+      "description" : "Bestätigte Diagnose eines invasiven Mammakarzinoms, Indikation zur Sentinel-Lymphknoten-Biopsie",
       "exampleBoolean" : true
     },
     {
@@ -1668,6 +1944,18 @@ This IG builds on:
       },
       "name" : "Mikrokalzifikationen - BET",
       "description" : "Vorhandensein von Mikrokalzifikationen",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeMicroMetCount"
+      },
+      "name" : "Mikrometastatisch befallene LK",
+      "description" : "Gesamtzahl mikrometastatisch befallener Lymphknoten: 1",
       "exampleBoolean" : true
     },
     {
@@ -1853,13 +2141,49 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/BreastResectionSubstancep40"
+      },
+      "name" : "p40-IHC Reagenz BET",
+      "description" : "p40-Antikörper für Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlidep40-01"
+      },
+      "name" : "p40-IHC Schnitt BET (Block01)",
+      "description" : "Schnitt für p40 Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Specimen"
       }],
       "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenBlock01"
       },
-      "name" : "Paraffinblock 01 BET - Tumor zentral",
-      "description" : "Paraffineinbettung des zentralen Tumorareals",
+      "name" : "Paraffinblock 01 BET - Tumor zentral (Scheibe III)",
+      "description" : "Paraffineinbettung des zentralen Tumorareals, Scheibe III, inkl. RR anterior/posterior",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenBlock01"
+      },
+      "name" : "Paraffinblock 01 SLN #1",
+      "description" : "Paraffineinbettung SLN #1, halbiert, enthält Mikrometastase",
       "exampleBoolean" : true
     },
     {
@@ -1882,8 +2206,20 @@ This IG builds on:
       "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenBlock02"
       },
-      "name" : "Paraffinblock 02 BET - DCIS / Tumorperipherie",
-      "description" : "Paraffineinbettung des DCIS-Areals und der Tumorperipherie",
+      "name" : "Paraffinblock 02 BET - Tumor zentral (Scheibe V)",
+      "description" : "Paraffineinbettung des zentralen Tumorareals, Scheibe V, inkl. RR anterior/posterior",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenBlock02"
+      },
+      "name" : "Paraffinblock 02 SLN #2",
+      "description" : "Paraffineinbettung SLN #2, halbiert, tumorfrei",
       "exampleBoolean" : true
     },
     {
@@ -1894,8 +2230,44 @@ This IG builds on:
       "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenBlock03"
       },
-      "name" : "Paraffinblock 03 BET - Resektionsränder",
-      "description" : "Paraffineinbettung der Resektionsränder",
+      "name" : "Paraffinblock 03 BET - RR superior",
+      "description" : "Paraffineinbettung Resektionsrand superior",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenBlock04"
+      },
+      "name" : "Paraffinblock 04 BET - RR inferior",
+      "description" : "Paraffineinbettung Resektionsrand inferior",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenBlock05"
+      },
+      "name" : "Paraffinblock 05 BET - RR medial (Scheibe I)",
+      "description" : "Paraffineinbettung Resektionsrand medial, Scheibe I",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenBlock06"
+      },
+      "name" : "Paraffinblock 06 BET - RR lateral (Scheibe VIII)",
+      "description" : "Paraffineinbettung Resektionsrand lateral, Scheibe VIII",
       "exampleBoolean" : true
     },
     {
@@ -1908,6 +2280,18 @@ This IG builds on:
       },
       "name" : "Pathologiebericht BET Mamma",
       "description" : "Pathologiebericht nach brusterhaltender Therapie der linken Mamma",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/LymphNodeReport"
+      },
+      "name" : "Pathologiebericht SLN-Biopsie Axilla",
+      "description" : "Pathologiebericht nach Sentinel-Lymphknoten-Biopsie der linken Axilla",
       "exampleBoolean" : true
     },
     {
@@ -1964,10 +2348,34 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodePN"
+      },
+      "name" : "pN-Kategorie - SLN",
+      "description" : "Pathologische N-Kategorie: pN1mi(sn)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionPRIntensity"
       },
       "name" : "PR Färbeintensität - BET",
       "description" : "Färbeintensität der PR-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/BreastResectionSubstancePR"
+      },
+      "name" : "PR-IHC Reagenz BET",
+      "description" : "Progesteronrezeptor-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1988,34 +2396,10 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlidePR01"
-      },
-      "name" : "PR-IHC Schnitt 01 BET",
-      "description" : "Schnitt 1 für Progesteronrezeptor-Immunhistochemie",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
         "reference" : "Specimen/CoreNeedleBiopsySpecimenSlidePR01"
       },
       "name" : "PR-IHC Schnitt 01 Stanzbiopsie",
       "description" : "Schnitt 1 für Progesteronrezeptor-Immunhistochemie",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
-        "reference" : "Specimen/BreastResectionSpecimenSlidePR02"
-      },
-      "name" : "PR-IHC Schnitt 02 BET",
-      "description" : "Schnitt 2 für Progesteronrezeptor-Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -2033,12 +2417,36 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlidePR01"
+      },
+      "name" : "PR-IHC Schnitt BET (Block01)",
+      "description" : "Schnitt für Progesteronrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       }],
       "reference" : {
         "reference" : "Observation/BreastResectionSpecimenLimited"
       },
       "name" : "Proben limitiert auswertbar",
+      "description" : "Angabe ob die Probe limitiert auswertbar ist",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeSpecimenLimited"
+      },
+      "name" : "Proben limitiert auswertbar - SLN",
       "description" : "Angabe ob die Probe limitiert auswertbar ist",
       "exampleBoolean" : true
     },
@@ -2204,6 +2612,18 @@ This IG builds on:
         "valueString" : "QuestionnaireResponse"
       }],
       "reference" : {
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseLymphNode"
+      },
+      "name" : "QuestionnaireResponse - SLN-Biopsie Axilla",
+      "description" : "QuestionnaireResponse für SLN-Biopsie Axilla mit allen Befunden",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
         "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
       },
       "name" : "QuestionnaireResponse - Stanzbiopsie Mamma",
@@ -2264,6 +2684,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodeLaterality"
+      },
+      "name" : "Seitenangabe - SLN",
+      "description" : "Seitenlokalisation: Links",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionLaterality"
       },
       "name" : "Seitenlokalisation - BET",
@@ -2280,6 +2712,66 @@ This IG builds on:
       },
       "name" : "Senologe",
       "description" : "Durchführender Gynäkologe/Senologe für alle operativen Eingriffe",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeMacroSLN1Size"
+      },
+      "name" : "SLN #1 Größe",
+      "description" : "Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/LymphNodeMacroSLN2Size"
+      },
+      "name" : "SLN #2 Größe",
+      "description" : "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/LymphNodeComposition"
+      },
+      "name" : "SLN Axilla Pathology Report Composition",
+      "description" : "FHIR Composition for structured sentinel lymph node biopsy pathology report",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/LymphNodeReportRequest"
+      },
+      "name" : "SLN-Biopsie Anforderung",
+      "description" : "Anforderung für pathologische Aufarbeitung des Sentinel-Lymphknoten-Exzisats der linken Axilla",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenPart"
+      },
+      "name" : "SLN-Exzisat (Einsendespecimen)",
+      "description" : "Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert, Patentblau-markiert",
       "exampleBoolean" : true
     },
     {
@@ -2453,6 +2945,15 @@ This IG builds on:
         }],
         "nameUrl" : "resection-specimens.html",
         "title" : "Breast Resection — Specimens",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "lymph-node-specimens.html"
+        }],
+        "nameUrl" : "lymph-node-specimens.html",
+        "title" : "Lymph Node Specimen — Specimens",
         "generation" : "markdown"
       },
       {

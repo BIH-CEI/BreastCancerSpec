@@ -89,65 +89,59 @@
      fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock03> ;
      fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenBlock03" ]
   ] [
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock04> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenBlock04" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock05> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenBlock05" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock06> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenBlock06" ]
+  ] [
      fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHE01> ;
      fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideHE01" ]
   ] [
      fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHE02> ;
      fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideHE02" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHE03> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideHE03" ]
-  ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHE04> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideHE04" ]
-  ] [
      fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideER01> ;
      fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideER01" ]
-  ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideER02> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideER02" ]
   ] [
      fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlidePR01> ;
      fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlidePR01" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlidePR02> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlidePR02" ]
-  ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHER2-01> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideHER2-01" ]
-  ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHER2-02> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideHER2-02" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHER2IHC01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideHER2IHC01" ]
   ] [
      fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideKi67-01> ;
      fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideKi67-01" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideKi67-02> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideKi67-02" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideCK18-01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideCK18-01" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideDCIS-HE01> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideDCIS-HE01" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlidep40-01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlidep40-01" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideDCIS-HE02> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideDCIS-HE02" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideECad-01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideECad-01" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE01> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideMargins-HE01" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideBlock02-HE01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideBlock02-HE01" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE02> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideMargins-HE02" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideBlock02-HE02> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideBlock02-HE02" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE03> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideMargins-HE03" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Superior-HE01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideRR-Superior-HE01" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE04> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideMargins-HE04" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Inferior-HE01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideRR-Inferior-HE01" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE05> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideMargins-HE05" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Medial-HE01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideRR-Medial-HE01" ]
   ] [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE06> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideMargins-HE06" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Lateral-HE01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideRR-Lateral-HE01" ]
   ] ) ; # 
   fhir:result ( [
      fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroscopicGrouper> ;

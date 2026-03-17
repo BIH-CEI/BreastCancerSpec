@@ -24,7 +24,7 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 
 **value**: Nicht befallen (R0)
 
-**specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_3_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideMargins-HE01.md)
+**specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_3_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideRR-Superior-HE01.md)
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)
 
@@ -89,7 +89,7 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
     "text" : "Nicht befallen (R0)"
   },
   "specimen" : {
-    "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE01"
+    "reference" : "Specimen/BreastResectionSpecimenSlideRR-Superior-HE01"
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseBreastResection"

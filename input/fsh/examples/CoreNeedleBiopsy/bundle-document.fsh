@@ -8,6 +8,8 @@ Usage: #example
 Title: "Document Bundle - Stanzbiopsie Mamma"
 Description: "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht"
 * type = #document
+* identifier.system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+* identifier.value = "E_25_001"
 * timestamp = "2025-01-17T17:00:00+01:00"
 
 // --- Composition (must be first) ---

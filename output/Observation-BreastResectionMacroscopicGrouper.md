@@ -31,6 +31,7 @@ Profile: [MII PR Patho Macroscopic Grouperversion: null2026.0.0)](https://simpli
 * [Observation Quadrant Breast](Observation-BreastResectionMacroQuadrant.md)
 * [Observation Radial position in breast [Angle] in Breast cancer specimen](Observation-BreastResectionMacroClock.md)
 * [Observation Distance of primary malignant neoplasm of breast to nipple in excised breast specimen (observable entity)](Observation-BreastResectionMacroDistanceNipple.md)
+* [Observation Number of paraffin embedded tissue blocks examined from excised specimen (observable entity)](Observation-BreastResectionMacroBlockCount.md)
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)
 
@@ -92,6 +93,9 @@ Profile: [MII PR Patho Macroscopic Grouperversion: null2026.0.0)](https://simpli
   },
   {
     "reference" : "Observation/BreastResectionMacroDistanceNipple"
+  },
+  {
+    "reference" : "Observation/BreastResectionMacroBlockCount"
   }],
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseBreastResection"

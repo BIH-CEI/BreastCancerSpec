@@ -699,7 +699,8 @@ Description: "Östrogenrezeptor-Status per Immunhistochemie"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#16112-5 "Estrogen receptor [Interpretation] in Tissue"
+* code.coding[0] = $loinc#16112-5 "Estrogen receptor [Interpretation] in Tissue"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Hormonrezeptorstatus Östrogen"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideER01)
@@ -708,6 +709,8 @@ Description: "Östrogenrezeptor-Status per Immunhistochemie"
 * basedOn = Reference(BreastResectionReportRequest)
 * valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
 * valueCodeableConcept.text = "Positiv"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 31. ER Prozent (linkId 11720) ---
@@ -722,6 +725,7 @@ Description: "Prozentsatz ER-positiver Tumorzellkerne"
 * category[section-type] = $loinc#22637-3
 * code.coding[0] = $loinc#85329-1 "Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain"
 * code.coding[+] = $sct#1234804006 "Percent of cells with estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "PP ER"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideER01)
@@ -732,6 +736,8 @@ Description: "Prozentsatz ER-positiver Tumorzellkerne"
 * valueQuantity.unit = "%"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #%
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 32. ER Färbeintensität (linkId 11730) ---
@@ -746,6 +752,7 @@ Description: "Färbeintensität der ER-Immunhistochemie"
 * category[section-type] = $loinc#22637-3
 * code.coding[0] = $loinc#85310-1 "Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
 * code.coding[+] = $sct#1236874005 "Intensity of stain of estrogen receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Färbeintensität ER"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideER01)
@@ -754,6 +761,8 @@ Description: "Färbeintensität der ER-Immunhistochemie"
 * basedOn = Reference(BreastResectionReportRequest)
 * valueCodeableConcept = $sct#24484000 "Severe (severity modifier) (qualifier value)"
 * valueCodeableConcept.text = "Stark"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 33. PR-Status (linkId 11790) ---
@@ -766,7 +775,8 @@ Description: "Progesteronrezeptor-Status per Immunhistochemie"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#16113-3 "Progesterone receptor [Interpretation] in Tissue"
+* code.coding[0] = $loinc#16113-3 "Progesterone receptor [Interpretation] in Tissue"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Hormonrezeptorstatus Progesteron"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlidePR01)
@@ -775,6 +785,8 @@ Description: "Progesteronrezeptor-Status per Immunhistochemie"
 * basedOn = Reference(BreastResectionReportRequest)
 * valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
 * valueCodeableConcept.text = "Positiv"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 34. PR Prozent (linkId 11760) ---
@@ -789,6 +801,7 @@ Description: "Prozentsatz PR-positiver Tumorzellkerne"
 * category[section-type] = $loinc#22637-3
 * code.coding[0] = $loinc#85325-9 "Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain"
 * code.coding[+] = $sct#1234803000 "Percent of cells with progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "PP PR"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlidePR01)
@@ -799,6 +812,8 @@ Description: "Prozentsatz PR-positiver Tumorzellkerne"
 * valueQuantity.unit = "%"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #%
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 35. PR Färbeintensität (linkId 11770) ---
@@ -813,6 +828,7 @@ Description: "Färbeintensität der PR-Immunhistochemie"
 * category[section-type] = $loinc#22637-3
 * code.coding[0] = $loinc#85331-7 "Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
 * code.coding[+] = $sct#1237278006 "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Färbeintensität PR"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlidePR01)
@@ -821,6 +837,8 @@ Description: "Färbeintensität der PR-Immunhistochemie"
 * basedOn = Reference(BreastResectionReportRequest)
 * valueCodeableConcept = $sct#6736007 "Moderate (severity modifier) (qualifier value)"
 * valueCodeableConcept.text = "Mäßig"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 36. HER2-Score (IHC) (linkId 11810) ---
@@ -835,6 +853,7 @@ Description: "HER2-Score per Immunhistochemie"
 * category[section-type] = $loinc#22637-3
 * code.coding[0] = $loinc#85319-2 "HER2 [Presence] in Breast cancer specimen by Immune stain"
 * code.coding[+] = $sct#3550001000004108 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Her2 Score"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideHER2IHC01)
@@ -842,6 +861,8 @@ Description: "HER2-Score per Immunhistochemie"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
 * valueCodeableConcept.text = "1+"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 37. HER2-Amplifikation (ISH) (linkId 11820) ---
@@ -863,6 +884,8 @@ Description: "HER2-Amplifikationsstatus per In-situ-Hybridisierung"
 * basedOn = Reference(BreastResectionReportRequest)
 * valueCodeableConcept = $sct#2667000 "Absent (qualifier value)"
 * valueCodeableConcept.text = "Nicht amplifiziert"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 38. HER2-Gesamtstatus (linkId 11830) ---
@@ -884,6 +907,8 @@ Description: "HER2-Gesamtstatus basierend auf IHC und ISH"
 * basedOn = Reference(BreastResectionReportRequest)
 * valueCodeableConcept = $sct#2667000 "Absent (qualifier value)"
 * valueCodeableConcept.text = "Negativ"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 39. Ki-67-Index (linkId 11840) ---
@@ -898,6 +923,7 @@ Description: "Ki-67 Proliferationsindex"
 * category[section-type] = $loinc#22637-3
 * code.coding[0] = $loinc#85330-9 "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
 * code.coding[+] = $sct#1237281001 "Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Ki67-Index"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideKi67-01)
@@ -908,6 +934,8 @@ Description: "Ki-67 Proliferationsindex"
 * valueQuantity.unit = "%"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #%
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:7107 "MKI67"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // ============================================================================
@@ -930,8 +958,8 @@ Description: "Pathologische T-Kategorie nach TNM"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept = $sct#1228899006 "American Joint Committee on Cancer cT1c (qualifier value)"
-* valueCodeableConcept.text = "pT1c"
+* valueCodeableConcept = $sct#1352559008 "Union for International Cancer Control pT1 (qualifier value)"
+* valueCodeableConcept.text = "pT1"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // ============================================================================

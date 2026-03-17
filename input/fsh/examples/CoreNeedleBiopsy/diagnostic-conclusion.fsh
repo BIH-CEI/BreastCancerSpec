@@ -181,7 +181,8 @@ Description: "Estrogen receptor status by immunohistochemistry"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[0] = $loinc#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideER01)
 * effectiveDateTime = "2025-01-17"
@@ -189,6 +190,8 @@ Description: "Estrogen receptor status by immunohistochemistry"
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
 * valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
 * valueCodeableConcept.text = "ER positiv"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // ER Percentage
@@ -201,7 +204,8 @@ Description: "Percentage of ER positive tumor cell nuclei"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#85329-1 "Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain"
+* code.coding[0] = $loinc#85329-1 "Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideER01)
 * effectiveDateTime = "2025-01-17"
@@ -211,6 +215,8 @@ Description: "Percentage of ER positive tumor cell nuclei"
 * valueQuantity.unit = "%"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #%
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // PR Status
@@ -223,7 +229,8 @@ Description: "Progesterone receptor status by immunohistochemistry"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[0] = $loinc#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlidePR01)
 * effectiveDateTime = "2025-01-17"
@@ -231,6 +238,8 @@ Description: "Progesterone receptor status by immunohistochemistry"
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
 * valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
 * valueCodeableConcept.text = "PR positiv"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // PR Percentage
@@ -243,7 +252,8 @@ Description: "Percentage of PR positive tumor cell nuclei"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#85325-9 "Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain"
+* code.coding[0] = $loinc#85325-9 "Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlidePR01)
 * effectiveDateTime = "2025-01-17"
@@ -253,6 +263,8 @@ Description: "Percentage of PR positive tumor cell nuclei"
 * valueQuantity.unit = "%"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #%
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // HER2 ISH (B-DISH)
@@ -273,6 +285,8 @@ Description: "HER2 status by in-situ hybridization (B-DISH)"
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
 * valueCodeableConcept = $sct#2667000 "Absent (qualifier value)"
 * valueCodeableConcept.text = "HER2 negativ (nicht amplifiziert)"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // Ki-67
@@ -285,7 +299,8 @@ Description: "Ki-67 proliferation index"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#85330-9 "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+* code.coding[0] = $loinc#85330-9 "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideKi67-01)
 * effectiveDateTime = "2025-01-17"
@@ -295,6 +310,8 @@ Description: "Ki-67 proliferation index"
 * valueQuantity.unit = "%"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #%
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:7107 "MKI67"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // B-Klassifikation (NHSBSP)

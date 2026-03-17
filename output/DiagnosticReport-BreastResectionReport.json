@@ -58,64 +58,58 @@
     "reference" : "Specimen/BreastResectionSpecimenBlock03"
   },
   {
+    "reference" : "Specimen/BreastResectionSpecimenBlock04"
+  },
+  {
+    "reference" : "Specimen/BreastResectionSpecimenBlock05"
+  },
+  {
+    "reference" : "Specimen/BreastResectionSpecimenBlock06"
+  },
+  {
     "reference" : "Specimen/BreastResectionSpecimenSlideHE01"
   },
   {
     "reference" : "Specimen/BreastResectionSpecimenSlideHE02"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideHE03"
-  },
-  {
-    "reference" : "Specimen/BreastResectionSpecimenSlideHE04"
-  },
-  {
     "reference" : "Specimen/BreastResectionSpecimenSlideER01"
-  },
-  {
-    "reference" : "Specimen/BreastResectionSpecimenSlideER02"
   },
   {
     "reference" : "Specimen/BreastResectionSpecimenSlidePR01"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlidePR02"
-  },
-  {
-    "reference" : "Specimen/BreastResectionSpecimenSlideHER2-01"
-  },
-  {
-    "reference" : "Specimen/BreastResectionSpecimenSlideHER2-02"
+    "reference" : "Specimen/BreastResectionSpecimenSlideHER2IHC01"
   },
   {
     "reference" : "Specimen/BreastResectionSpecimenSlideKi67-01"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideKi67-02"
+    "reference" : "Specimen/BreastResectionSpecimenSlideCK18-01"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideDCIS-HE01"
+    "reference" : "Specimen/BreastResectionSpecimenSlidep40-01"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideDCIS-HE02"
+    "reference" : "Specimen/BreastResectionSpecimenSlideECad-01"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE01"
+    "reference" : "Specimen/BreastResectionSpecimenSlideBlock02-HE01"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE02"
+    "reference" : "Specimen/BreastResectionSpecimenSlideBlock02-HE02"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE03"
+    "reference" : "Specimen/BreastResectionSpecimenSlideRR-Superior-HE01"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE04"
+    "reference" : "Specimen/BreastResectionSpecimenSlideRR-Inferior-HE01"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE05"
+    "reference" : "Specimen/BreastResectionSpecimenSlideRR-Medial-HE01"
   },
   {
-    "reference" : "Specimen/BreastResectionSpecimenSlideMargins-HE06"
+    "reference" : "Specimen/BreastResectionSpecimenSlideRR-Lateral-HE01"
   }],
   "result" : [{
     "reference" : "Observation/BreastResectionMacroscopicGrouper"

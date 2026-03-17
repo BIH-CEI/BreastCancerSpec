@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="LymphNodeImagingReport"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DiagnosticReport LymphNodeImagingReport</b></p><a name="LymphNodeImagingReport"> </a><a name="hcLymphNodeImagingReport"> </a><h2><span title="Codes:{http://loinc.org 24606-6}">MG Breast Screening</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 RAD}">Radiology</span>) </h2><table class="grid"><tr><td>Subject</td><td>Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</td></tr><tr><td>When For</td><td>2025-01-08</td></tr></table><p><b>Report Details</b></p><p>Mammografie und Sonographie: Klinisch unauffällige Axilla links (cN0). Kein Hinweis auf pathologische axilläre Lymphknoten.</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="RAD"/>
+      <display value="Radiology"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="24606-6"/>
+      <display value="MG Breast Screening"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <effectiveDateTime value="2025-01-08"/>
+  <conclusion value="Mammografie und Sonographie: Klinisch unauffällige Axilla links (cN0). Kein Hinweis auf pathologische axilläre Lymphknoten."/>
+</DiagnosticReport>

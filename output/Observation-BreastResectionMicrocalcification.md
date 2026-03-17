@@ -14,7 +14,7 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 
 **category**: Laboratory, Pathology report final diagnosis Narrative
 
-**code**: Mikrokalzifikationen
+**code**: Presence of microcalcification in excised breast specimen (observable entity)
 
 **subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
 
@@ -22,9 +22,9 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: In DCIS assoziiert
+**value**: Microcalcifications present in DCIS
 
-**specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_2_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideDCIS-HE01.md)
+**specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideHE01.md)
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)
 
@@ -57,11 +57,10 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "44692-2",
-      "display" : "Microcalcifications in Breast tumor"
-    }],
-    "text" : "Mikrokalzifikationen"
+      "system" : "http://snomed.info/sct",
+      "code" : "1240404008",
+      "display" : "Presence of microcalcification in excised breast specimen (observable entity)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/Patient4"
@@ -71,10 +70,14 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
     "reference" : "Practitioner/PathologistPractitioner"
   }],
   "valueCodeableConcept" : {
-    "text" : "In DCIS assoziiert"
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA27826-9",
+      "display" : "Microcalcifications present in DCIS"
+    }]
   },
   "specimen" : {
-    "reference" : "Specimen/BreastResectionSpecimenSlideDCIS-HE01"
+    "reference" : "Specimen/BreastResectionSpecimenSlideHE01"
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseBreastResection"

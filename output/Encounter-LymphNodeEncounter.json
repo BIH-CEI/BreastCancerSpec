@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "LymphNodeEncounter",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter LymphNodeEncounter</b></p><a name=\"LymphNodeEncounter\"> </a><a name=\"hcLymphNodeEncounter\"> </a><p><b>identifier</b>: <code>http://example.hospital.de/encounters</code>/E_25_211</p><p><b>status</b>: Finished</p><p><b>class</b>: [not stated]: IMP (IMP)</p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://example.hospital.de/encounters",
+    "value" : "E_25_211"
+  }],
+  "status" : "finished",
+  "class" : {
+    "code" : "IMP"
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  }
+}

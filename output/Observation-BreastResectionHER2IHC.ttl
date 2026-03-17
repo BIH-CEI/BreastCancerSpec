@@ -19,7 +19,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation BreastResectionHER2IHC</b></p><a name=\"BreastResectionHER2IHC\"> </a><a name=\"hcBreastResectionHER2IHC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-BreastResectionReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85319-2}, {http://snomed.info/sct 3550001000004108}\">Her2 Score</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:\">1+</span></p><p><b>specimen</b>: <a href=\"Specimen-BreastResectionSpecimenSlideHER2-01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_1_1_HER2_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseBreastResection.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation BreastResectionHER2IHC</b></p><a name=\"BreastResectionHER2IHC\"> </a><a name=\"hcBreastResectionHER2IHC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-BreastResectionReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85319-2}, {http://snomed.info/sct 3550001000004108}, {http://snomed.info/sct 1234806008}\">Her2 Score</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:\">1+</span></p><p><b>specimen</b>: <a href=\"Specimen-BreastResectionSpecimenSlideHER2IHC01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_1_1_HER2IHC_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseBreastResection.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://loinc.org 48018-6}\">Gene studied [ID]</span></td><td><span title=\"Codes:{http://www.genenames.org/geneId HGNC:3430}\">ERBB2</span></td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:basedOn ( [
      fhir:l <http://breastcancerspec.org/ServiceRequest/BreastResectionReportRequest> ;
@@ -61,6 +61,14 @@
        ] ;
        fhir:code [ fhir:v "3550001000004108" ] ;
        fhir:display [ fhir:v "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)" ]
+     ] [
+       a sct:1234806008 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "1234806008" ] ;
+       fhir:display [ fhir:v "Observation using immunohistochemistry (observable entity)" ]
      ] ) ;
      fhir:text [ fhir:v "Her2 Score" ]
   ] ; # 
@@ -81,12 +89,36 @@
      fhir:text [ fhir:v "1+" ]
   ] ; # 
   fhir:specimen [
-     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHER2-01> ;
-     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideHER2-01" ]
+     fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHER2IHC01> ;
+     fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideHER2IHC01" ]
   ] ; # 
   fhir:derivedFrom ( [
      fhir:l <http://breastcancerspec.org/QuestionnaireResponse/QuestionnaireResponseBreastResection> ;
      fhir:reference [ fhir:v "QuestionnaireResponse/QuestionnaireResponseBreastResection" ]
+  ] ) ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:48018-6 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "48018-6" ] ;
+         fhir:display [ fhir:v "Gene studied [ID]" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://www.genenames.org/geneId"^^xsd:anyURI ;
+           fhir:l <http://www.genenames.org/geneId>
+         ] ;
+         fhir:code [ fhir:v "HGNC:3430" ] ;
+         fhir:display [ fhir:v "ERBB2" ]
+       ] )
+     ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

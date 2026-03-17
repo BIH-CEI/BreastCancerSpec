@@ -28,6 +28,13 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)
 
+### Components
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Code** | **Value[x]** |
+| * | Gene studied [ID] | PGR |
+
 
 
 ## Resource Content
@@ -65,6 +72,11 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
       "system" : "http://snomed.info/sct",
       "code" : "1237278006",
       "display" : "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234806008",
+      "display" : "Observation using immunohistochemistry (observable entity)"
     }],
     "text" : "Färbeintensität PR"
   },
@@ -88,6 +100,22 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseBreastResection"
+  }],
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "48018-6",
+        "display" : "Gene studied [ID]"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.genenames.org/geneId",
+        "code" : "HGNC:8910",
+        "display" : "PGR"
+      }]
+    }
   }]
 }
 

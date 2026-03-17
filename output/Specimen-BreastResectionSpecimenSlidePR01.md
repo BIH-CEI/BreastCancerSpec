@@ -1,10 +1,10 @@
-# PR-IHC Schnitt 01 BET - Breast Cancer Specification v0.1.0
+# PR-IHC Schnitt BET (Block01) - Breast Cancer Specification v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **PR-IHC Schnitt 01 BET**
+* **PR-IHC Schnitt BET (Block01)**
 
-## Example Specimen: PR-IHC Schnitt 01 BET
+## Example Specimen: PR-IHC Schnitt BET (Block01)
 
 Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen), [MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore)
 
@@ -29,7 +29,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
 
 > **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: Schnittherstellung**procedure**: Sectioning of tissue block (procedure)**time**: 2025-02-06 09:35:00+0100
 
-> **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: PR-Immunhistochemie**procedure**: Incisional biopsy (procedure)**time**: 2025-02-06 10:05:00+0100
+> **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: PR-Immunhistochemie**procedure**: Immunohistochemistry procedure (procedure)**additive**: [Substance Tissue stain (substance)](Substance-BreastResectionSubstancePR.md)**time**: 2025-02-06 10:05:00+0100
 
 ### Containers
 
@@ -132,10 +132,13 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
     "procedure" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",
-        "code" : "70871006",
-        "display" : "Incisional biopsy (procedure)"
+        "code" : "117617002",
+        "display" : "Immunohistochemistry procedure (procedure)"
       }]
     },
+    "additive" : [{
+      "reference" : "Substance/BreastResectionSubstancePR"
+    }],
     "timeDateTime" : "2025-02-06T10:05:00+01:00"
   }],
   "container" : [{

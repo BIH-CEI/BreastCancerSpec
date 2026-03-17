@@ -176,7 +176,7 @@ Description: "Anzahl der angefertigten Paraffinblöcke"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
-* code = $sct#372073007 "Number of tissue blocks submitted for histological examination (observable entity)"
+* code = $sct#3100001000004109 "Number of paraffin embedded tissue blocks examined from excised specimen (observable entity)"
 * code.text = "Anzahl Paraffinblöcke"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenPart)

@@ -28,6 +28,13 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.md)
 
+### Components
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Code** | **Value[x]** |
+| * | Gene studied [ID] | ESR1 |
+
 
 
 ## Resource Content
@@ -60,6 +67,11 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
       "system" : "http://loinc.org",
       "code" : "85337-4",
       "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1234806008",
+      "display" : "Observation using immunohistochemistry (observable entity)"
     }]
   },
   "subject" : {
@@ -82,6 +94,22 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+  }],
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "48018-6",
+        "display" : "Gene studied [ID]"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.genenames.org/geneId",
+        "code" : "HGNC:3467",
+        "display" : "ESR1"
+      }]
+    }
   }]
 }
 

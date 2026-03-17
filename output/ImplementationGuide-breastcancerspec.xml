@@ -11,7 +11,7 @@
   <name value="BreastCancerSpec"/>
   <title value="Breast Cancer Specification"/>
   <status value="draft"/>
-  <date value="2026-03-16T12:14:42+01:00"/>
+  <date value="2026-03-17T15:11:19+01:00"/>
   <publisher value="BIH CEI"/>
   <contact>
     <name value="BIH CEI"/>
@@ -491,6 +491,39 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodeNonSLNPositive"/>
+      </reference>
+      <name value="Anzahl befallener Non-SLN"/>
+      <description value="Anzahl der befallenen (nicht-Sentinel) axillären Lymphknoten: 0"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeSLNPositive"/>
+      </reference>
+      <name value="Anzahl befallener SLN"/>
+      <description value="Anzahl der befallenen Sentinel-Lymphknoten: 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/BreastResectionMacroBlockCount"/>
+      </reference>
+      <name value="Anzahl Paraffinblöcke BET"/>
+      <description value="Anzahl der angefertigten Paraffinblöcke"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/CoreNeedleBiopsyMacroscopicBlockCount"/>
       </reference>
       <name value="Anzahl Paraffinblöcke Stanzbiopsie"/>
@@ -506,6 +539,28 @@
       </reference>
       <name value="Anzahl Stanzzylinder"/>
       <description value="Anzahl der eingesendeten Stanzzylinder"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeNonSLNExamined"/>
+      </reference>
+      <name value="Anzahl untersuchter Non-SLN"/>
+      <description value="Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeSLNExamined"/>
+      </reference>
+      <name value="Anzahl untersuchter SLN"/>
+      <description value="Anzahl der untersuchten Sentinel-Lymphknoten: 2"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -571,7 +626,18 @@
         <reference value="Specimen/BreastResectionSpecimenPart"/>
       </reference>
       <name value="BET-Exzisionspräparat (Einsendespecimen)"/>
-      <description value="BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 65x45x30mm, 55g"/>
+      <description value="BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 42x35x18mm, 10g"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/LymphNodeImagingReport"/>
+      </reference>
+      <name value="Bildgebungsbefund SLN-Biopsie"/>
+      <description value="Bildgebungsbefund als SupportingInfo für die SLN-Biopsie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -583,6 +649,28 @@
       </reference>
       <name value="Brustkrebsvorgeschichte"/>
       <description value="Anamnese hinsichtlich Brustkrebsvorgeschichte"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/BreastResectionSubstanceCK18"/>
+      </reference>
+      <name value="CK-18-IHC Reagenz BET"/>
+      <description value="Zytokeratin 18 Antikörper für Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideCK18-01"/>
+      </reference>
+      <name value="CK18-IHC Schnitt BET (Block01)"/>
+      <description value="Schnitt für Zytokeratin 18 Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -634,6 +722,17 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodeDiagnosticConclusionGrouper"/>
+      </reference>
+      <name value="Diagnostic Conclusion Grouper - SLN Axilla"/>
+      <description value="Grouper for all diagnostic conclusion findings in sentinel lymph node biopsy"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/CoreNeedleBiopsyDiagnosticConclusionGrouper"/>
       </reference>
       <name value="Diagnostic Conclusion Grouper - Stanzbiopsie"/>
@@ -656,10 +755,43 @@
         <valueString value="Bundle"/>
       </extension>
       <reference>
+        <reference value="Bundle/LymphNodeDocument"/>
+      </reference>
+      <name value="Document Bundle - SLN-Biopsie Axilla"/>
+      <description value="FHIR Document Bundle für den vollständigen SLN-Befundbericht"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
         <reference value="Bundle/CoreNeedleBiopsyDocument"/>
       </reference>
       <name value="Document Bundle - Stanzbiopsie Mamma"/>
       <description value="FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/BreastResectionSubstanceECadherin"/>
+      </reference>
+      <name value="E-Cadherin-IHC Reagenz BET"/>
+      <description value="E-Cadherin-Antikörper für Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideECad-01"/>
+      </reference>
+      <name value="E-Cadherin-IHC Schnitt BET (Block01)"/>
+      <description value="Schnitt für E-Cadherin Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -689,6 +821,17 @@
         <valueString value="Encounter"/>
       </extension>
       <reference>
+        <reference value="Encounter/LymphNodeEncounter"/>
+      </reference>
+      <name value="Encounter für SLN-Biopsie Axilla"/>
+      <description value="Stationärer Encounter für Sentinel-Lymphknoten-Biopsie der linken Axilla (gleicher OP-Tag wie BET)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
         <reference value="Encounter/CoreNeedleBiopsyEncounter"/>
       </reference>
       <name value="Encounter für Stanzbiopsie Mamma"/>
@@ -711,21 +854,21 @@
         <valueString value="Substance"/>
       </extension>
       <reference>
-        <reference value="Substance/CoreNeedleBiopsySubstanceER"/>
+        <reference value="Substance/BreastResectionSubstanceER"/>
       </reference>
-      <name value="ER-IHC Reagenz Stanzbiopsie"/>
+      <name value="ER-IHC Reagenz BET"/>
       <description value="Östrogenrezeptor-Antikörper für Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
+        <valueString value="Substance"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideER01"/>
+        <reference value="Substance/CoreNeedleBiopsySubstanceER"/>
       </reference>
-      <name value="ER-IHC Schnitt 01 BET"/>
-      <description value="Schnitt 1 für Östrogenrezeptor-Immunhistochemie"/>
+      <name value="ER-IHC Reagenz Stanzbiopsie"/>
+      <description value="Östrogenrezeptor-Antikörper für Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -744,9 +887,9 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideER02"/>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideER02"/>
       </reference>
-      <name value="ER-IHC Schnitt 02 BET"/>
+      <name value="ER-IHC Schnitt 02 Stanzbiopsie"/>
       <description value="Schnitt 2 für Östrogenrezeptor-Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -755,10 +898,10 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideER02"/>
+        <reference value="Specimen/BreastResectionSpecimenSlideER01"/>
       </reference>
-      <name value="ER-IHC Schnitt 02 Stanzbiopsie"/>
-      <description value="Schnitt 2 für Östrogenrezeptor-Immunhistochemie"/>
+      <name value="ER-IHC Schnitt BET (Block01)"/>
+      <description value="Schnitt für Östrogenrezeptor-Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -781,6 +924,17 @@
       </reference>
       <name value="Estrogen Receptor Status - Stanzbiopsie"/>
       <description value="Estrogen receptor status by immunohistochemistry"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeExtranodalExtension"/>
+      </reference>
+      <name value="Extranodale Infiltration"/>
+      <description value="Extranodale Infiltration durch LK-Metastase: Nicht vorhanden"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -821,6 +975,28 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodeTotalPositive"/>
+      </reference>
+      <name value="Gesamtzahl befallener LK"/>
+      <description value="Gesamtzahl befallener Lymphknoten: 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeTotalExamined"/>
+      </reference>
+      <name value="Gesamtzahl untersuchter LK"/>
+      <description value="Gesamtzahl untersuchter Lymphknoten: 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/BreastResectionMacroWeight"/>
       </reference>
       <name value="Gewicht BET"/>
@@ -829,24 +1005,13 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
+        <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideDCIS-HE01"/>
+        <reference value="Observation/LymphNodeLargestMetSize"/>
       </reference>
-      <name value="HE-Schnitt 01 BET - DCIS"/>
-      <description value="HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 1"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE01"/>
-      </reference>
-      <name value="HE-Schnitt 01 BET - Resektionsränder"/>
-      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 1"/>
+      <name value="Größte Metastasenausdehnung"/>
+      <description value="Ausdehnung der größten metastatischen Infiltration: 1.2 mm"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -856,8 +1021,30 @@
       <reference>
         <reference value="Specimen/BreastResectionSpecimenSlideHE01"/>
       </reference>
-      <name value="HE-Schnitt 01 BET - Tumor"/>
-      <description value="HE-gefärbter Schnitt des Tumorareals, Schnittstufe 1"/>
+      <name value="HE-Schnitt 01 BET - Tumor (Block01)"/>
+      <description value="HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideBlock02-HE01"/>
+      </reference>
+      <name value="HE-Schnitt 01 BET - Tumor (Block02)"/>
+      <description value="HE-gefärbter Schnitt des Tumorareals, Scheibe V, Schnittstufe 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE01"/>
+      </reference>
+      <name value="HE-Schnitt 01 SLN #1 (Schnittstufe 1)"/>
+      <description value="HE-gefärbter Schnitt des SLN #1, Schnittstufe 1"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -876,32 +1063,32 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideDCIS-HE02"/>
-      </reference>
-      <name value="HE-Schnitt 02 BET - DCIS"/>
-      <description value="HE-gefärbter Schnitt des DCIS-Areals, Schnittstufe 2"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE02"/>
-      </reference>
-      <name value="HE-Schnitt 02 BET - Resektionsränder"/>
-      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 2"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
         <reference value="Specimen/BreastResectionSpecimenSlideHE02"/>
       </reference>
-      <name value="HE-Schnitt 02 BET - Tumor"/>
-      <description value="HE-gefärbter Schnitt des Tumorareals, Schnittstufe 2"/>
+      <name value="HE-Schnitt 02 BET - Tumor (Block01)"/>
+      <description value="HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideBlock02-HE02"/>
+      </reference>
+      <name value="HE-Schnitt 02 BET - Tumor (Block02)"/>
+      <description value="HE-gefärbter Schnitt des Tumorareals, Scheibe V, Schnittstufe 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE02"/>
+      </reference>
+      <name value="HE-Schnitt 02 SLN #1 (Schnittstufe 2)"/>
+      <description value="HE-gefärbter Schnitt des SLN #1, Schnittstufe 2"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -920,21 +1107,10 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE03"/>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE03"/>
       </reference>
-      <name value="HE-Schnitt 03 BET - Resektionsränder"/>
-      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 3"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideHE03"/>
-      </reference>
-      <name value="HE-Schnitt 03 BET - Tumor"/>
-      <description value="HE-gefärbter Schnitt des Tumorareals, Schnittstufe 3"/>
+      <name value="HE-Schnitt 03 SLN #2 (Schnittstufe 1)"/>
+      <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 1"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -953,21 +1129,10 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE04"/>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE04"/>
       </reference>
-      <name value="HE-Schnitt 04 BET - Resektionsränder"/>
-      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 4"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideHE04"/>
-      </reference>
-      <name value="HE-Schnitt 04 BET - Tumor"/>
-      <description value="HE-gefärbter Schnitt des Tumorareals, Schnittstufe 4"/>
+      <name value="HE-Schnitt 04 SLN #2 (Schnittstufe 2)"/>
+      <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 2"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -986,10 +1151,10 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE05"/>
+        <reference value="Specimen/BreastResectionSpecimenSlideRR-Inferior-HE01"/>
       </reference>
-      <name value="HE-Schnitt 05 BET - Resektionsränder"/>
-      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 5"/>
+      <name value="HE-Schnitt BET - RR inferior (Block04)"/>
+      <description value="HE-gefärbter Schnitt Resektionsrand inferior"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -997,10 +1162,32 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE06"/>
+        <reference value="Specimen/BreastResectionSpecimenSlideRR-Lateral-HE01"/>
       </reference>
-      <name value="HE-Schnitt 06 BET - Resektionsränder"/>
-      <description value="HE-gefärbter Schnitt der Resektionsränder, Schnittstufe 6"/>
+      <name value="HE-Schnitt BET - RR lateral (Block06)"/>
+      <description value="HE-gefärbter Schnitt Resektionsrand lateral, Scheibe VIII"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideRR-Medial-HE01"/>
+      </reference>
+      <name value="HE-Schnitt BET - RR medial (Block05)"/>
+      <description value="HE-gefärbter Schnitt Resektionsrand medial, Scheibe I"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideRR-Superior-HE01"/>
+      </reference>
+      <name value="HE-Schnitt BET - RR superior (Block03)"/>
+      <description value="HE-gefärbter Schnitt Resektionsrand superior"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1052,17 +1239,6 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideHER2-01"/>
-      </reference>
-      <name value="HER2-B-DISH Schnitt 01 BET"/>
-      <description value="Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
         <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHER2-01"/>
       </reference>
       <name value="HER2-B-DISH Schnitt 01 Stanzbiopsie"/>
@@ -1074,21 +1250,21 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideHER2-02"/>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHER2-02"/>
       </reference>
-      <name value="HER2-B-DISH Schnitt 02 BET"/>
+      <name value="HER2-B-DISH Schnitt 02 Stanzbiopsie"/>
       <description value="Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
+        <valueString value="Substance"/>
       </extension>
       <reference>
-        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideHER2-02"/>
+        <reference value="Substance/BreastResectionSubstanceHER2IHC"/>
       </reference>
-      <name value="HER2-B-DISH Schnitt 02 Stanzbiopsie"/>
-      <description value="Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization"/>
+      <name value="HER2-IHC Reagenz BET"/>
+      <description value="HER2-Antikörper für Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1122,6 +1298,17 @@
       </reference>
       <name value="HER2-IHC Schnitt 02 Stanzbiopsie"/>
       <description value="Schnitt 2 für HER2 Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlideHER2IHC01"/>
+      </reference>
+      <name value="HER2-IHC Schnitt BET (Block01)"/>
+      <description value="Schnitt für HER2-Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1173,6 +1360,17 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodeITCCount"/>
+      </reference>
+      <name value="ITC-befallene LK"/>
+      <description value="Gesamtzahl ausschließlich ITC-befallener Lymphknoten: 0"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/BreastResectionNuclearPleomorphism"/>
       </reference>
       <name value="Kernpleomorphie-Score - BET"/>
@@ -1206,21 +1404,21 @@
         <valueString value="Substance"/>
       </extension>
       <reference>
-        <reference value="Substance/CoreNeedleBiopsySubstanceKi67"/>
+        <reference value="Substance/BreastResectionSubstanceKi67"/>
       </reference>
-      <name value="Ki-67-IHC Reagenz Stanzbiopsie"/>
+      <name value="Ki-67-IHC Reagenz BET"/>
       <description value="Ki-67-Antikörper für Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
+        <valueString value="Substance"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideKi67-01"/>
+        <reference value="Substance/CoreNeedleBiopsySubstanceKi67"/>
       </reference>
-      <name value="Ki67-IHC Schnitt 01 BET"/>
-      <description value="Schnitt 1 für Ki-67 Immunhistochemie"/>
+      <name value="Ki-67-IHC Reagenz Stanzbiopsie"/>
+      <description value="Ki-67-Antikörper für Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1239,9 +1437,9 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlideKi67-02"/>
+        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideKi67-02"/>
       </reference>
-      <name value="Ki67-IHC Schnitt 02 BET"/>
+      <name value="Ki67-IHC Schnitt 02 Stanzbiopsie"/>
       <description value="Schnitt 2 für Ki-67 Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -1250,10 +1448,10 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/CoreNeedleBiopsySpecimenSlideKi67-02"/>
+        <reference value="Specimen/BreastResectionSpecimenSlideKi67-01"/>
       </reference>
-      <name value="Ki67-IHC Schnitt 02 Stanzbiopsie"/>
-      <description value="Schnitt 2 für Ki-67 Immunhistochemie"/>
+      <name value="Ki67-IHC Schnitt BET (Block01)"/>
+      <description value="Schnitt für Ki-67 Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1272,10 +1470,43 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodeComment"/>
+      </reference>
+      <name value="Kommentar - SLN"/>
+      <description value="Kommentar zum SLN-Befund"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeProcedure"/>
+      </reference>
+      <name value="LK OP Prozedur - SLN"/>
+      <description value="Art der Lymphknoten-Operation: Sentinel-Lymphknoten-Biopsie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/BreastResectionLVI"/>
       </reference>
       <name value="Lymphgefäßinvasion - BET"/>
       <description value="Lymphovaskuläre Invasion"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeMacroMetCount"/>
+      </reference>
+      <name value="Makrometastatisch befallene LK"/>
+      <description value="Gesamtzahl makrometastatisch befallener Lymphknoten: 0"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1294,10 +1525,32 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodeMacroscopicGrouper"/>
+      </reference>
+      <name value="Makroskopische Befunde Grouper SLN"/>
+      <description value="Gruppierung aller makroskopischen Messungen des SLN-Exzisats"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/CoreNeedleBiopsyMacroscopicGrouper"/>
       </reference>
       <name value="Makroskopische Befunde Grouper Stanzbiopsie"/>
       <description value="Gruppierung aller makroskopischen Messungen der Stanzzylinder"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/LymphNodeDiagnosisConfirmed"/>
+      </reference>
+      <name value="Mammakarzinom-Diagnose (SLN-Indikation)"/>
+      <description value="Bestätigte Diagnose eines invasiven Mammakarzinoms, Indikation zur Sentinel-Lymphknoten-Biopsie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1386,6 +1639,17 @@
       </reference>
       <name value="Mikrokalzifikationen - BET"/>
       <description value="Vorhandensein von Mikrokalzifikationen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeMicroMetCount"/>
+      </reference>
+      <name value="Mikrometastatisch befallene LK"/>
+      <description value="Gesamtzahl mikrometastatisch befallener Lymphknoten: 1"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1555,13 +1819,46 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/BreastResectionSubstancep40"/>
+      </reference>
+      <name value="p40-IHC Reagenz BET"/>
+      <description value="p40-Antikörper für Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlidep40-01"/>
+      </reference>
+      <name value="p40-IHC Schnitt BET (Block01)"/>
+      <description value="Schnitt für p40 Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Specimen"/>
       </extension>
       <reference>
         <reference value="Specimen/BreastResectionSpecimenBlock01"/>
       </reference>
-      <name value="Paraffinblock 01 BET - Tumor zentral"/>
-      <description value="Paraffineinbettung des zentralen Tumorareals"/>
+      <name value="Paraffinblock 01 BET - Tumor zentral (Scheibe III)"/>
+      <description value="Paraffineinbettung des zentralen Tumorareals, Scheibe III, inkl. RR anterior/posterior"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenBlock01"/>
+      </reference>
+      <name value="Paraffinblock 01 SLN #1"/>
+      <description value="Paraffineinbettung SLN #1, halbiert, enthält Mikrometastase"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1582,8 +1879,19 @@
       <reference>
         <reference value="Specimen/BreastResectionSpecimenBlock02"/>
       </reference>
-      <name value="Paraffinblock 02 BET - DCIS / Tumorperipherie"/>
-      <description value="Paraffineinbettung des DCIS-Areals und der Tumorperipherie"/>
+      <name value="Paraffinblock 02 BET - Tumor zentral (Scheibe V)"/>
+      <description value="Paraffineinbettung des zentralen Tumorareals, Scheibe V, inkl. RR anterior/posterior"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenBlock02"/>
+      </reference>
+      <name value="Paraffinblock 02 SLN #2"/>
+      <description value="Paraffineinbettung SLN #2, halbiert, tumorfrei"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1593,8 +1901,41 @@
       <reference>
         <reference value="Specimen/BreastResectionSpecimenBlock03"/>
       </reference>
-      <name value="Paraffinblock 03 BET - Resektionsränder"/>
-      <description value="Paraffineinbettung der Resektionsränder"/>
+      <name value="Paraffinblock 03 BET - RR superior"/>
+      <description value="Paraffineinbettung Resektionsrand superior"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenBlock04"/>
+      </reference>
+      <name value="Paraffinblock 04 BET - RR inferior"/>
+      <description value="Paraffineinbettung Resektionsrand inferior"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenBlock05"/>
+      </reference>
+      <name value="Paraffinblock 05 BET - RR medial (Scheibe I)"/>
+      <description value="Paraffineinbettung Resektionsrand medial, Scheibe I"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenBlock06"/>
+      </reference>
+      <name value="Paraffinblock 06 BET - RR lateral (Scheibe VIII)"/>
+      <description value="Paraffineinbettung Resektionsrand lateral, Scheibe VIII"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1606,6 +1947,17 @@
       </reference>
       <name value="Pathologiebericht BET Mamma"/>
       <description value="Pathologiebericht nach brusterhaltender Therapie der linken Mamma"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/LymphNodeReport"/>
+      </reference>
+      <name value="Pathologiebericht SLN-Biopsie Axilla"/>
+      <description value="Pathologiebericht nach Sentinel-Lymphknoten-Biopsie der linken Axilla"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1657,10 +2009,32 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodePN"/>
+      </reference>
+      <name value="pN-Kategorie - SLN"/>
+      <description value="Pathologische N-Kategorie: pN1mi(sn)"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/BreastResectionPRIntensity"/>
       </reference>
       <name value="PR Färbeintensität - BET"/>
       <description value="Färbeintensität der PR-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Substance"/>
+      </extension>
+      <reference>
+        <reference value="Substance/BreastResectionSubstancePR"/>
+      </reference>
+      <name value="PR-IHC Reagenz BET"/>
+      <description value="Progesteronrezeptor-Antikörper für Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1679,32 +2053,10 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlidePR01"/>
-      </reference>
-      <name value="PR-IHC Schnitt 01 BET"/>
-      <description value="Schnitt 1 für Progesteronrezeptor-Immunhistochemie"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
         <reference value="Specimen/CoreNeedleBiopsySpecimenSlidePR01"/>
       </reference>
       <name value="PR-IHC Schnitt 01 Stanzbiopsie"/>
       <description value="Schnitt 1 für Progesteronrezeptor-Immunhistochemie"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
-        <reference value="Specimen/BreastResectionSpecimenSlidePR02"/>
-      </reference>
-      <name value="PR-IHC Schnitt 02 BET"/>
-      <description value="Schnitt 2 für Progesteronrezeptor-Immunhistochemie"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1720,12 +2072,34 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/BreastResectionSpecimenSlidePR01"/>
+      </reference>
+      <name value="PR-IHC Schnitt BET (Block01)"/>
+      <description value="Schnitt für Progesteronrezeptor-Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
         <reference value="Observation/BreastResectionSpecimenLimited"/>
       </reference>
       <name value="Proben limitiert auswertbar"/>
+      <description value="Angabe ob die Probe limitiert auswertbar ist"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeSpecimenLimited"/>
+      </reference>
+      <name value="Proben limitiert auswertbar - SLN"/>
       <description value="Angabe ob die Probe limitiert auswertbar ist"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -1877,6 +2251,17 @@
         <valueString value="QuestionnaireResponse"/>
       </extension>
       <reference>
+        <reference value="QuestionnaireResponse/QuestionnaireResponseLymphNode"/>
+      </reference>
+      <name value="QuestionnaireResponse - SLN-Biopsie Axilla"/>
+      <description value="QuestionnaireResponse für SLN-Biopsie Axilla mit allen Befunden"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
         <reference value="QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"/>
       </reference>
       <name value="QuestionnaireResponse - Stanzbiopsie Mamma"/>
@@ -1932,6 +2317,17 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodeLaterality"/>
+      </reference>
+      <name value="Seitenangabe - SLN"/>
+      <description value="Seitenlokalisation: Links"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/BreastResectionLaterality"/>
       </reference>
       <name value="Seitenlokalisation - BET"/>
@@ -1947,6 +2343,61 @@
       </reference>
       <name value="Senologe"/>
       <description value="Durchführender Gynäkologe/Senologe für alle operativen Eingriffe"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeMacroSLN1Size"/>
+      </reference>
+      <name value="SLN #1 Größe"/>
+      <description value="Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LymphNodeMacroSLN2Size"/>
+      </reference>
+      <name value="SLN #2 Größe"/>
+      <description value="Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/LymphNodeComposition"/>
+      </reference>
+      <name value="SLN Axilla Pathology Report Composition"/>
+      <description value="FHIR Composition for structured sentinel lymph node biopsy pathology report"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/LymphNodeReportRequest"/>
+      </reference>
+      <name value="SLN-Biopsie Anforderung"/>
+      <description value="Anforderung für pathologische Aufarbeitung des Sentinel-Lymphknoten-Exzisats der linken Axilla"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenPart"/>
+      </reference>
+      <name value="SLN-Exzisat (Einsendespecimen)"/>
+      <description value="Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert, Patentblau-markiert"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -2104,6 +2555,14 @@
         </extension>
         <nameUrl value="resection-specimens.html"/>
         <title value="Breast Resection — Specimens"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="lymph-node-specimens.html"/>
+        </extension>
+        <nameUrl value="lymph-node-specimens.html"/>
+        <title value="Lymph Node Specimen — Specimens"/>
         <generation value="markdown"/>
       </page>
       <page>

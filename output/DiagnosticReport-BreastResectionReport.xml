@@ -58,64 +58,58 @@
     <reference value="Specimen/BreastResectionSpecimenBlock03"/>
   </specimen>
   <specimen>
+    <reference value="Specimen/BreastResectionSpecimenBlock04"/>
+  </specimen>
+  <specimen>
+    <reference value="Specimen/BreastResectionSpecimenBlock05"/>
+  </specimen>
+  <specimen>
+    <reference value="Specimen/BreastResectionSpecimenBlock06"/>
+  </specimen>
+  <specimen>
     <reference value="Specimen/BreastResectionSpecimenSlideHE01"/>
   </specimen>
   <specimen>
     <reference value="Specimen/BreastResectionSpecimenSlideHE02"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideHE03"/>
-  </specimen>
-  <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideHE04"/>
-  </specimen>
-  <specimen>
     <reference value="Specimen/BreastResectionSpecimenSlideER01"/>
-  </specimen>
-  <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideER02"/>
   </specimen>
   <specimen>
     <reference value="Specimen/BreastResectionSpecimenSlidePR01"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlidePR02"/>
-  </specimen>
-  <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideHER2-01"/>
-  </specimen>
-  <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideHER2-02"/>
+    <reference value="Specimen/BreastResectionSpecimenSlideHER2IHC01"/>
   </specimen>
   <specimen>
     <reference value="Specimen/BreastResectionSpecimenSlideKi67-01"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideKi67-02"/>
+    <reference value="Specimen/BreastResectionSpecimenSlideCK18-01"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideDCIS-HE01"/>
+    <reference value="Specimen/BreastResectionSpecimenSlidep40-01"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideDCIS-HE02"/>
+    <reference value="Specimen/BreastResectionSpecimenSlideECad-01"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE01"/>
+    <reference value="Specimen/BreastResectionSpecimenSlideBlock02-HE01"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE02"/>
+    <reference value="Specimen/BreastResectionSpecimenSlideBlock02-HE02"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE03"/>
+    <reference value="Specimen/BreastResectionSpecimenSlideRR-Superior-HE01"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE04"/>
+    <reference value="Specimen/BreastResectionSpecimenSlideRR-Inferior-HE01"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE05"/>
+    <reference value="Specimen/BreastResectionSpecimenSlideRR-Medial-HE01"/>
   </specimen>
   <specimen>
-    <reference value="Specimen/BreastResectionSpecimenSlideMargins-HE06"/>
+    <reference value="Specimen/BreastResectionSpecimenSlideRR-Lateral-HE01"/>
   </specimen>
   <result>
     <reference value="Observation/BreastResectionMacroscopicGrouper"/>

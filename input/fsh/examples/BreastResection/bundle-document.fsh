@@ -8,6 +8,8 @@ Usage: #example
 Title: "Document Bundle - BET Mamma"
 Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 * type = #document
+* identifier.system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+* identifier.value = "E_25_002"
 * timestamp = "2025-02-10T17:00:00+01:00"
 
 // --- Composition (must be first) ---

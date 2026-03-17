@@ -20,7 +20,7 @@ Profile: [MII PR Onkologie TNM T-Kategorieversion: null2026.0.0)](https://simpli
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: pT1c
+**value**: pT1
 
 **specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideHE01.md)
 
@@ -64,10 +64,10 @@ Profile: [MII PR Onkologie TNM T-Kategorieversion: null2026.0.0)](https://simpli
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "1228899006",
-      "display" : "American Joint Committee on Cancer cT1c (qualifier value)"
+      "code" : "1352559008",
+      "display" : "Union for International Cancer Control pT1 (qualifier value)"
     }],
-    "text" : "pT1c"
+    "text" : "pT1"
   },
   "specimen" : {
     "reference" : "Specimen/BreastResectionSpecimenSlideHE01"

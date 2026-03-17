@@ -369,7 +369,8 @@ Description: "Schnitt für Östrogenrezeptor-Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "ER-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(BreastResectionSubstanceER)
   * timeDateTime = "2025-02-06T10:00:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -411,7 +412,8 @@ Description: "Schnitt für Progesteronrezeptor-Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "PR-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(BreastResectionSubstancePR)
   * timeDateTime = "2025-02-06T10:05:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -453,7 +455,8 @@ Description: "Schnitt für HER2-Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "HER2-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#433114000 "Human epidermal growth factor receptor 2 gene detection by immunohistochemistry (procedure)"
+  * additive = Reference(BreastResectionSubstanceHER2IHC)
   * timeDateTime = "2025-02-06T10:30:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -495,7 +498,8 @@ Description: "Schnitt für Ki-67 Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "Ki-67 Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(BreastResectionSubstanceKi67)
   * timeDateTime = "2025-02-06T10:10:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -537,7 +541,8 @@ Description: "Schnitt für Zytokeratin 18 Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "CK18-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(BreastResectionSubstanceCK18)
   * timeDateTime = "2025-02-06T10:35:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -579,7 +584,8 @@ Description: "Schnitt für p40 Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "p40-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(BreastResectionSubstancep40)
   * timeDateTime = "2025-02-06T10:40:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
@@ -621,7 +627,8 @@ Description: "Schnitt für E-Cadherin Immunhistochemie"
   * extension[temperaturbedingungen].valueRange.low.value = 20
   * extension[temperaturbedingungen].valueRange.high.value = 25
   * description = "E-Cadherin-Immunhistochemie"
-  * procedure = $sct#70871006 "Incisional biopsy (procedure)"
+  * procedure = $sct#117617002 "Immunohistochemistry procedure (procedure)"
+  * additive = Reference(BreastResectionSubstanceECadherin)
   * timeDateTime = "2025-02-06T10:45:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"

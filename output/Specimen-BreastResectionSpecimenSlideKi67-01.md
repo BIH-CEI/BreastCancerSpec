@@ -1,10 +1,10 @@
-# Ki67-IHC Schnitt 01 BET - Breast Cancer Specification v0.1.0
+# Ki67-IHC Schnitt BET (Block01) - Breast Cancer Specification v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Ki67-IHC Schnitt 01 BET**
+* **Ki67-IHC Schnitt BET (Block01)**
 
-## Example Specimen: Ki67-IHC Schnitt 01 BET
+## Example Specimen: Ki67-IHC Schnitt BET (Block01)
 
 Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen), [MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore)
 
@@ -29,7 +29,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
 
 > **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: Schnittherstellung**procedure**: Sectioning of tissue block (procedure)**time**: 2025-02-06 09:45:00+0100
 
-> **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: Ki-67 Immunhistochemie**procedure**: Incisional biopsy (procedure)**time**: 2025-02-06 10:10:00+0100
+> **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: Ki-67 Immunhistochemie**procedure**: Immunohistochemistry procedure (procedure)**additive**: [Substance Tissue stain (substance)](Substance-BreastResectionSubstanceKi67.md)**time**: 2025-02-06 10:10:00+0100
 
 ### Containers
 
@@ -132,10 +132,13 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
     "procedure" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",
-        "code" : "70871006",
-        "display" : "Incisional biopsy (procedure)"
+        "code" : "117617002",
+        "display" : "Immunohistochemistry procedure (procedure)"
       }]
     },
+    "additive" : [{
+      "reference" : "Substance/BreastResectionSubstanceKi67"
+    }],
     "timeDateTime" : "2025-02-06T10:10:00+01:00"
   }],
   "container" : [{

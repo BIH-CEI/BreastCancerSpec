@@ -1,10 +1,10 @@
-# HE-Schnitt 02 BET - Tumor - Breast Cancer Specification v0.1.0
+# HE-Schnitt 02 BET - Tumor (Block01) - Breast Cancer Specification v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **HE-Schnitt 02 BET - Tumor**
+* **HE-Schnitt 02 BET - Tumor (Block01)**
 
-## Example Specimen: HE-Schnitt 02 BET - Tumor
+## Example Specimen: HE-Schnitt 02 BET - Tumor (Block01)
 
 Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen), [MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore)
 
