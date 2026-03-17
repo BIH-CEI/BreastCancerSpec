@@ -87,72 +87,84 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock03"
 * entry[=].resource = BreastResectionSpecimenBlock03
 
-// Block01 Slides: Tumor HE (4)
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock04"
+* entry[=].resource = BreastResectionSpecimenBlock04
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock05"
+* entry[=].resource = BreastResectionSpecimenBlock05
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock06"
+* entry[=].resource = BreastResectionSpecimenBlock06
+
+// Block01 Slides: HE (2), ER, PR, HER2-IHC, Ki67, CK18, p40, E-Cadherin
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHE01"
 * entry[=].resource = BreastResectionSpecimenSlideHE01
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHE02"
 * entry[=].resource = BreastResectionSpecimenSlideHE02
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHE03"
-* entry[=].resource = BreastResectionSpecimenSlideHE03
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHE04"
-* entry[=].resource = BreastResectionSpecimenSlideHE04
-
-// Block01 Slides: ER (2)
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideER01"
 * entry[=].resource = BreastResectionSpecimenSlideER01
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideER02"
-* entry[=].resource = BreastResectionSpecimenSlideER02
-
-// Block01 Slides: PR (2)
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlidePR01"
 * entry[=].resource = BreastResectionSpecimenSlidePR01
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlidePR02"
-* entry[=].resource = BreastResectionSpecimenSlidePR02
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHER2IHC01"
+* entry[=].resource = BreastResectionSpecimenSlideHER2IHC01
 
-// Block01 Slides: HER2 (2)
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHER2-01"
-* entry[=].resource = BreastResectionSpecimenSlideHER2-01
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHER2-02"
-* entry[=].resource = BreastResectionSpecimenSlideHER2-02
-
-// Block01 Slides: Ki67 (2)
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideKi67-01"
 * entry[=].resource = BreastResectionSpecimenSlideKi67-01
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideKi67-02"
-* entry[=].resource = BreastResectionSpecimenSlideKi67-02
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideCK18-01"
+* entry[=].resource = BreastResectionSpecimenSlideCK18-01
 
-// Block02 Slides: DCIS HE (2)
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideDCIS-HE01"
-* entry[=].resource = BreastResectionSpecimenSlideDCIS-HE01
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlidep40-01"
+* entry[=].resource = BreastResectionSpecimenSlidep40-01
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideDCIS-HE02"
-* entry[=].resource = BreastResectionSpecimenSlideDCIS-HE02
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideECad-01"
+* entry[=].resource = BreastResectionSpecimenSlideECad-01
 
-// Block03 Slides: Margins HE (6)
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE01"
-* entry[=].resource = BreastResectionSpecimenSlideMargins-HE01
+// Block02 Slides: HE (2)
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideBlock02-HE01"
+* entry[=].resource = BreastResectionSpecimenSlideBlock02-HE01
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE02"
-* entry[=].resource = BreastResectionSpecimenSlideMargins-HE02
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideBlock02-HE02"
+* entry[=].resource = BreastResectionSpecimenSlideBlock02-HE02
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE03"
-* entry[=].resource = BreastResectionSpecimenSlideMargins-HE03
+// Block03-06 Slides: RR superior, inferior, medial, lateral (1 each)
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Superior-HE01"
+* entry[=].resource = BreastResectionSpecimenSlideRR-Superior-HE01
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE04"
-* entry[=].resource = BreastResectionSpecimenSlideMargins-HE04
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Inferior-HE01"
+* entry[=].resource = BreastResectionSpecimenSlideRR-Inferior-HE01
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE05"
-* entry[=].resource = BreastResectionSpecimenSlideMargins-HE05
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Medial-HE01"
+* entry[=].resource = BreastResectionSpecimenSlideRR-Medial-HE01
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideMargins-HE06"
-* entry[=].resource = BreastResectionSpecimenSlideMargins-HE06
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Lateral-HE01"
+* entry[=].resource = BreastResectionSpecimenSlideRR-Lateral-HE01
+
+// --- Substances ---
+* entry[+].fullUrl = "http://breastcancerspec.org/Substance/BreastResectionSubstanceER"
+* entry[=].resource = BreastResectionSubstanceER
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Substance/BreastResectionSubstancePR"
+* entry[=].resource = BreastResectionSubstancePR
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Substance/BreastResectionSubstanceHER2IHC"
+* entry[=].resource = BreastResectionSubstanceHER2IHC
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Substance/BreastResectionSubstanceKi67"
+* entry[=].resource = BreastResectionSubstanceKi67
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Substance/BreastResectionSubstanceCK18"
+* entry[=].resource = BreastResectionSubstanceCK18
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Substance/BreastResectionSubstancep40"
+* entry[=].resource = BreastResectionSubstancep40
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Substance/BreastResectionSubstanceECadherin"
+* entry[=].resource = BreastResectionSubstanceECadherin
 
 // --- Macroscopy Observations ---
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroscopicGrouper"
@@ -178,6 +190,9 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroDistanceNipple"
 * entry[=].resource = BreastResectionMacroDistanceNipple
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroBlockCount"
+* entry[=].resource = BreastResectionMacroBlockCount
 
 // --- Diagnostic Conclusion Observations ---
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionDiagnosticConclusionGrouper"

@@ -52,7 +52,6 @@ Description: "FHIR Composition for structured core needle biopsy pathology repor
 <p><b>Diagnose:</b> Invasives Mammakarzinom NST (ICD-O 8500/3)</p>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
-<tr><td>ICD-10</td><td>C50.5</td></tr>
 <tr><td>ICD-O-3 Morphologie</td><td>M8500/3</td></tr>
 <tr><td>Nottingham-Grad</td><td>Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1)</td></tr>
 <tr><td>ER</td><td>Positiv (85% positive Tumorzellkerne)</td></tr>

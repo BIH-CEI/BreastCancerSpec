@@ -437,7 +437,7 @@ Description: "Vorhandensein eines assoziierten DCIS"
 * code = $loinc#85336-6 "DCIS intraduct ext Br ca spec Ql Micro"
 * code.text = "Klassifikation eines assoziiertes DCIS"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideDCIS-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -458,7 +458,7 @@ Description: "Kerngrading des assoziierten DCIS"
 * code = $sct#2890001000004108 "Nuclear grade of ductal carcinoma in situ of breast (observable entity)"
 * code.text = "Kerngrading / WHO-Grading nichtinvasiv"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideDCIS-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -479,7 +479,7 @@ Description: "Wachstumsmuster des assoziierten DCIS"
 * code.coding[+] = $sct#3400001000004108 "Architectural pattern of ductal carcinoma in situ in breast (observable entity)"
 * code.text = "DCIS Architektur"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideDCIS-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -500,7 +500,7 @@ Description: "Nekrosen im DCIS-Areal"
 * code = $loinc#85340-8 "DCIS necrosis [Type] in Breast cancer specimen by Light microscopy"
 * code.text = "Nekrosen"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideDCIS-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -548,7 +548,7 @@ Description: "Resektionsrandstatus der invasiven Komponente"
 * code.coding[+] = $sct#1240395000 "Surgical margin involved by primary malignant neoplasm of breast in excised breast specimen (observable entity)"
 * code.text = "Resektionsrandstatus invasiv"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideMargins-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -570,7 +570,7 @@ Description: "Lokalisation des nächsten tumorfreien Resektionsrands"
 * code.coding[+] = $sct#170001000004107 "Surgical margin closest to malignant neoplasm in excised specimen of breast (observable entity)"
 * code.text = "Richtung des nächsten tumorfreien RR"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideMargins-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -591,7 +591,7 @@ Description: "Mindestabstand der invasiven Komponente zum Resektionsrand"
 * code.coding[+] = $sct#373120008 "Distance of invasive carcinoma of breast from closest surgical margin in excised breast specimen (observable entity)"
 * code.text = "Mindestabstand des invasiven Tumor zum nächstgelegenen Resektionsrand"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideMargins-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -612,7 +612,7 @@ Description: "Resektionsrandstatus der nichtinvasiven Komponente (DCIS)"
 * code.coding[+] = $sct#384705006 "Presence of ductal carcinoma in situ at surgical margin in excised specimen of breast (observable entity)"
 * code.text = "Resektionsrandstatus nichtinvasiv"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideMargins-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -633,7 +633,7 @@ Description: "Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektions
 * code = $loinc#44673-2 "DCIS.uninv marg dist.closest BT"
 * code.text = "Mindestabstand vom RR zum nichtinvasiven Tumor"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideMargins-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -676,14 +676,13 @@ Description: "Vorhandensein von Mikrokalzifikationen"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#44692-2 "Microcalcifications in Breast tumor"
-* code.text = "Mikrokalzifikationen"
+* code = $sct#1240404008 "Presence of microcalcification in excised breast specimen (observable entity)"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideDCIS-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept.text = "In DCIS assoziiert"
+* valueCodeableConcept = $loinc#LA27826-9 "Microcalcifications present in DCIS"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // ============================================================================
@@ -838,7 +837,7 @@ Description: "HER2-Score per Immunhistochemie"
 * code.coding[+] = $sct#3550001000004108 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
 * code.text = "Her2 Score"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideHER2-01)
+* specimen = Reference(BreastResectionSpecimenSlideHER2IHC01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -858,7 +857,7 @@ Description: "HER2-Amplifikationsstatus per In-situ-Hybridisierung"
 * code = $loinc#85318-4 "ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH"
 * code.text = "Her2 Amplifikation"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideHER2-01)
+* specimen = Reference(BreastResectionSpecimenSlideHER2IHC01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -879,7 +878,7 @@ Description: "HER2-Gesamtstatus basierend auf IHC und ISH"
 * code = $loinc#48676-1 "HER2 [Interpretation] in Tissue"
 * code.text = "Her2neuStatus"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideHER2-01)
+* specimen = Reference(BreastResectionSpecimenSlideHER2IHC01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)

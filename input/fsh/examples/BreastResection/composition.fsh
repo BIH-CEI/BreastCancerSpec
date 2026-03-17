@@ -40,13 +40,14 @@ Description: "FHIR Composition for structured breast resection pathology report"
 <h3>Makroskopie</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
-<tr><td>Größe</td><td>65 × 45 × 30 mm</td></tr>
-<tr><td>Gewicht</td><td>55 g</td></tr>
+<tr><td>Größe</td><td>42 × 35 × 18 mm</td></tr>
+<tr><td>Gewicht</td><td>10 g</td></tr>
 <tr><td>Quadrant</td><td>Unterer äußerer Quadrant</td></tr>
 <tr><td>Zifferblatt</td><td>5 Uhr</td></tr>
 <tr><td>Abstand Mamille</td><td>50 mm</td></tr>
-<tr><td>Schnittfläche</td><td>Grau-weißlich, derber Herdbefund zentral, ca. 18 mm</td></tr>
-<tr><td>Paraffinblöcke</td><td>3</td></tr>
+<tr><td>Lamellierung</td><td>8 Scheiben à 5 mm</td></tr>
+<tr><td>Schnittfläche</td><td>Grau-weißlich, derber Herdbefund zentral in Scheibe III–V, ca. 18 mm</td></tr>
+<tr><td>Paraffinblöcke</td><td>6</td></tr>
 </tbody>
 </table>
 

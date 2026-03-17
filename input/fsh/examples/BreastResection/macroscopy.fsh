@@ -24,6 +24,7 @@ Description: "Gruppierung aller makroskopischen Messungen des BET-Exzisionspräp
 * hasMember[+] = Reference(BreastResectionMacroQuadrant)
 * hasMember[+] = Reference(BreastResectionMacroClock)
 * hasMember[+] = Reference(BreastResectionMacroDistanceNipple)
+* hasMember[+] = Reference(BreastResectionMacroBlockCount)
 
 
 // --- Länge (linkId 10900) ---
@@ -42,7 +43,7 @@ Description: "Maximale Länge des BET-Exzisionspräparats"
 * specimen = Reference(BreastResectionSpecimenPart)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueQuantity = 65 'mm' "mm"
+* valueQuantity = 42 'mm' "mm"
 * bodySite = $sct#76752008 "Breast structure (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
@@ -62,7 +63,7 @@ Description: "Breite des BET-Exzisionspräparats"
 * specimen = Reference(BreastResectionSpecimenPart)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueQuantity = 45 'mm' "mm"
+* valueQuantity = 35 'mm' "mm"
 * bodySite = $sct#76752008 "Breast structure (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
@@ -82,7 +83,7 @@ Description: "Tiefe des BET-Exzisionspräparats"
 * specimen = Reference(BreastResectionSpecimenPart)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueQuantity = 30 'mm' "mm"
+* valueQuantity = 18 'mm' "mm"
 * bodySite = $sct#76752008 "Breast structure (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
@@ -102,7 +103,7 @@ Description: "Gewicht des BET-Exzisionspräparats"
 * specimen = Reference(BreastResectionSpecimenPart)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueQuantity = 55 'g' "g"
+* valueQuantity = 10 'g' "g"
 * bodySite = $sct#76752008 "Breast structure (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
@@ -163,4 +164,23 @@ Description: "Abstand des Tumors von der Mamille"
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
 * valueQuantity = 50 'mm' "mm"
+* derivedFrom = Reference(QuestionnaireResponseBreastResection)
+
+// --- Anzahl Paraffinblöcke ---
+Instance: BreastResectionMacroBlockCount
+InstanceOf: $mii-patho-finding
+Usage: #example
+Title: "Anzahl Paraffinblöcke BET"
+Description: "Anzahl der angefertigten Paraffinblöcke"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* status = #final
+* category[laboratory-category] = $observation-category#laboratory
+* category[section-type] = $loinc#22634-0
+* code = $sct#372073007 "Number of tissue blocks submitted for histological examination (observable entity)"
+* code.text = "Anzahl Paraffinblöcke"
+* subject = Reference(Patient4)
+* specimen = Reference(BreastResectionSpecimenPart)
+* effectiveDateTime = "2025-02-06T08:30:00+01:00"
+* performer = Reference(PathologistPractitioner)
+* valueQuantity = 6 '{blocks}' "Blöcke"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
