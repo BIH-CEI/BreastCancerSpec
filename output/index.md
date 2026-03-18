@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://breastcancerspec.org/ImplementationGuide/breastcancerspec | *Version*:0.1.0 |
-| Draft as of 2026-03-17 | *Computable Name*:BreastCancerSpec |
+| Draft as of 2026-03-18 | *Computable Name*:BreastCancerSpec |
 
 ### Introduction
 
@@ -50,7 +50,7 @@ This IG builds on:
   "name" : "BreastCancerSpec",
   "title" : "Breast Cancer Specification",
   "status" : "draft",
-  "date" : "2026-03-17T15:11:19+01:00",
+  "date" : "2026-03-18T14:36:58+01:00",
   "publisher" : "BIH CEI",
   "contact" : [{
     "name" : "BIH CEI",

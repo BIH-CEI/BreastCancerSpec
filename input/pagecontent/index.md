@@ -2,14 +2,11 @@
 
 This Implementation Guide (IG) provides FHIR-based examples for structured breast cancer pathology reporting, based on the [MII Kerndatensatz Pathologie](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report) profiles.
 
-Currently available report type:
+Currently available report types:
 
 1. **Stanzbiopsie** – Core needle biopsy report (Stanz-/Vakuumbiopsie)
-
-Further report types are planned:
-
-- **OP-Präparate** – Surgical specimen reports (resections)
-- **Axilläre Lymphknotenpräparate** – Axillary lymph node specimen reports
+2. **OP-Präparat (BET)** – Breast-conserving excision specimen report
+3. **SLN-Biopsie Axilla** – Sentinel lymph node biopsy report
 
 Each report type includes a complete set of FHIR resources: ServiceRequest, Encounter, Condition, Specimen hierarchy, macroscopic and diagnostic conclusion observations, DiagnosticReport, Composition, Document Bundle, and QuestionnaireResponse.
 

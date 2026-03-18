@@ -2,8 +2,8 @@ BreastCancerSpec : Validation Results
 =========================================
 
 err = 19, warn = 403, info = 1192
-IG Publisher Version: 2.1.2
-Generated Tue Mar 17 15:12:36 CET 2026. FHIR version 4.0.1 for breastcancerspec#0.1.0 (canonical = http://breastcancerspec.org)
+IG Publisher Version: 2.1.2 Out of date - current version is 2.2.0
+Generated Wed Mar 18 14:38:21 CET 2026. FHIR version 4.0.1 for breastcancerspec#0.1.0 (canonical = http://breastcancerspec.org)
  Build Errors : 1 / 4 / 0
  /Users/thimo/Desktop/Charite/Arbeit/BreastCancerSpec/fsh-generated/resources/Bundle-BreastResectionDocument : 4 / 99 / 557
  /Users/thimo/Desktop/Charite/Arbeit/BreastCancerSpec/fsh-generated/resources/Bundle-CoreNeedleBiopsyDocument : 4 / 58 / 310
