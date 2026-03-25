@@ -1,0 +1,61 @@
+{
+  "resourceType" : "Observation",
+  "id" : "IntegratedOperativeProcedure",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation IntegratedOperativeProcedure</b></p><a name=\"IntegratedOperativeProcedure\"> </a><a name=\"hcIntegratedOperativeProcedure\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-IntegratedReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29306-8}, {http://snomed.info/sct 2620001000004108}\">Operatives Verfahren</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 237371007}\">Brusterhaltende Therapie (BET)</span></p><p><b>specimen</b>: <a href=\"Specimen-IntegratedBETSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_300; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. 42 × 35 × 18 mm, 10 g. Haut anhängend, Drahthäkchen in situ. Lamellierung in 8 Scheiben à 5 mm. Schnittfläche: grau-weißlicher Herdbefund zentral in Scheibe III–V, ca. 18 mm.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-IntegratedQRBreastResection.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_Mamma_GH' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+  },
+  "basedOn" : [{
+    "reference" : "ServiceRequest/IntegratedReportRequest"
+  }],
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "22637-3"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "29306-8",
+      "display" : "Surgery procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2620001000004108",
+      "display" : "Specimen collection procedure (observable entity)"
+    }],
+    "text" : "Operatives Verfahren"
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "effectiveDateTime" : "2025-02-10",
+  "performer" : [{
+    "reference" : "Practitioner/PathologistPractitioner"
+  }],
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "237371007",
+      "display" : "Wide local excision of breast lesion (procedure)"
+    }],
+    "text" : "Brusterhaltende Therapie (BET)"
+  },
+  "specimen" : {
+    "reference" : "Specimen/IntegratedBETSpecimenPart"
+  },
+  "derivedFrom" : [{
+    "reference" : "QuestionnaireResponse/IntegratedQRBreastResection"
+  }]
+}

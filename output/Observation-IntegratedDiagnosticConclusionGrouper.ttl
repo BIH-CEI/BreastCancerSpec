@@ -1,0 +1,237 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://breastcancerspec.org/Observation/IntegratedDiagnosticConclusionGrouper> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IntegratedDiagnosticConclusionGrouper"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2026.0.0"^^xsd:anyURI ;
+       fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper?version=2026.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation IntegratedDiagnosticConclusionGrouper</b></p><a name=\"IntegratedDiagnosticConclusionGrouper\"> </a><a name=\"hcIntegratedDiagnosticConclusionGrouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper\">MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-IntegratedReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-IntegratedNonInvasiveLesion.html\">Observation Carcinoma in situ of breast (disorder)</a></li><li><a href=\"Observation-IntegratedInvasiveCarcinoma.html\">Observation Malignant tumor of breast (disorder)</a></li><li><a href=\"Observation-IntegratedOperativeProcedure.html\">Observation Surgery procedure</a></li><li><a href=\"Observation-IntegratedMaterialType.html\">Observation Specimen type</a></li><li><a href=\"Observation-IntegratedLaterality.html\">Observation Specimen laterality (observable entity)</a></li><li><a href=\"Observation-IntegratedAttachedTissue.html\">Observation Body structure included in specimen [Anatomy] in Specimen</a></li><li><a href=\"Observation-IntegratedFocality.html\">Observation Qualitative distribution of primary malignant neoplasm of breast in excised breast specimen (observable entity)</a></li><li><a href=\"Observation-IntegratedMaxDiameterInvasive.html\">Observation Inv comp size max dim BT</a></li><li><a href=\"Observation-IntegratedMaxOverallDiameter.html\">Observation Size.maximum dimension in Tumor</a></li><li><a href=\"Observation-IntegratedHistologicalType.html\">Observation Histo type BT</a></li><li><a href=\"Observation-IntegratedMorphologyFreeText.html\">Observation Histology type in Cancer specimen Narrative</a></li><li><a href=\"Observation-IntegratedNottinghamGrade.html\">Observation Histologic grade [Score] in Breast cancer specimen by Nottingham</a></li><li><a href=\"Observation-IntegratedTubuleScore.html\">Observation Glandular differentiation [Score] in Breast cancer specimen by Nottingham</a></li><li><a href=\"Observation-IntegratedNuclearPleomorphism.html\">Observation Nuclear pleomorphism in Breast tumor by Nottingham</a></li><li><a href=\"Observation-IntegratedMitosisCount.html\">Observation Number of mitoses per 10 high power fields (observable entity)</a></li><li><a href=\"Observation-IntegratedMitoticRateScore.html\">Observation Mitotic rate [Score] in Breast cancer specimen by Nottingham</a></li><li><a href=\"Observation-IntegratedElstonEllisScore.html\">Observation Nottingham total score of primary malignant neoplasm of breast (observable entity)</a></li><li><a href=\"Observation-IntegratedAssociatedDCIS.html\">Observation DCIS intraduct ext Br ca spec Ql Micro</a></li><li><a href=\"Observation-IntegratedDCISGrade.html\">Observation Nuclear grade of ductal carcinoma in situ of breast (observable entity)</a></li><li><a href=\"Observation-IntegratedDCISArchitecture.html\">Observation Growth pattern of DCIS [Type] in Breast cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedDCISNecrosis.html\">Observation DCIS necrosis [Type] in Breast cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedTumorExtent.html\">Observation Adjacent structure invaded by tumor [Anatomy] in Breast cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedMarginStatusInvasive.html\">Observation Margin involved BT</a></li><li><a href=\"Observation-IntegratedClosestMargin.html\">Observation IC uninv marg closest BT</a></li><li><a href=\"Observation-IntegratedMinDistanceInvasive.html\">Observation IC uninv marg dist closest BT</a></li><li><a href=\"Observation-IntegratedMarginStatusNonInvasive.html\">Observation Surgical margin DCIS involvement [Presence] in Breast cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedMinDistanceNonInvasive.html\">Observation DCIS.uninv marg dist.closest BT</a></li><li><a href=\"Observation-IntegratedLVI.html\">Observation Lymph-vascular invasion Ca spec</a></li><li><a href=\"Observation-IntegratedMicrocalcification.html\">Observation Presence of microcalcification in excised breast specimen (observable entity)</a></li><li><a href=\"Observation-IntegratedERStatus.html\">Observation Estrogen receptor [Interpretation] in Tissue</a></li><li><a href=\"Observation-IntegratedERPercentage.html\">Observation Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-IntegratedERIntensity.html\">Observation Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-IntegratedPRStatus.html\">Observation Progesterone receptor [Interpretation] in Tissue</a></li><li><a href=\"Observation-IntegratedPRPercentage.html\">Observation Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-IntegratedPRIntensity.html\">Observation Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-IntegratedHER2IHC.html\">Observation HER2 [Presence] in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-IntegratedHER2ISH.html\">Observation ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH</a></li><li><a href=\"Observation-IntegratedHER2Overall.html\">Observation HER2 [Interpretation] in Tissue</a></li><li><a href=\"Observation-IntegratedKi67.html\">Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain</a></li><li><a href=\"Observation-IntegratedPT.html\">Observation Primary tumor.pathology Cancer</a></li><li><a href=\"Observation-IntegratedBETComment.html\">Observation Pathology report comments [Interpretation] Narrative</a></li><li><a href=\"Observation-IntegratedLymphNodeProcedure.html\">Observation Surgery procedure for regional nodes at facility.YYY Cancer</a></li><li><a href=\"Observation-IntegratedLymphNodeLaterality.html\">Observation Anatomic part Laterality</a></li><li><a href=\"Observation-IntegratedNonSLNExamined.html\">Observation Regional lymph nodes examined [#] Specimen</a></li><li><a href=\"Observation-IntegratedNonSLNPositive.html\">Observation Regional lymph nodes positive [#] Specimen</a></li><li><a href=\"Observation-IntegratedSLNExamined.html\">Observation Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedSLNPositive.html\">Observation Number of sentinel lymph nodes containing metastatic neoplasm in excised specimen (observable entity)</a></li><li><a href=\"Observation-IntegratedTotalExamined.html\">Observation Lymph nodes examined [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedTotalPositive.html\">Observation Lymph nodes with metastasis [#] in Cancer specimen</a></li><li><a href=\"Observation-IntegratedMacroMetCount.html\">Observation Lymph nodes with macrometastases [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedMicroMetCount.html\">Observation Lymph nodes with micrometastases [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedITCCount.html\">Observation Lymph nodes with isolated tumor cells [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedLargestMetSize.html\">Observation Lymph node metastatic deposit.max dimension [Length] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedExtranodalExtension.html\">Observation Extranodal extension of carcinoma [Presence] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-IntegratedPN.html\">Observation Regional lymph nodes.clinical [Class] Cancer</a></li><li><a href=\"Observation-IntegratedSLNComment.html\">Observation Pathology report comments [Interpretation] Narrative</a></li></ul><p><b>derivedFrom</b>: </p><ul><li><a href=\"QuestionnaireResponse-IntegratedQRBreastResection.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_Mamma_GH' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li><li><a href=\"QuestionnaireResponse-IntegratedQRLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:basedOn ( [
+     fhir:l <http://breastcancerspec.org/ServiceRequest/IntegratedReportRequest> ;
+     fhir:reference [ fhir:v "ServiceRequest/IntegratedReportRequest" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:22637-3 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "22637-3" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://breastcancerspec.org/Patient/Patient4> ;
+     fhir:reference [ fhir:v "Patient/Patient4" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2025-02-10"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://breastcancerspec.org/Practitioner/PathologistPractitioner> ;
+     fhir:reference [ fhir:v "Practitioner/PathologistPractitioner" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedNonInvasiveLesion> ;
+     fhir:reference [ fhir:v "Observation/IntegratedNonInvasiveLesion" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedInvasiveCarcinoma> ;
+     fhir:reference [ fhir:v "Observation/IntegratedInvasiveCarcinoma" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedOperativeProcedure> ;
+     fhir:reference [ fhir:v "Observation/IntegratedOperativeProcedure" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMaterialType> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMaterialType" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedLaterality> ;
+     fhir:reference [ fhir:v "Observation/IntegratedLaterality" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedAttachedTissue> ;
+     fhir:reference [ fhir:v "Observation/IntegratedAttachedTissue" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedFocality> ;
+     fhir:reference [ fhir:v "Observation/IntegratedFocality" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMaxDiameterInvasive> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMaxDiameterInvasive" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMaxOverallDiameter> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMaxOverallDiameter" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedHistologicalType> ;
+     fhir:reference [ fhir:v "Observation/IntegratedHistologicalType" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMorphologyFreeText> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMorphologyFreeText" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedNottinghamGrade> ;
+     fhir:reference [ fhir:v "Observation/IntegratedNottinghamGrade" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedTubuleScore> ;
+     fhir:reference [ fhir:v "Observation/IntegratedTubuleScore" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedNuclearPleomorphism> ;
+     fhir:reference [ fhir:v "Observation/IntegratedNuclearPleomorphism" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMitosisCount> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMitosisCount" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMitoticRateScore> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMitoticRateScore" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedElstonEllisScore> ;
+     fhir:reference [ fhir:v "Observation/IntegratedElstonEllisScore" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedAssociatedDCIS> ;
+     fhir:reference [ fhir:v "Observation/IntegratedAssociatedDCIS" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedDCISGrade> ;
+     fhir:reference [ fhir:v "Observation/IntegratedDCISGrade" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedDCISArchitecture> ;
+     fhir:reference [ fhir:v "Observation/IntegratedDCISArchitecture" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedDCISNecrosis> ;
+     fhir:reference [ fhir:v "Observation/IntegratedDCISNecrosis" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedTumorExtent> ;
+     fhir:reference [ fhir:v "Observation/IntegratedTumorExtent" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMarginStatusInvasive> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMarginStatusInvasive" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedClosestMargin> ;
+     fhir:reference [ fhir:v "Observation/IntegratedClosestMargin" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMinDistanceInvasive> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMinDistanceInvasive" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMarginStatusNonInvasive> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMarginStatusNonInvasive" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMinDistanceNonInvasive> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMinDistanceNonInvasive" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedLVI> ;
+     fhir:reference [ fhir:v "Observation/IntegratedLVI" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMicrocalcification> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMicrocalcification" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedERStatus> ;
+     fhir:reference [ fhir:v "Observation/IntegratedERStatus" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedERPercentage> ;
+     fhir:reference [ fhir:v "Observation/IntegratedERPercentage" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedERIntensity> ;
+     fhir:reference [ fhir:v "Observation/IntegratedERIntensity" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedPRStatus> ;
+     fhir:reference [ fhir:v "Observation/IntegratedPRStatus" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedPRPercentage> ;
+     fhir:reference [ fhir:v "Observation/IntegratedPRPercentage" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedPRIntensity> ;
+     fhir:reference [ fhir:v "Observation/IntegratedPRIntensity" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedHER2IHC> ;
+     fhir:reference [ fhir:v "Observation/IntegratedHER2IHC" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedHER2ISH> ;
+     fhir:reference [ fhir:v "Observation/IntegratedHER2ISH" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedHER2Overall> ;
+     fhir:reference [ fhir:v "Observation/IntegratedHER2Overall" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedKi67> ;
+     fhir:reference [ fhir:v "Observation/IntegratedKi67" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedPT> ;
+     fhir:reference [ fhir:v "Observation/IntegratedPT" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedBETComment> ;
+     fhir:reference [ fhir:v "Observation/IntegratedBETComment" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedLymphNodeProcedure> ;
+     fhir:reference [ fhir:v "Observation/IntegratedLymphNodeProcedure" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedLymphNodeLaterality> ;
+     fhir:reference [ fhir:v "Observation/IntegratedLymphNodeLaterality" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedNonSLNExamined> ;
+     fhir:reference [ fhir:v "Observation/IntegratedNonSLNExamined" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedNonSLNPositive> ;
+     fhir:reference [ fhir:v "Observation/IntegratedNonSLNPositive" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedSLNExamined> ;
+     fhir:reference [ fhir:v "Observation/IntegratedSLNExamined" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedSLNPositive> ;
+     fhir:reference [ fhir:v "Observation/IntegratedSLNPositive" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedTotalExamined> ;
+     fhir:reference [ fhir:v "Observation/IntegratedTotalExamined" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedTotalPositive> ;
+     fhir:reference [ fhir:v "Observation/IntegratedTotalPositive" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroMetCount> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMacroMetCount" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedMicroMetCount> ;
+     fhir:reference [ fhir:v "Observation/IntegratedMicroMetCount" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedITCCount> ;
+     fhir:reference [ fhir:v "Observation/IntegratedITCCount" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedLargestMetSize> ;
+     fhir:reference [ fhir:v "Observation/IntegratedLargestMetSize" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedExtranodalExtension> ;
+     fhir:reference [ fhir:v "Observation/IntegratedExtranodalExtension" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedPN> ;
+     fhir:reference [ fhir:v "Observation/IntegratedPN" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/Observation/IntegratedSLNComment> ;
+     fhir:reference [ fhir:v "Observation/IntegratedSLNComment" ]
+  ] ) ; # 
+  fhir:derivedFrom ( [
+     fhir:l <http://breastcancerspec.org/QuestionnaireResponse/IntegratedQRBreastResection> ;
+     fhir:reference [ fhir:v "QuestionnaireResponse/IntegratedQRBreastResection" ]
+  ] [
+     fhir:l <http://breastcancerspec.org/QuestionnaireResponse/IntegratedQRLymphNode> ;
+     fhir:reference [ fhir:v "QuestionnaireResponse/IntegratedQRLymphNode" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="IntegratedPresentationMode"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation IntegratedPresentationMode</b></p><a name="IntegratedPresentationMode"> </a><a name="hcIntegratedPresentationMode"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 67098-4}">Präsentationsmodus</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title="Codes:">Frisch</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="67098-4"/>
+      <display value="Reason for test or procedure"/>
+    </coding>
+    <text value="Präsentationsmodus"/>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <valueCodeableConcept>
+    <text value="Frisch"/>
+  </valueCodeableConcept>
+</Observation>

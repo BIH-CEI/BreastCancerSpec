@@ -1,0 +1,118 @@
+@startuml CoreNeedleBiopsy_Structure
+' layout: default (GraphViz)
+title Core Needle Biopsy Breast – FHIR Resource Structure
+
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Arial
+skinparam defaultFontSize 10
+skinparam ArrowColor #555555
+skinparam ArrowThickness 1.2
+skinparam nodesep 30
+skinparam ranksep 40
+skinparam padding 5
+
+skinparam rectangle {
+  RoundCorner 8
+  BorderThickness 1.5
+}
+
+' ====================================================================
+' TOP: Administrative resources (above DiagnosticReport)
+' ====================================================================
+together {
+  rectangle "**Patient**\nPatient4\nSabine Becker\ngeb. 1971-03-15" as PAT #D6D6D6
+  rectangle "**Practitioner**\nPathologistPractitioner\nPathology dept." as PRAC #D6D6D6
+  rectangle "**Organization**\nPathologyLabOrganization\nPathology institute" as ORG #D6D6D6
+  rectangle "**Encounter**\nCoreNeedleBiopsyEncounter\n2025-01-15  |  class: AMB" as ENC #D6D6D6
+}
+
+' ====================================================================
+' CENTER: DiagnosticReport
+' ====================================================================
+rectangle "**DiagnosticReport**\nCoreNeedleBiopsyReport\n────────────────────\ncode: LOINC 60568-3\nidentifier: E_25_105  |  status: final\neffective: 2025-01-17" as DR #C6EFCE
+
+PAT  <-- DR : subject
+PRAC <-- DR : performer
+ORG  <-- DR : (organization)
+ENC  <-- DR : encounter
+
+' ====================================================================
+' ServiceRequest
+' ====================================================================
+rectangle "**ServiceRequest**\nCoreNeedleBiopsyReportRequest\n────────────\ncode: LOINC 66110-8\nBreast Pathology biopsy report\nplacer-ID: PATH-RPT-2025-105" as SR #BDD7EE
+
+' ====================================================================
+' SupportingInfo (Imaging Report)
+' ====================================================================
+rectangle "**DiagnosticReport**\nCoreNeedleBiopsyImagingReport\n────────────\nLOINC 24606-6\nMG Breast Screening\nBI-RADS 4b" as IMG #FFF2CC
+
+' ====================================================================
+' Specimens (grouped)
+' ====================================================================
+rectangle "Specimens" as COL_SPEC #FEF5EC {
+  rectangle "**Part Specimen**\nCoreNeedleBiopsySpecimenPart\nBX25_105_A / E_25_105_A\ntype: breast core needle biopsy\n2 cylinders, 22 mm\nadditive: formalin" as SPART #FCE4D6
+
+  rectangle "**Block Specimen**\nCoreNeedleBiopsySpecimenBlock01\nE_25_105_A_1\ntype: FFPE block\nadditive: paraffin" as SBLOCK #FCE4D6
+
+  rectangle "**Slide Specimens**\nHE 01–04  (4 cutting levels)\nER 01–02  |  PR 01–02\nHER2-ISH 01–02  |  HER2-IHC 01–02\nKi-67 01–02\ntype: tissue section" as SSLIDE #FCE4D6
+
+  SPART -[hidden]down-> SBLOCK
+  SBLOCK -[hidden]down-> SSLIDE
+  SSLIDE -up-> SBLOCK : parent
+  SBLOCK -up-> SPART : parent
+}
+
+DR --> SR       : basedOn
+DR --> COL_SPEC : specimen
+SR --> IMG      : supportingInfo
+
+' ====================================================================
+' Macroscopy-Grouper
+' ====================================================================
+rectangle "**Macroscopy-Grouper**\nCoreNeedleBiopsyMacroscopicGrouper\n────────────\nLOINC 22634-0\nresult[macroscopic-observations]" as MACG #E8F4FD {
+
+  rectangle "**Findings**\nMacroscopicTotalLength\n(LOINC 33728-7  total length)\n\nMacroscopicCylinderCount\n(SCT 246205007  quantity)\n\nMacroscopicBlockCount\n(SCT 246205007  quantity)" as MOBS #E2D0F0
+}
+
+DR --> MACG : result
+
+' ====================================================================
+' DiagnosticConclusion-Grouper
+' ====================================================================
+rectangle "**DiagnosticConclusion-Grouper**\nCoreNeedleBiopsyDiagnosticConclusionGrouper\n────────────\nLOINC 22637-3\nresult[diagnostic-conclusion]" as DCG #FEF0E7 {
+
+  rectangle "**Findings**\nHistologicalTypeICDO3  (LOINC 59847-4)\nMorphologyFreeText  (LOINC 33731-1)\nNottinghamGrade  (LOINC 44648-4)\nNottinghamSummaryScore  (LOINC 44648-4)\nTubuleFormation  (LOINC 85321-8)\nNuclearPleomorphism  (LOINC 44645-0)\nMitoticRate  (LOINC 85300-2)\nERStatus  (LOINC 85337-4)\nERPercentage  (LOINC 85329-1)\nPRStatus  (LOINC 85339-0)\nPRPercentage  (LOINC 85325-9)\nHER2ISH  (SCT 1363314005)\nKi67  (LOINC 85330-9)\nBClassification  (SCT 271937008)\nMicrocalcification  (SCT 1240404008)\nSpecimenRadiography  (SCT 80865008)\nMicrocalcificationCorrelation  (SCT 12747003)" as DCOBS #FFF2CC
+}
+
+DR --> DCG : result
+
+' ====================================================================
+' Composition
+' ====================================================================
+rectangle "**Composition**\nCoreNeedleBiopsyComposition\n────────────────────\ntype: LOINC 11526-1 (Pathology study)\ntitle: Histopathologischer Befundbericht\nauthor: PathologyLabOrganization\nsection.entry → CoreNeedleBiopsyReport\nevent.detail → ServiceRequest" as COMP #C6EFCE
+
+COMP --> DR : section.entry
+
+' ====================================================================
+' Bundle
+' ====================================================================
+rectangle "**Bundle**\nCoreNeedleBiopsyDocument\n────────────────────\ntype: document\nidentifier: E_25_001\ntimestamp: 2025-01-17\n\nentry[0]: Composition\nentry[1]: Patient\nentry[2]: Organization\nentry[3..4]: Practitioners\nentry[5]: Encounter\nentry[6]: Condition\nentry[7]: ServiceRequest\nentry[8]: ImagingReport\nentry[9]: DiagnosticReport\nentry[10..22]: Specimens\nentry[23..27]: Macroscopy\nentry[28..45]: DiagConclusion\nentry[46]: QuestionnaireResponse" as BUNDLE #EEEEEE
+
+BUNDLE --> COMP : entry[0]
+
+' ====================================================================
+' QuestionnaireResponse
+' ====================================================================
+rectangle "**QuestionnaireResponse**\nQuestionnaireResponseCoreNeedleBiopsy\n────────────\nQuestionnaire: Core-Needle-Biopsy\n(whole case)" as QR #FFF2CC
+
+MOBS  --> QR : derivedFrom
+DCOBS --> QR : derivedFrom
+
+' ====================================================================
+' Layout ordering
+' ====================================================================
+SR       -[hidden]right-> COL_SPEC
+COL_SPEC -[hidden]right-> MACG
+MACG     -[hidden]right-> DCG
+
+@enduml

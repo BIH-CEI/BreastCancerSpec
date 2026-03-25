@@ -1,0 +1,142 @@
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "IntegratedReport",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2026.0.0"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport IntegratedReport</b></p><a name=\"IntegratedReport\"> </a><a name=\"hcIntegratedReport\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report\">MII PR Patho Reportversion: null2026.0.0)</a></p></div><h2><span title=\"Codes:{http://loinc.org 60568-3}\">Pathology Synoptic report</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 SP}\">Surgical Pathology</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</td></tr><tr><td>When For</td><td>2025-02-10 14:00:00+0100</td></tr><tr><td>Reported</td><td>2025-02-10 17:00:00+0100</td></tr><tr><td>Performer</td><td> <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></td></tr><tr><td>Identifier</td><td> Accession ID/E_25_300</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-IntegratedMacroscopicGrouper.html\"><span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></a></td><td/><td>Final</td><td>2025-02-06 08:30:00+0100</td></tr><tr><td><a href=\"Observation-IntegratedDiagnosticConclusionGrouper.html\"><span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></a></td><td/><td>Final</td><td>2025-02-10</td></tr></table><p>Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c pN1mi(sn), Nottingham Grad 2 (Score 6: Tubuli 3, Kernpleomorphie 2, Mitosen 1). Begleitendes DCIS, intermediärer Kerngrad, kribriform, fokale Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine LVI. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%. SLN 1/2 befallen (Mikrometastase 1,2 mm in SLN #1), keine extranodale Infiltration.</p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "ACSN",
+        "display" : "Accession ID"
+      }]
+    },
+    "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+    "value" : "E_25_300"
+  }],
+  "basedOn" : [{
+    "reference" : "ServiceRequest/IntegratedReportRequest"
+  }],
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "SP",
+      "display" : "Surgical Pathology"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "60568-3",
+      "display" : "Pathology Synoptic report"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "effectiveDateTime" : "2025-02-10T14:00:00+01:00",
+  "issued" : "2025-02-10T17:00:00+01:00",
+  "performer" : [{
+    "reference" : "Practitioner/PathologistPractitioner"
+  }],
+  "specimen" : [{
+    "reference" : "Specimen/IntegratedBETSpecimenPart"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSpecimenBlock01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSpecimenBlock02"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSpecimenBlock03"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSpecimenBlock04"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSpecimenBlock05"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSpecimenBlock06"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideHE01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideHE02"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideER01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlidePR01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideHER2IHC01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideKi67-01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideCK18-01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlidep40-01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideECad-01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideBlock02-HE01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideBlock02-HE02"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideRR-Superior-HE01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideRR-Inferior-HE01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideRR-Medial-HE01"
+  },
+  {
+    "reference" : "Specimen/IntegratedBETSlideRR-Lateral-HE01"
+  },
+  {
+    "reference" : "Specimen/IntegratedSLNSpecimenPart"
+  },
+  {
+    "reference" : "Specimen/IntegratedSLNSpecimenBlock01"
+  },
+  {
+    "reference" : "Specimen/IntegratedSLNSpecimenBlock02"
+  },
+  {
+    "reference" : "Specimen/IntegratedSLNSlideHE01"
+  },
+  {
+    "reference" : "Specimen/IntegratedSLNSlideHE02"
+  },
+  {
+    "reference" : "Specimen/IntegratedSLNSlideHE03"
+  },
+  {
+    "reference" : "Specimen/IntegratedSLNSlideHE04"
+  }],
+  "result" : [{
+    "reference" : "Observation/IntegratedMacroscopicGrouper"
+  },
+  {
+    "reference" : "Observation/IntegratedDiagnosticConclusionGrouper"
+  }],
+  "conclusion" : "Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c pN1mi(sn), Nottingham Grad 2 (Score 6: Tubuli 3, Kernpleomorphie 2, Mitosen 1). Begleitendes DCIS, intermediärer Kerngrad, kribriform, fokale Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine LVI. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%. SLN 1/2 befallen (Mikrometastase 1,2 mm in SLN #1), keine extranodale Infiltration."
+}

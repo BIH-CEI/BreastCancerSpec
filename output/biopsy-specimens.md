@@ -5,7 +5,7 @@
 
 ## Core Needle Biopsy — Specimens
 
-The core needle biopsy comprises **15 specimen instances** in a three-level hierarchy: part → paraffin block → slide.
+The core needle biopsy comprises **17 specimen instances** in a three-level hierarchy: part → paraffin block → slide.
 
 ### Part
 
@@ -40,6 +40,8 @@ The core needle biopsy comprises **15 specimen instances** in a three-level hier
 | [CoreNeedleBiopsySpecimenSlidePR02](Specimen-CoreNeedleBiopsySpecimenSlidePR02.md) | PR IHC | Progesterone receptor immunohistochemistry, slide 2 |
 | [CoreNeedleBiopsySpecimenSlideHER2-01](Specimen-CoreNeedleBiopsySpecimenSlideHER2-01.md) | HER2 B-DISH | HER2 bright-field dual in situ hybridisation, slide 1 |
 | [CoreNeedleBiopsySpecimenSlideHER2-02](Specimen-CoreNeedleBiopsySpecimenSlideHER2-02.md) | HER2 B-DISH | HER2 bright-field dual in situ hybridisation, slide 2 |
+| [CoreNeedleBiopsySpecimenSlideHER2IHC-01](Specimen-CoreNeedleBiopsySpecimenSlideHER2IHC-01.md) | HER2 IHC | HER2 immunohistochemistry, slide 1 |
+| [CoreNeedleBiopsySpecimenSlideHER2IHC-02](Specimen-CoreNeedleBiopsySpecimenSlideHER2IHC-02.md) | HER2 IHC | HER2 immunohistochemistry, slide 2 |
 | [CoreNeedleBiopsySpecimenSlideKi67-01](Specimen-CoreNeedleBiopsySpecimenSlideKi67-01.md) | Ki-67 IHC | Ki-67 immunohistochemistry, slide 1 |
 | [CoreNeedleBiopsySpecimenSlideKi67-02](Specimen-CoreNeedleBiopsySpecimenSlideKi67-02.md) | Ki-67 IHC | Ki-67 immunohistochemistry, slide 2 |
 

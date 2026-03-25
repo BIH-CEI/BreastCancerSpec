@@ -167,6 +167,31 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Integrierter Bericht (BET + SLN)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="integrated-report.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-IntegratedReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-IntegratedMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-IntegratedDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-IntegratedReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-IntegratedComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="document-viewer.html">Befund-Viewer</a>
   </li>
@@ -236,7 +261,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2026-03-18
+            as of 2026-03-25
           
         
       </td>
@@ -263,6 +288,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#structure-of-the-scenarios" id="markdown-toc-structure-of-the-scenarios">Structure of the Scenarios</a></li>
   <li><a href="#scope" id="markdown-toc-scope">Scope</a></li>
   <li><a href="#dependencies" id="markdown-toc-dependencies">Dependencies</a></li>
 </ul>
@@ -272,18 +298,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>This Implementation Guide (IG) provides FHIR-based examples for structured breast cancer pathology reporting, based on the <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report">MII Kerndatensatz Pathologie</a> profiles.</p>
 
-<p>Currently available report type:</p>
+<h3 id="structure-of-the-scenarios">Structure of the Scenarios</h3>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<div>
+    <figure class="figure">
+    <figcaption class="figure-caption"><strong></strong></figcaption>
+      <img src="coreneedlebiopsy-structure.png" class="figure-img img-responsive img-rounded center-block" alt="coreneedlebiopsy-structure.png" />
+    </figure>
+    
+    <p></p>
+    </div>
+
+<p>The diagram above uses the Core Needle Biopsy scenario as a representative example. The other scenarios (Breast Resection, LN-Report) follow an analogous structure, differing primarily in the number and type of specimens, the applicable microscopic findings, and the diagnostic conclusion observations.</p>
+
+<p>Currently available report types:</p>
 
 <ol>
   <li><strong>Stanzbiopsie</strong> – Core needle biopsy report (Stanz-/Vakuumbiopsie)</li>
+  <li><strong>OP-Präparat (BET)</strong> – Breast-conserving excision specimen report</li>
+  <li><strong>SLN-Biopsie Axilla</strong> – Sentinel lymph node biopsy report (standalone, ICCR-oriented)</li>
+  <li><strong>Integrierter Bericht (BET + SLN)</strong> – Combined breast excision and sentinel lymph node biopsy report under a single accession number, reflecting standard German clinical practice (see <a href="integrated-report.html">Integrated Report</a>)</li>
 </ol>
-
-<p>Further report types are planned:</p>
-
-<ul>
-  <li><strong>OP-Präparate</strong> – Surgical specimen reports (resections)</li>
-  <li><strong>Axilläre Lymphknotenpräparate</strong> – Axillary lymph node specimen reports</li>
-</ul>
 
 <p>Each report type includes a complete set of FHIR resources: ServiceRequest, Encounter, Condition, Specimen hierarchy, macroscopic and diagnostic conclusion observations, DiagnosticReport, Composition, Document Bundle, and QuestionnaireResponse.</p>
 
@@ -319,7 +356,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 14:36+0100">2026-03-18</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 16:00+0100">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

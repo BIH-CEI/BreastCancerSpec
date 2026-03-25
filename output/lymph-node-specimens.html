@@ -167,6 +167,31 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Integrierter Bericht (BET + SLN)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="integrated-report.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-IntegratedReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-IntegratedMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-IntegratedDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-IntegratedReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-IntegratedComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="document-viewer.html">Befund-Viewer</a>
   </li>
@@ -226,11 +251,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#part" id="markdown-toc-part">Part</a></li>
   <li><a href="#paraffin-blocks" id="markdown-toc-paraffin-blocks">Paraffin Blocks</a></li>
   <li><a href="#slides" id="markdown-toc-slides">Slides</a></li>
-  <li><a href="#specimen-hierarchy" id="markdown-toc-specimen-hierarchy">Specimen Hierarchy</a></li>
-  <li><a href="#clinical-scenario" id="markdown-toc-clinical-scenario">Clinical Scenario</a></li>
 </ul>
 
 </div>
+<p>This example follows the <strong>ICCR-oriented model</strong>, where the sentinel lymph node biopsy is reported as a standalone document. In German clinical practice, the SLN report is usually integrated into the breast specimen report under a single accession number (see <a href="clinical-context.html#lymph-node-reporting-iccr-model-vs-german-clinical-practice">Clinical Context — Lymph node reporting</a> for details on both approaches). An integrated report example combining both breast and lymph node findings is available under <a href="integrated-report.html">Integrated Report (BET + SLN)</a>.</p>
+
 <p>The sentinel lymph node biopsy specimen comprises <strong>7 specimen instances</strong> in a three-level hierarchy: part → paraffin blocks → slides. No immunohistochemistry is performed on the lymph node specimen (biomarkers are determined on the primary tumour).</p>
 
 <h3 id="part">Part</h3>
@@ -315,26 +340,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<h3 id="specimen-hierarchy">Specimen Hierarchy</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LymphNodeSpecimenPart (Sentinel LN excision)
-├── LymphNodeSpecimenBlock01 (SLN #1)
-│   ├── LymphNodeSpecimenSlideHE01 (H&amp;E, level 1)
-│   └── LymphNodeSpecimenSlideHE02 (H&amp;E, level 2)
-└── LymphNodeSpecimenBlock02 (SLN #2)
-    ├── LymphNodeSpecimenSlideHE03 (H&amp;E, level 1)
-    └── LymphNodeSpecimenSlideHE04 (H&amp;E, level 2)
-</code></pre></div></div>
-
-<h3 id="clinical-scenario">Clinical Scenario</h3>
-
-<ul>
-  <li><strong>Procedure</strong>: Sentinel lymph node biopsy, left axilla, during breast-conserving surgery</li>
-  <li><strong>Findings</strong>: 2 SLN examined; SLN #1 with micrometastasis (1.2 mm in subcapsular sinus), SLN #2 tumour-free</li>
-  <li><strong>Extranodal extension</strong>: Absent</li>
-  <li><strong>Staging</strong>: pN1mi(sn)</li>
-</ul>
-
 
 
 
@@ -354,7 +359,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 14:36+0100">2026-03-18</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 16:00+0100">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -32,6 +32,8 @@ pages:
     title: Breast Resection — Specimens
   lymph-node-specimens.md:
     title: Lymph Node Specimen — Specimens
+  integrated-report.md:
+    title: Integrated Report (BET + SLN)
   document-viewer.xml:
     title: Befund-Viewer
 
@@ -60,6 +62,13 @@ menu:
     DiagnosticConclusionGrouper: Observation-LymphNodeDiagnosticConclusionGrouper.html
     DiagnosticReport: DiagnosticReport-LymphNodeReport.html
     Composition: Composition-LymphNodeComposition.html
+  Integrierter Bericht (BET + SLN):
+    Specimens: integrated-report.html
+    ServiceRequest: ServiceRequest-IntegratedReportRequest.html
+    MacroscopyGrouper: Observation-IntegratedMacroscopicGrouper.html
+    DiagnosticConclusionGrouper: Observation-IntegratedDiagnosticConclusionGrouper.html
+    DiagnosticReport: DiagnosticReport-IntegratedReport.html
+    Composition: Composition-IntegratedComposition.html
   Befund-Viewer: document-viewer.html
   Artifacts: artifacts.html
 

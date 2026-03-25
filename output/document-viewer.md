@@ -13,6 +13,7 @@ Laden Sie ein FHIR Document Bundle (JSON) um den menschenlesbaren Befund anzuzei
 Stanzbiopsie Mamma
 OP-Präparat BET Mamma
 SLN-Biopsie Axilla
+Integrierter Bericht (BET + SLN)
 oder
 
 **Noch kein Dokument geladen.**

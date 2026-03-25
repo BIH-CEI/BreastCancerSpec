@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="IntegratedPriorTherapy"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation IntegratedPriorTherapy</b></p><a name="IntegratedPriorTherapy"> </a><a name="hcIntegratedPriorTherapy"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 81167-9}">Vorchirurgische Therapie bei invasivem Karzinom</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 373067005}">Keine neoadjuvante Therapie</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="81167-9"/>
+      <display value="Cancer treatment --preoperative"/>
+    </coding>
+    <text value="Vorchirurgische Therapie bei invasivem Karzinom"/>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="373067005"/>
+      <display value="No (qualifier value)"/>
+    </coding>
+    <text value="Keine neoadjuvante Therapie"/>
+  </valueCodeableConcept>
+</Observation>

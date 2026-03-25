@@ -41,8 +41,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8"}
-    h3,h4,h5,h6{--heading-prefix:"8.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -167,6 +167,31 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Integrierter Bericht (BET + SLN)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="integrated-report.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-IntegratedReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-IntegratedMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-IntegratedDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-IntegratedReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-IntegratedComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="document-viewer.html">Befund-Viewer</a>
   </li>
@@ -233,6 +258,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroDistanceNipple.html"
+                  title="Observation/IntegratedMacroDistanceNipple">Abstand von Mamille (integriert)</a>
+            </td>
+            <td>
+<p>Abstand des Tumors von der Mamille</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionMacroDistanceNipple.html"
                   title="Observation/BreastResectionMacroDistanceNipple">Abstand von Mamille BET</a>
             </td>
@@ -247,6 +281,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Art des anhängenden Gewebes am Präparat</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedAttachedTissue.html"
+                  title="Observation/IntegratedAttachedTissue">Anhängendes Gewebe - BET</a>
+            </td>
+            <td>
+<p>Art des anhängenden Gewebes am Präparat</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroBlockCount.html"
+                  title="Observation/IntegratedMacroBlockCount">Anzahl Paraffinblöcke (integriert)</a>
+            </td>
+            <td>
+<p>Anzahl der angefertigten Paraffinblöcke</p>
 </td>
          </tr>
          <tr>
@@ -278,11 +330,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedNonSLNPositive.html"
+                  title="Observation/IntegratedNonSLNPositive">Anzahl befallener Non-SLN</a>
+            </td>
+            <td>
+<p>Anzahl der befallenen (nicht-Sentinel) axillären Lymphknoten: 0</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeNonSLNPositive.html"
                   title="Observation/LymphNodeNonSLNPositive">Anzahl befallener Non-SLN</a>
             </td>
             <td>
 <p>Anzahl der befallenen (nicht-Sentinel) axillären Lymphknoten: 0</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedSLNPositive.html"
+                  title="Observation/IntegratedSLNPositive">Anzahl befallener SLN</a>
+            </td>
+            <td>
+<p>Anzahl der befallenen Sentinel-Lymphknoten: 1</p>
 </td>
          </tr>
          <tr>
@@ -296,11 +366,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedNonSLNExamined.html"
+                  title="Observation/IntegratedNonSLNExamined">Anzahl untersuchter Non-SLN</a>
+            </td>
+            <td>
+<p>Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeNonSLNExamined.html"
                   title="Observation/LymphNodeNonSLNExamined">Anzahl untersuchter Non-SLN</a>
             </td>
             <td>
 <p>Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedSLNExamined.html"
+                  title="Observation/IntegratedSLNExamined">Anzahl untersuchter SLN</a>
+            </td>
+            <td>
+<p>Anzahl der untersuchten Sentinel-Lymphknoten: 2</p>
 </td>
          </tr>
          <tr>
@@ -323,11 +411,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedAssociatedDCIS.html"
+                  title="Observation/IntegratedAssociatedDCIS">Assoziiertes DCIS - BET</a>
+            </td>
+            <td>
+<p>Vorhandensein eines assoziierten DCIS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-CoreNeedleBiopsyBClassification.html"
                   title="Observation/CoreNeedleBiopsyBClassification">B-Klassifikation - Stanzbiopsie</a>
             </td>
             <td>
 <p>B-Classification according to NHSBSP</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-IntegratedReportRequest.html"
+                  title="ServiceRequest/IntegratedReportRequest">BET + SLN Anforderung (integriert)</a>
+            </td>
+            <td>
+<p>Anforderung für pathologische Aufarbeitung des BET-Exzisionspräparats und SLN-Exzisats</p>
 </td>
          </tr>
          <tr>
@@ -359,8 +465,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSpecimenPart.html"
+                  title="Specimen/IntegratedBETSpecimenPart">BET-Exzisionspräparat (integriert)</a>
+            </td>
+            <td>
+<p>BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 42x35x18mm, 10g</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionSpecimenMarking.html"
                   title="Observation/BreastResectionSpecimenMarking">Befundmarkierung</a>
+            </td>
+            <td>
+<p>Art der Befundmarkierung am Präparat</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedSpecimenMarking.html"
+                  title="Observation/IntegratedSpecimenMarking">Befundmarkierung (integriert)</a>
             </td>
             <td>
 <p>Art der Befundmarkierung am Präparat</p>
@@ -386,6 +510,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedCancerHistory.html"
+                  title="Observation/IntegratedCancerHistory">Brustkrebsvorgeschichte (integriert)</a>
+            </td>
+            <td>
+<p>Anamnese hinsichtlich Brustkrebsvorgeschichte</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-IntegratedSubstanceCK18.html"
+                  title="Substance/IntegratedSubstanceCK18">CK-18-IHC Reagenz (integriert)</a>
+            </td>
+            <td>
+<p>Zytokeratin 18 Antikörper für Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Substance-BreastResectionSubstanceCK18.html"
                   title="Substance/BreastResectionSubstanceCK18">CK-18-IHC Reagenz BET</a>
             </td>
@@ -404,8 +546,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideCK18-01.html"
+                  title="Specimen/IntegratedBETSlideCK18-01">CK18-IHC Schnitt BET (integriert)</a>
+            </td>
+            <td>
+<p>Schnitt für Zytokeratin 18 Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionDCISArchitecture.html"
                   title="Observation/BreastResectionDCISArchitecture">DCIS Architektur - BET</a>
+            </td>
+            <td>
+<p>Wachstumsmuster des assoziierten DCIS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedDCISArchitecture.html"
+                  title="Observation/IntegratedDCISArchitecture">DCIS Architektur - BET</a>
             </td>
             <td>
 <p>Wachstumsmuster des assoziierten DCIS</p>
@@ -422,8 +582,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedDCISGrade.html"
+                  title="Observation/IntegratedDCISGrade">DCIS Kerngrading - BET</a>
+            </td>
+            <td>
+<p>Kerngrading des assoziierten DCIS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionDCISNecrosis.html"
                   title="Observation/BreastResectionDCISNecrosis">DCIS Nekrosen - BET</a>
+            </td>
+            <td>
+<p>Nekrosen im DCIS-Areal</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedDCISNecrosis.html"
+                  title="Observation/IntegratedDCISNecrosis">DCIS Nekrosen - BET</a>
             </td>
             <td>
 <p>Nekrosen im DCIS-Areal</p>
@@ -436,6 +614,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Grouper for all diagnostic conclusion findings in breast resection</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedDiagnosticConclusionGrouper.html"
+                  title="Observation/IntegratedDiagnosticConclusionGrouper">Diagnostic Conclusion Grouper - Integrated BET + SLN</a>
+            </td>
+            <td>
+<p>Grouper for all diagnostic conclusion findings in integrated breast resection and sentinel lymph node report</p>
 </td>
          </tr>
          <tr>
@@ -467,6 +654,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Bundle-IntegratedDocument.html" title="Bundle/IntegratedDocument">Document Bundle - Integrierter Bericht (BET + SLN)</a>
+            </td>
+            <td>
+<p>FHIR Document Bundle für den integrierten Befundbericht BET Mamma links mit SLN-Biopsie Axilla</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Bundle-LymphNodeDocument.html" title="Bundle/LymphNodeDocument">Document Bundle - SLN-Biopsie Axilla</a>
             </td>
             <td>
@@ -480,6 +675,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-IntegratedSubstanceECadherin.html"
+                  title="Substance/IntegratedSubstanceECadherin">E-Cadherin-IHC Reagenz (integriert)</a>
+            </td>
+            <td>
+<p>E-Cadherin-Antikörper für Immunhistochemie</p>
 </td>
          </tr>
          <tr>
@@ -502,11 +706,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideECad-01.html"
+                  title="Specimen/IntegratedBETSlideECad-01">E-Cadherin-IHC Schnitt BET (integriert)</a>
+            </td>
+            <td>
+<p>Schnitt für E-Cadherin-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionERIntensity.html"
                   title="Observation/BreastResectionERIntensity">ER Färbeintensität - BET</a>
             </td>
             <td>
 <p>Färbeintensität der ER-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedERIntensity.html"
+                  title="Observation/IntegratedERIntensity">ER Färbeintensität - BET</a>
+            </td>
+            <td>
+<p>Färbeintensität der ER-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-IntegratedSubstanceER.html"
+                  title="Substance/IntegratedSubstanceER">ER-IHC Reagenz (integriert)</a>
+            </td>
+            <td>
+<p>Östrogenrezeptor-Antikörper für Immunhistochemie</p>
 </td>
          </tr>
          <tr>
@@ -556,8 +787,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideER01.html"
+                  title="Specimen/IntegratedBETSlideER01">ER-IHC Schnitt BET (integriert)</a>
+            </td>
+            <td>
+<p>Schnitt für Östrogenrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionElstonEllisScore.html"
                   title="Observation/BreastResectionElstonEllisScore">Elston-Ellis Summenscore - BET</a>
+            </td>
+            <td>
+<p>Elston-Ellis summary score (3+2+1=6)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedElstonEllisScore.html"
+                  title="Observation/IntegratedElstonEllisScore">Elston-Ellis Summenscore - BET</a>
             </td>
             <td>
 <p>Elston-Ellis summary score (3+2+1=6)</p>
@@ -570,6 +819,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Stationärer Encounter für brusterhaltende Therapie im Brustzentrum</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-IntegratedEncounter.html"
+                  title="Encounter/IntegratedEncounter">Encounter für BET Mamma mit SLN-Biopsie</a>
+            </td>
+            <td>
+<p>Stationärer Encounter für brusterhaltende Therapie mit simultaner SLN-Biopsie</p>
 </td>
          </tr>
          <tr>
@@ -610,6 +868,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedExtranodalExtension.html"
+                  title="Observation/IntegratedExtranodalExtension">Extranodale Infiltration</a>
+            </td>
+            <td>
+<p>Extranodale Infiltration durch LK-Metastase: Nicht vorhanden</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeExtranodalExtension.html"
                   title="Observation/LymphNodeExtranodalExtension">Extranodale Infiltration</a>
             </td>
@@ -628,8 +895,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedFocality.html"
+                  title="Observation/IntegratedFocality">Fokalität - BET</a>
+            </td>
+            <td>
+<p>Fokalität des Tumors</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionGeneticPredisposition.html"
                   title="Observation/BreastResectionGeneticPredisposition">Genetische Prädisposition</a>
+            </td>
+            <td>
+<p>Angabe zur genetischen Prädisposition</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedGeneticPredisposition.html"
+                  title="Observation/IntegratedGeneticPredisposition">Genetische Prädisposition (integriert)</a>
             </td>
             <td>
 <p>Angabe zur genetischen Prädisposition</p>
@@ -646,11 +931,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedTotalPositive.html"
+                  title="Observation/IntegratedTotalPositive">Gesamtzahl befallener LK</a>
+            </td>
+            <td>
+<p>Gesamtzahl befallener Lymphknoten: 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeTotalPositive.html"
                   title="Observation/LymphNodeTotalPositive">Gesamtzahl befallener LK</a>
             </td>
             <td>
 <p>Gesamtzahl befallener Lymphknoten: 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedTotalExamined.html"
+                  title="Observation/IntegratedTotalExamined">Gesamtzahl untersuchter LK</a>
+            </td>
+            <td>
+<p>Gesamtzahl untersuchter Lymphknoten: 2</p>
 </td>
          </tr>
          <tr>
@@ -664,6 +967,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroWeight.html"
+                  title="Observation/IntegratedMacroWeight">Gewicht (integriert)</a>
+            </td>
+            <td>
+<p>Gewicht des BET-Exzisionspräparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionMacroWeight.html"
                   title="Observation/BreastResectionMacroWeight">Gewicht BET</a>
             </td>
@@ -673,11 +985,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedLargestMetSize.html"
+                  title="Observation/IntegratedLargestMetSize">Größte Metastasenausdehnung</a>
+            </td>
+            <td>
+<p>Ausdehnung der größten metastatischen Infiltration: 1.2 mm</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeLargestMetSize.html"
                   title="Observation/LymphNodeLargestMetSize">Größte Metastasenausdehnung</a>
             </td>
             <td>
 <p>Ausdehnung der größten metastatischen Infiltration: 1.2 mm</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideBlock02-HE01.html"
+                  title="Specimen/IntegratedBETSlideBlock02-HE01">HE-Schnitt 01 BET - Block02 (integriert)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt Scheibe V, Schnittstufe 1</p>
 </td>
          </tr>
          <tr>
@@ -700,8 +1030,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideHE01.html"
+                  title="Specimen/IntegratedBETSlideHE01">HE-Schnitt 01 BET - Tumor (integriert)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Specimen-LymphNodeSpecimenSlideHE01.html"
                   title="Specimen/LymphNodeSpecimenSlideHE01">HE-Schnitt 01 SLN #1 (Schnittstufe 1)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des SLN #1, Schnittstufe 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedSLNSlideHE01.html"
+                  title="Specimen/IntegratedSLNSlideHE01">HE-Schnitt 01 SLN #1 (integriert)</a>
             </td>
             <td>
 <p>HE-gefärbter Schnitt des SLN #1, Schnittstufe 1</p>
@@ -714,6 +1062,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideBlock02-HE02.html"
+                  title="Specimen/IntegratedBETSlideBlock02-HE02">HE-Schnitt 02 BET - Block02 (integriert)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt Scheibe V, Schnittstufe 2</p>
 </td>
          </tr>
          <tr>
@@ -736,8 +1093,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideHE02.html"
+                  title="Specimen/IntegratedBETSlideHE02">HE-Schnitt 02 BET - Tumor (integriert)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Specimen-LymphNodeSpecimenSlideHE02.html"
                   title="Specimen/LymphNodeSpecimenSlideHE02">HE-Schnitt 02 SLN #1 (Schnittstufe 2)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des SLN #1, Schnittstufe 2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedSLNSlideHE02.html"
+                  title="Specimen/IntegratedSLNSlideHE02">HE-Schnitt 02 SLN #1 (integriert)</a>
             </td>
             <td>
 <p>HE-gefärbter Schnitt des SLN #1, Schnittstufe 2</p>
@@ -763,6 +1138,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedSLNSlideHE03.html"
+                  title="Specimen/IntegratedSLNSlideHE03">HE-Schnitt 03 SLN #2 (integriert)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des SLN #2, Schnittstufe 1</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Specimen-CoreNeedleBiopsySpecimenSlideHE03.html"
                   title="Specimen/CoreNeedleBiopsySpecimenSlideHE03">HE-Schnitt 03 Stanzbiopsie</a>
             </td>
@@ -774,6 +1158,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <td style="column-width:30%">
                <a href="Specimen-LymphNodeSpecimenSlideHE04.html"
                   title="Specimen/LymphNodeSpecimenSlideHE04">HE-Schnitt 04 SLN #2 (Schnittstufe 2)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt des SLN #2, Schnittstufe 2</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedSLNSlideHE04.html"
+                  title="Specimen/IntegratedSLNSlideHE04">HE-Schnitt 04 SLN #2 (integriert)</a>
             </td>
             <td>
 <p>HE-gefärbter Schnitt des SLN #2, Schnittstufe 2</p>
@@ -826,6 +1219,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideRR-Inferior-HE01.html"
+                  title="Specimen/IntegratedBETSlideRR-Inferior-HE01">HE-Schnitt RR inferior BET (integriert)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt Resektionsrand inferior</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideRR-Lateral-HE01.html"
+                  title="Specimen/IntegratedBETSlideRR-Lateral-HE01">HE-Schnitt RR lateral BET (integriert)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt Resektionsrand lateral</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideRR-Medial-HE01.html"
+                  title="Specimen/IntegratedBETSlideRR-Medial-HE01">HE-Schnitt RR medial BET (integriert)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt Resektionsrand medial</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideRR-Superior-HE01.html"
+                  title="Specimen/IntegratedBETSlideRR-Superior-HE01">HE-Schnitt RR superior BET (integriert)</a>
+            </td>
+            <td>
+<p>HE-gefärbter Schnitt Resektionsrand superior</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionHER2ISH.html"
                   title="Observation/BreastResectionHER2ISH">HER2 Amplifikation (ISH) - BET</a>
             </td>
@@ -835,8 +1264,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedHER2ISH.html"
+                  title="Observation/IntegratedHER2ISH">HER2 Amplifikation (ISH) - BET</a>
+            </td>
+            <td>
+<p>HER2-Amplifikationsstatus per In-situ-Hybridisierung</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionHER2Overall.html"
                   title="Observation/BreastResectionHER2Overall">HER2 Gesamtstatus - BET</a>
+            </td>
+            <td>
+<p>HER2-Gesamtstatus basierend auf IHC und ISH</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedHER2Overall.html"
+                  title="Observation/IntegratedHER2Overall">HER2 Gesamtstatus - BET</a>
             </td>
             <td>
 <p>HER2-Gesamtstatus basierend auf IHC und ISH</p>
@@ -876,6 +1323,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-IntegratedSubstanceHER2IHC.html"
+                  title="Substance/IntegratedSubstanceHER2IHC">HER2-IHC Reagenz (integriert)</a>
+            </td>
+            <td>
+<p>HER2-Antikörper für Immunhistochemie</p>
 </td>
          </tr>
          <tr>
@@ -925,8 +1381,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideHER2IHC01.html"
+                  title="Specimen/IntegratedBETSlideHER2IHC01">HER2-IHC Schnitt BET (integriert)</a>
+            </td>
+            <td>
+<p>Schnitt für HER2-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionHER2IHC.html"
                   title="Observation/BreastResectionHER2IHC">HER2-Score (IHC) - BET</a>
+            </td>
+            <td>
+<p>HER2-Score per Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedHER2IHC.html"
+                  title="Observation/IntegratedHER2IHC">HER2-Score (IHC) - BET</a>
             </td>
             <td>
 <p>HER2-Score per Immunhistochemie</p>
@@ -952,6 +1426,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedHistologicalType.html"
+                  title="Observation/IntegratedHistologicalType">Histologischer Tumortyp - BET</a>
+            </td>
+            <td>
+<p>Histologischer Typ nach WHO/ICD-O-3</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedITCCount.html"
+                  title="Observation/IntegratedITCCount">ITC-befallene LK</a>
+            </td>
+            <td>
+<p>Gesamtzahl ausschließlich ITC-befallener Lymphknoten: 0</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeITCCount.html"
                   title="Observation/LymphNodeITCCount">ITC-befallene LK</a>
             </td>
@@ -961,8 +1453,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Composition-IntegratedComposition.html"
+                  title="Composition/IntegratedComposition">Integrierter Befundbericht BET + SLN Composition</a>
+            </td>
+            <td>
+<p>FHIR Composition für den integrierten Befundbericht BET Mamma links mit SLN-Biopsie Axilla</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionInvasiveCarcinoma.html"
                   title="Observation/BreastResectionInvasiveCarcinoma">Invasives Karzinom - BET</a>
+            </td>
+            <td>
+<p>Vorhandensein eines invasiven Karzinoms</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedInvasiveCarcinoma.html"
+                  title="Observation/IntegratedInvasiveCarcinoma">Invasives Karzinom - BET</a>
             </td>
             <td>
 <p>Vorhandensein eines invasiven Karzinoms</p>
@@ -979,8 +1489,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedNuclearPleomorphism.html"
+                  title="Observation/IntegratedNuclearPleomorphism">Kernpleomorphie-Score - BET</a>
+            </td>
+            <td>
+<p>Nuclear pleomorphism score by Nottingham</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionKi67.html"
                   title="Observation/BreastResectionKi67">Ki-67 Index - BET</a>
+            </td>
+            <td>
+<p>Ki-67 Proliferationsindex</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedKi67.html"
+                  title="Observation/IntegratedKi67">Ki-67 Index - BET</a>
             </td>
             <td>
 <p>Ki-67 Proliferationsindex</p>
@@ -993,6 +1521,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Ki-67 proliferation index</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-IntegratedSubstanceKi67.html"
+                  title="Substance/IntegratedSubstanceKi67">Ki-67-IHC Reagenz (integriert)</a>
+            </td>
+            <td>
+<p>Ki-67-Antikörper für Immunhistochemie</p>
 </td>
          </tr>
          <tr>
@@ -1011,6 +1548,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Ki-67-Antikörper für Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlideKi67-01.html"
+                  title="Specimen/IntegratedBETSlideKi67-01">Ki-67-IHC Schnitt BET (integriert)</a>
+            </td>
+            <td>
+<p>Schnitt für Ki-67-Immunhistochemie</p>
 </td>
          </tr>
          <tr>
@@ -1051,11 +1597,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedBETComment.html"
+                  title="Observation/IntegratedBETComment">Kommentar - BET</a>
+            </td>
+            <td>
+<p>Freitextkommentar zum Befund</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedSLNComment.html"
+                  title="Observation/IntegratedSLNComment">Kommentar - SLN</a>
+            </td>
+            <td>
+<p>Kommentar zum SLN-Befund</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeComment.html"
                   title="Observation/LymphNodeComment">Kommentar - SLN</a>
             </td>
             <td>
 <p>Kommentar zum SLN-Befund</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedLymphNodeProcedure.html"
+                  title="Observation/IntegratedLymphNodeProcedure">LK OP Prozedur - SLN</a>
+            </td>
+            <td>
+<p>Art der Lymphknoten-Operation: Sentinel-Lymphknoten-Biopsie</p>
 </td>
          </tr>
          <tr>
@@ -1078,11 +1651,37 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedLVI.html" title="Observation/IntegratedLVI">Lymphgefäßinvasion - BET</a>
+            </td>
+            <td>
+<p>Lymphovaskuläre Invasion</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroMetCount.html"
+                  title="Observation/IntegratedMacroMetCount">Makrometastatisch befallene LK</a>
+            </td>
+            <td>
+<p>Gesamtzahl makrometastatisch befallener Lymphknoten: 0</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeMacroMetCount.html"
                   title="Observation/LymphNodeMacroMetCount">Makrometastatisch befallene LK</a>
             </td>
             <td>
 <p>Gesamtzahl makrometastatisch befallener Lymphknoten: 0</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroscopicGrouper.html"
+                  title="Observation/IntegratedMacroscopicGrouper">Makroskopische Befunde Grouper (integriert)</a>
+            </td>
+            <td>
+<p>Gruppierung aller makroskopischen Messungen beider Präparate (BET + SLN)</p>
 </td>
          </tr>
          <tr>
@@ -1123,6 +1722,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Condition-IntegratedDiagnosisConfirmed.html"
+                  title="Condition/IntegratedDiagnosisConfirmed">Mammakarzinom-Diagnose (integrierter Bericht)</a>
+            </td>
+            <td>
+<p>Bestätigte Diagnose eines invasiven Mammakarzinoms, Indikation zur BET mit SLN-Biopsie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Condition-CoreNeedleBiopsyDiagnosisPreOp.html"
                   title="Condition/CoreNeedleBiopsyDiagnosisPreOp">Mammakarzinom-Diagnose Stanzbiopsie</a>
             </td>
@@ -1150,6 +1758,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="DiagnosticReport-IntegratedImagingReport.html"
+                  title="DiagnosticReport/IntegratedImagingReport">Mammografie/Ultraschall-Befund (integriert)</a>
+            </td>
+            <td>
+<p>Bildgebungsbefund als SupportingInfo für den integrierten Bericht</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="DiagnosticReport-BreastResectionImagingReport.html"
                   title="DiagnosticReport/BreastResectionImagingReport">Mammografie/Ultraschall-Befund BET</a>
             </td>
@@ -1168,8 +1785,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMaterialType.html"
+                  title="Observation/IntegratedMaterialType">Materialart - BET</a>
+            </td>
+            <td>
+<p>Art des eingesendeten Materials</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionMaxDiameterInvasive.html"
                   title="Observation/BreastResectionMaxDiameterInvasive">Max Durchmesser invasiv - BET</a>
+            </td>
+            <td>
+<p>Maximaler Durchmesser der invasiven Komponente</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMaxDiameterInvasive.html"
+                  title="Observation/IntegratedMaxDiameterInvasive">Max Durchmesser invasiv - BET</a>
             </td>
             <td>
 <p>Maximaler Durchmesser der invasiven Komponente</p>
@@ -1186,11 +1821,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMaxOverallDiameter.html"
+                  title="Observation/IntegratedMaxOverallDiameter">Max Gesamtdurchmesser - BET</a>
+            </td>
+            <td>
+<p>Maximaler Gesamtdurchmesser des Tumors inkl. DCIS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionMicrocalcification.html"
                   title="Observation/BreastResectionMicrocalcification">Mikrokalzifikationen - BET</a>
             </td>
             <td>
 <p>Vorhandensein von Mikrokalzifikationen</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMicrocalcification.html"
+                  title="Observation/IntegratedMicrocalcification">Mikrokalzifikationen - BET</a>
+            </td>
+            <td>
+<p>Vorhandensein von Mikrokalzifikationen</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMicroMetCount.html"
+                  title="Observation/IntegratedMicroMetCount">Mikrometastatisch befallene LK</a>
+            </td>
+            <td>
+<p>Gesamtzahl mikrometastatisch befallener Lymphknoten: 1</p>
 </td>
          </tr>
          <tr>
@@ -1222,8 +1884,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMinDistanceInvasive.html"
+                  title="Observation/IntegratedMinDistanceInvasive">Mindestabstand invasiv - BET</a>
+            </td>
+            <td>
+<p>Mindestabstand der invasiven Komponente zum Resektionsrand</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionMinDistanceNonInvasive.html"
                   title="Observation/BreastResectionMinDistanceNonInvasive">Mindestabstand nichtinvasiv - BET</a>
+            </td>
+            <td>
+<p>Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMinDistanceNonInvasive.html"
+                  title="Observation/IntegratedMinDistanceNonInvasive">Mindestabstand nichtinvasiv - BET</a>
             </td>
             <td>
 <p>Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand</p>
@@ -1240,8 +1920,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMitoticRateScore.html"
+                  title="Observation/IntegratedMitoticRateScore">Mitoserate-Score - BET</a>
+            </td>
+            <td>
+<p>Mitotic rate score by Nottingham</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionMitosisCount.html"
                   title="Observation/BreastResectionMitosisCount">Mitosezahl - BET</a>
+            </td>
+            <td>
+<p>Absolute Mitosezahl pro 10 HPF</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMitosisCount.html"
+                  title="Observation/IntegratedMitosisCount">Mitosezahl - BET</a>
             </td>
             <td>
 <p>Absolute Mitosezahl pro 10 HPF</p>
@@ -1267,6 +1965,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMorphologyFreeText.html"
+                  title="Observation/IntegratedMorphologyFreeText">Morphologie Freitext - BET</a>
+            </td>
+            <td>
+<p>Freitextbeschreibung der Tumormorphologie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-CoreNeedleBiopsyMorphologyFreeText.html"
                   title="Observation/CoreNeedleBiopsyMorphologyFreeText">Morphology Free Text - Stanzbiopsie</a>
             </td>
@@ -1278,6 +1985,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <td style="column-width:30%">
                <a href="Observation-BreastResectionNonInvasiveLesion.html"
                   title="Observation/BreastResectionNonInvasiveLesion">Nichtinvasive Läsion - BET</a>
+            </td>
+            <td>
+<p>Vorhandensein einer nichtinvasiven Läsion</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedNonInvasiveLesion.html"
+                  title="Observation/IntegratedNonInvasiveLesion">Nichtinvasive Läsion - BET</a>
             </td>
             <td>
 <p>Vorhandensein einer nichtinvasiven Läsion</p>
@@ -1312,6 +2028,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedNottinghamGrade.html"
+                  title="Observation/IntegratedNottinghamGrade">Nottingham-Grad - BET</a>
+            </td>
+            <td>
+<p>Nottingham histologic grade</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-CoreNeedleBiopsyNuclearPleomorphism.html"
                   title="Observation/CoreNeedleBiopsyNuclearPleomorphism">Nuclear Pleomorphism Score - Stanzbiopsie</a>
             </td>
@@ -1330,8 +2055,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedClosestMargin.html"
+                  title="Observation/IntegratedClosestMargin">Nächster tumorfreier Resektionsrand - BET</a>
+            </td>
+            <td>
+<p>Lokalisation des nächsten tumorfreien Resektionsrands</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionOperativeProcedure.html"
                   title="Observation/BreastResectionOperativeProcedure">Operatives Verfahren - BET</a>
+            </td>
+            <td>
+<p>Art des operativen Verfahrens</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedOperativeProcedure.html"
+                  title="Observation/IntegratedOperativeProcedure">Operatives Verfahren - BET</a>
             </td>
             <td>
 <p>Art des operativen Verfahrens</p>
@@ -1344,6 +2087,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Färbeintensität der PR-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedPRIntensity.html"
+                  title="Observation/IntegratedPRIntensity">PR Färbeintensität - BET</a>
+            </td>
+            <td>
+<p>Färbeintensität der PR-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-IntegratedSubstancePR.html"
+                  title="Substance/IntegratedSubstancePR">PR-IHC Reagenz (integriert)</a>
+            </td>
+            <td>
+<p>Progesteronrezeptor-Antikörper für Immunhistochemie</p>
 </td>
          </tr>
          <tr>
@@ -1393,6 +2154,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlidePR01.html"
+                  title="Specimen/IntegratedBETSlidePR01">PR-IHC Schnitt BET (integriert)</a>
+            </td>
+            <td>
+<p>Schnitt für Progesteronrezeptor-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSpecimenBlock01.html"
+                  title="Specimen/IntegratedBETSpecimenBlock01">Paraffinblock 01 BET - Tumor (integriert)</a>
+            </td>
+            <td>
+<p>Paraffineinbettung Tumorareal Scheibe III</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Specimen-BreastResectionSpecimenBlock01.html"
                   title="Specimen/BreastResectionSpecimenBlock01">Paraffinblock 01 BET - Tumor zentral (Scheibe III)</a>
             </td>
@@ -1411,11 +2190,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedSLNSpecimenBlock01.html"
+                  title="Specimen/IntegratedSLNSpecimenBlock01">Paraffinblock 01 SLN #1 (integriert)</a>
+            </td>
+            <td>
+<p>Paraffineinbettung SLN #1, halbiert, enthält Mikrometastase</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Specimen-CoreNeedleBiopsySpecimenBlock01.html"
                   title="Specimen/CoreNeedleBiopsySpecimenBlock01">Paraffinblock 01 Stanzbiopsie</a>
             </td>
             <td>
 <p>Paraffineinbettung der Stanzzylinder Block 01</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSpecimenBlock02.html"
+                  title="Specimen/IntegratedBETSpecimenBlock02">Paraffinblock 02 BET - Tumor (integriert)</a>
+            </td>
+            <td>
+<p>Paraffineinbettung Tumorareal Scheibe V</p>
 </td>
          </tr>
          <tr>
@@ -1438,8 +2235,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedSLNSpecimenBlock02.html"
+                  title="Specimen/IntegratedSLNSpecimenBlock02">Paraffinblock 02 SLN #2 (integriert)</a>
+            </td>
+            <td>
+<p>Paraffineinbettung SLN #2, halbiert, tumorfrei</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Specimen-BreastResectionSpecimenBlock03.html"
                   title="Specimen/BreastResectionSpecimenBlock03">Paraffinblock 03 BET - RR superior</a>
+            </td>
+            <td>
+<p>Paraffineinbettung Resektionsrand superior</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSpecimenBlock03.html"
+                  title="Specimen/IntegratedBETSpecimenBlock03">Paraffinblock 03 BET - RR superior (integriert)</a>
             </td>
             <td>
 <p>Paraffineinbettung Resektionsrand superior</p>
@@ -1456,8 +2271,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSpecimenBlock04.html"
+                  title="Specimen/IntegratedBETSpecimenBlock04">Paraffinblock 04 BET - RR inferior (integriert)</a>
+            </td>
+            <td>
+<p>Paraffineinbettung Resektionsrand inferior</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Specimen-BreastResectionSpecimenBlock05.html"
                   title="Specimen/BreastResectionSpecimenBlock05">Paraffinblock 05 BET - RR medial (Scheibe I)</a>
+            </td>
+            <td>
+<p>Paraffineinbettung Resektionsrand medial, Scheibe I</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSpecimenBlock05.html"
+                  title="Specimen/IntegratedBETSpecimenBlock05">Paraffinblock 05 BET - RR medial (integriert)</a>
             </td>
             <td>
 <p>Paraffineinbettung Resektionsrand medial, Scheibe I</p>
@@ -1470,6 +2303,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Paraffineinbettung Resektionsrand lateral, Scheibe VIII</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSpecimenBlock06.html"
+                  title="Specimen/IntegratedBETSpecimenBlock06">Paraffinblock 06 BET - RR lateral (integriert)</a>
+            </td>
+            <td>
+<p>Paraffineinbettung Resektionsrand lateral, Scheibe VIII</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-IntegratedReport.html"
+                  title="DiagnosticReport/IntegratedReport">Pathologiebericht BET + SLN (integriert)</a>
+            </td>
+            <td>
+<p>Integrierter Pathologiebericht nach BET Mamma links mit SLN-Biopsie Axilla</p>
 </td>
          </tr>
          <tr>
@@ -1536,11 +2387,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedSpecimenLimited.html"
+                  title="Observation/IntegratedSpecimenLimited">Proben limitiert auswertbar (integriert)</a>
+            </td>
+            <td>
+<p>Angabe ob die Probe limitiert auswertbar ist</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeSpecimenLimited.html"
                   title="Observation/LymphNodeSpecimenLimited">Proben limitiert auswertbar - SLN</a>
             </td>
             <td>
 <p>Angabe ob die Probe limitiert auswertbar ist</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroLength.html"
+                  title="Observation/IntegratedMacroLength">Probengröße 1 (Länge) (integriert)</a>
+            </td>
+            <td>
+<p>Maximale Länge des BET-Exzisionspräparats</p>
 </td>
          </tr>
          <tr>
@@ -1554,11 +2423,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroWidth.html"
+                  title="Observation/IntegratedMacroWidth">Probengröße 2 (Breite) (integriert)</a>
+            </td>
+            <td>
+<p>Breite des BET-Exzisionspräparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionMacroWidth.html"
                   title="Observation/BreastResectionMacroWidth">Probengröße 2 (Breite) BET</a>
             </td>
             <td>
 <p>Breite des BET-Exzisionspräparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroDepth.html"
+                  title="Observation/IntegratedMacroDepth">Probengröße 3 (Tiefe) (integriert)</a>
+            </td>
+            <td>
+<p>Tiefe des BET-Exzisionspräparats</p>
 </td>
          </tr>
          <tr>
@@ -1599,8 +2486,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedPRPercentage.html"
+                  title="Observation/IntegratedPRPercentage">Progesteronrezeptor Prozent - BET</a>
+            </td>
+            <td>
+<p>Prozentsatz PR-positiver Tumorzellkerne</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionPRStatus.html"
                   title="Observation/BreastResectionPRStatus">Progesteronrezeptor-Status - BET</a>
+            </td>
+            <td>
+<p>Progesteronrezeptor-Status per Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedPRStatus.html"
+                  title="Observation/IntegratedPRStatus">Progesteronrezeptor-Status - BET</a>
             </td>
             <td>
 <p>Progesteronrezeptor-Status per Immunhistochemie</p>
@@ -1626,11 +2531,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedSpecimenRadiographyClinical.html"
+                  title="Observation/IntegratedSpecimenRadiographyClinical">Präparateradiographie klinisch (integriert)</a>
+            </td>
+            <td>
+<p>Angabe ob eine Präparateradiographie beigelegt wurde</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionPresentationMode.html"
                   title="Observation/BreastResectionPresentationMode">Präsentationsmodus</a>
             </td>
             <td>
 <p>Präsentationsmodus des Präparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedPresentationMode.html"
+                  title="Observation/IntegratedPresentationMode">Präsentationsmodus (integriert)</a>
+            </td>
+            <td>
+<p>Präsentationsmodus des Präparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroQuadrant.html"
+                  title="Observation/IntegratedMacroQuadrant">Quadrant (integriert)</a>
+            </td>
+            <td>
+<p>Quadrantenlokalisation des Tumors</p>
 </td>
          </tr>
          <tr>
@@ -1649,6 +2581,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>QuestionnaireResponse für BET Mamma mit allen Befunden</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-IntegratedQRBreastResection.html"
+                  title="QuestionnaireResponse/IntegratedQRBreastResection">QuestionnaireResponse - BET Mamma (integriert)</a>
+            </td>
+            <td>
+<p>QuestionnaireResponse für BET Mamma im integrierten Bericht</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-IntegratedQRLymphNode.html"
+                  title="QuestionnaireResponse/IntegratedQRLymphNode">QuestionnaireResponse - SLN-Biopsie (integriert)</a>
+            </td>
+            <td>
+<p>QuestionnaireResponse für SLN-Biopsie im integrierten Bericht</p>
 </td>
          </tr>
          <tr>
@@ -1680,6 +2630,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedRadiologicalExtent.html"
+                  title="Observation/IntegratedRadiologicalExtent">Radiologische Ausdehnung (integriert)</a>
+            </td>
+            <td>
+<p>Radiologisch gemessene Ausdehnung des Tumors</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-CoreNeedleBiopsyMicrocalcification.html"
                   title="Observation/CoreNeedleBiopsyMicrocalcification">Relevante Mikroverkalkungen - Stanzbiopsie</a>
             </td>
@@ -1698,8 +2657,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMarginStatusInvasive.html"
+                  title="Observation/IntegratedMarginStatusInvasive">Resektionsrandstatus invasiv - BET</a>
+            </td>
+            <td>
+<p>Resektionsrandstatus der invasiven Komponente</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionMarginStatusNonInvasive.html"
                   title="Observation/BreastResectionMarginStatusNonInvasive">Resektionsrandstatus nichtinvasiv - BET</a>
+            </td>
+            <td>
+<p>Resektionsrandstatus der nichtinvasiven Komponente (DCIS)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMarginStatusNonInvasive.html"
+                  title="Observation/IntegratedMarginStatusNonInvasive">Resektionsrandstatus nichtinvasiv - BET</a>
             </td>
             <td>
 <p>Resektionsrandstatus der nichtinvasiven Komponente (DCIS)</p>
@@ -1716,8 +2693,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroSLN1Size.html"
+                  title="Observation/IntegratedMacroSLN1Size">SLN #1 Größe (integriert)</a>
+            </td>
+            <td>
+<p>Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeMacroSLN2Size.html"
                   title="Observation/LymphNodeMacroSLN2Size">SLN #2 Größe</a>
+            </td>
+            <td>
+<p>Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroSLN2Size.html"
+                  title="Observation/IntegratedMacroSLN2Size">SLN #2 Größe (integriert)</a>
             </td>
             <td>
 <p>Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm</p>
@@ -1752,6 +2747,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedSLNSpecimenPart.html"
+                  title="Specimen/IntegratedSLNSpecimenPart">SLN-Exzisat (integriert)</a>
+            </td>
+            <td>
+<p>Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert, Patentblau-markiert</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedLymphNodeLaterality.html"
+                  title="Observation/IntegratedLymphNodeLaterality">Seitenangabe - SLN</a>
+            </td>
+            <td>
+<p>Seitenlokalisation: Links</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodeLaterality.html"
                   title="Observation/LymphNodeLaterality">Seitenangabe - SLN</a>
             </td>
@@ -1763,6 +2776,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <td style="column-width:30%">
                <a href="Observation-BreastResectionLaterality.html"
                   title="Observation/BreastResectionLaterality">Seitenlokalisation - BET</a>
+            </td>
+            <td>
+<p>Seitenlokalisation des Präparats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedLaterality.html"
+                  title="Observation/IntegratedLaterality">Seitenlokalisation - BET</a>
             </td>
             <td>
 <p>Seitenlokalisation des Präparats</p>
@@ -1824,8 +2846,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedTubuleScore.html"
+                  title="Observation/IntegratedTubuleScore">Tubulus-Score - BET</a>
+            </td>
+            <td>
+<p>Glandular differentiation score by Nottingham</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionTumorExtent.html"
                   title="Observation/BreastResectionTumorExtent">Tumorausdehnung - BET</a>
+            </td>
+            <td>
+<p>Ausdehnung des Tumors in Bezug auf die Brustdrüse</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedTumorExtent.html"
+                  title="Observation/IntegratedTumorExtent">Tumorausdehnung - BET</a>
             </td>
             <td>
 <p>Ausdehnung des Tumors in Bezug auf die Brustdrüse</p>
@@ -1842,11 +2882,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedPriorTherapy.html"
+                  title="Observation/IntegratedPriorTherapy">Vorchirurgische Therapie (integriert)</a>
+            </td>
+            <td>
+<p>Angabe zur neoadjuvanten/vorchirurgischen Therapie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedMacroClock.html"
+                  title="Observation/IntegratedMacroClock">Zifferblattlokalisation (integriert)</a>
+            </td>
+            <td>
+<p>Uhrzeigerlokalisation des Tumors</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionMacroClock.html"
                   title="Observation/BreastResectionMacroClock">Zifferblattlokalisation BET</a>
             </td>
             <td>
 <p>Uhrzeigerlokalisation des Tumors</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-IntegratedSubstancep40.html"
+                  title="Substance/IntegratedSubstancep40">p40-IHC Reagenz (integriert)</a>
+            </td>
+            <td>
+<p>p40-Antikörper für Immunhistochemie</p>
 </td>
          </tr>
          <tr>
@@ -1869,6 +2936,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Specimen-IntegratedBETSlidep40-01.html"
+                  title="Specimen/IntegratedBETSlidep40-01">p40-IHC Schnitt BET (integriert)</a>
+            </td>
+            <td>
+<p>Schnitt für p40-Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedPN.html" title="Observation/IntegratedPN">pN-Kategorie - SLN</a>
+            </td>
+            <td>
+<p>Pathologische N-Kategorie: pN1mi(sn)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-LymphNodePN.html" title="Observation/LymphNodePN">pN-Kategorie - SLN</a>
             </td>
             <td>
@@ -1886,6 +2970,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedPT.html" title="Observation/IntegratedPT">pT-Kategorie - BET</a>
+            </td>
+            <td>
+<p>Pathologische T-Kategorie nach TNM</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionERPercentage.html"
                   title="Observation/BreastResectionERPercentage">Östrogenrezeptor Prozent - BET</a>
             </td>
@@ -1895,8 +2987,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-IntegratedERPercentage.html"
+                  title="Observation/IntegratedERPercentage">Östrogenrezeptor Prozent - BET</a>
+            </td>
+            <td>
+<p>Prozentsatz ER-positiver Tumorzellkerne</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-BreastResectionERStatus.html"
                   title="Observation/BreastResectionERStatus">Östrogenrezeptor-Status - BET</a>
+            </td>
+            <td>
+<p>Östrogenrezeptor-Status per Immunhistochemie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-IntegratedERStatus.html"
+                  title="Observation/IntegratedERStatus">Östrogenrezeptor-Status - BET</a>
             </td>
             <td>
 <p>Östrogenrezeptor-Status per Immunhistochemie</p>
@@ -1922,7 +3032,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 14:36+0100">2026-03-18</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 16:00+0100">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

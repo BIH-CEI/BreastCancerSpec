@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Substance",
+  "id" : "IntegratedSubstanceCK18",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2026.0.0"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Substance IntegratedSubstanceCK18</b></p><a name=\"IntegratedSubstanceCK18\"> </a><a name=\"hcIntegratedSubstanceCK18\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance\">MII PR Biobank Substance Additivversion: null2026.0.0)</a></p></div><p><b>status</b>: Active</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/substance-category chemical}\">Chemical</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 45389009}\">Tissue stain (substance)</span></p><p><b>description</b>: Cytokeratin 18 (DC10), Dako Omnis</p></div>"
+  },
+  "status" : "active",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/substance-category",
+      "code" : "chemical",
+      "display" : "Chemical"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "45389009",
+      "display" : "Tissue stain (substance)"
+    }]
+  },
+  "description" : "Cytokeratin 18 (DC10), Dako Omnis"
+}

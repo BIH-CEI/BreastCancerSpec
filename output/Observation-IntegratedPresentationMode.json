@@ -1,0 +1,23 @@
+{
+  "resourceType" : "Observation",
+  "id" : "IntegratedPresentationMode",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation IntegratedPresentationMode</b></p><a name=\"IntegratedPresentationMode\"> </a><a name=\"hcIntegratedPresentationMode\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 67098-4}\">Präsentationsmodus</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title=\"Codes:\">Frisch</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "67098-4",
+      "display" : "Reason for test or procedure"
+    }],
+    "text" : "Präsentationsmodus"
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "valueCodeableConcept" : {
+    "text" : "Frisch"
+  }
+}

@@ -7,6 +7,7 @@ Alias: $mii-tnm-t = https://www.medizininformatik-initiative.de/fhir/ext/modul-o
 Alias: $mii-tnm-n = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie
 Alias: $mii-tnm-m = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-m-kategorie
 Alias: $mii-operation = https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-operation
+Alias: $mii-patho-intraoperative-grouper = https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-intraoperative-grouper
 
 // Standard Terminologies
 Alias: $loinc = http://loinc.org

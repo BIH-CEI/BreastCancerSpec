@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="IntegratedReportRequest"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2026.0.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest IntegratedReportRequest</b></p><a name="IntegratedReportRequest"> </a><a name="hcIntegratedReportRequest"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request">MII PR Patho Service Requestversion: null2026.0.0)</a></p></div><p><b>identifier</b>: Placer Identifier/PATH-RPT-2025-300</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 726007}">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 60568-3}">Pathology synoptic report</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href="Encounter-IntegratedEncounter.html">Encounter: identifier = http://example.hospital.de/encounters#E_25_300; status = finished; class = IMP (IMP)</a></p><p><b>requester</b>: <a href="Practitioner-BreastSurgeonPractitioner.html">Practitioner Thomas Richter </a></p><p><b>performer</b>: <a href="Practitioner-PathologistPractitioner.html">Practitioner Elisabeth Hoffmann </a></p><p><b>reasonCode</b>: <span title="Codes:{http://snomed.info/sct 254837009}">Malignant neoplasm of breast (disorder)</span></p><p><b>supportingInfo</b>: </p><ul><li><a href="Condition-IntegratedDiagnosisConfirmed.html">Condition Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</a></li><li><a href="DiagnosticReport-IntegratedImagingReport.html">Diagnostic Report for 'MG Breast Screening' for '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li><li><a href="Observation-IntegratedSpecimenLimited.html">Observation Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)</a></li><li><a href="Observation-IntegratedPresentationMode.html">Observation Reason for test or procedure</a></li><li><a href="Observation-IntegratedCancerHistory.html">Observation Personal history of primary malignant neoplasm of breast (situation)</a></li><li><a href="Observation-IntegratedPriorTherapy.html">Observation Cancer treatment --preoperative</a></li><li><a href="Observation-IntegratedRadiologicalExtent.html">Observation Lesion size, largest dimension (observable entity)</a></li><li><a href="Observation-IntegratedSpecimenMarking.html">Observation Insertion of marker into breast using X-ray guidance (procedure)</a></li><li><a href="Observation-IntegratedSpecimenRadiographyClinical.html">Observation 80865008|Specimen mammography|:363702006|Has focus|=185008008|Medical reports sent|</a></li><li><a href="Observation-IntegratedGeneticPredisposition.html">Observation Diathesis, function (observable entity)</a></li></ul><p><b>specimen</b>: </p><ul><li><a href="Specimen-IntegratedBETSpecimenPart.html">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_300; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. 42 × 35 × 18 mm, 10 g. Haut anhängend, Drahthäkchen in situ. Lamellierung in 8 Scheiben à 5 mm. Schnittfläche: grau-weißlicher Herdbefund zentral in Scheibe III–V, ca. 18 mm.</a></li><li><a href="Specimen-IntegratedSLNSpecimenPart.html">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_300; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></li></ul></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PLAC"/>
+        <display value="Placer Identifier"/>
+      </coding>
+    </type>
+    <system value="http://example.hospital.de/serviceRequest"/>
+    <value value="PATH-RPT-2025-300"/>
+  </identifier>
+  <status value="completed"/>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="726007"/>
+      <display value="Pathology consultation, comprehensive, records and specimen with report (procedure)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="60568-3"/>
+      <display value="Pathology synoptic report"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/IntegratedEncounter"/>
+  </encounter>
+  <requester>
+    <reference value="Practitioner/BreastSurgeonPractitioner"/>
+  </requester>
+  <performer>
+    <reference value="Practitioner/PathologistPractitioner"/>
+  </performer>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="254837009"/>
+      <display value="Malignant neoplasm of breast (disorder)"/>
+    </coding>
+  </reasonCode>
+  <supportingInfo>
+    <reference value="Condition/IntegratedDiagnosisConfirmed"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="DiagnosticReport/IntegratedImagingReport"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/IntegratedSpecimenLimited"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/IntegratedPresentationMode"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/IntegratedCancerHistory"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/IntegratedPriorTherapy"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/IntegratedRadiologicalExtent"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/IntegratedSpecimenMarking"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/IntegratedSpecimenRadiographyClinical"/>
+  </supportingInfo>
+  <supportingInfo>
+    <reference value="Observation/IntegratedGeneticPredisposition"/>
+  </supportingInfo>
+  <specimen>
+    <reference value="Specimen/IntegratedBETSpecimenPart"/>
+  </specimen>
+  <specimen>
+    <reference value="Specimen/IntegratedSLNSpecimenPart"/>
+  </specimen>
+</ServiceRequest>

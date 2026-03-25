@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Observation",
+  "id" : "IntegratedSpecimenLimited",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation IntegratedSpecimenLimited</b></p><a name=\"IntegratedSpecimenLimited\"> </a><a name=\"hcIntegratedSpecimenLimited\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 125156009}\">Proben limitiert auswertbar wegen fehlender klinischer Informationen</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 373067005}\">No (qualifier value)</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "125156009",
+      "display" : "Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)"
+    }],
+    "text" : "Proben limitiert auswertbar wegen fehlender klinischer Informationen"
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "373067005",
+      "display" : "No (qualifier value)"
+    }]
+  }
+}

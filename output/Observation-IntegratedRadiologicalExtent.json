@@ -1,0 +1,26 @@
+{
+  "resourceType" : "Observation",
+  "id" : "IntegratedRadiologicalExtent",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation IntegratedRadiologicalExtent</b></p><a name=\"IntegratedRadiologicalExtent\"> </a><a name=\"hcIntegratedRadiologicalExtent\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 396361002}\">Radiologische Ausdehnung</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: 15 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "396361002",
+      "display" : "Lesion size, largest dimension (observable entity)"
+    }],
+    "text" : "Radiologische Ausdehnung"
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "valueQuantity" : {
+    "value" : 15,
+    "unit" : "mm",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mm"
+  }
+}

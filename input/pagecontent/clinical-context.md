@@ -166,20 +166,50 @@ Standardised pathology reports are essential for staging, risk assessment and tr
 Ductal carcinoma in situ (DCIS) is a non‑invasive lesion confined to the ductal system without invasion beyond the basement membrane (S3, in situ lesions chapter).  
 Key reporting elements in DCIS resections include nuclear grade, architectural pattern, presence and type of necrosis, lesion size/extent, margin status, and presence of calcifications or microinvasion (ICCR DCIS dataset).
 
-#### 2. Invasive carcinoma resection
+#### Invasive carcinoma resection
 
 Invasive breast carcinoma, most commonly of no special type (NST), has penetrated the basement membrane and can invade surrounding stroma (S3, pathology chapter; ESMO 2024, p. 162 f.).  
 The report should include histological type (ICD‑O‑3), Nottingham grade (tubule formation, nuclear pleomorphism, mitotic rate), biomarker status (ER, PR, HER2, Ki‑67), surgical margin assessment, lymphovascular invasion and TNM stage, in line with ICCR core items (ICCR Invasive Breast Carcinoma dataset 2024).
 
-#### 3. Neoadjuvant therapy resection
+#### Neoadjuvant therapy resection
 
 After neoadjuvant (pre‑operative) systemic therapy, the resection specimen must be evaluated for response to treatment (S3, neoadjuvant therapy chapter; ESMO 2024, p. 170–172).  
 This includes documentation of residual tumour bed size, cellularity and subtype, residual nodal disease, calculation of a Residual Cancer Burden (RCB) or comparable response score, and comparison with pre‑treatment histology and imaging, as specified in the ICCR neoadjuvant dataset (ICCR Invasive Breast – Neoadjuvant dataset).
 
-#### 4. Sentinel lymph node biopsy
+#### Sentinel lymph node biopsy
 
 Sentinel lymph node (SLN) biopsy is performed for axillary staging in clinically node‑negative patients (S3, axillary surgery chapter; ESMO 2024, p. 167 f.).  
 Reports should state the number of sentinel nodes examined, size and category of metastases (isolated tumour cells, micrometastases, macrometastases), use and results of immunohistochemistry (e.g. pancytokeratin), extranodal extension and final pN category, following ICCR recommendations (ICCR Lymph Node dataset).
+
+---
+
+### Lymph node reporting: ICCR model vs. German clinical practice
+
+The ICCR datasets model the lymph node specimen report as a **standalone report** with its own structured dataset, separate from the breast specimen report. This IG provides an example following this approach (see [SLN-Biopsie Axilla](lymph-node-specimens.html)).
+
+In German clinical practice, however, the workflow is typically more integrated. In most institutions, the breast excision specimen and the axillary lymph nodes are submitted together under a **single accession number** and reported as **one combined pathology report**. The following scenarios illustrate the most common workflows:
+
+#### Scenario A — SLN frozen section negative, no further axillary surgery
+
+1. During breast-conserving surgery, sentinel lymph nodes are sent ahead for **intraoperative frozen section** (Schnellschnitt).
+2. The pathologist issues a **preliminary report** (`DiagnosticReport.status = preliminary`) with the frozen section diagnosis (e.g. "SLN tumour-free").
+3. Based on the negative result, no axillary dissection is performed.
+4. After paraffin embedding and staining, the **final report** integrates the breast specimen findings, the definitive SLN assessment, biomarkers and TNM staging into a single document.
+
+#### Scenario B — SLN frozen section positive, axillary dissection in same operation
+
+1. SLN frozen section reveals metastasis — the surgeon proceeds with axillary lymph node dissection in the same operation.
+2. Both the breast specimen and all lymph node specimens (SLN + dissection) are reported together in a **single final report**.
+
+#### Scenario C — SLN negative on frozen section, positive on paraffin sections
+
+1. Frozen section of SLN is negative — no axillary dissection is performed during the initial operation.
+2. Paraffin sections later reveal metastatic involvement in the SLN.
+3. A **re-operation** (axillary dissection) is performed, and the additional specimens are reported as an **addendum or follow-up report** assigned to the same case.
+
+#### Representation in this IG
+
+This IG provides both models: the **ICCR-oriented model** (standalone SLN report, see [SLN-Biopsie Axilla](lymph-node-specimens.html)) and an **[integrated report](integrated-report.html)** combining the breast specimen and lymph node findings into a single Bundle under one accession number. The ICCR model serves international interoperability and structured data exchange, while the integrated model aligns with routine German pathology practice.
 
 ---
 

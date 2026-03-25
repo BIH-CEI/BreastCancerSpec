@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "BreastCancerSpec"] ; # 
   fhir:title [ fhir:v "Breast Cancer Specification"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-18T14:36:58+01:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-25T16:00:46+01:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BIH CEI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BIH CEI" ] ;
@@ -711,7 +711,7 @@
        ] ;
        fhir:value [
          a fhir:Code ;
-         fhir:v "hl7.fhir.uv.tools.r4#0.9.0"
+         fhir:v "hl7.fhir.uv.tools.r4#1.1.0"
        ]
      ] [
        fhir:extension ( [
@@ -1326,6 +1326,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroDistanceNipple> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroDistanceNipple" ]
+       ] ;
+       fhir:name [ fhir:v "Abstand von Mamille (integriert)" ] ;
+       fhir:description [ fhir:v "Abstand des Tumors von der Mamille" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroDistanceNipple> ;
          fhir:reference [ fhir:v "Observation/BreastResectionMacroDistanceNipple" ]
        ] ;
@@ -1368,6 +1389,48 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedAttachedTissue> ;
+         fhir:reference [ fhir:v "Observation/IntegratedAttachedTissue" ]
+       ] ;
+       fhir:name [ fhir:v "Anhängendes Gewebe - BET" ] ;
+       fhir:description [ fhir:v "Art des anhängenden Gewebes am Präparat" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedNonSLNPositive> ;
+         fhir:reference [ fhir:v "Observation/IntegratedNonSLNPositive" ]
+       ] ;
+       fhir:name [ fhir:v "Anzahl befallener Non-SLN" ] ;
+       fhir:description [ fhir:v "Anzahl der befallenen (nicht-Sentinel) axillären Lymphknoten: 0" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/LymphNodeNonSLNPositive> ;
          fhir:reference [ fhir:v "Observation/LymphNodeNonSLNPositive" ]
        ] ;
@@ -1389,11 +1452,53 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedSLNPositive> ;
+         fhir:reference [ fhir:v "Observation/IntegratedSLNPositive" ]
+       ] ;
+       fhir:name [ fhir:v "Anzahl befallener SLN" ] ;
+       fhir:description [ fhir:v "Anzahl der befallenen Sentinel-Lymphknoten: 1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/LymphNodeSLNPositive> ;
          fhir:reference [ fhir:v "Observation/LymphNodeSLNPositive" ]
        ] ;
        fhir:name [ fhir:v "Anzahl befallener SLN" ] ;
        fhir:description [ fhir:v "Anzahl der befallenen Sentinel-Lymphknoten: 1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroBlockCount> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroBlockCount" ]
+       ] ;
+       fhir:name [ fhir:v "Anzahl Paraffinblöcke (integriert)" ] ;
+       fhir:description [ fhir:v "Anzahl der angefertigten Paraffinblöcke" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -1473,11 +1578,53 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedNonSLNExamined> ;
+         fhir:reference [ fhir:v "Observation/IntegratedNonSLNExamined" ]
+       ] ;
+       fhir:name [ fhir:v "Anzahl untersuchter Non-SLN" ] ;
+       fhir:description [ fhir:v "Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/LymphNodeNonSLNExamined> ;
          fhir:reference [ fhir:v "Observation/LymphNodeNonSLNExamined" ]
        ] ;
        fhir:name [ fhir:v "Anzahl untersuchter Non-SLN" ] ;
        fhir:description [ fhir:v "Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedSLNExamined> ;
+         fhir:reference [ fhir:v "Observation/IntegratedSLNExamined" ]
+       ] ;
+       fhir:name [ fhir:v "Anzahl untersuchter SLN" ] ;
+       fhir:description [ fhir:v "Anzahl der untersuchten Sentinel-Lymphknoten: 2" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -1536,6 +1683,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedAssociatedDCIS> ;
+         fhir:reference [ fhir:v "Observation/IntegratedAssociatedDCIS" ]
+       ] ;
+       fhir:name [ fhir:v "Assoziiertes DCIS - BET" ] ;
+       fhir:description [ fhir:v "Vorhandensein eines assoziierten DCIS" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/CoreNeedleBiopsyBClassification> ;
          fhir:reference [ fhir:v "Observation/CoreNeedleBiopsyBClassification" ]
        ] ;
@@ -1562,6 +1730,48 @@
        ] ;
        fhir:name [ fhir:v "Befundmarkierung" ] ;
        fhir:description [ fhir:v "Art der Befundmarkierung am Präparat" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedSpecimenMarking> ;
+         fhir:reference [ fhir:v "Observation/IntegratedSpecimenMarking" ]
+       ] ;
+       fhir:name [ fhir:v "Befundmarkierung (integriert)" ] ;
+       fhir:description [ fhir:v "Art der Befundmarkierung am Präparat" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ServiceRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/ServiceRequest/IntegratedReportRequest> ;
+         fhir:reference [ fhir:v "ServiceRequest/IntegratedReportRequest" ]
+       ] ;
+       fhir:name [ fhir:v "BET + SLN Anforderung (integriert)" ] ;
+       fhir:description [ fhir:v "Anforderung für pathologische Aufarbeitung des BET-Exzisionspräparats und SLN-Exzisats" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -1637,6 +1847,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSpecimenPart> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSpecimenPart" ]
+       ] ;
+       fhir:name [ fhir:v "BET-Exzisionspräparat (integriert)" ] ;
+       fhir:description [ fhir:v "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 42x35x18mm, 10g" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "DiagnosticReport"
          ]
        ] ) ;
@@ -1667,6 +1898,48 @@
        ] ;
        fhir:name [ fhir:v "Brustkrebsvorgeschichte" ] ;
        fhir:description [ fhir:v "Anamnese hinsichtlich Brustkrebsvorgeschichte" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedCancerHistory> ;
+         fhir:reference [ fhir:v "Observation/IntegratedCancerHistory" ]
+       ] ;
+       fhir:name [ fhir:v "Brustkrebsvorgeschichte (integriert)" ] ;
+       fhir:description [ fhir:v "Anamnese hinsichtlich Brustkrebsvorgeschichte" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/IntegratedSubstanceCK18> ;
+         fhir:reference [ fhir:v "Substance/IntegratedSubstanceCK18" ]
+       ] ;
+       fhir:name [ fhir:v "CK-18-IHC Reagenz (integriert)" ] ;
+       fhir:description [ fhir:v "Zytokeratin 18 Antikörper für Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -1721,12 +1994,54 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideCK18-01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideCK18-01" ]
+       ] ;
+       fhir:name [ fhir:v "CK18-IHC Schnitt BET (integriert)" ] ;
+       fhir:description [ fhir:v "Schnitt für Zytokeratin 18 Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Observation"
          ]
        ] ) ;
        fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionDCISArchitecture> ;
          fhir:reference [ fhir:v "Observation/BreastResectionDCISArchitecture" ]
+       ] ;
+       fhir:name [ fhir:v "DCIS Architektur - BET" ] ;
+       fhir:description [ fhir:v "Wachstumsmuster des assoziierten DCIS" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedDCISArchitecture> ;
+         fhir:reference [ fhir:v "Observation/IntegratedDCISArchitecture" ]
        ] ;
        fhir:name [ fhir:v "DCIS Architektur - BET" ] ;
        fhir:description [ fhir:v "Wachstumsmuster des assoziierten DCIS" ] ;
@@ -1767,8 +2082,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedDCISGrade> ;
+         fhir:reference [ fhir:v "Observation/IntegratedDCISGrade" ]
+       ] ;
+       fhir:name [ fhir:v "DCIS Kerngrading - BET" ] ;
+       fhir:description [ fhir:v "Kerngrading des assoziierten DCIS" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionDCISNecrosis> ;
          fhir:reference [ fhir:v "Observation/BreastResectionDCISNecrosis" ]
+       ] ;
+       fhir:name [ fhir:v "DCIS Nekrosen - BET" ] ;
+       fhir:description [ fhir:v "Nekrosen im DCIS-Areal" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedDCISNecrosis> ;
+         fhir:reference [ fhir:v "Observation/IntegratedDCISNecrosis" ]
        ] ;
        fhir:name [ fhir:v "DCIS Nekrosen - BET" ] ;
        fhir:description [ fhir:v "Nekrosen im DCIS-Areal" ] ;
@@ -1793,6 +2150,27 @@
        ] ;
        fhir:name [ fhir:v "Diagnostic Conclusion Grouper - BET Mamma" ] ;
        fhir:description [ fhir:v "Grouper for all diagnostic conclusion findings in breast resection" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedDiagnosticConclusionGrouper> ;
+         fhir:reference [ fhir:v "Observation/IntegratedDiagnosticConclusionGrouper" ]
+       ] ;
+       fhir:name [ fhir:v "Diagnostic Conclusion Grouper - Integrated BET + SLN" ] ;
+       fhir:description [ fhir:v "Grouper for all diagnostic conclusion findings in integrated breast resection and sentinel lymph node report" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -1872,6 +2250,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Bundle/IntegratedDocument> ;
+         fhir:reference [ fhir:v "Bundle/IntegratedDocument" ]
+       ] ;
+       fhir:name [ fhir:v "Document Bundle - Integrierter Bericht (BET + SLN)" ] ;
+       fhir:description [ fhir:v "FHIR Document Bundle für den integrierten Befundbericht BET Mamma links mit SLN-Biopsie Axilla" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Bundle/LymphNodeDocument> ;
          fhir:reference [ fhir:v "Bundle/LymphNodeDocument" ]
        ] ;
@@ -1898,6 +2297,27 @@
        ] ;
        fhir:name [ fhir:v "Document Bundle - Stanzbiopsie Mamma" ] ;
        fhir:description [ fhir:v "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/IntegratedSubstanceECadherin> ;
+         fhir:reference [ fhir:v "Substance/IntegratedSubstanceECadherin" ]
+       ] ;
+       fhir:name [ fhir:v "E-Cadherin-IHC Reagenz (integriert)" ] ;
+       fhir:description [ fhir:v "E-Cadherin-Antikörper für Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -1952,12 +2372,54 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideECad-01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideECad-01" ]
+       ] ;
+       fhir:name [ fhir:v "E-Cadherin-IHC Schnitt BET (integriert)" ] ;
+       fhir:description [ fhir:v "Schnitt für E-Cadherin-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Observation"
          ]
        ] ) ;
        fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionElstonEllisScore> ;
          fhir:reference [ fhir:v "Observation/BreastResectionElstonEllisScore" ]
+       ] ;
+       fhir:name [ fhir:v "Elston-Ellis Summenscore - BET" ] ;
+       fhir:description [ fhir:v "Elston-Ellis summary score (3+2+1=6)" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedElstonEllisScore> ;
+         fhir:reference [ fhir:v "Observation/IntegratedElstonEllisScore" ]
        ] ;
        fhir:name [ fhir:v "Elston-Ellis Summenscore - BET" ] ;
        fhir:description [ fhir:v "Elston-Ellis summary score (3+2+1=6)" ] ;
@@ -1982,6 +2444,27 @@
        ] ;
        fhir:name [ fhir:v "Encounter für BET Mamma" ] ;
        fhir:description [ fhir:v "Stationärer Encounter für brusterhaltende Therapie im Brustzentrum" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Encounter"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Encounter/IntegratedEncounter> ;
+         fhir:reference [ fhir:v "Encounter/IntegratedEncounter" ]
+       ] ;
+       fhir:name [ fhir:v "Encounter für BET Mamma mit SLN-Biopsie" ] ;
+       fhir:description [ fhir:v "Stationärer Encounter für brusterhaltende Therapie mit simultaner SLN-Biopsie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -2045,6 +2528,48 @@
        ] ;
        fhir:name [ fhir:v "ER Färbeintensität - BET" ] ;
        fhir:description [ fhir:v "Färbeintensität der ER-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedERIntensity> ;
+         fhir:reference [ fhir:v "Observation/IntegratedERIntensity" ]
+       ] ;
+       fhir:name [ fhir:v "ER Färbeintensität - BET" ] ;
+       fhir:description [ fhir:v "Färbeintensität der ER-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/IntegratedSubstanceER> ;
+         fhir:reference [ fhir:v "Substance/IntegratedSubstanceER" ]
+       ] ;
+       fhir:name [ fhir:v "ER-IHC Reagenz (integriert)" ] ;
+       fhir:description [ fhir:v "Östrogenrezeptor-Antikörper für Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -2162,6 +2687,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideER01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideER01" ]
+       ] ;
+       fhir:name [ fhir:v "ER-IHC Schnitt BET (integriert)" ] ;
+       fhir:description [ fhir:v "Schnitt für Östrogenrezeptor-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Observation"
          ]
        ] ) ;
@@ -2192,6 +2738,27 @@
        ] ;
        fhir:name [ fhir:v "Estrogen Receptor Status - Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Estrogen receptor status by immunohistochemistry" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedExtranodalExtension> ;
+         fhir:reference [ fhir:v "Observation/IntegratedExtranodalExtension" ]
+       ] ;
+       fhir:name [ fhir:v "Extranodale Infiltration" ] ;
+       fhir:description [ fhir:v "Extranodale Infiltration durch LK-Metastase: Nicht vorhanden" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -2250,10 +2817,52 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedFocality> ;
+         fhir:reference [ fhir:v "Observation/IntegratedFocality" ]
+       ] ;
+       fhir:name [ fhir:v "Fokalität - BET" ] ;
+       fhir:description [ fhir:v "Fokalität des Tumors" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionGeneticPredisposition> ;
          fhir:reference [ fhir:v "Observation/BreastResectionGeneticPredisposition" ]
        ] ;
        fhir:name [ fhir:v "Genetische Prädisposition" ] ;
+       fhir:description [ fhir:v "Angabe zur genetischen Prädisposition" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedGeneticPredisposition> ;
+         fhir:reference [ fhir:v "Observation/IntegratedGeneticPredisposition" ]
+       ] ;
+       fhir:name [ fhir:v "Genetische Prädisposition (integriert)" ] ;
        fhir:description [ fhir:v "Angabe zur genetischen Prädisposition" ] ;
        fhir:example [
          a fhir:Boolean ;
@@ -2292,11 +2901,53 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedTotalPositive> ;
+         fhir:reference [ fhir:v "Observation/IntegratedTotalPositive" ]
+       ] ;
+       fhir:name [ fhir:v "Gesamtzahl befallener LK" ] ;
+       fhir:description [ fhir:v "Gesamtzahl befallener Lymphknoten: 1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/LymphNodeTotalPositive> ;
          fhir:reference [ fhir:v "Observation/LymphNodeTotalPositive" ]
        ] ;
        fhir:name [ fhir:v "Gesamtzahl befallener LK" ] ;
        fhir:description [ fhir:v "Gesamtzahl befallener Lymphknoten: 1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedTotalExamined> ;
+         fhir:reference [ fhir:v "Observation/IntegratedTotalExamined" ]
+       ] ;
+       fhir:name [ fhir:v "Gesamtzahl untersuchter LK" ] ;
+       fhir:description [ fhir:v "Gesamtzahl untersuchter Lymphknoten: 2" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -2334,6 +2985,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroWeight> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroWeight" ]
+       ] ;
+       fhir:name [ fhir:v "Gewicht (integriert)" ] ;
+       fhir:description [ fhir:v "Gewicht des BET-Exzisionspräparats" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroWeight> ;
          fhir:reference [ fhir:v "Observation/BreastResectionMacroWeight" ]
        ] ;
@@ -2355,11 +3027,53 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedLargestMetSize> ;
+         fhir:reference [ fhir:v "Observation/IntegratedLargestMetSize" ]
+       ] ;
+       fhir:name [ fhir:v "Größte Metastasenausdehnung" ] ;
+       fhir:description [ fhir:v "Ausdehnung der größten metastatischen Infiltration: 1.2 mm" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/LymphNodeLargestMetSize> ;
          fhir:reference [ fhir:v "Observation/LymphNodeLargestMetSize" ]
        ] ;
        fhir:name [ fhir:v "Größte Metastasenausdehnung" ] ;
        fhir:description [ fhir:v "Ausdehnung der größten metastatischen Infiltration: 1.2 mm" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideBlock02-HE01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideBlock02-HE01" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt 01 BET - Block02 (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt Scheibe V, Schnittstufe 1" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -2418,6 +3132,48 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideHE01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideHE01" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt 01 BET - Tumor (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedSLNSlideHE01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedSLNSlideHE01" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt 01 SLN #1 (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt des SLN #1, Schnittstufe 1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE01> ;
          fhir:reference [ fhir:v "Specimen/LymphNodeSpecimenSlideHE01" ]
        ] ;
@@ -2444,6 +3200,27 @@
        ] ;
        fhir:name [ fhir:v "HE-Schnitt 01 Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideBlock02-HE02> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideBlock02-HE02" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt 02 BET - Block02 (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt Scheibe V, Schnittstufe 2" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -2502,6 +3279,48 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideHE02> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideHE02" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt 02 BET - Tumor (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 2" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedSLNSlideHE02> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedSLNSlideHE02" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt 02 SLN #1 (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt des SLN #1, Schnittstufe 2" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE02> ;
          fhir:reference [ fhir:v "Specimen/LymphNodeSpecimenSlideHE02" ]
        ] ;
@@ -2544,6 +3363,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedSLNSlideHE03> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedSLNSlideHE03" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt 03 SLN #2 (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt des SLN #2, Schnittstufe 1" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE03> ;
          fhir:reference [ fhir:v "Specimen/LymphNodeSpecimenSlideHE03" ]
        ] ;
@@ -2570,6 +3410,27 @@
        ] ;
        fhir:name [ fhir:v "HE-Schnitt 03 Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 3" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedSLNSlideHE04> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedSLNSlideHE04" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt 04 SLN #2 (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt des SLN #2, Schnittstufe 2" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -2708,6 +3569,90 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideRR-Inferior-HE01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideRR-Inferior-HE01" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt RR inferior BET (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt Resektionsrand inferior" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideRR-Lateral-HE01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideRR-Lateral-HE01" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt RR lateral BET (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt Resektionsrand lateral" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideRR-Medial-HE01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideRR-Medial-HE01" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt RR medial BET (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt Resektionsrand medial" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideRR-Superior-HE01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideRR-Superior-HE01" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt RR superior BET (integriert)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt Resektionsrand superior" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Observation"
          ]
        ] ) ;
@@ -2733,8 +3678,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedHER2ISH> ;
+         fhir:reference [ fhir:v "Observation/IntegratedHER2ISH" ]
+       ] ;
+       fhir:name [ fhir:v "HER2 Amplifikation (ISH) - BET" ] ;
+       fhir:description [ fhir:v "HER2-Amplifikationsstatus per In-situ-Hybridisierung" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionHER2Overall> ;
          fhir:reference [ fhir:v "Observation/BreastResectionHER2Overall" ]
+       ] ;
+       fhir:name [ fhir:v "HER2 Gesamtstatus - BET" ] ;
+       fhir:description [ fhir:v "HER2-Gesamtstatus basierend auf IHC und ISH" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedHER2Overall> ;
+         fhir:reference [ fhir:v "Observation/IntegratedHER2Overall" ]
        ] ;
        fhir:name [ fhir:v "HER2 Gesamtstatus - BET" ] ;
        fhir:description [ fhir:v "HER2-Gesamtstatus basierend auf IHC und ISH" ] ;
@@ -2822,6 +3809,27 @@
        ] ;
        fhir:name [ fhir:v "HER2-B-DISH Schnitt 02 Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/IntegratedSubstanceHER2IHC> ;
+         fhir:reference [ fhir:v "Substance/IntegratedSubstanceHER2IHC" ]
+       ] ;
+       fhir:name [ fhir:v "HER2-IHC Reagenz (integriert)" ] ;
+       fhir:description [ fhir:v "HER2-Antikörper für Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -2939,12 +3947,54 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideHER2IHC01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideHER2IHC01" ]
+       ] ;
+       fhir:name [ fhir:v "HER2-IHC Schnitt BET (integriert)" ] ;
+       fhir:description [ fhir:v "Schnitt für HER2-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Observation"
          ]
        ] ) ;
        fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionHER2IHC> ;
          fhir:reference [ fhir:v "Observation/BreastResectionHER2IHC" ]
+       ] ;
+       fhir:name [ fhir:v "HER2-Score (IHC) - BET" ] ;
+       fhir:description [ fhir:v "HER2-Score per Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedHER2IHC> ;
+         fhir:reference [ fhir:v "Observation/IntegratedHER2IHC" ]
        ] ;
        fhir:name [ fhir:v "HER2-Score (IHC) - BET" ] ;
        fhir:description [ fhir:v "HER2-Score per Immunhistochemie" ] ;
@@ -3006,11 +4056,95 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedHistologicalType> ;
+         fhir:reference [ fhir:v "Observation/IntegratedHistologicalType" ]
+       ] ;
+       fhir:name [ fhir:v "Histologischer Tumortyp - BET" ] ;
+       fhir:description [ fhir:v "Histologischer Typ nach WHO/ICD-O-3" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Composition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Composition/IntegratedComposition> ;
+         fhir:reference [ fhir:v "Composition/IntegratedComposition" ]
+       ] ;
+       fhir:name [ fhir:v "Integrierter Befundbericht BET + SLN Composition" ] ;
+       fhir:description [ fhir:v "FHIR Composition für den integrierten Befundbericht BET Mamma links mit SLN-Biopsie Axilla" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionInvasiveCarcinoma> ;
          fhir:reference [ fhir:v "Observation/BreastResectionInvasiveCarcinoma" ]
        ] ;
        fhir:name [ fhir:v "Invasives Karzinom - BET" ] ;
        fhir:description [ fhir:v "Vorhandensein eines invasiven Karzinoms" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedInvasiveCarcinoma> ;
+         fhir:reference [ fhir:v "Observation/IntegratedInvasiveCarcinoma" ]
+       ] ;
+       fhir:name [ fhir:v "Invasives Karzinom - BET" ] ;
+       fhir:description [ fhir:v "Vorhandensein eines invasiven Karzinoms" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedITCCount> ;
+         fhir:reference [ fhir:v "Observation/IntegratedITCCount" ]
+       ] ;
+       fhir:name [ fhir:v "ITC-befallene LK" ] ;
+       fhir:description [ fhir:v "Gesamtzahl ausschließlich ITC-befallener Lymphknoten: 0" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -3069,8 +4203,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedNuclearPleomorphism> ;
+         fhir:reference [ fhir:v "Observation/IntegratedNuclearPleomorphism" ]
+       ] ;
+       fhir:name [ fhir:v "Kernpleomorphie-Score - BET" ] ;
+       fhir:description [ fhir:v "Nuclear pleomorphism score by Nottingham" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionKi67> ;
          fhir:reference [ fhir:v "Observation/BreastResectionKi67" ]
+       ] ;
+       fhir:name [ fhir:v "Ki-67 Index - BET" ] ;
+       fhir:description [ fhir:v "Ki-67 Proliferationsindex" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedKi67> ;
+         fhir:reference [ fhir:v "Observation/IntegratedKi67" ]
        ] ;
        fhir:name [ fhir:v "Ki-67 Index - BET" ] ;
        fhir:description [ fhir:v "Ki-67 Proliferationsindex" ] ;
@@ -3095,6 +4271,27 @@
        ] ;
        fhir:name [ fhir:v "Ki-67 Index - Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Ki-67 proliferation index" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/IntegratedSubstanceKi67> ;
+         fhir:reference [ fhir:v "Substance/IntegratedSubstanceKi67" ]
+       ] ;
+       fhir:name [ fhir:v "Ki-67-IHC Reagenz (integriert)" ] ;
+       fhir:description [ fhir:v "Ki-67-Antikörper für Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -3137,6 +4334,27 @@
        ] ;
        fhir:name [ fhir:v "Ki-67-IHC Reagenz Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Ki-67-Antikörper für Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlideKi67-01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlideKi67-01" ]
+       ] ;
+       fhir:name [ fhir:v "Ki-67-IHC Schnitt BET (integriert)" ] ;
+       fhir:description [ fhir:v "Schnitt für Ki-67-Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -3237,11 +4455,74 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedBETComment> ;
+         fhir:reference [ fhir:v "Observation/IntegratedBETComment" ]
+       ] ;
+       fhir:name [ fhir:v "Kommentar - BET" ] ;
+       fhir:description [ fhir:v "Freitextkommentar zum Befund" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedSLNComment> ;
+         fhir:reference [ fhir:v "Observation/IntegratedSLNComment" ]
+       ] ;
+       fhir:name [ fhir:v "Kommentar - SLN" ] ;
+       fhir:description [ fhir:v "Kommentar zum SLN-Befund" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/LymphNodeComment> ;
          fhir:reference [ fhir:v "Observation/LymphNodeComment" ]
        ] ;
        fhir:name [ fhir:v "Kommentar - SLN" ] ;
        fhir:description [ fhir:v "Kommentar zum SLN-Befund" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedLymphNodeProcedure> ;
+         fhir:reference [ fhir:v "Observation/IntegratedLymphNodeProcedure" ]
+       ] ;
+       fhir:name [ fhir:v "LK OP Prozedur - SLN" ] ;
+       fhir:description [ fhir:v "Art der Lymphknoten-Operation: Sentinel-Lymphknoten-Biopsie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -3300,11 +4581,74 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedLVI> ;
+         fhir:reference [ fhir:v "Observation/IntegratedLVI" ]
+       ] ;
+       fhir:name [ fhir:v "Lymphgefäßinvasion - BET" ] ;
+       fhir:description [ fhir:v "Lymphovaskuläre Invasion" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroMetCount> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroMetCount" ]
+       ] ;
+       fhir:name [ fhir:v "Makrometastatisch befallene LK" ] ;
+       fhir:description [ fhir:v "Gesamtzahl makrometastatisch befallener Lymphknoten: 0" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/LymphNodeMacroMetCount> ;
          fhir:reference [ fhir:v "Observation/LymphNodeMacroMetCount" ]
        ] ;
        fhir:name [ fhir:v "Makrometastatisch befallene LK" ] ;
        fhir:description [ fhir:v "Gesamtzahl makrometastatisch befallener Lymphknoten: 0" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroscopicGrouper> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroscopicGrouper" ]
+       ] ;
+       fhir:name [ fhir:v "Makroskopische Befunde Grouper (integriert)" ] ;
+       fhir:description [ fhir:v "Gruppierung aller makroskopischen Messungen beider Präparate (BET + SLN)" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -3368,6 +4712,27 @@
        ] ;
        fhir:name [ fhir:v "Makroskopische Befunde Grouper Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Gruppierung aller makroskopischen Messungen der Stanzzylinder" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Condition/IntegratedDiagnosisConfirmed> ;
+         fhir:reference [ fhir:v "Condition/IntegratedDiagnosisConfirmed" ]
+       ] ;
+       fhir:name [ fhir:v "Mammakarzinom-Diagnose (integrierter Bericht)" ] ;
+       fhir:description [ fhir:v "Bestätigte Diagnose eines invasiven Mammakarzinoms, Indikation zur BET mit SLN-Biopsie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -3468,6 +4833,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/DiagnosticReport/IntegratedImagingReport> ;
+         fhir:reference [ fhir:v "DiagnosticReport/IntegratedImagingReport" ]
+       ] ;
+       fhir:name [ fhir:v "Mammografie/Ultraschall-Befund (integriert)" ] ;
+       fhir:description [ fhir:v "Bildgebungsbefund als SupportingInfo für den integrierten Bericht" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "DiagnosticReport"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/DiagnosticReport/BreastResectionImagingReport> ;
          fhir:reference [ fhir:v "DiagnosticReport/BreastResectionImagingReport" ]
        ] ;
@@ -3510,8 +4896,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMaterialType> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMaterialType" ]
+       ] ;
+       fhir:name [ fhir:v "Materialart - BET" ] ;
+       fhir:description [ fhir:v "Art des eingesendeten Materials" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionMaxDiameterInvasive> ;
          fhir:reference [ fhir:v "Observation/BreastResectionMaxDiameterInvasive" ]
+       ] ;
+       fhir:name [ fhir:v "Max Durchmesser invasiv - BET" ] ;
+       fhir:description [ fhir:v "Maximaler Durchmesser der invasiven Komponente" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMaxDiameterInvasive> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMaxDiameterInvasive" ]
        ] ;
        fhir:name [ fhir:v "Max Durchmesser invasiv - BET" ] ;
        fhir:description [ fhir:v "Maximaler Durchmesser der invasiven Komponente" ] ;
@@ -3552,11 +4980,74 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMaxOverallDiameter> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMaxOverallDiameter" ]
+       ] ;
+       fhir:name [ fhir:v "Max Gesamtdurchmesser - BET" ] ;
+       fhir:description [ fhir:v "Maximaler Gesamtdurchmesser des Tumors inkl. DCIS" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionMicrocalcification> ;
          fhir:reference [ fhir:v "Observation/BreastResectionMicrocalcification" ]
        ] ;
        fhir:name [ fhir:v "Mikrokalzifikationen - BET" ] ;
        fhir:description [ fhir:v "Vorhandensein von Mikrokalzifikationen" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMicrocalcification> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMicrocalcification" ]
+       ] ;
+       fhir:name [ fhir:v "Mikrokalzifikationen - BET" ] ;
+       fhir:description [ fhir:v "Vorhandensein von Mikrokalzifikationen" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMicroMetCount> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMicroMetCount" ]
+       ] ;
+       fhir:name [ fhir:v "Mikrometastatisch befallene LK" ] ;
+       fhir:description [ fhir:v "Gesamtzahl mikrometastatisch befallener Lymphknoten: 1" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -3636,8 +5127,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMinDistanceInvasive> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMinDistanceInvasive" ]
+       ] ;
+       fhir:name [ fhir:v "Mindestabstand invasiv - BET" ] ;
+       fhir:description [ fhir:v "Mindestabstand der invasiven Komponente zum Resektionsrand" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionMinDistanceNonInvasive> ;
          fhir:reference [ fhir:v "Observation/BreastResectionMinDistanceNonInvasive" ]
+       ] ;
+       fhir:name [ fhir:v "Mindestabstand nichtinvasiv - BET" ] ;
+       fhir:description [ fhir:v "Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMinDistanceNonInvasive> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMinDistanceNonInvasive" ]
        ] ;
        fhir:name [ fhir:v "Mindestabstand nichtinvasiv - BET" ] ;
        fhir:description [ fhir:v "Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand" ] ;
@@ -3678,8 +5211,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMitoticRateScore> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMitoticRateScore" ]
+       ] ;
+       fhir:name [ fhir:v "Mitoserate-Score - BET" ] ;
+       fhir:description [ fhir:v "Mitotic rate score by Nottingham" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionMitosisCount> ;
          fhir:reference [ fhir:v "Observation/BreastResectionMitosisCount" ]
+       ] ;
+       fhir:name [ fhir:v "Mitosezahl - BET" ] ;
+       fhir:description [ fhir:v "Absolute Mitosezahl pro 10 HPF" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMitosisCount> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMitosisCount" ]
        ] ;
        fhir:name [ fhir:v "Mitosezahl - BET" ] ;
        fhir:description [ fhir:v "Absolute Mitosezahl pro 10 HPF" ] ;
@@ -3741,6 +5316,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMorphologyFreeText> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMorphologyFreeText" ]
+       ] ;
+       fhir:name [ fhir:v "Morphologie Freitext - BET" ] ;
+       fhir:description [ fhir:v "Freitextbeschreibung der Tumormorphologie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/CoreNeedleBiopsyMorphologyFreeText> ;
          fhir:reference [ fhir:v "Observation/CoreNeedleBiopsyMorphologyFreeText" ]
        ] ;
@@ -3764,6 +5360,27 @@
        fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionNonInvasiveLesion> ;
          fhir:reference [ fhir:v "Observation/BreastResectionNonInvasiveLesion" ]
+       ] ;
+       fhir:name [ fhir:v "Nichtinvasive Läsion - BET" ] ;
+       fhir:description [ fhir:v "Vorhandensein einer nichtinvasiven Läsion" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedNonInvasiveLesion> ;
+         fhir:reference [ fhir:v "Observation/IntegratedNonInvasiveLesion" ]
        ] ;
        fhir:name [ fhir:v "Nichtinvasive Läsion - BET" ] ;
        fhir:description [ fhir:v "Vorhandensein einer nichtinvasiven Läsion" ] ;
@@ -3846,6 +5463,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedNottinghamGrade> ;
+         fhir:reference [ fhir:v "Observation/IntegratedNottinghamGrade" ]
+       ] ;
+       fhir:name [ fhir:v "Nottingham-Grad - BET" ] ;
+       fhir:description [ fhir:v "Nottingham histologic grade" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/CoreNeedleBiopsyNuclearPleomorphism> ;
          fhir:reference [ fhir:v "Observation/CoreNeedleBiopsyNuclearPleomorphism" ]
        ] ;
@@ -3888,11 +5526,74 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedClosestMargin> ;
+         fhir:reference [ fhir:v "Observation/IntegratedClosestMargin" ]
+       ] ;
+       fhir:name [ fhir:v "Nächster tumorfreier Resektionsrand - BET" ] ;
+       fhir:description [ fhir:v "Lokalisation des nächsten tumorfreien Resektionsrands" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionOperativeProcedure> ;
          fhir:reference [ fhir:v "Observation/BreastResectionOperativeProcedure" ]
        ] ;
        fhir:name [ fhir:v "Operatives Verfahren - BET" ] ;
        fhir:description [ fhir:v "Art des operativen Verfahrens" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedOperativeProcedure> ;
+         fhir:reference [ fhir:v "Observation/IntegratedOperativeProcedure" ]
+       ] ;
+       fhir:name [ fhir:v "Operatives Verfahren - BET" ] ;
+       fhir:description [ fhir:v "Art des operativen Verfahrens" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/IntegratedSubstancep40> ;
+         fhir:reference [ fhir:v "Substance/IntegratedSubstancep40" ]
+       ] ;
+       fhir:name [ fhir:v "p40-IHC Reagenz (integriert)" ] ;
+       fhir:description [ fhir:v "p40-Antikörper für Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -3951,6 +5652,48 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlidep40-01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlidep40-01" ]
+       ] ;
+       fhir:name [ fhir:v "p40-IHC Schnitt BET (integriert)" ] ;
+       fhir:description [ fhir:v "Schnitt für p40-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSpecimenBlock01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSpecimenBlock01" ]
+       ] ;
+       fhir:name [ fhir:v "Paraffinblock 01 BET - Tumor (integriert)" ] ;
+       fhir:description [ fhir:v "Paraffineinbettung Tumorareal Scheibe III" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock01> ;
          fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenBlock01" ]
        ] ;
@@ -3993,11 +5736,53 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedSLNSpecimenBlock01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedSLNSpecimenBlock01" ]
+       ] ;
+       fhir:name [ fhir:v "Paraffinblock 01 SLN #1 (integriert)" ] ;
+       fhir:description [ fhir:v "Paraffineinbettung SLN #1, halbiert, enthält Mikrometastase" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenBlock01> ;
          fhir:reference [ fhir:v "Specimen/CoreNeedleBiopsySpecimenBlock01" ]
        ] ;
        fhir:name [ fhir:v "Paraffinblock 01 Stanzbiopsie" ] ;
        fhir:description [ fhir:v "Paraffineinbettung der Stanzzylinder Block 01" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSpecimenBlock02> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSpecimenBlock02" ]
+       ] ;
+       fhir:name [ fhir:v "Paraffinblock 02 BET - Tumor (integriert)" ] ;
+       fhir:description [ fhir:v "Paraffineinbettung Tumorareal Scheibe V" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -4056,10 +5841,52 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedSLNSpecimenBlock02> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedSLNSpecimenBlock02" ]
+       ] ;
+       fhir:name [ fhir:v "Paraffinblock 02 SLN #2 (integriert)" ] ;
+       fhir:description [ fhir:v "Paraffineinbettung SLN #2, halbiert, tumorfrei" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock03> ;
          fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenBlock03" ]
        ] ;
        fhir:name [ fhir:v "Paraffinblock 03 BET - RR superior" ] ;
+       fhir:description [ fhir:v "Paraffineinbettung Resektionsrand superior" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSpecimenBlock03> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSpecimenBlock03" ]
+       ] ;
+       fhir:name [ fhir:v "Paraffinblock 03 BET - RR superior (integriert)" ] ;
        fhir:description [ fhir:v "Paraffineinbettung Resektionsrand superior" ] ;
        fhir:example [
          a fhir:Boolean ;
@@ -4098,6 +5925,48 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSpecimenBlock04> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSpecimenBlock04" ]
+       ] ;
+       fhir:name [ fhir:v "Paraffinblock 04 BET - RR inferior (integriert)" ] ;
+       fhir:description [ fhir:v "Paraffineinbettung Resektionsrand inferior" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSpecimenBlock05> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSpecimenBlock05" ]
+       ] ;
+       fhir:name [ fhir:v "Paraffinblock 05 BET - RR medial (integriert)" ] ;
+       fhir:description [ fhir:v "Paraffineinbettung Resektionsrand medial, Scheibe I" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock05> ;
          fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenBlock05" ]
        ] ;
@@ -4119,11 +5988,53 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSpecimenBlock06> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSpecimenBlock06" ]
+       ] ;
+       fhir:name [ fhir:v "Paraffinblock 06 BET - RR lateral (integriert)" ] ;
+       fhir:description [ fhir:v "Paraffineinbettung Resektionsrand lateral, Scheibe VIII" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock06> ;
          fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenBlock06" ]
        ] ;
        fhir:name [ fhir:v "Paraffinblock 06 BET - RR lateral (Scheibe VIII)" ] ;
        fhir:description [ fhir:v "Paraffineinbettung Resektionsrand lateral, Scheibe VIII" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "DiagnosticReport"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/DiagnosticReport/IntegratedReport> ;
+         fhir:reference [ fhir:v "DiagnosticReport/IntegratedReport" ]
+       ] ;
+       fhir:name [ fhir:v "Pathologiebericht BET + SLN (integriert)" ] ;
+       fhir:description [ fhir:v "Integrierter Pathologiebericht nach BET Mamma links mit SLN-Biopsie Axilla" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -4266,6 +6177,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedPN> ;
+         fhir:reference [ fhir:v "Observation/IntegratedPN" ]
+       ] ;
+       fhir:name [ fhir:v "pN-Kategorie - SLN" ] ;
+       fhir:description [ fhir:v "Pathologische N-Kategorie: pN1mi(sn)" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/LymphNodePN> ;
          fhir:reference [ fhir:v "Observation/LymphNodePN" ]
        ] ;
@@ -4292,6 +6224,48 @@
        ] ;
        fhir:name [ fhir:v "PR Färbeintensität - BET" ] ;
        fhir:description [ fhir:v "Färbeintensität der PR-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedPRIntensity> ;
+         fhir:reference [ fhir:v "Observation/IntegratedPRIntensity" ]
+       ] ;
+       fhir:name [ fhir:v "PR Färbeintensität - BET" ] ;
+       fhir:description [ fhir:v "Färbeintensität der PR-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Substance"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Substance/IntegratedSubstancePR> ;
+         fhir:reference [ fhir:v "Substance/IntegratedSubstancePR" ]
+       ] ;
+       fhir:name [ fhir:v "PR-IHC Reagenz (integriert)" ] ;
+       fhir:description [ fhir:v "Progesteronrezeptor-Antikörper für Immunhistochemie" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -4409,6 +6383,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedBETSlidePR01> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedBETSlidePR01" ]
+       ] ;
+       fhir:name [ fhir:v "PR-IHC Schnitt BET (integriert)" ] ;
+       fhir:description [ fhir:v "Schnitt für Progesteronrezeptor-Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "Observation"
          ]
        ] ) ;
@@ -4417,6 +6412,27 @@
          fhir:reference [ fhir:v "Observation/BreastResectionSpecimenLimited" ]
        ] ;
        fhir:name [ fhir:v "Proben limitiert auswertbar" ] ;
+       fhir:description [ fhir:v "Angabe ob die Probe limitiert auswertbar ist" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedSpecimenLimited> ;
+         fhir:reference [ fhir:v "Observation/IntegratedSpecimenLimited" ]
+       ] ;
+       fhir:name [ fhir:v "Proben limitiert auswertbar (integriert)" ] ;
        fhir:description [ fhir:v "Angabe ob die Probe limitiert auswertbar ist" ] ;
        fhir:example [
          a fhir:Boolean ;
@@ -4455,6 +6471,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroLength> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroLength" ]
+       ] ;
+       fhir:name [ fhir:v "Probengröße 1 (Länge) (integriert)" ] ;
+       fhir:description [ fhir:v "Maximale Länge des BET-Exzisionspräparats" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroLength> ;
          fhir:reference [ fhir:v "Observation/BreastResectionMacroLength" ]
        ] ;
@@ -4476,11 +6513,53 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroWidth> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroWidth" ]
+       ] ;
+       fhir:name [ fhir:v "Probengröße 2 (Breite) (integriert)" ] ;
+       fhir:description [ fhir:v "Breite des BET-Exzisionspräparats" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionMacroWidth> ;
          fhir:reference [ fhir:v "Observation/BreastResectionMacroWidth" ]
        ] ;
        fhir:name [ fhir:v "Probengröße 2 (Breite) BET" ] ;
        fhir:description [ fhir:v "Breite des BET-Exzisionspräparats" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroDepth> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroDepth" ]
+       ] ;
+       fhir:name [ fhir:v "Probengröße 3 (Tiefe) (integriert)" ] ;
+       fhir:description [ fhir:v "Tiefe des BET-Exzisionspräparats" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -4581,8 +6660,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedPRPercentage> ;
+         fhir:reference [ fhir:v "Observation/IntegratedPRPercentage" ]
+       ] ;
+       fhir:name [ fhir:v "Progesteronrezeptor Prozent - BET" ] ;
+       fhir:description [ fhir:v "Prozentsatz PR-positiver Tumorzellkerne" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionPRStatus> ;
          fhir:reference [ fhir:v "Observation/BreastResectionPRStatus" ]
+       ] ;
+       fhir:name [ fhir:v "Progesteronrezeptor-Status - BET" ] ;
+       fhir:description [ fhir:v "Progesteronrezeptor-Status per Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedPRStatus> ;
+         fhir:reference [ fhir:v "Observation/IntegratedPRStatus" ]
        ] ;
        fhir:name [ fhir:v "Progesteronrezeptor-Status - BET" ] ;
        fhir:description [ fhir:v "Progesteronrezeptor-Status per Immunhistochemie" ] ;
@@ -4644,10 +6765,52 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedSpecimenRadiographyClinical> ;
+         fhir:reference [ fhir:v "Observation/IntegratedSpecimenRadiographyClinical" ]
+       ] ;
+       fhir:name [ fhir:v "Präparateradiographie klinisch (integriert)" ] ;
+       fhir:description [ fhir:v "Angabe ob eine Präparateradiographie beigelegt wurde" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionPresentationMode> ;
          fhir:reference [ fhir:v "Observation/BreastResectionPresentationMode" ]
        ] ;
        fhir:name [ fhir:v "Präsentationsmodus" ] ;
+       fhir:description [ fhir:v "Präsentationsmodus des Präparats" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedPresentationMode> ;
+         fhir:reference [ fhir:v "Observation/IntegratedPresentationMode" ]
+       ] ;
+       fhir:name [ fhir:v "Präsentationsmodus (integriert)" ] ;
        fhir:description [ fhir:v "Präsentationsmodus des Präparats" ] ;
        fhir:example [
          a fhir:Boolean ;
@@ -4670,6 +6833,48 @@
        ] ;
        fhir:name [ fhir:v "pT-Kategorie - BET" ] ;
        fhir:description [ fhir:v "Pathologische T-Kategorie nach TNM" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedPT> ;
+         fhir:reference [ fhir:v "Observation/IntegratedPT" ]
+       ] ;
+       fhir:name [ fhir:v "pT-Kategorie - BET" ] ;
+       fhir:description [ fhir:v "Pathologische T-Kategorie nach TNM" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroQuadrant> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroQuadrant" ]
+       ] ;
+       fhir:name [ fhir:v "Quadrant (integriert)" ] ;
+       fhir:description [ fhir:v "Quadrantenlokalisation des Tumors" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -4712,6 +6917,48 @@
        ] ;
        fhir:name [ fhir:v "QuestionnaireResponse - BET Mamma" ] ;
        fhir:description [ fhir:v "QuestionnaireResponse für BET Mamma mit allen Befunden" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "QuestionnaireResponse"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/QuestionnaireResponse/IntegratedQRBreastResection> ;
+         fhir:reference [ fhir:v "QuestionnaireResponse/IntegratedQRBreastResection" ]
+       ] ;
+       fhir:name [ fhir:v "QuestionnaireResponse - BET Mamma (integriert)" ] ;
+       fhir:description [ fhir:v "QuestionnaireResponse für BET Mamma im integrierten Bericht" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "QuestionnaireResponse"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/QuestionnaireResponse/IntegratedQRLymphNode> ;
+         fhir:reference [ fhir:v "QuestionnaireResponse/IntegratedQRLymphNode" ]
+       ] ;
+       fhir:name [ fhir:v "QuestionnaireResponse - SLN-Biopsie (integriert)" ] ;
+       fhir:description [ fhir:v "QuestionnaireResponse für SLN-Biopsie im integrierten Bericht" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -4791,6 +7038,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedRadiologicalExtent> ;
+         fhir:reference [ fhir:v "Observation/IntegratedRadiologicalExtent" ]
+       ] ;
+       fhir:name [ fhir:v "Radiologische Ausdehnung (integriert)" ] ;
+       fhir:description [ fhir:v "Radiologisch gemessene Ausdehnung des Tumors" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/CoreNeedleBiopsyMicrocalcification> ;
          fhir:reference [ fhir:v "Observation/CoreNeedleBiopsyMicrocalcification" ]
        ] ;
@@ -4833,11 +7101,74 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMarginStatusInvasive> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMarginStatusInvasive" ]
+       ] ;
+       fhir:name [ fhir:v "Resektionsrandstatus invasiv - BET" ] ;
+       fhir:description [ fhir:v "Resektionsrandstatus der invasiven Komponente" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionMarginStatusNonInvasive> ;
          fhir:reference [ fhir:v "Observation/BreastResectionMarginStatusNonInvasive" ]
        ] ;
        fhir:name [ fhir:v "Resektionsrandstatus nichtinvasiv - BET" ] ;
        fhir:description [ fhir:v "Resektionsrandstatus der nichtinvasiven Komponente (DCIS)" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMarginStatusNonInvasive> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMarginStatusNonInvasive" ]
+       ] ;
+       fhir:name [ fhir:v "Resektionsrandstatus nichtinvasiv - BET" ] ;
+       fhir:description [ fhir:v "Resektionsrandstatus der nichtinvasiven Komponente (DCIS)" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedLymphNodeLaterality> ;
+         fhir:reference [ fhir:v "Observation/IntegratedLymphNodeLaterality" ]
+       ] ;
+       fhir:name [ fhir:v "Seitenangabe - SLN" ] ;
+       fhir:description [ fhir:v "Seitenlokalisation: Links" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -4877,6 +7208,27 @@
        fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionLaterality> ;
          fhir:reference [ fhir:v "Observation/BreastResectionLaterality" ]
+       ] ;
+       fhir:name [ fhir:v "Seitenlokalisation - BET" ] ;
+       fhir:description [ fhir:v "Seitenlokalisation des Präparats" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedLaterality> ;
+         fhir:reference [ fhir:v "Observation/IntegratedLaterality" ]
        ] ;
        fhir:name [ fhir:v "Seitenlokalisation - BET" ] ;
        fhir:description [ fhir:v "Seitenlokalisation des Präparats" ] ;
@@ -4938,10 +7290,52 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroSLN1Size> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroSLN1Size" ]
+       ] ;
+       fhir:name [ fhir:v "SLN #1 Größe (integriert)" ] ;
+       fhir:description [ fhir:v "Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/LymphNodeMacroSLN2Size> ;
          fhir:reference [ fhir:v "Observation/LymphNodeMacroSLN2Size" ]
        ] ;
        fhir:name [ fhir:v "SLN #2 Größe" ] ;
+       fhir:description [ fhir:v "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroSLN2Size> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroSLN2Size" ]
+       ] ;
+       fhir:name [ fhir:v "SLN #2 Größe (integriert)" ] ;
        fhir:description [ fhir:v "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm" ] ;
        fhir:example [
          a fhir:Boolean ;
@@ -5005,6 +7399,27 @@
          fhir:reference [ fhir:v "Specimen/LymphNodeSpecimenPart" ]
        ] ;
        fhir:name [ fhir:v "SLN-Exzisat (Einsendespecimen)" ] ;
+       fhir:description [ fhir:v "Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert, Patentblau-markiert" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/IntegratedSLNSpecimenPart> ;
+         fhir:reference [ fhir:v "Specimen/IntegratedSLNSpecimenPart" ]
+       ] ;
+       fhir:name [ fhir:v "SLN-Exzisat (integriert)" ] ;
        fhir:description [ fhir:v "Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert, Patentblau-markiert" ] ;
        fhir:example [
          a fhir:Boolean ;
@@ -5127,8 +7542,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedTubuleScore> ;
+         fhir:reference [ fhir:v "Observation/IntegratedTubuleScore" ]
+       ] ;
+       fhir:name [ fhir:v "Tubulus-Score - BET" ] ;
+       fhir:description [ fhir:v "Glandular differentiation score by Nottingham" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionTumorExtent> ;
          fhir:reference [ fhir:v "Observation/BreastResectionTumorExtent" ]
+       ] ;
+       fhir:name [ fhir:v "Tumorausdehnung - BET" ] ;
+       fhir:description [ fhir:v "Ausdehnung des Tumors in Bezug auf die Brustdrüse" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedTumorExtent> ;
+         fhir:reference [ fhir:v "Observation/IntegratedTumorExtent" ]
        ] ;
        fhir:name [ fhir:v "Tumorausdehnung - BET" ] ;
        fhir:description [ fhir:v "Ausdehnung des Tumors in Bezug auf die Brustdrüse" ] ;
@@ -5153,6 +7610,48 @@
        ] ;
        fhir:name [ fhir:v "Vorchirurgische Therapie" ] ;
        fhir:description [ fhir:v "Angabe zur neoadjuvanten/vorchirurgischen Therapie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedPriorTherapy> ;
+         fhir:reference [ fhir:v "Observation/IntegratedPriorTherapy" ]
+       ] ;
+       fhir:name [ fhir:v "Vorchirurgische Therapie (integriert)" ] ;
+       fhir:description [ fhir:v "Angabe zur neoadjuvanten/vorchirurgischen Therapie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedMacroClock> ;
+         fhir:reference [ fhir:v "Observation/IntegratedMacroClock" ]
+       ] ;
+       fhir:name [ fhir:v "Zifferblattlokalisation (integriert)" ] ;
+       fhir:description [ fhir:v "Uhrzeigerlokalisation des Tumors" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -5211,8 +7710,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedERPercentage> ;
+         fhir:reference [ fhir:v "Observation/IntegratedERPercentage" ]
+       ] ;
+       fhir:name [ fhir:v "Östrogenrezeptor Prozent - BET" ] ;
+       fhir:description [ fhir:v "Prozentsatz ER-positiver Tumorzellkerne" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/BreastResectionERStatus> ;
          fhir:reference [ fhir:v "Observation/BreastResectionERStatus" ]
+       ] ;
+       fhir:name [ fhir:v "Östrogenrezeptor-Status - BET" ] ;
+       fhir:description [ fhir:v "Östrogenrezeptor-Status per Immunhistochemie" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/IntegratedERStatus> ;
+         fhir:reference [ fhir:v "Observation/IntegratedERStatus" ]
        ] ;
        fhir:name [ fhir:v "Östrogenrezeptor-Status - BET" ] ;
        fhir:description [ fhir:v "Östrogenrezeptor-Status per Immunhistochemie" ] ;
@@ -5353,6 +7894,25 @@
            fhir:l fhir:lymph-node-specimens.html
          ] ;
          fhir:title [ fhir:v "Lymph Node Specimen — Specimens" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "integrated-report.html"^^xsd:anyURI ;
+             fhir:l fhir:integrated-report.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "integrated-report.html"^^xsd:anyURI ;
+           fhir:l fhir:integrated-report.html
+         ] ;
+         fhir:title [ fhir:v "Integrated Report (BET + SLN)" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

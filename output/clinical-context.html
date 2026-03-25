@@ -167,6 +167,31 @@
       </li>
     </ul>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Integrierter Bericht (BET + SLN)
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="integrated-report.html">Specimens</a>
+      </li>
+      <li>
+        <a href="ServiceRequest-IntegratedReportRequest.html">ServiceRequest</a>
+      </li>
+      <li>
+        <a href="Observation-IntegratedMacroscopicGrouper.html">MacroscopyGrouper</a>
+      </li>
+      <li>
+        <a href="Observation-IntegratedDiagnosticConclusionGrouper.html">DiagnosticConclusionGrouper</a>
+      </li>
+      <li>
+        <a href="DiagnosticReport-IntegratedReport.html">DiagnosticReport</a>
+      </li>
+      <li>
+        <a href="Composition-IntegratedComposition.html">Composition</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="document-viewer.html">Befund-Viewer</a>
   </li>
@@ -234,6 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#treatment-of-early-localised-breast-cancer" id="markdown-toc-treatment-of-early-localised-breast-cancer">Treatment of early (localised) breast cancer</a></li>
   <li><a href="#treatment-of-locally-advanced-or-metastatic-breast-cancer" id="markdown-toc-treatment-of-locally-advanced-or-metastatic-breast-cancer">Treatment of locally advanced or metastatic breast cancer</a></li>
   <li><a href="#pathology-reporting-and-iccr-datasets" id="markdown-toc-pathology-reporting-and-iccr-datasets">Pathology reporting and ICCR datasets</a></li>
+  <li><a href="#lymph-node-reporting-iccr-model-vs-german-clinical-practice" id="markdown-toc-lymph-node-reporting-iccr-model-vs-german-clinical-practice">Lymph node reporting: ICCR model vs. German clinical practice</a></li>
   <li><a href="#followup-and-quality-of-life" id="markdown-toc-followup-and-quality-of-life">Follow‑up and quality of life</a></li>
   <li><a href="#key-terms-at-a-glance" id="markdown-toc-key-terms-at-a-glance">Key terms at a glance</a></li>
 </ul>
@@ -430,20 +456,56 @@ Therapy is again driven by biological subtype, prior treatments and patient pref
 <p>Ductal carcinoma in situ (DCIS) is a non‑invasive lesion confined to the ductal system without invasion beyond the basement membrane (S3, in situ lesions chapter).<br />
 Key reporting elements in DCIS resections include nuclear grade, architectural pattern, presence and type of necrosis, lesion size/extent, margin status, and presence of calcifications or microinvasion (ICCR DCIS dataset).</p>
 
-<h4 id="2-invasive-carcinoma-resection">2. Invasive carcinoma resection</h4>
+<h4 id="invasive-carcinoma-resection">Invasive carcinoma resection</h4>
 
 <p>Invasive breast carcinoma, most commonly of no special type (NST), has penetrated the basement membrane and can invade surrounding stroma (S3, pathology chapter; ESMO 2024, p. 162 f.).<br />
 The report should include histological type (ICD‑O‑3), Nottingham grade (tubule formation, nuclear pleomorphism, mitotic rate), biomarker status (ER, PR, HER2, Ki‑67), surgical margin assessment, lymphovascular invasion and TNM stage, in line with ICCR core items (ICCR Invasive Breast Carcinoma dataset 2024).</p>
 
-<h4 id="3-neoadjuvant-therapy-resection">3. Neoadjuvant therapy resection</h4>
+<h4 id="neoadjuvant-therapy-resection">Neoadjuvant therapy resection</h4>
 
 <p>After neoadjuvant (pre‑operative) systemic therapy, the resection specimen must be evaluated for response to treatment (S3, neoadjuvant therapy chapter; ESMO 2024, p. 170–172).<br />
 This includes documentation of residual tumour bed size, cellularity and subtype, residual nodal disease, calculation of a Residual Cancer Burden (RCB) or comparable response score, and comparison with pre‑treatment histology and imaging, as specified in the ICCR neoadjuvant dataset (ICCR Invasive Breast – Neoadjuvant dataset).</p>
 
-<h4 id="4-sentinel-lymph-node-biopsy">4. Sentinel lymph node biopsy</h4>
+<h4 id="sentinel-lymph-node-biopsy">Sentinel lymph node biopsy</h4>
 
 <p>Sentinel lymph node (SLN) biopsy is performed for axillary staging in clinically node‑negative patients (S3, axillary surgery chapter; ESMO 2024, p. 167 f.).<br />
 Reports should state the number of sentinel nodes examined, size and category of metastases (isolated tumour cells, micrometastases, macrometastases), use and results of immunohistochemistry (e.g. pancytokeratin), extranodal extension and final pN category, following ICCR recommendations (ICCR Lymph Node dataset).</p>
+
+<hr />
+
+<h3 id="lymph-node-reporting-iccr-model-vs-german-clinical-practice">Lymph node reporting: ICCR model vs. German clinical practice</h3>
+
+<p>The ICCR datasets model the lymph node specimen report as a <strong>standalone report</strong> with its own structured dataset, separate from the breast specimen report. This IG provides an example following this approach (see <a href="lymph-node-specimens.html">SLN-Biopsie Axilla</a>).</p>
+
+<p>In German clinical practice, however, the workflow is typically more integrated. In most institutions, the breast excision specimen and the axillary lymph nodes are submitted together under a <strong>single accession number</strong> and reported as <strong>one combined pathology report</strong>. The following scenarios illustrate the most common workflows:</p>
+
+<h4 id="scenario-a--sln-frozen-section-negative-no-further-axillary-surgery">Scenario A — SLN frozen section negative, no further axillary surgery</h4>
+
+<ol>
+  <li>During breast-conserving surgery, sentinel lymph nodes are sent ahead for <strong>intraoperative frozen section</strong> (Schnellschnitt).</li>
+  <li>The pathologist issues a <strong>preliminary report</strong> (<code class="language-plaintext highlighter-rouge">DiagnosticReport.status = preliminary</code>) with the frozen section diagnosis (e.g. "SLN tumour-free").</li>
+  <li>Based on the negative result, no axillary dissection is performed.</li>
+  <li>After paraffin embedding and staining, the <strong>final report</strong> integrates the breast specimen findings, the definitive SLN assessment, biomarkers and TNM staging into a single document.</li>
+</ol>
+
+<h4 id="scenario-b--sln-frozen-section-positive-axillary-dissection-in-same-operation">Scenario B — SLN frozen section positive, axillary dissection in same operation</h4>
+
+<ol>
+  <li>SLN frozen section reveals metastasis — the surgeon proceeds with axillary lymph node dissection in the same operation.</li>
+  <li>Both the breast specimen and all lymph node specimens (SLN + dissection) are reported together in a <strong>single final report</strong>.</li>
+</ol>
+
+<h4 id="scenario-c--sln-negative-on-frozen-section-positive-on-paraffin-sections">Scenario C — SLN negative on frozen section, positive on paraffin sections</h4>
+
+<ol>
+  <li>Frozen section of SLN is negative — no axillary dissection is performed during the initial operation.</li>
+  <li>Paraffin sections later reveal metastatic involvement in the SLN.</li>
+  <li>A <strong>re-operation</strong> (axillary dissection) is performed, and the additional specimens are reported as an <strong>addendum or follow-up report</strong> assigned to the same case.</li>
+</ol>
+
+<h4 id="representation-in-this-ig">Representation in this IG</h4>
+
+<p>This IG provides both models: the <strong>ICCR-oriented model</strong> (standalone SLN report, see <a href="lymph-node-specimens.html">SLN-Biopsie Axilla</a>) and an <strong><a href="integrated-report.html">integrated report</a></strong> combining the breast specimen and lymph node findings into a single Bundle under one accession number. The ICCR model serves international interoperability and structured data exchange, while the integrated model aligns with routine German pathology practice.</p>
 
 <hr />
 
@@ -530,7 +592,7 @@ Rehabilitation, exercise programmes, nutritional counselling, psycho‑oncology 
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 14:36+0100">2026-03-18</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 16:00+0100">2026-03-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

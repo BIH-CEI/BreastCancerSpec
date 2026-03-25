@@ -1,0 +1,67 @@
+{
+  "resourceType" : "Observation",
+  "id" : "IntegratedMacroscopicGrouper",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2026.0.0"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation IntegratedMacroscopicGrouper</b></p><a name=\"IntegratedMacroscopicGrouper\"> </a><a name=\"hcIntegratedMacroscopicGrouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper\">MII PR Patho Macroscopic Grouperversion: null2026.0.0)</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-IntegratedMacroLength.html\">Observation Specimen size.maximum dimension in Breast tumor</a></li><li><a href=\"Observation-IntegratedMacroWidth.html\">Observation Specimen size additional dimension 1 in Breast tumor</a></li><li><a href=\"Observation-IntegratedMacroDepth.html\">Observation Specimen size additional dimension 2 in Breast tumor</a></li><li><a href=\"Observation-IntegratedMacroWeight.html\">Observation Specimen wt Tiss Qn</a></li><li><a href=\"Observation-IntegratedMacroQuadrant.html\">Observation Quadrant Breast</a></li><li><a href=\"Observation-IntegratedMacroClock.html\">Observation Radial position in breast [Angle] in Breast cancer specimen</a></li><li><a href=\"Observation-IntegratedMacroDistanceNipple.html\">Observation Distance of primary malignant neoplasm of breast to nipple in excised breast specimen (observable entity)</a></li><li><a href=\"Observation-IntegratedMacroBlockCount.html\">Observation Number of paraffin embedded tissue blocks examined from excised specimen (observable entity)</a></li><li><a href=\"Observation-IntegratedMacroSLN1Size.html\">Observation Length of tissue core(s)</a></li><li><a href=\"Observation-IntegratedMacroSLN2Size.html\">Observation Length of tissue core(s)</a></li></ul><p><b>derivedFrom</b>: </p><ul><li><a href=\"QuestionnaireResponse-IntegratedQRBreastResection.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_Mamma_GH' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li><li><a href=\"QuestionnaireResponse-IntegratedQRLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li></ul></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "22634-0"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/Patient4"
+  },
+  "effectiveDateTime" : "2025-02-06T08:30:00+01:00",
+  "performer" : [{
+    "reference" : "Practitioner/PathologistPractitioner"
+  }],
+  "hasMember" : [{
+    "reference" : "Observation/IntegratedMacroLength"
+  },
+  {
+    "reference" : "Observation/IntegratedMacroWidth"
+  },
+  {
+    "reference" : "Observation/IntegratedMacroDepth"
+  },
+  {
+    "reference" : "Observation/IntegratedMacroWeight"
+  },
+  {
+    "reference" : "Observation/IntegratedMacroQuadrant"
+  },
+  {
+    "reference" : "Observation/IntegratedMacroClock"
+  },
+  {
+    "reference" : "Observation/IntegratedMacroDistanceNipple"
+  },
+  {
+    "reference" : "Observation/IntegratedMacroBlockCount"
+  },
+  {
+    "reference" : "Observation/IntegratedMacroSLN1Size"
+  },
+  {
+    "reference" : "Observation/IntegratedMacroSLN2Size"
+  }],
+  "derivedFrom" : [{
+    "reference" : "QuestionnaireResponse/IntegratedQRBreastResection"
+  },
+  {
+    "reference" : "QuestionnaireResponse/IntegratedQRLymphNode"
+  }]
+}

@@ -8,20 +8,22 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://breastcancerspec.org/ImplementationGuide/breastcancerspec | *Version*:0.1.0 |
-| Draft as of 2026-03-18 | *Computable Name*:BreastCancerSpec |
+| Draft as of 2026-03-25 | *Computable Name*:BreastCancerSpec |
 
 ### Introduction
 
 This Implementation Guide (IG) provides FHIR-based examples for structured breast cancer pathology reporting, based on the [MII Kerndatensatz Pathologie](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report) profiles.
 
-Currently available report type:
+### Structure of the Scenarios
+
+The diagram above uses the Core Needle Biopsy scenario as a representative example. The other scenarios (Breast Resection, LN-Report) follow an analogous structure, differing primarily in the number and type of specimens, the applicable microscopic findings, and the diagnostic conclusion observations.
+
+Currently available report types:
 
 1. **Stanzbiopsie**– Core needle biopsy report (Stanz-/Vakuumbiopsie)
-
-Further report types are planned:
-
-* **OP-Präparate** – Surgical specimen reports (resections)
-* **Axilläre Lymphknotenpräparate** – Axillary lymph node specimen reports
+1. **OP-Präparat (BET)**– Breast-conserving excision specimen report
+1. **SLN-Biopsie Axilla**– Sentinel lymph node biopsy report (standalone, ICCR-oriented)
+1. **Integrierter Bericht (BET + SLN)**– Combined breast excision and sentinel lymph node biopsy report under a single accession number, reflecting standard German clinical practice (see[Integrated Report](integrated-report.md))
 
 Each report type includes a complete set of FHIR resources: ServiceRequest, Encounter, Condition, Specimen hierarchy, macroscopic and diagnostic conclusion observations, DiagnosticReport, Composition, Document Bundle, and QuestionnaireResponse.
 
@@ -50,7 +52,7 @@ This IG builds on:
   "name" : "BreastCancerSpec",
   "title" : "Breast Cancer Specification",
   "status" : "draft",
-  "date" : "2026-03-18T14:36:58+01:00",
+  "date" : "2026-03-25T16:00:46+01:00",
   "publisher" : "BIH CEI",
   "contact" : [{
     "name" : "BIH CEI",
@@ -385,7 +387,7 @@ This IG builds on:
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.0"
     },
     {
       "extension" : [{
@@ -668,6 +670,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMacroDistanceNipple"
+      },
+      "name" : "Abstand von Mamille (integriert)",
+      "description" : "Abstand des Tumors von der Mamille",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMacroDistanceNipple"
       },
       "name" : "Abstand von Mamille BET",
@@ -692,6 +706,30 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedAttachedTissue"
+      },
+      "name" : "Anhängendes Gewebe - BET",
+      "description" : "Art des anhängenden Gewebes am Präparat",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedNonSLNPositive"
+      },
+      "name" : "Anzahl befallener Non-SLN",
+      "description" : "Anzahl der befallenen (nicht-Sentinel) axillären Lymphknoten: 0",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodeNonSLNPositive"
       },
       "name" : "Anzahl befallener Non-SLN",
@@ -704,10 +742,34 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedSLNPositive"
+      },
+      "name" : "Anzahl befallener SLN",
+      "description" : "Anzahl der befallenen Sentinel-Lymphknoten: 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodeSLNPositive"
       },
       "name" : "Anzahl befallener SLN",
       "description" : "Anzahl der befallenen Sentinel-Lymphknoten: 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMacroBlockCount"
+      },
+      "name" : "Anzahl Paraffinblöcke (integriert)",
+      "description" : "Anzahl der angefertigten Paraffinblöcke",
       "exampleBoolean" : true
     },
     {
@@ -752,10 +814,34 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedNonSLNExamined"
+      },
+      "name" : "Anzahl untersuchter Non-SLN",
+      "description" : "Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodeNonSLNExamined"
       },
       "name" : "Anzahl untersuchter Non-SLN",
       "description" : "Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedSLNExamined"
+      },
+      "name" : "Anzahl untersuchter SLN",
+      "description" : "Anzahl der untersuchten Sentinel-Lymphknoten: 2",
       "exampleBoolean" : true
     },
     {
@@ -788,6 +874,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedAssociatedDCIS"
+      },
+      "name" : "Assoziiertes DCIS - BET",
+      "description" : "Vorhandensein eines assoziierten DCIS",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/CoreNeedleBiopsyBClassification"
       },
       "name" : "B-Klassifikation - Stanzbiopsie",
@@ -804,6 +902,30 @@ This IG builds on:
       },
       "name" : "Befundmarkierung",
       "description" : "Art der Befundmarkierung am Präparat",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedSpecimenMarking"
+      },
+      "name" : "Befundmarkierung (integriert)",
+      "description" : "Art der Befundmarkierung am Präparat",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/IntegratedReportRequest"
+      },
+      "name" : "BET + SLN Anforderung (integriert)",
+      "description" : "Anforderung für pathologische Aufarbeitung des BET-Exzisionspräparats und SLN-Exzisats",
       "exampleBoolean" : true
     },
     {
@@ -845,6 +967,18 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSpecimenPart"
+      },
+      "name" : "BET-Exzisionspräparat (integriert)",
+      "description" : "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 42x35x18mm, 10g",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DiagnosticReport"
       }],
       "reference" : {
@@ -864,6 +998,30 @@ This IG builds on:
       },
       "name" : "Brustkrebsvorgeschichte",
       "description" : "Anamnese hinsichtlich Brustkrebsvorgeschichte",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedCancerHistory"
+      },
+      "name" : "Brustkrebsvorgeschichte (integriert)",
+      "description" : "Anamnese hinsichtlich Brustkrebsvorgeschichte",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/IntegratedSubstanceCK18"
+      },
+      "name" : "CK-18-IHC Reagenz (integriert)",
+      "description" : "Zytokeratin 18 Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -893,10 +1051,34 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideCK18-01"
+      },
+      "name" : "CK18-IHC Schnitt BET (integriert)",
+      "description" : "Schnitt für Zytokeratin 18 Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       }],
       "reference" : {
         "reference" : "Observation/BreastResectionDCISArchitecture"
+      },
+      "name" : "DCIS Architektur - BET",
+      "description" : "Wachstumsmuster des assoziierten DCIS",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedDCISArchitecture"
       },
       "name" : "DCIS Architektur - BET",
       "description" : "Wachstumsmuster des assoziierten DCIS",
@@ -920,7 +1102,31 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedDCISGrade"
+      },
+      "name" : "DCIS Kerngrading - BET",
+      "description" : "Kerngrading des assoziierten DCIS",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionDCISNecrosis"
+      },
+      "name" : "DCIS Nekrosen - BET",
+      "description" : "Nekrosen im DCIS-Areal",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedDCISNecrosis"
       },
       "name" : "DCIS Nekrosen - BET",
       "description" : "Nekrosen im DCIS-Areal",
@@ -936,6 +1142,18 @@ This IG builds on:
       },
       "name" : "Diagnostic Conclusion Grouper - BET Mamma",
       "description" : "Grouper for all diagnostic conclusion findings in breast resection",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedDiagnosticConclusionGrouper"
+      },
+      "name" : "Diagnostic Conclusion Grouper - Integrated BET + SLN",
+      "description" : "Grouper for all diagnostic conclusion findings in integrated breast resection and sentinel lymph node report",
       "exampleBoolean" : true
     },
     {
@@ -980,6 +1198,18 @@ This IG builds on:
         "valueString" : "Bundle"
       }],
       "reference" : {
+        "reference" : "Bundle/IntegratedDocument"
+      },
+      "name" : "Document Bundle - Integrierter Bericht (BET + SLN)",
+      "description" : "FHIR Document Bundle für den integrierten Befundbericht BET Mamma links mit SLN-Biopsie Axilla",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
         "reference" : "Bundle/LymphNodeDocument"
       },
       "name" : "Document Bundle - SLN-Biopsie Axilla",
@@ -996,6 +1226,18 @@ This IG builds on:
       },
       "name" : "Document Bundle - Stanzbiopsie Mamma",
       "description" : "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbericht",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/IntegratedSubstanceECadherin"
+      },
+      "name" : "E-Cadherin-IHC Reagenz (integriert)",
+      "description" : "E-Cadherin-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1025,10 +1267,34 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideECad-01"
+      },
+      "name" : "E-Cadherin-IHC Schnitt BET (integriert)",
+      "description" : "Schnitt für E-Cadherin-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       }],
       "reference" : {
         "reference" : "Observation/BreastResectionElstonEllisScore"
+      },
+      "name" : "Elston-Ellis Summenscore - BET",
+      "description" : "Elston-Ellis summary score (3+2+1=6)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedElstonEllisScore"
       },
       "name" : "Elston-Ellis Summenscore - BET",
       "description" : "Elston-Ellis summary score (3+2+1=6)",
@@ -1044,6 +1310,18 @@ This IG builds on:
       },
       "name" : "Encounter für BET Mamma",
       "description" : "Stationärer Encounter für brusterhaltende Therapie im Brustzentrum",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/IntegratedEncounter"
+      },
+      "name" : "Encounter für BET Mamma mit SLN-Biopsie",
+      "description" : "Stationärer Encounter für brusterhaltende Therapie mit simultaner SLN-Biopsie",
       "exampleBoolean" : true
     },
     {
@@ -1080,6 +1358,30 @@ This IG builds on:
       },
       "name" : "ER Färbeintensität - BET",
       "description" : "Färbeintensität der ER-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedERIntensity"
+      },
+      "name" : "ER Färbeintensität - BET",
+      "description" : "Färbeintensität der ER-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/IntegratedSubstanceER"
+      },
+      "name" : "ER-IHC Reagenz (integriert)",
+      "description" : "Östrogenrezeptor-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1145,6 +1447,18 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideER01"
+      },
+      "name" : "ER-IHC Schnitt BET (integriert)",
+      "description" : "Schnitt für Östrogenrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       }],
       "reference" : {
@@ -1164,6 +1478,18 @@ This IG builds on:
       },
       "name" : "Estrogen Receptor Status - Stanzbiopsie",
       "description" : "Estrogen receptor status by immunohistochemistry",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedExtranodalExtension"
+      },
+      "name" : "Extranodale Infiltration",
+      "description" : "Extranodale Infiltration durch LK-Metastase: Nicht vorhanden",
       "exampleBoolean" : true
     },
     {
@@ -1196,9 +1522,33 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedFocality"
+      },
+      "name" : "Fokalität - BET",
+      "description" : "Fokalität des Tumors",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionGeneticPredisposition"
       },
       "name" : "Genetische Prädisposition",
+      "description" : "Angabe zur genetischen Prädisposition",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedGeneticPredisposition"
+      },
+      "name" : "Genetische Prädisposition (integriert)",
       "description" : "Angabe zur genetischen Prädisposition",
       "exampleBoolean" : true
     },
@@ -1220,10 +1570,34 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedTotalPositive"
+      },
+      "name" : "Gesamtzahl befallener LK",
+      "description" : "Gesamtzahl befallener Lymphknoten: 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodeTotalPositive"
       },
       "name" : "Gesamtzahl befallener LK",
       "description" : "Gesamtzahl befallener Lymphknoten: 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedTotalExamined"
+      },
+      "name" : "Gesamtzahl untersuchter LK",
+      "description" : "Gesamtzahl untersuchter Lymphknoten: 2",
       "exampleBoolean" : true
     },
     {
@@ -1244,6 +1618,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMacroWeight"
+      },
+      "name" : "Gewicht (integriert)",
+      "description" : "Gewicht des BET-Exzisionspräparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMacroWeight"
       },
       "name" : "Gewicht BET",
@@ -1256,10 +1642,34 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedLargestMetSize"
+      },
+      "name" : "Größte Metastasenausdehnung",
+      "description" : "Ausdehnung der größten metastatischen Infiltration: 1.2 mm",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodeLargestMetSize"
       },
       "name" : "Größte Metastasenausdehnung",
       "description" : "Ausdehnung der größten metastatischen Infiltration: 1.2 mm",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideBlock02-HE01"
+      },
+      "name" : "HE-Schnitt 01 BET - Block02 (integriert)",
+      "description" : "HE-gefärbter Schnitt Scheibe V, Schnittstufe 1",
       "exampleBoolean" : true
     },
     {
@@ -1292,6 +1702,30 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideHE01"
+      },
+      "name" : "HE-Schnitt 01 BET - Tumor (integriert)",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedSLNSlideHE01"
+      },
+      "name" : "HE-Schnitt 01 SLN #1 (integriert)",
+      "description" : "HE-gefärbter Schnitt des SLN #1, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
         "reference" : "Specimen/LymphNodeSpecimenSlideHE01"
       },
       "name" : "HE-Schnitt 01 SLN #1 (Schnittstufe 1)",
@@ -1308,6 +1742,18 @@ This IG builds on:
       },
       "name" : "HE-Schnitt 01 Stanzbiopsie",
       "description" : "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideBlock02-HE02"
+      },
+      "name" : "HE-Schnitt 02 BET - Block02 (integriert)",
+      "description" : "HE-gefärbter Schnitt Scheibe V, Schnittstufe 2",
       "exampleBoolean" : true
     },
     {
@@ -1340,6 +1786,30 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideHE02"
+      },
+      "name" : "HE-Schnitt 02 BET - Tumor (integriert)",
+      "description" : "HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedSLNSlideHE02"
+      },
+      "name" : "HE-Schnitt 02 SLN #1 (integriert)",
+      "description" : "HE-gefärbter Schnitt des SLN #1, Schnittstufe 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
         "reference" : "Specimen/LymphNodeSpecimenSlideHE02"
       },
       "name" : "HE-Schnitt 02 SLN #1 (Schnittstufe 2)",
@@ -1364,6 +1834,18 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
+        "reference" : "Specimen/IntegratedSLNSlideHE03"
+      },
+      "name" : "HE-Schnitt 03 SLN #2 (integriert)",
+      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
         "reference" : "Specimen/LymphNodeSpecimenSlideHE03"
       },
       "name" : "HE-Schnitt 03 SLN #2 (Schnittstufe 1)",
@@ -1380,6 +1862,18 @@ This IG builds on:
       },
       "name" : "HE-Schnitt 03 Stanzbiopsie",
       "description" : "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 3",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedSLNSlideHE04"
+      },
+      "name" : "HE-Schnitt 04 SLN #2 (integriert)",
+      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 2",
       "exampleBoolean" : true
     },
     {
@@ -1457,6 +1951,54 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideRR-Inferior-HE01"
+      },
+      "name" : "HE-Schnitt RR inferior BET (integriert)",
+      "description" : "HE-gefärbter Schnitt Resektionsrand inferior",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideRR-Lateral-HE01"
+      },
+      "name" : "HE-Schnitt RR lateral BET (integriert)",
+      "description" : "HE-gefärbter Schnitt Resektionsrand lateral",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideRR-Medial-HE01"
+      },
+      "name" : "HE-Schnitt RR medial BET (integriert)",
+      "description" : "HE-gefärbter Schnitt Resektionsrand medial",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideRR-Superior-HE01"
+      },
+      "name" : "HE-Schnitt RR superior BET (integriert)",
+      "description" : "HE-gefärbter Schnitt Resektionsrand superior",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       }],
       "reference" : {
@@ -1472,7 +2014,31 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedHER2ISH"
+      },
+      "name" : "HER2 Amplifikation (ISH) - BET",
+      "description" : "HER2-Amplifikationsstatus per In-situ-Hybridisierung",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionHER2Overall"
+      },
+      "name" : "HER2 Gesamtstatus - BET",
+      "description" : "HER2-Gesamtstatus basierend auf IHC und ISH",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedHER2Overall"
       },
       "name" : "HER2 Gesamtstatus - BET",
       "description" : "HER2-Gesamtstatus basierend auf IHC und ISH",
@@ -1524,6 +2090,18 @@ This IG builds on:
       },
       "name" : "HER2-B-DISH Schnitt 02 Stanzbiopsie",
       "description" : "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/IntegratedSubstanceHER2IHC"
+      },
+      "name" : "HER2-IHC Reagenz (integriert)",
+      "description" : "HER2-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1589,10 +2167,34 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideHER2IHC01"
+      },
+      "name" : "HER2-IHC Schnitt BET (integriert)",
+      "description" : "Schnitt für HER2-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       }],
       "reference" : {
         "reference" : "Observation/BreastResectionHER2IHC"
+      },
+      "name" : "HER2-Score (IHC) - BET",
+      "description" : "HER2-Score per Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedHER2IHC"
       },
       "name" : "HER2-Score (IHC) - BET",
       "description" : "HER2-Score per Immunhistochemie",
@@ -1628,10 +2230,58 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedHistologicalType"
+      },
+      "name" : "Histologischer Tumortyp - BET",
+      "description" : "Histologischer Typ nach WHO/ICD-O-3",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/IntegratedComposition"
+      },
+      "name" : "Integrierter Befundbericht BET + SLN Composition",
+      "description" : "FHIR Composition für den integrierten Befundbericht BET Mamma links mit SLN-Biopsie Axilla",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionInvasiveCarcinoma"
       },
       "name" : "Invasives Karzinom - BET",
       "description" : "Vorhandensein eines invasiven Karzinoms",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedInvasiveCarcinoma"
+      },
+      "name" : "Invasives Karzinom - BET",
+      "description" : "Vorhandensein eines invasiven Karzinoms",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedITCCount"
+      },
+      "name" : "ITC-befallene LK",
+      "description" : "Gesamtzahl ausschließlich ITC-befallener Lymphknoten: 0",
       "exampleBoolean" : true
     },
     {
@@ -1664,7 +2314,31 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedNuclearPleomorphism"
+      },
+      "name" : "Kernpleomorphie-Score - BET",
+      "description" : "Nuclear pleomorphism score by Nottingham",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionKi67"
+      },
+      "name" : "Ki-67 Index - BET",
+      "description" : "Ki-67 Proliferationsindex",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedKi67"
       },
       "name" : "Ki-67 Index - BET",
       "description" : "Ki-67 Proliferationsindex",
@@ -1680,6 +2354,18 @@ This IG builds on:
       },
       "name" : "Ki-67 Index - Stanzbiopsie",
       "description" : "Ki-67 proliferation index",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/IntegratedSubstanceKi67"
+      },
+      "name" : "Ki-67-IHC Reagenz (integriert)",
+      "description" : "Ki-67-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1704,6 +2390,18 @@ This IG builds on:
       },
       "name" : "Ki-67-IHC Reagenz Stanzbiopsie",
       "description" : "Ki-67-Antikörper für Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlideKi67-01"
+      },
+      "name" : "Ki-67-IHC Schnitt BET (integriert)",
+      "description" : "Schnitt für Ki-67-Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -1760,10 +2458,46 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedBETComment"
+      },
+      "name" : "Kommentar - BET",
+      "description" : "Freitextkommentar zum Befund",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedSLNComment"
+      },
+      "name" : "Kommentar - SLN",
+      "description" : "Kommentar zum SLN-Befund",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodeComment"
       },
       "name" : "Kommentar - SLN",
       "description" : "Kommentar zum SLN-Befund",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedLymphNodeProcedure"
+      },
+      "name" : "LK OP Prozedur - SLN",
+      "description" : "Art der Lymphknoten-Operation: Sentinel-Lymphknoten-Biopsie",
       "exampleBoolean" : true
     },
     {
@@ -1796,10 +2530,46 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedLVI"
+      },
+      "name" : "Lymphgefäßinvasion - BET",
+      "description" : "Lymphovaskuläre Invasion",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMacroMetCount"
+      },
+      "name" : "Makrometastatisch befallene LK",
+      "description" : "Gesamtzahl makrometastatisch befallener Lymphknoten: 0",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodeMacroMetCount"
       },
       "name" : "Makrometastatisch befallene LK",
       "description" : "Gesamtzahl makrometastatisch befallener Lymphknoten: 0",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMacroscopicGrouper"
+      },
+      "name" : "Makroskopische Befunde Grouper (integriert)",
+      "description" : "Gruppierung aller makroskopischen Messungen beider Präparate (BET + SLN)",
       "exampleBoolean" : true
     },
     {
@@ -1836,6 +2606,18 @@ This IG builds on:
       },
       "name" : "Makroskopische Befunde Grouper Stanzbiopsie",
       "description" : "Gruppierung aller makroskopischen Messungen der Stanzzylinder",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/IntegratedDiagnosisConfirmed"
+      },
+      "name" : "Mammakarzinom-Diagnose (integrierter Bericht)",
+      "description" : "Bestätigte Diagnose eines invasiven Mammakarzinoms, Indikation zur BET mit SLN-Biopsie",
       "exampleBoolean" : true
     },
     {
@@ -1892,6 +2674,18 @@ This IG builds on:
         "valueString" : "DiagnosticReport"
       }],
       "reference" : {
+        "reference" : "DiagnosticReport/IntegratedImagingReport"
+      },
+      "name" : "Mammografie/Ultraschall-Befund (integriert)",
+      "description" : "Bildgebungsbefund als SupportingInfo für den integrierten Bericht",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
         "reference" : "DiagnosticReport/BreastResectionImagingReport"
       },
       "name" : "Mammografie/Ultraschall-Befund BET",
@@ -1916,7 +2710,31 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMaterialType"
+      },
+      "name" : "Materialart - BET",
+      "description" : "Art des eingesendeten Materials",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMaxDiameterInvasive"
+      },
+      "name" : "Max Durchmesser invasiv - BET",
+      "description" : "Maximaler Durchmesser der invasiven Komponente",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMaxDiameterInvasive"
       },
       "name" : "Max Durchmesser invasiv - BET",
       "description" : "Maximaler Durchmesser der invasiven Komponente",
@@ -1940,10 +2758,46 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMaxOverallDiameter"
+      },
+      "name" : "Max Gesamtdurchmesser - BET",
+      "description" : "Maximaler Gesamtdurchmesser des Tumors inkl. DCIS",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMicrocalcification"
       },
       "name" : "Mikrokalzifikationen - BET",
       "description" : "Vorhandensein von Mikrokalzifikationen",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMicrocalcification"
+      },
+      "name" : "Mikrokalzifikationen - BET",
+      "description" : "Vorhandensein von Mikrokalzifikationen",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMicroMetCount"
+      },
+      "name" : "Mikrometastatisch befallene LK",
+      "description" : "Gesamtzahl mikrometastatisch befallener Lymphknoten: 1",
       "exampleBoolean" : true
     },
     {
@@ -1988,7 +2842,31 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMinDistanceInvasive"
+      },
+      "name" : "Mindestabstand invasiv - BET",
+      "description" : "Mindestabstand der invasiven Komponente zum Resektionsrand",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMinDistanceNonInvasive"
+      },
+      "name" : "Mindestabstand nichtinvasiv - BET",
+      "description" : "Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMinDistanceNonInvasive"
       },
       "name" : "Mindestabstand nichtinvasiv - BET",
       "description" : "Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand",
@@ -2012,7 +2890,31 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMitoticRateScore"
+      },
+      "name" : "Mitoserate-Score - BET",
+      "description" : "Mitotic rate score by Nottingham",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMitosisCount"
+      },
+      "name" : "Mitosezahl - BET",
+      "description" : "Absolute Mitosezahl pro 10 HPF",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMitosisCount"
       },
       "name" : "Mitosezahl - BET",
       "description" : "Absolute Mitosezahl pro 10 HPF",
@@ -2048,6 +2950,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMorphologyFreeText"
+      },
+      "name" : "Morphologie Freitext - BET",
+      "description" : "Freitextbeschreibung der Tumormorphologie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/CoreNeedleBiopsyMorphologyFreeText"
       },
       "name" : "Morphology Free Text - Stanzbiopsie",
@@ -2061,6 +2975,18 @@ This IG builds on:
       }],
       "reference" : {
         "reference" : "Observation/BreastResectionNonInvasiveLesion"
+      },
+      "name" : "Nichtinvasive Läsion - BET",
+      "description" : "Vorhandensein einer nichtinvasiven Läsion",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedNonInvasiveLesion"
       },
       "name" : "Nichtinvasive Läsion - BET",
       "description" : "Vorhandensein einer nichtinvasiven Läsion",
@@ -2108,6 +3034,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedNottinghamGrade"
+      },
+      "name" : "Nottingham-Grad - BET",
+      "description" : "Nottingham histologic grade",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/CoreNeedleBiopsyNuclearPleomorphism"
       },
       "name" : "Nuclear Pleomorphism Score - Stanzbiopsie",
@@ -2132,10 +3070,46 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedClosestMargin"
+      },
+      "name" : "Nächster tumorfreier Resektionsrand - BET",
+      "description" : "Lokalisation des nächsten tumorfreien Resektionsrands",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionOperativeProcedure"
       },
       "name" : "Operatives Verfahren - BET",
       "description" : "Art des operativen Verfahrens",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedOperativeProcedure"
+      },
+      "name" : "Operatives Verfahren - BET",
+      "description" : "Art des operativen Verfahrens",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/IntegratedSubstancep40"
+      },
+      "name" : "p40-IHC Reagenz (integriert)",
+      "description" : "p40-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -2168,6 +3142,30 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
+        "reference" : "Specimen/IntegratedBETSlidep40-01"
+      },
+      "name" : "p40-IHC Schnitt BET (integriert)",
+      "description" : "Schnitt für p40-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSpecimenBlock01"
+      },
+      "name" : "Paraffinblock 01 BET - Tumor (integriert)",
+      "description" : "Paraffineinbettung Tumorareal Scheibe III",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenBlock01"
       },
       "name" : "Paraffinblock 01 BET - Tumor zentral (Scheibe III)",
@@ -2192,10 +3190,34 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
+        "reference" : "Specimen/IntegratedSLNSpecimenBlock01"
+      },
+      "name" : "Paraffinblock 01 SLN #1 (integriert)",
+      "description" : "Paraffineinbettung SLN #1, halbiert, enthält Mikrometastase",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
         "reference" : "Specimen/CoreNeedleBiopsySpecimenBlock01"
       },
       "name" : "Paraffinblock 01 Stanzbiopsie",
       "description" : "Paraffineinbettung der Stanzzylinder Block 01",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSpecimenBlock02"
+      },
+      "name" : "Paraffinblock 02 BET - Tumor (integriert)",
+      "description" : "Paraffineinbettung Tumorareal Scheibe V",
       "exampleBoolean" : true
     },
     {
@@ -2228,9 +3250,33 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
+        "reference" : "Specimen/IntegratedSLNSpecimenBlock02"
+      },
+      "name" : "Paraffinblock 02 SLN #2 (integriert)",
+      "description" : "Paraffineinbettung SLN #2, halbiert, tumorfrei",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenBlock03"
       },
       "name" : "Paraffinblock 03 BET - RR superior",
+      "description" : "Paraffineinbettung Resektionsrand superior",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSpecimenBlock03"
+      },
+      "name" : "Paraffinblock 03 BET - RR superior (integriert)",
       "description" : "Paraffineinbettung Resektionsrand superior",
       "exampleBoolean" : true
     },
@@ -2252,6 +3298,30 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
+        "reference" : "Specimen/IntegratedBETSpecimenBlock04"
+      },
+      "name" : "Paraffinblock 04 BET - RR inferior (integriert)",
+      "description" : "Paraffineinbettung Resektionsrand inferior",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSpecimenBlock05"
+      },
+      "name" : "Paraffinblock 05 BET - RR medial (integriert)",
+      "description" : "Paraffineinbettung Resektionsrand medial, Scheibe I",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenBlock05"
       },
       "name" : "Paraffinblock 05 BET - RR medial (Scheibe I)",
@@ -2264,10 +3334,34 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
+        "reference" : "Specimen/IntegratedBETSpecimenBlock06"
+      },
+      "name" : "Paraffinblock 06 BET - RR lateral (integriert)",
+      "description" : "Paraffineinbettung Resektionsrand lateral, Scheibe VIII",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenBlock06"
       },
       "name" : "Paraffinblock 06 BET - RR lateral (Scheibe VIII)",
       "description" : "Paraffineinbettung Resektionsrand lateral, Scheibe VIII",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/IntegratedReport"
+      },
+      "name" : "Pathologiebericht BET + SLN (integriert)",
+      "description" : "Integrierter Pathologiebericht nach BET Mamma links mit SLN-Biopsie Axilla",
       "exampleBoolean" : true
     },
     {
@@ -2348,6 +3442,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedPN"
+      },
+      "name" : "pN-Kategorie - SLN",
+      "description" : "Pathologische N-Kategorie: pN1mi(sn)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodePN"
       },
       "name" : "pN-Kategorie - SLN",
@@ -2364,6 +3470,30 @@ This IG builds on:
       },
       "name" : "PR Färbeintensität - BET",
       "description" : "Färbeintensität der PR-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedPRIntensity"
+      },
+      "name" : "PR Färbeintensität - BET",
+      "description" : "Färbeintensität der PR-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/IntegratedSubstancePR"
+      },
+      "name" : "PR-IHC Reagenz (integriert)",
+      "description" : "Progesteronrezeptor-Antikörper für Immunhistochemie",
       "exampleBoolean" : true
     },
     {
@@ -2429,12 +3559,36 @@ This IG builds on:
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedBETSlidePR01"
+      },
+      "name" : "PR-IHC Schnitt BET (integriert)",
+      "description" : "Schnitt für Progesteronrezeptor-Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       }],
       "reference" : {
         "reference" : "Observation/BreastResectionSpecimenLimited"
       },
       "name" : "Proben limitiert auswertbar",
+      "description" : "Angabe ob die Probe limitiert auswertbar ist",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedSpecimenLimited"
+      },
+      "name" : "Proben limitiert auswertbar (integriert)",
       "description" : "Angabe ob die Probe limitiert auswertbar ist",
       "exampleBoolean" : true
     },
@@ -2456,6 +3610,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMacroLength"
+      },
+      "name" : "Probengröße 1 (Länge) (integriert)",
+      "description" : "Maximale Länge des BET-Exzisionspräparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMacroLength"
       },
       "name" : "Probengröße 1 (Länge) BET",
@@ -2468,10 +3634,34 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMacroWidth"
+      },
+      "name" : "Probengröße 2 (Breite) (integriert)",
+      "description" : "Breite des BET-Exzisionspräparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMacroWidth"
       },
       "name" : "Probengröße 2 (Breite) BET",
       "description" : "Breite des BET-Exzisionspräparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMacroDepth"
+      },
+      "name" : "Probengröße 3 (Tiefe) (integriert)",
+      "description" : "Tiefe des BET-Exzisionspräparats",
       "exampleBoolean" : true
     },
     {
@@ -2528,7 +3718,31 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedPRPercentage"
+      },
+      "name" : "Progesteronrezeptor Prozent - BET",
+      "description" : "Prozentsatz PR-positiver Tumorzellkerne",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionPRStatus"
+      },
+      "name" : "Progesteronrezeptor-Status - BET",
+      "description" : "Progesteronrezeptor-Status per Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedPRStatus"
       },
       "name" : "Progesteronrezeptor-Status - BET",
       "description" : "Progesteronrezeptor-Status per Immunhistochemie",
@@ -2564,9 +3778,33 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedSpecimenRadiographyClinical"
+      },
+      "name" : "Präparateradiographie klinisch (integriert)",
+      "description" : "Angabe ob eine Präparateradiographie beigelegt wurde",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionPresentationMode"
       },
       "name" : "Präsentationsmodus",
+      "description" : "Präsentationsmodus des Präparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedPresentationMode"
+      },
+      "name" : "Präsentationsmodus (integriert)",
       "description" : "Präsentationsmodus des Präparats",
       "exampleBoolean" : true
     },
@@ -2580,6 +3818,30 @@ This IG builds on:
       },
       "name" : "pT-Kategorie - BET",
       "description" : "Pathologische T-Kategorie nach TNM",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedPT"
+      },
+      "name" : "pT-Kategorie - BET",
+      "description" : "Pathologische T-Kategorie nach TNM",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMacroQuadrant"
+      },
+      "name" : "Quadrant (integriert)",
+      "description" : "Quadrantenlokalisation des Tumors",
       "exampleBoolean" : true
     },
     {
@@ -2604,6 +3866,30 @@ This IG builds on:
       },
       "name" : "QuestionnaireResponse - BET Mamma",
       "description" : "QuestionnaireResponse für BET Mamma mit allen Befunden",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/IntegratedQRBreastResection"
+      },
+      "name" : "QuestionnaireResponse - BET Mamma (integriert)",
+      "description" : "QuestionnaireResponse für BET Mamma im integrierten Bericht",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/IntegratedQRLymphNode"
+      },
+      "name" : "QuestionnaireResponse - SLN-Biopsie (integriert)",
+      "description" : "QuestionnaireResponse für SLN-Biopsie im integrierten Bericht",
       "exampleBoolean" : true
     },
     {
@@ -2648,6 +3934,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedRadiologicalExtent"
+      },
+      "name" : "Radiologische Ausdehnung (integriert)",
+      "description" : "Radiologisch gemessene Ausdehnung des Tumors",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/CoreNeedleBiopsyMicrocalcification"
       },
       "name" : "Relevante Mikroverkalkungen - Stanzbiopsie",
@@ -2672,10 +3970,46 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMarginStatusInvasive"
+      },
+      "name" : "Resektionsrandstatus invasiv - BET",
+      "description" : "Resektionsrandstatus der invasiven Komponente",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionMarginStatusNonInvasive"
       },
       "name" : "Resektionsrandstatus nichtinvasiv - BET",
       "description" : "Resektionsrandstatus der nichtinvasiven Komponente (DCIS)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMarginStatusNonInvasive"
+      },
+      "name" : "Resektionsrandstatus nichtinvasiv - BET",
+      "description" : "Resektionsrandstatus der nichtinvasiven Komponente (DCIS)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedLymphNodeLaterality"
+      },
+      "name" : "Seitenangabe - SLN",
+      "description" : "Seitenlokalisation: Links",
       "exampleBoolean" : true
     },
     {
@@ -2697,6 +4031,18 @@ This IG builds on:
       }],
       "reference" : {
         "reference" : "Observation/BreastResectionLaterality"
+      },
+      "name" : "Seitenlokalisation - BET",
+      "description" : "Seitenlokalisation des Präparats",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedLaterality"
       },
       "name" : "Seitenlokalisation - BET",
       "description" : "Seitenlokalisation des Präparats",
@@ -2732,9 +4078,33 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedMacroSLN1Size"
+      },
+      "name" : "SLN #1 Größe (integriert)",
+      "description" : "Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodeMacroSLN2Size"
       },
       "name" : "SLN #2 Größe",
+      "description" : "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMacroSLN2Size"
+      },
+      "name" : "SLN #2 Größe (integriert)",
       "description" : "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm",
       "exampleBoolean" : true
     },
@@ -2771,6 +4141,18 @@ This IG builds on:
         "reference" : "Specimen/LymphNodeSpecimenPart"
       },
       "name" : "SLN-Exzisat (Einsendespecimen)",
+      "description" : "Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert, Patentblau-markiert",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/IntegratedSLNSpecimenPart"
+      },
+      "name" : "SLN-Exzisat (integriert)",
       "description" : "Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert, Patentblau-markiert",
       "exampleBoolean" : true
     },
@@ -2840,7 +4222,31 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedTubuleScore"
+      },
+      "name" : "Tubulus-Score - BET",
+      "description" : "Glandular differentiation score by Nottingham",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionTumorExtent"
+      },
+      "name" : "Tumorausdehnung - BET",
+      "description" : "Ausdehnung des Tumors in Bezug auf die Brustdrüse",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedTumorExtent"
       },
       "name" : "Tumorausdehnung - BET",
       "description" : "Ausdehnung des Tumors in Bezug auf die Brustdrüse",
@@ -2856,6 +4262,30 @@ This IG builds on:
       },
       "name" : "Vorchirurgische Therapie",
       "description" : "Angabe zur neoadjuvanten/vorchirurgischen Therapie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedPriorTherapy"
+      },
+      "name" : "Vorchirurgische Therapie (integriert)",
+      "description" : "Angabe zur neoadjuvanten/vorchirurgischen Therapie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedMacroClock"
+      },
+      "name" : "Zifferblattlokalisation (integriert)",
+      "description" : "Uhrzeigerlokalisation des Tumors",
       "exampleBoolean" : true
     },
     {
@@ -2888,7 +4318,31 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/IntegratedERPercentage"
+      },
+      "name" : "Östrogenrezeptor Prozent - BET",
+      "description" : "Prozentsatz ER-positiver Tumorzellkerne",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/BreastResectionERStatus"
+      },
+      "name" : "Östrogenrezeptor-Status - BET",
+      "description" : "Östrogenrezeptor-Status per Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/IntegratedERStatus"
       },
       "name" : "Östrogenrezeptor-Status - BET",
       "description" : "Östrogenrezeptor-Status per Immunhistochemie",
@@ -2954,6 +4408,15 @@ This IG builds on:
         }],
         "nameUrl" : "lymph-node-specimens.html",
         "title" : "Lymph Node Specimen — Specimens",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "integrated-report.html"
+        }],
+        "nameUrl" : "integrated-report.html",
+        "title" : "Integrated Report (BET + SLN)",
         "generation" : "markdown"
       },
       {

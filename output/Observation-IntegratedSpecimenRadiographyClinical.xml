@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="IntegratedSpecimenRadiographyClinical"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation IntegratedSpecimenRadiographyClinical</b></p><a name="IntegratedSpecimenRadiographyClinical"> </a><a name="hcIntegratedSpecimenRadiographyClinical"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 80865008:363702006=185008008}">Präparateradiographie beigelegt</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 52101004}">Ja, beigelegt</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="80865008:363702006=185008008"/>
+      <display value="80865008|Specimen mammography|:363702006|Has focus|=185008008|Medical reports sent|"/>
+    </coding>
+    <text value="Präparateradiographie beigelegt"/>
+  </code>
+  <subject>
+    <reference value="Patient/Patient4"/>
+  </subject>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="52101004"/>
+      <display value="Present (qualifier value)"/>
+    </coding>
+    <text value="Ja, beigelegt"/>
+  </valueCodeableConcept>
+</Observation>
