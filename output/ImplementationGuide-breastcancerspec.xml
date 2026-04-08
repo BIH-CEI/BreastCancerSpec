@@ -11,7 +11,7 @@
   <name value="BreastCancerSpec"/>
   <title value="Breast Cancer Specification"/>
   <status value="draft"/>
-  <date value="2026-03-25T16:00:46+01:00"/>
+  <date value="2026-04-08T14:38:52+02:00"/>
   <publisher value="BIH CEI"/>
   <contact>
     <name value="BIH CEI"/>
@@ -262,7 +262,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#1.1.0"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -634,6 +634,17 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodeMacroSLNExamined"/>
+      </reference>
+      <name value="Anzahl untersuchter SLN"/>
+      <description value="Anzahl untersuchter Sentinel-Lymphknoten: 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/LymphNodeSLNExamined"/>
       </reference>
       <name value="Anzahl untersuchter SLN"/>
@@ -660,17 +671,6 @@
       </reference>
       <name value="Assoziiertes DCIS - BET"/>
       <description value="Vorhandensein eines assoziierten DCIS"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/CoreNeedleBiopsyBClassification"/>
-      </reference>
-      <name value="B-Klassifikation - Stanzbiopsie"/>
-      <description value="B-Classification according to NHSBSP"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -825,6 +825,17 @@
       </reference>
       <name value="CK18-IHC Schnitt BET (integriert)"/>
       <description value="Schnitt für Zytokeratin 18 Immunhistochemie"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/CoreNeedleBiopsyInterpretation"/>
+      </reference>
+      <name value="Core Needle Biopsy Interpretation - Stanzbiopsie"/>
+      <description value="Core Needle Biopsy Interpretation according to NHSBSP"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1338,6 +1349,17 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/LymphNodeMacroTotalExamined"/>
+      </reference>
+      <name value="Gesamtzahl untersuchter Lymphknoten"/>
+      <description value="Gesamtzahl untersuchter Lymphknoten: 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/IntegratedMacroWeight"/>
       </reference>
       <name value="Gewicht (integriert)"/>
@@ -1536,10 +1558,10 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/IntegratedSLNSlideHE03"/>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE03"/>
       </reference>
-      <name value="HE-Schnitt 03 SLN #2 (integriert)"/>
-      <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 1"/>
+      <name value="HE-Schnitt 03 SLN #1 (Schnittstufe 3)"/>
+      <description value="HE-gefärbter Schnitt des SLN #1, Schnittstufe 3 — Mikrometastase nachweisbar"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1547,9 +1569,9 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/LymphNodeSpecimenSlideHE03"/>
+        <reference value="Specimen/IntegratedSLNSlideHE03"/>
       </reference>
-      <name value="HE-Schnitt 03 SLN #2 (Schnittstufe 1)"/>
+      <name value="HE-Schnitt 03 SLN #2 (integriert)"/>
       <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 1"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -1569,10 +1591,10 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/IntegratedSLNSlideHE04"/>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE04"/>
       </reference>
-      <name value="HE-Schnitt 04 SLN #2 (integriert)"/>
-      <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 2"/>
+      <name value="HE-Schnitt 04 SLN #1 (Schnittstufe 4)"/>
+      <description value="HE-gefärbter Schnitt des SLN #1, Schnittstufe 4"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1580,9 +1602,9 @@
         <valueString value="Specimen"/>
       </extension>
       <reference>
-        <reference value="Specimen/LymphNodeSpecimenSlideHE04"/>
+        <reference value="Specimen/IntegratedSLNSlideHE04"/>
       </reference>
-      <name value="HE-Schnitt 04 SLN #2 (Schnittstufe 2)"/>
+      <name value="HE-Schnitt 04 SLN #2 (integriert)"/>
       <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 2"/>
       <exampleBoolean value="true"/>
     </resource>
@@ -1595,6 +1617,72 @@
       </reference>
       <name value="HE-Schnitt 04 Stanzbiopsie"/>
       <description value="Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 4"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE05"/>
+      </reference>
+      <name value="HE-Schnitt 05 SLN #1 (Schnittstufe 5)"/>
+      <description value="HE-gefärbter Schnitt des SLN #1, Schnittstufe 5"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE06"/>
+      </reference>
+      <name value="HE-Schnitt 06 SLN #2 (Schnittstufe 1)"/>
+      <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 1"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE07"/>
+      </reference>
+      <name value="HE-Schnitt 07 SLN #2 (Schnittstufe 2)"/>
+      <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE08"/>
+      </reference>
+      <name value="HE-Schnitt 08 SLN #2 (Schnittstufe 3)"/>
+      <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 3"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE09"/>
+      </reference>
+      <name value="HE-Schnitt 09 SLN #2 (Schnittstufe 4)"/>
+      <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 4"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/LymphNodeSpecimenSlideHE10"/>
+      </reference>
+      <name value="HE-Schnitt 10 SLN #2 (Schnittstufe 5)"/>
+      <description value="HE-gefärbter Schnitt des SLN #2, Schnittstufe 5"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -2537,17 +2625,6 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/CoreNeedleBiopsyMitoticRate"/>
-      </reference>
-      <name value="Mitotic Rate Score - Stanzbiopsie"/>
-      <description value="Mitotic rate score by Nottingham"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
         <reference value="Observation/BreastResectionMorphologyFreeText"/>
       </reference>
       <name value="Morphologie Freitext - BET"/>
@@ -2640,17 +2717,6 @@
       </reference>
       <name value="Nottingham-Grad - BET"/>
       <description value="Nottingham histologic grade"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/CoreNeedleBiopsyNuclearPleomorphism"/>
-      </reference>
-      <name value="Nuclear Pleomorphism Score - Stanzbiopsie"/>
-      <description value="Nuclear pleomorphism score by Nottingham"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -3696,17 +3762,6 @@
       </reference>
       <name value="Stanzzylinder-Präparat (Einsendespecimen)"/>
       <description value="2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/CoreNeedleBiopsyTubuleFormation"/>
-      </reference>
-      <name value="Tubule Formation Score - Stanzbiopsie"/>
-      <description value="Glandular differentiation score by Nottingham"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

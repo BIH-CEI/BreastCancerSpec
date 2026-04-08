@@ -950,17 +950,24 @@ Title: "pT-Kategorie - BET"
 Description: "Pathologische T-Kategorie nach TNM"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.0"
 * status = #final
-* code.coding[0] = $loinc#21899-0 "Primary tumor.pathology Cancer"
-* code.coding[+] = $sct#384625004 "pT category (observable entity)"
-* code.text = "Primärtumor (pT-Kategorie)"
+* code
+  * extension[+]
+    * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
+    * valueCodeableConcept.coding
+      * system = "https://www.uicc.org/resources/tnm"
+      * code = #p
+      * display = "p"
+  * coding = $sct#384625004 "pT category (observable entity)"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept = $sct#1352559008 "Union for International Cancer Control pT1 (qualifier value)"
-* valueCodeableConcept.text = "pT1"
-* derivedFrom = Reference(QuestionnaireResponseBreastResection)
+* valueCodeableConcept.coding
+  * system = "https://www.uicc.org/resources/tnm"
+  * code = #T1
+  * display = "T1"
+* method.coding
+  * system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
+  * code = #8
+  * display = "8. Auflage"
 
 // ============================================================================
 // KOMMENTAR (1 Observation)

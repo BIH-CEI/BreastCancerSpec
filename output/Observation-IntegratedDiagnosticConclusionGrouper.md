@@ -6,7 +6,7 @@
 
 ## Example Observation: Diagnostic Conclusion Grouper - Integrated BET + SLN
 
-Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper)
+Profile: [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper) version: 2026.0.0
 
 **basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-IntegratedReportRequest.md)
 
@@ -63,7 +63,7 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
 * [Observation ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH](Observation-IntegratedHER2ISH.md)
 * [Observation HER2 [Interpretation] in Tissue](Observation-IntegratedHER2Overall.md)
 * [Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain](Observation-IntegratedKi67.md)
-* [Observation Primary tumor.pathology Cancer](Observation-IntegratedPT.md)
+* [Observation pT category (observable entity)](Observation-IntegratedPT.md)
 * [Observation Pathology report comments [Interpretation] Narrative](Observation-IntegratedBETComment.md)
 * [Observation Surgery procedure for regional nodes at facility.YYY Cancer](Observation-IntegratedLymphNodeProcedure.md)
 * [Observation Anatomic part Laterality](Observation-IntegratedLymphNodeLaterality.md)
@@ -78,7 +78,7 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
 * [Observation Lymph nodes with isolated tumor cells [#] in Cancer specimen by Light microscopy](Observation-IntegratedITCCount.md)
 * [Observation Lymph node metastatic deposit.max dimension [Length] in Cancer specimen by Light microscopy](Observation-IntegratedLargestMetSize.md)
 * [Observation Extranodal extension of carcinoma [Presence] in Cancer specimen by Light microscopy](Observation-IntegratedExtranodalExtension.md)
-* [Observation Regional lymph nodes.clinical [Class] Cancer](Observation-IntegratedPN.md)
+* [Observation pN category (observable entity)](Observation-IntegratedPN.md)
 * [Observation Pathology report comments [Interpretation] Narrative](Observation-IntegratedSLNComment.md)
 
 **derivedFrom**: 

@@ -375,18 +375,24 @@ Title: "pN-Kategorie - SLN"
 Description: "Pathologische N-Kategorie: pN1mi(sn)"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.0"
 * status = #final
-* code.coding[0] = $loinc#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
-* code.coding[+] = $sct#371494008 "pN category (observable entity)"
-* code.text = "Regionäre Lymphknoten (pN-Kategorie)"
+* code
+  * extension[+]
+    * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"
+    * valueCodeableConcept.coding
+      * system = "https://www.uicc.org/resources/tnm"
+      * code = #p
+      * display = "p"
+  * coding = $sct#371494008 "pN category (observable entity)"
 * subject = Reference(Patient4)
-* specimen = Reference(LymphNodeSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(LymphNodeReportRequest)
-* valueCodeableConcept.coding.system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-n-kategorie-werte"
-* valueCodeableConcept.coding.code = #pN1mi(sn)
-* valueCodeableConcept.text = "pN1mi(sn)"
-* derivedFrom = Reference(QuestionnaireResponseLymphNode)
+* valueCodeableConcept.coding
+  * system = "https://www.uicc.org/resources/tnm"
+  * code = #N1mi(sn)
+  * display = "N1mi(sn)"
+* method.coding
+  * system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
+  * code = #8
+  * display = "8. Auflage"
 
 // ============================================================================
 // 15. Kommentar

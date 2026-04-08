@@ -20,4 +20,3 @@ Description: "Anforderung für pathologische Aufarbeitung des Sentinel-Lymphknot
 * specimen = Reference(LymphNodeSpecimenPart)
 * supportingInfo[+] = Reference(LymphNodeDiagnosisConfirmed)
 * supportingInfo[+] = Reference(LymphNodeImagingReport)
-* supportingInfo[+] = Reference(LymphNodeSpecimenLimited)

@@ -24,6 +24,12 @@ Description: "Pathologiebericht nach Sentinel-Lymphknoten-Biopsie der linken Axi
 * specimen[+] = Reference(LymphNodeSpecimenSlideHE02)
 * specimen[+] = Reference(LymphNodeSpecimenSlideHE03)
 * specimen[+] = Reference(LymphNodeSpecimenSlideHE04)
+* specimen[+] = Reference(LymphNodeSpecimenSlideHE05)
+* specimen[+] = Reference(LymphNodeSpecimenSlideHE06)
+* specimen[+] = Reference(LymphNodeSpecimenSlideHE07)
+* specimen[+] = Reference(LymphNodeSpecimenSlideHE08)
+* specimen[+] = Reference(LymphNodeSpecimenSlideHE09)
+* specimen[+] = Reference(LymphNodeSpecimenSlideHE10)
 
 * result[macroscopic-observations] = Reference(LymphNodeMacroscopicGrouper)
 * result[diagnostic-conclusion] = Reference(LymphNodeDiagnosticConclusionGrouper)

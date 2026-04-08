@@ -1,14 +1,14 @@
-# HE-Schnitt 03 SLN #2 (Schnittstufe 1) - Breast Cancer Specification v0.1.0
+# HE-Schnitt 03 SLN #1 (Schnittstufe 3) - Breast Cancer Specification v0.1.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **HE-Schnitt 03 SLN #2 (Schnittstufe 1)**
+* **HE-Schnitt 03 SLN #1 (Schnittstufe 3)**
 
-## Example Specimen: HE-Schnitt 03 SLN #2 (Schnittstufe 1)
+## Example Specimen: HE-Schnitt 03 SLN #1 (Schnittstufe 3)
 
-Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen), [MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore)
+Profiles: [MII PR Patho Specimen](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen) version: 2026.0.0, [MII PR Biobank Specimen Bioprobe Core](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore) version: 2026.0.0
 
-**identifier**: `https://pathologie.example-hospital.de/fhir/fn/befundbericht`/E_25_211_A_2_1_HE_01
+**identifier**: `https://pathologie.example-hospital.de/fhir/fn/befundbericht`/E_25_211_A_1_1_HE_03
 
 **accessionIdentifier**: `https://pathologie.example-hospital.de/fhir/fn/befundbericht`/E_25_211
 
@@ -18,7 +18,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
 
 **subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
 
-**parent**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)](Specimen-LymphNodeSpecimenBlock02.md)
+**parent**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)](Specimen-LymphNodeSpecimenBlock01.md)
 
 ### Collections
 
@@ -27,7 +27,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
 | - | **Collected[x]** | **Method** |
 | * | 2025-02-06 09:10:00+0100 | Tissue processing technique (procedure) |
 
-> **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: Schnittherstellung (Schnittstufe 1)**procedure**: Sectioning of tissue block (procedure)**time**: 2025-02-06 09:10:00+0100
+> **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: Schnittherstellung (Schnittstufe 3)**procedure**: Sectioning of tissue block (procedure)**time**: 2025-02-06 09:10:00+0100
 
 > **processing****MII EX Biobank Temperaturbedingungen**: 20-25 °C**description**: HE-Färbung**procedure**: Hematoxylin and eosin stain method (procedure)**time**: 2025-02-06 09:25:00+0100
 
@@ -52,7 +52,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
   },
   "identifier" : [{
     "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
-    "value" : "E_25_211_A_2_1_HE_01"
+    "value" : "E_25_211_A_1_1_HE_03"
   }],
   "accessionIdentifier" : {
     "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
@@ -70,7 +70,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
     "reference" : "Patient/Patient4"
   },
   "parent" : [{
-    "reference" : "Specimen/LymphNodeSpecimenBlock02"
+    "reference" : "Specimen/LymphNodeSpecimenBlock01"
   }],
   "collection" : {
     "collectedDateTime" : "2025-02-06T09:10:00+01:00",
@@ -100,7 +100,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
         }
       }
     }],
-    "description" : "Schnittherstellung (Schnittstufe 1)",
+    "description" : "Schnittherstellung (Schnittstufe 3)",
     "procedure" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",

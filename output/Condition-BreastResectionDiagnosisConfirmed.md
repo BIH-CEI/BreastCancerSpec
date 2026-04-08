@@ -6,7 +6,7 @@
 
 ## Example Condition: Mammakarzinom-Diagnose bestätigt
 
-Profile: [MII PR Diagnose Conditionversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose)
+Profile: [MII PR Diagnose Condition](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose) version: 2026.0.0
 
 **clinicalStatus**: Active
 

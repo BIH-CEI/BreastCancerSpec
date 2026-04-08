@@ -261,7 +261,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2026-03-25
+            as of 2026-04-08
           
         
       </td>
@@ -288,8 +288,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#structure-of-the-scenarios" id="markdown-toc-structure-of-the-scenarios">Structure of the Scenarios</a></li>
   <li><a href="#scope" id="markdown-toc-scope">Scope</a></li>
+  <li><a href="#structure-of-the-scenarios" id="markdown-toc-structure-of-the-scenarios">Structure of the Scenarios</a></li>
   <li><a href="#dependencies" id="markdown-toc-dependencies">Dependencies</a></li>
 </ul>
 
@@ -297,6 +297,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="introduction">Introduction</h3>
 
 <p>This Implementation Guide (IG) provides FHIR-based examples for structured breast cancer pathology reporting, based on the <a href="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report">MII Kerndatensatz Pathologie</a> profiles.</p>
+
+<h3 id="scope">Scope</h3>
+
+<p>This IG focuses on <strong>example instances</strong> that demonstrate how to use the MII Pathology module profiles for breast cancer reporting according to ICCR (International Collaboration on Cancer Reporting) datasets and the Questionnaires developed by the Bundesverband Deutscher Pathologen e.V.</p>
+
+<p>Currently available report types:</p>
+
+<ol>
+  <li><strong>Stanzbiopsie</strong> – Core needle biopsy report (Stanz-/Vakuumbiopsie)</li>
+  <li><strong>OP-Präparat (BET)</strong> – Breast-conserving excision specimen report</li>
+  <li><strong>SLN-Biopsie Axilla</strong> – Sentinel lymph node biopsy report (standalone, ICCR-oriented)</li>
+  <li><strong>Integrierter Bericht (BET + SLN)</strong> – Combined breast excision and sentinel lymph node biopsy report under a single accession number, reflecting standard German clinical practice (see <a href="integrated-report.html">Integrated Report</a>)</li>
+</ol>
+
+<p>Each report type includes a complete set of FHIR resources: ServiceRequest, Encounter, Condition, Specimen hierarchy, macroscopic and diagnostic conclusion observations, DiagnosticReport, Composition, Document Bundle, and QuestionnaireResponse.</p>
 
 <h3 id="structure-of-the-scenarios">Structure of the Scenarios</h3>
 
@@ -312,21 +327,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </div>
 
 <p>The diagram above uses the Core Needle Biopsy scenario as a representative example. The other scenarios (Breast Resection, LN-Report) follow an analogous structure, differing primarily in the number and type of specimens, the applicable microscopic findings, and the diagnostic conclusion observations.</p>
-
-<p>Currently available report types:</p>
-
-<ol>
-  <li><strong>Stanzbiopsie</strong> – Core needle biopsy report (Stanz-/Vakuumbiopsie)</li>
-  <li><strong>OP-Präparat (BET)</strong> – Breast-conserving excision specimen report</li>
-  <li><strong>SLN-Biopsie Axilla</strong> – Sentinel lymph node biopsy report (standalone, ICCR-oriented)</li>
-  <li><strong>Integrierter Bericht (BET + SLN)</strong> – Combined breast excision and sentinel lymph node biopsy report under a single accession number, reflecting standard German clinical practice (see <a href="integrated-report.html">Integrated Report</a>)</li>
-</ol>
-
-<p>Each report type includes a complete set of FHIR resources: ServiceRequest, Encounter, Condition, Specimen hierarchy, macroscopic and diagnostic conclusion observations, DiagnosticReport, Composition, Document Bundle, and QuestionnaireResponse.</p>
-
-<h3 id="scope">Scope</h3>
-
-<p>This IG focuses on <strong>example instances</strong> that demonstrate how to use the MII Pathology module profiles for breast cancer reporting according to ICCR (International Collaboration on Cancer Reporting) datasets and the Questionnaires developed by the Bundesverband Deutscher Pathologen e.V.</p>
 
 <h3 id="dependencies">Dependencies</h3>
 
@@ -356,7 +356,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 25, 2026 16:00+0100">2026-03-25</span>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/example-publisher">BIH CEI</a>.  Package breastcancerspec#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 8, 2026 14:38+0200">2026-04-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

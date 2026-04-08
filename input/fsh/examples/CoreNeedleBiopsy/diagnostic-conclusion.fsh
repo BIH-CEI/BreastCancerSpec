@@ -21,16 +21,13 @@ Description: "Grouper for all diagnostic conclusion findings in core needle biop
 * hasMember[+] = Reference(CoreNeedleBiopsyMorphologyFreeText)
 * hasMember[+] = Reference(CoreNeedleBiopsyNottinghamGrade)
 * hasMember[+] = Reference(CoreNeedleBiopsyNottinghamSummaryScore)
-* hasMember[+] = Reference(CoreNeedleBiopsyTubuleFormation)
-* hasMember[+] = Reference(CoreNeedleBiopsyNuclearPleomorphism)
-* hasMember[+] = Reference(CoreNeedleBiopsyMitoticRate)
 * hasMember[+] = Reference(CoreNeedleBiopsyERStatus)
 * hasMember[+] = Reference(CoreNeedleBiopsyERPercentage)
 * hasMember[+] = Reference(CoreNeedleBiopsyPRStatus)
 * hasMember[+] = Reference(CoreNeedleBiopsyPRPercentage)
 * hasMember[+] = Reference(CoreNeedleBiopsyHER2ISH)
 * hasMember[+] = Reference(CoreNeedleBiopsyKi67)
-* hasMember[+] = Reference(CoreNeedleBiopsyBClassification)
+* hasMember[+] = Reference(CoreNeedleBiopsyInterpretation)
 * hasMember[+] = Reference(CoreNeedleBiopsyMicrocalcification)
 * hasMember[+] = Reference(CoreNeedleBiopsySpecimenRadiography)
 * hasMember[+] = Reference(CoreNeedleBiopsyMicrocalcificationCorrelation)
@@ -84,7 +81,7 @@ Description: "Nottingham histologic grade"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+* code = $sct#372276001 "Nottingham combined grade of primary malignant neoplasm of breast (observable entity)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)
 * effectiveDateTime = "2025-01-17"
@@ -92,7 +89,8 @@ Description: "Nottingham histologic grade"
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
 * valueCodeableConcept = $sct#1155703007 "G2: Moderately differentiated histologic grade (qualifier value)"
 * valueCodeableConcept.text = "Nottingham Grad 2"
-* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+* derivedFrom[+] = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+* derivedFrom[+] = Reference(CoreNeedleBiopsyNottinghamSummaryScore)
 
 // Nottingham Summary Score
 Instance: CoreNeedleBiopsyNottinghamSummaryScore
@@ -113,63 +111,12 @@ Description: "Elston-Ellis summary score (3+2+1=6)"
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
 * valueQuantity = 6 '{score}' "score"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
-
-// Tubule Formation Score
-Instance: CoreNeedleBiopsyTubuleFormation
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Tubule Formation Score - Stanzbiopsie"
-Description: "Glandular differentiation score by Nottingham"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $loinc#85321-8 "Glandular differentiation [Score] in Breast cancer specimen by Nottingham"
-* subject = Reference(Patient4)
-* specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)
-* effectiveDateTime = "2025-01-17"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueQuantity = 3 '{score}' "score"
-* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
-
-// Nuclear Pleomorphism Score
-Instance: CoreNeedleBiopsyNuclearPleomorphism
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Nuclear Pleomorphism Score - Stanzbiopsie"
-Description: "Nuclear pleomorphism score by Nottingham"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $loinc#44645-0 "Nuclear pleomorphism in Breast tumor by Nottingham"
-* subject = Reference(Patient4)
-* specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)
-* effectiveDateTime = "2025-01-17"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueQuantity = 2 '{score}' "score"
-* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
-
-// Mitotic Rate Score
-Instance: CoreNeedleBiopsyMitoticRate
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Mitotic Rate Score - Stanzbiopsie"
-Description: "Mitotic rate score by Nottingham"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $loinc#85300-2 "Mitotic rate [Score] in Breast cancer specimen by Nottingham"
-* subject = Reference(Patient4)
-* specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)
-* effectiveDateTime = "2025-01-17"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueQuantity = 1 '{score}' "score"
-* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+* component[+].code = $loinc#85321-8 "Glandular differentiation [Score] in Breast cancer specimen by Nottingham"
+* component[=].valueQuantity = 3 '{score}' "score"
+* component[+].code = $loinc#44645-0 "Nuclear pleomorphism in Breast tumor by Nottingham"
+* component[=].valueQuantity = 2 '{score}' "score"
+* component[+].code = $loinc#85300-2 "Mitotic rate [Score] in Breast cancer specimen by Nottingham"
+* component[=].valueQuantity = 1 '{score}' "score"
 
 // ER Status
 Instance: CoreNeedleBiopsyERStatus
@@ -277,7 +224,7 @@ Description: "HER2 status by in-situ hybridization (B-DISH)"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $sct#1363314005 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)"
+* code = $sct#1363314005 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideHER2-01)
 * effectiveDateTime = "2025-01-17"
@@ -314,12 +261,12 @@ Description: "Ki-67 proliferation index"
 * component[=].valueCodeableConcept = $hgnc#HGNC:7107 "MKI67"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
-// B-Klassifikation (NHSBSP)
-Instance: CoreNeedleBiopsyBClassification
+// Core Needle Biopsy Interpretation (NHSBSP)
+Instance: CoreNeedleBiopsyInterpretation
 InstanceOf: $mii-patho-finding
 Usage: #example
-Title: "B-Klassifikation - Stanzbiopsie"
-Description: "B-Classification according to NHSBSP"
+Title: "Core Needle Biopsy Interpretation - Stanzbiopsie"
+Description: "Core Needle Biopsy Interpretation according to NHSBSP"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory

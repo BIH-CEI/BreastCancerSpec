@@ -38,16 +38,10 @@ Description: "FHIR Composition for structured sentinel lymph node biopsy patholo
 <p>Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert)</p>
 
 <h3>Makroskopie</h3>
-<table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
-<tbody>
-<tr><td>SLN #1</td><td>12 × 8 × 6 mm, Patentblau-markiert, halbiert</td></tr>
-<tr><td>SLN #2</td><td>10 × 7 × 5 mm, Patentblau-markiert, halbiert</td></tr>
-<tr><td>Einbettung</td><td>Beide SLN vollständig eingebettet, je 1 Paraffinblock</td></tr>
-</tbody>
-</table>
+<p>Zwei, 12 × 8 × 6 mm (A_1) bzw. 10 × 7 × 5 mm (A_2) durchmessende Sentinellymphknoten werden jeweils halbiert und separat eingebettet (je 1 Paraffinblock). Makroskopisch zeigen sich leicht fleckige rötlich-weiße Schnittflächen ohne Herdbefund.</p>
 
 <h3>Mikroskopie</h3>
-<p>SLN #1: Im Randsinus Nachweis einer Mikrometastase, maximal 1,2 mm messend. Keine Kapseldurchbrechung. SLN #2: In allen Schnittstufen tumorfrei. Kein Anhalt für isolierte Tumorzellen (ITC).</p>
+<p>Nach Anfertigung von jeweils 5, im Abstand von 1 mm zueinander liegenden HE-gefärbten Schnittstufen der Lymphknotenhälften zeigt sich eine ausgeprägte Sinushistiozytose und mäßiggradige Follikelhyperplasie. Im Sentinellymphknoten A_1 findet sich in Schnittstufe 3 eine 1,3 mm große metastatische Absiedlung des bekannten Mammakarzinoms ohne Kapselbeziehung. Im Sentinellymphknoten A_2 sind alle Schnittstufen tumorfrei. Kein Anhalt für isolierte Tumorzellen (ITC).</p>
 
 <h3>Diagnostische Schlussfolgerung</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">

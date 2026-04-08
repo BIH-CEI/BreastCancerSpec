@@ -6,7 +6,7 @@
     <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation CoreNeedleBiopsyNottinghamGrade</b></p><a name="CoreNeedleBiopsyNottinghamGrade"> </a><a name="hcCoreNeedleBiopsyNottinghamGrade"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href="ServiceRequest-CoreNeedleBiopsyReportRequest.html">ServiceRequest Breast Pathology biopsy report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://loinc.org 22637-3}">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 44648-4}">Histologic grade [Score] in Breast cancer specimen by Nottingham</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href="Practitioner-PathologistPractitioner.html">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 1155703007}">Nottingham Grad 2</span></p><p><b>specimen</b>: <a href="Specimen-CoreNeedleBiopsySpecimenSlideHE01.html">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href="QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation CoreNeedleBiopsyNottinghamGrade</b></p><a name="CoreNeedleBiopsyNottinghamGrade"> </a><a name="hcCoreNeedleBiopsyNottinghamGrade"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href="ServiceRequest-CoreNeedleBiopsyReportRequest.html">ServiceRequest Breast Pathology biopsy report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span>, <span title="Codes:{http://loinc.org 22637-3}">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 372276001}">Nottingham combined grade of primary malignant neoplasm of breast (observable entity)</span></p><p><b>subject</b>: <a href="Patient-Patient4.html">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-01-17</p><p><b>performer</b>: <a href="Practitioner-PathologistPractitioner.html">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 1155703007}">Nottingham Grad 2</span></p><p><b>specimen</b>: <a href="Specimen-CoreNeedleBiopsySpecimenSlideHE01.html">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: </p><ul><li><a href="QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.html">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li><li><a href="Observation-CoreNeedleBiopsyNottinghamSummaryScore.html">Observation Histologic grade [Score] in Breast cancer specimen by Nottingham</a></li></ul></div>
   </text>
   <basedOn>
     <reference value="ServiceRequest/CoreNeedleBiopsyReportRequest"/>
@@ -26,9 +26,9 @@
   </category>
   <code>
     <coding>
-      <system value="http://loinc.org"/>
-      <code value="44648-4"/>
-      <display value="Histologic grade [Score] in Breast cancer specimen by Nottingham"/>
+      <system value="http://snomed.info/sct"/>
+      <code value="372276001"/>
+      <display value="Nottingham combined grade of primary malignant neoplasm of breast (observable entity)"/>
     </coding>
   </code>
   <subject>
@@ -51,5 +51,8 @@
   </specimen>
   <derivedFrom>
     <reference value="QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"/>
+  </derivedFrom>
+  <derivedFrom>
+    <reference value="Observation/CoreNeedleBiopsyNottinghamSummaryScore"/>
   </derivedFrom>
 </Observation>

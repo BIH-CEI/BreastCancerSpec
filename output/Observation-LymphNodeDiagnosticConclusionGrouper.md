@@ -6,7 +6,7 @@
 
 ## Example Observation: Diagnostic Conclusion Grouper - SLN Axilla
 
-Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper)
+Profile: [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper) version: 2026.0.0
 
 **basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-LymphNodeReportRequest.md)
 
@@ -37,7 +37,7 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
 * [Observation Lymph nodes with isolated tumor cells [#] in Cancer specimen by Light microscopy](Observation-LymphNodeITCCount.md)
 * [Observation Lymph node metastatic deposit.max dimension [Length] in Cancer specimen by Light microscopy](Observation-LymphNodeLargestMetSize.md)
 * [Observation Extranodal extension of carcinoma [Presence] in Cancer specimen by Light microscopy](Observation-LymphNodeExtranodalExtension.md)
-* [Observation Regional lymph nodes.clinical [Class] Cancer](Observation-LymphNodePN.md)
+* [Observation pN category (observable entity)](Observation-LymphNodePN.md)
 * [Observation Pathology report comments [Interpretation] Narrative](Observation-LymphNodeComment.md)
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseLymphNode.md)

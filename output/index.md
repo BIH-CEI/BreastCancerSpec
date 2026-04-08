@@ -8,15 +8,15 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://breastcancerspec.org/ImplementationGuide/breastcancerspec | *Version*:0.1.0 |
-| Draft as of 2026-03-25 | *Computable Name*:BreastCancerSpec |
+| Draft as of 2026-04-08 | *Computable Name*:BreastCancerSpec |
 
 ### Introduction
 
 This Implementation Guide (IG) provides FHIR-based examples for structured breast cancer pathology reporting, based on the [MII Kerndatensatz Pathologie](https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report) profiles.
 
-### Structure of the Scenarios
+### Scope
 
-The diagram above uses the Core Needle Biopsy scenario as a representative example. The other scenarios (Breast Resection, LN-Report) follow an analogous structure, differing primarily in the number and type of specimens, the applicable microscopic findings, and the diagnostic conclusion observations.
+This IG focuses on **example instances** that demonstrate how to use the MII Pathology module profiles for breast cancer reporting according to ICCR (International Collaboration on Cancer Reporting) datasets and the Questionnaires developed by the Bundesverband Deutscher Pathologen e.V.
 
 Currently available report types:
 
@@ -27,9 +27,9 @@ Currently available report types:
 
 Each report type includes a complete set of FHIR resources: ServiceRequest, Encounter, Condition, Specimen hierarchy, macroscopic and diagnostic conclusion observations, DiagnosticReport, Composition, Document Bundle, and QuestionnaireResponse.
 
-### Scope
+### Structure of the Scenarios
 
-This IG focuses on **example instances** that demonstrate how to use the MII Pathology module profiles for breast cancer reporting according to ICCR (International Collaboration on Cancer Reporting) datasets and the Questionnaires developed by the Bundesverband Deutscher Pathologen e.V.
+The diagram above uses the Core Needle Biopsy scenario as a representative example. The other scenarios (Breast Resection, LN-Report) follow an analogous structure, differing primarily in the number and type of specimens, the applicable microscopic findings, and the diagnostic conclusion observations.
 
 ### Dependencies
 
@@ -52,7 +52,7 @@ This IG builds on:
   "name" : "BreastCancerSpec",
   "title" : "Breast Cancer Specification",
   "status" : "draft",
-  "date" : "2026-03-25T16:00:46+01:00",
+  "date" : "2026-04-08T14:38:52+02:00",
   "publisher" : "BIH CEI",
   "contact" : [{
     "name" : "BIH CEI",
@@ -387,7 +387,7 @@ This IG builds on:
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
     },
     {
       "extension" : [{
@@ -850,6 +850,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodeMacroSLNExamined"
+      },
+      "name" : "Anzahl untersuchter SLN",
+      "description" : "Anzahl untersuchter Sentinel-Lymphknoten: 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/LymphNodeSLNExamined"
       },
       "name" : "Anzahl untersuchter SLN",
@@ -878,18 +890,6 @@ This IG builds on:
       },
       "name" : "Assoziiertes DCIS - BET",
       "description" : "Vorhandensein eines assoziierten DCIS",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/CoreNeedleBiopsyBClassification"
-      },
-      "name" : "B-Klassifikation - Stanzbiopsie",
-      "description" : "B-Classification according to NHSBSP",
       "exampleBoolean" : true
     },
     {
@@ -1058,6 +1058,18 @@ This IG builds on:
       },
       "name" : "CK18-IHC Schnitt BET (integriert)",
       "description" : "Schnitt für Zytokeratin 18 Immunhistochemie",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/CoreNeedleBiopsyInterpretation"
+      },
+      "name" : "Core Needle Biopsy Interpretation - Stanzbiopsie",
+      "description" : "Core Needle Biopsy Interpretation according to NHSBSP",
       "exampleBoolean" : true
     },
     {
@@ -1618,6 +1630,18 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
+        "reference" : "Observation/LymphNodeMacroTotalExamined"
+      },
+      "name" : "Gesamtzahl untersuchter Lymphknoten",
+      "description" : "Gesamtzahl untersuchter Lymphknoten: 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
         "reference" : "Observation/IntegratedMacroWeight"
       },
       "name" : "Gewicht (integriert)",
@@ -1834,10 +1858,10 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/IntegratedSLNSlideHE03"
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE03"
       },
-      "name" : "HE-Schnitt 03 SLN #2 (integriert)",
-      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 1",
+      "name" : "HE-Schnitt 03 SLN #1 (Schnittstufe 3)",
+      "description" : "HE-gefärbter Schnitt des SLN #1, Schnittstufe 3 — Mikrometastase nachweisbar",
       "exampleBoolean" : true
     },
     {
@@ -1846,9 +1870,9 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/LymphNodeSpecimenSlideHE03"
+        "reference" : "Specimen/IntegratedSLNSlideHE03"
       },
-      "name" : "HE-Schnitt 03 SLN #2 (Schnittstufe 1)",
+      "name" : "HE-Schnitt 03 SLN #2 (integriert)",
       "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 1",
       "exampleBoolean" : true
     },
@@ -1870,10 +1894,10 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/IntegratedSLNSlideHE04"
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE04"
       },
-      "name" : "HE-Schnitt 04 SLN #2 (integriert)",
-      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 2",
+      "name" : "HE-Schnitt 04 SLN #1 (Schnittstufe 4)",
+      "description" : "HE-gefärbter Schnitt des SLN #1, Schnittstufe 4",
       "exampleBoolean" : true
     },
     {
@@ -1882,9 +1906,9 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
-        "reference" : "Specimen/LymphNodeSpecimenSlideHE04"
+        "reference" : "Specimen/IntegratedSLNSlideHE04"
       },
-      "name" : "HE-Schnitt 04 SLN #2 (Schnittstufe 2)",
+      "name" : "HE-Schnitt 04 SLN #2 (integriert)",
       "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 2",
       "exampleBoolean" : true
     },
@@ -1898,6 +1922,78 @@ This IG builds on:
       },
       "name" : "HE-Schnitt 04 Stanzbiopsie",
       "description" : "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 4",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE05"
+      },
+      "name" : "HE-Schnitt 05 SLN #1 (Schnittstufe 5)",
+      "description" : "HE-gefärbter Schnitt des SLN #1, Schnittstufe 5",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE06"
+      },
+      "name" : "HE-Schnitt 06 SLN #2 (Schnittstufe 1)",
+      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 1",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE07"
+      },
+      "name" : "HE-Schnitt 07 SLN #2 (Schnittstufe 2)",
+      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE08"
+      },
+      "name" : "HE-Schnitt 08 SLN #2 (Schnittstufe 3)",
+      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 3",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE09"
+      },
+      "name" : "HE-Schnitt 09 SLN #2 (Schnittstufe 4)",
+      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 4",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE10"
+      },
+      "name" : "HE-Schnitt 10 SLN #2 (Schnittstufe 5)",
+      "description" : "HE-gefärbter Schnitt des SLN #2, Schnittstufe 5",
       "exampleBoolean" : true
     },
     {
@@ -2926,18 +3022,6 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/CoreNeedleBiopsyMitoticRate"
-      },
-      "name" : "Mitotic Rate Score - Stanzbiopsie",
-      "description" : "Mitotic rate score by Nottingham",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
         "reference" : "Observation/BreastResectionMorphologyFreeText"
       },
       "name" : "Morphologie Freitext - BET",
@@ -3038,18 +3122,6 @@ This IG builds on:
       },
       "name" : "Nottingham-Grad - BET",
       "description" : "Nottingham histologic grade",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/CoreNeedleBiopsyNuclearPleomorphism"
-      },
-      "name" : "Nuclear Pleomorphism Score - Stanzbiopsie",
-      "description" : "Nuclear pleomorphism score by Nottingham",
       "exampleBoolean" : true
     },
     {
@@ -4190,18 +4262,6 @@ This IG builds on:
       },
       "name" : "Stanzzylinder-Präparat (Einsendespecimen)",
       "description" : "2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/CoreNeedleBiopsyTubuleFormation"
-      },
-      "name" : "Tubule Formation Score - Stanzbiopsie",
-      "description" : "Glandular differentiation score by Nottingham",
       "exampleBoolean" : true
     },
     {

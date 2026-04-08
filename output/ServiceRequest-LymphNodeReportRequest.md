@@ -6,7 +6,7 @@
 
 ## Example ServiceRequest: SLN-Biopsie Anforderung
 
-Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request)
+Profile: [MII PR Patho Service Request](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request) version: 2026.0.0
 
 **identifier**: Placer Identifier/PATH-RPT-2025-211
 
@@ -32,9 +32,8 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
 
 * [Condition Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse](Condition-LymphNodeDiagnosisConfirmed.md)
 * [Diagnostic Report for 'MG Breast Screening' for '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](DiagnosticReport-LymphNodeImagingReport.md)
-* [Observation Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)](Observation-LymphNodeSpecimenLimited.md)
 
-**specimen**: [Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.](Specimen-LymphNodeSpecimenPart.md)
+**specimen**: [Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.](Specimen-LymphNodeSpecimenPart.md)
 
 
 
@@ -98,9 +97,6 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
   },
   {
     "reference" : "DiagnosticReport/LymphNodeImagingReport"
-  },
-  {
-    "reference" : "Observation/LymphNodeSpecimenLimited"
   }],
   "specimen" : [{
     "reference" : "Specimen/LymphNodeSpecimenPart"

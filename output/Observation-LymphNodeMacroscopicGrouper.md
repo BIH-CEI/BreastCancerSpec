@@ -6,7 +6,7 @@
 
 ## Example Observation: Makroskopische Befunde Grouper SLN
 
-Profile: [MII PR Patho Macroscopic Grouperversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper)
+Profile: [MII PR Patho Macroscopic Grouper](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper) version: 2026.0.0
 
 **status**: Final
 
@@ -24,8 +24,10 @@ Profile: [MII PR Patho Macroscopic Grouperversion: null2026.0.0)](https://simpli
 
 **hasMember**: 
 
-* [Observation Length of tissue core(s)](Observation-LymphNodeMacroSLN1Size.md)
-* [Observation Length of tissue core(s)](Observation-LymphNodeMacroSLN2Size.md)
+* [Observation Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy](Observation-LymphNodeMacroSLNExamined.md)
+* [Observation Lymph nodes examined [#] in Cancer specimen by Light microscopy](Observation-LymphNodeMacroTotalExamined.md)
+* [Observation Length of lymph node in excised specimen (observable entity)](Observation-LymphNodeMacroSLN1Size.md)
+* [Observation Length of lymph node in excised specimen (observable entity)](Observation-LymphNodeMacroSLN2Size.md)
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseLymphNode.md)
 
@@ -68,6 +70,12 @@ Profile: [MII PR Patho Macroscopic Grouperversion: null2026.0.0)](https://simpli
     }]
   },
   "hasMember" : [{
+    "reference" : "Observation/LymphNodeMacroSLNExamined"
+  },
+  {
+    "reference" : "Observation/LymphNodeMacroTotalExamined"
+  },
+  {
     "reference" : "Observation/LymphNodeMacroSLN1Size"
   },
   {

@@ -76,9 +76,33 @@ Description: "FHIR Document Bundle für den vollständigen SLN-Befundbericht"
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE04"
 * entry[=].resource = LymphNodeSpecimenSlideHE04
 
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE05"
+* entry[=].resource = LymphNodeSpecimenSlideHE05
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE06"
+* entry[=].resource = LymphNodeSpecimenSlideHE06
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE07"
+* entry[=].resource = LymphNodeSpecimenSlideHE07
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE08"
+* entry[=].resource = LymphNodeSpecimenSlideHE08
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE09"
+* entry[=].resource = LymphNodeSpecimenSlideHE09
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE10"
+* entry[=].resource = LymphNodeSpecimenSlideHE10
+
 // --- Macroscopy Observations ---
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/LymphNodeMacroscopicGrouper"
 * entry[=].resource = LymphNodeMacroscopicGrouper
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/LymphNodeMacroSLNExamined"
+* entry[=].resource = LymphNodeMacroSLNExamined
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/LymphNodeMacroTotalExamined"
+* entry[=].resource = LymphNodeMacroTotalExamined
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/LymphNodeMacroSLN1Size"
 * entry[=].resource = LymphNodeMacroSLN1Size

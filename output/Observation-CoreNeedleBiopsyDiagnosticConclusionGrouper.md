@@ -6,7 +6,7 @@
 
 ## Example Observation: Diagnostic Conclusion Grouper - Stanzbiopsie
 
-Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper)
+Profile: [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper) version: 2026.0.0
 
 **basedOn**: [ServiceRequest Breast Pathology biopsy report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
 
@@ -26,18 +26,15 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
 
 * [Observation Histology and Behavior ICD-O-3 Cancer](Observation-CoreNeedleBiopsyHistologicalTypeICDO3.md)
 * [Observation Histology type in Cancer specimen Narrative](Observation-CoreNeedleBiopsyMorphologyFreeText.md)
-* [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyNottinghamGrade.md)
+* [Observation Nottingham combined grade of primary malignant neoplasm of breast (observable entity)](Observation-CoreNeedleBiopsyNottinghamGrade.md)
 * [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyNottinghamSummaryScore.md)
-* [Observation Glandular differentiation [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyTubuleFormation.md)
-* [Observation Nuclear pleomorphism in Breast tumor by Nottingham](Observation-CoreNeedleBiopsyNuclearPleomorphism.md)
-* [Observation Mitotic rate [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyMitoticRate.md)
 * [Observation Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyERStatus.md)
 * [Observation Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyERPercentage.md)
 * [Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyPRStatus.md)
 * [Observation Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyPRPercentage.md)
-* [Observation Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)](Observation-CoreNeedleBiopsyHER2ISH.md)
+* [Observation Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization](Observation-CoreNeedleBiopsyHER2ISH.md)
 * [Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyKi67.md)
-* [Observation Screening interpretation (observable entity)](Observation-CoreNeedleBiopsyBClassification.md)
+* [Observation Screening interpretation (observable entity)](Observation-CoreNeedleBiopsyInterpretation.md)
 * [Observation Presence of microcalcification in excised breast specimen (observable entity)](Observation-CoreNeedleBiopsyMicrocalcification.md)
 * [Observation Specimen mammography (procedure)](Observation-CoreNeedleBiopsySpecimenRadiography.md)
 * [Observation Microcalcification, calcified structure (morphologic abnormality)](Observation-CoreNeedleBiopsyMicrocalcificationCorrelation.md)
@@ -91,15 +88,6 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
     "reference" : "Observation/CoreNeedleBiopsyNottinghamSummaryScore"
   },
   {
-    "reference" : "Observation/CoreNeedleBiopsyTubuleFormation"
-  },
-  {
-    "reference" : "Observation/CoreNeedleBiopsyNuclearPleomorphism"
-  },
-  {
-    "reference" : "Observation/CoreNeedleBiopsyMitoticRate"
-  },
-  {
     "reference" : "Observation/CoreNeedleBiopsyERStatus"
   },
   {
@@ -118,7 +106,7 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
     "reference" : "Observation/CoreNeedleBiopsyKi67"
   },
   {
-    "reference" : "Observation/CoreNeedleBiopsyBClassification"
+    "reference" : "Observation/CoreNeedleBiopsyInterpretation"
   },
   {
     "reference" : "Observation/CoreNeedleBiopsyMicrocalcification"

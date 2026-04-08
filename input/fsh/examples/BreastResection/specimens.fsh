@@ -37,7 +37,7 @@ Description: "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 42x35
   * type = $sct#434746001 "Specimen vial (physical object)"
   * additiveCodeableConcept = $sct#434162003 "Neutral buffered formalin (substance)"
 
-* note.text = "BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ. 42 x 35 x 18 mm, 10 g. Lamellierung in 8 Scheiben à 5 mm. Schnittfläche: grau-weißlich, derber Herdbefund zentral in Scheibe III–V, ca. 18 mm."
+* note.text = "BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ."
 
 // =============================================================================
 // BET - PARAFFINBLOCK 01 (Tumor zentral, Scheibe III, inkl. RR anterior/posterior)

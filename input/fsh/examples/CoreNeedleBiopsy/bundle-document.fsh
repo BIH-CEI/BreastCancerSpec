@@ -123,15 +123,6 @@ Description: "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbe
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyNottinghamSummaryScore"
 * entry[=].resource = CoreNeedleBiopsyNottinghamSummaryScore
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyTubuleFormation"
-* entry[=].resource = CoreNeedleBiopsyTubuleFormation
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyNuclearPleomorphism"
-* entry[=].resource = CoreNeedleBiopsyNuclearPleomorphism
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMitoticRate"
-* entry[=].resource = CoreNeedleBiopsyMitoticRate
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyERStatus"
 * entry[=].resource = CoreNeedleBiopsyERStatus
 
@@ -150,8 +141,8 @@ Description: "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbe
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyKi67"
 * entry[=].resource = CoreNeedleBiopsyKi67
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyBClassification"
-* entry[=].resource = CoreNeedleBiopsyBClassification
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyInterpretation"
+* entry[=].resource = CoreNeedleBiopsyInterpretation
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyMicrocalcification"
 * entry[=].resource = CoreNeedleBiopsyMicrocalcification

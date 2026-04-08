@@ -165,7 +165,6 @@ Description: "Abstand des Tumors von der Mamille"
 * performer = Reference(PathologistPractitioner)
 * valueQuantity = 50 'mm' "mm"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
-
 // --- Anzahl Paraffinblöcke ---
 Instance: BreastResectionMacroBlockCount
 InstanceOf: $mii-patho-finding

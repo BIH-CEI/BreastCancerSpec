@@ -23,14 +23,14 @@ Description: "Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert, Pa
   * value = "E_25_211"
 
 * status = #available
-* type = $sct#258589002 "Lymph node specimen (specimen)"
+* type = $sct#16235301000119101 "Specimen from sentinel lymph node of breast (specimen)"
 * subject = Reference(Patient4)
 * request = Reference(LymphNodeReportRequest)
 
 * collection
   * collector = Reference(BreastSurgeonPractitioner)
   * collectedDateTime = "2025-02-05T10:30:00+01:00"
-  * bodySite = $sct#68171009 "Axillary lymph node structure (body structure)"
+  * bodySite = $sct#739020002 "Lymph node group of left axilla (body structure)"
   * method = $sct#396487001 "Sentinel lymph node biopsy (procedure)"
 
 * container
@@ -194,13 +194,264 @@ Description: "HE-gefärbter Schnitt des SLN #1, Schnittstufe 2"
   * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
 
 // =============================================================================
-// SLN #2 - HE-SCHNITT 03 (Schnittstufe 1)
+// SLN #1 - HE-SCHNITT 03 (Schnittstufe 3) — enthält Mikrometastase
 // =============================================================================
 
 Instance: LymphNodeSpecimenSlideHE03
 InstanceOf: $mii-patho-specimen
 Usage: #example
-Title: "HE-Schnitt 03 SLN #2 (Schnittstufe 1)"
+Title: "HE-Schnitt 03 SLN #1 (Schnittstufe 3)"
+Description: "HE-gefärbter Schnitt des SLN #1, Schnittstufe 3 — Mikrometastase nachweisbar"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211_A_1_1_HE_03"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211"
+* status = #available
+* type = $sct#430856003 "Tissue section (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(LymphNodeSpecimenBlock01)
+* collection
+  * collectedDateTime = "2025-02-06T09:10:00+01:00"
+  * method = $sct#13283003 "Tissue processing technique (procedure)"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "Schnittherstellung (Schnittstufe 3)"
+  * procedure = $sct#434472006 "Sectioning of tissue block (procedure)"
+  * timeDateTime = "2025-02-06T09:10:00+01:00"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "HE-Färbung"
+  * procedure = $sct#104210008 "Hematoxylin and eosin stain method (procedure)"
+  * timeDateTime = "2025-02-06T09:25:00+01:00"
+* container
+  * type = $sct#433466003 "Microscope slide (physical object)"
+  * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
+
+// =============================================================================
+// SLN #1 - HE-SCHNITT 04 (Schnittstufe 4)
+// =============================================================================
+
+Instance: LymphNodeSpecimenSlideHE04
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "HE-Schnitt 04 SLN #1 (Schnittstufe 4)"
+Description: "HE-gefärbter Schnitt des SLN #1, Schnittstufe 4"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211_A_1_1_HE_04"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211"
+* status = #available
+* type = $sct#430856003 "Tissue section (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(LymphNodeSpecimenBlock01)
+* collection
+  * collectedDateTime = "2025-02-06T09:15:00+01:00"
+  * method = $sct#13283003 "Tissue processing technique (procedure)"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "Schnittherstellung (Schnittstufe 4)"
+  * procedure = $sct#434472006 "Sectioning of tissue block (procedure)"
+  * timeDateTime = "2025-02-06T09:15:00+01:00"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "HE-Färbung"
+  * procedure = $sct#104210008 "Hematoxylin and eosin stain method (procedure)"
+  * timeDateTime = "2025-02-06T09:30:00+01:00"
+* container
+  * type = $sct#433466003 "Microscope slide (physical object)"
+  * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
+
+// =============================================================================
+// SLN #2 - HE-SCHNITT 08 (Schnittstufe 3)
+// =============================================================================
+
+Instance: LymphNodeSpecimenSlideHE08
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "HE-Schnitt 08 SLN #2 (Schnittstufe 3)"
+Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 3"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211_A_2_1_HE_03"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211"
+* status = #available
+* type = $sct#430856003 "Tissue section (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(LymphNodeSpecimenBlock02)
+* collection
+  * collectedDateTime = "2025-02-06T09:20:00+01:00"
+  * method = $sct#13283003 "Tissue processing technique (procedure)"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "Schnittherstellung (Schnittstufe 3)"
+  * procedure = $sct#434472006 "Sectioning of tissue block (procedure)"
+  * timeDateTime = "2025-02-06T09:20:00+01:00"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "HE-Färbung"
+  * procedure = $sct#104210008 "Hematoxylin and eosin stain method (procedure)"
+  * timeDateTime = "2025-02-06T09:35:00+01:00"
+* container
+  * type = $sct#433466003 "Microscope slide (physical object)"
+  * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
+
+// =============================================================================
+// SLN #2 - HE-SCHNITT 09 (Schnittstufe 4)
+// =============================================================================
+
+Instance: LymphNodeSpecimenSlideHE09
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "HE-Schnitt 09 SLN #2 (Schnittstufe 4)"
+Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 4"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211_A_2_1_HE_04"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211"
+* status = #available
+* type = $sct#430856003 "Tissue section (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(LymphNodeSpecimenBlock02)
+* collection
+  * collectedDateTime = "2025-02-06T09:25:00+01:00"
+  * method = $sct#13283003 "Tissue processing technique (procedure)"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "Schnittherstellung (Schnittstufe 4)"
+  * procedure = $sct#434472006 "Sectioning of tissue block (procedure)"
+  * timeDateTime = "2025-02-06T09:25:00+01:00"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "HE-Färbung"
+  * procedure = $sct#104210008 "Hematoxylin and eosin stain method (procedure)"
+  * timeDateTime = "2025-02-06T09:40:00+01:00"
+* container
+  * type = $sct#433466003 "Microscope slide (physical object)"
+  * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
+
+// =============================================================================
+// SLN #2 - HE-SCHNITT 10 (Schnittstufe 5)
+// =============================================================================
+
+Instance: LymphNodeSpecimenSlideHE10
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "HE-Schnitt 10 SLN #2 (Schnittstufe 5)"
+Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 5"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211_A_2_1_HE_05"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211"
+* status = #available
+* type = $sct#430856003 "Tissue section (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(LymphNodeSpecimenBlock02)
+* collection
+  * collectedDateTime = "2025-02-06T09:30:00+01:00"
+  * method = $sct#13283003 "Tissue processing technique (procedure)"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "Schnittherstellung (Schnittstufe 5)"
+  * procedure = $sct#434472006 "Sectioning of tissue block (procedure)"
+  * timeDateTime = "2025-02-06T09:30:00+01:00"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "HE-Färbung"
+  * procedure = $sct#104210008 "Hematoxylin and eosin stain method (procedure)"
+  * timeDateTime = "2025-02-06T09:45:00+01:00"
+* container
+  * type = $sct#433466003 "Microscope slide (physical object)"
+  * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
+// =============================================================================
+// SLN #1 - HE-SCHNITT 05 (Schnittstufe 5)
+// =============================================================================
+
+Instance: LymphNodeSpecimenSlideHE05
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "HE-Schnitt 05 SLN #1 (Schnittstufe 5)"
+Description: "HE-gefärbter Schnitt des SLN #1, Schnittstufe 5"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211_A_1_1_HE_05"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_211"
+* status = #available
+* type = $sct#430856003 "Tissue section (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(LymphNodeSpecimenBlock01)
+* collection
+  * collectedDateTime = "2025-02-06T09:20:00+01:00"
+  * method = $sct#13283003 "Tissue processing technique (procedure)"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "Schnittherstellung (Schnittstufe 5)"
+  * procedure = $sct#434472006 "Sectioning of tissue block (procedure)"
+  * timeDateTime = "2025-02-06T09:20:00+01:00"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "HE-Färbung"
+  * procedure = $sct#104210008 "Hematoxylin and eosin stain method (procedure)"
+  * timeDateTime = "2025-02-06T09:35:00+01:00"
+* container
+  * type = $sct#433466003 "Microscope slide (physical object)"
+  * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
+
+// =============================================================================
+// SLN #2 - HE-SCHNITT 06 (Schnittstufe 1)
+// =============================================================================
+
+Instance: LymphNodeSpecimenSlideHE06
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "HE-Schnitt 06 SLN #2 (Schnittstufe 1)"
 Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 1"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
@@ -236,13 +487,13 @@ Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 1"
   * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
 
 // =============================================================================
-// SLN #2 - HE-SCHNITT 04 (Schnittstufe 2)
+// SLN #2 - HE-SCHNITT 07 (Schnittstufe 2)
 // =============================================================================
 
-Instance: LymphNodeSpecimenSlideHE04
+Instance: LymphNodeSpecimenSlideHE07
 InstanceOf: $mii-patho-specimen
 Usage: #example
-Title: "HE-Schnitt 04 SLN #2 (Schnittstufe 2)"
+Title: "HE-Schnitt 07 SLN #2 (Schnittstufe 2)"
 Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 2"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"

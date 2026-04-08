@@ -28,10 +28,10 @@ These are example instances that show what data produced and consumed by systems
 | [Anzahl untersuchter Non-SLN](Observation-IntegratedNonSLNExamined.md) | Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0 |
 | [Anzahl untersuchter Non-SLN](Observation-LymphNodeNonSLNExamined.md) | Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0 |
 | [Anzahl untersuchter SLN](Observation-IntegratedSLNExamined.md) | Anzahl der untersuchten Sentinel-Lymphknoten: 2 |
+| [Anzahl untersuchter SLN](Observation-LymphNodeMacroSLNExamined.md) | Anzahl untersuchter Sentinel-Lymphknoten: 2 |
 | [Anzahl untersuchter SLN](Observation-LymphNodeSLNExamined.md) | Anzahl der untersuchten Sentinel-Lymphknoten: 2 |
 | [Assoziiertes DCIS - BET](Observation-BreastResectionAssociatedDCIS.md) | Vorhandensein eines assoziierten DCIS |
 | [Assoziiertes DCIS - BET](Observation-IntegratedAssociatedDCIS.md) | Vorhandensein eines assoziierten DCIS |
-| [B-Klassifikation - Stanzbiopsie](Observation-CoreNeedleBiopsyBClassification.md) | B-Classification according to NHSBSP |
 | [BET + SLN Anforderung (integriert)](ServiceRequest-IntegratedReportRequest.md) | Anforderung für pathologische Aufarbeitung des BET-Exzisionspräparats und SLN-Exzisats |
 | [BET Mamma Anforderung](ServiceRequest-BreastResectionReportRequest.md) | Anforderung für pathologische Aufarbeitung eines BET-Exzisionspräparats der linken Mamma |
 | [BET Mamma Pathology Report Composition](Composition-BreastResectionComposition.md) | FHIR Composition for structured breast resection pathology report |
@@ -46,6 +46,7 @@ These are example instances that show what data produced and consumed by systems
 | [CK-18-IHC Reagenz BET](Substance-BreastResectionSubstanceCK18.md) | Zytokeratin 18 Antikörper für Immunhistochemie |
 | [CK18-IHC Schnitt BET (Block01)](Specimen-BreastResectionSpecimenSlideCK18-01.md) | Schnitt für Zytokeratin 18 Immunhistochemie |
 | [CK18-IHC Schnitt BET (integriert)](Specimen-IntegratedBETSlideCK18-01.md) | Schnitt für Zytokeratin 18 Immunhistochemie |
+| [Core Needle Biopsy Interpretation - Stanzbiopsie](Observation-CoreNeedleBiopsyInterpretation.md) | Core Needle Biopsy Interpretation according to NHSBSP |
 | [DCIS Architektur - BET](Observation-BreastResectionDCISArchitecture.md) | Wachstumsmuster des assoziierten DCIS |
 | [DCIS Architektur - BET](Observation-IntegratedDCISArchitecture.md) | Wachstumsmuster des assoziierten DCIS |
 | [DCIS Kerngrading - BET](Observation-BreastResectionDCISGrade.md) | Kerngrading des assoziierten DCIS |
@@ -92,6 +93,7 @@ These are example instances that show what data produced and consumed by systems
 | [Gesamtzahl befallener LK](Observation-LymphNodeTotalPositive.md) | Gesamtzahl befallener Lymphknoten: 1 |
 | [Gesamtzahl untersuchter LK](Observation-IntegratedTotalExamined.md) | Gesamtzahl untersuchter Lymphknoten: 2 |
 | [Gesamtzahl untersuchter LK](Observation-LymphNodeTotalExamined.md) | Gesamtzahl untersuchter Lymphknoten: 2 |
+| [Gesamtzahl untersuchter Lymphknoten](Observation-LymphNodeMacroTotalExamined.md) | Gesamtzahl untersuchter Lymphknoten: 2 |
 | [Gewicht (integriert)](Observation-IntegratedMacroWeight.md) | Gewicht des BET-Exzisionspräparats |
 | [Gewicht BET](Observation-BreastResectionMacroWeight.md) | Gewicht des BET-Exzisionspräparats |
 | [Größte Metastasenausdehnung](Observation-IntegratedLargestMetSize.md) | Ausdehnung der größten metastatischen Infiltration: 1.2 mm |
@@ -110,12 +112,18 @@ These are example instances that show what data produced and consumed by systems
 | [HE-Schnitt 02 SLN #1 (Schnittstufe 2)](Specimen-LymphNodeSpecimenSlideHE02.md) | HE-gefärbter Schnitt des SLN #1, Schnittstufe 2 |
 | [HE-Schnitt 02 SLN #1 (integriert)](Specimen-IntegratedSLNSlideHE02.md) | HE-gefärbter Schnitt des SLN #1, Schnittstufe 2 |
 | [HE-Schnitt 02 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideHE02.md) | Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 2 |
-| [HE-Schnitt 03 SLN #2 (Schnittstufe 1)](Specimen-LymphNodeSpecimenSlideHE03.md) | HE-gefärbter Schnitt des SLN #2, Schnittstufe 1 |
+| [HE-Schnitt 03 SLN #1 (Schnittstufe 3)](Specimen-LymphNodeSpecimenSlideHE03.md) | HE-gefärbter Schnitt des SLN #1, Schnittstufe 3 — Mikrometastase nachweisbar |
 | [HE-Schnitt 03 SLN #2 (integriert)](Specimen-IntegratedSLNSlideHE03.md) | HE-gefärbter Schnitt des SLN #2, Schnittstufe 1 |
 | [HE-Schnitt 03 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideHE03.md) | Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 3 |
-| [HE-Schnitt 04 SLN #2 (Schnittstufe 2)](Specimen-LymphNodeSpecimenSlideHE04.md) | HE-gefärbter Schnitt des SLN #2, Schnittstufe 2 |
+| [HE-Schnitt 04 SLN #1 (Schnittstufe 4)](Specimen-LymphNodeSpecimenSlideHE04.md) | HE-gefärbter Schnitt des SLN #1, Schnittstufe 4 |
 | [HE-Schnitt 04 SLN #2 (integriert)](Specimen-IntegratedSLNSlideHE04.md) | HE-gefärbter Schnitt des SLN #2, Schnittstufe 2 |
 | [HE-Schnitt 04 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideHE04.md) | Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 4 |
+| [HE-Schnitt 05 SLN #1 (Schnittstufe 5)](Specimen-LymphNodeSpecimenSlideHE05.md) | HE-gefärbter Schnitt des SLN #1, Schnittstufe 5 |
+| [HE-Schnitt 06 SLN #2 (Schnittstufe 1)](Specimen-LymphNodeSpecimenSlideHE06.md) | HE-gefärbter Schnitt des SLN #2, Schnittstufe 1 |
+| [HE-Schnitt 07 SLN #2 (Schnittstufe 2)](Specimen-LymphNodeSpecimenSlideHE07.md) | HE-gefärbter Schnitt des SLN #2, Schnittstufe 2 |
+| [HE-Schnitt 08 SLN #2 (Schnittstufe 3)](Specimen-LymphNodeSpecimenSlideHE08.md) | HE-gefärbter Schnitt des SLN #2, Schnittstufe 3 |
+| [HE-Schnitt 09 SLN #2 (Schnittstufe 4)](Specimen-LymphNodeSpecimenSlideHE09.md) | HE-gefärbter Schnitt des SLN #2, Schnittstufe 4 |
+| [HE-Schnitt 10 SLN #2 (Schnittstufe 5)](Specimen-LymphNodeSpecimenSlideHE10.md) | HE-gefärbter Schnitt des SLN #2, Schnittstufe 5 |
 | [HE-Schnitt BET - RR inferior (Block04)](Specimen-BreastResectionSpecimenSlideRR-Inferior-HE01.md) | HE-gefärbter Schnitt Resektionsrand inferior |
 | [HE-Schnitt BET - RR lateral (Block06)](Specimen-BreastResectionSpecimenSlideRR-Lateral-HE01.md) | HE-gefärbter Schnitt Resektionsrand lateral, Scheibe VIII |
 | [HE-Schnitt BET - RR medial (Block05)](Specimen-BreastResectionSpecimenSlideRR-Medial-HE01.md) | HE-gefärbter Schnitt Resektionsrand medial, Scheibe I |
@@ -201,7 +209,6 @@ These are example instances that show what data produced and consumed by systems
 | [Mitoserate-Score - BET](Observation-IntegratedMitoticRateScore.md) | Mitotic rate score by Nottingham |
 | [Mitosezahl - BET](Observation-BreastResectionMitosisCount.md) | Absolute Mitosezahl pro 10 HPF |
 | [Mitosezahl - BET](Observation-IntegratedMitosisCount.md) | Absolute Mitosezahl pro 10 HPF |
-| [Mitotic Rate Score - Stanzbiopsie](Observation-CoreNeedleBiopsyMitoticRate.md) | Mitotic rate score by Nottingham |
 | [Morphologie Freitext - BET](Observation-BreastResectionMorphologyFreeText.md) | Freitextbeschreibung der Tumormorphologie |
 | [Morphologie Freitext - BET](Observation-IntegratedMorphologyFreeText.md) | Freitextbeschreibung der Tumormorphologie |
 | [Morphology Free Text - Stanzbiopsie](Observation-CoreNeedleBiopsyMorphologyFreeText.md) | Free text description of tumor morphology |
@@ -211,7 +218,6 @@ These are example instances that show what data produced and consumed by systems
 | [Nottingham Summary Score - Stanzbiopsie](Observation-CoreNeedleBiopsyNottinghamSummaryScore.md) | Elston-Ellis summary score (3+2+1=6) |
 | [Nottingham-Grad - BET](Observation-BreastResectionNottinghamGrade.md) | Nottingham histologic grade |
 | [Nottingham-Grad - BET](Observation-IntegratedNottinghamGrade.md) | Nottingham histologic grade |
-| [Nuclear Pleomorphism Score - Stanzbiopsie](Observation-CoreNeedleBiopsyNuclearPleomorphism.md) | Nuclear pleomorphism score by Nottingham |
 | [Nächster tumorfreier Resektionsrand - BET](Observation-BreastResectionClosestMargin.md) | Lokalisation des nächsten tumorfreien Resektionsrands |
 | [Nächster tumorfreier Resektionsrand - BET](Observation-IntegratedClosestMargin.md) | Lokalisation des nächsten tumorfreien Resektionsrands |
 | [Operatives Verfahren - BET](Observation-BreastResectionOperativeProcedure.md) | Art des operativen Verfahrens |
@@ -299,7 +305,6 @@ These are example instances that show what data produced and consumed by systems
 | [Stanzbiopsie Mamma Anforderung](ServiceRequest-CoreNeedleBiopsyReportRequest.md) | Anforderung für pathologische Aufarbeitung einer US-gestützten Stanzbiopsie der linken Mamma |
 | [Stanzbiopsie Mamma Pathology Report Composition](Composition-CoreNeedleBiopsyComposition.md) | FHIR Composition for structured core needle biopsy pathology report |
 | [Stanzzylinder-Präparat (Einsendespecimen)](Specimen-CoreNeedleBiopsySpecimenPart.md) | 2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille |
-| [Tubule Formation Score - Stanzbiopsie](Observation-CoreNeedleBiopsyTubuleFormation.md) | Glandular differentiation score by Nottingham |
 | [Tubulus-Score - BET](Observation-BreastResectionTubuleScore.md) | Glandular differentiation score by Nottingham |
 | [Tubulus-Score - BET](Observation-IntegratedTubuleScore.md) | Glandular differentiation score by Nottingham |
 | [Tumorausdehnung - BET](Observation-BreastResectionTumorExtent.md) | Ausdehnung des Tumors in Bezug auf die Brustdrüse |

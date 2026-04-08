@@ -6,7 +6,7 @@
 
 ## Example Specimen: SLN-Exzisat (Einsendespecimen)
 
-Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen), [MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore)
+Profiles: [MII PR Patho Specimen](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen) version: 2026.0.0, [MII PR Biobank Specimen Bioprobe Core](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore) version: 2026.0.0
 
 **identifier**: Placer Identifier/OP25_211_A, Filler Identifier/E_25_211_A
 
@@ -14,7 +14,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
 
 **status**: Available
 
-**type**: Lymph node specimen (specimen)
+**type**: Specimen from sentinel lymph node of breast (specimen)
 
 **subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
 
@@ -25,7 +25,7 @@ Profiles: [MII PR Patho Specimenversion: null2026.0.0)](https://simplifier.net/r
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | - | **Collector** | **Collected[x]** | **Method** | **BodySite** |
-| * | [Practitioner Thomas Richter ](Practitioner-BreastSurgeonPractitioner.md) | 2025-02-05 10:30:00+0100 | Sentinel lymph node biopsy (procedure) | Axillary lymph node structure (body structure) |
+| * | [Practitioner Thomas Richter ](Practitioner-BreastSurgeonPractitioner.md) | 2025-02-05 10:30:00+0100 | Sentinel lymph node biopsy (procedure) | Lymph node group of left axilla (body structure) |
 
 ### Containers
 
@@ -81,8 +81,8 @@ Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-marki
   "type" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "258589002",
-      "display" : "Lymph node specimen (specimen)"
+      "code" : "16235301000119101",
+      "display" : "Specimen from sentinel lymph node of breast (specimen)"
     }]
   },
   "subject" : {
@@ -106,8 +106,8 @@ Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-marki
     "bodySite" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",
-        "code" : "68171009",
-        "display" : "Axillary lymph node structure (body structure)"
+        "code" : "739020002",
+        "display" : "Lymph node group of left axilla (body structure)"
       }]
     }
   },

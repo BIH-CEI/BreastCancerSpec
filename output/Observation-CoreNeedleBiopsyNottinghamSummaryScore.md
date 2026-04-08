@@ -6,7 +6,7 @@
 
 ## Example Observation: Nottingham Summary Score - Stanzbiopsie
 
-Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding)
+Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding) version: 2026.0.0
 
 **basedOn**: [ServiceRequest Breast Pathology biopsy report](ServiceRequest-CoreNeedleBiopsyReportRequest.md)
 
@@ -27,6 +27,12 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
 **specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)](Specimen-CoreNeedleBiopsySpecimenSlideHE01.md)
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.md)
+
+> **component****code**: Glandular differentiation [Score] in Breast cancer specimen by Nottingham**value**: 3 score (Details: UCUM code{score} = '{score}')
+
+> **component****code**: Nuclear pleomorphism in Breast tumor by Nottingham**value**: 2 score (Details: UCUM code{score} = '{score}')
+
+> **component****code**: Mitotic rate [Score] in Breast cancer specimen by Nottingham**value**: 1 score (Details: UCUM code{score} = '{score}')
 
 
 
@@ -81,6 +87,51 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+  }],
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "85321-8",
+        "display" : "Glandular differentiation [Score] in Breast cancer specimen by Nottingham"
+      }]
+    },
+    "valueQuantity" : {
+      "value" : 3,
+      "unit" : "score",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "{score}"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "44645-0",
+        "display" : "Nuclear pleomorphism in Breast tumor by Nottingham"
+      }]
+    },
+    "valueQuantity" : {
+      "value" : 2,
+      "unit" : "score",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "{score}"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "85300-2",
+        "display" : "Mitotic rate [Score] in Breast cancer specimen by Nottingham"
+      }]
+    },
+    "valueQuantity" : {
+      "value" : 1,
+      "unit" : "score",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "{score}"
+    }
   }]
 }
 

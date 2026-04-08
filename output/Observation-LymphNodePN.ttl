@@ -1,5 +1,4 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <https://loinc.org/rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -19,23 +18,28 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodePN</b></p><a name=\"LymphNodePN\"> </a><a name=\"hcLymphNodePN\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie\">MII PR Onkologie TNM N-Kategorieversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21906-3}, {http://snomed.info/sct 371494008}\">Regionäre Lymphknoten (pN-Kategorie)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-n-kategorie-werte pN1mi(sn)}\">pN1mi(sn)</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodePN</b></p><a name=\"LymphNodePN\"> </a><a name=\"hcLymphNodePN\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie\">MII PR Onkologie TNM N-Kategorie</a> version: 2026.0.0</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 371494008}\">pN category (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm N1mi(sn)}\">N1mi(sn)</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:basedOn ( [
-     fhir:l <http://breastcancerspec.org/ServiceRequest/LymphNodeReportRequest> ;
-     fhir:reference [ fhir:v "ServiceRequest/LymphNodeReportRequest" ]
-  ] ) ; # 
   fhir:status [ fhir:v "final"] ; # 
   fhir:code [
-     fhir:coding ( [
-       a loinc:21906-3 ;
-       fhir:system [
-         fhir:v "http://loinc.org"^^xsd:anyURI ;
-         fhir:l <http://loinc.org>
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix"^^xsd:anyURI ;
+         fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix>
        ] ;
-       fhir:code [ fhir:v "21906-3" ] ;
-       fhir:display [ fhir:v "Regional lymph nodes.clinical [Class] Cancer" ]
-     ] [
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "https://www.uicc.org/resources/tnm"^^xsd:anyURI ;
+             fhir:l <https://www.uicc.org/resources/tnm>
+           ] ;
+           fhir:code [ fhir:v "p" ] ;
+           fhir:display [ fhir:v "p" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:coding ( [
        a sct:371494008 ;
        fhir:system [
          fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
@@ -43,8 +47,7 @@
        ] ;
        fhir:code [ fhir:v "371494008" ] ;
        fhir:display [ fhir:v "pN category (observable entity)" ]
-     ] ) ;
-     fhir:text [ fhir:v "Regionäre Lymphknoten (pN-Kategorie)" ]
+     ] )
   ] ; # 
   fhir:subject [
      fhir:l <http://breastcancerspec.org/Patient/Patient4> ;
@@ -54,29 +57,27 @@
      a fhir:DateTime ;
      fhir:v "2025-02-10"^^xsd:date
   ] ; # 
-  fhir:performer ( [
-     fhir:l <http://breastcancerspec.org/Practitioner/PathologistPractitioner> ;
-     fhir:reference [ fhir:v "Practitioner/PathologistPractitioner" ]
-  ] ) ; # 
   fhir:value [
      a fhir:CodeableConcept ;
      fhir:coding ( [
        fhir:system [
-         fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-n-kategorie-werte"^^xsd:anyURI ;
-         fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-n-kategorie-werte>
+         fhir:v "https://www.uicc.org/resources/tnm"^^xsd:anyURI ;
+         fhir:l <https://www.uicc.org/resources/tnm>
        ] ;
-       fhir:code [ fhir:v "pN1mi(sn)" ]
-     ] ) ;
-     fhir:text [ fhir:v "pN1mi(sn)" ]
+       fhir:code [ fhir:v "N1mi(sn)" ] ;
+       fhir:display [ fhir:v "N1mi(sn)" ]
+     ] )
   ] ; # 
-  fhir:specimen [
-     fhir:l <http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE01> ;
-     fhir:reference [ fhir:v "Specimen/LymphNodeSpecimenSlideHE01" ]
-  ] ; # 
-  fhir:derivedFrom ( [
-     fhir:l <http://breastcancerspec.org/QuestionnaireResponse/QuestionnaireResponseLymphNode> ;
-     fhir:reference [ fhir:v "QuestionnaireResponse/QuestionnaireResponseLymphNode" ]
-  ] ) . # 
+  fhir:method [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"^^xsd:anyURI ;
+         fhir:l <https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version>
+       ] ;
+       fhir:code [ fhir:v "8" ] ;
+       fhir:display [ fhir:v "8. Auflage" ]
+     ] )
+  ] . # 
 
 # -------------------------------------------------------------------------------------
 

@@ -6,7 +6,7 @@
 
 ## Example ServiceRequest: BET + SLN Anforderung (integriert)
 
-Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request)
+Profile: [MII PR Patho Service Request](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request) version: 2026.0.0
 
 **identifier**: Placer Identifier/PATH-RPT-2025-300
 

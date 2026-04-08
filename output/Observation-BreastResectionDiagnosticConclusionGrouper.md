@@ -6,7 +6,7 @@
 
 ## Example Observation: Diagnostic Conclusion Grouper - BET Mamma
 
-Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper)
+Profile: [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper) version: 2026.0.0
 
 **basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-BreastResectionReportRequest.md)
 
@@ -63,7 +63,7 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)](http
 * [Observation ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH](Observation-BreastResectionHER2ISH.md)
 * [Observation HER2 [Interpretation] in Tissue](Observation-BreastResectionHER2Overall.md)
 * [Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain](Observation-BreastResectionKi67.md)
-* [Observation Primary tumor.pathology Cancer](Observation-BreastResectionPT.md)
+* [Observation pT category (observable entity)](Observation-BreastResectionPT.md)
 * [Observation Pathology report comments [Interpretation] Narrative](Observation-BreastResectionComment.md)
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)

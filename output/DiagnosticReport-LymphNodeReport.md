@@ -6,7 +6,7 @@
 
 ## Example DiagnosticReport: Pathologiebericht SLN-Biopsie Axilla
 
-Profile: [MII PR Patho Reportversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report)
+Profile: [MII PR Patho Report](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report) version: 2026.0.0
 
 ## Pathology Synoptic report (Surgical Pathology) 
 
@@ -99,6 +99,24 @@ Sentinel-Lymphknoten-Biopsie linke Axilla: 2 SLN untersucht, 1x Mikrometastase (
   },
   {
     "reference" : "Specimen/LymphNodeSpecimenSlideHE04"
+  },
+  {
+    "reference" : "Specimen/LymphNodeSpecimenSlideHE05"
+  },
+  {
+    "reference" : "Specimen/LymphNodeSpecimenSlideHE06"
+  },
+  {
+    "reference" : "Specimen/LymphNodeSpecimenSlideHE07"
+  },
+  {
+    "reference" : "Specimen/LymphNodeSpecimenSlideHE08"
+  },
+  {
+    "reference" : "Specimen/LymphNodeSpecimenSlideHE09"
+  },
+  {
+    "reference" : "Specimen/LymphNodeSpecimenSlideHE10"
   }],
   "result" : [{
     "reference" : "Observation/LymphNodeMacroscopicGrouper"

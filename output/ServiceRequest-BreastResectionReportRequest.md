@@ -6,7 +6,7 @@
 
 ## Example ServiceRequest: BET Mamma Anforderung
 
-Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request)
+Profile: [MII PR Patho Service Request](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request) version: 2026.0.0
 
 **identifier**: Placer Identifier/PATH-RPT-2025-210
 
@@ -32,7 +32,6 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
 
 * [Condition Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse](Condition-BreastResectionDiagnosisConfirmed.md)
 * [Diagnostic Report for 'MG Breast Screening' for '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](DiagnosticReport-BreastResectionImagingReport.md)
-* [Observation Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)](Observation-BreastResectionSpecimenLimited.md)
 * [Observation Reason for test or procedure](Observation-BreastResectionPresentationMode.md)
 * [Observation Personal history of primary malignant neoplasm of breast (situation)](Observation-BreastResectionCancerHistory.md)
 * [Observation Cancer treatment --preoperative](Observation-BreastResectionPriorTherapy.md)
@@ -40,8 +39,11 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
 * [Observation Insertion of marker into breast using X-ray guidance (procedure)](Observation-BreastResectionSpecimenMarking.md)
 * [Observation 80865008|Specimen mammography|:363702006|Has focus|=185008008|Medical reports sent|](Observation-BreastResectionSpecimenRadiographyClinical.md)
 * [Observation Diathesis, function (observable entity)](Observation-BreastResectionGeneticPredisposition.md)
+* [Observation Quadrant Breast](Observation-BreastResectionMacroQuadrant.md)
+* [Observation Radial position in breast [Angle] in Breast cancer specimen](Observation-BreastResectionMacroClock.md)
+* [Observation Distance of primary malignant neoplasm of breast to nipple in excised breast specimen (observable entity)](Observation-BreastResectionMacroDistanceNipple.md)
 
-**specimen**: [Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ. 42 x 35 x 18 mm, 10 g. Lamellierung in 8 Scheiben à 5 mm. Schnittfläche: grau-weißlich, derber Herdbefund zentral in Scheibe III–V, ca. 18 mm.](Specimen-BreastResectionSpecimenPart.md)
+**specimen**: [Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ.](Specimen-BreastResectionSpecimenPart.md)
 
 
 
@@ -107,9 +109,6 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
     "reference" : "DiagnosticReport/BreastResectionImagingReport"
   },
   {
-    "reference" : "Observation/BreastResectionSpecimenLimited"
-  },
-  {
     "reference" : "Observation/BreastResectionPresentationMode"
   },
   {
@@ -129,6 +128,15 @@ Profile: [MII PR Patho Service Requestversion: null2026.0.0)](https://simplifier
   },
   {
     "reference" : "Observation/BreastResectionGeneticPredisposition"
+  },
+  {
+    "reference" : "Observation/BreastResectionMacroQuadrant"
+  },
+  {
+    "reference" : "Observation/BreastResectionMacroClock"
+  },
+  {
+    "reference" : "Observation/BreastResectionMacroDistanceNipple"
   }],
   "specimen" : [{
     "reference" : "Specimen/BreastResectionSpecimenPart"

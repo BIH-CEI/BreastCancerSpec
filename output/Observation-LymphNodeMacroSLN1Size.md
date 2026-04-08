@@ -6,7 +6,7 @@
 
 ## Example Observation: SLN #1 Größe
 
-Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding)
+Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding) version: 2026.0.0
 
 **status**: Final
 
@@ -54,9 +54,9 @@ Profile: [MII PR Patho Findingversion: null2026.0.0)](https://simplifier.net/res
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "44619-5",
-      "display" : "Length of tissue core(s)"
+      "system" : "http://snomed.info/sct",
+      "code" : "364109001",
+      "display" : "Length of lymph node in excised specimen (observable entity)"
     }],
     "text" : "SLN #1 Größe"
   },

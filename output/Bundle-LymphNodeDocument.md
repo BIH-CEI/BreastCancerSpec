@@ -96,7 +96,7 @@
         },
         "text" : {
           "status" : "additional",
-          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Klinische Angaben</h3><p>Invasives Mammakarzinom NST links, G2. Klinisch unauffällige Axilla (cN0). SLN-Biopsie indiziert. Keine neoadjuvante Therapie.</p><h3>Material</h3><p>Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert)</p><h3>Makroskopie</h3><table border=\"1\" cellpadding=\"4\" cellspacing=\"0\"><tbody><tr><td>SLN #1</td><td>12 × 8 × 6 mm, Patentblau-markiert, halbiert</td></tr><tr><td>SLN #2</td><td>10 × 7 × 5 mm, Patentblau-markiert, halbiert</td></tr><tr><td>Einbettung</td><td>Beide SLN vollständig eingebettet, je 1 Paraffinblock</td></tr></tbody></table><h3>Mikroskopie</h3><p>SLN #1: Im Randsinus Nachweis einer Mikrometastase, maximal 1,2 mm messend. Keine Kapseldurchbrechung. SLN #2: In allen Schnittstufen tumorfrei. Kein Anhalt für isolierte Tumorzellen (ITC).</p><h3>Diagnostische Schlussfolgerung</h3><table border=\"1\" cellpadding=\"4\" cellspacing=\"0\"><tbody><tr><td>Prozedur</td><td>Sentinel-Lymphknoten-Biopsie</td></tr><tr><td>Seitenlokalisation</td><td>Links</td></tr><tr><td>Untersuchte SLN</td><td>2</td></tr><tr><td>Befallene SLN</td><td>1</td></tr><tr><td>Untersuchte Non-SLN</td><td>0</td></tr><tr><td>Befallene Non-SLN</td><td>0</td></tr><tr><td>Gesamtzahl untersuchter LK</td><td>2</td></tr><tr><td>Gesamtzahl befallener LK</td><td>1</td></tr><tr><td>Makrometastasen</td><td>0</td></tr><tr><td>Mikrometastasen</td><td>1</td></tr><tr><td>ITC</td><td>0</td></tr><tr><td>Größte Metastasenausdehnung</td><td>1,2 mm</td></tr><tr><td>Extranodale Infiltration</td><td>Nicht vorhanden</td></tr></tbody></table><h4>pN-Staging</h4><p><b>pN1mi(sn)</b> — Mikrometastase in Sentinel-Lymphknoten</p><p><b>Kommentar:</b> In SLN #1 Nachweis einer Mikrometastase (1,2 mm) im Randsinus. SLN #2 tumorfrei in allen Schnittstufen. Keine extranodale Infiltration. Empfehlung: Besprechung in Tumorkonferenz bzgl. weiterer axillärer Therapie.</p></div>"
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Klinische Angaben</h3><p>Invasives Mammakarzinom NST links, G2. Klinisch unauffällige Axilla (cN0). SLN-Biopsie indiziert. Keine neoadjuvante Therapie.</p><h3>Material</h3><p>Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert)</p><h3>Makroskopie</h3><p>Zwei, 12 × 8 × 6 mm (A_1) bzw. 10 × 7 × 5 mm (A_2) durchmessende Sentinellymphknoten werden jeweils halbiert und separat eingebettet (je 1 Paraffinblock). Makroskopisch zeigen sich leicht fleckige rötlich-weiße Schnittflächen ohne Herdbefund.</p><h3>Mikroskopie</h3><p>Nach Anfertigung von jeweils 5, im Abstand von 1 mm zueinander liegenden HE-gefärbten Schnittstufen der Lymphknotenhälften zeigt sich eine ausgeprägte Sinushistiozytose und mäßiggradige Follikelhyperplasie. Im Sentinellymphknoten A_1 findet sich in Schnittstufe 3 eine 1,3 mm große metastatische Absiedlung des bekannten Mammakarzinoms ohne Kapselbeziehung. Im Sentinellymphknoten A_2 sind alle Schnittstufen tumorfrei. Kein Anhalt für isolierte Tumorzellen (ITC).</p><h3>Diagnostische Schlussfolgerung</h3><table border=\"1\" cellpadding=\"4\" cellspacing=\"0\"><tbody><tr><td>Prozedur</td><td>Sentinel-Lymphknoten-Biopsie</td></tr><tr><td>Seitenlokalisation</td><td>Links</td></tr><tr><td>Untersuchte SLN</td><td>2</td></tr><tr><td>Befallene SLN</td><td>1</td></tr><tr><td>Untersuchte Non-SLN</td><td>0</td></tr><tr><td>Befallene Non-SLN</td><td>0</td></tr><tr><td>Gesamtzahl untersuchter LK</td><td>2</td></tr><tr><td>Gesamtzahl befallener LK</td><td>1</td></tr><tr><td>Makrometastasen</td><td>0</td></tr><tr><td>Mikrometastasen</td><td>1</td></tr><tr><td>ITC</td><td>0</td></tr><tr><td>Größte Metastasenausdehnung</td><td>1,2 mm</td></tr><tr><td>Extranodale Infiltration</td><td>Nicht vorhanden</td></tr></tbody></table><h4>pN-Staging</h4><p><b>pN1mi(sn)</b> — Mikrometastase in Sentinel-Lymphknoten</p><p><b>Kommentar:</b> In SLN #1 Nachweis einer Mikrometastase (1,2 mm) im Randsinus. SLN #2 tumorfrei in allen Schnittstufen. Keine extranodale Infiltration. Empfehlung: Besprechung in Tumorkonferenz bzgl. weiterer axillärer Therapie.</p></div>"
         },
         "entry" : [{
           "reference" : "DiagnosticReport/LymphNodeReport"
@@ -231,7 +231,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_LymphNodeDiagnosisConfirmed\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition LymphNodeDiagnosisConfirmed</b></p><a name=\"LymphNodeDiagnosisConfirmed\"> </a><a name=\"hcLymphNodeDiagnosisConfirmed\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&amp;canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose\">MII PR Diagnose Conditionversion: null2026.0.0)</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C50.5}\">Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href=\"Encounter-LymphNodeEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_211; status = finished; class = IMP (IMP)</a></p><p><b>onset</b>: 2025-01-15</p><p><b>recordedDate</b>: 2025-02-05</p><p><b>note</b>: </p><blockquote><div><p>Invasives Mammakarzinom NST links, G2. SLN-Biopsie indiziert bei klinisch unauffälliger Axilla (cN0).</p>\n</div></blockquote></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_LymphNodeDiagnosisConfirmed\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition LymphNodeDiagnosisConfirmed</b></p><a name=\"LymphNodeDiagnosisConfirmed\"> </a><a name=\"hcLymphNodeDiagnosisConfirmed\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.molgen@2026.0.4&amp;canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose\">MII PR Diagnose Condition</a> version: 2026.0.0</p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm C50.5}\">Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href=\"Encounter-LymphNodeEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_211; status = finished; class = IMP (IMP)</a></p><p><b>onset</b>: 2025-01-15</p><p><b>recordedDate</b>: 2025-02-05</p><p><b>note</b>: </p><blockquote><div><p>Invasives Mammakarzinom NST links, G2. SLN-Biopsie indiziert bei klinisch unauffälliger Axilla (cN0).</p>\n</div></blockquote></div>"
       },
       "clinicalStatus" : {
         "coding" : [{
@@ -282,7 +282,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_LymphNodeReportRequest\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest LymphNodeReportRequest</b></p><a name=\"LymphNodeReportRequest\"> </a><a name=\"hcLymphNodeReportRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request\">MII PR Patho Service Requestversion: null2026.0.0)</a></p></div><p><b>identifier</b>: Placer Identifier/PATH-RPT-2025-211</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 726007}\">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 60568-3}\">Pathology synoptic report</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href=\"Encounter-LymphNodeEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_211; status = finished; class = IMP (IMP)</a></p><p><b>requester</b>: <a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 254838004}\">Carcinoma of breast (disorder)</span></p><p><b>supportingInfo</b>: </p><ul><li><a href=\"Condition-LymphNodeDiagnosisConfirmed.html\">Condition Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</a></li><li><a href=\"DiagnosticReport-LymphNodeImagingReport.html\">Diagnostic Report for 'MG Breast Screening' for '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li><li><a href=\"Observation-LymphNodeSpecimenLimited.html\">Observation Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)</a></li></ul><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_LymphNodeReportRequest\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest LymphNodeReportRequest</b></p><a name=\"LymphNodeReportRequest\"> </a><a name=\"hcLymphNodeReportRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request\">MII PR Patho Service Request</a> version: 2026.0.0</p></div><p><b>identifier</b>: Placer Identifier/PATH-RPT-2025-211</p><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 726007}\">Pathology consultation, comprehensive, records and specimen with report (procedure)</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 60568-3}\">Pathology synoptic report</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>encounter</b>: <a href=\"Encounter-LymphNodeEncounter.html\">Encounter: identifier = http://example.hospital.de/encounters#E_25_211; status = finished; class = IMP (IMP)</a></p><p><b>requester</b>: <a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 254838004}\">Carcinoma of breast (disorder)</span></p><p><b>supportingInfo</b>: </p><ul><li><a href=\"Condition-LymphNodeDiagnosisConfirmed.html\">Condition Bösartige Neubildung: Unterer äußerer Quadrant der Brustdrüse</a></li><li><a href=\"DiagnosticReport-LymphNodeImagingReport.html\">Diagnostic Report for 'MG Breast Screening' for '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></li></ul><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p></div>"
       },
       "identifier" : [{
         "type" : {
@@ -335,9 +335,6 @@
       },
       {
         "reference" : "DiagnosticReport/LymphNodeImagingReport"
-      },
-      {
-        "reference" : "Observation/LymphNodeSpecimenLimited"
       }],
       "specimen" : [{
         "reference" : "Specimen/LymphNodeSpecimenPart"
@@ -415,7 +412,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_LymphNodeReport\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport LymphNodeReport</b></p><a name=\"LymphNodeReport\"> </a><a name=\"hcLymphNodeReport\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report\">MII PR Patho Reportversion: null2026.0.0)</a></p></div><h2><span title=\"Codes:{http://loinc.org 60568-3}\">Pathology Synoptic report</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 SP}\">Surgical Pathology</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</td></tr><tr><td>When For</td><td>2025-02-10 14:00:00+0100</td></tr><tr><td>Reported</td><td>2025-02-10 17:00:00+0100</td></tr><tr><td>Performer</td><td> <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></td></tr><tr><td>Identifier</td><td> Accession ID/E_25_211</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-LymphNodeMacroscopicGrouper.html\"><span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></a> (<span title=\"Codes:{http://snomed.info/sct 68171009}\">Axillary lymph node structure (body structure)</span>)</td><td/><td>Final</td><td>2025-02-06 08:30:00+0100</td></tr><tr><td><a href=\"Observation-LymphNodeDiagnosticConclusionGrouper.html\"><span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></a></td><td/><td>Final</td><td>2025-02-10</td></tr></table><p>Sentinel-Lymphknoten-Biopsie linke Axilla: 2 SLN untersucht, 1x Mikrometastase (1,2 mm) in SLN #1, 1x tumorfrei (SLN #2). Keine extranodale Infiltration. pN1mi(sn).</p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_LymphNodeReport\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport LymphNodeReport</b></p><a name=\"LymphNodeReport\"> </a><a name=\"hcLymphNodeReport\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report\">MII PR Patho Report</a> version: 2026.0.0</p></div><h2><span title=\"Codes:{http://loinc.org 60568-3}\">Pathology Synoptic report</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 SP}\">Surgical Pathology</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</td></tr><tr><td>When For</td><td>2025-02-10 14:00:00+0100</td></tr><tr><td>Reported</td><td>2025-02-10 17:00:00+0100</td></tr><tr><td>Performer</td><td> <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></td></tr><tr><td>Identifier</td><td> Accession ID/E_25_211</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-LymphNodeMacroscopicGrouper.html\"><span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></a> (<span title=\"Codes:{http://snomed.info/sct 68171009}\">Axillary lymph node structure (body structure)</span>)</td><td/><td>Final</td><td>2025-02-06 08:30:00+0100</td></tr><tr><td><a href=\"Observation-LymphNodeDiagnosticConclusionGrouper.html\"><span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></a></td><td/><td>Final</td><td>2025-02-10</td></tr></table><p>Sentinel-Lymphknoten-Biopsie linke Axilla: 2 SLN untersucht, 1x Mikrometastase (1,2 mm) in SLN #1, 1x tumorfrei (SLN #2). Keine extranodale Infiltration. pN1mi(sn).</p></div>"
       },
       "identifier" : [{
         "type" : {
@@ -474,6 +471,24 @@
       },
       {
         "reference" : "Specimen/LymphNodeSpecimenSlideHE04"
+      },
+      {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE05"
+      },
+      {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE06"
+      },
+      {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE07"
+      },
+      {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE08"
+      },
+      {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE09"
+      },
+      {
+        "reference" : "Specimen/LymphNodeSpecimenSlideHE10"
       }],
       "result" : [{
         "reference" : "Observation/LymphNodeMacroscopicGrouper"
@@ -495,7 +510,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenPart\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenPart</b></p><a name=\"LymphNodeSpecimenPart\"> </a><a name=\"hcLymphNodeSpecimenPart\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: Placer Identifier/OP25_211_A, Filler Identifier/E_25_211_A</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 258589002}\">Lymph node specimen (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>request</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Method</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></td><td>2025-02-05 10:30:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 396487001}\">Sentinel lymph node biopsy (procedure)</span></td><td><span title=\"Codes:{http://snomed.info/sct 68171009}\">Axillary lymph node structure (body structure)</span></td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 434746001}\">Specimen vial (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 434162003}\">Neutral buffered formalin (substance)</span></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</p>\n</div></blockquote></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenPart\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenPart</b></p><a name=\"LymphNodeSpecimenPart\"> </a><a name=\"hcLymphNodeSpecimenPart\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: Placer Identifier/OP25_211_A, Filler Identifier/E_25_211_A</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 16235301000119101}\">Specimen from sentinel lymph node of breast (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>request</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td><td><b>Method</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-BreastSurgeonPractitioner.html\">Practitioner Thomas Richter </a></td><td>2025-02-05 10:30:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 396487001}\">Sentinel lymph node biopsy (procedure)</span></td><td><span title=\"Codes:{http://snomed.info/sct 739020002}\">Lymph node group of left axilla (body structure)</span></td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 434746001}\">Specimen vial (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 434162003}\">Neutral buffered formalin (substance)</span></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</p>\n</div></blockquote></div>"
       },
       "identifier" : [{
         "type" : {
@@ -525,8 +540,8 @@
       "type" : {
         "coding" : [{
           "system" : "http://snomed.info/sct",
-          "code" : "258589002",
-          "display" : "Lymph node specimen (specimen)"
+          "code" : "16235301000119101",
+          "display" : "Specimen from sentinel lymph node of breast (specimen)"
         }]
       },
       "subject" : {
@@ -550,8 +565,8 @@
         "bodySite" : {
           "coding" : [{
             "system" : "http://snomed.info/sct",
-            "code" : "68171009",
-            "display" : "Axillary lymph node structure (body structure)"
+            "code" : "739020002",
+            "display" : "Lymph node group of left axilla (body structure)"
           }]
         }
       },
@@ -587,7 +602,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenBlock01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenBlock01</b></p><a name=\"LymphNodeSpecimenBlock01\"> </a><a name=\"hcLymphNodeSpecimenBlock01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_1</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 1201985008}\">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 08:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 787377000}\">Gross examination and sampling of tissue specimen (procedure)</span></td></tr></table><h3>Processings</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Description</b></td><td><b>Procedure</b></td><td><b>Time[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>Zuschnitt und Paraffineinbettung - SLN #1 (halbiert)</td><td><span title=\"Codes:{http://snomed.info/sct 787376009}\">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td><td>2025-02-06 08:00:00+0100</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 706053007}\">General specimen container (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 311731000}\">Paraffin wax (substance)</span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenBlock01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenBlock01</b></p><a name=\"LymphNodeSpecimenBlock01\"> </a><a name=\"hcLymphNodeSpecimenBlock01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_1</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 1201985008}\">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 08:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 787377000}\">Gross examination and sampling of tissue specimen (procedure)</span></td></tr></table><h3>Processings</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Description</b></td><td><b>Procedure</b></td><td><b>Time[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>Zuschnitt und Paraffineinbettung - SLN #1 (halbiert)</td><td><span title=\"Codes:{http://snomed.info/sct 787376009}\">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td><td>2025-02-06 08:00:00+0100</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 706053007}\">General specimen container (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 311731000}\">Paraffin wax (substance)</span></td></tr></table></div>"
       },
       "identifier" : [{
         "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
@@ -678,7 +693,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenBlock02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenBlock02</b></p><a name=\"LymphNodeSpecimenBlock02\"> </a><a name=\"hcLymphNodeSpecimenBlock02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_2</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 1201985008}\">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 08:10:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 787377000}\">Gross examination and sampling of tissue specimen (procedure)</span></td></tr></table><h3>Processings</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Description</b></td><td><b>Procedure</b></td><td><b>Time[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>Zuschnitt und Paraffineinbettung - SLN #2 (halbiert)</td><td><span title=\"Codes:{http://snomed.info/sct 787376009}\">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td><td>2025-02-06 08:10:00+0100</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 706053007}\">General specimen container (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 311731000}\">Paraffin wax (substance)</span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenBlock02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenBlock02</b></p><a name=\"LymphNodeSpecimenBlock02\"> </a><a name=\"hcLymphNodeSpecimenBlock02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_2</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 1201985008}\">Tissue block specimen (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 08:10:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 787377000}\">Gross examination and sampling of tissue specimen (procedure)</span></td></tr></table><h3>Processings</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Description</b></td><td><b>Procedure</b></td><td><b>Time[x]</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>Zuschnitt und Paraffineinbettung - SLN #2 (halbiert)</td><td><span title=\"Codes:{http://snomed.info/sct 787376009}\">Preparation of formalin fixed paraffin embedded tissue specimen (procedure)</span></td><td>2025-02-06 08:10:00+0100</td></tr></table><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 706053007}\">General specimen container (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 311731000}\">Paraffin wax (substance)</span></td></tr></table></div>"
       },
       "identifier" : [{
         "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
@@ -769,7 +784,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE01</b></p><a name=\"LymphNodeSpecimenSlideHE01\"> </a><a name=\"hcLymphNodeSpecimenSlideHE01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_1_1_HE_01</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 1)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:00:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:15:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE01\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE01</b></p><a name=\"LymphNodeSpecimenSlideHE01\"> </a><a name=\"hcLymphNodeSpecimenSlideHE01\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_1_1_HE_01</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:00:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 1)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:00:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:15:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
       },
       "identifier" : [{
         "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
@@ -888,7 +903,7 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE02</b></p><a name=\"LymphNodeSpecimenSlideHE02\"> </a><a name=\"hcLymphNodeSpecimenSlideHE02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_1_1_HE_02</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:05:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 2)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:05:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:20:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE02\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE02</b></p><a name=\"LymphNodeSpecimenSlideHE02\"> </a><a name=\"hcLymphNodeSpecimenSlideHE02\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_1_1_HE_02</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:05:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 2)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:05:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:20:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
       },
       "identifier" : [{
         "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
@@ -1007,7 +1022,364 @@
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE03\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE03</b></p><a name=\"LymphNodeSpecimenSlideHE03\"> </a><a name=\"hcLymphNodeSpecimenSlideHE03\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_2_1_HE_01</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock02.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:10:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 1)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:10:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:25:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE03\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE03</b></p><a name=\"LymphNodeSpecimenSlideHE03\"> </a><a name=\"hcLymphNodeSpecimenSlideHE03\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_1_1_HE_03</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:10:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 3)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:10:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:25:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211_A_1_1_HE_03"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/LymphNodeSpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-02-06T09:10:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 3)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:10:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:25:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE04",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "LymphNodeSpecimenSlideHE04",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE04\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE04</b></p><a name=\"LymphNodeSpecimenSlideHE04\"> </a><a name=\"hcLymphNodeSpecimenSlideHE04\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_1_1_HE_04</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:15:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 4)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:15:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:30:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211_A_1_1_HE_04"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/LymphNodeSpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-02-06T09:15:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 4)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:15:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:30:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE05",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "LymphNodeSpecimenSlideHE05",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE05\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE05</b></p><a name=\"LymphNodeSpecimenSlideHE05\"> </a><a name=\"hcLymphNodeSpecimenSlideHE05\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_1_1_HE_05</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:20:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 5)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:20:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:35:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211_A_1_1_HE_05"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/LymphNodeSpecimenBlock01"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-02-06T09:20:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 5)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:20:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:35:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE06",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "LymphNodeSpecimenSlideHE06",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE06\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE06</b></p><a name=\"LymphNodeSpecimenSlideHE06\"> </a><a name=\"hcLymphNodeSpecimenSlideHE06\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_2_1_HE_01</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock02.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:10:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 1)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:10:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:25:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
       },
       "identifier" : [{
         "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
@@ -1116,17 +1488,17 @@
     }
   },
   {
-    "fullUrl" : "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE04",
+    "fullUrl" : "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE07",
     "resource" : {
       "resourceType" : "Specimen",
-      "id" : "LymphNodeSpecimenSlideHE04",
+      "id" : "LymphNodeSpecimenSlideHE07",
       "meta" : {
         "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
         "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
       },
       "text" : {
         "status" : "extensions",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE04\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE04</b></p><a name=\"LymphNodeSpecimenSlideHE04\"> </a><a name=\"hcLymphNodeSpecimenSlideHE04\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimenversion: null2026.0.0)</a>, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Coreversion: null2026.0.0)</a></p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_2_1_HE_02</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock02.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:15:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 2)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:15:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:30:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE07\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE07</b></p><a name=\"LymphNodeSpecimenSlideHE07\"> </a><a name=\"hcLymphNodeSpecimenSlideHE07\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_2_1_HE_02</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock02.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:15:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 2)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:15:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:30:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
       },
       "identifier" : [{
         "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
@@ -1235,6 +1607,363 @@
     }
   },
   {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE08",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "LymphNodeSpecimenSlideHE08",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE08\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE08</b></p><a name=\"LymphNodeSpecimenSlideHE08\"> </a><a name=\"hcLymphNodeSpecimenSlideHE08\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_2_1_HE_03</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock02.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:20:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 3)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:20:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:35:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211_A_2_1_HE_03"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/LymphNodeSpecimenBlock02"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-02-06T09:20:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 3)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:20:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:35:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE09",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "LymphNodeSpecimenSlideHE09",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE09\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE09</b></p><a name=\"LymphNodeSpecimenSlideHE09\"> </a><a name=\"hcLymphNodeSpecimenSlideHE09\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_2_1_HE_04</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock02.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:25:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 4)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:25:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:40:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211_A_2_1_HE_04"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/LymphNodeSpecimenBlock02"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-02-06T09:25:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 4)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:25:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:40:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Specimen/LymphNodeSpecimenSlideHE10",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "LymphNodeSpecimenSlideHE10",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0",
+        "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_LymphNodeSpecimenSlideHE10\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen LymphNodeSpecimenSlideHE10</b></p><a name=\"LymphNodeSpecimenSlideHE10\"> </a><a name=\"hcLymphNodeSpecimenSlideHE10\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen\">MII PR Patho Specimen</a> version: 2026.0.0, <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore\">MII PR Biobank Specimen Bioprobe Core</a> version: 2026.0.0</p></div><p><b>identifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211_A_2_1_HE_05</p><p><b>accessionIdentifier</b>: <code>https://pathologie.example-hospital.de/fhir/fn/befundbericht</code>/E_25_211</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 430856003}\">Tissue section (specimen)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>parent</b>: <a href=\"Specimen-LymphNodeSpecimenBlock02.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td>2025-02-06 09:30:00+0100</td><td><span title=\"Codes:{http://snomed.info/sct 13283003}\">Tissue processing technique (procedure)</span></td></tr></table><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: Schnittherstellung (Schnittstufe 5)</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 434472006}\">Sectioning of tissue block (procedure)</span></p><p><b>time</b>: 2025-02-06 09:30:00+0100</p></blockquote><blockquote><p><b>processing</b></p><p><b>MII EX Biobank Temperaturbedingungen</b>: 20-25 °C</p><p><b>description</b>: HE-Färbung</p><p><b>procedure</b>: <span title=\"Codes:{http://snomed.info/sct 104210008}\">Hematoxylin and eosin stain method (procedure)</span></p><p><b>time</b>: 2025-02-06 09:45:00+0100</p></blockquote><h3>Containers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Additive[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 433466003}\">Microscope slide (physical object)</span></td><td><span title=\"Codes:{http://snomed.info/sct 430862008}\">Microscope slide mounting medium (substance)</span></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211_A_2_1_HE_05"
+      }],
+      "accessionIdentifier" : {
+        "system" : "https://pathologie.example-hospital.de/fhir/fn/befundbericht",
+        "value" : "E_25_211"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "430856003",
+          "display" : "Tissue section (specimen)"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "parent" : [{
+        "reference" : "Specimen/LymphNodeSpecimenBlock02"
+      }],
+      "collection" : {
+        "collectedDateTime" : "2025-02-06T09:30:00+01:00",
+        "method" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "13283003",
+            "display" : "Tissue processing technique (procedure)"
+          }]
+        }
+      },
+      "processing" : [{
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "Schnittherstellung (Schnittstufe 5)",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "434472006",
+            "display" : "Sectioning of tissue block (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:30:00+01:00"
+      },
+      {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen",
+          "valueRange" : {
+            "low" : {
+              "value" : 20,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            },
+            "high" : {
+              "value" : 25,
+              "unit" : "°C",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "Cel"
+            }
+          }
+        }],
+        "description" : "HE-Färbung",
+        "procedure" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "104210008",
+            "display" : "Hematoxylin and eosin stain method (procedure)"
+          }]
+        },
+        "timeDateTime" : "2025-02-06T09:45:00+01:00"
+      }],
+      "container" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "433466003",
+            "display" : "Microscope slide (physical object)"
+          }]
+        },
+        "additiveCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "430862008",
+            "display" : "Microscope slide mounting medium (substance)"
+          }]
+        }
+      }]
+    }
+  },
+  {
     "fullUrl" : "http://breastcancerspec.org/Observation/LymphNodeMacroscopicGrouper",
     "resource" : {
       "resourceType" : "Observation",
@@ -1244,7 +1973,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroscopicGrouper\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroscopicGrouper</b></p><a name=\"LymphNodeMacroscopicGrouper\"> </a><a name=\"hcLymphNodeMacroscopicGrouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper\">MII PR Patho Macroscopic Grouperversion: null2026.0.0)</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 68171009}\">Axillary lymph node structure (body structure)</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-LymphNodeMacroSLN1Size.html\">Observation Length of tissue core(s)</a></li><li><a href=\"Observation-LymphNodeMacroSLN2Size.html\">Observation Length of tissue core(s)</a></li></ul><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroscopicGrouper\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroscopicGrouper</b></p><a name=\"LymphNodeMacroscopicGrouper\"> </a><a name=\"hcLymphNodeMacroscopicGrouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper\">MII PR Patho Macroscopic Grouper</a> version: 2026.0.0</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 68171009}\">Axillary lymph node structure (body structure)</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-LymphNodeMacroSLNExamined.html\">Observation Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeMacroTotalExamined.html\">Observation Lymph nodes examined [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeMacroSLN1Size.html\">Observation Length of lymph node in excised specimen (observable entity)</a></li><li><a href=\"Observation-LymphNodeMacroSLN2Size.html\">Observation Length of lymph node in excised specimen (observable entity)</a></li></ul><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "status" : "final",
       "category" : [{
@@ -1274,6 +2003,12 @@
         }]
       },
       "hasMember" : [{
+        "reference" : "Observation/LymphNodeMacroSLNExamined"
+      },
+      {
+        "reference" : "Observation/LymphNodeMacroTotalExamined"
+      },
+      {
         "reference" : "Observation/LymphNodeMacroSLN1Size"
       },
       {
@@ -1285,16 +2020,16 @@
     }
   },
   {
-    "fullUrl" : "http://breastcancerspec.org/Observation/LymphNodeMacroSLN1Size",
+    "fullUrl" : "http://breastcancerspec.org/Observation/LymphNodeMacroSLNExamined",
     "resource" : {
       "resourceType" : "Observation",
-      "id" : "LymphNodeMacroSLN1Size",
+      "id" : "LymphNodeMacroSLNExamined",
       "meta" : {
         "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroSLN1Size\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroSLN1Size</b></p><a name=\"LymphNodeMacroSLN1Size\"> </a><a name=\"hcLymphNodeMacroSLN1Size\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44619-5}\">SLN #1 Größe</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 12 x 8 x 6 mm, Patentblau-markiert</p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 68171009}\">Axillary lymph node structure (body structure)</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroSLNExamined\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroSLNExamined</b></p><a name=\"LymphNodeMacroSLNExamined\"> </a><a name=\"hcLymphNodeMacroSLNExamined\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85347-3}\">Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 2 nodes<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{nodes} = '{nodes}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "status" : "final",
       "category" : [{
@@ -1312,8 +2047,114 @@
       "code" : {
         "coding" : [{
           "system" : "http://loinc.org",
-          "code" : "44619-5",
-          "display" : "Length of tissue core(s)"
+          "code" : "85347-3",
+          "display" : "Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-02-06T08:30:00+01:00",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 2,
+        "unit" : "nodes",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{nodes}"
+      },
+      "specimen" : {
+        "reference" : "Specimen/LymphNodeSpecimenPart"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseLymphNode"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/LymphNodeMacroTotalExamined",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "LymphNodeMacroTotalExamined",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroTotalExamined\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroTotalExamined</b></p><a name=\"LymphNodeMacroTotalExamined\"> </a><a name=\"hcLymphNodeMacroTotalExamined\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 92833-3}\">Lymph nodes examined [#] in Cancer specimen by Light microscopy</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 2 nodes<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{nodes} = '{nodes}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22634-0"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "92833-3",
+          "display" : "Lymph nodes examined [#] in Cancer specimen by Light microscopy"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient4"
+      },
+      "effectiveDateTime" : "2025-02-06T08:30:00+01:00",
+      "performer" : [{
+        "reference" : "Practitioner/PathologistPractitioner"
+      }],
+      "valueQuantity" : {
+        "value" : 2,
+        "unit" : "nodes",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{nodes}"
+      },
+      "specimen" : {
+        "reference" : "Specimen/LymphNodeSpecimenPart"
+      },
+      "derivedFrom" : [{
+        "reference" : "QuestionnaireResponse/QuestionnaireResponseLymphNode"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://breastcancerspec.org/Observation/LymphNodeMacroSLN1Size",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "LymphNodeMacroSLN1Size",
+      "meta" : {
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroSLN1Size\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroSLN1Size</b></p><a name=\"LymphNodeMacroSLN1Size\"> </a><a name=\"hcLymphNodeMacroSLN1Size\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 364109001}\">SLN #1 Größe</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 12 x 8 x 6 mm, Patentblau-markiert</p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 68171009}\">Axillary lymph node structure (body structure)</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenBlock01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      },
+      {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "22634-0"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "364109001",
+          "display" : "Length of lymph node in excised specimen (observable entity)"
         }],
         "text" : "SLN #1 Größe"
       },
@@ -1350,7 +2191,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroSLN2Size\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroSLN2Size</b></p><a name=\"LymphNodeMacroSLN2Size\"> </a><a name=\"hcLymphNodeMacroSLN2Size\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 44619-5}\">SLN #2 Größe</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 10 x 7 x 5 mm, Patentblau-markiert</p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 68171009}\">Axillary lymph node structure (body structure)</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenBlock02.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroSLN2Size\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroSLN2Size</b></p><a name=\"LymphNodeMacroSLN2Size\"> </a><a name=\"hcLymphNodeMacroSLN2Size\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22634-0}\">Pathology report gross observation Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 364109001}\">SLN #2 Größe</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-06 08:30:00+0100</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 10 x 7 x 5 mm, Patentblau-markiert</p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 68171009}\">Axillary lymph node structure (body structure)</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenBlock02.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_2; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue block specimen (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "status" : "final",
       "category" : [{
@@ -1367,9 +2208,9 @@
       }],
       "code" : {
         "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "44619-5",
-          "display" : "Length of tissue core(s)"
+          "system" : "http://snomed.info/sct",
+          "code" : "364109001",
+          "display" : "Length of lymph node in excised specimen (observable entity)"
         }],
         "text" : "SLN #2 Größe"
       },
@@ -1406,7 +2247,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeDiagnosticConclusionGrouper\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeDiagnosticConclusionGrouper</b></p><a name=\"LymphNodeDiagnosticConclusionGrouper\"> </a><a name=\"hcLymphNodeDiagnosticConclusionGrouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper\">MII PR Patho Diagnostic Conclusion Grouperversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-LymphNodeProcedure.html\">Observation Surgery procedure for regional nodes at facility.YYY Cancer</a></li><li><a href=\"Observation-LymphNodeLaterality.html\">Observation Anatomic part Laterality</a></li><li><a href=\"Observation-LymphNodeNonSLNExamined.html\">Observation Regional lymph nodes examined [#] Specimen</a></li><li><a href=\"Observation-LymphNodeNonSLNPositive.html\">Observation Regional lymph nodes positive [#] Specimen</a></li><li><a href=\"Observation-LymphNodeSLNExamined.html\">Observation Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeSLNPositive.html\">Observation Number of sentinel lymph nodes containing metastatic neoplasm in excised specimen (observable entity)</a></li><li><a href=\"Observation-LymphNodeTotalExamined.html\">Observation Lymph nodes examined [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeTotalPositive.html\">Observation Lymph nodes with metastasis [#] in Cancer specimen</a></li><li><a href=\"Observation-LymphNodeMacroMetCount.html\">Observation Lymph nodes with macrometastases [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeMicroMetCount.html\">Observation Lymph nodes with micrometastases [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeITCCount.html\">Observation Lymph nodes with isolated tumor cells [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeLargestMetSize.html\">Observation Lymph node metastatic deposit.max dimension [Length] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeExtranodalExtension.html\">Observation Extranodal extension of carcinoma [Presence] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodePN.html\">Observation Regional lymph nodes.clinical [Class] Cancer</a></li><li><a href=\"Observation-LymphNodeComment.html\">Observation Pathology report comments [Interpretation] Narrative</a></li></ul><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeDiagnosticConclusionGrouper\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeDiagnosticConclusionGrouper</b></p><a name=\"LymphNodeDiagnosticConclusionGrouper\"> </a><a name=\"hcLymphNodeDiagnosticConclusionGrouper\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper\">MII PR Patho Diagnostic Conclusion Grouper</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-LymphNodeProcedure.html\">Observation Surgery procedure for regional nodes at facility.YYY Cancer</a></li><li><a href=\"Observation-LymphNodeLaterality.html\">Observation Anatomic part Laterality</a></li><li><a href=\"Observation-LymphNodeNonSLNExamined.html\">Observation Regional lymph nodes examined [#] Specimen</a></li><li><a href=\"Observation-LymphNodeNonSLNPositive.html\">Observation Regional lymph nodes positive [#] Specimen</a></li><li><a href=\"Observation-LymphNodeSLNExamined.html\">Observation Sentinel lymph nodes examined [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeSLNPositive.html\">Observation Number of sentinel lymph nodes containing metastatic neoplasm in excised specimen (observable entity)</a></li><li><a href=\"Observation-LymphNodeTotalExamined.html\">Observation Lymph nodes examined [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeTotalPositive.html\">Observation Lymph nodes with metastasis [#] in Cancer specimen</a></li><li><a href=\"Observation-LymphNodeMacroMetCount.html\">Observation Lymph nodes with macrometastases [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeMicroMetCount.html\">Observation Lymph nodes with micrometastases [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeITCCount.html\">Observation Lymph nodes with isolated tumor cells [#] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeLargestMetSize.html\">Observation Lymph node metastatic deposit.max dimension [Length] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodeExtranodalExtension.html\">Observation Extranodal extension of carcinoma [Presence] in Cancer specimen by Light microscopy</a></li><li><a href=\"Observation-LymphNodePN.html\">Observation pN category (observable entity)</a></li><li><a href=\"Observation-LymphNodeComment.html\">Observation Pathology report comments [Interpretation] Narrative</a></li></ul><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -1491,7 +2332,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeProcedure\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeProcedure</b></p><a name=\"LymphNodeProcedure\"> </a><a name=\"hcLymphNodeProcedure\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21877-6}\">LK OP Prozedur</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 396487001}\">Sentinel-Lymphknoten-Biopsie</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeProcedure\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeProcedure</b></p><a name=\"LymphNodeProcedure\"> </a><a name=\"hcLymphNodeProcedure\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21877-6}\">LK OP Prozedur</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 396487001}\">Sentinel-Lymphknoten-Biopsie</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -1550,7 +2391,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeLaterality\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeLaterality</b></p><a name=\"LymphNodeLaterality\"> </a><a name=\"hcLymphNodeLaterality\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 20228-3}\">Seitenangabe</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 7771000}\">Links</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeLaterality\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeLaterality</b></p><a name=\"LymphNodeLaterality\"> </a><a name=\"hcLymphNodeLaterality\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 20228-3}\">Seitenangabe</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 7771000}\">Links</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -1609,7 +2450,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeNonSLNExamined\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeNonSLNExamined</b></p><a name=\"LymphNodeNonSLNExamined\"> </a><a name=\"hcLymphNodeNonSLNExamined\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21894-1}\">Anzahl untersuchter Non-SLN-axillärer LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 0 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeNonSLNExamined\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeNonSLNExamined</b></p><a name=\"LymphNodeNonSLNExamined\"> </a><a name=\"hcLymphNodeNonSLNExamined\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21894-1}\">Anzahl untersuchter Non-SLN-axillärer LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 0 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -1666,7 +2507,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeNonSLNPositive\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeNonSLNPositive</b></p><a name=\"LymphNodeNonSLNPositive\"> </a><a name=\"hcLymphNodeNonSLNPositive\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21893-3}\">Anzahl befallener Non-SLN-axillärer LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 0 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeNonSLNPositive\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeNonSLNPositive</b></p><a name=\"LymphNodeNonSLNPositive\"> </a><a name=\"hcLymphNodeNonSLNPositive\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21893-3}\">Anzahl befallener Non-SLN-axillärer LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 0 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -1723,7 +2564,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeSLNExamined\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeSLNExamined</b></p><a name=\"LymphNodeSLNExamined\"> </a><a name=\"hcLymphNodeSLNExamined\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85347-3}\">Anzahl untersuchter Sentinel-LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 2 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeSLNExamined\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeSLNExamined</b></p><a name=\"LymphNodeSLNExamined\"> </a><a name=\"hcLymphNodeSLNExamined\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85347-3}\">Anzahl untersuchter Sentinel-LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 2 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -1780,7 +2621,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeSLNPositive\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeSLNPositive</b></p><a name=\"LymphNodeSLNPositive\"> </a><a name=\"hcLymphNodeSLNPositive\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 1264491009}\">Anzahl befallener Sentinel-LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeSLNPositive\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeSLNPositive</b></p><a name=\"LymphNodeSLNPositive\"> </a><a name=\"hcLymphNodeSLNPositive\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 1264491009}\">Anzahl befallener Sentinel-LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -1837,7 +2678,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeTotalExamined\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeTotalExamined</b></p><a name=\"LymphNodeTotalExamined\"> </a><a name=\"hcLymphNodeTotalExamined\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 92833-3}\">Gesamtzahl untersuchter Lymphknoten</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 2 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeTotalExamined\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeTotalExamined</b></p><a name=\"LymphNodeTotalExamined\"> </a><a name=\"hcLymphNodeTotalExamined\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 92833-3}\">Gesamtzahl untersuchter Lymphknoten</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 2 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -1894,7 +2735,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeTotalPositive\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeTotalPositive</b></p><a name=\"LymphNodeTotalPositive\"> </a><a name=\"hcLymphNodeTotalPositive\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 92831-7}\">Gesamtzahl befallener Lymphknoten</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeTotalPositive\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeTotalPositive</b></p><a name=\"LymphNodeTotalPositive\"> </a><a name=\"hcLymphNodeTotalPositive\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 92831-7}\">Gesamtzahl befallener Lymphknoten</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -1951,7 +2792,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroMetCount\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroMetCount</b></p><a name=\"LymphNodeMacroMetCount\"> </a><a name=\"hcLymphNodeMacroMetCount\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85343-2}\">Gesamtzahl makrometastatisch befallener LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 0 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMacroMetCount\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMacroMetCount</b></p><a name=\"LymphNodeMacroMetCount\"> </a><a name=\"hcLymphNodeMacroMetCount\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85343-2}\">Gesamtzahl makrometastatisch befallener LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 0 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -2008,7 +2849,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMicroMetCount\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMicroMetCount</b></p><a name=\"LymphNodeMicroMetCount\"> </a><a name=\"hcLymphNodeMicroMetCount\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85344-0}\">Gesamtzahl mikrometastatisch befallener LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeMicroMetCount\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeMicroMetCount</b></p><a name=\"LymphNodeMicroMetCount\"> </a><a name=\"hcLymphNodeMicroMetCount\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85344-0}\">Gesamtzahl mikrometastatisch befallener LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -2065,7 +2906,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeITCCount\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeITCCount</b></p><a name=\"LymphNodeITCCount\"> </a><a name=\"hcLymphNodeITCCount\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85352-3}\">Gesamtzahl ausschließlich ITC-befallener LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 0 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Lymph node specimen (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeITCCount\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeITCCount</b></p><a name=\"LymphNodeITCCount\"> </a><a name=\"hcLymphNodeITCCount\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85352-3}\">Gesamtzahl ausschließlich ITC-befallener LK</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 0 {count}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenPart.html\">Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Specimen from sentinel lymph node of breast (specimen); note = Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert). SLN #1: 12 x 8 x 6 mm, SLN #2: 10 x 7 x 5 mm. Beide halbiert und vollständig eingebettet.</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -2122,7 +2963,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeLargestMetSize\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeLargestMetSize</b></p><a name=\"LymphNodeLargestMetSize\"> </a><a name=\"hcLymphNodeLargestMetSize\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85351-5}\">Ausdehnung der größten metastatischen Infiltration</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1.2 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeLargestMetSize\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeLargestMetSize</b></p><a name=\"LymphNodeLargestMetSize\"> </a><a name=\"hcLymphNodeLargestMetSize\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85351-5}\">Ausdehnung der größten metastatischen Infiltration</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: 1.2 mm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm = 'mm')</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -2179,7 +3020,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeExtranodalExtension\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeExtranodalExtension</b></p><a name=\"LymphNodeExtranodalExtension\"> </a><a name=\"hcLymphNodeExtranodalExtension\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85350-7}\">Extranodale Infiltration durch LK-Metastase</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 2667000}\">Nicht vorhanden</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeExtranodalExtension\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeExtranodalExtension</b></p><a name=\"LymphNodeExtranodalExtension\"> </a><a name=\"hcLymphNodeExtranodalExtension\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85350-7}\">Extranodale Infiltration durch LK-Metastase</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 2667000}\">Nicht vorhanden</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"
@@ -2238,45 +3079,44 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodePN\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodePN</b></p><a name=\"LymphNodePN\"> </a><a name=\"hcLymphNodePN\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie\">MII PR Onkologie TNM N-Kategorieversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 21906-3}, {http://snomed.info/sct 371494008}\">Regionäre Lymphknoten (pN-Kategorie)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-n-kategorie-werte pN1mi(sn)}\">pN1mi(sn)</span></p><p><b>specimen</b>: <a href=\"Specimen-LymphNodeSpecimenSlideHE01.html\">Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_211; status = available; type = Tissue section (specimen)</a></p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodePN\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodePN</b></p><a name=\"LymphNodePN\"> </a><a name=\"hcLymphNodePN\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie\">MII PR Onkologie TNM N-Kategorie</a> version: 2026.0.0</p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 371494008}\">pN category (observable entity)</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>value</b>: <span title=\"Codes:{https://www.uicc.org/resources/tnm N1mi(sn)}\">N1mi(sn)</span></p><p><b>method</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version 8}\">8. Auflage</span></p></div>"
       },
-      "basedOn" : [{
-        "reference" : "ServiceRequest/LymphNodeReportRequest"
-      }],
       "status" : "final",
       "code" : {
+        "extension" : [{
+          "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "https://www.uicc.org/resources/tnm",
+              "code" : "p",
+              "display" : "p"
+            }]
+          }
+        }],
         "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "21906-3",
-          "display" : "Regional lymph nodes.clinical [Class] Cancer"
-        },
-        {
           "system" : "http://snomed.info/sct",
           "code" : "371494008",
           "display" : "pN category (observable entity)"
-        }],
-        "text" : "Regionäre Lymphknoten (pN-Kategorie)"
+        }]
       },
       "subject" : {
         "reference" : "Patient/Patient4"
       },
       "effectiveDateTime" : "2025-02-10",
-      "performer" : [{
-        "reference" : "Practitioner/PathologistPractitioner"
-      }],
       "valueCodeableConcept" : {
         "coding" : [{
-          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-n-kategorie-werte",
-          "code" : "pN1mi(sn)"
-        }],
-        "text" : "pN1mi(sn)"
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "N1mi(sn)",
+          "display" : "N1mi(sn)"
+        }]
       },
-      "specimen" : {
-        "reference" : "Specimen/LymphNodeSpecimenSlideHE01"
-      },
-      "derivedFrom" : [{
-        "reference" : "QuestionnaireResponse/QuestionnaireResponseLymphNode"
-      }]
+      "method" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+          "code" : "8",
+          "display" : "8. Auflage"
+        }]
+      }
     }
   },
   {
@@ -2289,7 +3129,7 @@
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeComment\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeComment</b></p><a name=\"LymphNodeComment\"> </a><a name=\"hcLymphNodeComment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Findingversion: null2026.0.0)</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22638-1}\">Kommentar</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: In SLN #1 Nachweis einer Mikrometastase (1,2 mm) im Randsinus. SLN #2 tumorfrei in allen Schnittstufen. Keine extranodale Infiltration. Klassifikation: pN1mi(sn). Empfehlung: Besprechung in Tumorkonferenz bzgl. weiterer axillärer Therapie.</p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_LymphNodeComment\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation LymphNodeComment</b></p><a name=\"LymphNodeComment\"> </a><a name=\"hcLymphNodeComment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.patho@2026.0.0&amp;canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding\">MII PR Patho Finding</a> version: 2026.0.0</p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-LymphNodeReportRequest.html\">ServiceRequest Pathology synoptic report</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span>, <span title=\"Codes:{http://loinc.org 22637-3}\">Pathology report final diagnosis Narrative</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 22638-1}\">Kommentar</span></p><p><b>subject</b>: <a href=\"Patient-Patient4.html\">Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)</a></p><p><b>effective</b>: 2025-02-10</p><p><b>performer</b>: <a href=\"Practitioner-PathologistPractitioner.html\">Practitioner Elisabeth Hoffmann </a></p><p><b>value</b>: In SLN #1 Nachweis einer Mikrometastase (1,2 mm) im Randsinus. SLN #2 tumorfrei in allen Schnittstufen. Keine extranodale Infiltration. Klassifikation: pN1mi(sn). Empfehlung: Besprechung in Tumorkonferenz bzgl. weiterer axillärer Therapie.</p><p><b>derivedFrom</b>: <a href=\"QuestionnaireResponse-QuestionnaireResponseLymphNode.html\">Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP_LN-Mamma' about '-&gt;Sabine Becker  Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'</a></p></div>"
       },
       "basedOn" : [{
         "reference" : "ServiceRequest/LymphNodeReportRequest"

@@ -6,25 +6,19 @@
 
 ## Example Observation: pT-Kategorie - BET
 
-Profile: [MII PR Onkologie TNM T-Kategorieversion: null2026.0.0)](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie)
-
-**basedOn**: [ServiceRequest Pathology synoptic report](ServiceRequest-BreastResectionReportRequest.md)
+Profile: [MII PR Onkologie TNM T-Kategorie](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.onkologie@2026.0.0&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie) version: 2026.0.0
 
 **status**: Final
 
-**code**: Primärtumor (pT-Kategorie)
+**code**: pT category (observable entity)
 
 **subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
 
 **effective**: 2025-02-10
 
-**performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
+**value**: T1
 
-**value**: pT1
-
-**specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideHE01.md)
-
-**derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)
+**method**: 8. Auflage
 
 
 
@@ -37,44 +31,42 @@ Profile: [MII PR Onkologie TNM T-Kategorieversion: null2026.0.0)](https://simpli
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.0"]
   },
-  "basedOn" : [{
-    "reference" : "ServiceRequest/BreastResectionReportRequest"
-  }],
   "status" : "final",
   "code" : {
+    "extension" : [{
+      "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-tnm-cp-praefix",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.uicc.org/resources/tnm",
+          "code" : "p",
+          "display" : "p"
+        }]
+      }
+    }],
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "21899-0",
-      "display" : "Primary tumor.pathology Cancer"
-    },
-    {
       "system" : "http://snomed.info/sct",
       "code" : "384625004",
       "display" : "pT category (observable entity)"
-    }],
-    "text" : "Primärtumor (pT-Kategorie)"
+    }]
   },
   "subject" : {
     "reference" : "Patient/Patient4"
   },
   "effectiveDateTime" : "2025-02-10",
-  "performer" : [{
-    "reference" : "Practitioner/PathologistPractitioner"
-  }],
   "valueCodeableConcept" : {
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "1352559008",
-      "display" : "Union for International Cancer Control pT1 (qualifier value)"
-    }],
-    "text" : "pT1"
+      "system" : "https://www.uicc.org/resources/tnm",
+      "code" : "T1",
+      "display" : "T1"
+    }]
   },
-  "specimen" : {
-    "reference" : "Specimen/BreastResectionSpecimenSlideHE01"
-  },
-  "derivedFrom" : [{
-    "reference" : "QuestionnaireResponse/QuestionnaireResponseBreastResection"
-  }]
+  "method" : {
+    "coding" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version",
+      "code" : "8",
+      "display" : "8. Auflage"
+    }]
+  }
 }
 
 ```
