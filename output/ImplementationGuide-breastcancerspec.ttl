@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "BreastCancerSpec"] ; # 
   fhir:title [ fhir:v "Breast Cancer Specification"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-04-08T14:38:52+02:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-05-06T16:58:38+02:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "BIH CEI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "BIH CEI" ] ;
@@ -2418,27 +2418,6 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://breastcancerspec.org/Observation/BreastResectionElstonEllisScore> ;
-         fhir:reference [ fhir:v "Observation/BreastResectionElstonEllisScore" ]
-       ] ;
-       fhir:name [ fhir:v "Elston-Ellis Summenscore - BET" ] ;
-       fhir:description [ fhir:v "Elston-Ellis summary score (3+2+1=6)" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v true
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Observation"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/IntegratedElstonEllisScore> ;
          fhir:reference [ fhir:v "Observation/IntegratedElstonEllisScore" ]
        ] ;
@@ -3720,6 +3699,27 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Posterior-HE01> ;
+         fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideRR-Posterior-HE01" ]
+       ] ;
+       fhir:name [ fhir:v "HE-Schnitt BET - RR posterior (Block07)" ] ;
+       fhir:description [ fhir:v "HE-gefärbter Schnitt Resektionsrand posterior" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Superior-HE01> ;
          fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenSlideRR-Superior-HE01" ]
        ] ;
@@ -4334,27 +4334,6 @@
        ] ;
        fhir:name [ fhir:v "ITC-befallene LK" ] ;
        fhir:description [ fhir:v "Gesamtzahl ausschließlich ITC-befallener Lymphknoten: 0" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v true
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Observation"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://breastcancerspec.org/Observation/BreastResectionNuclearPleomorphism> ;
-         fhir:reference [ fhir:v "Observation/BreastResectionNuclearPleomorphism" ]
-       ] ;
-       fhir:name [ fhir:v "Kernpleomorphie-Score - BET" ] ;
-       fhir:description [ fhir:v "Nuclear pleomorphism score by Nottingham" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -5358,27 +5337,6 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://breastcancerspec.org/Observation/BreastResectionMitoticRateScore> ;
-         fhir:reference [ fhir:v "Observation/BreastResectionMitoticRateScore" ]
-       ] ;
-       fhir:name [ fhir:v "Mitoserate-Score - BET" ] ;
-       fhir:description [ fhir:v "Mitotic rate score by Nottingham" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v true
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Observation"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:l <http://breastcancerspec.org/Observation/IntegratedMitoticRateScore> ;
          fhir:reference [ fhir:v "Observation/IntegratedMitoticRateScore" ]
        ] ;
@@ -5551,28 +5509,7 @@
          fhir:reference [ fhir:v "Observation/CoreNeedleBiopsyNottinghamGrade" ]
        ] ;
        fhir:name [ fhir:v "Nottingham Grade - Stanzbiopsie" ] ;
-       fhir:description [ fhir:v "Nottingham histologic grade" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v true
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Observation"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://breastcancerspec.org/Observation/CoreNeedleBiopsyNottinghamSummaryScore> ;
-         fhir:reference [ fhir:v "Observation/CoreNeedleBiopsyNottinghamSummaryScore" ]
-       ] ;
-       fhir:name [ fhir:v "Nottingham Summary Score - Stanzbiopsie" ] ;
-       fhir:description [ fhir:v "Elston-Ellis summary score (3+2+1=6)" ] ;
+       fhir:description [ fhir:v "Nottingham histologic grade with sub-scores as components" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -5593,7 +5530,7 @@
          fhir:reference [ fhir:v "Observation/BreastResectionNottinghamGrade" ]
        ] ;
        fhir:name [ fhir:v "Nottingham-Grad - BET" ] ;
-       fhir:description [ fhir:v "Nottingham histologic grade" ] ;
+       fhir:description [ fhir:v "Nottingham histologic grade derived from summary score" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -5615,6 +5552,27 @@
        ] ;
        fhir:name [ fhir:v "Nottingham-Grad - BET" ] ;
        fhir:description [ fhir:v "Nottingham histologic grade" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Observation/BreastResectionNottinghamSummaryScore> ;
+         fhir:reference [ fhir:v "Observation/BreastResectionNottinghamSummaryScore" ]
+       ] ;
+       fhir:name [ fhir:v "Nottingham-Summenscore - BET" ] ;
+       fhir:description [ fhir:v "Elston-Ellis summary score (3+2+1=6) with sub-scores as components" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -6140,6 +6098,27 @@
        ] ;
        fhir:name [ fhir:v "Paraffinblock 06 BET - RR lateral (Scheibe VIII)" ] ;
        fhir:description [ fhir:v "Paraffineinbettung Resektionsrand lateral, Scheibe VIII" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Specimen"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock07> ;
+         fhir:reference [ fhir:v "Specimen/BreastResectionSpecimenBlock07" ]
+       ] ;
+       fhir:name [ fhir:v "Paraffinblock 07 BET - RR posterior" ] ;
+       fhir:description [ fhir:v "Paraffineinbettung Resektionsrand posterior" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true
@@ -7610,27 +7589,6 @@
        ] ;
        fhir:name [ fhir:v "Stanzzylinder-Präparat (Einsendespecimen)" ] ;
        fhir:description [ fhir:v "2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v true
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
-           fhir:v "Observation"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <http://breastcancerspec.org/Observation/BreastResectionTubuleScore> ;
-         fhir:reference [ fhir:v "Observation/BreastResectionTubuleScore" ]
-       ] ;
-       fhir:name [ fhir:v "Tubulus-Score - BET" ] ;
-       fhir:description [ fhir:v "Glandular differentiation score by Nottingham" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v true

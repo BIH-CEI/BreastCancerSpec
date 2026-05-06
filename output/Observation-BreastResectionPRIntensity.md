@@ -64,19 +64,9 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "85331-7",
-      "display" : "Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
-    },
-    {
       "system" : "http://snomed.info/sct",
       "code" : "1237278006",
       "display" : "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "1234806008",
-      "display" : "Observation using immunohistochemistry (observable entity)"
     }],
     "text" : "Färbeintensität PR"
   },

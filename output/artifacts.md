@@ -74,7 +74,6 @@ These are example instances that show what data produced and consumed by systems
 | [ER-IHC Schnitt 02 Stanzbiopsie](Specimen-CoreNeedleBiopsySpecimenSlideER02.md) | Schnitt 2 für Östrogenrezeptor-Immunhistochemie |
 | [ER-IHC Schnitt BET (Block01)](Specimen-BreastResectionSpecimenSlideER01.md) | Schnitt für Östrogenrezeptor-Immunhistochemie |
 | [ER-IHC Schnitt BET (integriert)](Specimen-IntegratedBETSlideER01.md) | Schnitt für Östrogenrezeptor-Immunhistochemie |
-| [Elston-Ellis Summenscore - BET](Observation-BreastResectionElstonEllisScore.md) | Elston-Ellis summary score (3+2+1=6) |
 | [Elston-Ellis Summenscore - BET](Observation-IntegratedElstonEllisScore.md) | Elston-Ellis summary score (3+2+1=6) |
 | [Encounter für BET Mamma](Encounter-BreastResectionEncounter.md) | Stationärer Encounter für brusterhaltende Therapie im Brustzentrum |
 | [Encounter für BET Mamma mit SLN-Biopsie](Encounter-IntegratedEncounter.md) | Stationärer Encounter für brusterhaltende Therapie mit simultaner SLN-Biopsie |
@@ -127,6 +126,7 @@ These are example instances that show what data produced and consumed by systems
 | [HE-Schnitt BET - RR inferior (Block04)](Specimen-BreastResectionSpecimenSlideRR-Inferior-HE01.md) | HE-gefärbter Schnitt Resektionsrand inferior |
 | [HE-Schnitt BET - RR lateral (Block06)](Specimen-BreastResectionSpecimenSlideRR-Lateral-HE01.md) | HE-gefärbter Schnitt Resektionsrand lateral, Scheibe VIII |
 | [HE-Schnitt BET - RR medial (Block05)](Specimen-BreastResectionSpecimenSlideRR-Medial-HE01.md) | HE-gefärbter Schnitt Resektionsrand medial, Scheibe I |
+| [HE-Schnitt BET - RR posterior (Block07)](Specimen-BreastResectionSpecimenSlideRR-Posterior-HE01.md) | HE-gefärbter Schnitt Resektionsrand posterior |
 | [HE-Schnitt BET - RR superior (Block03)](Specimen-BreastResectionSpecimenSlideRR-Superior-HE01.md) | HE-gefärbter Schnitt Resektionsrand superior |
 | [HE-Schnitt RR inferior BET (integriert)](Specimen-IntegratedBETSlideRR-Inferior-HE01.md) | HE-gefärbter Schnitt Resektionsrand inferior |
 | [HE-Schnitt RR lateral BET (integriert)](Specimen-IntegratedBETSlideRR-Lateral-HE01.md) | HE-gefärbter Schnitt Resektionsrand lateral |
@@ -157,7 +157,6 @@ These are example instances that show what data produced and consumed by systems
 | [Integrierter Befundbericht BET + SLN Composition](Composition-IntegratedComposition.md) | FHIR Composition für den integrierten Befundbericht BET Mamma links mit SLN-Biopsie Axilla |
 | [Invasives Karzinom - BET](Observation-BreastResectionInvasiveCarcinoma.md) | Vorhandensein eines invasiven Karzinoms |
 | [Invasives Karzinom - BET](Observation-IntegratedInvasiveCarcinoma.md) | Vorhandensein eines invasiven Karzinoms |
-| [Kernpleomorphie-Score - BET](Observation-BreastResectionNuclearPleomorphism.md) | Nuclear pleomorphism score by Nottingham |
 | [Kernpleomorphie-Score - BET](Observation-IntegratedNuclearPleomorphism.md) | Nuclear pleomorphism score by Nottingham |
 | [Ki-67 Index - BET](Observation-BreastResectionKi67.md) | Ki-67 Proliferationsindex |
 | [Ki-67 Index - BET](Observation-IntegratedKi67.md) | Ki-67 Proliferationsindex |
@@ -205,7 +204,6 @@ These are example instances that show what data produced and consumed by systems
 | [Mindestabstand invasiv - BET](Observation-IntegratedMinDistanceInvasive.md) | Mindestabstand der invasiven Komponente zum Resektionsrand |
 | [Mindestabstand nichtinvasiv - BET](Observation-BreastResectionMinDistanceNonInvasive.md) | Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand |
 | [Mindestabstand nichtinvasiv - BET](Observation-IntegratedMinDistanceNonInvasive.md) | Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand |
-| [Mitoserate-Score - BET](Observation-BreastResectionMitoticRateScore.md) | Mitotic rate score by Nottingham |
 | [Mitoserate-Score - BET](Observation-IntegratedMitoticRateScore.md) | Mitotic rate score by Nottingham |
 | [Mitosezahl - BET](Observation-BreastResectionMitosisCount.md) | Absolute Mitosezahl pro 10 HPF |
 | [Mitosezahl - BET](Observation-IntegratedMitosisCount.md) | Absolute Mitosezahl pro 10 HPF |
@@ -214,10 +212,10 @@ These are example instances that show what data produced and consumed by systems
 | [Morphology Free Text - Stanzbiopsie](Observation-CoreNeedleBiopsyMorphologyFreeText.md) | Free text description of tumor morphology |
 | [Nichtinvasive Läsion - BET](Observation-BreastResectionNonInvasiveLesion.md) | Vorhandensein einer nichtinvasiven Läsion |
 | [Nichtinvasive Läsion - BET](Observation-IntegratedNonInvasiveLesion.md) | Vorhandensein einer nichtinvasiven Läsion |
-| [Nottingham Grade - Stanzbiopsie](Observation-CoreNeedleBiopsyNottinghamGrade.md) | Nottingham histologic grade |
-| [Nottingham Summary Score - Stanzbiopsie](Observation-CoreNeedleBiopsyNottinghamSummaryScore.md) | Elston-Ellis summary score (3+2+1=6) |
-| [Nottingham-Grad - BET](Observation-BreastResectionNottinghamGrade.md) | Nottingham histologic grade |
+| [Nottingham Grade - Stanzbiopsie](Observation-CoreNeedleBiopsyNottinghamGrade.md) | Nottingham histologic grade with sub-scores as components |
+| [Nottingham-Grad - BET](Observation-BreastResectionNottinghamGrade.md) | Nottingham histologic grade derived from summary score |
 | [Nottingham-Grad - BET](Observation-IntegratedNottinghamGrade.md) | Nottingham histologic grade |
+| [Nottingham-Summenscore - BET](Observation-BreastResectionNottinghamSummaryScore.md) | Elston-Ellis summary score (3+2+1=6) with sub-scores as components |
 | [Nächster tumorfreier Resektionsrand - BET](Observation-BreastResectionClosestMargin.md) | Lokalisation des nächsten tumorfreien Resektionsrands |
 | [Nächster tumorfreier Resektionsrand - BET](Observation-IntegratedClosestMargin.md) | Lokalisation des nächsten tumorfreien Resektionsrands |
 | [Operatives Verfahren - BET](Observation-BreastResectionOperativeProcedure.md) | Art des operativen Verfahrens |
@@ -248,6 +246,7 @@ These are example instances that show what data produced and consumed by systems
 | [Paraffinblock 05 BET - RR medial (integriert)](Specimen-IntegratedBETSpecimenBlock05.md) | Paraffineinbettung Resektionsrand medial, Scheibe I |
 | [Paraffinblock 06 BET - RR lateral (Scheibe VIII)](Specimen-BreastResectionSpecimenBlock06.md) | Paraffineinbettung Resektionsrand lateral, Scheibe VIII |
 | [Paraffinblock 06 BET - RR lateral (integriert)](Specimen-IntegratedBETSpecimenBlock06.md) | Paraffineinbettung Resektionsrand lateral, Scheibe VIII |
+| [Paraffinblock 07 BET - RR posterior](Specimen-BreastResectionSpecimenBlock07.md) | Paraffineinbettung Resektionsrand posterior |
 | [Pathologiebericht BET + SLN (integriert)](DiagnosticReport-IntegratedReport.md) | Integrierter Pathologiebericht nach BET Mamma links mit SLN-Biopsie Axilla |
 | [Pathologiebericht BET Mamma](DiagnosticReport-BreastResectionReport.md) | Pathologiebericht nach brusterhaltender Therapie der linken Mamma |
 | [Pathologiebericht SLN-Biopsie Axilla](DiagnosticReport-LymphNodeReport.md) | Pathologiebericht nach Sentinel-Lymphknoten-Biopsie der linken Axilla |
@@ -305,7 +304,6 @@ These are example instances that show what data produced and consumed by systems
 | [Stanzbiopsie Mamma Anforderung](ServiceRequest-CoreNeedleBiopsyReportRequest.md) | Anforderung für pathologische Aufarbeitung einer US-gestützten Stanzbiopsie der linken Mamma |
 | [Stanzbiopsie Mamma Pathology Report Composition](Composition-CoreNeedleBiopsyComposition.md) | FHIR Composition for structured core needle biopsy pathology report |
 | [Stanzzylinder-Präparat (Einsendespecimen)](Specimen-CoreNeedleBiopsySpecimenPart.md) | 2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille |
-| [Tubulus-Score - BET](Observation-BreastResectionTubuleScore.md) | Glandular differentiation score by Nottingham |
 | [Tubulus-Score - BET](Observation-IntegratedTubuleScore.md) | Glandular differentiation score by Nottingham |
 | [Tumorausdehnung - BET](Observation-BreastResectionTumorExtent.md) | Ausdehnung des Tumors in Bezug auf die Brustdrüse |
 | [Tumorausdehnung - BET](Observation-IntegratedTumorExtent.md) | Ausdehnung des Tumors in Bezug auf die Brustdrüse |

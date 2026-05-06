@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://breastcancerspec.org/ImplementationGuide/breastcancerspec | *Version*:0.1.0 |
-| Draft as of 2026-04-08 | *Computable Name*:BreastCancerSpec |
+| Draft as of 2026-05-06 | *Computable Name*:BreastCancerSpec |
 
 ### Introduction
 
@@ -52,7 +52,7 @@ This IG builds on:
   "name" : "BreastCancerSpec",
   "title" : "Breast Cancer Specification",
   "status" : "draft",
-  "date" : "2026-04-08T14:38:52+02:00",
+  "date" : "2026-05-06T16:58:38+02:00",
   "publisher" : "BIH CEI",
   "contact" : [{
     "name" : "BIH CEI",
@@ -1294,18 +1294,6 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/BreastResectionElstonEllisScore"
-      },
-      "name" : "Elston-Ellis Summenscore - BET",
-      "description" : "Elston-Ellis summary score (3+2+1=6)",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
         "reference" : "Observation/IntegratedElstonEllisScore"
       },
       "name" : "Elston-Ellis Summenscore - BET",
@@ -2038,6 +2026,18 @@ This IG builds on:
         "valueString" : "Specimen"
       }],
       "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenSlideRR-Posterior-HE01"
+      },
+      "name" : "HE-Schnitt BET - RR posterior (Block07)",
+      "description" : "HE-gefärbter Schnitt Resektionsrand posterior",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
         "reference" : "Specimen/BreastResectionSpecimenSlideRR-Superior-HE01"
       },
       "name" : "HE-Schnitt BET - RR superior (Block03)",
@@ -2390,18 +2390,6 @@ This IG builds on:
       },
       "name" : "ITC-befallene LK",
       "description" : "Gesamtzahl ausschließlich ITC-befallener Lymphknoten: 0",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/BreastResectionNuclearPleomorphism"
-      },
-      "name" : "Kernpleomorphie-Score - BET",
-      "description" : "Nuclear pleomorphism score by Nottingham",
       "exampleBoolean" : true
     },
     {
@@ -2974,18 +2962,6 @@ This IG builds on:
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/BreastResectionMitoticRateScore"
-      },
-      "name" : "Mitoserate-Score - BET",
-      "description" : "Mitotic rate score by Nottingham",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
         "reference" : "Observation/IntegratedMitoticRateScore"
       },
       "name" : "Mitoserate-Score - BET",
@@ -3085,19 +3061,7 @@ This IG builds on:
         "reference" : "Observation/CoreNeedleBiopsyNottinghamGrade"
       },
       "name" : "Nottingham Grade - Stanzbiopsie",
-      "description" : "Nottingham histologic grade",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/CoreNeedleBiopsyNottinghamSummaryScore"
-      },
-      "name" : "Nottingham Summary Score - Stanzbiopsie",
-      "description" : "Elston-Ellis summary score (3+2+1=6)",
+      "description" : "Nottingham histologic grade with sub-scores as components",
       "exampleBoolean" : true
     },
     {
@@ -3109,7 +3073,7 @@ This IG builds on:
         "reference" : "Observation/BreastResectionNottinghamGrade"
       },
       "name" : "Nottingham-Grad - BET",
-      "description" : "Nottingham histologic grade",
+      "description" : "Nottingham histologic grade derived from summary score",
       "exampleBoolean" : true
     },
     {
@@ -3122,6 +3086,18 @@ This IG builds on:
       },
       "name" : "Nottingham-Grad - BET",
       "description" : "Nottingham histologic grade",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BreastResectionNottinghamSummaryScore"
+      },
+      "name" : "Nottingham-Summenscore - BET",
+      "description" : "Elston-Ellis summary score (3+2+1=6) with sub-scores as components",
       "exampleBoolean" : true
     },
     {
@@ -3422,6 +3398,18 @@ This IG builds on:
       },
       "name" : "Paraffinblock 06 BET - RR lateral (Scheibe VIII)",
       "description" : "Paraffineinbettung Resektionsrand lateral, Scheibe VIII",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/BreastResectionSpecimenBlock07"
+      },
+      "name" : "Paraffinblock 07 BET - RR posterior",
+      "description" : "Paraffineinbettung Resektionsrand posterior",
       "exampleBoolean" : true
     },
     {
@@ -4262,18 +4250,6 @@ This IG builds on:
       },
       "name" : "Stanzzylinder-Präparat (Einsendespecimen)",
       "description" : "2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/BreastResectionTubuleScore"
-      },
-      "name" : "Tubulus-Score - BET",
-      "description" : "Glandular differentiation score by Nottingham",
       "exampleBoolean" : true
     },
     {

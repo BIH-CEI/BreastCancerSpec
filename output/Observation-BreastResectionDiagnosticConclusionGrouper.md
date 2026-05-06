@@ -35,12 +35,9 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/res
 * [Observation Size.maximum dimension in Tumor](Observation-BreastResectionMaxOverallDiameter.md)
 * [Observation Histo type BT](Observation-BreastResectionHistologicalType.md)
 * [Observation Histology type in Cancer specimen Narrative](Observation-BreastResectionMorphologyFreeText.md)
-* [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-BreastResectionNottinghamGrade.md)
-* [Observation Glandular differentiation [Score] in Breast cancer specimen by Nottingham](Observation-BreastResectionTubuleScore.md)
-* [Observation Nuclear pleomorphism in Breast tumor by Nottingham](Observation-BreastResectionNuclearPleomorphism.md)
+* [Observation Nottingham combined grade of primary malignant neoplasm of breast (observable entity)](Observation-BreastResectionNottinghamGrade.md)
+* [Observation Nottingham total score of primary malignant neoplasm of breast (observable entity)](Observation-BreastResectionNottinghamSummaryScore.md)
 * [Observation Number of mitoses per 10 high power fields (observable entity)](Observation-BreastResectionMitosisCount.md)
-* [Observation Mitotic rate [Score] in Breast cancer specimen by Nottingham](Observation-BreastResectionMitoticRateScore.md)
-* [Observation Nottingham total score of primary malignant neoplasm of breast (observable entity)](Observation-BreastResectionElstonEllisScore.md)
 * [Observation DCIS intraduct ext Br ca spec Ql Micro](Observation-BreastResectionAssociatedDCIS.md)
 * [Observation Nuclear grade of ductal carcinoma in situ of breast (observable entity)](Observation-BreastResectionDCISGrade.md)
 * [Observation Growth pattern of DCIS [Type] in Breast cancer specimen by Light microscopy](Observation-BreastResectionDCISArchitecture.md)
@@ -58,9 +55,9 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/res
 * [Observation Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain](Observation-BreastResectionERIntensity.md)
 * [Observation Progesterone receptor [Interpretation] in Tissue](Observation-BreastResectionPRStatus.md)
 * [Observation Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain](Observation-BreastResectionPRPercentage.md)
-* [Observation Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain](Observation-BreastResectionPRIntensity.md)
+* [Observation Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)](Observation-BreastResectionPRIntensity.md)
 * [Observation HER2 [Presence] in Breast cancer specimen by Immune stain](Observation-BreastResectionHER2IHC.md)
-* [Observation ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH](Observation-BreastResectionHER2ISH.md)
+* [Observation Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)](Observation-BreastResectionHER2ISH.md)
 * [Observation HER2 [Interpretation] in Tissue](Observation-BreastResectionHER2Overall.md)
 * [Observation Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain](Observation-BreastResectionKi67.md)
 * [Observation pT category (observable entity)](Observation-BreastResectionPT.md)
@@ -139,19 +136,10 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/res
     "reference" : "Observation/BreastResectionNottinghamGrade"
   },
   {
-    "reference" : "Observation/BreastResectionTubuleScore"
-  },
-  {
-    "reference" : "Observation/BreastResectionNuclearPleomorphism"
+    "reference" : "Observation/BreastResectionNottinghamSummaryScore"
   },
   {
     "reference" : "Observation/BreastResectionMitosisCount"
-  },
-  {
-    "reference" : "Observation/BreastResectionMitoticRateScore"
-  },
-  {
-    "reference" : "Observation/BreastResectionElstonEllisScore"
   },
   {
     "reference" : "Observation/BreastResectionAssociatedDCIS"

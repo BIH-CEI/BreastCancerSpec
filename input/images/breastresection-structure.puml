@@ -1,0 +1,137 @@
+@startuml BreastResection_Structure
+' layout: default (GraphViz)
+title Breast Resection (BET) – FHIR Resource Structure
+
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Arial
+skinparam defaultFontSize 10
+skinparam ArrowColor #555555
+skinparam ArrowThickness 1.2
+skinparam nodesep 30
+skinparam ranksep 40
+skinparam padding 5
+
+skinparam rectangle {
+  RoundCorner 8
+  BorderThickness 1.5
+}
+
+' ====================================================================
+' TOP: Administrative resources (above DiagnosticReport)
+' ====================================================================
+together {
+  rectangle "**Patient**\nPatient4\nSabine Becker\ngeb. 1971-03-15" as PAT #D6D6D6
+  rectangle "**Practitioner**\nPathologistPractitioner\nPathology dept." as PRAC #D6D6D6
+  rectangle "**Organization**\nPathologyLabOrganization\nPathology institute" as ORG #D6D6D6
+  rectangle "**Encounter**\nBreastResectionEncounter\nE_25_210  |  class: IMP" as ENC #D6D6D6
+}
+
+' ====================================================================
+' CENTER: DiagnosticReport
+' ====================================================================
+rectangle "**DiagnosticReport**\nBreastResectionReport\n────────────────────\ncode: LOINC 60568-3\nidentifier: E_25_210  |  status: final\neffective: 2025-02-10" as DR #C6EFCE
+
+PAT  <-- DR : subject
+PRAC <-- DR : performer
+ORG  <-- DR : (organization)
+ENC  <-- DR : encounter
+
+' ====================================================================
+' ServiceRequest
+' ====================================================================
+rectangle "**ServiceRequest**\nBreastResectionReportRequest\n────────────\ncode: LOINC 60568-3\nPathology synoptic report\nplacer-ID: PATH-RPT-2025-210" as SR #BDD7EE
+
+' ====================================================================
+' SupportingInfo (Imaging Report + Observations)
+' ====================================================================
+rectangle "**DiagnosticReport**\nBreastResectionImagingReport\n────────────\nLOINC 24606-6\nMG Breast Screening\nBI-RADS 4b" as IMG #FFF2CC
+
+rectangle "**SupportingInfo Observations**\nPresentationMode  (LOINC 67098-4)\nCancerHistory  (SCT 415076002)\nPriorTherapy  (LOINC 81167-9)\nRadiologicalExtent  (SCT 396361002)\nSpecimenMarking  (SCT 836381000000102)\nSpecimenRadiography  (SCT 80865008)\nGeneticPredisposition  (SCT 76522002)\nQuadrant  (LOINC 42799-7)\nClock  (LOINC 85332-5)\nDistanceNipple  (SCT 1240401000)" as SUPOBS #FFF2CC
+
+' ====================================================================
+' Specimens (grouped)
+' ====================================================================
+rectangle "Specimens" as COL_SPEC #FEF5EC {
+  rectangle "**Part Specimen**\nBreastResectionSpecimenPart\nE_25_210_A\ntype: excision from breast\nadditive: formalin" as SPART #FCE4D6
+
+  rectangle "**Block Specimens (6)**\nBlock01 – Tumor zentral, Scheibe III\nBlock02 – Tumor zentral, Scheibe V\nBlock03 – RR superior\nBlock04 – RR inferior\nBlock05 – RR medial\nBlock06 – RR lateral\ntype: FFPE block  |  additive: paraffin" as SBLOCK #FCE4D6
+
+  rectangle "**Slide Specimens (15)**\nBlock01: HE 01–02, ER 01, PR 01,\n  HER2-IHC 01, Ki-67 01, CK18 01, p40 01, E-Cad 01\nBlock02: HE 01–02\nBlock03–06: RR-Superior/Inferior/\n  Medial/Lateral HE 01\ntype: tissue section" as SSLIDE #FCE4D6
+
+  SPART -[hidden]down-> SBLOCK
+  SBLOCK -[hidden]down-> SSLIDE
+  SSLIDE -up-> SBLOCK : parent
+  SBLOCK -up-> SPART : parent
+}
+
+DR --> SR       : basedOn
+DR --> COL_SPEC : specimen
+SR --> IMG      : supportingInfo
+SR --> SUPOBS   : supportingInfo
+
+' ====================================================================
+' Macroscopy-Grouper
+' ====================================================================
+rectangle "**Macroscopy-Grouper**\nBreastResectionMacroscopicGrouper\n────────────\nLOINC 22634-0\nresult[macroscopic-observations]" as MACG #E8F4FD {
+
+  rectangle "**Findings (8)**\nMacroLength  (LOINC 44629-4  42 mm)\nMacroWidth  (LOINC 44630-2  35 mm)\nMacroDepth  (LOINC 44631-0  18 mm)\nMacroWeight  (LOINC 29638-4  10 g)\nMacroQuadrant  (LOINC 42799-7)\nMacroClock  (LOINC 85332-5)\nMacroDistanceNipple  (SCT 1240401000)\nMacroBlockCount  (SCT 3100001000004109  6)" as MOBS #E2D0F0
+}
+
+DR --> MACG : result
+
+' ====================================================================
+' DiagnosticConclusion-Grouper
+' ====================================================================
+rectangle "**DiagnosticConclusion-Grouper**\nBreastResectionDiagnosticConclusionGrouper\n────────────\nLOINC 22637-3\nresult[diagnostic-conclusion]" as DCG #FEF0E7 {
+
+  rectangle "**Allgemein (7)**\nNonInvasiveLesion  (SCT 189336000)\nInvasiveCarcinoma  (SCT 254837009)\nOperativeProcedure  (LOINC 29306-8)\nMaterialType  (LOINC 66746-9)\nLaterality  (SCT 384727002)\nAttachedTissue  (LOINC 85298-8)\nFocality  (SCT 1157128007)" as DC_GEN #FFF2CC
+
+  rectangle "**Invasives Karzinom (11)**\nMaxDiameterInvasive  (LOINC 44635-1)\nMaxOverallDiameter  (LOINC 33728-7)\nHistologicalType  (LOINC 44638-5)\nMorphologyFreeText  (LOINC 33731-1)\nNottinghamGrade  (LOINC 44648-4)\n  components: Summenscore, Tubulus,\n  Kernpleomorphie, Mitoserate\nMitosisCount  (SCT 406094009)\nAssociatedDCIS  (LOINC 85336-6)\nDCISGrade  (SCT 2890001000004108)\nDCISArchitecture  (LOINC 85302-8)\nDCISNecrosis  (LOINC 85340-8)\nTumorExtent  (LOINC 85322-6)" as DC_INV #FFF2CC
+
+  rectangle "**Resektionsraender (5)**\nMarginStatusInvasive  (LOINC 44669-0)\nClosestMargin  (LOINC 44674-0)\nMinDistanceInvasive  (LOINC 44672-4)\nMarginStatusNonInvasive  (LOINC 85334-1)\nMinDistanceNonInvasive  (LOINC 44673-2)" as DC_RR #FFF2CC
+
+  rectangle "**Weitere (2)**\nLVI  (LOINC 59544-7)\nMicrocalcification  (SCT 1240404008)" as DC_MISC #FFF2CC
+
+  rectangle "**Biomarker (10)**\nERStatus  (LOINC 16112-5)\nERPercentage  (LOINC 85329-1)\nERIntensity  (SCT 1236874005)\nPRStatus  (LOINC 16113-3)\nPRPercentage  (LOINC 85325-9)\nPRIntensity  (SCT 1237278006)\nHER2IHC  (LOINC 85319-2)\nHER2ISH  (SCT 1363314005)\nHER2Overall  (LOINC 48676-1)\nKi67  (LOINC 85330-9)" as DC_BIO #FFF2CC
+
+  rectangle "**TNM (1)**\npT  (SCT 384625004  pT1c)" as DC_TNM #FFF2CC
+
+  rectangle "**Kommentar (1)**\nComment  (LOINC 22638-1)" as DC_COM #FFF2CC
+}
+
+DR --> DCG : result
+
+' ====================================================================
+' Composition
+' ====================================================================
+rectangle "**Composition**\nBreastResectionComposition\n────────────────────\ntype: LOINC 11526-1 (Pathology study)\ntitle: Pathologisch-Anatomische\n  Begutachtung (BET)\nauthor: PathologyLabOrganization\nsection.entry -> BreastResectionReport\nevent.detail -> ServiceRequest" as COMP #C6EFCE
+
+COMP --> DR : section.entry
+
+' ====================================================================
+' Bundle
+' ====================================================================
+rectangle "**Bundle**\nBreastResectionDocument\n────────────────────\ntype: document\nidentifier: E_25_002\ntimestamp: 2025-02-10\n\nentry[0]: Composition\nentry[1]: Patient\nentry[2]: Organization\nentry[3..4]: Practitioners\nentry[5]: Encounter\nentry[6]: Condition\nentry[7]: ServiceRequest\nentry[8]: ImagingReport\nentry[9..17]: SupportingInfo Obs\nentry[18]: DiagnosticReport\nentry[19..40]: Specimens (1+6+15)\nentry[41..47]: Substances (7)\nentry[48..56]: Macroscopy (1+8)\nentry[57..94]: DiagConclusion (1+37)\nentry[95]: QuestionnaireResponse" as BUNDLE #EEEEEE
+
+BUNDLE --> COMP : entry[0]
+
+' ====================================================================
+' QuestionnaireResponse
+' ====================================================================
+rectangle "**QuestionnaireResponse**\nQuestionnaireResponseBreastResection\n────────────\nQuestionnaire: Breast-Resection\n(whole case)" as QR #FFF2CC
+
+MOBS   --> QR : derivedFrom
+DC_GEN --> QR : derivedFrom
+DC_INV --> QR : derivedFrom
+DC_RR  --> QR : derivedFrom
+DC_MISC --> QR : derivedFrom
+DC_BIO --> QR : derivedFrom
+
+' ====================================================================
+' Layout ordering
+' ====================================================================
+SR       -[hidden]right-> COL_SPEC
+COL_SPEC -[hidden]right-> MACG
+MACG     -[hidden]right-> DCG
+
+@enduml

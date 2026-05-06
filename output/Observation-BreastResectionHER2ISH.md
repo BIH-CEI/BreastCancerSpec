@@ -64,9 +64,9 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "85318-4",
-      "display" : "ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH"
+      "system" : "http://snomed.info/sct",
+      "code" : "1363314005",
+      "display" : "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)"
     }],
     "text" : "Her2 Amplifikation"
   },
@@ -80,8 +80,8 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "2667000",
-      "display" : "Absent (qualifier value)"
+      "code" : "705105000",
+      "display" : "Human epidermal growth factor 2 gene amplification not detected (finding)"
     }],
     "text" : "Nicht amplifiziert"
   },

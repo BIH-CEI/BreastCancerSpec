@@ -120,9 +120,6 @@ Description: "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbe
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyNottinghamGrade"
 * entry[=].resource = CoreNeedleBiopsyNottinghamGrade
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyNottinghamSummaryScore"
-* entry[=].resource = CoreNeedleBiopsyNottinghamSummaryScore
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyERStatus"
 * entry[=].resource = CoreNeedleBiopsyERStatus
 

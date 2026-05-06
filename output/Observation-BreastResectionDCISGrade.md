@@ -71,6 +71,11 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
     "reference" : "Practitioner/PathologistPractitioner"
   }],
   "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "369782002",
+      "display" : "Ductal carcinoma in situ nuclear pleomorphism, grade 2: neither nuclear grade 1 nor nuclear grade 3 (finding)"
+    }],
     "text" : "Intermediär (Grad 2)"
   },
   "specimen" : {

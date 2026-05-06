@@ -24,7 +24,7 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
 
 **value**: Nicht nachgewiesen
 
-**specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideHE01.md)
+**specimen**: [Specimen: identifier = Placer Identifier,Filler Identifier; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Specimen from breast obtained by excision (specimen); note = BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ.](Specimen-BreastResectionSpecimenPart.md)
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)
 
@@ -84,7 +84,7 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
     "text" : "Nicht nachgewiesen"
   },
   "specimen" : {
-    "reference" : "Specimen/BreastResectionSpecimenSlideHE01"
+    "reference" : "Specimen/BreastResectionSpecimenPart"
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseBreastResection"

@@ -26,8 +26,7 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/res
 
 * [Observation Histology and Behavior ICD-O-3 Cancer](Observation-CoreNeedleBiopsyHistologicalTypeICDO3.md)
 * [Observation Histology type in Cancer specimen Narrative](Observation-CoreNeedleBiopsyMorphologyFreeText.md)
-* [Observation Nottingham combined grade of primary malignant neoplasm of breast (observable entity)](Observation-CoreNeedleBiopsyNottinghamGrade.md)
-* [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyNottinghamSummaryScore.md)
+* [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyNottinghamGrade.md)
 * [Observation Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyERStatus.md)
 * [Observation Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyERPercentage.md)
 * [Observation Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain](Observation-CoreNeedleBiopsyPRStatus.md)
@@ -83,9 +82,6 @@ Profile: [MII PR Patho Diagnostic Conclusion Grouper](https://simplifier.net/res
   },
   {
     "reference" : "Observation/CoreNeedleBiopsyNottinghamGrade"
-  },
-  {
-    "reference" : "Observation/CoreNeedleBiopsyNottinghamSummaryScore"
   },
   {
     "reference" : "Observation/CoreNeedleBiopsyERStatus"

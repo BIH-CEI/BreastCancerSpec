@@ -88,6 +88,11 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
     "reference" : "Practitioner/PathologistPractitioner"
   }],
   "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA11841-6",
+      "display" : "1+"
+    }],
     "text" : "1+"
   },
   "specimen" : {

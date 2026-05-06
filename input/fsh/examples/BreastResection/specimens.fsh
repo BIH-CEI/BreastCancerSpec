@@ -250,6 +250,41 @@ Description: "Paraffineinbettung Resektionsrand lateral, Scheibe VIII"
   * additiveCodeableConcept = $sct#311731000 "Paraffin wax (substance)"
 
 // =============================================================================
+// BET - PARAFFINBLOCK 07 (RR posterior)
+// =============================================================================
+
+Instance: BreastResectionSpecimenBlock07
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "Paraffinblock 07 BET - RR posterior"
+Description: "Paraffineinbettung Resektionsrand posterior"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_210_A_7"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_210"
+* status = #available
+* type = $sct#1201985008 "Tissue block specimen (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(BreastResectionSpecimenPart)
+* collection
+  * collectedDateTime = "2025-02-06T08:40:00+01:00"
+  * method = $sct#787377000 "Gross examination and sampling of tissue specimen (procedure)"
+* processing[+]
+  * description = "Zuschnitt und Paraffineinbettung - Resektionsrand posterior"
+  * procedure = $sct#787376009 "Preparation of formalin fixed paraffin embedded tissue specimen (procedure)"
+  * timeDateTime = "2025-02-06T08:40:00+01:00"
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 2
+  * extension[temperaturbedingungen].valueRange.high.value = 8
+* container
+  * type = $sct#706053007 "General specimen container (physical object)"
+  * additiveCodeableConcept = $sct#311731000 "Paraffin wax (substance)"
+
+// =============================================================================
 // BLOCK01 - HE-SCHNITT 01 (Schnittstufe 1)
 // =============================================================================
 
@@ -878,6 +913,48 @@ Description: "HE-gefärbter Schnitt Resektionsrand lateral, Scheibe VIII"
   * description = "HE-Färbung"
   * procedure = $sct#104210008 "Hematoxylin and eosin stain method (procedure)"
   * timeDateTime = "2025-02-06T09:49:00+01:00"
+* container
+  * type = $sct#433466003 "Microscope slide (physical object)"
+  * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"
+
+// =============================================================================
+// BLOCK07 - HE-SCHNITT RR posterior (1x)
+// =============================================================================
+
+Instance: BreastResectionSpecimenSlideRR-Posterior-HE01
+InstanceOf: $mii-patho-specimen
+Usage: #example
+Title: "HE-Schnitt BET - RR posterior (Block07)"
+Description: "HE-gefärbter Schnitt Resektionsrand posterior"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* identifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_210_A_7_1_HE_01"
+* accessionIdentifier
+  * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
+  * value = "E_25_210"
+* status = #available
+* type = $sct#430856003 "Tissue section (specimen)"
+* subject = Reference(Patient4)
+* parent = Reference(BreastResectionSpecimenBlock07)
+* collection
+  * collectedDateTime = "2025-02-06T09:37:00+01:00"
+  * method = $sct#13283003 "Tissue processing technique (procedure)"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "Schnittherstellung"
+  * procedure = $sct#434472006 "Sectioning of tissue block (procedure)"
+  * timeDateTime = "2025-02-06T09:37:00+01:00"
+* processing[+]
+  * extension[temperaturbedingungen].url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen"
+  * extension[temperaturbedingungen].valueRange.low.value = 20
+  * extension[temperaturbedingungen].valueRange.high.value = 25
+  * description = "HE-Färbung"
+  * procedure = $sct#104210008 "Hematoxylin and eosin stain method (procedure)"
+  * timeDateTime = "2025-02-06T09:52:00+01:00"
 * container
   * type = $sct#433466003 "Microscope slide (physical object)"
   * additiveCodeableConcept = $sct#430862008 "Microscope slide mounting medium (substance)"

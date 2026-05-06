@@ -14,7 +14,7 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
 
 **category**: Laboratory, Pathology report final diagnosis Narrative
 
-**code**: Histologischer Tumorgrad (Elston-Ellis-Grad)
+**code**: Histologischer Tumorgrad (Nottingham-Grad)
 
 **subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
 
@@ -22,11 +22,14 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: Nottingham Grad 2 (Score 6)
+**value**: Nottingham Grad 2
 
 **specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideHE01.md)
 
-**derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)
+**derivedFrom**: 
+
+* [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)
+* [Observation Nottingham total score of primary malignant neoplasm of breast (observable entity)](Observation-BreastResectionNottinghamSummaryScore.md)
 
 
 
@@ -57,11 +60,11 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://loinc.org",
-      "code" : "44648-4",
-      "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+      "system" : "http://snomed.info/sct",
+      "code" : "372276001",
+      "display" : "Nottingham combined grade of primary malignant neoplasm of breast (observable entity)"
     }],
-    "text" : "Histologischer Tumorgrad (Elston-Ellis-Grad)"
+    "text" : "Histologischer Tumorgrad (Nottingham-Grad)"
   },
   "subject" : {
     "reference" : "Patient/Patient4"
@@ -76,13 +79,16 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
       "code" : "1155703007",
       "display" : "G2: Moderately differentiated histologic grade (qualifier value)"
     }],
-    "text" : "Nottingham Grad 2 (Score 6)"
+    "text" : "Nottingham Grad 2"
   },
   "specimen" : {
     "reference" : "Specimen/BreastResectionSpecimenSlideHE01"
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseBreastResection"
+  },
+  {
+    "reference" : "Observation/BreastResectionNottinghamSummaryScore"
   }]
 }
 

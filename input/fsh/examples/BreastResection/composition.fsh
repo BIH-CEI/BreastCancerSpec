@@ -18,7 +18,7 @@ Description: "FHIR Composition for structured breast resection pathology report"
 * date = "2025-02-10T17:00:00+01:00"
 * author = Reference(PathologyLabOrganization)
 * author.display = "Institut für Pathologie"
-* title = "Histopathologischer Befundbericht - BET Mamma links"
+* title = "Pathologisch-Anatomische Begutachtung - Makroskopische Beurteilung (BET)"
 * encounter = Reference(BreastResectionEncounter)
 * attester.mode = #legal
 * attester.party = Reference(PathologyLabOrganization)
@@ -47,15 +47,15 @@ Description: "FHIR Composition for structured breast resection pathology report"
 <tr><td>Abstand Mamille</td><td>50 mm</td></tr>
 <tr><td>Lamellierung</td><td>8 Scheiben à 5 mm</td></tr>
 <tr><td>Schnittfläche</td><td>Grau-weißlich, derber Herdbefund zentral in Scheibe III–V, ca. 18 mm</td></tr>
-<tr><td>Paraffinblöcke</td><td>6</td></tr>
+<tr><td>Paraffinblöcke</td><td>7</td></tr>
 </tbody>
 </table>
 
 <h3>Mikroskopie</h3>
-<p>Invasives Mammakarzinom des NST (kein spezieller Typ), maximal 18 mm messend. Das Karzinom zeigt ein überwiegend trabekuläres und solides Wachstumsmuster mit mäßiger Kern- und Zellpolymorphie. Mitosen sind vereinzelt nachweisbar (4/10 HPF). In der Tumorperipherie zeigt sich ein begleitendes duktales Carcinoma in situ (DCIS) mit intermediärem Kerngrad und überwiegend kribriformem Wachstumsmuster, maximal 8 mm. Fokale Komedo-Nekrosen. Assoziierte Mikroverkalkungen im DCIS-Areal. Alle Resektionsränder tumorfrei. Mindestabstand invasiv: 5 mm (posterior), DCIS: 3 mm. Keine Lymphgefäßinvasion.</p>
+<p>Invasives Mammakarzinom des NST (kein spezieller Typ), maximal 18 mm messend. Das Karzinom zeigt ein überwiegend trabekuläres und solides Wachstumsmuster mit mäßiger Kern- und Zellpolymorphie. Mitosen sind vereinzelt nachweisbar (4/10 HPF). In der Tumorperipherie zeigt sich ein begleitendes duktales Carcinoma in situ (DCIS) mit intermediärem Kerngrad und überwiegend kribriformem Wachstumsmuster, maximal 8 mm. Zentrale Komedo-Nekrosen. Assoziierte Mikroverkalkungen im DCIS-Areal. Alle Resektionsränder tumorfrei. Mindestabstand invasiv: 5 mm (posterior), DCIS: 3 mm. Keine Lymphgefäßinvasion.</p>
 
-<h3>Diagnostische Schlussfolgerung</h3>
-<p><b>Diagnose:</b> Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c</p>
+<h3>Diagnose</h3>
+<p> Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c</p>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>ICD-10</td><td>C50.5</td></tr>
@@ -66,7 +66,7 @@ Description: "FHIR Composition for structured breast resection pathology report"
 <tr><td>Max. Durchmesser invasiv</td><td>18 mm</td></tr>
 <tr><td>Max. Gesamtdurchmesser</td><td>22 mm</td></tr>
 <tr><td>Nottingham-Grad</td><td>Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1)</td></tr>
-<tr><td>Assoziiertes DCIS</td><td>Vorhanden, intermediärer Kerngrad, kribriform, fokale Komedo-Nekrosen</td></tr>
+<tr><td>Assoziiertes DCIS</td><td>Vorhanden, ohne extensive intraduktale Komponente (EIC), intermediärer Kerngrad, kribriform, zentrale Komedo-Nekrosen</td></tr>
 <tr><td>Tumorausdehnung</td><td>Auf Brustdrüse beschränkt</td></tr>
 <tr><td>pT-Kategorie</td><td>pT1c</td></tr>
 </tbody>

@@ -84,9 +84,9 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
   }],
   "valueCodeableConcept" : {
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "52101004",
-      "display" : "Present (qualifier value)"
+      "system" : "http://loinc.org",
+      "code" : "LA6576-8",
+      "display" : "Positive"
     }],
     "text" : "Positiv"
   },

@@ -20,7 +20,6 @@ Description: "Grouper for all diagnostic conclusion findings in core needle biop
 * hasMember[+] = Reference(CoreNeedleBiopsyHistologicalTypeICDO3)
 * hasMember[+] = Reference(CoreNeedleBiopsyMorphologyFreeText)
 * hasMember[+] = Reference(CoreNeedleBiopsyNottinghamGrade)
-* hasMember[+] = Reference(CoreNeedleBiopsyNottinghamSummaryScore)
 * hasMember[+] = Reference(CoreNeedleBiopsyERStatus)
 * hasMember[+] = Reference(CoreNeedleBiopsyERPercentage)
 * hasMember[+] = Reference(CoreNeedleBiopsyPRStatus)
@@ -49,7 +48,8 @@ Description: "Histological type according to ICD-O-3 classification"
 * effectiveDateTime = "2025-01-17"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueCodeableConcept = $ICDO-3#8500/3 "Invasives duktales Karzinom (NST)"
+* valueCodeableConcept = $sct#82711006 "Infiltrating duct carcinoma (morphologic abnormality)"
+* valueCodeableConcept.text = "Invasives duktales Karzinom (NST)"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // Morphology Free Text
@@ -71,52 +71,41 @@ Description: "Free text description of tumor morphology"
 * valueString = "Invasives Karzinom, NST"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
-// Nottingham Grade
+// Nottingham Grade (with sub-scores as components)
 Instance: CoreNeedleBiopsyNottinghamGrade
 InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Nottingham Grade - Stanzbiopsie"
-Description: "Nottingham histologic grade"
+Description: "Nottingham histologic grade with sub-scores as components"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $sct#372276001 "Nottingham combined grade of primary malignant neoplasm of breast (observable entity)"
+* code = $loinc#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+* code.text = "Histologischer Tumorgrad (Elston-Ellis-Grad)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)
 * effectiveDateTime = "2025-01-17"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
 * valueCodeableConcept = $sct#1155703007 "G2: Moderately differentiated histologic grade (qualifier value)"
-* valueCodeableConcept.text = "Nottingham Grad 2"
-* derivedFrom[+] = Reference(QuestionnaireResponseCoreNeedleBiopsy)
-* derivedFrom[+] = Reference(CoreNeedleBiopsyNottinghamSummaryScore)
-
-// Nottingham Summary Score
-Instance: CoreNeedleBiopsyNottinghamSummaryScore
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Nottingham Summary Score - Stanzbiopsie"
-Description: "Elston-Ellis summary score (3+2+1=6)"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $loinc#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
-* code.text = "Elston-Ellis Summenscore"
-* subject = Reference(Patient4)
-* specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)
-* effectiveDateTime = "2025-01-17"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueQuantity = 6 '{score}' "score"
-* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+* valueCodeableConcept.text = "Nottingham Grad 2 (Score 6)"
+// Summenscore
+* component[+].code = $sct#1287461000 "Nottingham total score of primary malignant neoplasm of breast (observable entity)"
+* component[=].valueQuantity = 6 '{score}' "score"
+// Tubulus-Score
 * component[+].code = $loinc#85321-8 "Glandular differentiation [Score] in Breast cancer specimen by Nottingham"
-* component[=].valueQuantity = 3 '{score}' "score"
+* component[=].valueCodeableConcept = $loinc#LA27227-0 "Score 3"
+* component[=].valueCodeableConcept.text = "Tubulus Score 3"
+// Kernpleomorphie-Score
 * component[+].code = $loinc#44645-0 "Nuclear pleomorphism in Breast tumor by Nottingham"
-* component[=].valueQuantity = 2 '{score}' "score"
+* component[=].valueCodeableConcept = $loinc#LA27226-2 "Score 2"
+* component[=].valueCodeableConcept.text = "Kernpleomorphie Score 2"
+// Mitoserate-Score
 * component[+].code = $loinc#85300-2 "Mitotic rate [Score] in Breast cancer specimen by Nottingham"
-* component[=].valueQuantity = 1 '{score}' "score"
+* component[=].valueCodeableConcept = $loinc#LA27225-4 "Score 1"
+* component[=].valueCodeableConcept.text = "Mitoserate Score 1"
+* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // ER Status
 Instance: CoreNeedleBiopsyERStatus
@@ -135,7 +124,7 @@ Description: "Estrogen receptor status by immunohistochemistry"
 * effectiveDateTime = "2025-01-17"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
+* valueCodeableConcept = $loinc#LA6576-8 "Positive"
 * valueCodeableConcept.text = "ER positiv"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
@@ -183,7 +172,7 @@ Description: "Progesterone receptor status by immunohistochemistry"
 * effectiveDateTime = "2025-01-17"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
+* valueCodeableConcept = $loinc#LA6576-8 "Positive"
 * valueCodeableConcept.text = "PR positiv"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"

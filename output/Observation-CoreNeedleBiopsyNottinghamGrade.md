@@ -14,7 +14,7 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
 
 **category**: Laboratory, Pathology report final diagnosis Narrative
 
-**code**: Nottingham combined grade of primary malignant neoplasm of breast (observable entity)
+**code**: Histologischer Tumorgrad (Elston-Ellis-Grad)
 
 **subject**: [Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)](Patient-Patient4.md)
 
@@ -22,14 +22,19 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: Nottingham Grad 2
+**value**: Nottingham Grad 2 (Score 6)
 
 **specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_105; status = available; type = Tissue section (specimen)](Specimen-CoreNeedleBiopsySpecimenSlideHE01.md)
 
-**derivedFrom**: 
+**derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.md)
 
-* [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/Core-Needle-Biopsy' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseCoreNeedleBiopsy.md)
-* [Observation Histologic grade [Score] in Breast cancer specimen by Nottingham](Observation-CoreNeedleBiopsyNottinghamSummaryScore.md)
+> **component****code**: Nottingham total score of primary malignant neoplasm of breast (observable entity)**value**: 6 score (Details: UCUM code{score} = '{score}')
+
+> **component****code**: Glandular differentiation [Score] in Breast cancer specimen by Nottingham**value**: Tubulus Score 3
+
+> **component****code**: Nuclear pleomorphism in Breast tumor by Nottingham**value**: Kernpleomorphie Score 2
+
+> **component****code**: Mitotic rate [Score] in Breast cancer specimen by Nottingham**value**: Mitoserate Score 1
 
 
 
@@ -60,10 +65,11 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
   }],
   "code" : {
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "372276001",
-      "display" : "Nottingham combined grade of primary malignant neoplasm of breast (observable entity)"
-    }]
+      "system" : "http://loinc.org",
+      "code" : "44648-4",
+      "display" : "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+    }],
+    "text" : "Histologischer Tumorgrad (Elston-Ellis-Grad)"
   },
   "subject" : {
     "reference" : "Patient/Patient4"
@@ -78,16 +84,79 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
       "code" : "1155703007",
       "display" : "G2: Moderately differentiated histologic grade (qualifier value)"
     }],
-    "text" : "Nottingham Grad 2"
+    "text" : "Nottingham Grad 2 (Score 6)"
   },
   "specimen" : {
     "reference" : "Specimen/CoreNeedleBiopsySpecimenSlideHE01"
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseCoreNeedleBiopsy"
+  }],
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "1287461000",
+        "display" : "Nottingham total score of primary malignant neoplasm of breast (observable entity)"
+      }]
+    },
+    "valueQuantity" : {
+      "value" : 6,
+      "unit" : "score",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "{score}"
+    }
   },
   {
-    "reference" : "Observation/CoreNeedleBiopsyNottinghamSummaryScore"
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "85321-8",
+        "display" : "Glandular differentiation [Score] in Breast cancer specimen by Nottingham"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA27227-0",
+        "display" : "Score 3"
+      }],
+      "text" : "Tubulus Score 3"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "44645-0",
+        "display" : "Nuclear pleomorphism in Breast tumor by Nottingham"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA27226-2",
+        "display" : "Score 2"
+      }],
+      "text" : "Kernpleomorphie Score 2"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "85300-2",
+        "display" : "Mitotic rate [Score] in Breast cancer specimen by Nottingham"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://loinc.org",
+        "code" : "LA27225-4",
+        "display" : "Score 1"
+      }],
+      "text" : "Mitoserate Score 1"
+    }
   }]
 }
 

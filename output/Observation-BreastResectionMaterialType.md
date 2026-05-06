@@ -71,6 +71,11 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
     "reference" : "Practitioner/PathologistPractitioner"
   }],
   "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "309546004",
+      "display" : "Lumpectomy breast specimen (specimen)"
+    }],
     "text" : "Exzisionspräparat"
   },
   "specimen" : {

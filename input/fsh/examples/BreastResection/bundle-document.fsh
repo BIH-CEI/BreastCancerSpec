@@ -98,6 +98,9 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock06"
 * entry[=].resource = BreastResectionSpecimenBlock06
 
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock07"
+* entry[=].resource = BreastResectionSpecimenBlock07
+
 // Block01 Slides: HE (2), ER, PR, HER2-IHC, Ki67, CK18, p40, E-Cadherin
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideHE01"
 * entry[=].resource = BreastResectionSpecimenSlideHE01
@@ -145,6 +148,9 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Lateral-HE01"
 * entry[=].resource = BreastResectionSpecimenSlideRR-Lateral-HE01
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenSlideRR-Posterior-HE01"
+* entry[=].resource = BreastResectionSpecimenSlideRR-Posterior-HE01
 
 // --- Substances ---
 * entry[+].fullUrl = "http://breastcancerspec.org/Substance/BreastResectionSubstanceER"
@@ -238,20 +244,11 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionNottinghamGrade"
 * entry[=].resource = BreastResectionNottinghamGrade
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionTubuleScore"
-* entry[=].resource = BreastResectionTubuleScore
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionNuclearPleomorphism"
-* entry[=].resource = BreastResectionNuclearPleomorphism
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionNottinghamSummaryScore"
+* entry[=].resource = BreastResectionNottinghamSummaryScore
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMitosisCount"
 * entry[=].resource = BreastResectionMitosisCount
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMitoticRateScore"
-* entry[=].resource = BreastResectionMitoticRateScore
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionElstonEllisScore"
-* entry[=].resource = BreastResectionElstonEllisScore
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionAssociatedDCIS"
 * entry[=].resource = BreastResectionAssociatedDCIS

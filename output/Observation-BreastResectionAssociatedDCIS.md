@@ -22,7 +22,7 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: DCIS vorhanden
+**value**: DCIS vorhanden, ohne extensive intraduktale Komponente (EIC)
 
 **specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideHE01.md)
 
@@ -72,11 +72,11 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
   }],
   "valueCodeableConcept" : {
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "52101004",
-      "display" : "Present (qualifier value)"
+      "system" : "http://loinc.org",
+      "code" : "LA27260-1",
+      "display" : "DCIS present without extensive intraductal component (EIC)"
     }],
-    "text" : "DCIS vorhanden"
+    "text" : "DCIS vorhanden, ohne extensive intraduktale Komponente (EIC)"
   },
   "specimen" : {
     "reference" : "Specimen/BreastResectionSpecimenSlideHE01"

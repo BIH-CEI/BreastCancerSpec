@@ -79,9 +79,9 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
   }],
   "valueCodeableConcept" : {
     "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "2667000",
-      "display" : "Absent (qualifier value)"
+      "system" : "http://loinc.org",
+      "code" : "LA6577-6",
+      "display" : "Negative"
     }],
     "text" : "Negativ"
   },

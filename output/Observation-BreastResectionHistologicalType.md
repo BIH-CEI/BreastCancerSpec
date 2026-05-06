@@ -77,10 +77,11 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
   }],
   "valueCodeableConcept" : {
     "coding" : [{
-      "system" : "urn:oid:2.16.840.1.113883.6.43.1",
-      "code" : "8500/3",
-      "display" : "Invasives duktales Karzinom (NST)"
-    }]
+      "system" : "http://snomed.info/sct",
+      "code" : "82711006",
+      "display" : "Infiltrating duct carcinoma (morphologic abnormality)"
+    }],
+    "text" : "Invasives duktales Karzinom (NST)"
   },
   "specimen" : {
     "reference" : "Specimen/BreastResectionSpecimenSlideHE01"

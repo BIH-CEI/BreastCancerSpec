@@ -24,7 +24,7 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
 
 **value**: 5 mm (Details: UCUM codemm = 'mm')
 
-**specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_3_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideRR-Superior-HE01.md)
+**specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_7_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideRR-Posterior-HE01.md)
 
 **derivedFrom**: [Response to Questionnaire 'http://breastcancerspec.org/Questionnaire/OP-Mamma' about '->Sabine Becker Female, DoB: 1971-03-15 ( http://example.hospital.de/patient-ids#PAT-2025-105)'](QuestionnaireResponse-QuestionnaireResponseBreastResection.md)
 
@@ -82,7 +82,7 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
     "code" : "mm"
   },
   "specimen" : {
-    "reference" : "Specimen/BreastResectionSpecimenSlideRR-Superior-HE01"
+    "reference" : "Specimen/BreastResectionSpecimenSlideRR-Posterior-HE01"
   },
   "derivedFrom" : [{
     "reference" : "QuestionnaireResponse/QuestionnaireResponseBreastResection"

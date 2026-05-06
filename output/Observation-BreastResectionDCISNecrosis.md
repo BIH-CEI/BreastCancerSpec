@@ -22,7 +22,7 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
 
 **performer**: [Practitioner Elisabeth Hoffmann ](Practitioner-PathologistPractitioner.md)
 
-**value**: Fokal (Komedo-Nekrosen)
+**value**: Zentral (Komedo-Nekrosen)
 
 **specimen**: [Specimen: identifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210_A_1_1_HE_01; accessionIdentifier = https://pathologie.example-hospital.de/fhir/fn/befundbericht#E_25_210; status = available; type = Tissue section (specimen)](Specimen-BreastResectionSpecimenSlideHE01.md)
 
@@ -71,7 +71,12 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
     "reference" : "Practitioner/PathologistPractitioner"
   }],
   "valueCodeableConcept" : {
-    "text" : "Fokal (Komedo-Nekrosen)"
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA27235-3",
+      "display" : "Present, central (expansive \"comedo\" necrosis)"
+    }],
+    "text" : "Zentral (Komedo-Nekrosen)"
   },
   "specimen" : {
     "reference" : "Specimen/BreastResectionSpecimenSlideHE01"

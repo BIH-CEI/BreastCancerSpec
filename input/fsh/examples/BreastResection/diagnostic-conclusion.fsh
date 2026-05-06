@@ -31,11 +31,8 @@ Description: "Grouper for all diagnostic conclusion findings in breast resection
 * hasMember[+] = Reference(BreastResectionHistologicalType)
 * hasMember[+] = Reference(BreastResectionMorphologyFreeText)
 * hasMember[+] = Reference(BreastResectionNottinghamGrade)
-* hasMember[+] = Reference(BreastResectionTubuleScore)
-* hasMember[+] = Reference(BreastResectionNuclearPleomorphism)
+* hasMember[+] = Reference(BreastResectionNottinghamSummaryScore)
 * hasMember[+] = Reference(BreastResectionMitosisCount)
-* hasMember[+] = Reference(BreastResectionMitoticRateScore)
-* hasMember[+] = Reference(BreastResectionElstonEllisScore)
 * hasMember[+] = Reference(BreastResectionAssociatedDCIS)
 * hasMember[+] = Reference(BreastResectionDCISGrade)
 * hasMember[+] = Reference(BreastResectionDCISArchitecture)
@@ -152,6 +149,7 @@ Description: "Art des eingesendeten Materials"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
+* valueCodeableConcept = $sct#309546004 "Lumpectomy breast specimen (specimen)"
 * valueCodeableConcept.text = "Exzisionspräparat"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
@@ -280,7 +278,8 @@ Description: "Histologischer Typ nach WHO/ICD-O-3"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept = $ICDO-3#8500/3 "Invasives duktales Karzinom (NST)"
+* valueCodeableConcept = $sct#82711006 "Infiltrating duct carcinoma (morphologic abnormality)"
+* valueCodeableConcept.text = "Invasives duktales Karzinom (NST)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 11. Morphologie Freitext (linkId 11290) ---
@@ -308,63 +307,53 @@ Instance: BreastResectionNottinghamGrade
 InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Nottingham-Grad - BET"
-Description: "Nottingham histologic grade"
+Description: "Nottingham histologic grade derived from summary score"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
-* code.text = "Histologischer Tumorgrad (Elston-Ellis-Grad)"
+* code = $sct#372276001 "Nottingham combined grade of primary malignant neoplasm of breast (observable entity)"
+* code.text = "Histologischer Tumorgrad (Nottingham-Grad)"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
 * valueCodeableConcept = $sct#1155703007 "G2: Moderately differentiated histologic grade (qualifier value)"
-* valueCodeableConcept.text = "Nottingham Grad 2 (Score 6)"
-* derivedFrom = Reference(QuestionnaireResponseBreastResection)
+* valueCodeableConcept.text = "Nottingham Grad 2"
+* derivedFrom[+] = Reference(QuestionnaireResponseBreastResection)
+* derivedFrom[+] = Reference(BreastResectionNottinghamSummaryScore)
 
-// --- 13. Tubulus-Score (linkId 11340) ---
-Instance: BreastResectionTubuleScore
+// --- 12b. Nottingham-Summenscore (Elston-Ellis) ---
+Instance: BreastResectionNottinghamSummaryScore
 InstanceOf: $mii-patho-finding
 Usage: #example
-Title: "Tubulus-Score - BET"
-Description: "Glandular differentiation score by Nottingham"
+Title: "Nottingham-Summenscore - BET"
+Description: "Elston-Ellis summary score (3+2+1=6) with sub-scores as components"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#85321-8 "Glandular differentiation [Score] in Breast cancer specimen by Nottingham"
-* code.text = "Tubulus Scorewert"
+* code = $sct#1287461000 "Nottingham total score of primary malignant neoplasm of breast (observable entity)"
+* code.text = "Elston-Ellis-Summenscore"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueQuantity = 3 '{score}' "score"
+* valueQuantity = 6 '{score}' "score"
+// Tubulus-Score
+* component[+].code = $loinc#85321-8 "Glandular differentiation [Score] in Breast cancer specimen by Nottingham"
+* component[=].valueQuantity = 3 '{score}' "score"
+// Kernpleomorphie-Score
+* component[+].code = $loinc#44645-0 "Nuclear pleomorphism in Breast tumor by Nottingham"
+* component[=].valueQuantity = 2 '{score}' "score"
+// Mitoserate-Score
+* component[+].code = $loinc#85300-2 "Mitotic rate [Score] in Breast cancer specimen by Nottingham"
+* component[=].valueQuantity = 1 '{score}' "score"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 14. Kernpleomorphie-Score (linkId 11350) ---
-Instance: BreastResectionNuclearPleomorphism
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Kernpleomorphie-Score - BET"
-Description: "Nuclear pleomorphism score by Nottingham"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $loinc#44645-0 "Nuclear pleomorphism in Breast tumor by Nottingham"
-* code.text = "Kernpleomorphie Scorewert"
-* subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideHE01)
-* effectiveDateTime = "2025-02-10"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(BreastResectionReportRequest)
-* valueQuantity = 2 '{score}' "score"
-* derivedFrom = Reference(QuestionnaireResponseBreastResection)
-
-// --- 15. Mitosezahl (linkId 11925) ---
+// --- 13. Mitosezahl (linkId 11925) ---
 Instance: BreastResectionMitosisCount
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -384,47 +373,7 @@ Description: "Absolute Mitosezahl pro 10 HPF"
 * valueQuantity = 4 '{HPF}' "per 10 HPF"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 16. Mitoserate-Score (linkId 11360) ---
-Instance: BreastResectionMitoticRateScore
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Mitoserate-Score - BET"
-Description: "Mitotic rate score by Nottingham"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $loinc#85300-2 "Mitotic rate [Score] in Breast cancer specimen by Nottingham"
-* code.text = "Mitoserate Scorewert"
-* subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideHE01)
-* effectiveDateTime = "2025-02-10"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(BreastResectionReportRequest)
-* valueQuantity = 1 '{score}' "score"
-* derivedFrom = Reference(QuestionnaireResponseBreastResection)
-
-// --- 17. Elston-Ellis-Summenscore (linkId 11390) ---
-Instance: BreastResectionElstonEllisScore
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Elston-Ellis Summenscore - BET"
-Description: "Elston-Ellis summary score (3+2+1=6)"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $sct#1287461000 "Nottingham total score of primary malignant neoplasm of breast (observable entity)"
-* code.text = "Elston-Ellis-Summenscore"
-* subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideHE01)
-* effectiveDateTime = "2025-02-10"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(BreastResectionReportRequest)
-* valueQuantity = 6 '{score}' "score"
-* derivedFrom = Reference(QuestionnaireResponseBreastResection)
-
-// --- 18. Assoziiertes DCIS (linkId 11300) ---
+// --- 14. Assoziiertes DCIS (linkId 11300) ---
 Instance: BreastResectionAssociatedDCIS
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -441,11 +390,11 @@ Description: "Vorhandensein eines assoziierten DCIS"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
-* valueCodeableConcept.text = "DCIS vorhanden"
+* valueCodeableConcept = $loinc#LA27260-1 "DCIS present without extensive intraductal component (EIC)"
+* valueCodeableConcept.text = "DCIS vorhanden, ohne extensive intraduktale Komponente (EIC)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 19. DCIS Kerngrading (linkId 149) ---
+// --- 15. DCIS Kerngrading (linkId 149) ---
 Instance: BreastResectionDCISGrade
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -462,10 +411,11 @@ Description: "Kerngrading des assoziierten DCIS"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
+* valueCodeableConcept = $sct#369782002 "Ductal carcinoma in situ nuclear pleomorphism, grade 2: neither nuclear grade 1 nor nuclear grade 3 (finding)"
 * valueCodeableConcept.text = "Intermediär (Grad 2)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 20. DCIS Architektur (linkId 150) ---
+// --- 16. DCIS Architektur (linkId 150) ---
 Instance: BreastResectionDCISArchitecture
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -487,7 +437,7 @@ Description: "Wachstumsmuster des assoziierten DCIS"
 * valueCodeableConcept.text = "kribriformer Typ"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 21. DCIS Nekrosen (linkId 151) ---
+// --- 17. DCIS Nekrosen (linkId 151) ---
 Instance: BreastResectionDCISNecrosis
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -504,10 +454,11 @@ Description: "Nekrosen im DCIS-Areal"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept.text = "Fokal (Komedo-Nekrosen)"
+* valueCodeableConcept = $loinc#LA27235-3 "Present, central (expansive \"comedo\" necrosis)"
+* valueCodeableConcept.text = "Zentral (Komedo-Nekrosen)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 22. Tumorausdehnung (linkId 11926) ---
+// --- 18. Tumorausdehnung (linkId 11926) ---
 Instance: BreastResectionTumorExtent
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -526,6 +477,7 @@ Description: "Ausdehnung des Tumors in Bezug auf die Brustdrüse"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
+* valueCodeableConcept = $sct#372288004 "Local tumor invasion (finding)"
 * valueCodeableConcept.text = "Auf Brustdrüse beschränkt"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
@@ -533,7 +485,7 @@ Description: "Ausdehnung des Tumors in Bezug auf die Brustdrüse"
 // RESEKTIONSRÄNDER BET — Group 11957 (5 Observations)
 // ============================================================================
 
-// --- 23. RR-Status invasiv (linkId 11470) ---
+// --- 19. RR-Status invasiv (linkId 11470) ---
 Instance: BreastResectionMarginStatusInvasive
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -548,7 +500,6 @@ Description: "Resektionsrandstatus der invasiven Komponente"
 * code.coding[+] = $sct#1240395000 "Surgical margin involved by primary malignant neoplasm of breast in excised breast specimen (observable entity)"
 * code.text = "Resektionsrandstatus invasiv"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -556,7 +507,7 @@ Description: "Resektionsrandstatus der invasiven Komponente"
 * valueCodeableConcept.text = "Nicht befallen (R0)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 24. Nächster tumorfreier RR (linkId 11490) ---
+// --- 20. Nächster tumorfreier RR (linkId 11490) ---
 Instance: BreastResectionClosestMargin
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -570,14 +521,15 @@ Description: "Lokalisation des nächsten tumorfreien Resektionsrands"
 * code.coding[+] = $sct#170001000004107 "Surgical margin closest to malignant neoplasm in excised specimen of breast (observable entity)"
 * code.text = "Richtung des nächsten tumorfreien RR"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideRR-Posterior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
+* valueCodeableConcept = $sct#255551008 "Posterior (qualifier value)"
 * valueCodeableConcept.text = "Posterior"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 25. Mindestabstand invasiv (linkId 11480) ---
+// --- 21. Mindestabstand invasiv (linkId 11480) ---
 Instance: BreastResectionMinDistanceInvasive
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -591,14 +543,14 @@ Description: "Mindestabstand der invasiven Komponente zum Resektionsrand"
 * code.coding[+] = $sct#373120008 "Distance of invasive carcinoma of breast from closest surgical margin in excised breast specimen (observable entity)"
 * code.text = "Mindestabstand des invasiven Tumor zum nächstgelegenen Resektionsrand"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
+* specimen = Reference(BreastResectionSpecimenSlideRR-Posterior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
 * valueQuantity = 5 'mm' "mm"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 26. RR-Status nichtinvasiv (linkId 11968) ---
+// --- 22. RR-Status nichtinvasiv (linkId 11968) ---
 Instance: BreastResectionMarginStatusNonInvasive
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -612,7 +564,6 @@ Description: "Resektionsrandstatus der nichtinvasiven Komponente (DCIS)"
 * code.coding[+] = $sct#384705006 "Presence of ductal carcinoma in situ at surgical margin in excised specimen of breast (observable entity)"
 * code.text = "Resektionsrandstatus nichtinvasiv"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -620,7 +571,7 @@ Description: "Resektionsrandstatus der nichtinvasiven Komponente (DCIS)"
 * valueCodeableConcept.text = "Nicht befallen"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 27. Mindestabstand nichtinvasiv (linkId 11970) ---
+// --- 23. Mindestabstand nichtinvasiv (linkId 11970) ---
 Instance: BreastResectionMinDistanceNonInvasive
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -633,7 +584,6 @@ Description: "Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektions
 * code = $loinc#44673-2 "DCIS.uninv marg dist.closest BT"
 * code.text = "Mindestabstand vom RR zum nichtinvasiven Tumor"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideRR-Superior-HE01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -644,7 +594,7 @@ Description: "Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektions
 // WEITERE (2 Observations)
 // ============================================================================
 
-// --- 28. LVI (linkId 11430) ---
+// --- 24. LVI (linkId 11430) ---
 Instance: BreastResectionLVI
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -658,7 +608,7 @@ Description: "Lymphovaskuläre Invasion"
 * code.coding[+] = $sct#371512006 "Presence of direct invasion by primary malignant neoplasm to lymphatic vessel and/or small blood vessel (observable entity)"
 * code.text = "Peritumorale Gefäßinvasion"
 * subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenSlideHE01)
+* specimen = Reference(BreastResectionSpecimenPart)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
@@ -666,7 +616,7 @@ Description: "Lymphovaskuläre Invasion"
 * valueCodeableConcept.text = "Nicht nachgewiesen"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 29. Mikrokalzifikationen (linkId 10880) ---
+// --- 25. Mikrokalzifikationen (linkId 10880) ---
 Instance: BreastResectionMicrocalcification
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -689,7 +639,7 @@ Description: "Vorhandensein von Mikrokalzifikationen"
 // BIOMARKER — Group 11104 (10 Observations)
 // ============================================================================
 
-// --- 30. ER-Status (linkId 11750) ---
+// --- 26. ER-Status (linkId 11750) ---
 Instance: BreastResectionERStatus
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -707,13 +657,13 @@ Description: "Östrogenrezeptor-Status per Immunhistochemie"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
+* valueCodeableConcept = $loinc#LA6576-8 "Positive"
 * valueCodeableConcept.text = "Positiv"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 31. ER Prozent (linkId 11720) ---
+// --- 27. ER Prozent (linkId 11720) ---
 Instance: BreastResectionERPercentage
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -740,7 +690,7 @@ Description: "Prozentsatz ER-positiver Tumorzellkerne"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 32. ER Färbeintensität (linkId 11730) ---
+// --- 28. ER Färbeintensität (linkId 11730) ---
 Instance: BreastResectionERIntensity
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -765,7 +715,7 @@ Description: "Färbeintensität der ER-Immunhistochemie"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 33. PR-Status (linkId 11790) ---
+// --- 29. PR-Status (linkId 11790) ---
 Instance: BreastResectionPRStatus
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -783,13 +733,13 @@ Description: "Progesteronrezeptor-Status per Immunhistochemie"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
+* valueCodeableConcept = $loinc#LA6576-8 "Positive"
 * valueCodeableConcept.text = "Positiv"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 34. PR Prozent (linkId 11760) ---
+// --- 30. PR Prozent (linkId 11760) ---
 Instance: BreastResectionPRPercentage
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -816,7 +766,7 @@ Description: "Prozentsatz PR-positiver Tumorzellkerne"
 * component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 35. PR Färbeintensität (linkId 11770) ---
+// --- 31. PR Färbeintensität (linkId 11770) ---
 Instance: BreastResectionPRIntensity
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -826,9 +776,7 @@ Description: "Färbeintensität der PR-Immunhistochemie"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code.coding[0] = $loinc#85331-7 "Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
-* code.coding[+] = $sct#1237278006 "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
-* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
+* code = $sct#1237278006 "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
 * code.text = "Färbeintensität PR"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlidePR01)
@@ -841,7 +789,7 @@ Description: "Färbeintensität der PR-Immunhistochemie"
 * component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 36. HER2-Score (IHC) (linkId 11810) ---
+// --- 32. HER2-Score (IHC) (linkId 11810) ---
 Instance: BreastResectionHER2IHC
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -860,12 +808,13 @@ Description: "HER2-Score per Immunhistochemie"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
+* valueCodeableConcept = $loinc#LA11841-6 "1+"
 * valueCodeableConcept.text = "1+"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 37. HER2-Amplifikation (ISH) (linkId 11820) ---
+// --- 33. HER2-Amplifikation (ISH) (linkId 11820) ---
 Instance: BreastResectionHER2ISH
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -875,20 +824,20 @@ Description: "HER2-Amplifikationsstatus per In-situ-Hybridisierung"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#85318-4 "ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH"
+* code = $sct#1363314005 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)"
 * code.text = "Her2 Amplifikation"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideHER2IHC01)
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept = $sct#2667000 "Absent (qualifier value)"
+* valueCodeableConcept = $sct#705105000 "Human epidermal growth factor 2 gene amplification not detected (finding)"
 * valueCodeableConcept.text = "Nicht amplifiziert"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 38. HER2-Gesamtstatus (linkId 11830) ---
+// --- 34. HER2-Gesamtstatus (linkId 11830) ---
 Instance: BreastResectionHER2Overall
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -905,13 +854,13 @@ Description: "HER2-Gesamtstatus basierend auf IHC und ISH"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueCodeableConcept = $sct#2667000 "Absent (qualifier value)"
+* valueCodeableConcept = $loinc#LA6577-6 "Negative"
 * valueCodeableConcept.text = "Negativ"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- 39. Ki-67-Index (linkId 11840) ---
+// --- 35. Ki-67-Index (linkId 11840) ---
 Instance: BreastResectionKi67
 InstanceOf: $mii-patho-finding
 Usage: #example
@@ -942,7 +891,7 @@ Description: "Ki-67 Proliferationsindex"
 // TNM — Group 167 (1 Observation)
 // ============================================================================
 
-// --- 40. pT-Kategorie (linkId 169) ---
+// --- 36. pT-Kategorie (linkId 169) ---
 Instance: BreastResectionPT
 InstanceOf: $mii-tnm-t
 Usage: #example
@@ -973,7 +922,7 @@ Description: "Pathologische T-Kategorie nach TNM"
 // KOMMENTAR (1 Observation)
 // ============================================================================
 
-// --- 41. Kommentar (linkId 11900) ---
+// --- 37. Kommentar (linkId 11900) ---
 Instance: BreastResectionComment
 InstanceOf: $mii-patho-finding
 Usage: #example

@@ -81,6 +81,11 @@ Profile: [MII PR Patho Finding](https://simplifier.net/resolve?scope=de.medizini
     "reference" : "Practitioner/PathologistPractitioner"
   }],
   "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "372288004",
+      "display" : "Local tumor invasion (finding)"
+    }],
     "text" : "Auf Brustdrüse beschränkt"
   },
   "specimen" : {
