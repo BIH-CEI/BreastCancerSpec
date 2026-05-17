@@ -6,6 +6,7 @@ Thumbs.db
 /template
 /input-cache
 /fsh-generated
+/output
 *.publisher.jar
 
 # SUSHI / Node

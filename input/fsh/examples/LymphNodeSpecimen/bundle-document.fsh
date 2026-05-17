@@ -47,9 +47,6 @@ Description: "FHIR Document Bundle für den vollständigen SLN-Befundbericht"
 * entry[+].fullUrl = "http://breastcancerspec.org/DiagnosticReport/LymphNodeImagingReport"
 * entry[=].resource = LymphNodeImagingReport
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/LymphNodeSpecimenLimited"
-* entry[=].resource = LymphNodeSpecimenLimited
-
 // --- DiagnosticReport (Pathology) ---
 * entry[+].fullUrl = "http://breastcancerspec.org/DiagnosticReport/LymphNodeReport"
 * entry[=].resource = LymphNodeReport

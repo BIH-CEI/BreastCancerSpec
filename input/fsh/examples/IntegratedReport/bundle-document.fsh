@@ -48,12 +48,6 @@ Description: "FHIR Document Bundle für den integrierten Befundbericht BET Mamma
 * entry[=].resource = IntegratedImagingReport
 
 // --- SupportingInfo: Clinical Observations ---
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedSpecimenLimited"
-* entry[=].resource = IntegratedSpecimenLimited
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedPresentationMode"
-* entry[=].resource = IntegratedPresentationMode
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedCancerHistory"
 * entry[=].resource = IntegratedCancerHistory
 
@@ -229,12 +223,6 @@ Description: "FHIR Document Bundle für den integrierten Befundbericht BET Mamma
 * entry[=].resource = IntegratedDiagnosticConclusionGrouper
 
 // BET - Allgemein
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedNonInvasiveLesion"
-* entry[=].resource = IntegratedNonInvasiveLesion
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedInvasiveCarcinoma"
-* entry[=].resource = IntegratedInvasiveCarcinoma
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedOperativeProcedure"
 * entry[=].resource = IntegratedOperativeProcedure
 

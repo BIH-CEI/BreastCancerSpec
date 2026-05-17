@@ -48,12 +48,6 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 * entry[=].resource = BreastResectionImagingReport
 
 // --- SupportingInfo: Clinical Observations ---
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionSpecimenLimited"
-* entry[=].resource = BreastResectionSpecimenLimited
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionPresentationMode"
-* entry[=].resource = BreastResectionPresentationMode
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionCancerHistory"
 * entry[=].resource = BreastResectionCancerHistory
 
@@ -207,12 +201,6 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 * entry[=].resource = BreastResectionDiagnosticConclusionGrouper
 
 // Allgemein
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionNonInvasiveLesion"
-* entry[=].resource = BreastResectionNonInvasiveLesion
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionInvasiveCarcinoma"
-* entry[=].resource = BreastResectionInvasiveCarcinoma
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionOperativeProcedure"
 * entry[=].resource = BreastResectionOperativeProcedure
 

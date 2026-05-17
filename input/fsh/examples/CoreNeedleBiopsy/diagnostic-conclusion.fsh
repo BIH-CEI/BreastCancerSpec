@@ -20,11 +20,14 @@ Description: "Grouper for all diagnostic conclusion findings in core needle biop
 * hasMember[+] = Reference(CoreNeedleBiopsyHistologicalTypeICDO3)
 * hasMember[+] = Reference(CoreNeedleBiopsyMorphologyFreeText)
 * hasMember[+] = Reference(CoreNeedleBiopsyNottinghamGrade)
+* hasMember[+] = Reference(CoreNeedleBiopsyNottinghamSummaryScore)
 * hasMember[+] = Reference(CoreNeedleBiopsyERStatus)
 * hasMember[+] = Reference(CoreNeedleBiopsyERPercentage)
 * hasMember[+] = Reference(CoreNeedleBiopsyPRStatus)
 * hasMember[+] = Reference(CoreNeedleBiopsyPRPercentage)
+* hasMember[+] = Reference(CoreNeedleBiopsyHER2IHC)
 * hasMember[+] = Reference(CoreNeedleBiopsyHER2ISH)
+* hasMember[+] = Reference(CoreNeedleBiopsyHER2Overall)
 * hasMember[+] = Reference(CoreNeedleBiopsyKi67)
 * hasMember[+] = Reference(CoreNeedleBiopsyInterpretation)
 * hasMember[+] = Reference(CoreNeedleBiopsyMicrocalcification)
@@ -71,12 +74,12 @@ Description: "Free text description of tumor morphology"
 * valueString = "Invasives Karzinom, NST"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
-// Nottingham Grade (with sub-scores as components)
+// Nottingham Grade
 Instance: CoreNeedleBiopsyNottinghamGrade
 InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Nottingham Grade - Stanzbiopsie"
-Description: "Nottingham histologic grade with sub-scores as components"
+Description: "Nottingham histologic grade derived from summary score"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
@@ -90,21 +93,36 @@ Description: "Nottingham histologic grade with sub-scores as components"
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
 * valueCodeableConcept = $sct#1155703007 "G2: Moderately differentiated histologic grade (qualifier value)"
 * valueCodeableConcept.text = "Nottingham Grad 2 (Score 6)"
-// Summenscore
-* component[+].code = $sct#1287461000 "Nottingham total score of primary malignant neoplasm of breast (observable entity)"
-* component[=].valueQuantity = 6 '{score}' "score"
+* derivedFrom[+] = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+* derivedFrom[+] = Reference(CoreNeedleBiopsyNottinghamSummaryScore)
+
+// Nottingham Summenscore (Elston-Ellis) with sub-scores as components
+Instance: CoreNeedleBiopsyNottinghamSummaryScore
+InstanceOf: $mii-patho-finding
+Usage: #example
+Title: "Nottingham Summenscore - Stanzbiopsie"
+Description: "Elston-Ellis summary score (3+2+1=6) with sub-scores as components"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* status = #final
+* category[laboratory-category] = $observation-category#laboratory
+* category[section-type] = $loinc#22637-3
+* code = $sct#1287461000 "Nottingham total score of primary malignant neoplasm of breast (observable entity)"
+* code.text = "Elston-Ellis-Summenscore"
+* subject = Reference(Patient4)
+* specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)
+* effectiveDateTime = "2025-01-17"
+* performer = Reference(PathologistPractitioner)
+* basedOn = Reference(CoreNeedleBiopsyReportRequest)
+* valueQuantity = 6 '{score}' "score"
 // Tubulus-Score
 * component[+].code = $loinc#85321-8 "Glandular differentiation [Score] in Breast cancer specimen by Nottingham"
-* component[=].valueCodeableConcept = $loinc#LA27227-0 "Score 3"
-* component[=].valueCodeableConcept.text = "Tubulus Score 3"
+* component[=].valueQuantity = 3 '{score}' "score"
 // Kernpleomorphie-Score
 * component[+].code = $loinc#44645-0 "Nuclear pleomorphism in Breast tumor by Nottingham"
-* component[=].valueCodeableConcept = $loinc#LA27226-2 "Score 2"
-* component[=].valueCodeableConcept.text = "Kernpleomorphie Score 2"
+* component[=].valueQuantity = 2 '{score}' "score"
 // Mitoserate-Score
 * component[+].code = $loinc#85300-2 "Mitotic rate [Score] in Breast cancer specimen by Nottingham"
-* component[=].valueCodeableConcept = $loinc#LA27225-4 "Score 1"
-* component[=].valueCodeableConcept.text = "Mitoserate Score 1"
+* component[=].valueQuantity = 1 '{score}' "score"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // ER Status
@@ -203,6 +221,31 @@ Description: "Percentage of PR positive tumor cell nuclei"
 * component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
+// HER2 IHC
+Instance: CoreNeedleBiopsyHER2IHC
+InstanceOf: $mii-patho-finding
+Usage: #example
+Title: "HER2 IHC - Stanzbiopsie"
+Description: "HER2-Score per Immunhistochemie"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* status = #final
+* category[laboratory-category] = $observation-category#laboratory
+* category[section-type] = $loinc#22637-3
+* code.coding[0] = $loinc#85319-2 "HER2 [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[+] = $sct#3550001000004108 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
+* code.text = "Her2 Score"
+* subject = Reference(Patient4)
+* specimen = Reference(CoreNeedleBiopsySpecimenSlideHER2-01)
+* effectiveDateTime = "2025-01-17"
+* performer = Reference(PathologistPractitioner)
+* basedOn = Reference(CoreNeedleBiopsyReportRequest)
+* valueCodeableConcept = $loinc#LA11841-6 "1+"
+* valueCodeableConcept.text = "1+"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
+* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+
 // HER2 ISH (B-DISH)
 Instance: CoreNeedleBiopsyHER2ISH
 InstanceOf: $mii-patho-finding
@@ -224,6 +267,31 @@ Description: "HER2 status by in-situ hybridization (B-DISH)"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+
+// HER2 Gesamtstatus
+Instance: CoreNeedleBiopsyHER2Overall
+InstanceOf: $mii-patho-finding
+Usage: #example
+Title: "HER2 Gesamtstatus - Stanzbiopsie"
+Description: "HER2-Gesamtstatus basierend auf IHC und ISH"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* status = #final
+* category[laboratory-category] = $observation-category#laboratory
+* category[section-type] = $loinc#22637-3
+* code = $loinc#48676-1 "HER2 [Interpretation] in Tissue"
+* code.text = "Her2neuStatus"
+* subject = Reference(Patient4)
+* specimen = Reference(CoreNeedleBiopsySpecimenSlideHER2-01)
+* effectiveDateTime = "2025-01-17"
+* performer = Reference(PathologistPractitioner)
+* basedOn = Reference(CoreNeedleBiopsyReportRequest)
+* valueCodeableConcept = $loinc#LA6577-6 "Negative"
+* valueCodeableConcept.text = "Negativ"
+* component[+].code = $loinc#48018-6 "Gene studied [ID]"
+* component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
+* derivedFrom[+] = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+* derivedFrom[+] = Reference(CoreNeedleBiopsyHER2IHC)
+* derivedFrom[+] = Reference(CoreNeedleBiopsyHER2ISH)
 
 // Ki-67
 Instance: CoreNeedleBiopsyKi67
@@ -267,6 +335,7 @@ Description: "Core Needle Biopsy Interpretation according to NHSBSP"
 * effectiveDateTime = "2025-01-17"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(CoreNeedleBiopsyReportRequest)
+* valueCodeableConcept = $sct#10179008 "Invasive (qualifier value)"
 * valueCodeableConcept.text = "B5b"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 

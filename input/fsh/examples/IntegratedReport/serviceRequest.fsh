@@ -21,8 +21,6 @@ Description: "Anforderung für pathologische Aufarbeitung des BET-Exzisionspräp
 * specimen[+] = Reference(IntegratedSLNSpecimenPart)
 * supportingInfo[+] = Reference(IntegratedDiagnosisConfirmed)
 * supportingInfo[+] = Reference(IntegratedImagingReport)
-* supportingInfo[+] = Reference(IntegratedSpecimenLimited)
-* supportingInfo[+] = Reference(IntegratedPresentationMode)
 * supportingInfo[+] = Reference(IntegratedCancerHistory)
 * supportingInfo[+] = Reference(IntegratedPriorTherapy)
 * supportingInfo[+] = Reference(IntegratedRadiologicalExtent)

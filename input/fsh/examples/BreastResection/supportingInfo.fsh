@@ -15,31 +15,7 @@ Description: "Bildgebungsbefund als SupportingInfo für die BET"
 * effectiveDateTime = "2025-01-08"
 * conclusion = "BI-RADS 4b: Herdbefund linke Brust, unterer äußerer Quadrant, 5 Uhr, 5 cm von Mamille. Radiologische Ausdehnung ca. 15 mm. Mammografie und Ultraschall. Indikation zur BET."
 
-// --- 1. Proben limitiert auswertbar (linkId 11951) ---
-Instance: BreastResectionSpecimenLimited
-InstanceOf: Observation
-Usage: #example
-Title: "Proben limitiert auswertbar"
-Description: "Angabe ob die Probe limitiert auswertbar ist"
-* status = #final
-* code = $sct#125156009 "Satisfactory for evaluation but limited by lack of pertinent clinical patient information (finding)"
-* code.text = "Proben limitiert auswertbar wegen fehlender klinischer Informationen"
-* subject = Reference(Patient4)
-* valueCodeableConcept = $sct#373067005 "No (qualifier value)"
-
-// --- 2. Präsentationsmodus (linkId 11912) ---
-Instance: BreastResectionPresentationMode
-InstanceOf: Observation
-Usage: #example
-Title: "Präsentationsmodus"
-Description: "Präsentationsmodus des Präparats"
-* status = #final
-* code = $loinc#67098-4 "Reason for test or procedure"
-* code.text = "Präsentationsmodus"
-* subject = Reference(Patient4)
-* valueCodeableConcept.text = "Frisch"
-
-// --- 3. Brustkrebsvorgeschichte (linkId 11923) ---
+// --- 1. Brustkrebsvorgeschichte (linkId 11923) ---
 Instance: BreastResectionCancerHistory
 InstanceOf: Observation
 Usage: #example

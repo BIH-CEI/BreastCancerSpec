@@ -18,10 +18,8 @@ Description: "Grouper for all diagnostic conclusion findings in integrated breas
 * derivedFrom[+] = Reference(IntegratedQRBreastResection)
 * derivedFrom[+] = Reference(IntegratedQRLymphNode)
 
-// --- BET-Befunde (41) ---
-// Allgemein (7)
-* hasMember[+] = Reference(IntegratedNonInvasiveLesion)
-* hasMember[+] = Reference(IntegratedInvasiveCarcinoma)
+// --- BET-Befunde (39) ---
+// Allgemein (5)
 * hasMember[+] = Reference(IntegratedOperativeProcedure)
 * hasMember[+] = Reference(IntegratedMaterialType)
 * hasMember[+] = Reference(IntegratedLaterality)
@@ -88,52 +86,10 @@ Description: "Grouper for all diagnostic conclusion findings in integrated breas
 
 
 // ============================================================================
-// BET FINDINGS — ALLGEMEIN (7 Observations)
+// BET FINDINGS — ALLGEMEIN (5 Observations)
 // ============================================================================
 
-// --- 1. Nichtinvasive Läsion (linkId 11130) ---
-Instance: IntegratedNonInvasiveLesion
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Nichtinvasive Läsion - BET"
-Description: "Vorhandensein einer nichtinvasiven Läsion"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $sct#189336000 "Carcinoma in situ of breast (disorder)"
-* code.text = "Nichtinvasive maligne Läsion"
-* subject = Reference(Patient4)
-* specimen = Reference(IntegratedBETSlideHE01)
-* effectiveDateTime = "2025-02-10"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(IntegratedReportRequest)
-* valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
-* valueCodeableConcept.text = "Ja"
-* derivedFrom = Reference(IntegratedQRBreastResection)
-
-// --- 2. Invasives Karzinom (linkId 11270) ---
-Instance: IntegratedInvasiveCarcinoma
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Invasives Karzinom - BET"
-Description: "Vorhandensein eines invasiven Karzinoms"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $sct#254837009 "Malignant tumor of breast (disorder)"
-* code.text = "Invasives Karzinom"
-* subject = Reference(Patient4)
-* specimen = Reference(IntegratedBETSlideHE01)
-* effectiveDateTime = "2025-02-10"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(IntegratedReportRequest)
-* valueCodeableConcept = $sct#52101004 "Present (qualifier value)"
-* valueCodeableConcept.text = "Ja"
-* derivedFrom = Reference(IntegratedQRBreastResection)
-
-// --- 3. Operatives Verfahren (linkId 11919) ---
+// --- 1. Operatives Verfahren (linkId 11919) ---
 Instance: IntegratedOperativeProcedure
 InstanceOf: $mii-patho-finding
 Usage: #example
