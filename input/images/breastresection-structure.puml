@@ -46,7 +46,7 @@ rectangle "**ServiceRequest**\nBreastResectionReportRequest\n──────�
 ' ====================================================================
 rectangle "**DiagnosticReport**\nBreastResectionImagingReport\n────────────\nLOINC 24606-6\nMG Breast Screening\nBI-RADS 4b" as IMG #FFF2CC
 
-rectangle "**SupportingInfo Observations**\nPresentationMode  (LOINC 67098-4)\nCancerHistory  (SCT 415076002)\nPriorTherapy  (LOINC 81167-9)\nRadiologicalExtent  (SCT 396361002)\nSpecimenMarking  (SCT 836381000000102)\nSpecimenRadiography  (SCT 80865008)\nGeneticPredisposition  (SCT 76522002)\nQuadrant  (LOINC 42799-7)\nClock  (LOINC 85332-5)\nDistanceNipple  (SCT 1240401000)" as SUPOBS #FFF2CC
+rectangle "**SupportingInfo Observations**\nPresentationMode  (LOINC 67098-4)\nCancerHistory  (SCT 415076002)\nPriorTherapy  (LOINC 81167-9)\nRadiologicalExtent  (SCT 396361002)\nSpecimenMarking  (SCT 836381000000102)\nSpecimenRadiography  (SCT 80865008)\nGeneticPredisposition  (SCT 76522002)\nClock  (LOINC 85332-5)\nDistanceNipple  (SCT 1240401000)" as SUPOBS #FFF2CC
 
 ' ====================================================================
 ' Specimens (grouped)
@@ -74,7 +74,7 @@ SR --> SUPOBS   : supportingInfo
 ' ====================================================================
 rectangle "**Macroscopy-Grouper**\nBreastResectionMacroscopicGrouper\n────────────\nLOINC 22634-0\nresult[macroscopic-observations]" as MACG #E8F4FD {
 
-  rectangle "**Findings (8)**\nMacroLength  (LOINC 44629-4  42 mm)\nMacroWidth  (LOINC 44630-2  35 mm)\nMacroDepth  (LOINC 44631-0  18 mm)\nMacroWeight  (LOINC 29638-4  10 g)\nMacroQuadrant  (LOINC 42799-7)\nMacroClock  (LOINC 85332-5)\nMacroDistanceNipple  (SCT 1240401000)\nMacroBlockCount  (SCT 3100001000004109  6)" as MOBS #E2D0F0
+  rectangle "**Findings (7)**\nMacroLength  (LOINC 44629-4  42 mm)\nMacroWidth  (LOINC 44630-2  35 mm)\nMacroDepth  (LOINC 44631-0  18 mm)\nMacroWeight  (LOINC 29638-4  10 g)\nMacroClock  (LOINC 85332-5)\nMacroDistanceNipple  (SCT 1240401000)\nMacroBlockCount  (SCT 3100001000004109  6)" as MOBS #E2D0F0
 }
 
 DR --> MACG : result

@@ -63,8 +63,6 @@ Description: "Grouper for all diagnostic conclusion findings in integrated breas
 * hasMember[+] = Reference(IntegratedKi67)
 // TNM BET (1)
 * hasMember[+] = Reference(IntegratedPT)
-// Kommentar BET (1)
-* hasMember[+] = Reference(IntegratedBETComment)
 
 // --- SLN-Befunde (15) ---
 // LK-Befunde (15)
@@ -82,7 +80,9 @@ Description: "Grouper for all diagnostic conclusion findings in integrated breas
 * hasMember[+] = Reference(IntegratedLargestMetSize)
 * hasMember[+] = Reference(IntegratedExtranodalExtension)
 * hasMember[+] = Reference(IntegratedPN)
-* hasMember[+] = Reference(IntegratedSLNComment)
+
+// Gemeinsamer Kommentar (BET + SLN zusammengefuehrt, Issue #45)
+* hasMember[+] = Reference(IntegratedComment)
 
 
 // ============================================================================
@@ -949,12 +949,14 @@ Description: "Pathologische T-Kategorie nach TNM"
 // BET FINDINGS — KOMMENTAR (1 Observation)
 // ============================================================================
 
-// --- 41. Kommentar BET (linkId 11900) ---
-Instance: IntegratedBETComment
+// --- 41. Kommentar (BET + SLN zusammengeführt, linkId 11900) ---
+// Issue #45: zuvor getrennte Kommentare (IntegratedBETComment + IntegratedSLNComment)
+// zu einem gemeinsamen Kommentar des integrierten Berichts zusammengefuehrt.
+Instance: IntegratedComment
 InstanceOf: $mii-patho-finding
 Usage: #example
-Title: "Kommentar - BET"
-Description: "Freitextkommentar zum Befund"
+Title: "Kommentar - Integriert"
+Description: "Gemeinsamer Freitextkommentar zum integrierten Befund (BET + SLN)"
 * meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
@@ -965,8 +967,9 @@ Description: "Freitextkommentar zum Befund"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(IntegratedReportRequest)
-* valueString = "Korrelation mit dem Vorbefund der Stanzbiopsie (E_25_105): Übereinstimmende Histologie (invasives Mammakarzinom NST, G2). Biomarkerprofil bestätigt: ER+, PR+, HER2-, Luminal-A-like. Empfehlung: Tumorkonferenz zur weiteren Therapieplanung."
-* derivedFrom = Reference(IntegratedQRBreastResection)
+* valueString = "Korrelation mit dem Vorbefund der Stanzbiopsie (E_25_105): Übereinstimmende Histologie (invasives Mammakarzinom NST, G2). Biomarkerprofil bestätigt: ER+, PR+, HER2-, Luminal-A-like. In SLN #1 Nachweis einer Mikrometastase (1,2 mm) im Randsinus, SLN #2 tumorfrei in allen Schnittstufen, keine extranodale Infiltration (pN1mi(sn)). Empfehlung: Tumorkonferenz zur weiteren Therapieplanung."
+* derivedFrom[+] = Reference(IntegratedQRBreastResection)
+* derivedFrom[+] = Reference(IntegratedQRLymphNode)
 
 
 // ============================================================================
@@ -1290,21 +1293,5 @@ Description: "Pathologische N-Kategorie: pN1mi(sn)"
   * code = #8
   * display = "8. Auflage"
 
-// --- 15. Kommentar SLN ---
-Instance: IntegratedSLNComment
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Kommentar - SLN"
-Description: "Kommentar zum SLN-Befund"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $loinc#22638-1 "Pathology report comments [Interpretation] Narrative"
-* code.text = "Kommentar"
-* subject = Reference(Patient4)
-* effectiveDateTime = "2025-02-10"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(IntegratedReportRequest)
-* valueString = "In SLN #1 Nachweis einer Mikrometastase (1,2 mm) im Randsinus. SLN #2 tumorfrei in allen Schnittstufen. Keine extranodale Infiltration. Klassifikation: pN1mi(sn). Empfehlung: Besprechung in Tumorkonferenz bzgl. weiterer axillärer Therapie."
-* derivedFrom = Reference(IntegratedQRLymphNode)
+// --- 15. Kommentar SLN: entfernt ---
+// Issue #45: in den gemeinsamen Kommentar IntegratedComment (siehe oben, BET-Block) zusammengefuehrt.

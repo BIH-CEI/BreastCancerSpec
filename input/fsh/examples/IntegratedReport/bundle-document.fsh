@@ -200,9 +200,6 @@ Description: "FHIR Document Bundle für den integrierten Befundbericht BET Mamma
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMacroWeight"
 * entry[=].resource = IntegratedMacroWeight
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMacroQuadrant"
-* entry[=].resource = IntegratedMacroQuadrant
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMacroClock"
 * entry[=].resource = IntegratedMacroClock
 
@@ -342,10 +339,6 @@ Description: "FHIR Document Bundle für den integrierten Befundbericht BET Mamma
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedPT"
 * entry[=].resource = IntegratedPT
 
-// BET - Kommentar
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedBETComment"
-* entry[=].resource = IntegratedBETComment
-
 // SLN - Diagnostic Conclusion Findings
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedLymphNodeProcedure"
 * entry[=].resource = IntegratedLymphNodeProcedure
@@ -389,8 +382,9 @@ Description: "FHIR Document Bundle für den integrierten Befundbericht BET Mamma
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedPN"
 * entry[=].resource = IntegratedPN
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedSLNComment"
-* entry[=].resource = IntegratedSLNComment
+// Gemeinsamer Kommentar (BET + SLN zusammengefuehrt, Issue #45)
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedComment"
+* entry[=].resource = IntegratedComment
 
 // --- QuestionnaireResponses ---
 * entry[+].fullUrl = "http://breastcancerspec.org/QuestionnaireResponse/IntegratedQRBreastResection"

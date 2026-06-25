@@ -382,13 +382,21 @@ Description: "Pathologische N-Kategorie: pN1mi(sn)"
       * system = "https://www.uicc.org/resources/tnm"
       * code = #p
       * display = "p"
-  * coding = $sct#371494008 "pN category (observable entity)"
+  // Onko-Profil-konform: cp-Praefix-Extension traegt bereits das "p", daher genuegt das
+  // generische SCT-Konzept "N category" (277206009). Das spezifischere "pN category" (371494008)
+  // waere mit der Extension redundant (Issue #40, Rueckmeldung gharoske 2026-06-03).
+  // TODO: bei Release MII-Onko 2027 (TNM-Ueberarbeitung durch ThomasDeBe) erneut pruefen.
+  * coding = $sct#277206009 "N category (observable entity)"
 * subject = Reference(Patient4)
 * effectiveDateTime = "2025-02-10"
-* valueCodeableConcept.coding
+// coding[0]: UICC-Code aus dem required-ValueSet (mii-vs-onko-tnm-n-kategorie-werte)
+* valueCodeableConcept.coding[+]
   * system = "https://www.uicc.org/resources/tnm"
-  * code = #N1mi(sn)
-  * display = "N1mi(sn)"
+  * code = #N1mi
+  * display = "N1(mi)"
+// coding[1]: praeziseres SNOMED-Konzept inkl. (sn)-Zusatz (nicht im required-VS, daher zusaetzlich)
+* valueCodeableConcept.coding[+] = $sct#1356762006 "Union for International Cancer Control pN1mi(sn) (qualifier value)"
+* valueCodeableConcept.text = "pN1mi(sn)"
 * method.coding
   * system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
   * code = #8

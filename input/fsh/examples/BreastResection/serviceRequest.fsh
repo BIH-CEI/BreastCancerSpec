@@ -26,7 +26,6 @@ Description: "Anforderung f√ºr pathologische Aufarbeitung eines BET-Exzisionspr√
 * supportingInfo[+] = Reference(BreastResectionSpecimenMarking)
 * supportingInfo[+] = Reference(BreastResectionSpecimenRadiographyClinical)
 * supportingInfo[+] = Reference(BreastResectionGeneticPredisposition)
-* supportingInfo[+] = Reference(BreastResectionMacroQuadrant)
 * supportingInfo[+] = Reference(BreastResectionMacroClock)
 * supportingInfo[+] = Reference(BreastResectionMacroDistanceNipple)
 * supportingInfo[+] = Reference(CoreNeedleBiopsyInterpretation)

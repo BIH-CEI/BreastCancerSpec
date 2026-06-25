@@ -22,7 +22,6 @@ Description: "Gruppierung aller makroskopischen Messungen beider Präparate (BET
 * hasMember[+] = Reference(IntegratedMacroWidth)
 * hasMember[+] = Reference(IntegratedMacroDepth)
 * hasMember[+] = Reference(IntegratedMacroWeight)
-* hasMember[+] = Reference(IntegratedMacroQuadrant)
 * hasMember[+] = Reference(IntegratedMacroClock)
 * hasMember[+] = Reference(IntegratedMacroDistanceNipple)
 * hasMember[+] = Reference(IntegratedMacroBlockCount)
@@ -124,27 +123,9 @@ Description: "Gewicht des BET-Exzisionspräparats"
 * derivedFrom = Reference(IntegratedQRBreastResection)
 
 // =============================================================================
-// BET - Quadrant (linkId 10030)
+// BET - Quadrant (linkId 10030): jetzt in Specimen.collection.bodySite.code (33564002)
+// abgebildet, daher keine eigene Observation mehr (Issue #42/#48).
 // =============================================================================
-
-Instance: IntegratedMacroQuadrant
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Quadrant (integriert)"
-Description: "Quadrantenlokalisation des Tumors"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22634-0
-* code = $loinc#42799-7 "Quadrant Breast"
-* code.text = "Quadrantenlokalisaion"
-* subject = Reference(Patient4)
-* specimen = Reference(IntegratedBETSpecimenPart)
-* effectiveDateTime = "2025-02-06T08:30:00+01:00"
-* performer = Reference(PathologistPractitioner)
-* valueCodeableConcept = $sct#33564002 "Structure of lower outer quadrant of breast (body structure)"
-* valueCodeableConcept.text = "Unterer äußerer Quadrant"
-* derivedFrom = Reference(IntegratedQRBreastResection)
 
 // =============================================================================
 // BET - Zifferblatt (linkId 10040)
@@ -216,6 +197,8 @@ Description: "Anzahl der angefertigten Paraffinblöcke"
 // =============================================================================
 // SLN #1 Größe
 // =============================================================================
+// Issue #42: Code von LOINC 44619-5 "Length of tissue core(s)" (Stanzen-Code, falsch) auf
+// SCT 364109001 umkodiert - konsistent mit dem eigenstaendigen LymphNodeSpecimen-Szenario.
 
 Instance: IntegratedMacroSLN1Size
 InstanceOf: $mii-patho-finding
@@ -226,7 +209,7 @@ Description: "Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
-* code = $loinc#44619-5 "Length of tissue core(s)"
+* code = $sct#364109001 "Length of lymph node in excised specimen (observable entity)"
 * code.text = "SLN #1 Größe"
 * subject = Reference(Patient4)
 * specimen = Reference(IntegratedSLNSpecimenBlock01)
@@ -249,7 +232,7 @@ Description: "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
-* code = $loinc#44619-5 "Length of tissue core(s)"
+* code = $sct#364109001 "Length of lymph node in excised specimen (observable entity)"
 * code.text = "SLN #2 Größe"
 * subject = Reference(Patient4)
 * specimen = Reference(IntegratedSLNSpecimenBlock02)

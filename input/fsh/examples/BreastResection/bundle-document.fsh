@@ -184,9 +184,6 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroWeight"
 * entry[=].resource = BreastResectionMacroWeight
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroQuadrant"
-* entry[=].resource = BreastResectionMacroQuadrant
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroClock"
 * entry[=].resource = BreastResectionMacroClock
 

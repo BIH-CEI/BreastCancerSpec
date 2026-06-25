@@ -27,3 +27,4 @@ Description: "Anforderung für pathologische Aufarbeitung des BET-Exzisionspräp
 * supportingInfo[+] = Reference(IntegratedSpecimenMarking)
 * supportingInfo[+] = Reference(IntegratedSpecimenRadiographyClinical)
 * supportingInfo[+] = Reference(IntegratedGeneticPredisposition)
+* supportingInfo[+] = Reference(CoreNeedleBiopsyInterpretation)

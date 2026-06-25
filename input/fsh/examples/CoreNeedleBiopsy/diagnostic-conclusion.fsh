@@ -21,12 +21,11 @@ Description: "Grouper for all diagnostic conclusion findings in core needle biop
 * hasMember[+] = Reference(CoreNeedleBiopsyMorphologyFreeText)
 * hasMember[+] = Reference(CoreNeedleBiopsyNottinghamGrade)
 * hasMember[+] = Reference(CoreNeedleBiopsyNottinghamSummaryScore)
+// Issue #44: ER/PR/HER2 als Status-Observations mit Components (PP, Faerbeintensitaet, IRS bzw.
+// Score, PP HER2, Amplifikation). ERPercentage/PRPercentage/HER2IHC/HER2ISH entfallen als
+// eigenstaendige Observations (jetzt Components) -> nicht mehr im hasMember.
 * hasMember[+] = Reference(CoreNeedleBiopsyERStatus)
-* hasMember[+] = Reference(CoreNeedleBiopsyERPercentage)
 * hasMember[+] = Reference(CoreNeedleBiopsyPRStatus)
-* hasMember[+] = Reference(CoreNeedleBiopsyPRPercentage)
-* hasMember[+] = Reference(CoreNeedleBiopsyHER2IHC)
-* hasMember[+] = Reference(CoreNeedleBiopsyHER2ISH)
 * hasMember[+] = Reference(CoreNeedleBiopsyHER2Overall)
 * hasMember[+] = Reference(CoreNeedleBiopsyKi67)
 * hasMember[+] = Reference(CoreNeedleBiopsyInterpretation)
@@ -146,32 +145,16 @@ Description: "Estrogen receptor status by immunohistochemistry"
 * valueCodeableConcept.text = "ER positiv"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
+// Issue #44: PP, Faerbeintensitaet und IRS als Components des ER-Status (ART-DECOR/Haroske)
+* component[+].code = $loinc#85329-1 "Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain"
+* component[=].valueQuantity = 85 '%' "%"
+* component[+].code = $loinc#85310-1 "Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
+* component[=].valueCodeableConcept = $loinc#LA14974-2 "Strong"
+* component[+].code = $sct#445104009 "Allred score for neoplasm"
+* component[=].valueQuantity = 8 '{score}' "Allred-Score"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
-// ER Percentage
-Instance: CoreNeedleBiopsyERPercentage
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Estrogen Receptor Percentage - Stanzbiopsie"
-Description: "Percentage of ER positive tumor cell nuclei"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code.coding[0] = $loinc#85329-1 "Cells.estrogen receptor/cells in Breast cancer specimen by Immune stain"
-* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
-* subject = Reference(Patient4)
-* specimen = Reference(CoreNeedleBiopsySpecimenSlideER01)
-* effectiveDateTime = "2025-01-17"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueQuantity.value = 85
-* valueQuantity.unit = "%"
-* valueQuantity.system = $ucum
-* valueQuantity.code = #%
-* component[+].code = $loinc#48018-6 "Gene studied [ID]"
-* component[=].valueCodeableConcept = $hgnc#HGNC:3467 "ESR1"
-* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+// ER Percentage: entfernt (Issue #44) -> jetzt Component PP ER (85329-1) im ER-Status.
 
 // PR Status
 Instance: CoreNeedleBiopsyPRStatus
@@ -194,79 +177,18 @@ Description: "Progesterone receptor status by immunohistochemistry"
 * valueCodeableConcept.text = "PR positiv"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
+// Issue #44: PP, Faerbeintensitaet und IRS als Components des PR-Status (ART-DECOR/Haroske)
+* component[+].code = $loinc#85325-9 "Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain"
+* component[=].valueQuantity = 50 '%' "%"
+* component[+].code = $loinc#85331-7 "Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
+* component[=].valueCodeableConcept = $loinc#LA6751-7 "Moderate"
+* component[+].code = $sct#445104009 "Allred score for neoplasm"
+* component[=].valueQuantity = 6 '{score}' "Allred-Score"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
-// PR Percentage
-Instance: CoreNeedleBiopsyPRPercentage
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Progesterone Receptor Percentage - Stanzbiopsie"
-Description: "Percentage of PR positive tumor cell nuclei"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code.coding[0] = $loinc#85325-9 "Cells.progesterone receptor/cells in Breast cancer specimen by Immune stain"
-* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
-* subject = Reference(Patient4)
-* specimen = Reference(CoreNeedleBiopsySpecimenSlidePR01)
-* effectiveDateTime = "2025-01-17"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueQuantity.value = 50
-* valueQuantity.unit = "%"
-* valueQuantity.system = $ucum
-* valueQuantity.code = #%
-* component[+].code = $loinc#48018-6 "Gene studied [ID]"
-* component[=].valueCodeableConcept = $hgnc#HGNC:8910 "PGR"
-* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
-
-// HER2 IHC
-Instance: CoreNeedleBiopsyHER2IHC
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "HER2 IHC - Stanzbiopsie"
-Description: "HER2-Score per Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code.coding[0] = $loinc#85319-2 "HER2 [Presence] in Breast cancer specimen by Immune stain"
-* code.coding[+] = $sct#3550001000004108 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
-* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
-* code.text = "Her2 Score"
-* subject = Reference(Patient4)
-* specimen = Reference(CoreNeedleBiopsySpecimenSlideHER2-01)
-* effectiveDateTime = "2025-01-17"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueCodeableConcept = $loinc#LA11841-6 "1+"
-* valueCodeableConcept.text = "1+"
-* component[+].code = $loinc#48018-6 "Gene studied [ID]"
-* component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
-* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
-
-// HER2 ISH (B-DISH)
-Instance: CoreNeedleBiopsyHER2ISH
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "HER2 ISH - Stanzbiopsie"
-Description: "HER2 status by in-situ hybridization (B-DISH)"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22637-3
-* code = $sct#1363314005 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization"
-* subject = Reference(Patient4)
-* specimen = Reference(CoreNeedleBiopsySpecimenSlideHER2-01)
-* effectiveDateTime = "2025-01-17"
-* performer = Reference(PathologistPractitioner)
-* basedOn = Reference(CoreNeedleBiopsyReportRequest)
-* valueCodeableConcept = $sct#2667000 "Absent (qualifier value)"
-* valueCodeableConcept.text = "HER2 negativ (nicht amplifiziert)"
-* component[+].code = $loinc#48018-6 "Gene studied [ID]"
-* component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
-* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
+// PR Percentage: entfernt (Issue #44) -> jetzt Component PP PR (85325-9) im PR-Status.
+// HER2 IHC: entfernt (Issue #44) -> jetzt Component HER2-Score (85319-2) im HER2-Gesamtstatus.
+// HER2 ISH: entfernt (Issue #44) -> jetzt Component Amplifikation (1363314005) im HER2-Gesamtstatus.
 
 // HER2 Gesamtstatus
 Instance: CoreNeedleBiopsyHER2Overall
@@ -289,9 +211,14 @@ Description: "HER2-Gesamtstatus basierend auf IHC und ISH"
 * valueCodeableConcept.text = "Negativ"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
-* derivedFrom[+] = Reference(QuestionnaireResponseCoreNeedleBiopsy)
-* derivedFrom[+] = Reference(CoreNeedleBiopsyHER2IHC)
-* derivedFrom[+] = Reference(CoreNeedleBiopsyHER2ISH)
+// Issue #44: HER2-Score, PP HER2 und Amplifikation als Components des HER2-Gesamtstatus (ART-DECOR/Haroske)
+* component[+].code = $loinc#85319-2 "HER2 [Presence] in Breast cancer specimen by Immune stain"
+* component[=].valueCodeableConcept = $loinc#LA11841-6 "1+"
+* component[+].code = $loinc#85328-3 "Cells.HER2 uniform intense membrane staining/cells in Breast cancer specimen by Immune stain"
+* component[=].valueQuantity = 0 '%' "%"
+* component[+].code = $sct#1363314005 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)"
+* component[=].valueCodeableConcept = $sct#2667000 "Absent (qualifier value)"
+* derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)
 
 // Ki-67
 Instance: CoreNeedleBiopsyKi67
@@ -328,7 +255,7 @@ Description: "Core Needle Biopsy Interpretation according to NHSBSP"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $sct#271937008 "Screening interpretation (observable entity)"
+* code = $sct#271935000 "Biopsy interpretation (observable entity)"
 * code.text = "B-Klassifikation"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)

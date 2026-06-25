@@ -126,17 +126,13 @@ Description: "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbe
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyERStatus"
 * entry[=].resource = CoreNeedleBiopsyERStatus
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyERPercentage"
-* entry[=].resource = CoreNeedleBiopsyERPercentage
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyPRStatus"
 * entry[=].resource = CoreNeedleBiopsyPRStatus
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyPRPercentage"
-* entry[=].resource = CoreNeedleBiopsyPRPercentage
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyHER2ISH"
-* entry[=].resource = CoreNeedleBiopsyHER2ISH
+// Issue #44: ER%/PR%/HER2-IHC/HER2-ISH sind jetzt Components -> nur noch die Status-Observations.
+// HER2-Gesamtstatus erganzt (fehlte zuvor im Bundle).
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyHER2Overall"
+* entry[=].resource = CoreNeedleBiopsyHER2Overall
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/CoreNeedleBiopsyKi67"
 * entry[=].resource = CoreNeedleBiopsyKi67

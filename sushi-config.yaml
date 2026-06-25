@@ -18,6 +18,7 @@ dependencies:
   de.medizininformatikinitiative.kerndatensatz.patho: 2026.0.0
   de.medizininformatikinitiative.kerndatensatz.base: 2026.0.0
   de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.0
+  hl7.fhir.us.mcode: 2.1.0
 
 pages:
   index.md:

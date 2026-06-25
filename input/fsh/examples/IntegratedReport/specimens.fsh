@@ -31,6 +31,9 @@ Description: "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 42x35
   * collector = Reference(BreastSurgeonPractitioner)
   * collectedDateTime = "2025-02-05T10:00:00+01:00"
   * bodySite = $sct#33564002 "Structure of lower outer quadrant of breast (body structure)"
+  // Seitenlokalisation als mCODE-lateralityQualifier (Issue #42/#48); Quadrant steckt bereits im bodySite.code
+  * bodySite.extension[lateralityQualifier].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier"
+  * bodySite.extension[lateralityQualifier].valueCodeableConcept = $sct#7771000 "Left (qualifier value)"
   * method = $sct#237371007 "Wide local excision of breast lesion (procedure)"
 
 * container

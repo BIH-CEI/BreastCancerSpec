@@ -21,7 +21,6 @@ Description: "Gruppierung aller makroskopischen Messungen des BET-Exzisionspräp
 * hasMember[+] = Reference(BreastResectionMacroWidth)
 * hasMember[+] = Reference(BreastResectionMacroDepth)
 * hasMember[+] = Reference(BreastResectionMacroWeight)
-* hasMember[+] = Reference(BreastResectionMacroQuadrant)
 * hasMember[+] = Reference(BreastResectionMacroClock)
 * hasMember[+] = Reference(BreastResectionMacroDistanceNipple)
 * hasMember[+] = Reference(BreastResectionMacroBlockCount)
@@ -107,25 +106,8 @@ Description: "Gewicht des BET-Exzisionspräparats"
 * bodySite = $sct#76752008 "Breast structure (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// --- Quadrant (linkId 10030) ---
-Instance: BreastResectionMacroQuadrant
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Quadrant BET"
-Description: "Quadrantenlokalisation des Tumors"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22634-0
-* code = $loinc#42799-7 "Quadrant Breast"
-* code.text = "Quadrantenlokalisaion"
-* subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenPart)
-* effectiveDateTime = "2025-02-06T08:30:00+01:00"
-* performer = Reference(PathologistPractitioner)
-* valueCodeableConcept = $sct#33564002 "Structure of lower outer quadrant of breast (body structure)"
-* valueCodeableConcept.text = "Unterer äußerer Quadrant"
-* derivedFrom = Reference(QuestionnaireResponseBreastResection)
+// Quadrant (linkId 10030): jetzt in Specimen.collection.bodySite.code (33564002) abgebildet,
+// daher keine eigene Observation mehr (Issue #48).
 
 // --- Zifferblatt (linkId 10040) ---
 Instance: BreastResectionMacroClock
