@@ -7,8 +7,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Stanzzylinder-Präparat (Einsendespecimen)"
 Description: "2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier[+]
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#PLAC
   * system = "https://senologie.example-hospital.de/fhir/specimen/placer"
@@ -31,6 +31,8 @@ Description: "2 HG-Stanzzylinder Mamma links, 5 Uhr, 5 cm von Mamille"
   * collector = Reference(BreastSurgeonPractitioner)
   * collectedDateTime = "2025-01-15T09:30:00+01:00"
   * bodySite = $sct#33564002 "Structure of lower outer quadrant of breast (body structure)"
+  // Detaillierte Lokalisation (Seite, 5 Uhr, Mamillenabstand) in der BodyStructure (MII Patho 2027, #259)
+  * bodySite.extension[bodyStructure].valueReference = Reference(CoreNeedleBiopsyBodyStructure)
   * method = $sct#9911007 "Core needle biopsy (procedure)"
 
 * container
@@ -48,8 +50,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 01 Stanzbiopsie"
 Description: "Paraffineinbettung der Stanzzylinder Block 01"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1"
@@ -83,8 +85,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 01 Stanzbiopsie"
 Description: "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 1"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_HE_01"
@@ -125,8 +127,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 02 Stanzbiopsie"
 Description: "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 2"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_HE_02"
@@ -167,8 +169,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 03 Stanzbiopsie"
 Description: "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 3"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_HE_03"
@@ -209,8 +211,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 04 Stanzbiopsie"
 Description: "Hämatoxylin-Eosin gefärbter Schnitt, Schnittstufe 4"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_HE_04"
@@ -251,8 +253,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "ER-IHC Schnitt 01 Stanzbiopsie"
 Description: "Schnitt 1 für Östrogenrezeptor-Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_ER_01"
@@ -294,8 +296,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "ER-IHC Schnitt 02 Stanzbiopsie"
 Description: "Schnitt 2 für Östrogenrezeptor-Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_ER_02"
@@ -337,8 +339,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "PR-IHC Schnitt 01 Stanzbiopsie"
 Description: "Schnitt 1 für Progesteronrezeptor-Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_PR_01"
@@ -380,8 +382,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "PR-IHC Schnitt 02 Stanzbiopsie"
 Description: "Schnitt 2 für Progesteronrezeptor-Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_PR_02"
@@ -423,8 +425,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HER2-B-DISH Schnitt 01 Stanzbiopsie"
 Description: "Schnitt 1 für HER2 Bright-field Dual In-Situ Hybridization"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_HER2_01"
@@ -466,8 +468,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HER2-B-DISH Schnitt 02 Stanzbiopsie"
 Description: "Schnitt 2 für HER2 Bright-field Dual In-Situ Hybridization"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_HER2_02"
@@ -509,8 +511,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HER2-IHC Schnitt 01 Stanzbiopsie"
 Description: "Schnitt 1 für HER2 Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_HER2IHC_01"
@@ -552,8 +554,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HER2-IHC Schnitt 02 Stanzbiopsie"
 Description: "Schnitt 2 für HER2 Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_HER2IHC_02"
@@ -595,8 +597,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Ki67-IHC Schnitt 01 Stanzbiopsie"
 Description: "Schnitt 1 für Ki-67 Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_Ki67_01"
@@ -638,8 +640,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Ki67-IHC Schnitt 02 Stanzbiopsie"
 Description: "Schnitt 2 für Ki-67 Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_105_A_1_1_Ki67_02"

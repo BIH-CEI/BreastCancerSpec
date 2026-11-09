@@ -26,29 +26,48 @@ Description: "FHIR Composition for structured core needle biopsy pathology repor
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActCode#PATREPE
 * event.detail = Reference(CoreNeedleBiopsyReportRequest)
 
-* section.title = "Pathologiebefundbericht"
-* section.code = $loinc#11526-1 "Pathology study"
-* section.entry = Reference(CoreNeedleBiopsyReport)
-* section.text.status = #additional
-* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+// ----------------------------------------------------------------------------
+// Sections nach MII Patho (Angleichung an HL7 EU Lab, Modul-Patho 2027):
+//   patho-diagnostic-report      60567-5  -> MII_PR_Patho_Report
+//   makroskopie                  22634-0  -> MII_PR_Patho_Macroscopic_Grouper
+//   diagnostische-schlussfolgerung 22637-3 -> MII_PR_Patho_Diagnostic_Conclusion_Grouper
+// Klinische Angaben, Material und Mikroskopie bleiben im Narrativ der
+// Berichts-Section: für sie existiert kein Grouper, jede Section braucht aber
+// eine entry-Referenz.
+// ----------------------------------------------------------------------------
+* section[+].title = "Pathologiebefundbericht"
+* section[=].code = $loinc#60567-5 "Comprehensive pathology report panel"
+* section[=].entry = Reference(CoreNeedleBiopsyReport)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <h3>Klinische Angaben</h3>
 <p>Herdbefund/Architekturstörung linke Brust, BI-RADS 4b. US-gestützte Stanzbiopsie.</p>
 
 <h3>Material</h3>
 <p>HG-Stanzen/Mamma, li., 5 Uhr, 5 cm von Mamille</p>
 
-<h3>Makroskopie</h3>
+<h3>Mikroskopische Beurteilung</h3>
+<p>In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.</p>
+</div>"
+
+* section[+].title = "Makroskopische Beurteilung"
+* section[=].code = $loinc#22634-0 "Pathology report gross observation Narrative"
+* section[=].entry = Reference(CoreNeedleBiopsyMacroscopicGrouper)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>Stanzzylinder</td><td>2 Stanzzylinder, zusammen 22 mm, mittelfest, grauweißlich, Bleistiftminenstärke</td></tr>
 <tr><td>Paraffinblöcke</td><td>1</td></tr>
 </tbody>
 </table>
+</div>"
 
-<h3>Mikroskopie</h3>
-<p>In beiden vollständig gebetteten, mit jeweils vier Schnittstufen aufgearbeiteten Punktionszylindern lipomatös und fibrolipomatös transformiertes Brustdrüsengewebe, das zu großen Teilen eingenommen wird von Tumorstrukturen eines mittelgroßzelligen, vordergründig trabekulär, solid und dissolut einzelzellig wachsenden invasiven Mammakarzinoms mit mäßiger Zell- und Kernpolymorphie sowie ganz vereinzelt nachweisbaren Mitosen (weniger als 5/10 HPF). Im Tumorzentrum unterschiedlich ausgeprägte Stromasklerose und herdförmige -elastose. An der Tumorperipherie schüttere bis mitteldichte rundzellig entzündliche Stromareaktion.</p>
-
-<h3>Diagnostische Schlussfolgerung</h3>
+* section[+].title = "Diagnostische Schlussfolgerung"
+* section[=].code = $loinc#22637-3 "Pathology report final diagnosis Narrative"
+* section[=].entry = Reference(CoreNeedleBiopsyDiagnosticConclusionGrouper)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Diagnose:</b> Invasives Mammakarzinom NST (ICD-O 8500/3)</p>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>

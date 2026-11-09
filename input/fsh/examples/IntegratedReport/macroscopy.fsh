@@ -7,7 +7,7 @@ InstanceOf: MII_PR_Patho_Macroscopic_Grouper
 Usage: #example
 Title: "Makroskopische Befunde Grouper (integriert)"
 Description: "Gruppierung aller makroskopischen Messungen beider Präparate (BET + SLN)"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * code = $loinc#22634-0
@@ -22,8 +22,6 @@ Description: "Gruppierung aller makroskopischen Messungen beider Präparate (BET
 * hasMember[+] = Reference(IntegratedMacroWidth)
 * hasMember[+] = Reference(IntegratedMacroDepth)
 * hasMember[+] = Reference(IntegratedMacroWeight)
-* hasMember[+] = Reference(IntegratedMacroClock)
-* hasMember[+] = Reference(IntegratedMacroDistanceNipple)
 * hasMember[+] = Reference(IntegratedMacroBlockCount)
 // SLN Makro-Findings
 * hasMember[+] = Reference(IntegratedMacroSLN1Size)
@@ -39,7 +37,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Probengröße 1 (Länge) (integriert)"
 Description: "Maximale Länge des BET-Exzisionspräparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -62,7 +60,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Probengröße 2 (Breite) (integriert)"
 Description: "Breite des BET-Exzisionspräparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -85,7 +83,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Probengröße 3 (Tiefe) (integriert)"
 Description: "Tiefe des BET-Exzisionspräparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -108,7 +106,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Gewicht (integriert)"
 Description: "Gewicht des BET-Exzisionspräparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -123,54 +121,10 @@ Description: "Gewicht des BET-Exzisionspräparats"
 * derivedFrom = Reference(IntegratedQRBreastResection)
 
 // =============================================================================
-// BET - Quadrant (linkId 10030): jetzt in Specimen.collection.bodySite.code (33564002)
-// abgebildet, daher keine eigene Observation mehr (Issue #42/#48).
+// BET - Quadrant (linkId 10030), Zifferblatt (linkId 10040), Abstand Mamille (linkId 10070):
+// in der BodyStructure IntegratedBETBodyStructure abgebildet (referenziert aus
+// Specimen.collection.bodySite), daher keine eigenen Observations mehr (Issues #42/#48).
 // =============================================================================
-
-// =============================================================================
-// BET - Zifferblatt (linkId 10040)
-// =============================================================================
-
-Instance: IntegratedMacroClock
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Zifferblattlokalisation (integriert)"
-Description: "Uhrzeigerlokalisation des Tumors"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22634-0
-* code.coding[0] = $loinc#85332-5 "Radial position in breast [Angle] in Breast cancer specimen"
-* code.coding[+] = $sct#3980001000004105 "Radial location of primary malignant neoplasm in excised breast specimen (observable entity)"
-* code.text = "Zifferblattlokalisation"
-* subject = Reference(Patient4)
-* specimen = Reference(IntegratedBETSpecimenPart)
-* effectiveDateTime = "2025-02-06T08:30:00+01:00"
-* performer = Reference(PathologistPractitioner)
-* valueQuantity = 5 '{clock position}' "o'clock"
-* derivedFrom = Reference(IntegratedQRBreastResection)
-
-// =============================================================================
-// BET - Abstand Mamille (linkId 10070)
-// =============================================================================
-
-Instance: IntegratedMacroDistanceNipple
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Abstand von Mamille (integriert)"
-Description: "Abstand des Tumors von der Mamille"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22634-0
-* code = $sct#1240401000 "Distance of primary malignant neoplasm of breast to nipple in excised breast specimen (observable entity)"
-* code.text = "Abstand von der Mamille"
-* subject = Reference(Patient4)
-* specimen = Reference(IntegratedBETSpecimenPart)
-* effectiveDateTime = "2025-02-06T08:30:00+01:00"
-* performer = Reference(PathologistPractitioner)
-* valueQuantity = 50 'mm' "mm"
-* derivedFrom = Reference(IntegratedQRBreastResection)
 
 // =============================================================================
 // BET - Anzahl Paraffinblöcke
@@ -181,7 +135,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anzahl Paraffinblöcke (integriert)"
 Description: "Anzahl der angefertigten Paraffinblöcke"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -205,7 +159,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "SLN #1 Größe (integriert)"
 Description: "Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -215,7 +169,8 @@ Description: "Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm
 * specimen = Reference(IntegratedSLNSpecimenBlock01)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueString = "12 x 8 x 6 mm, Patentblau-markiert"
+* valueQuantity = 12 'mm' "mm"
+* note.text = "12 x 8 x 6 mm, Patentblau-markiert"
 * bodySite = $sct#68171009 "Axillary lymph node structure (body structure)"
 * derivedFrom = Reference(IntegratedQRLymphNode)
 
@@ -228,7 +183,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "SLN #2 Größe (integriert)"
 Description: "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -238,6 +193,7 @@ Description: "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm
 * specimen = Reference(IntegratedSLNSpecimenBlock02)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueString = "10 x 7 x 5 mm, Patentblau-markiert"
+* valueQuantity = 10 'mm' "mm"
+* note.text = "10 x 7 x 5 mm, Patentblau-markiert"
 * bodySite = $sct#68171009 "Axillary lymph node structure (body structure)"
 * derivedFrom = Reference(IntegratedQRLymphNode)

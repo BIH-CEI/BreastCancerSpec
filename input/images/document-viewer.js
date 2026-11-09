@@ -40,37 +40,147 @@ function findObservationByCode(bundle, loincCode) {
   return null;
 }
 
-// Parse section.text.div und extrahiere Sektionen nach h3-Überschriften
-function parseSectionDiv(divContent) {
-  if (!divContent) return {};
+// Kanonische Reihenfolge der Berichtsabschnitte.
+// Sie folgt dem Slicing von DiagnosticReport.result im MII-Modul Pathologie:
+// intraoperativ -> makroskopisch -> mikroskopisch -> zusätzlich -> Schlussfolgerung.
+var ORDER_CLINICAL     = 10;
+var ORDER_MATERIAL     = 20;
+var ORDER_INTRAOP      = 30;
+var ORDER_MACRO        = 40;
+var ORDER_MICRO        = 50;
+var ORDER_ADDITIONAL   = 60;
+var ORDER_CONCLUSION   = 70;
+var ORDER_UNKNOWN_TEXT = 98;
+var ORDER_UNKNOWN_SECT = 99;
 
-  var sections = {};
-  // Entferne das äußere div-Tag
-  var content = divContent.replace(/<div[^>]*>/, '').replace(/<\/div>\s*$/, '');
+// LOINC-Code einer Composition.section -> Position und Überschrift.
+var SECTION_BY_CODE = {
+  '83321-0':  { order: ORDER_INTRAOP,    title: 'Intraoperative Beurteilung' },
+  '22634-0':  { order: ORDER_MACRO,      title: 'Makroskopische Beurteilung' },
+  '22635-7':  { order: ORDER_MICRO,      title: 'Mikroskopische Beurteilung' },
+  '100969-5': { order: ORDER_ADDITIONAL, title: 'Zusätzliche Beobachtungen' },
+  '22637-3':  { order: ORDER_CONCLUSION, title: 'Diagnostische Schlussfolgerung' }
+};
 
-  // Splitte nach h3-Tags
-  var parts = content.split(/<h3>/i);
+// Der Berichtsabschnitt selbst wird nicht als eigener Block ausgegeben -
+// sein Narrativ enthält die Blöcke ohne eigenen Grouper.
+var CODE_REPORT_SECTION = '60567-5';
+
+// Überschriften im Narrativ -> Position. Die Altbezeichnungen bleiben
+// enthalten, damit auch Bundles aus früheren Fassungen korrekt einsortiert
+// werden.
+var HEADING_ORDER = {
+  'klinische_angaben':             ORDER_CLINICAL,
+  'material':                      ORDER_MATERIAL,
+  'schnellschnitt':                ORDER_INTRAOP,
+  'intraoperative_beurteilung':    ORDER_INTRAOP,
+  'makroskopie':                   ORDER_MACRO,
+  'makroskopische_beurteilung':    ORDER_MACRO,
+  'mikroskopie':                   ORDER_MICRO,
+  'mikroskopische_beurteilung':    ORDER_MICRO,
+  'diagnose':                      ORDER_CONCLUSION,
+  'diagnostische_schlussfolgerung': ORDER_CONCLUSION
+};
+
+function normalizeHeading(title) {
+  return title.toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+}
+
+function stripOuterDiv(divContent) {
+  return divContent.replace(/<div[^>]*>/, '').replace(/<\/div>\s*$/, '').trim();
+}
+
+// Zerlegt ein Narrativ an den h3-Überschriften in Blöcke.
+// Text vor der ersten Überschrift geht nicht verloren, sondern wird als
+// Block ohne Titel geführt.
+function splitNarrative(divContent) {
+  var blocks = [];
+  if (!divContent) return blocks;
+
+  var content = stripOuterDiv(divContent);
+  var parts = content.split(/<h3[^>]*>/i);
+
+  var preamble = parts[0].trim();
+  if (preamble) {
+    blocks.push({ order: ORDER_UNKNOWN_TEXT, title: null, html: preamble });
+  }
 
   for (var i = 1; i < parts.length; i++) {
     var part = parts[i];
-    var endTag = part.indexOf('</h3>');
-    if (endTag === -1) continue;
+    var endTag = part.search(/<\/h3>/i);
+    if (endTag === -1) {
+      // Defekte Überschrift: Inhalt trotzdem ausgeben statt ihn zu verwerfen.
+      blocks.push({ order: ORDER_UNKNOWN_TEXT, title: null, html: part.trim() });
+      continue;
+    }
 
     var title = part.substring(0, endTag).trim();
-    var sectionContent = part.substring(endTag + 5).trim();
+    var body = part.substring(endTag + 5).trim();
+    var key = normalizeHeading(title);
 
-    // Normalisiere den Titel für den Zugriff
-    var key = title.toLowerCase()
-      .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue')
-      .replace(/\s+/g, '_');
-
-    sections[key] = {
+    blocks.push({
+      order: HEADING_ORDER.hasOwnProperty(key) ? HEADING_ORDER[key] : ORDER_UNKNOWN_TEXT,
       title: title,
-      content: sectionContent
-    };
+      html: body
+    });
   }
 
-  return sections;
+  return blocks;
+}
+
+// Baut die Blockliste des Berichts aus allen Composition.sections auf.
+function collectBlocks(composition) {
+  var blocks = [];
+  var sections = composition.section || [];
+
+  for (var i = 0; i < sections.length; i++) {
+    var section = sections[i];
+    var div = (section.text && section.text.div) ? section.text.div : null;
+
+    var code = null;
+    if (section.code && section.code.coding && section.code.coding.length) {
+      code = section.code.coding[0].code;
+    }
+
+    var known = SECTION_BY_CODE[code];
+    if (known) {
+      // Section mit eigenem Grouper: Narrativ am Stück unter fester Überschrift.
+      blocks.push({
+        order: known.order,
+        title: known.title,
+        html: div ? stripOuterDiv(div) : ''
+      });
+      continue;
+    }
+
+    // Kein bekannter Abschnittscode. Das betrifft die Berichts-Section
+    // (60567-5), deren Narrativ die Blöcke ohne eigenen Grouper trägt, ebenso
+    // wie Bundles aus früheren Fassungen, die den gesamten Befund in einer
+    // einzigen Section führen. Enthält das Narrativ h3-Überschriften, wird es
+    // zerlegt und einsortiert - sonst bleibt es ein Block mit eigenem Titel.
+    if (div && /<h3[^>]*>/i.test(div)) {
+      blocks = blocks.concat(splitNarrative(div));
+      continue;
+    }
+
+    blocks.push({
+      order: code === CODE_REPORT_SECTION ? ORDER_UNKNOWN_TEXT : ORDER_UNKNOWN_SECT,
+      title: code === CODE_REPORT_SECTION ? null : (section.title || 'Weiterer Abschnitt'),
+      html: div ? stripOuterDiv(div) : ''
+    });
+  }
+
+  // Stabile Sortierung: gleiche Position behält die Dokumentreihenfolge.
+  return blocks
+    .map(function (b, idx) { return { block: b, idx: idx }; })
+    .sort(function (a, b) {
+      if (a.block.order !== b.block.order) return a.block.order - b.block.order;
+      return a.idx - b.idx;
+    })
+    .map(function (w) { return w.block; });
 }
 
 function renderBundle(bundle) {
@@ -84,20 +194,14 @@ function renderBundle(bundle) {
     // Finde DiagnosticReport
     var diagnosticReport = findResourceByType(bundle, 'DiagnosticReport');
 
-    // Finde Observations nach LOINC-Code
+    // Finde Observations nach LOINC-Code (für die Ressourcen-Links im Fuß)
+    var intraoperativeGrouper = findObservationByCode(bundle, '83321-0');
     var macroscopicGrouper = findObservationByCode(bundle, '22634-0');
+    var microscopicGrouper = findObservationByCode(bundle, '22635-7');
     var diagnosticConclusionGrouper = findObservationByCode(bundle, '22637-3');
 
-    // Parse section.text.div
-    var sectionDiv = null;
-    var sections = composition.section || [];
-    for (var i = 0; i < sections.length; i++) {
-      if (sections[i].text && sections[i].text.div) {
-        sectionDiv = sections[i].text.div;
-        break;
-      }
-    }
-    var parsedSections = parseSectionDiv(sectionDiv);
+    // Abschnitte aus allen Composition.sections aufbauen
+    var blocks = collectBlocks(composition);
 
     var html = '';
 
@@ -137,54 +241,28 @@ function renderBundle(bundle) {
     // ==================== TRENNLINIE ====================
     html += '<hr class="header-separator"/>';
 
-    // ==================== KLINISCHE ANGABEN (wenn vorhanden) ====================
-    if (parsedSections['klinische_angaben']) {
-      html += '<div class="report-section">';
-      html += '<h3>Klinische Angaben</h3>';
-      html += '<div class="section-content">' + parsedSections['klinische_angaben'].content + '</div>';
-      html += '</div>';
-    }
-
     // ==================== BEFUND-INHALT ====================
+    // Jeder Block wird ausgegeben - auch solche mit unbekanntem Code oder
+    // unbekannter Überschrift. Es darf kein Inhalt stillschweigend entfallen.
     html += '<div class="report-body">';
 
-    // --- MATERIAL (wenn vorhanden) ---
-    if (parsedSections['material']) {
-      html += '<div class="report-section">';
-      html += '<h3>Material</h3>';
-      html += '<div class="section-content">' + parsedSections['material'].content + '</div>';
-      html += '</div>';
+    if (!blocks.length) {
+      html += '<p class="no-content">Das Dokument enthält keine darstellbaren Abschnitte.</p>';
     }
 
-    // --- MAKROSKOPIE (wenn Grouper vorhanden) ---
-    if (macroscopicGrouper) {
-      html += '<div class="report-section">';
-      html += '<h3>Makroskopie</h3>';
+    for (var b = 0; b < blocks.length; b++) {
+      var block = blocks[b];
+      if (!block.title && !block.html) continue;
 
-      if (parsedSections['makroskopie']) {
-        html += '<div class="section-content">' + parsedSections['makroskopie'].content + '</div>';
+      html += '<div class="report-section">';
+      if (block.title) {
+        html += '<h3>' + block.title + '</h3>';
       }
-
-      html += '</div>';
-    }
-
-    // --- MIKROSKOPIE (wenn section.text vorhanden) ---
-    if (parsedSections['mikroskopie']) {
-      html += '<div class="report-section">';
-      html += '<h3>Mikroskopie</h3>';
-      html += '<div class="section-content">' + parsedSections['mikroskopie'].content + '</div>';
-      html += '</div>';
-    }
-
-    // --- DIAGNOSTISCHE SCHLUSSFOLGERUNG (wenn Grouper vorhanden) ---
-    if (diagnosticConclusionGrouper) {
-      html += '<div class="report-section">';
-      html += '<h3>Diagnostische Schlussfolgerung</h3>';
-
-      if (parsedSections['diagnostische_schlussfolgerung']) {
-        html += '<div class="section-content">' + parsedSections['diagnostische_schlussfolgerung'].content + '</div>';
+      if (block.html) {
+        html += '<div class="section-content">' + block.html + '</div>';
+      } else {
+        html += '<p class="no-content">Kein Text zu diesem Abschnitt hinterlegt.</p>';
       }
-
       html += '</div>';
     }
 
@@ -201,8 +279,14 @@ function renderBundle(bundle) {
     if (diagnosticReport) {
       resourceLinks.push('<a href="DiagnosticReport-' + diagnosticReport.id + '.html">DiagnosticReport</a>');
     }
+    if (intraoperativeGrouper) {
+      resourceLinks.push('<a href="Observation-' + intraoperativeGrouper.id + '.html">IntraoperativeGrouper</a>');
+    }
     if (macroscopicGrouper) {
       resourceLinks.push('<a href="Observation-' + macroscopicGrouper.id + '.html">MacroscopicGrouper</a>');
+    }
+    if (microscopicGrouper) {
+      resourceLinks.push('<a href="Observation-' + microscopicGrouper.id + '.html">MicroscopicGrouper</a>');
     }
     if (diagnosticConclusionGrouper) {
       resourceLinks.push('<a href="Observation-' + diagnosticConclusionGrouper.id + '.html">DiagnosticConclusionGrouper</a>');

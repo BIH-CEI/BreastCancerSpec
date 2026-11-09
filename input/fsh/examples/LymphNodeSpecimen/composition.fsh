@@ -26,24 +26,43 @@ Description: "FHIR Composition for structured sentinel lymph node biopsy patholo
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActCode#PATREPE
 * event.detail = Reference(LymphNodeReportRequest)
 
-* section.title = "Pathologiebefundbericht"
-* section.code = $loinc#11526-1 "Pathology study"
-* section.entry = Reference(LymphNodeReport)
-* section.text.status = #additional
-* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+// ----------------------------------------------------------------------------
+// Sections nach MII Patho (Angleichung an HL7 EU Lab, Modul-Patho 2027):
+//   patho-diagnostic-report      60567-5  -> MII_PR_Patho_Report
+//   makroskopie                  22634-0  -> MII_PR_Patho_Macroscopic_Grouper
+//   diagnostische-schlussfolgerung 22637-3 -> MII_PR_Patho_Diagnostic_Conclusion_Grouper
+// Klinische Angaben, Material und Mikroskopie bleiben im Narrativ der
+// Berichts-Section: für sie existiert kein Grouper, jede Section braucht aber
+// eine entry-Referenz.
+// ----------------------------------------------------------------------------
+* section[+].title = "Pathologiebefundbericht"
+* section[=].code = $loinc#60567-5 "Comprehensive pathology report panel"
+* section[=].entry = Reference(LymphNodeReport)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <h3>Klinische Angaben</h3>
 <p>Invasives Mammakarzinom NST links, G2. Klinisch unauffällige Axilla (cN0). SLN-Biopsie indiziert. Keine neoadjuvante Therapie.</p>
 
 <h3>Material</h3>
 <p>Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert)</p>
 
-<h3>Makroskopie</h3>
+<h3>Mikroskopische Beurteilung</h3>
+<p>Nach Anfertigung von jeweils 5, im Abstand von 1 mm zueinander liegenden HE-gefärbten Schnittstufen der Lymphknotenhälften zeigt sich eine ausgeprägte Sinushistiozytose und mäßiggradige Follikelhyperplasie. Im Sentinellymphknoten A_1 findet sich in Schnittstufe 3 eine 1,2 mm große metastatische Absiedlung des bekannten Mammakarzinoms ohne Kapselbeziehung. Im Sentinellymphknoten A_2 sind alle Schnittstufen tumorfrei. Kein Anhalt für isolierte Tumorzellen (ITC).</p>
+</div>"
+
+* section[+].title = "Makroskopische Beurteilung"
+* section[=].code = $loinc#22634-0 "Pathology report gross observation Narrative"
+* section[=].entry = Reference(LymphNodeMacroscopicGrouper)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p>Zwei, 12 × 8 × 6 mm (A_1) bzw. 10 × 7 × 5 mm (A_2) durchmessende Sentinellymphknoten werden jeweils halbiert und separat eingebettet (je 1 Paraffinblock). Makroskopisch zeigen sich leicht fleckige rötlich-weiße Schnittflächen ohne Herdbefund.</p>
+</div>"
 
-<h3>Mikroskopie</h3>
-<p>Nach Anfertigung von jeweils 5, im Abstand von 1 mm zueinander liegenden HE-gefärbten Schnittstufen der Lymphknotenhälften zeigt sich eine ausgeprägte Sinushistiozytose und mäßiggradige Follikelhyperplasie. Im Sentinellymphknoten A_1 findet sich in Schnittstufe 3 eine 1,3 mm große metastatische Absiedlung des bekannten Mammakarzinoms ohne Kapselbeziehung. Im Sentinellymphknoten A_2 sind alle Schnittstufen tumorfrei. Kein Anhalt für isolierte Tumorzellen (ITC).</p>
-
-<h3>Diagnostische Schlussfolgerung</h3>
+* section[+].title = "Diagnostische Schlussfolgerung"
+* section[=].code = $loinc#22637-3 "Pathology report final diagnosis Narrative"
+* section[=].entry = Reference(LymphNodeDiagnosticConclusionGrouper)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>Prozedur</td><td>Sentinel-Lymphknoten-Biopsie</td></tr>
@@ -62,7 +81,7 @@ Description: "FHIR Composition for structured sentinel lymph node biopsy patholo
 </tbody>
 </table>
 
-<h4>pN-Staging</h4>
+<h3>pN-Staging</h3>
 <p><b>pN1mi(sn)</b> — Mikrometastase in Sentinel-Lymphknoten</p>
 
 <p><b>Kommentar:</b> In SLN #1 Nachweis einer Mikrometastase (1,2 mm) im Randsinus. SLN #2 tumorfrei in allen Schnittstufen. Keine extranodale Infiltration. Empfehlung: Besprechung in Tumorkonferenz bzgl. weiterer axillärer Therapie.</p>

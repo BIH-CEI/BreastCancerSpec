@@ -55,6 +55,9 @@ Description: "FHIR Document Bundle für den vollständigen Stanzbiopsie-Befundbe
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenPart"
 * entry[=].resource = CoreNeedleBiopsySpecimenPart
 
+* entry[+].fullUrl = "http://breastcancerspec.org/BodyStructure/CoreNeedleBiopsyBodyStructure"
+* entry[=].resource = CoreNeedleBiopsyBodyStructure
+
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/CoreNeedleBiopsySpecimenBlock01"
 * entry[=].resource = CoreNeedleBiopsySpecimenBlock01
 

@@ -99,6 +99,16 @@
       text-decoration: underline;
     }
 
+    /* Zwischenüberschriften innerhalb eines Abschnitts,
+       z.B. die Materialien A und B im integrierten Bericht */
+    .report-body h4,
+    .report-body .section-content h3 {
+      font-size: 10.5pt;
+      font-weight: bold;
+      margin: 12px 0 4px 0;
+      text-decoration: none;
+    }
+
     .report-body p {
       margin: 5px 0;
       text-align: justify;

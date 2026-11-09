@@ -7,7 +7,7 @@ InstanceOf: MII_PR_Patho_Macroscopic_Grouper
 Usage: #example
 Title: "Makroskopische Befunde Grouper SLN"
 Description: "Gruppierung aller makroskopischen Messungen des SLN-Exzisats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * code = $loinc#22634-0
@@ -29,7 +29,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anzahl untersuchter SLN"
 Description: "Anzahl untersuchter Sentinel-Lymphknoten: 2"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -38,7 +38,7 @@ Description: "Anzahl untersuchter Sentinel-Lymphknoten: 2"
 * specimen = Reference(LymphNodeSpecimenPart)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueQuantity = 2 '{nodes}' "nodes"
+* valueQuantity = 2 '{count}' "count"
 * derivedFrom = Reference(QuestionnaireResponseLymphNode)
 
 // --- Gesamtzahl untersuchter Lymphknoten ---
@@ -47,7 +47,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Gesamtzahl untersuchter Lymphknoten"
 Description: "Gesamtzahl untersuchter Lymphknoten: 2"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -56,7 +56,7 @@ Description: "Gesamtzahl untersuchter Lymphknoten: 2"
 * specimen = Reference(LymphNodeSpecimenPart)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueQuantity = 2 '{nodes}' "nodes"
+* valueQuantity = 2 '{count}' "count"
 * derivedFrom = Reference(QuestionnaireResponseLymphNode)
 
 // --- SLN #1 Größe ---
@@ -65,7 +65,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "SLN #1 Größe"
 Description: "Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -75,7 +75,8 @@ Description: "Makroskopische Größe des Sentinel-Lymphknotens #1: 12 x 8 x 6 mm
 * specimen = Reference(LymphNodeSpecimenBlock01)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueString = "12 x 8 x 6 mm, Patentblau-markiert"
+* valueQuantity = 12 'mm' "mm"
+* note.text = "12 x 8 x 6 mm, Patentblau-markiert"
 * bodySite = $sct#68171009 "Axillary lymph node structure (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseLymphNode)
 
@@ -85,7 +86,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "SLN #2 Größe"
 Description: "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -95,6 +96,7 @@ Description: "Makroskopische Größe des Sentinel-Lymphknotens #2: 10 x 7 x 5 mm
 * specimen = Reference(LymphNodeSpecimenBlock02)
 * effectiveDateTime = "2025-02-06T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueString = "10 x 7 x 5 mm, Patentblau-markiert"
+* valueQuantity = 10 'mm' "mm"
+* note.text = "10 x 7 x 5 mm, Patentblau-markiert"
 * bodySite = $sct#68171009 "Axillary lymph node structure (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseLymphNode)

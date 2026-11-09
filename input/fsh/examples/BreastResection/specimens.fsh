@@ -6,9 +6,9 @@ Instance: BreastResectionSpecimenPart
 InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "BET-Exzisionspräparat (Einsendespecimen)"
-Description: "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 42x35x18mm, 10g"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+Description: "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, Fadenmarkierungen anterior/distal, 42x35x18mm, 10g"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier[+]
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#PLAC
   * system = "https://senologie.example-hospital.de/fhir/specimen/placer"
@@ -27,20 +27,36 @@ Description: "BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen, 42x35
 * subject = Reference(Patient4)
 * request = Reference(BreastResectionReportRequest)
 
+// Präparatmarkierungen als R5-Cross-Version-Extension Specimen.feature (MII Patho 2027.0.0-ballot)
+* extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature"
+* extension[0].extension[0].url = "type"
+* extension[0].extension[0].valueCodeableConcept = $sct#735083009 "Part of left breast (body structure)"
+* extension[0].extension[1].url = "description"
+* extension[0].extension[1].valueString = "Präoperative radiologische Drahtmarkierung der Biopsiestelle"
+* extension[1].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature"
+* extension[1].extension[0].url = "type"
+* extension[1].extension[0].valueCodeableConcept = $sct#3680001000004109 "Anterior surgical margin (morphologic abnormality)"
+* extension[1].extension[1].url = "description"
+* extension[1].extension[1].valueString = "Fadenmarkierung lang anterior"
+* extension[2].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature"
+* extension[2].extension[0].url = "type"
+* extension[2].extension[0].valueCodeableConcept = $sct#880001000004108 "Distal surgical margin (morphologic abnormality)"
+* extension[2].extension[1].url = "description"
+* extension[2].extension[1].valueString = "Fadenmarkierung 2x kurz distal"
+
 * collection
   * collector = Reference(BreastSurgeonPractitioner)
   * collectedDateTime = "2025-02-05T10:00:00+01:00"
   * bodySite = $sct#33564002 "Structure of lower outer quadrant of breast (body structure)"
-  // Seitenlokalisation als mCODE-lateralityQualifier (Issue #48); Quadrant steckt bereits im bodySite.code
-  * bodySite.extension[lateralityQualifier].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality-qualifier"
-  * bodySite.extension[lateralityQualifier].valueCodeableConcept = $sct#7771000 "Left (qualifier value)"
+  // Detaillierte Lokalisation (Seite, 5 Uhr, Mamillenabstand) in der BodyStructure (MII Patho 2027, #259; Issue #42)
+  * bodySite.extension[bodyStructure].valueReference = Reference(BreastResectionBodyStructure)
   * method = $sct#237371007 "Wide local excision of breast lesion (procedure)"
 
 * container
   * type = $sct#434746001 "Specimen vial (physical object)"
   * additiveCodeableConcept = $sct#434162003 "Neutral buffered formalin (substance)"
 
-* note.text = "BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ."
+* note.text = "BET-Exzisionspräparat Mamma links, unterer äußerer Quadrant, 5 Uhr, 50 mm von Mamille. Mit Haut, Drahthäkchen in situ, Fadenmarkierung lang anterior, 2x kurz distal."
 
 // =============================================================================
 // BET - PARAFFINBLOCK 01 (Tumor zentral, Scheibe III, inkl. RR anterior/posterior)
@@ -51,8 +67,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 01 BET - Tumor zentral (Scheibe III)"
 Description: "Paraffineinbettung des zentralen Tumorareals, Scheibe III, inkl. RR anterior/posterior"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1"
@@ -86,8 +102,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 02 BET - Tumor zentral (Scheibe V)"
 Description: "Paraffineinbettung des zentralen Tumorareals, Scheibe V, inkl. RR anterior/posterior"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_2"
@@ -121,8 +137,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 03 BET - RR superior"
 Description: "Paraffineinbettung Resektionsrand superior"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_3"
@@ -156,8 +172,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 04 BET - RR inferior"
 Description: "Paraffineinbettung Resektionsrand inferior"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_4"
@@ -191,8 +207,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 05 BET - RR medial (Scheibe I)"
 Description: "Paraffineinbettung Resektionsrand medial, Scheibe I"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_5"
@@ -226,8 +242,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 06 BET - RR lateral (Scheibe VIII)"
 Description: "Paraffineinbettung Resektionsrand lateral, Scheibe VIII"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_6"
@@ -261,8 +277,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 07 BET - RR posterior"
 Description: "Paraffineinbettung Resektionsrand posterior"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_7"
@@ -296,8 +312,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 01 BET - Tumor (Block01)"
 Description: "HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 1"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1_1_HE_01"
@@ -338,8 +354,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 02 BET - Tumor (Block01)"
 Description: "HE-gefärbter Schnitt des Tumorareals, Scheibe III, Schnittstufe 2"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1_1_HE_02"
@@ -380,8 +396,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "ER-IHC Schnitt BET (Block01)"
 Description: "Schnitt für Östrogenrezeptor-Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1_1_ER_01"
@@ -423,8 +439,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "PR-IHC Schnitt BET (Block01)"
 Description: "Schnitt für Progesteronrezeptor-Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1_1_PR_01"
@@ -466,8 +482,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HER2-IHC Schnitt BET (Block01)"
 Description: "Schnitt für HER2-Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1_1_HER2IHC_01"
@@ -509,8 +525,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Ki67-IHC Schnitt BET (Block01)"
 Description: "Schnitt für Ki-67 Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1_1_Ki67_01"
@@ -552,8 +568,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "CK18-IHC Schnitt BET (Block01)"
 Description: "Schnitt für Zytokeratin 18 Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1_1_CK18_01"
@@ -595,8 +611,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "p40-IHC Schnitt BET (Block01)"
 Description: "Schnitt für p40 Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1_1_p40_01"
@@ -638,8 +654,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "E-Cadherin-IHC Schnitt BET (Block01)"
 Description: "Schnitt für E-Cadherin Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_1_1_ECad_01"
@@ -681,8 +697,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 01 BET - Tumor (Block02)"
 Description: "HE-gefärbter Schnitt des Tumorareals, Scheibe V, Schnittstufe 1"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_2_1_HE_01"
@@ -719,8 +735,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 02 BET - Tumor (Block02)"
 Description: "HE-gefärbter Schnitt des Tumorareals, Scheibe V, Schnittstufe 2"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_2_1_HE_02"
@@ -761,8 +777,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt BET - RR superior (Block03)"
 Description: "HE-gefärbter Schnitt Resektionsrand superior"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_3_1_HE_01"
@@ -803,8 +819,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt BET - RR inferior (Block04)"
 Description: "HE-gefärbter Schnitt Resektionsrand inferior"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_4_1_HE_01"
@@ -845,8 +861,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt BET - RR medial (Block05)"
 Description: "HE-gefärbter Schnitt Resektionsrand medial, Scheibe I"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_5_1_HE_01"
@@ -887,8 +903,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt BET - RR lateral (Block06)"
 Description: "HE-gefärbter Schnitt Resektionsrand lateral, Scheibe VIII"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_6_1_HE_01"
@@ -929,8 +945,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt BET - RR posterior (Block07)"
 Description: "HE-gefärbter Schnitt Resektionsrand posterior"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_210_A_7_1_HE_01"

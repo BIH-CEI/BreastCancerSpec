@@ -7,7 +7,7 @@ InstanceOf: MII_PR_Patho_Diagnostic_Conclusion_Grouper
 Usage: #example
 Title: "Diagnostic Conclusion Grouper - Stanzbiopsie"
 Description: "Grouper for all diagnostic conclusion findings in core needle biopsy"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * code = $loinc#22637-3
@@ -40,7 +40,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Histological Type ICD-O-3 - Stanzbiopsie"
 Description: "Histological type according to ICD-O-3 classification"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -60,7 +60,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Morphology Free Text - Stanzbiopsie"
 Description: "Free text description of tumor morphology"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -79,11 +79,12 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Nottingham Grade - Stanzbiopsie"
 Description: "Nottingham histologic grade derived from summary score"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+* code.coding[0] = $loinc#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+* code.coding[+] = $sct#372276001 "Nottingham combined grade of primary malignant neoplasm of breast (observable entity)"
 * code.text = "Histologischer Tumorgrad (Elston-Ellis-Grad)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideHE01)
@@ -101,7 +102,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Nottingham Summenscore - Stanzbiopsie"
 Description: "Elston-Ellis summary score (3+2+1=6) with sub-scores as components"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -130,7 +131,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Estrogen Receptor Status - Stanzbiopsie"
 Description: "Estrogen receptor status by immunohistochemistry"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -162,7 +163,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Progesterone Receptor Status - Stanzbiopsie"
 Description: "Progesterone receptor status by immunohistochemistry"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -196,11 +197,11 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "HER2 Gesamtstatus - Stanzbiopsie"
 Description: "HER2-Gesamtstatus basierend auf IHC und ISH"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#48676-1 "HER2 [Interpretation] in Tissue"
+* code = $loinc#48676-1 "HER2 Ag [Interpretation] in Tissue"
 * code.text = "Her2neuStatus"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideHER2-01)
@@ -212,7 +213,7 @@ Description: "HER2-Gesamtstatus basierend auf IHC und ISH"
 * component[+].code = $loinc#48018-6 "Gene studied [ID]"
 * component[=].valueCodeableConcept = $hgnc#HGNC:3430 "ERBB2"
 // Issue #44: HER2-Score, PP HER2 und Amplifikation als Components des HER2-Gesamtstatus (ART-DECOR/Haroske)
-* component[+].code = $loinc#85319-2 "HER2 [Presence] in Breast cancer specimen by Immune stain"
+* component[+].code = $loinc#85319-2 "HER2 Ag [Presence] in Breast cancer specimen by Immune stain"
 * component[=].valueCodeableConcept = $loinc#LA11841-6 "1+"
 * component[+].code = $loinc#85328-3 "Cells.HER2 uniform intense membrane staining/cells in Breast cancer specimen by Immune stain"
 * component[=].valueQuantity = 0 '%' "%"
@@ -226,11 +227,12 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Ki-67 Index - Stanzbiopsie"
 Description: "Ki-67 proliferation index"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
 * code.coding[0] = $loinc#85330-9 "Cells.Ki-67 nuclear Ag/cells in Breast cancer specimen by Immune stain"
+* code.coding[+] = $sct#1237281001 "Percent of cell nuclei positive for proliferation marker protein Ki-67 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
 * code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenSlideKi67-01)
@@ -251,7 +253,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Core Needle Biopsy Interpretation - Stanzbiopsie"
 Description: "Core Needle Biopsy Interpretation according to NHSBSP"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -272,7 +274,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Relevante Mikroverkalkungen - Stanzbiopsie"
 Description: "Presence of relevant microcalcifications"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -292,7 +294,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Präparateradiogramm - Stanzbiopsie"
 Description: "Specimen radiography reviewed"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -313,7 +315,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Mikroverkalkung-Korrelation - Stanzbiopsie"
 Description: "Correlation of microcalcifications with radiological findings"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3

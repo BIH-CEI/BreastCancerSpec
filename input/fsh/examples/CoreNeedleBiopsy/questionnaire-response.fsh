@@ -91,7 +91,7 @@ Description: "QuestionnaireResponse für Stanzbiopsie Mamma mit allen Befunden"
     * item[+]
       * linkId = "cnb.histology.icdo3"
       * text = "Histologischer Typ ICD-O-3"
-      * answer.valueCoding = $ICDO-3#8500/3 "Invasives duktales Karzinom (NST)"
+      * answer.valueCoding = $ICDO-3#8500/3 "Invasives duktales Karzinom o.n.A."
 
   * item[+]
     * linkId = "cnb.grading"

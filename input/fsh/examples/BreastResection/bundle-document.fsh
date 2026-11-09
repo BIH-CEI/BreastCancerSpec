@@ -74,6 +74,9 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenPart"
 * entry[=].resource = BreastResectionSpecimenPart
 
+* entry[+].fullUrl = "http://breastcancerspec.org/BodyStructure/BreastResectionBodyStructure"
+* entry[=].resource = BreastResectionBodyStructure
+
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/BreastResectionSpecimenBlock01"
 * entry[=].resource = BreastResectionSpecimenBlock01
 
@@ -183,12 +186,6 @@ Description: "FHIR Document Bundle für den vollständigen BET-Befundbericht"
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroWeight"
 * entry[=].resource = BreastResectionMacroWeight
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroClock"
-* entry[=].resource = BreastResectionMacroClock
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroDistanceNipple"
-* entry[=].resource = BreastResectionMacroDistanceNipple
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/BreastResectionMacroBlockCount"
 * entry[=].resource = BreastResectionMacroBlockCount

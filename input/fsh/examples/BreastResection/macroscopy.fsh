@@ -7,7 +7,7 @@ InstanceOf: MII_PR_Patho_Macroscopic_Grouper
 Usage: #example
 Title: "Makroskopische Befunde Grouper BET"
 Description: "Gruppierung aller makroskopischen Messungen des BET-Exzisionspräparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * code = $loinc#22634-0
@@ -21,8 +21,6 @@ Description: "Gruppierung aller makroskopischen Messungen des BET-Exzisionspräp
 * hasMember[+] = Reference(BreastResectionMacroWidth)
 * hasMember[+] = Reference(BreastResectionMacroDepth)
 * hasMember[+] = Reference(BreastResectionMacroWeight)
-* hasMember[+] = Reference(BreastResectionMacroClock)
-* hasMember[+] = Reference(BreastResectionMacroDistanceNipple)
 * hasMember[+] = Reference(BreastResectionMacroBlockCount)
 
 
@@ -32,7 +30,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Probengröße 1 (Länge) BET"
 Description: "Maximale Länge des BET-Exzisionspräparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -52,7 +50,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Probengröße 2 (Breite) BET"
 Description: "Breite des BET-Exzisionspräparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -72,7 +70,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Probengröße 3 (Tiefe) BET"
 Description: "Tiefe des BET-Exzisionspräparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -92,7 +90,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Gewicht BET"
 Description: "Gewicht des BET-Exzisionspräparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
@@ -106,54 +104,17 @@ Description: "Gewicht des BET-Exzisionspräparats"
 * bodySite = $sct#76752008 "Breast structure (body structure)"
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
-// Quadrant (linkId 10030): jetzt in Specimen.collection.bodySite.code (33564002) abgebildet,
-// daher keine eigene Observation mehr (Issue #48).
+// Quadrant (linkId 10030), Zifferblatt (linkId 10040) und Abstand Mamille (linkId 10070):
+// in der BodyStructure BreastResectionBodyStructure abgebildet (referenziert aus
+// Specimen.collection.bodySite), daher keine eigenen Observations mehr (Issues #42/#48).
 
-// --- Zifferblatt (linkId 10040) ---
-Instance: BreastResectionMacroClock
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Zifferblattlokalisation BET"
-Description: "Uhrzeigerlokalisation des Tumors"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22634-0
-* code.coding[0] = $loinc#85332-5 "Radial position in breast [Angle] in Breast cancer specimen"
-* code.coding[+] = $sct#3980001000004105 "Radial location of primary malignant neoplasm in excised breast specimen (observable entity)"
-* code.text = "Zifferblattlokalisation"
-* subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenPart)
-* effectiveDateTime = "2025-02-06T08:30:00+01:00"
-* performer = Reference(PathologistPractitioner)
-* valueQuantity = 5 '{clock position}' "o'clock"
-* derivedFrom = Reference(QuestionnaireResponseBreastResection)
-
-// --- Abstand Mamille (linkId 10070) ---
-Instance: BreastResectionMacroDistanceNipple
-InstanceOf: $mii-patho-finding
-Usage: #example
-Title: "Abstand von Mamille BET"
-Description: "Abstand des Tumors von der Mamille"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
-* status = #final
-* category[laboratory-category] = $observation-category#laboratory
-* category[section-type] = $loinc#22634-0
-* code = $sct#1240401000 "Distance of primary malignant neoplasm of breast to nipple in excised breast specimen (observable entity)"
-* code.text = "Abstand von der Mamille"
-* subject = Reference(Patient4)
-* specimen = Reference(BreastResectionSpecimenPart)
-* effectiveDateTime = "2025-02-06T08:30:00+01:00"
-* performer = Reference(PathologistPractitioner)
-* valueQuantity = 50 'mm' "mm"
-* derivedFrom = Reference(QuestionnaireResponseBreastResection)
 // --- Anzahl Paraffinblöcke ---
 Instance: BreastResectionMacroBlockCount
 InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anzahl Paraffinblöcke BET"
 Description: "Anzahl der angefertigten Paraffinblöcke"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0

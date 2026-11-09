@@ -9,7 +9,7 @@ InstanceOf: $mii-biobank-substance
 Usage: #example
 Title: "ER-IHC Reagenz Stanzbiopsie"
 Description: "Östrogenrezeptor-Antikörper für Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2027.0.0-ballot"
 * status = #active
 * category = http://terminology.hl7.org/CodeSystem/substance-category#chemical "Chemical"
 * code = $sct#45389009 "Tissue stain (substance)"
@@ -24,7 +24,7 @@ InstanceOf: $mii-biobank-substance
 Usage: #example
 Title: "PR-IHC Reagenz Stanzbiopsie"
 Description: "Progesteronrezeptor-Antikörper für Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2027.0.0-ballot"
 * status = #active
 * category = http://terminology.hl7.org/CodeSystem/substance-category#chemical "Chemical"
 * code = $sct#45389009 "Tissue stain (substance)"
@@ -39,7 +39,7 @@ InstanceOf: $mii-biobank-substance
 Usage: #example
 Title: "HER2-B-DISH Reagenz Stanzbiopsie"
 Description: "HER2 Dual ISH Sonden-Kit"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2027.0.0-ballot"
 * status = #active
 * category = http://terminology.hl7.org/CodeSystem/substance-category#chemical "Chemical"
 * code = $sct#45389009 "Tissue stain (substance)"
@@ -54,7 +54,7 @@ InstanceOf: $mii-biobank-substance
 Usage: #example
 Title: "HER2-IHC Reagenz Stanzbiopsie"
 Description: "HER2-Antikörper für Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2027.0.0-ballot"
 * status = #active
 * category = http://terminology.hl7.org/CodeSystem/substance-category#chemical "Chemical"
 * code = $sct#45389009 "Tissue stain (substance)"
@@ -69,7 +69,7 @@ InstanceOf: $mii-biobank-substance
 Usage: #example
 Title: "Ki-67-IHC Reagenz Stanzbiopsie"
 Description: "Ki-67-Antikörper für Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2027.0.0-ballot"
 * status = #active
 * category = http://terminology.hl7.org/CodeSystem/substance-category#chemical "Chemical"
 * code = $sct#45389009 "Tissue stain (substance)"

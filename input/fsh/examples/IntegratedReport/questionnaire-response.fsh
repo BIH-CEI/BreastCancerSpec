@@ -143,7 +143,7 @@ Description: "QuestionnaireResponse für BET Mamma im integrierten Bericht"
     * item[+]
       * linkId = "11280"
       * text = "Histologischer Tumortyp"
-      * answer.valueCoding = $ICDO-3#8500/3 "Invasives duktales Karzinom (NST)"
+      * answer.valueCoding = $ICDO-3#8500/3 "Invasives duktales Karzinom o.n.A."
     * item[+]
       * linkId = "11290"
       * text = "Morphologie Freitext"
@@ -187,7 +187,7 @@ Description: "QuestionnaireResponse für BET Mamma im integrierten Bericht"
     * item[+]
       * linkId = "151"
       * text = "DCIS Nekrosen"
-      * answer.valueString = "Fokal (Komedo-Nekrosen)"
+      * answer.valueString = "Zentral (Komedo-Nekrosen)"
     * item[+]
       * linkId = "11926"
       * text = "Tumorausdehnung"

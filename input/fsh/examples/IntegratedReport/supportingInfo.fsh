@@ -59,7 +59,7 @@ Usage: #example
 Title: "Befundmarkierung (integriert)"
 Description: "Art der Befundmarkierung am Präparat"
 * status = #final
-* code = $sct#836381000000102 "Insertion of marker into breast using X-ray guidance (procedure)"
+* code = $sct#836381000000102 "Insertion of marker into breast using plain X-ray guidance (procedure)"
 * code.text = "Befundmarkierung"
 * subject = Reference(Patient4)
 * valueCodeableConcept.text = "Drahthäkchen"

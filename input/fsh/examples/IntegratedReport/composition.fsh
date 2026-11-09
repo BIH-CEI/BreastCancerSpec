@@ -26,19 +26,43 @@ Description: "FHIR Composition für den integrierten Befundbericht BET Mamma lin
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActCode#PATREPE
 * event.detail = Reference(IntegratedReportRequest)
 
-* section.title = "Pathologiebefundbericht"
-* section.code = $loinc#11526-1 "Pathology study"
-* section.entry = Reference(IntegratedReport)
-* section.text.status = #additional
-* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+// ----------------------------------------------------------------------------
+// Sections nach MII Patho (Angleichung an HL7 EU Lab, Modul-Patho 2027):
+//   patho-diagnostic-report      60567-5  -> MII_PR_Patho_Report
+//   makroskopie                  22634-0  -> MII_PR_Patho_Macroscopic_Grouper
+//   intraoperativ                83321-0  -> MII_PR_Patho_Intraoperative_Grouper
+//   diagnostische-schlussfolgerung 22637-3 -> MII_PR_Patho_Diagnostic_Conclusion_Grouper
+//
+// Der integrierte Bericht umfasst zwei Eingangspräparate (A = BET, B = SLN).
+// MII sieht dafür genau einen Grouper je Abschnitt vor; die Zuordnung der
+// Einzelbefunde zu den Präparaten erfolgt über Observation.specimen (Part).
+// Im Narrativ werden A und B als Zwischenüberschriften geführt.
+// ----------------------------------------------------------------------------
+* section[+].title = "Pathologiebefundbericht"
+* section[=].code = $loinc#60567-5 "Comprehensive pathology report panel"
+* section[=].entry = Reference(IntegratedReport)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <h3>Klinische Angaben</h3>
-<p>Z.n. Stanzbiopsie (E_25_105) mit Nachweis eines invasiven Mammakarzinoms NST, G2. BI-RADS 4b. BET links mit SLN-Biopsie Axilla indiziert. Drahthäkchenmarkierung. Keine neoadjuvante Therapie. Ersterkrankung. Keine bekannte genetische Prädisposition. Präparateradiographie beigelegt. Axilla klinisch unauffällig (cN0).</p>
+<p>Z.n. Stanzbiopsie (E_25_105) mit Nachweis eines invasiven Mammakarzinoms NST, G2. Axilla klinisch unauffällig (cN0). BET links mit SLN-Biopsie Axilla indiziert. Drahthäkchenmarkierung des Tumors. Keine neoadjuvante Therapie. Ersterkrankung. Keine bekannte genetische Prädisposition. Präparateradiographie beigelegt.</p>
 
 <h3>Material</h3>
-<p><b>A) BET-Exzisionspräparat:</b> Mamma links, mit Haut, Drahthäkchen in situ</p>
+<p><b>A) BET-Exzisionspräparat:</b> Mamma links, mit Haut, Drahthäkchen in situ, Fadenmarkierung lang anterior, 2x kurz distal</p>
 <p><b>B) SLN-Exzisat:</b> Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert (Patentblau-markiert)</p>
 
-<h3>Makroskopie Mamma</h3>
+<h3>Mikroskopische Beurteilung</h3>
+<h4>A) BET-Exzisionspräparat</h4>
+<p>Invasives Mammakarzinom des NST (kein spezieller Typ), maximal 18 mm messend. Das Karzinom zeigt ein überwiegend trabekuläres und solides Wachstumsmuster mit mäßiger Kern- und Zellpolymorphie. Mitosen sind vereinzelt nachweisbar (4/10 HPF). In der Tumorperipherie zeigt sich ein begleitendes duktales Carcinoma in situ (DCIS) mit intermediärem Kerngrad und überwiegend kribriformem Wachstumsmuster, maximal 8 mm. Zentrale Komedo-Nekrosen. Assoziierte Mikroverkalkungen im DCIS-Areal. Alle Resektionsränder tumorfrei. Mindestabstand invasiv: 5 mm (posterior), DCIS: 3 mm. Keine Lymphgefäßinvasion.</p>
+<h4>B) SLN-Exzisat</h4>
+<p>SLN #1: Im Randsinus Nachweis einer Mikrometastase, maximal 1,2 mm messend. Keine Kapseldurchbrechung. SLN #2: In allen Schnittstufen tumorfrei. Kein Anhalt für isolierte Tumorzellen (ITC).</p>
+</div>"
+
+* section[+].title = "Makroskopische Beurteilung"
+* section[=].code = $loinc#22634-0 "Pathology report gross observation Narrative"
+* section[=].entry = Reference(IntegratedMacroscopicGrouper)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<h3>A) BET-Exzisionspräparat</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>Größe</td><td>42 × 35 × 18 mm</td></tr>
@@ -51,8 +75,7 @@ Description: "FHIR Composition für den integrierten Befundbericht BET Mamma lin
 <tr><td>Paraffinblöcke</td><td>6</td></tr>
 </tbody>
 </table>
-
-<h3>Makroskopie Axilla</h3>
+<h3>B) SLN-Exzisat</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>SLN #1</td><td>12 × 8 × 6 mm, Patentblau-markiert, halbiert</td></tr>
@@ -60,18 +83,23 @@ Description: "FHIR Composition für den integrierten Befundbericht BET Mamma lin
 <tr><td>Einbettung</td><td>Beide SLN vollständig eingebettet, je 1 Paraffinblock</td></tr>
 </tbody>
 </table>
+</div>"
 
-<h3>Schnellschnitt</h3>
+* section[+].title = "Intraoperative Beurteilung"
+* section[=].code = $loinc#83321-0 "Pathology report intraoperative observation in Specimen Document"
+* section[=].entry = Reference(IntegratedIntraoperativeGrouper)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<h3>B) SLN-Exzisat</h3>
 <p>SLN #1: Tumorfrei im Schnellschnitt. SLN #2: Tumorfrei im Schnellschnitt. → Keine Axilladissektion.</p>
 <p><i>Hinweis: Mikrometastase in SLN #1 erst in den Paraffinschnittstufen nachgewiesen.</i></p>
+</div>"
 
-<h3>Mikroskopie Mamma</h3>
-<p>Invasives Mammakarzinom des NST (kein spezieller Typ), maximal 18 mm messend. Das Karzinom zeigt ein überwiegend trabekuläres und solides Wachstumsmuster mit mäßiger Kern- und Zellpolymorphie. Mitosen sind vereinzelt nachweisbar (4/10 HPF). In der Tumorperipherie zeigt sich ein begleitendes duktales Carcinoma in situ (DCIS) mit intermediärem Kerngrad und überwiegend kribriformem Wachstumsmuster, maximal 8 mm. Fokale Komedo-Nekrosen. Assoziierte Mikroverkalkungen im DCIS-Areal. Alle Resektionsränder tumorfrei. Mindestabstand invasiv: 5 mm (posterior), DCIS: 3 mm. Keine Lymphgefäßinvasion.</p>
-
-<h3>Mikroskopie Axilla</h3>
-<p>SLN #1: Im Randsinus Nachweis einer Mikrometastase, maximal 1,2 mm messend. Keine Kapseldurchbrechung. SLN #2: In allen Schnittstufen tumorfrei. Kein Anhalt für isolierte Tumorzellen (ITC).</p>
-
-<h3>Diagnostische Schlussfolgerung</h3>
+* section[+].title = "Diagnostische Schlussfolgerung"
+* section[=].code = $loinc#22637-3 "Pathology report final diagnosis Narrative"
+* section[=].entry = Reference(IntegratedDiagnosticConclusionGrouper)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <p><b>Diagnose:</b> Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c pN1mi(sn)</p>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
@@ -83,12 +111,12 @@ Description: "FHIR Composition für den integrierten Befundbericht BET Mamma lin
 <tr><td>Max. Durchmesser invasiv</td><td>18 mm</td></tr>
 <tr><td>Max. Gesamtdurchmesser</td><td>22 mm</td></tr>
 <tr><td>Nottingham-Grad</td><td>Grad 2 (Score 6: Tubuli 3, Pleomorphie 2, Mitosen 1)</td></tr>
-<tr><td>Assoziiertes DCIS</td><td>Vorhanden, intermediärer Kerngrad, kribriform, fokale Komedo-Nekrosen</td></tr>
+<tr><td>Assoziiertes DCIS</td><td>Vorhanden, ohne extensive intraduktale Komponente (EIC), intermediärer Kerngrad, kribriform, zentrale Komedo-Nekrosen</td></tr>
 <tr><td>Tumorausdehnung</td><td>Auf Brustdrüse beschränkt</td></tr>
 </tbody>
 </table>
 
-<h4>Resektionsränder</h4>
+<h3>Resektionsränder</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>RR-Status invasiv</td><td>Nicht befallen (R0)</td></tr>
@@ -99,7 +127,7 @@ Description: "FHIR Composition für den integrierten Befundbericht BET Mamma lin
 </tbody>
 </table>
 
-<h4>Axilläre Lymphknoten</h4>
+<h3>Axilläre Lymphknoten</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>Prozedur</td><td>Sentinel-Lymphknoten-Biopsie</td></tr>
@@ -117,7 +145,7 @@ Description: "FHIR Composition für den integrierten Befundbericht BET Mamma lin
 </tbody>
 </table>
 
-<h4>Biomarker</h4>
+<h3>Biomarker</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>ER</td><td>Positiv (90%, stark)</td></tr>
@@ -129,7 +157,7 @@ Description: "FHIR Composition für den integrierten Befundbericht BET Mamma lin
 </tbody>
 </table>
 
-<h4>Weitere Befunde</h4>
+<h3>Weitere Befunde</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>Lymphgefäßinvasion</td><td>Nicht nachgewiesen</td></tr>
@@ -137,7 +165,7 @@ Description: "FHIR Composition für den integrierten Befundbericht BET Mamma lin
 </tbody>
 </table>
 
-<h4>TNM-Staging</h4>
+<h3>TNM-Staging</h3>
 <p><b>pT1c pN1mi(sn)</b></p>
 
 <p><b>Kommentar:</b> Korrelation mit dem Vorbefund der Stanzbiopsie (E_25_105): Übereinstimmende Histologie (invasives Mammakarzinom NST, G2). Biomarkerprofil bestätigt: ER+, PR+, HER2-, Luminal-A-like. SLN #1 mit Mikrometastase (1,2 mm), erst in Paraffinschnittstufen nachgewiesen (Schnellschnitt war tumorfrei). Keine extranodale Infiltration. Empfehlung: Tumorkonferenz zur weiteren Therapieplanung.</p>

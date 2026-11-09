@@ -74,6 +74,9 @@ Description: "FHIR Document Bundle für den integrierten Befundbericht BET Mamma
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/IntegratedBETSpecimenPart"
 * entry[=].resource = IntegratedBETSpecimenPart
 
+* entry[+].fullUrl = "http://breastcancerspec.org/BodyStructure/IntegratedBETBodyStructure"
+* entry[=].resource = IntegratedBETBodyStructure
+
 * entry[+].fullUrl = "http://breastcancerspec.org/Specimen/IntegratedBETSpecimenBlock01"
 * entry[=].resource = IntegratedBETSpecimenBlock01
 
@@ -184,6 +187,16 @@ Description: "FHIR Document Bundle für den integrierten Befundbericht BET Mamma
 * entry[+].fullUrl = "http://breastcancerspec.org/Substance/IntegratedSubstanceECadherin"
 * entry[=].resource = IntegratedSubstanceECadherin
 
+// --- Intraoperative Observations (Schnellschnitt) ---
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedIntraoperativeGrouper"
+* entry[=].resource = IntegratedIntraoperativeGrouper
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedIntraoperativeSLN1"
+* entry[=].resource = IntegratedIntraoperativeSLN1
+
+* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedIntraoperativeSLN2"
+* entry[=].resource = IntegratedIntraoperativeSLN2
+
 // --- Macroscopy Observations ---
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMacroscopicGrouper"
 * entry[=].resource = IntegratedMacroscopicGrouper
@@ -199,12 +212,6 @@ Description: "FHIR Document Bundle für den integrierten Befundbericht BET Mamma
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMacroWeight"
 * entry[=].resource = IntegratedMacroWeight
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMacroClock"
-* entry[=].resource = IntegratedMacroClock
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMacroDistanceNipple"
-* entry[=].resource = IntegratedMacroDistanceNipple
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMacroBlockCount"
 * entry[=].resource = IntegratedMacroBlockCount
@@ -251,17 +258,8 @@ Description: "FHIR Document Bundle für den integrierten Befundbericht BET Mamma
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedNottinghamGrade"
 * entry[=].resource = IntegratedNottinghamGrade
 
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedTubuleScore"
-* entry[=].resource = IntegratedTubuleScore
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedNuclearPleomorphism"
-* entry[=].resource = IntegratedNuclearPleomorphism
-
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMitosisCount"
 * entry[=].resource = IntegratedMitosisCount
-
-* entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedMitoticRateScore"
-* entry[=].resource = IntegratedMitoticRateScore
 
 * entry[+].fullUrl = "http://breastcancerspec.org/Observation/IntegratedElstonEllisScore"
 * entry[=].resource = IntegratedElstonEllisScore

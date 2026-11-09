@@ -66,13 +66,13 @@ Specimens follow a three-level parent chain: **Part** (received tissue) → **Bl
 ### Key FSH Conventions
 
 - All instances conform to MII Pathology module profiles (defined as aliases in `aliases.fsh`)
-- The `MetaProfile` ruleset in `rulesets.fsh` adds versioned profile metadata (`|2026.0.0`)
+- The `MetaProfile` ruleset in `rulesets.fsh` adds versioned profile metadata (`|2027.0.0-ballot`)
 - Terminology: LOINC (observation codes), SNOMED CT (clinical findings), ICD-10-GM (German diagnoses), ICD-O-3 (morphology), UCUM (units)
 - Descriptions and clinical text are in German; titles and FSH identifiers are in English
 
 ### FHIR Dependencies (sushi-config.yaml)
 
-All four MII Kerndatensatz modules at version 2026.0.0: patho, onko, base, biobank. These are auto-resolved by IG Publisher during full build.
+MII Kerndatensatz modules on the 2027 ballot: patho, base, biobank `2027.0.0-ballot`, onkologie `2027.0.0-ballot.1`, plus `hl7.fhir.uv.xver-r5.r4: 0.1.0` (R5 BodyStructure backport). Migration notes and current QA status: `docs/mii-patho-2027-migration.md`. These are auto-resolved by IG Publisher during full build.
 
 ### Documentation Pages
 

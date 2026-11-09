@@ -7,8 +7,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "SLN-Exzisat (Einsendespecimen)"
 Description: "Sentinel-Lymphknoten-Exzisat linke Axilla, 2 SLN identifiziert, Patentblau-markiert"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier[+]
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#PLAC
   * system = "https://senologie.example-hospital.de/fhir/specimen/placer"
@@ -48,8 +48,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 01 SLN #1"
 Description: "Paraffineinbettung SLN #1, halbiert, enthält Mikrometastase"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_1"
@@ -83,8 +83,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "Paraffinblock 02 SLN #2"
 Description: "Paraffineinbettung SLN #2, halbiert, tumorfrei"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_2"
@@ -118,8 +118,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 01 SLN #1 (Schnittstufe 1)"
 Description: "HE-gefärbter Schnitt des SLN #1, Schnittstufe 1"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_1_1_HE_01"
@@ -160,8 +160,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 02 SLN #1 (Schnittstufe 2)"
 Description: "HE-gefärbter Schnitt des SLN #1, Schnittstufe 2"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_1_1_HE_02"
@@ -202,8 +202,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 03 SLN #1 (Schnittstufe 3)"
 Description: "HE-gefärbter Schnitt des SLN #1, Schnittstufe 3 — Mikrometastase nachweisbar"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_1_1_HE_03"
@@ -244,8 +244,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 04 SLN #1 (Schnittstufe 4)"
 Description: "HE-gefärbter Schnitt des SLN #1, Schnittstufe 4"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_1_1_HE_04"
@@ -286,8 +286,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 08 SLN #2 (Schnittstufe 3)"
 Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 3"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_2_1_HE_03"
@@ -328,8 +328,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 09 SLN #2 (Schnittstufe 4)"
 Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 4"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_2_1_HE_04"
@@ -370,8 +370,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 10 SLN #2 (Schnittstufe 5)"
 Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 5"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_2_1_HE_05"
@@ -411,8 +411,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 05 SLN #1 (Schnittstufe 5)"
 Description: "HE-gefärbter Schnitt des SLN #1, Schnittstufe 5"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_1_1_HE_05"
@@ -453,8 +453,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 06 SLN #2 (Schnittstufe 1)"
 Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 1"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_2_1_HE_01"
@@ -495,8 +495,8 @@ InstanceOf: $mii-patho-specimen
 Usage: #example
 Title: "HE-Schnitt 07 SLN #2 (Schnittstufe 2)"
 Description: "HE-gefärbter Schnitt des SLN #2, Schnittstufe 2"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2026.0.0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-specimen|2027.0.0-ballot"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot"
 * identifier
   * system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
   * value = "E_25_211_A_2_1_HE_02"

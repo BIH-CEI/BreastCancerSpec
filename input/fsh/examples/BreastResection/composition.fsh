@@ -18,7 +18,9 @@ Description: "FHIR Composition for structured breast resection pathology report"
 * date = "2025-02-10T17:00:00+01:00"
 * author = Reference(PathologyLabOrganization)
 * author.display = "Institut für Pathologie"
-* title = "Pathologisch-Anatomische Begutachtung - Makroskopische Beurteilung (BET)"
+// Issue #50: "Makroskopische Beurteilung" gehört nicht in die Dokumentüberschrift.
+// Titelschema wie in den übrigen drei Szenarien.
+* title = "Histopathologischer Befundbericht - BET Mamma links"
 * encounter = Reference(BreastResectionEncounter)
 * attester.mode = #legal
 * attester.party = Reference(PathologyLabOrganization)
@@ -26,18 +28,35 @@ Description: "FHIR Composition for structured breast resection pathology report"
 * event.code = http://terminology.hl7.org/CodeSystem/v3-ActCode#PATREPE
 * event.detail = Reference(BreastResectionReportRequest)
 
-* section.title = "Pathologiebefundbericht"
-* section.code = $loinc#11526-1 "Pathology study"
-* section.entry = Reference(BreastResectionReport)
-* section.text.status = #additional
-* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+// ----------------------------------------------------------------------------
+// Sections nach MII Patho (Angleichung an HL7 EU Lab, Modul-Patho 2027):
+//   patho-diagnostic-report      60567-5  -> MII_PR_Patho_Report
+//   makroskopie                  22634-0  -> MII_PR_Patho_Macroscopic_Grouper
+//   diagnostische-schlussfolgerung 22637-3 -> MII_PR_Patho_Diagnostic_Conclusion_Grouper
+// Klinische Angaben, Material und Mikroskopie bleiben im Narrativ der
+// Berichts-Section: für sie existiert kein Grouper, jede Section braucht aber
+// eine entry-Referenz.
+// ----------------------------------------------------------------------------
+* section[+].title = "Pathologiebefundbericht"
+* section[=].code = $loinc#60567-5 "Comprehensive pathology report panel"
+* section[=].entry = Reference(BreastResectionReport)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <h3>Klinische Angaben</h3>
 <p>Z.n. Stanzbiopsie (E_25_105) mit Nachweis eines invasiven Mammakarzinoms NST, G2. BI-RADS 4b. BET links indiziert. Drahthäkchenmarkierung. Keine neoadjuvante Therapie. Ersterkrankung. Keine bekannte genetische Prädisposition. Präparateradiographie beigelegt.</p>
 
 <h3>Material</h3>
-<p>BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen in situ</p>
+<p>BET-Exzisionspräparat Mamma links, mit Haut, Drahthäkchen in situ, Fadenmarkierung lang anterior, 2x kurz distal</p>
 
-<h3>Makroskopie</h3>
+<h3>Mikroskopische Beurteilung</h3>
+<p>Invasives Mammakarzinom des NST (kein spezieller Typ), maximal 18 mm messend. Das Karzinom zeigt ein überwiegend trabekuläres und solides Wachstumsmuster mit mäßiger Kern- und Zellpolymorphie. Mitosen sind vereinzelt nachweisbar (4/10 HPF). In der Tumorperipherie zeigt sich ein begleitendes duktales Carcinoma in situ (DCIS) mit intermediärem Kerngrad und überwiegend kribriformem Wachstumsmuster, maximal 8 mm. Zentrale Komedo-Nekrosen. Assoziierte Mikroverkalkungen im DCIS-Areal. Alle Resektionsränder tumorfrei. Mindestabstand invasiv: 5 mm (posterior), DCIS: 3 mm. Keine Lymphgefäßinvasion.</p>
+</div>"
+
+* section[+].title = "Makroskopische Beurteilung"
+* section[=].code = $loinc#22634-0 "Pathology report gross observation Narrative"
+* section[=].entry = Reference(BreastResectionMacroscopicGrouper)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>Größe</td><td>42 × 35 × 18 mm</td></tr>
@@ -50,12 +69,14 @@ Description: "FHIR Composition for structured breast resection pathology report"
 <tr><td>Paraffinblöcke</td><td>7</td></tr>
 </tbody>
 </table>
+</div>"
 
-<h3>Mikroskopie</h3>
-<p>Invasives Mammakarzinom des NST (kein spezieller Typ), maximal 18 mm messend. Das Karzinom zeigt ein überwiegend trabekuläres und solides Wachstumsmuster mit mäßiger Kern- und Zellpolymorphie. Mitosen sind vereinzelt nachweisbar (4/10 HPF). In der Tumorperipherie zeigt sich ein begleitendes duktales Carcinoma in situ (DCIS) mit intermediärem Kerngrad und überwiegend kribriformem Wachstumsmuster, maximal 8 mm. Zentrale Komedo-Nekrosen. Assoziierte Mikroverkalkungen im DCIS-Areal. Alle Resektionsränder tumorfrei. Mindestabstand invasiv: 5 mm (posterior), DCIS: 3 mm. Keine Lymphgefäßinvasion.</p>
-
-<h3>Diagnose</h3>
-<p> Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c</p>
+* section[+].title = "Diagnostische Schlussfolgerung"
+* section[=].code = $loinc#22637-3 "Pathology report final diagnosis Narrative"
+* section[=].entry = Reference(BreastResectionDiagnosticConclusionGrouper)
+* section[=].text.status = #additional
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+<p><b>Diagnose:</b> Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c</p>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>ICD-10</td><td>C50.5</td></tr>
@@ -72,7 +93,7 @@ Description: "FHIR Composition for structured breast resection pathology report"
 </tbody>
 </table>
 
-<h4>Resektionsränder</h4>
+<h3>Resektionsränder</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>RR-Status invasiv</td><td>Nicht befallen (R0)</td></tr>
@@ -83,7 +104,7 @@ Description: "FHIR Composition for structured breast resection pathology report"
 </tbody>
 </table>
 
-<h4>Biomarker</h4>
+<h3>Biomarker</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>ER</td><td>Positiv (90%, stark)</td></tr>
@@ -95,7 +116,7 @@ Description: "FHIR Composition for structured breast resection pathology report"
 </tbody>
 </table>
 
-<h4>Weitere Befunde</h4>
+<h3>Weitere Befunde</h3>
 <table border=\"1\" cellpadding=\"4\" cellspacing=\"0\">
 <tbody>
 <tr><td>Lymphgefäßinvasion</td><td>Nicht nachgewiesen</td></tr>

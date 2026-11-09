@@ -4,13 +4,13 @@ InstanceOf: MII_PR_Patho_Service_Request
 Usage: #example
 Title: "BET Mamma Anforderung"
 Description: "Anforderung für pathologische Aufarbeitung eines BET-Exzisionspräparats der linken Mamma"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-service-request|2027.0.0-ballot"
 * status = #completed
 * identifier[Placer-ID].type = http://terminology.hl7.org/CodeSystem/v2-0203#PLAC "Placer Identifier"
 * identifier[Placer-ID].system = "http://example.hospital.de/serviceRequest"
 * identifier[Placer-ID].value = "PATH-RPT-2025-210"
 * intent = #order
-* category = $sct#726007 "Pathology consultation, comprehensive, records and specimen with report (procedure)"
+* category = $sct#726007 "Pathology consultation, comprehensive, records and specimen with report"
 * code = $loinc#60568-3 "Pathology synoptic report"
 * encounter = Reference(BreastResectionEncounter)
 * subject = Reference(Patient4)
@@ -26,6 +26,4 @@ Description: "Anforderung für pathologische Aufarbeitung eines BET-Exzisionspr�
 * supportingInfo[+] = Reference(BreastResectionSpecimenMarking)
 * supportingInfo[+] = Reference(BreastResectionSpecimenRadiographyClinical)
 * supportingInfo[+] = Reference(BreastResectionGeneticPredisposition)
-* supportingInfo[+] = Reference(BreastResectionMacroClock)
-* supportingInfo[+] = Reference(BreastResectionMacroDistanceNipple)
 * supportingInfo[+] = Reference(CoreNeedleBiopsyInterpretation)

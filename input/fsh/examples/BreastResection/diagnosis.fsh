@@ -4,7 +4,7 @@ InstanceOf: $mii-diagnose
 Usage: #example
 Title: "Mammakarzinom-Diagnose bestätigt"
 Description: "Bestätigte Diagnose eines invasiven Mammakarzinoms nach Stanzbiopsie, Indikation zur BET"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose|2027.0.0-ballot"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#encounter-diagnosis

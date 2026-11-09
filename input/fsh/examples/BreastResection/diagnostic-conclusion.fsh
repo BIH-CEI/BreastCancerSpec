@@ -7,7 +7,7 @@ InstanceOf: MII_PR_Patho_Diagnostic_Conclusion_Grouper
 Usage: #example
 Title: "Diagnostic Conclusion Grouper - BET Mamma"
 Description: "Grouper for all diagnostic conclusion findings in breast resection"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * code = $loinc#22637-3
@@ -56,8 +56,8 @@ Description: "Grouper for all diagnostic conclusion findings in breast resection
 * hasMember[+] = Reference(BreastResectionHER2ISH)
 * hasMember[+] = Reference(BreastResectionHER2Overall)
 * hasMember[+] = Reference(BreastResectionKi67)
-// TNM (1)
-* hasMember[+] = Reference(BreastResectionPT)
+// TNM nicht als hasMember: Der Grouper prueft alle Mitglieder gegen mii-pr-patho-finding,
+// das die Onko-TNM-Profile nicht erfuellen. TNM steht in DiagnosticReport.conclusion.
 // Kommentar (1)
 * hasMember[+] = Reference(BreastResectionComment)
 
@@ -72,7 +72,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Operatives Verfahren - BET"
 Description: "Art des operativen Verfahrens"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -94,7 +94,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Materialart - BET"
 Description: "Art des eingesendeten Materials"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -115,7 +115,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Seitenlokalisation - BET"
 Description: "Seitenlokalisation des Präparats"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -136,7 +136,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anhängendes Gewebe - BET"
 Description: "Art des anhängenden Gewebes am Präparat"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -157,7 +157,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Fokalität - BET"
 Description: "Fokalität des Tumors"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -181,7 +181,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Max Durchmesser invasiv - BET"
 Description: "Maximaler Durchmesser der invasiven Komponente"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -202,7 +202,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Max Gesamtdurchmesser - BET"
 Description: "Maximaler Gesamtdurchmesser des Tumors inkl. DCIS"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -222,7 +222,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Histologischer Tumortyp - BET"
 Description: "Histologischer Typ nach WHO/ICD-O-3"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -244,7 +244,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Morphologie Freitext - BET"
 Description: "Freitextbeschreibung der Tumormorphologie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -255,7 +255,7 @@ Description: "Freitextbeschreibung der Tumormorphologie"
 * effectiveDateTime = "2025-02-10"
 * performer = Reference(PathologistPractitioner)
 * basedOn = Reference(BreastResectionReportRequest)
-* valueString = "Invasives Mammakarzinom des NST (kein spezieller Typ), maximal 18 mm messend. Das Karzinom zeigt ein überwiegend trabekuläres und solides Wachstumsmuster mit mäßiger Kern- und Zellpolymorphie. Mitosen sind vereinzelt nachweisbar (4/10 HPF). In der Tumorperipherie zeigt sich ein begleitendes duktales Carcinoma in situ (DCIS) mit intermediärem Kerngrad und überwiegend kribriformem Wachstumsmuster, maximal 8 mm. Fokale Komedo-Nekrosen. Assoziierte Mikroverkalkungen im DCIS-Areal. Alle Resektionsränder tumorfrei. Mindestabstand invasiv: 5 mm (posterior), DCIS: 3 mm. Keine Lymphgefäßinvasion."
+* valueString = "Invasives Mammakarzinom des NST (kein spezieller Typ), maximal 18 mm messend. Das Karzinom zeigt ein überwiegend trabekuläres und solides Wachstumsmuster mit mäßiger Kern- und Zellpolymorphie. Mitosen sind vereinzelt nachweisbar (4/10 HPF). In der Tumorperipherie zeigt sich ein begleitendes duktales Carcinoma in situ (DCIS) mit intermediärem Kerngrad und überwiegend kribriformem Wachstumsmuster, maximal 8 mm. Zentrale Komedo-Nekrosen. Assoziierte Mikroverkalkungen im DCIS-Areal. Alle Resektionsränder tumorfrei. Mindestabstand invasiv: 5 mm (posterior), DCIS: 3 mm. Keine Lymphgefäßinvasion."
 * derivedFrom = Reference(QuestionnaireResponseBreastResection)
 
 // --- 12. Nottingham-Grad (linkId 11330) ---
@@ -264,12 +264,13 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Nottingham-Grad - BET"
 Description: "Nottingham histologic grade derived from summary score"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $sct#372276001 "Nottingham combined grade of primary malignant neoplasm of breast (observable entity)"
-* code.text = "Histologischer Tumorgrad (Nottingham-Grad)"
+* code.coding[0] = $loinc#44648-4 "Histologic grade [Score] in Breast cancer specimen by Nottingham"
+* code.coding[+] = $sct#372276001 "Nottingham combined grade of primary malignant neoplasm of breast (observable entity)"
+* code.text = "Histologischer Tumorgrad (Elston-Ellis-Grad)"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideHE01)
 * effectiveDateTime = "2025-02-10"
@@ -286,7 +287,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Nottingham-Summenscore - BET"
 Description: "Elston-Ellis summary score (3+2+1=6) with sub-scores as components"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -315,7 +316,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Mitosezahl - BET"
 Description: "Absolute Mitosezahl pro 10 HPF"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -335,7 +336,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Assoziiertes DCIS - BET"
 Description: "Vorhandensein eines assoziierten DCIS"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -356,7 +357,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "DCIS Kerngrading - BET"
 Description: "Kerngrading des assoziierten DCIS"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -377,7 +378,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "DCIS Architektur - BET"
 Description: "Wachstumsmuster des assoziierten DCIS"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -399,7 +400,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "DCIS Nekrosen - BET"
 Description: "Nekrosen im DCIS-Areal"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -420,7 +421,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Tumorausdehnung - BET"
 Description: "Ausdehnung des Tumors in Bezug auf die Brustdrüse"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -447,7 +448,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Resektionsrandstatus invasiv - BET"
 Description: "Resektionsrandstatus der invasiven Komponente"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -469,7 +470,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Nächster tumorfreier Resektionsrand - BET"
 Description: "Lokalisation des nächsten tumorfreien Resektionsrands"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -491,7 +492,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Mindestabstand invasiv - BET"
 Description: "Mindestabstand der invasiven Komponente zum Resektionsrand"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -512,7 +513,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Resektionsrandstatus nichtinvasiv - BET"
 Description: "Resektionsrandstatus der nichtinvasiven Komponente (DCIS)"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -533,7 +534,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Mindestabstand nichtinvasiv - BET"
 Description: "Mindestabstand der nichtinvasiven Komponente (DCIS) zum Resektionsrand"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -556,7 +557,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Lymphgefäßinvasion - BET"
 Description: "Lymphovaskuläre Invasion"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -578,7 +579,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Mikrokalzifikationen - BET"
 Description: "Vorhandensein von Mikrokalzifikationen"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -601,7 +602,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Östrogenrezeptor-Status - BET"
 Description: "Östrogenrezeptor-Status per Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -625,7 +626,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Östrogenrezeptor Prozent - BET"
 Description: "Prozentsatz ER-positiver Tumorzellkerne"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -652,7 +653,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "ER Färbeintensität - BET"
 Description: "Färbeintensität der ER-Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -677,7 +678,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Progesteronrezeptor-Status - BET"
 Description: "Progesteronrezeptor-Status per Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -701,7 +702,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Progesteronrezeptor Prozent - BET"
 Description: "Prozentsatz PR-positiver Tumorzellkerne"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -728,11 +729,13 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "PR Färbeintensität - BET"
 Description: "Färbeintensität der PR-Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $sct#1237278006 "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+* code.coding[0] = $loinc#85331-7 "Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
+* code.coding[+] = $sct#1237278006 "Intensity of stain of progesterone receptor in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
+* code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Färbeintensität PR"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlidePR01)
@@ -751,11 +754,11 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "HER2-Score (IHC) - BET"
 Description: "HER2-Score per Immunhistochemie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code.coding[0] = $loinc#85319-2 "HER2 [Presence] in Breast cancer specimen by Immune stain"
+* code.coding[0] = $loinc#85319-2 "HER2 Ag [Presence] in Breast cancer specimen by Immune stain"
 * code.coding[+] = $sct#3550001000004108 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by immunohistochemistry (observable entity)"
 * code.coding[+] = $sct#1234806008 "Observation using immunohistochemistry (observable entity)"
 * code.text = "Her2 Score"
@@ -776,11 +779,12 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "HER2 Amplifikation (ISH) - BET"
 Description: "HER2-Amplifikationsstatus per In-situ-Hybridisierung"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $sct#1363314005 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)"
+* code.coding[0] = $loinc#85318-4 "ERBB2 gene duplication [Presence] in Breast cancer specimen by FISH"
+* code.coding[+] = $sct#1363314005 "Presence of receptor tyrosine-protein kinase erbB-2 in primary malignant neoplasm of breast by in situ hybridization (observable entity)"
 * code.text = "Her2 Amplifikation"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideHER2IHC01)
@@ -799,11 +803,11 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "HER2 Gesamtstatus - BET"
 Description: "HER2-Gesamtstatus basierend auf IHC und ISH"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
-* code = $loinc#48676-1 "HER2 [Interpretation] in Tissue"
+* code = $loinc#48676-1 "HER2 Ag [Interpretation] in Tissue"
 * code.text = "Her2neuStatus"
 * subject = Reference(Patient4)
 * specimen = Reference(BreastResectionSpecimenSlideHER2IHC01)
@@ -822,7 +826,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Ki-67 Index - BET"
 Description: "Ki-67 Proliferationsindex"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -853,7 +857,7 @@ InstanceOf: $mii-tnm-t
 Usage: #example
 Title: "pT-Kategorie - BET"
 Description: "Pathologische T-Kategorie nach TNM"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-t-kategorie|2027.0.0-ballot.1"
 * status = #final
 * code
   * extension[+]
@@ -865,7 +869,7 @@ Description: "Pathologische T-Kategorie nach TNM"
   * coding = $sct#384625004 "pT category (observable entity)"
 * subject = Reference(Patient4)
 * effectiveDateTime = "2025-02-10"
-* valueCodeableConcept.coding
+* valueCodeableConcept.coding[uicc]
   * system = "https://www.uicc.org/resources/tnm"
   * code = #T1
   * display = "T1"
@@ -884,7 +888,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Kommentar - BET"
 Description: "Freitextkommentar zum Befund"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3

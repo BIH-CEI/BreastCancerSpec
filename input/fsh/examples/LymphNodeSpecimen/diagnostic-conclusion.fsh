@@ -7,7 +7,7 @@ InstanceOf: MII_PR_Patho_Diagnostic_Conclusion_Grouper
 Usage: #example
 Title: "Diagnostic Conclusion Grouper - SLN Axilla"
 Description: "Grouper for all diagnostic conclusion findings in sentinel lymph node biopsy"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-diagnostic-conclusion-grouper|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * code = $loinc#22637-3
@@ -17,7 +17,7 @@ Description: "Grouper for all diagnostic conclusion findings in sentinel lymph n
 * basedOn = Reference(LymphNodeReportRequest)
 * derivedFrom = Reference(QuestionnaireResponseLymphNode)
 
-// LK-Befunde (15)
+// LK-Befunde (14)
 * hasMember[+] = Reference(LymphNodeProcedure)
 * hasMember[+] = Reference(LymphNodeLaterality)
 * hasMember[+] = Reference(LymphNodeNonSLNExamined)
@@ -31,7 +31,6 @@ Description: "Grouper for all diagnostic conclusion findings in sentinel lymph n
 * hasMember[+] = Reference(LymphNodeITCCount)
 * hasMember[+] = Reference(LymphNodeLargestMetSize)
 * hasMember[+] = Reference(LymphNodeExtranodalExtension)
-* hasMember[+] = Reference(LymphNodePN)
 * hasMember[+] = Reference(LymphNodeComment)
 
 
@@ -44,7 +43,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "LK OP Prozedur - SLN"
 Description: "Art der Lymphknoten-Operation: Sentinel-Lymphknoten-Biopsie"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -68,7 +67,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Seitenangabe - SLN"
 Description: "Seitenlokalisation: Links"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -92,7 +91,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anzahl untersuchter Non-SLN"
 Description: "Anzahl der untersuchten (nicht-Sentinel) axillären Lymphknoten: 0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -118,7 +117,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anzahl befallener Non-SLN"
 Description: "Anzahl der befallenen (nicht-Sentinel) axillären Lymphknoten: 0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -144,7 +143,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anzahl untersuchter SLN"
 Description: "Anzahl der untersuchten Sentinel-Lymphknoten: 2"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -170,7 +169,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anzahl befallener SLN"
 Description: "Anzahl der befallenen Sentinel-Lymphknoten: 1"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -196,7 +195,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Gesamtzahl untersuchter LK"
 Description: "Gesamtzahl untersuchter Lymphknoten: 2"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -222,7 +221,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Gesamtzahl befallener LK"
 Description: "Gesamtzahl befallener Lymphknoten: 1"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -248,7 +247,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Makrometastatisch befallene LK"
 Description: "Gesamtzahl makrometastatisch befallener Lymphknoten: 0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -274,7 +273,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Mikrometastatisch befallene LK"
 Description: "Gesamtzahl mikrometastatisch befallener Lymphknoten: 1"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -300,7 +299,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "ITC-befallene LK"
 Description: "Gesamtzahl ausschließlich ITC-befallener Lymphknoten: 0"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -326,7 +325,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Größte Metastasenausdehnung"
 Description: "Ausdehnung der größten metastatischen Infiltration: 1.2 mm"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -349,7 +348,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Extranodale Infiltration"
 Description: "Extranodale Infiltration durch LK-Metastase: Nicht vorhanden"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3
@@ -373,7 +372,7 @@ InstanceOf: $mii-tnm-n
 Usage: #example
 Title: "pN-Kategorie - SLN"
 Description: "Pathologische N-Kategorie: pN1mi(sn)"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tnm-n-kategorie|2027.0.0-ballot.1"
 * status = #final
 * code
   * extension[+]
@@ -389,13 +388,18 @@ Description: "Pathologische N-Kategorie: pN1mi(sn)"
   * coding = $sct#277206009 "N category (observable entity)"
 * subject = Reference(Patient4)
 * effectiveDateTime = "2025-02-10"
-// coding[0]: UICC-Code aus dem required-ValueSet (mii-vs-onko-tnm-n-kategorie-werte)
-* valueCodeableConcept.coding[+]
+// MII-Onko 2027: (sn) ueber die Suffix-Extension, nicht im Code. Die Invariante
+// tnm-sct-uicc-konsistenz verlangt, dass das SCT-Display "pN1mi " enthaelt, daher
+// SCT 1352620005 (pN1mi) statt 1356762006 (pN1mi(sn)).
+* valueCodeableConcept.extension[snSuffix].valueCodeableConcept.coding
+  * system = "https://www.uicc.org/resources/tnm"
+  * code = #sn
+  * display = "(sn)"
+* valueCodeableConcept.coding[uicc]
   * system = "https://www.uicc.org/resources/tnm"
   * code = #N1mi
   * display = "N1(mi)"
-// coding[1]: praeziseres SNOMED-Konzept inkl. (sn)-Zusatz (nicht im required-VS, daher zusaetzlich)
-* valueCodeableConcept.coding[+] = $sct#1356762006 "Union for International Cancer Control pN1mi(sn) (qualifier value)"
+* valueCodeableConcept.coding[snomed-ct] = $sct#1352620005 "Union for International Cancer Control pN1mi (qualifier value)"
 * valueCodeableConcept.text = "pN1mi(sn)"
 * method.coding
   * system = "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-tnm-version"
@@ -411,7 +415,7 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Kommentar - SLN"
 Description: "Kommentar zum SLN-Befund"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22637-3

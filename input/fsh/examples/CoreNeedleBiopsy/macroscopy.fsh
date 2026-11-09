@@ -7,7 +7,7 @@ InstanceOf: MII_PR_Patho_Macroscopic_Grouper
 Usage: #example
 Title: "Makroskopische Befunde Grouper Stanzbiopsie"
 Description: "Gruppierung aller makroskopischen Messungen der Stanzzylinder"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-macroscopic-grouper|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * code = $loinc#22634-0
@@ -28,11 +28,11 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Gesamtlänge Stanzzylinder"
 Description: "Gesamtlänge aller Stanzzylinder zusammen"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
-* code = $loinc#33728-7 "Size.maximum dimension in Tumor"
+* code = $loinc#44619-5 "Length of tissue core(s)"
 * code.text = "Gesamtlänge der Stanzzylinder"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenPart)
@@ -48,11 +48,11 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anzahl Stanzzylinder"
 Description: "Anzahl der eingesendeten Stanzzylinder"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
-* code = $sct#246205007 "Quantity (attribute)"
+* code = $loinc#44652-6 "Total number of cores in Tissue core"
 * code.text = "Anzahl Stanzzylinder"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenPart)
@@ -67,15 +67,15 @@ InstanceOf: $mii-patho-finding
 Usage: #example
 Title: "Anzahl Paraffinblöcke Stanzbiopsie"
 Description: "Anzahl der erstellten Paraffinblöcke"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-finding|2027.0.0-ballot"
 * status = #final
 * category[laboratory-category] = $observation-category#laboratory
 * category[section-type] = $loinc#22634-0
-* code = $sct#246205007 "Quantity (attribute)"
+* code = $sct#3100001000004109 "Number of paraffin embedded tissue blocks examined from excised specimen (observable entity)"
 * code.text = "Anzahl Paraffinblöcke"
 * subject = Reference(Patient4)
 * specimen = Reference(CoreNeedleBiopsySpecimenPart)
 * effectiveDateTime = "2025-01-16T08:30:00+01:00"
 * performer = Reference(PathologistPractitioner)
-* valueQuantity = 1 '{count}' "count"
+* valueQuantity = 1 '{blocks}' "Blöcke"
 * derivedFrom = Reference(QuestionnaireResponseCoreNeedleBiopsy)

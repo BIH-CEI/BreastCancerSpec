@@ -4,7 +4,7 @@ InstanceOf: $mii-patho-report
 Usage: #example
 Title: "Pathologiebericht BET Mamma"
 Description: "Pathologiebericht nach brusterhaltender Therapie der linken Mamma"
-* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2026.0.0"
+* meta.profile[+] = "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/StructureDefinition/mii-pr-patho-report|2027.0.0-ballot"
 * identifier[Set-ID].type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN "Accession ID"
 * identifier[Set-ID].system = "https://pathologie.example-hospital.de/fhir/fn/befundbericht"
 * identifier[Set-ID].value = "E_25_210"
@@ -46,4 +46,4 @@ Description: "Pathologiebericht nach brusterhaltender Therapie der linken Mamma"
 * result[macroscopic-observations] = Reference(BreastResectionMacroscopicGrouper)
 * result[diagnostic-conclusion] = Reference(BreastResectionDiagnosticConclusionGrouper)
 
-* conclusion = "Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c, Nottingham Grad 2 (Score 6: Tubuli 3, Kernpleomorphie 2, Mitosen 1). Begleitendes DCIS, intermediärer Kerngrad, kribriform, fokale Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine LVI. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%."
+* conclusion = "Invasives Mammakarzinom NST (ICD-O 8500/3), pT1c, Nottingham Grad 2 (Score 6: Tubuli 3, Kernpleomorphie 2, Mitosen 1). Begleitendes DCIS, intermediärer Kerngrad, kribriform, zentrale Komedo-Nekrosen. Alle Resektionsränder tumorfrei (invasiv 5 mm, DCIS 3 mm). Keine LVI. ER+ (90%), PR+ (60%), HER2 1+ (nicht amplifiziert), Ki-67 15%."

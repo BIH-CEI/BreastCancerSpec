@@ -14,11 +14,12 @@ publisher:
   url: http://example.org/example-publisher
 
 dependencies:
-  de.medizininformatikinitiative.kerndatensatz.onkologie: 2026.0.0
-  de.medizininformatikinitiative.kerndatensatz.patho: 2026.0.0
-  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.0
-  de.medizininformatikinitiative.kerndatensatz.biobank: 2026.0.0
-  hl7.fhir.us.mcode: 2.1.0
+  de.medizininformatikinitiative.kerndatensatz.onkologie: 2027.0.0-ballot.1
+  de.medizininformatikinitiative.kerndatensatz.patho: 2027.0.0-ballot
+  de.medizininformatikinitiative.kerndatensatz.base: 2027.0.0-ballot
+  de.medizininformatikinitiative.kerndatensatz.biobank: 2027.0.0-ballot
+  # R5-Cross-Version-Extensions (BodyStructure an Specimen.collection.bodySite, Specimen.feature)
+  hl7.fhir.uv.xver-r5.r4: 0.1.0
 
 pages:
   index.md:
@@ -35,6 +36,8 @@ pages:
     title: Lymph Node Specimen — Specimens
   integrated-report.md:
     title: Integrated Report (BET + SLN)
+  semantic-annotations.md:
+    title: Semantic Annotations
   document-viewer.xml:
     title: Befund-Viewer
 
@@ -42,6 +45,7 @@ menu:
   Home: index.html
   Clinical Context: clinical-context.html
   Motivation: motivation.html
+  Semantic Annotations: semantic-annotations.html
   Stanzbiopsie:
     Specimens: biopsy-specimens.html
     ServiceRequest: ServiceRequest-CoreNeedleBiopsyReportRequest.html
